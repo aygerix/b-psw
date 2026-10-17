@@ -10,15 +10,17 @@
 ## Assumption register (added 2026-10-17 after the Williams-framework error; KEEP CURRENT)
 Every lemma must list which rows it uses. A route may be called CLOSED only by a PROVED result whose hypotheses
 are all FORCED; a result using a CHOSEN row closes only that sub-route, and the notebook must name the sub-route.
-| assumption                                   | status | why                                                        |
-| one 2-adic class (j1,j2) for all p | n       | FORCED | Lemma 1 (strong tests act prime by prime)                  |
-| gcd(odd ord / odd z moduli of n-1 and n+1)=1 | FORCED | n == 1 and n == -1 mod an odd prime is impossible          |
-| n squarefree                                 | FORCED*| *unless p is Wieferich AND Wall-Sun-Sun-type for the D used |
-| restrict to n with (5/n) = -1 (D = 5)        | CHOSEN | n with (5/n) = +1 get D = -7, -11, 13, ...; equally allowed |
-| every prime factor inert for D               | CHOSEN | split primes allowed by Lemma 1 (heuristically rare)       |
-| bounded index: p -+ 1 | n -+ 1 (Williams)    | CHOSEN | BPSW needs only odd(ord_p 2) | n-1, odd(z(p)) | n+1      |
-| polynomial family with Q[t]-divisibility     | CHOSEN | used by Lemmas 3-9, Thm 9                                  |
-| smooth p -+ 1 pools (Lemma 2)                | CHOSEN | used by Attempts A, B, D                                    |
+| id  | assumption                                   | status | why                                                        |
+| F1  | one 2-adic class (j1,j2) for all p | n       | FORCED | Lemma 1 (strong tests act prime by prime)                  |
+| F2  | gcd(odd ord / odd z moduli of n-1 and n+1)=1 | FORCED | n == 1 and n == -1 mod an odd prime is impossible          |
+| F3  | n squarefree                                 | FORCED*| *unless p is Wieferich AND Wall-Sun-Sun-type for the D used |
+| C1  | restrict to n with (5/n) = -1 (D = 5)        | CHOSEN | n with (5/n) = +1 get D = -7, -11, 13, ...; equally allowed |
+| C2  | every prime factor inert for D               | CHOSEN | split primes allowed by Lemma 1 (heuristically rare)       |
+| C3F | Fermat-side bounded index: p - 1 | n - 1     | CHOSEN | BPSW needs only odd(ord_p 2) | n - 1 (C3F = Korselt)      |
+| C3L | Lucas-side bounded index: p + 1 | n + 1      | CHOSEN | BPSW needs only odd(z(p)) | n + 1 (C3F + C3L = Williams)  |
+| C4  | n = prod f_j(t), divisibility as identity in Q[t] | CHOSEN | polynomial families; a_j > 0 is forced WITHIN C4 for prime values f_j(t) -> +inf |
+| C5  | smooth p -+ 1 pools (Lemma 2)                | CHOSEN | used by Attempts A, B, D                                    |
+| C6  | exponential parameter forcing an order (Y = L_2K, X = 2^(2^a)) | CHOSEN | Attempt C                              |
 
 ## Working rules (procedure changes after repeated failures; check before every log entry)
  G1 Assumption gate: before proving or computing anything, write which register rows it uses. If it uses a CHOSEN
@@ -44,6 +46,7 @@ are all FORCED; a result using a CHOSEN row closes only that sub-route, and the 
   and A217255 (strong Lucas psp < 1e5) exactly; all primes < 2e5 pass; no BPSW psp < 2e6.
 
 ## Lemma 1 (exact per-prime criterion; PROVED, standard; numerically checked)
+Register rows: F3, C1 (stated for D = 5; the same proof works for any Selfridge D with z = rank of apparition; D = -7 checked in Attempt B). It is the source of F1, F2. Closes nothing.
 Let n be squarefree, odd, (5/n) = -1 (so Selfridge picks D=5, P=1, Q=-1, U=Fibonacci). Let
 z(p) = Fibonacci entry point = order of gamma = alpha/beta mod p; s = v2(n-1), t = v2(n+1). Then
 n is a BPSW psp  <=>  there are j1 <= s, j2 <= t with, for every p | n:
@@ -62,6 +65,7 @@ inert p = 1 mod 4: (v2(ord_p 2), 0) [E_j], e.g. all p = 5 mod 8 lie in E_2.
 Split primes ((5/p)=+1) need gcd(odd ord_p2, odd z(p)) = 1 with both | p-1: heuristically rare.
 
 ## Lemma 2 (Pomerance-type sufficient condition; PROVED from Lemma 1)
+Register rows: F1, F2, F3, C1 (or the D = -7 analogue), C2. Sufficient condition; closes nothing.
 Fix D (=5 or -7 with the earlier Selfridge D's non-(-1)). Let S be a set of distinct primes, all inert for D,
 all in ONE 2-adic class (j1,j2), with odd(ord_p 2) | L1 and odd(z(p)) | L2, gcd(L1,L2)=1, |S| odd, and
 v2-room automatic (true for classes F2, F_k, E_j with j<=2). If prod S = 1 mod L1 and = -1 mod L2
@@ -71,6 +75,7 @@ Note (literature): Chen-Greene (Fib. Quart. 41 (2003) 334-344) did this for the 
 (2^n=2, F_{n+1}=0); |P| ~ log2|G| only at ~1240 bits (|P|=1242), 4838 primes at 1838 bits.
 
 ## Attempt A — strong version, D=5, exhaustive smooth-neighbour pools (bounded evidence)
+Register rows: C1, C2, C5. Bounded evidence only.
 - Pools: p = 2x+1 with x, x+1 z-smooth (CHM closure `src/chm.c`; z=100: 13,340 pairs vs 13,374 published,
   z=41: 868 vs Lehmer's 869 -> closure ~99.7% complete), 5 not | x(x+1), p prime; true orders used.
 - z=100: 804 inert primes; classes (2,0):181, (1,2):140, (0,3):98.  z=150: classes (2,0):837, (1,2):556.
@@ -81,9 +86,11 @@ Note (literature): Chen-Greene (Fib. Quart. 41 (2003) 334-344) did this for the 
 - Search-cost side (HEURISTIC, standard): Wagner k-tree with 2^a disjoint leaf lists of b primes kills
   b(a+1) bits, needs N >= b*2^a primes, time ~2^(a+b). At 2^38 work: kills <= ~250 bits and needs
   N >= ~4000. Pools at <= 300 bits have N ~ 30.  At the scale where 2^N >= |G| (>= ~1200-2500 bits),
-  cost >= 2^80.  => Route cannot produce an example with feasible computation.
+  cost >= 2^80.  => HEURISTIC: at the measured pool densities this route gives no example at feasible cost.
+  Deprioritised, NOT closed (it uses C5; denser pools or a structured subset-product algorithm would reopen it).
 
 ## Attempt B — D = -7 (Q = 2) variant (bounded evidence)
+Register rows: D = -7 in place of C1, C2, C5. Bounded evidence only.
 - Requires (5/n)=+1, (-7/n)=-1; inert means (p/7)=-1; prime 5 now usable on either side.
 - Criterion (Lemma 1 analogue) checked vs direct test: 7,475 agree / 0 disagree.
 - Raw pools ~2x larger (z=100: 1527 inert primes; z=150: 6801), but optimised frontiers no better:
@@ -93,6 +100,7 @@ Note (literature): Chen-Greene (Fib. Quart. 41 (2003) 334-344) did this for the 
   ~2^{omega(R)}/(sqrt(R) log R), i.e. again dominated by smooth p^2-1. No new source of primes.
 
 ## Lemma 3 (PROVED): no linear (Chernick-type) polynomial family
+Register rows: C4, C3F, C3L, plus same-sign slopes. Closes ONLY linear same-sign Williams families.
 There are no k>=2 DISTINCT linear f_j(t)=a_j t+b_j in Q[t] with all a_j of one sign such that
 (f_j - 1) | (n - 1) and (f_j + 1) | (n + 1) in Q[t] for all j, where n = prod f_j.
 Proof. WLOG a_j > 0. Let r_j be the root of f_j - 1 and r* = max r_j. Each f_j is increasing, so
@@ -127,6 +135,7 @@ Higher-degree families: NOT settled here (argument needs real roots of f_j - 1).
 ## Checkpoint superseded (2026-10-17, user directive): research resumes. New attempts below.
 
 ## Lemma 4 (PROVED, computer-assisted): no k=3 polynomial family of any degree
+Register rows: C4, C3F, C3L. Closes ONLY k = 3 Williams families.
 Setting: f1,f2,f3 in Q[t] nonconstant, n=f1f2f3, with f_j-1 | n-1 and f_j+1 | n+1 in Q[t]
 (the Williams/Lucas-Carmichael identity that a Chernick-type family needs; 2-power and
 constant denominators are units in Q[t], so this covers the strong-BPSW relaxation by constants).
@@ -146,18 +155,27 @@ Extracted shape for a working family: k>=5 needed; the k=3 obstruction is that t
 variety is an ANISOTROPIC torus. A split torus would give exponential (Lucas-sequence) families.
 
 ## Attempt C — exponential (cyclotomic) half-families (2026-10-17)
+Register rows: C4, C6, and C3F (Lucas-exponential members) or C3L (Fermat-exponential members); C1 for the mod-5 argument.
 Idea: control one order by an exponential parameter and the other side by a polynomial identity.
  - Fermat-exponential: p_j = Phi_{d_j}(X), X = 2^(2^a) (ord_p 2 | 2^a d_j), need Phi_j + 1 | prod_{i!=j}Phi_i - 1.
-   Necessary: Res(Phi_a+1, Phi_b) = +-1 both ways. RESULT: no symmetric pair for a,b <= 100 => dead (k any).
+   Necessary: Res(Phi_a+1, Phi_b) = +-1 both ways. RESULT [COMPUTED: src/alg/cyc_sym.gp -> cyc_sym.out, rerun
+   2026-10-17 with a,b <= 160]: 0 symmetric pairs. The pair condition is necessary for every k, so Fermat-exponential
+   families are excluded when ALL d_j <= 160 (any k). d_j > 160: UNCHECKED (bounded computation, not a proof).
  - Lucas-exponential: p_j = Psi_{d_j}(Y), Psi_d = min poly of 2cos(2pi/d), Y = L_{2K}
    (z(p) | 2K d_j since Psi_d(L_{2K}) w^{phi/2} = Phi_d(w), w = alpha^{2K}).
    Need Fermat identity Psi_j - 1 | prod_{i!=j} Psi_i - 1.
    RESULT (src/alg/cyc_sets.gp, d<=100): exactly the triples {10,14,18}, {20,28,36}, {40,56,72}.
    LEMMA 5 (PROVED, direct check): for n = Psi10(Y)Psi14(Y)Psi18(Y),
+     Register rows: C4, C3F (Fermat side only; no C3L). A CONSTRUCTION, closes nothing.
      Psi10 = Y^2-Y-1, Psi14 = Y^3-Y^2-2Y+1, Psi18 = Y^3-3Y-1, each Psi_j - 1 divides n - 1 in Z[Y]
      (monic quotients), because Psi10-1=(Y-2)(Y+1), Psi14-1=Y(Y-2)(Y+1), Psi18-1=(Y-2)(Y+1)^2 and all
      three Psi take values +-1 at Y in {2,-1,0} with product 1 (and derivative condition at -1).
-   So for every integer Y with all three values prime, n is a base-2 Fermat pseudoprime (weak).
+   So for every integer Y >= 3 with all three values prime, n is a CARMICHAEL number (Korselt: p_j - 1 | n - 1 and n
+   squarefree), i.e. a Fermat pseudoprime to EVERY base coprime to n [PROVED: identity in Z[Y]; COMPUTED:
+   src/fam/lemma5_count.gp, 76 Y in [3,20000), Korselt holds for all]. Beeger-Duparc form: p = Psi10,
+   h2 = Y^2-2, h3 = (Y-1)^2, Delta = h2 h3 - p^2 = 2Y-3, Psi14 = 1 + (p-1)(p+h3)/Delta, Psi18 = 1 + (p-1)(p+h2)/Delta
+   [CHECKED by me: p+h3 = Y(2Y-3), p+h2 = (2Y-3)(Y+1)]. The STRONG base-2 test additionally needs one 2-adic class
+   (F1). Negative Y (two values negative) gives |b| + 1 | n - 1 instead: not Carmichael. See the Lemma 5 profile.
    Screen Y = L_M, M <= 600 (src/fam/screen.gp): weak Fermat only for M <= 3 (values not all prime);
    no Lucas pass. Obstruction: Lucas control forces Y = L_{2K} (only units of the norm-1 torus),
    so values grow like phi^{2K}; P(all three prime) ~ K^-3 => finitely many expected. Also for
@@ -170,6 +188,7 @@ Idea: control one order by an exponential parameter and the other side by a poly
    cliques of size 3..6: 1337/4055/8638/13131; full Williams identity: NONE.
 
 ## Lemma 6 (PROVED): real special points of a Williams polynomial family are common
+Register rows: C4, C3F, C3L, positive leading coefficients. A tool for Williams families only.
 Setting: f_1..f_k in R[t] nonconstant, positive leading coefficients, n = C * prod f_i (C > 0 const),
 Williams condition: for each j, P_j := n/f_j == 1 at every root of f_j^2 - 1 (with multiplicity).
 Claim (C = 1): if t0 is real and f_j(t0) = +-1 for some j, then f_i(t0) = f_j(t0) =: E for ALL i,
@@ -208,6 +227,7 @@ Corollaries:
    Baillie-Fiori-Wagstaff strengthening (2006.14425).
 
 ## Lemma 7 (PROVED): no Williams family of monic integer quadratics (any k)
+Register rows: C4, C3F, C3L, monic integer quadratics. Closes ONLY that sub-route.
 Unit-resultant fact (any degree): if f_i in Z[t] monic and the Williams identities hold, then
 prod_{i!=j} Res(f_j -+ 1, f_i) = prod over roots rho of f_j -+ 1 of P_j(rho) = 1, so every
 Res(f_j -+ 1, f_i) = +-1 (integers).
@@ -239,13 +259,16 @@ ALL pairs i != j => k <= 2; but k=2 violates 3d <= D. QED
    needs user to free disk or waive guard. Singular remains the Groebner engine meanwhile.
 
 ## Attempt D — doubly-small-order (DSO) pool (2026-10-17)
+Register rows: C1, C2, C5 (pool primes with ord, z <= 1500). Bounded evidence only.
 Primes with ord_p(2) <= 1500 and z(p) <= 1500 = prime factors of gcd(2^a-1, F_b), a,b <= 1500
 (src/dso/dso.gp, dso_primes.txt): 396 primes, ALL small (max 469561) — consistent with gcd bounds of
 Bugeaud-Corvaja-Zannier type (gcd(2^a-1, F_b) is tiny). Frontier (src/dso/dso_frontier.py, use orders):
 class (2,0) [100 primes]: (45.2 bits, 6), (243.4, 22), (277.9, 24); class (1,2): (115.0, 11);
-classes (0,1),(1,1): nothing usable. N/log2|G| ~ 0.09 — same as CHM pools. DEAD as a pool source.
+classes (0,1),(1,1): nothing usable. N/log2|G| ~ 0.09 — same as CHM pools. Deprioritised as a pool source
+(MEASURED for ord, z <= 1500 only; larger order bounds unmeasured). Not closed.
 
 ## Lemma 8 (PROVED): a real Williams family needs shared special points on BOTH sides
+Register rows: C4, C3F, C3L (real coefficients; (a) also a_j > 0). A tool for Williams families only.
 Setting: f_1..f_k in R[t] (k >= 3), degrees d_j, leading coeffs a_j, n = prod f_j, f_j -+ 1 | n -+ 1.
 Let e_m = elementary symmetric polys of the f_j. Then
    E_- := n - 1 - prod(f_j - 1) = -1 - sum_{m<k} (-1)^{k-m} e_m,   E_+ := prod(f_j + 1) - n - 1 = sum_{m<k} e_m - 1.
@@ -264,6 +287,7 @@ Corollary (real QUADRATIC families, a_j > 0): by Lemma 6 + Lemma 3 every special
   non-real root forces its conjugate, so sharing = proportionality f_i -+ 1 = lam (f_j -+ 1); (a) needs one such
   pair on each side, and they must be different pairs (same pair => f_i = f_j).
 ## Theorem 9 (PROVED, computer-assisted): no real quadratic Williams family with k = 4, a_j > 0
+Register rows: C4, C3F, C3L, quadratic, k = 4, a_j > 0. Closes ONLY that sub-route.
 Up to symmetry the patterns are A1: f2-1 = lam(f1-1), f3+1 = mu(f1+1); A2: f2-1 = lam(f1-1), f4+1 = mu(f3+1);
 normalisation f1 = t^2 + c, remaining members free; nondegeneracy lam, mu, a_j != 0, lam, mu != 1.
 src/alg/gen_quadpat.py -> qp_4_A1.sing, qp_4_A2.sing: Singular std = <1> (dim -1) in both, i.e. no solution
@@ -277,7 +301,8 @@ even over C.  Independent check: real LM over ALL k=4 quadratic families (lm_rea
    a_j > 0) is Theorem 9 above (exact Singular). Exact certificate (lift / non-modular run) still to do.
  - Side check: D = -7 "Lucas-exp" shapes in TWO variables (Y = V_M, Z = 2^M; G_d(Y,Z) = Phi_d(alpha^M, beta^M))
    cannot carry a Fermat-half identity: Res_Y(G_a - 1, G_b) = prod_zeta (Z^{phi(a)/2} G_a(c_zeta,1) - 1) has
-   positive Z-degree, but the identity forces prod_{i!=j} Res_Y(f_j - 1, f_i) = 1 (monic in Y). PROVED, dead.
+   positive Z-degree, but the identity forces prod_{i!=j} Res_Y(f_j - 1, f_i) = 1 (monic in Y). PROVED.
+   Register rows: C4, C3F, C6, D = -7. Closes ONLY all-forced D = -7 Lucas-exponential families.
  - k=5 real quadratic, pattern A1: Calyx GB = [1] in 30 s (qp_5_A1_calyx.log; Monte Carlo modular).
    Pattern A2 exceeded the 6 GB memwatch cap; rerun with pairwise-distinctness (random linear forms,
    qp_5_A2d) in progress. Singular runs of both were SIGKILLed under memory pressure.
@@ -373,48 +398,98 @@ leading coefficients exists (all k, all degrees). Known ingredients: Lemma 6 (re
  - k=5 pattern A2 with the free member eliminated linearly (src/alg/gen_A2lin.py -> A2lin.sing, A2lin.ms):
    Singular eliminate hit the 1200 s timeout with EMPTY output (A2lin.out, 0 bytes); msolve mod 65521 killed
    after the peer review below. UNFINISHED and CUT (no escalation). Same for qp_5_A2d, cub_5d.
+   [COMPUTED: src/alg/A2lin.out (0 bytes), qp_5_A2d*.msout/_calyx.log, cub_5d*.msout/_calyx.log]
  - No candidate n. No submission JSON written.
 
 ### Peer review accepted (session "Lead agents lemmas/theorems", 2026-10-17)
  - Lemmas 3, 4, 6-9 and Theorem 9 all assume the bounded-index identity f_j -+ 1 | n -+ 1, i.e. they are about
-   WILLIAMS NUMBERS (Carmichael AND p+1 | n+1), a stronger problem than BPSW. Lemma 4, positive-leading case,
+   WILLIAMS NUMBERS (Carmichael AND p+1 | n+1), a stronger problem than BPSW [CHECKED by me: register tags on each
+   lemma above, rows C3F + C3L]. Lemma 4, positive-leading case,
    follows from Williams, Canad. Math. Bull. 20 (1977) 133-143, pp.142-143 (k odd, k >= 5): cite it.
    [REVIEWER-REPORTED: the reviewing session read pp.142-143; I have NOT read the paper myself.]
    DECISION: no more obstruction work in the Williams framework (k=5 quadratic/cubic eliminations stopped).
  - Labels: Calyx GB = [1] (k4q, qp_5_A1) and msolve mod-p [-1] are Monte Carlo/modular = COMPUTATIONALLY
    OBSERVED, not theorems. Exact certificates are low priority now that the framework is cut.
    Theorem 9 rests on exact Singular std over Q (qp_4_A1.out, qp_4_A2.out: dim -1).
- - Lemma 5 is a CARMICHAEL family (Korselt in Z[Y]; Beeger-Duparc h2 = Y^2-2, h3 = (Y-1)^2, Delta = 2Y-3):
-   the Fermat half holds for every base. Only the Lucas half binds.
+ - Lemma 5 is a CARMICHAEL family for Y >= 3 (Korselt in Z[Y]; Beeger-Duparc h2 = Y^2-2, h3 = (Y-1)^2, Delta = 2Y-3)
+   [PROVED: identity; Beeger-Duparc form CHECKED by me, see Lemma 5 entry]: the WEAK Fermat test holds for every
+   base coprime to n. The STRONG base-2 test still needs one 2-adic class (F1), and the Lucas half binds.
  - What BPSW actually needs (Lemma 1): odd(ord_p 2) | n-1 and odd(z(p)) | n+1, with no bound on the index
-   (p-1)/ord_p 2 or (p+1)/z(p). Relaxed target ("relaxed Williams family"): f_j - 1 | n - 1 by identity,
+   (p-1)/ord_p 2 or (p+1)/z(p) [PROVED: Lemma 1]. Relaxed target ("relaxed Williams family"): f_j - 1 | n - 1 by identity,
    and g_j | n + 1 for a factor g_j of f_j + 1 with z(f_j) | g_j FORCED (as Psi_d(L_2K) forces z | 2Kd).
 
 ### Lemma 10 (PROVED from Lemma 1, CRT): core + extension decomposition
+Register rows: F1, F2, F3, C1 (any Selfridge D works the same way). Equivalence; closes nothing.
 n = n_F * s squarefree, (5/n) = -1, all prime factors in one 2-adic class (j1, j2) with v2-room.
 A_F = lcm_{p | n_F} odd(ord_p 2), B_F = lcm_{p | n_F} odd(z(p)); A_S, B_S the same for s. Then
    n is a BPSW psp  <=>  s == n_F^{-1} (mod A_F),  s == -n_F^{-1} (mod B_F),  n_F s == 1 (mod A_S),  n_F s == -1 (mod B_S).
 Necessary: gcd(A_F A_S, B_F B_S) = 1 and gcd(n, A B) = 1.
 Consequence (direct): for a Carmichael core (A_F | n_F - 1) with Lucas defect delta_L = B_F / gcd(B_F, n_F + 1),
 the extension needs s == 1 mod lcm(A_F, gcd(B_F, n_F+1)), a modulus of size >= A_F [PROVED]. That A_F is about the
-size of the core primes is UNMEASURED (true only if ord_p 2 is generic for the core primes; R1 measures it). If it holds,
+size of the core primes was UNMEASURED; now MEASURED on the Lemma 5 family: log2 A_F / log2 n has median 0.80 (range
+0.16-0.97) [COMPUTED: src/fam/lemma5_profile.out], i.e. A_F is even larger, about the whole core. So
 a SMALL delta_L does NOT make a hybrid cheap: the cost is set by A_F, not by delta_L. A hybrid is cheap only if (i) delta_L = 1 exactly (pure family member, s = 1), or (ii) the core primes
 have small orders (then the core is just part of an Attempt-A pool, no gain), or (iii) every extension prime
 satisfies q == 1 mod lcm(A_F, gcd(B_F, n_F+1)) individually and has structured q -+ 1 (Erdos-style with L divisible by A_F).
-This corrects the peer's suggestion "if the defect is a few bits, a tiny subset product closes it".
+Since A_F is large (measured above), this corrects the peer's suggestion "if the defect is a few bits, a tiny subset
+product closes it".
+
+### Lemma 5 property profile (G7; 2026-10-17) [COMPUTED: src/fam/lemma5_profile.gp -> lemma5_profile.out]
+Register rows: C4, C3F. All Y with |Y| <= 200000 and |Psi10|, |Psi14|, |Psi18| distinct primes >= 3: 682 rows
+(Y > 0: 337, Y < 0: 345; Y = -2, n = 105 skipped since 3 | Q).
+ - Validation: the Lemma 1 prediction from per-prime orders (one 2-adic class + odd orders dividing n -+ 1) agrees
+   with the direct strong tests on all 682 rows, across 13 different Selfridge D. So Lemma 1 holds for general D
+   in practice, with z = rank of apparition [COMPUTED].
+ - Selfridge D actually selected: D = 5 for only 153/682 (Y > 0: 75/337); -7: 204, -11: 125, 17: 80, -19: 51, ...
+   So Attempt C's D = 5 analysis covers a minority of the family.
+ - Y > 0: Korselt 337/337 (Carmichael, Fermat defect 1 always); strong Fermat(2) = one Fermat 2-adic class = 50/337;
+   one Lucas 2-adic class 47/337; Lucas defect 1: 0/337; strong Lucas 0; BPSW 0.
+ - Y < 0: Korselt 0/345; instead |Psi14|+1 and |Psi18|+1 divide n-1 for all of them [COMPUTED: lemma11_check.out];
+   Fermat defect 1: 0/345. Not a Carmichael branch.
+ - Lucas defect delta_L: log2 delta_L / log2 n has median 0.48, range 0.185-0.611. Small defects only at tiny n:
+   Y = -3 (2.3 bits), 3 (3.2), -4 (7.1), 17 (7.8); for n > 2^33 every defect is >= 21.6 bits (Y = 66), typically about n^0.48.
+   ANSWER to the reviewer's question "is the Lucas defect ever small?": NO, not beyond tiny Y [COMPUTED].
+ - Indices: (p - (D/p))/z(p) <= 2 for 1322 of 2046 primes, <= 10 for 1726; (p-1)/ord_p 2 <= 2 for 1160, <= 10 for 1640.
+   The orders are generic; nothing in this family forces a large index.
+
+### Lemma 11 (PROVED, elementary; checked numerically): why the Lucas defect cannot vanish in the Lemma 5 family
+Register rows: F1, C3F (Korselt), C4; ANY Selfridge D.
+ (a) General: if n is a Carmichael number and a strong Lucas psp for D, then every prime p | n that SPLITS for D has
+     z(p) a power of 2. Proof: z(p) | p - 1 | n - 1 and odd(z(p)) | n + 1, so odd(z(p)) | 2.
+ (b) Lemma 5 family, Y >= 3, n = Psi10 Psi14 Psi18 (all prime) a strong Lucas psp for its D. Then
+     z(Psi10(Y)) = z(Psi18(Y)) = 2^j2, i.e. Psi10(Y) * Psi18(Y) divides V_{2^(j2-1)} for that D.
+     Proof: split case by (a). Inert case: odd(z(p)) | gcd(p+1, n+1). In Z[Y], n(0) = 1 and n(1) = -3, so
+     n+1 == 2 mod Y and == -2 mod (Y-1); hence gcd(Psi10+1, n+1) = gcd(Y(Y-1), n+1) divides 2. Modulo Y^2-3:
+     Psi10 = 2-Y, Psi14 = Y-2, Psi18 = -1, so n+1 == 4(2-Y), and gcd(2-Y, Y^2-3) = 1 since Y^2-3 = (Y-2)(Y+2)+1;
+     hence gcd(Psi18+1, n+1) = gcd(Y(Y^2-3), n+1) divides 8. So odd(z) = 1 for both; Lemma 1 (one Lucas class)
+     makes the two 2-powers equal.  QED
+     [COMPUTED check, src/fam/lemma11_check.gp -> .out: both gcd bounds and (Y^2-2) | n+1 hold on all 337 rows;
+     no row has odd(z) = 1 for Psi10 or Psi18.]
+ Only Psi14 has a polynomial factor of p+1 dividing n+1 (Y^2-2); Psi10 and Psi18 have none.
+ WHAT A WORKING OBJECT MUST LOOK LIKE (G2 extraction):
+  - In a pure relaxed family (S1), EVERY member f_j needs a polynomial factor g_j of f_j + 1 (inert) with
+    deg gcd(g_j, n + 1) large in Q[Y]. Otherwise z(f_j) is forced to be a power of 2 by the argument above. This is
+    a polynomial condition to impose directly in the Beeger-Duparc search (R1), not a measurement.
+  - Lemma 5 itself survives only through Y with Psi10(Y) * Psi18(Y) | V_{2^m} for the selected D: a finite search
+    per (D, m) over prime factors of V_{2^m} of the shapes Y^2-Y-1 and Y^3-3Y-1 with the same Y.
 
 ### Sharp sufficient conditions (targets; each would output n)
  (S1, pure) A Carmichael polynomial family f_1..f_k in Z[Y] (Korselt identity) and a parametrisation Y = Y(K)
    (exponential or polynomial) with polynomials g_j such that z(f_j(Y(K))) | g_j(K) is forced and
    g_j | n + 1 holds identically; then any K with all f_j(Y(K)) prime gives n (after Selfridge-D and
-   2-adic class checks). Attempt C = this with g_j Lucas-exponential, and it fails by the mod-315 clash.
+   2-adic class checks) [PROVED from Lemma 1]. Attempt C = this with g_j Lucas-exponential; the only Psi families
+   found ({10,14,18}*2^i, d <= 150, k <= 5 [COMPUTED: src/fam/half.out]) fail for D = 5 at every K by the mod-5
+   argument [PROVED: Attempt C].
  (S2, extension) A Carmichael core and a pool P of primes q == 1 mod M_F = lcm(A_F, gcd(B_F, n_F+1)) with
    odd(ord_q 2) | L1, odd(z(q)) | L2: n exists iff some subset of P has product hitting the target of Lemma 10 in
-   G = (Z/delta_L)^* x (Z/L1)^* x (Z/L2)^*; heuristic count 2^|P| / |G|; DEFICIT = log2|G| - |P| bits.
-   Not yet measured for any extension pool (Attempt-A pools had a deficit of about 240 bits at z = 150).
+   G = (Z/delta_L)^* x (Z/L1)^* x (Z/L2)^* [PROVED from Lemma 10]; count 2^|P| / |G| [HEURISTIC];
+   DEFICIT = log2|G| - |P| bits. Not yet measured for any extension pool (Attempt-A pools: 241.7 bits at z = 150,
+   class (2,0), point (271.7 bits, 30 primes) [COMPUTED: data/frontier_z150.json]).
 
 ### Live constructive directions (>= 3), each with first experiment and kill condition
- R1 Pure relaxed families (S1). First: along Lemma 5 (the 76 Y in [3,20000) with all three values prime, Korselt holding for all 76 [CHECKED by me:
+ R1 Pure relaxed families (S1). [First measurement DONE 2026-10-17: profile + Lemma 11 above. NEXT: Beeger-Duparc
+    search with the Lemma 11 condition imposed: every member's f_j + 1 must share a high-degree factor with n + 1.]
+    Original first step: along Lemma 5 (the 76 Y in [3,20000) with all three values prime, Korselt holding for all 76 [CHECKED by me:
     src/fam/lemma5_count.gp; Y = 3, 9, 17 give 5*13*17, 71*631*701, 271*4591*4861], plus negative Y)
     compute the Selfridge D actually chosen, the 2-adic classes, A_F, B_F, delta_L and whether B_F or delta_L factor
     polynomially in Y. Then enumerate low-degree Beeger-Duparc polynomial families (h2, h3 of degree <= 2,
@@ -433,9 +508,10 @@ This corrects the peer's suggestion "if the defect is a few bits, a tiny subset 
  Closed BY PROOF, only for the stated sub-route (each uses a CHOSEN restriction, see Assumption register):
    Williams-identity families that are linear same-sign, k=3 (any degree), monic integer quadratic, real quadratic
    k=4 with a_j > 0 (Lemmas 3, 4, 7, Thm 9); D=-7 all-forced two-variable Lucas shapes; Lucas-exponential triples
-   with K = 2^a (mod-315 clash).
- Bounded computation only: Fermat-exponential pairs a,b <= 100; Psi_d Fermat-identity sets d <= 100; k=4 and k=5-A1
-   quadratic ideals (Calyx/msolve, Monte Carlo).
+   at Y = L_2K for D = 5, every K, for the Psi families found (mod-5 argument, Attempt C).
+ Bounded computation only: Fermat-exponential pairs a,b <= 160 [COMPUTED: src/alg/cyc_sym.out]; Psi_d
+   Fermat-identity sets d <= 150, k <= 5 [COMPUTED: src/fam/half.out]; k=4 and k=5-A1 quadratic ideals
+   (Calyx/msolve, Monte Carlo [COMPUTED: src/alg/k4q_calyx.out, qp_5_A1*.out]).
  Deprioritised by measurement/heuristic, NOT closed: Pomerance pools (CHM, DSO, D=-7; measured N/log2|G| about 0.1
    at z <= 150; infeasibility at all scales is HEURISTIC); further obstruction work in the Williams framework.
 
@@ -443,5 +519,7 @@ This corrects the peer's suggestion "if the defect is a few bits, a tiny subset 
  - Tools: src/bpsw.py (check_submission(path) = verifier), src/fam/bpsw.gp (sprp2, selD, lucUV, slprp, bpsw),
    GP/PARI, Singular, msolve 0.10.1, Calyx (~/Desktop/calyx-math/target/release/calyx; memwatch caps any calyx
    process at 6144 MB, user config, do not override). Converters: src/alg/sing2ms.py, src/alg/sing2calyx.py.
- - Start with R1's first measurement (cheap, GP), then R3, then R2.
+ - R1's first measurement is DONE (Lemma 5 profile, Lemma 11). Next: R1 Beeger-Duparc search with the Lemma 11
+   gcd condition imposed (constructive, per G2), then R3, then R2. Optional cheap side search: Y with
+   Psi10(Y) * Psi18(Y) | V_{2^m}.
  - Process state at checkpoint: no task-owned solver or worker running (memwatch is the user's persistent service).
