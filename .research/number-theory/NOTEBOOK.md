@@ -7,6 +7,38 @@
 - Status in literature (checked 2026-10-17): none known; none < 2^64 (Gilchrist/Feitsma), none < 1e21
   for the "FL" version (Ishmukhametov et al., Izv. VUZ Mat. 2024 no.4). Listed as open by Epoch AI.
 
+## Assumption register (added 2026-10-17 after the Williams-framework error; KEEP CURRENT)
+Every lemma must list which rows it uses. A route may be called CLOSED only by a PROVED result whose hypotheses
+are all FORCED; a result using a CHOSEN row closes only that sub-route, and the notebook must name the sub-route.
+| assumption                                   | status | why                                                        |
+| one 2-adic class (j1,j2) for all p | n       | FORCED | Lemma 1 (strong tests act prime by prime)                  |
+| gcd(odd ord / odd z moduli of n-1 and n+1)=1 | FORCED | n == 1 and n == -1 mod an odd prime is impossible          |
+| n squarefree                                 | FORCED*| *unless p is Wieferich AND Wall-Sun-Sun-type for the D used |
+| restrict to n with (5/n) = -1 (D = 5)        | CHOSEN | n with (5/n) = +1 get D = -7, -11, 13, ...; equally allowed |
+| every prime factor inert for D               | CHOSEN | split primes allowed by Lemma 1 (heuristically rare)       |
+| bounded index: p -+ 1 | n -+ 1 (Williams)    | CHOSEN | BPSW needs only odd(ord_p 2) | n-1, odd(z(p)) | n+1      |
+| polynomial family with Q[t]-divisibility     | CHOSEN | used by Lemmas 3-9, Thm 9                                  |
+| smooth p -+ 1 pools (Lemma 2)                | CHOSEN | used by Attempts A, B, D                                    |
+
+## Working rules (procedure changes after repeated failures; check before every log entry)
+ G1 Assumption gate: before proving or computing anything, write which register rows it uses. If it uses a CHOSEN
+    row, first write one line on whether BPSW forces that row. (The Williams error: Lemma 3 already said "bounded
+    index" and nobody asked whether BPSW needs it.)
+ G2 Obstruction budget: an obstruction gets ONE attempt entry. The next LOG attempt must be constructive (could output
+    n), and its derivation must cite what the obstruction says a working object must look like (as Lemma 4 ->
+    split torus -> Attempt C).
+ G3 Resource cap: a computation that hits a memory or time cap gets at most ONE re-encoding. A second failure is
+    recorded as UNFINISHED and cut. No escalation over Q, over GF(p), msolve and Calyx in turn.
+ G4 No project-level stop language ("no mechanism left", "STOP", "dead" for the whole project). Every checkpoint lists
+    >= 3 live constructive directions, each with first experiment and kill condition; if fewer exist, the next
+    action is to derive new ones from the latest obstructions.
+ G5 Heuristics rank, never close (see register rule above).
+ G6 Source tags on every claim: [PROVED here] [COMPUTED: file] [READ by me: source] [REPORTED by X, unchecked].
+    Before a checkpoint, grep it for untagged claims and either verify or tag them.
+ G7 New construction => full property profile before moving on: all bases (Korselt?), Selfridge D actually chosen,
+    2-adic classes, A_F, B_F, Lucas defect. (Lemma 5 sat for a whole session labelled "base-2 Fermat" when it is
+    Carmichael.)
+
 ## Verified tools
 - `src/bpsw.py`: verbatim implementation of the problem's tests. Reproduces OEIS A001262 (spsp(2) < 1e5)
   and A217255 (strong Lucas psp < 1e5) exactly; all primes < 2e5 pass; no BPSW psp < 2e6.
@@ -287,7 +319,8 @@ even over C.  Independent check: real LM over ALL k=4 quadratic families (lm_rea
   need N >= 4^sqrt(log2|G|) ~ e^{1.4 sqrt(c k)}. Also each p has only omega(p^2-1) ~ log trivial coordinates,
   so the subgroup filter is useless.  HEURISTIC CONCLUSION: at NO scale k does a Pomerance-type BPSW pool
   admit a solution findable by known dense subset-product algorithms (existence holds only for large k).
-  Item (i) is closed by this analysis unless a pool with many trivial coordinates per prime is found.
+  Item (i) is DEPRIORITISED by this heuristic, NOT closed (relabelled 2026-10-17: a heuristic may rank a route,
+  never close it).
 
 ## Novelty audit (2026-10-17; web + alphaXiv search, primary sources read where accessible)
 Context: the polynomial-family lemmas concern WILLIAMS NUMBERS (Carmichael n with (D/n)=-1, p+1 | n+1 for all p),
@@ -346,6 +379,7 @@ leading coefficients exists (all k, all degrees). Known ingredients: Lemma 6 (re
  - Lemmas 3, 4, 6-9 and Theorem 9 all assume the bounded-index identity f_j -+ 1 | n -+ 1, i.e. they are about
    WILLIAMS NUMBERS (Carmichael AND p+1 | n+1), a stronger problem than BPSW. Lemma 4, positive-leading case,
    follows from Williams, Canad. Math. Bull. 20 (1977) 133-143, pp.142-143 (k odd, k >= 5): cite it.
+   [REVIEWER-REPORTED: the reviewing session read pp.142-143; I have NOT read the paper myself.]
    DECISION: no more obstruction work in the Williams framework (k=5 quadratic/cubic eliminations stopped).
  - Labels: Calyx GB = [1] (k4q, qp_5_A1) and msolve mod-p [-1] are Monte Carlo/modular = COMPUTATIONALLY
    OBSERVED, not theorems. Exact certificates are low priority now that the framework is cut.
@@ -362,9 +396,9 @@ A_F = lcm_{p | n_F} odd(ord_p 2), B_F = lcm_{p | n_F} odd(z(p)); A_S, B_S the sa
    n is a BPSW psp  <=>  s == n_F^{-1} (mod A_F),  s == -n_F^{-1} (mod B_F),  n_F s == 1 (mod A_S),  n_F s == -1 (mod B_S).
 Necessary: gcd(A_F A_S, B_F B_S) = 1 and gcd(n, A B) = 1.
 Consequence (direct): for a Carmichael core (A_F | n_F - 1) with Lucas defect delta_L = B_F / gcd(B_F, n_F + 1),
-the extension needs s == 1 mod lcm(A_F, gcd(B_F, n_F+1)), a modulus of size >= A_F, which is about the size of the
-core primes for generic ord_p 2. So a SMALL delta_L does NOT make a hybrid cheap: the cost is set by A_F, not by
-delta_L. A hybrid is cheap only if (i) delta_L = 1 exactly (pure family member, s = 1), or (ii) the core primes
+the extension needs s == 1 mod lcm(A_F, gcd(B_F, n_F+1)), a modulus of size >= A_F [PROVED]. That A_F is about the
+size of the core primes is UNMEASURED (true only if ord_p 2 is generic for the core primes; R1 measures it). If it holds,
+a SMALL delta_L does NOT make a hybrid cheap: the cost is set by A_F, not by delta_L. A hybrid is cheap only if (i) delta_L = 1 exactly (pure family member, s = 1), or (ii) the core primes
 have small orders (then the core is just part of an Attempt-A pool, no gain), or (iii) every extension prime
 satisfies q == 1 mod lcm(A_F, gcd(B_F, n_F+1)) individually and has structured q -+ 1 (Erdos-style with L divisible by A_F).
 This corrects the peer's suggestion "if the defect is a few bits, a tiny subset product closes it".
@@ -380,22 +414,30 @@ This corrects the peer's suggestion "if the defect is a few bits, a tiny subset 
    Not yet measured for any extension pool (Attempt-A pools had a deficit of about 240 bits at z = 150).
 
 ### Live constructive directions (>= 3), each with first experiment and kill condition
- R1 Pure relaxed families (S1). First: along Lemma 5 (the 76 Y < 20000 with all three values prime, plus negative Y)
+ R1 Pure relaxed families (S1). First: along Lemma 5 (the 76 Y in [3,20000) with all three values prime, Korselt holding for all 76 [CHECKED by me:
+    src/fam/lemma5_count.gp; Y = 3, 9, 17 give 5*13*17, 71*631*701, 271*4591*4861], plus negative Y)
     compute the Selfridge D actually chosen, the 2-adic classes, A_F, B_F, delta_L and whether B_F or delta_L factor
     polynomially in Y. Then enumerate low-degree Beeger-Duparc polynomial families (h2, h3 of degree <= 2,
     Delta(Y) | (p-1)(p+h3) identically) and repeat. Kill: delta_L shows no structural (polynomial or
     Lucas-exponential) dependence on Y in >= 3 families, so no forced-z substitution exists for them.
  R2 Mixed families: some members Lucas-forced (Psi_d(Y), Y = L_2K for D=5), the others free polynomials in Y
     chosen so that the whole product satisfies Korselt in Z[Y]; only the free members contribute to delta_L.
-    Other D: for Q != +-1 the all-forced version is DEAD (two-variable resultant obstruction, Theorem 9 side check,
-    Z = Q^M); the mixed version is NOT covered by that proof. First: extend src/alg/cyc_sets.gp to search for
+    Other D: for D = -7 (Q = 2) the all-forced version is DEAD (PROVED: two-variable resultant obstruction, Theorem 9
+    side check, Z = 2^M). Other Q != +-1: UNCHECKED (the same argument plausibly applies; verify before relying on it).
+    The mixed version is NOT covered by that proof for any D. First: extend src/alg/cyc_sets.gp to search for
     free Z[Y] members completing a Korselt identity with 1-2 Psi_d members, d <= 60. Kill: no completion at degree <= 4.
  R3 Carmichael-extension hybrid (S2, case (iii) of Lemma 10). First: for the smallest Lemma-5 cores
     (Y = 9: 71*631*701, etc.) compute A_F, B_F, delta_L, M_F; count primes q = 1 + m*M_F (m smooth, q < 2^64)
     with small odd(z(q)) and odd(ord_q 2), and measure the deficit of S2 against Attempt A at equal |G|.
     Kill: the deficit is no better than CHM pools at the same log2|G|.
- Closed (do not reopen without a new mechanism): Pomerance pools (CHM, DSO, D=-7) at the measured ratio N/log2|G|
- of about 0.1; Williams-identity families (Lemmas 3-9); all-forced exponential half-families (Attempt C, D=-7 Res).
+ Closed BY PROOF, only for the stated sub-route (each uses a CHOSEN restriction, see Assumption register):
+   Williams-identity families that are linear same-sign, k=3 (any degree), monic integer quadratic, real quadratic
+   k=4 with a_j > 0 (Lemmas 3, 4, 7, Thm 9); D=-7 all-forced two-variable Lucas shapes; Lucas-exponential triples
+   with K = 2^a (mod-315 clash).
+ Bounded computation only: Fermat-exponential pairs a,b <= 100; Psi_d Fermat-identity sets d <= 100; k=4 and k=5-A1
+   quadratic ideals (Calyx/msolve, Monte Carlo).
+ Deprioritised by measurement/heuristic, NOT closed: Pomerance pools (CHM, DSO, D=-7; measured N/log2|G| about 0.1
+   at z <= 150; infeasibility at all scales is HEURISTIC); further obstruction work in the Williams framework.
 
 ### Resume instructions
  - Tools: src/bpsw.py (check_submission(path) = verifier), src/fam/bpsw.gp (sprp2, selD, lucUV, slprp, bpsw),
