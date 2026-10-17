@@ -1,0 +1,15 @@
+start 2026-10-17 14:25:00
+attempt 1 14:25:00 pressure 1 swap 3994.69M
+generators: 19, variables: 13
+GroebnerBasis: 153.882 s cpu, 158.450 s real
+Dimension: 0.000 s cpu
+dim:
+-1
+size:
+1
+guard: peak footprint 5110 MB, 158.56 s
+real 158.62
+user 149.45
+sys 5.39
+exit=0
+end 2026-10-17 14:27:39

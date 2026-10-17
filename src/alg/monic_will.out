@@ -1,0 +1,12 @@
+  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).
+polys: 2337
+  *** matrix: Warning: increasing stack size to 16000000.
+  *** matrix: Warning: increasing stack size to 32000000.
+  *** matrix: Warning: increasing stack size to 64000000.
+  *** matrix: Warning: increasing stack size to 128000000.
+  ***   Warning: increasing stack size to 256000000.
+Williams edges 42  Fermat-half edges 761
+WILLIAMS cliques [0, 0, 4, 0, 0, 0] hits 0
+FERMAT-HALF cliques [0, 0, 233, 79, 18, 2] hits 1
+  [t^2 - t - 1, t^3 - t^2 - 2*t + 1, t^3 - 3*t - 1, t^4 - 3*t^2 - 2*t + 1]
+done

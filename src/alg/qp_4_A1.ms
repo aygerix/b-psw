@@ -1,0 +1,23 @@
+c,lam,mu,a4,b4,e4,w0,w1,w2,w3,w4
+0
+2*b4*mu - b4,
+-2*a4*c*mu + a4*c + 2*a4*mu - a4 + 2*e4*mu - e4 - 1,
+2*b4*lam - b4,
+-2*a4*c*lam + a4*c - 2*a4*lam + a4 + 2*e4*lam - e4 - 1,
+2*b4*lam^5*mu - b4*lam^5,
+-2*a4*c*lam^5*mu + a4*c*lam^5 + 2*a4*lam^5*mu - a4*lam^5 + 2*e4*lam^5*mu - e4*lam^5 - lam^5,
+2*b4*lam^5*mu - b4*lam^5 - 6*b4*lam^4*mu + 2*b4*lam^4 + 4*b4*lam^3*mu,
+-2*a4*c*lam^5*mu + a4*c*lam^5 + 6*a4*c*lam^4*mu - 2*a4*c*lam^4 - 4*a4*c*lam^3*mu + 2*a4*lam^5*mu - a4*lam^5 - 10*a4*lam^4*mu + 4*a4*lam^4 + 16*a4*lam^3*mu - 4*a4*lam^3 - 8*a4*lam^2*mu + 2*e4*lam^5*mu - e4*lam^5 - 6*e4*lam^4*mu + 2*e4*lam^4 + 4*e4*lam^3*mu - lam^5,
+2*b4*lam*mu^5 - 6*b4*lam*mu^4 + 4*b4*lam*mu^3 - b4*mu^5 + 2*b4*mu^4,
+-2*a4*c*lam*mu^5 + 6*a4*c*lam*mu^4 - 4*a4*c*lam*mu^3 + a4*c*mu^5 - 2*a4*c*mu^4 - 2*a4*lam*mu^5 + 10*a4*lam*mu^4 - 16*a4*lam*mu^3 + 8*a4*lam*mu^2 + a4*mu^5 - 4*a4*mu^4 + 4*a4*mu^3 + 2*e4*lam*mu^5 - 6*e4*lam*mu^4 + 4*e4*lam*mu^3 - e4*mu^5 + 2*e4*mu^4 - mu^5,
+2*b4*lam*mu^5 - b4*mu^5,
+-2*a4*c*lam*mu^5 + a4*c*mu^5 - 2*a4*lam*mu^5 + a4*mu^5 + 2*e4*lam*mu^5 - e4*mu^5 - mu^5,
+-3*a4^4*b4*c^2*lam*mu + 2*a4^4*b4*c*lam - 2*a4^4*b4*c*mu + a4^4*b4*lam*mu - a4^4*b4*lam - a4^4*b4*mu + a4^4*b4 + 6*a4^3*b4*c*e4*lam*mu - 6*a4^3*b4*c*lam*mu - 2*a4^3*b4*e4*lam + 2*a4^3*b4*e4*mu + 2*a4^3*b4*lam - 2*a4^3*b4*mu - 3*a4^2*b4^3*c*lam*mu + a4^2*b4^3*lam - a4^2*b4^3*mu - 3*a4^2*b4*e4^2*lam*mu + 6*a4^2*b4*e4*lam*mu - 3*a4^2*b4*lam*mu + 4*a4*b4^3*e4*lam*mu - 4*a4*b4^3*lam*mu - b4^5*lam*mu,
+a4^5*c^3*lam*mu - a4^5*c^2*lam + a4^5*c^2*mu - a4^5*c*lam*mu + a4^5*c*lam + a4^5*c*mu - a4^5*c - a4^5 - 3*a4^4*c^2*e4*lam*mu + 3*a4^4*c^2*lam*mu + 2*a4^4*c*e4*lam - 2*a4^4*c*e4*mu - 2*a4^4*c*lam + 2*a4^4*c*mu + a4^4*e4*lam*mu - a4^4*e4*lam - a4^4*e4*mu + a4^4*e4 - a4^4*lam*mu + a4^4*lam + a4^4*mu - a4^4 + 3*a4^3*c*e4^2*lam*mu - 6*a4^3*c*e4*lam*mu + 3*a4^3*c*lam*mu - a4^3*e4^2*lam + a4^3*e4^2*mu + 2*a4^3*e4*lam - 2*a4^3*e4*mu - a4^3*lam + a4^3*mu - 3*a4^2*b4^2*c*e4*lam*mu + 3*a4^2*b4^2*c*lam*mu + a4^2*b4^2*e4*lam - a4^2*b4^2*e4*mu - a4^2*b4^2*lam + a4^2*b4^2*mu - a4^2*e4^3*lam*mu + 3*a4^2*e4^2*lam*mu - 3*a4^2*e4*lam*mu + a4^2*lam*mu + 3*a4*b4^2*e4^2*lam*mu - 6*a4*b4^2*e4*lam*mu + 3*a4*b4^2*lam*mu - b4^4*e4*lam*mu + b4^4*lam*mu,
+-3*a4^4*b4*c^2*lam*mu + 2*a4^4*b4*c*lam - 2*a4^4*b4*c*mu + a4^4*b4*lam*mu - a4^4*b4*lam - a4^4*b4*mu + a4^4*b4 + 6*a4^3*b4*c*e4*lam*mu + 6*a4^3*b4*c*lam*mu - 2*a4^3*b4*e4*lam + 2*a4^3*b4*e4*mu - 2*a4^3*b4*lam + 2*a4^3*b4*mu - 3*a4^2*b4^3*c*lam*mu + a4^2*b4^3*lam - a4^2*b4^3*mu - 3*a4^2*b4*e4^2*lam*mu - 6*a4^2*b4*e4*lam*mu - 3*a4^2*b4*lam*mu + 4*a4*b4^3*e4*lam*mu + 4*a4*b4^3*lam*mu - b4^5*lam*mu,
+a4^5*c^3*lam*mu - a4^5*c^2*lam + a4^5*c^2*mu - a4^5*c*lam*mu + a4^5*c*lam + a4^5*c*mu - a4^5*c - a4^5 - 3*a4^4*c^2*e4*lam*mu - 3*a4^4*c^2*lam*mu + 2*a4^4*c*e4*lam - 2*a4^4*c*e4*mu + 2*a4^4*c*lam - 2*a4^4*c*mu + a4^4*e4*lam*mu - a4^4*e4*lam - a4^4*e4*mu + a4^4*e4 + a4^4*lam*mu - a4^4*lam - a4^4*mu + a4^4 + 3*a4^3*c*e4^2*lam*mu + 6*a4^3*c*e4*lam*mu + 3*a4^3*c*lam*mu - a4^3*e4^2*lam + a4^3*e4^2*mu - 2*a4^3*e4*lam + 2*a4^3*e4*mu - a4^3*lam + a4^3*mu - 3*a4^2*b4^2*c*e4*lam*mu - 3*a4^2*b4^2*c*lam*mu + a4^2*b4^2*e4*lam - a4^2*b4^2*e4*mu + a4^2*b4^2*lam - a4^2*b4^2*mu - a4^2*e4^3*lam*mu - 3*a4^2*e4^2*lam*mu - 3*a4^2*e4*lam*mu - a4^2*lam*mu + 3*a4*b4^2*e4^2*lam*mu + 6*a4*b4^2*e4*lam*mu + 3*a4*b4^2*lam*mu - b4^4*e4*lam*mu - b4^4*lam*mu,
+lam*w0 - 1,
+mu*w1 - 1,
+lam*w2 - w2 - 1,
+mu*w3 - w3 - 1,
+a4*w4 - 1

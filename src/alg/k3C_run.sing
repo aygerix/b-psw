@@ -1,0 +1,15 @@
+int t0=timer;
+// k=3 polynomial factors times a constant C (product of fixed primes):
+// C*P_j - 1 = c_j (f_j^2-1).
+ring R = 0,(y,z,c1,c2,c3,C,x),dp;
+ideal I = C*y*z-1-c1*(x^2-1), C*x*z-1-c2*(y^2-1), C*x*y-1-c3*(z^2-1);
+ideal K = eliminate(I, y*z);
+ideal Co; int i; int j;
+for (i=1; i<=size(K); i++) { matrix M = coeffs(K[i], x); for (j=1; j<=nrows(M); j++) { Co = Co, M[j,1]; } }
+Co = simplify(Co, 2);
+ring S = 0,(c1,c2,c3,C),dp;
+ideal Co = imap(R, Co);
+LIB "primdec.lib";
+list L = minAssGTZ(Co);
+print(L);
+quit;

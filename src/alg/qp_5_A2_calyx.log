@@ -1,0 +1,3 @@
+generators: 26, variables: 15
+guard: killed /Users/jmercedes/Desktop/calyx-math/target/release/calyx (memwatch: footprint 6146 MB above the 6144 MB cap for any calyx process)
+guard: peak footprint 6145 MB, 177.62 s

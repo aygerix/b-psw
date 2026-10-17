@@ -1,0 +1,7 @@
+ring R = (0,m),(x,y,z),dp;
+number c1 = -1/(m*(m+1)); number c2 = -m^2/(m+1); number c3 = (m+1)^2/m;
+ideal I = y*z-1-c1*(x^2-1), x*z-1-c2*(y^2-1), x*y-1-c3*(z^2-1);
+LIB "primdec.lib";
+list L = primdecGTZ(I);
+int i;
+for (i=1;i<=size(L);i++){ "--- comp",i; print(L[i][2]); "dim",dim(std(L[i][2])); }

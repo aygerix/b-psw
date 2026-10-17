@@ -1,0 +1,11 @@
+generators: 26, variables: 15
+GroebnerBasis: 30.014 s cpu, 30.585 s real
+Dimension: 0.000 s cpu
+dim:
+-1
+size:
+1
+guard: peak footprint 3508 MB, 30.96 s
+real 31.09
+user 28.98
+sys 1.36

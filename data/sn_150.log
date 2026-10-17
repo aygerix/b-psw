@@ -1,0 +1,14 @@
+z=150 pass 1: |S|=920 new=771 overflow=0
+z=150 pass 2: |S|=4566 new=3646 overflow=0
+z=150 pass 3: |S|=19136 new=14570 overflow=0
+z=150 pass 4: |S|=48604 new=29468 overflow=0
+z=150 pass 5: |S|=68615 new=20011 overflow=0
+z=150 pass 6: |S|=73004 new=4389 overflow=6
+z=150 pass 7: |S|=73627 new=623 overflow=22
+z=150 pass 8: |S|=73710 new=83 overflow=32
+z=150 pass 9: |S|=73721 new=11 overflow=32
+z=150 pass 10: |S|=73725 new=4 overflow=32
+z=150 pass 11: |S|=73726 new=1 overflow=32
+z=150 pass 12: |S|=73726 new=0 overflow=32
+total 73726, nonsmooth 0, overflow 32
+./chm 150 > ../data/sn_150.txt  46.61s user 0.45s system 97% cpu 48.041 total

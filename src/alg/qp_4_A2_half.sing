@@ -1,0 +1,20 @@
+ring R=0,(c,lam,mu,a3,b3,e3,w0,w1,w2,w3,w4),dp;
+option(redSB);
+ideal I=
+-2*a3*b3*c*mu + 2*a3*b3*mu + 2*b3*e3*mu + b3*mu - b3,
+a3^2*c^2*mu - 2*a3^2*c*mu + a3^2*mu - 2*a3*c*e3*mu - a3*c*mu + a3*c + 2*a3*e3*mu + a3*mu - a3 - b3^2*c*mu + b3^2*mu + e3^2*mu + e3*mu - e3 - 1,
+-2*a3*b3*c*lam^5*mu + 2*a3*b3*lam^5*mu + 2*b3*e3*lam^5*mu + b3*lam^5*mu - b3*lam^5,
+a3^2*c^2*lam^5*mu - 2*a3^2*c*lam^5*mu + a3^2*lam^5*mu - 2*a3*c*e3*lam^5*mu - a3*c*lam^5*mu + a3*c*lam^5 + 2*a3*e3*lam^5*mu + a3*lam^5*mu - a3*lam^5 - b3^2*c*lam^5*mu + b3^2*lam^5*mu + e3^2*lam^5*mu + e3*lam^5*mu - e3*lam^5 - lam^5,
+-4*a3^4*b3*c*lam*mu + 2*a3^4*b3*c*lam + 2*a3^4*b3*lam*mu - a3^4*b3*lam - 2*a3^4*b3*mu + a3^4*b3 + 4*a3^3*b3*e3*lam*mu - 2*a3^3*b3*e3*lam - 4*a3^3*b3*lam*mu + 2*a3^3*b3*lam - 2*a3^2*b3^3*lam*mu + a3^2*b3^3*lam,
+2*a3^5*c^2*lam*mu - a3^5*c^2*lam - 2*a3^5*c*lam*mu + a3^5*c*lam + 2*a3^5*c*mu - a3^5*c - a3^5 - 4*a3^4*c*e3*lam*mu + 2*a3^4*c*e3*lam + 4*a3^4*c*lam*mu - 2*a3^4*c*lam + 2*a3^4*e3*lam*mu - a3^4*e3*lam - 2*a3^4*e3*mu + a3^4*e3 - 2*a3^4*lam*mu + a3^4*lam + 2*a3^4*mu - a3^4 + 2*a3^3*e3^2*lam*mu - a3^3*e3^2*lam - 4*a3^3*e3*lam*mu + 2*a3^3*e3*lam + 2*a3^3*lam*mu - a3^3*lam - 2*a3^2*b3^2*e3*lam*mu + a3^2*b3^2*e3*lam + 2*a3^2*b3^2*lam*mu - a3^2*b3^2*lam,
+2*a3^4*b3*c*lam*mu^5 - 4*a3^4*b3*c*lam*mu^4 - a3^4*b3*lam*mu^5 + 2*a3^4*b3*lam*mu^4 + a3^4*b3*mu^5 - 2*a3^4*b3*mu^4 - 2*a3^3*b3*e3*lam*mu^5 + 4*a3^3*b3*e3*lam*mu^4 - 2*a3^3*b3*lam*mu^5 + 8*a3^3*b3*lam*mu^4 - 8*a3^3*b3*lam*mu^3 + a3^2*b3^3*lam*mu^5 - 2*a3^2*b3^3*lam*mu^4,
+-a3^5*c^2*lam*mu^5 + 2*a3^5*c^2*lam*mu^4 + a3^5*c*lam*mu^5 - 2*a3^5*c*lam*mu^4 - a3^5*c*mu^5 + 2*a3^5*c*mu^4 - a3^5*mu^5 + 2*a3^4*c*e3*lam*mu^5 - 4*a3^4*c*e3*lam*mu^4 + 2*a3^4*c*lam*mu^5 - 8*a3^4*c*lam*mu^4 + 8*a3^4*c*lam*mu^3 - a3^4*e3*lam*mu^5 + 2*a3^4*e3*lam*mu^4 + a3^4*e3*mu^5 - 2*a3^4*e3*mu^4 - a3^4*lam*mu^5 + 4*a3^4*lam*mu^4 - 4*a3^4*lam*mu^3 + a3^4*mu^5 - 4*a3^4*mu^4 + 4*a3^4*mu^3 - a3^3*e3^2*lam*mu^5 + 2*a3^3*e3^2*lam*mu^4 - 2*a3^3*e3*lam*mu^5 + 8*a3^3*e3*lam*mu^4 - 8*a3^3*e3*lam*mu^3 - a3^3*lam*mu^5 + 6*a3^3*lam*mu^4 - 12*a3^3*lam*mu^3 + 8*a3^3*lam*mu^2 + a3^2*b3^2*e3*lam*mu^5 - 2*a3^2*b3^2*e3*lam*mu^4 + a3^2*b3^2*lam*mu^5 - 4*a3^2*b3^2*lam*mu^4 + 4*a3^2*b3^2*lam*mu^3,
+lam*w0 - 1,
+mu*w1 - 1,
+lam*w2 - w2 - 1,
+mu*w3 - w3 - 1,
+a3*w4 - 1;
+ideal G=std(I);
+print("dim:"); print(dim(G)); print("size:"); print(size(G));
+if(size(G)<40){print(G);}
+quit;

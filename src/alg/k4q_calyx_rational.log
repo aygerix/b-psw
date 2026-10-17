@@ -1,0 +1,10 @@
+start 2026-10-17 14:18:24
+attempt 1 14:18:24
+generators: 19, variables: 13
+guard: killed /Users/jmercedes/Desktop/calyx-math/target/release/calyx (memory above 1000 MB)
+guard: peak footprint 1001 MB, 325.02 s
+real 347.14
+user 318.35
+sys 3.44
+exit=137
+end 2026-10-17 14:24:11

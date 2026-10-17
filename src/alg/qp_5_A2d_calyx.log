@@ -1,0 +1,3 @@
+generators: 34, variables: 23
+guard: killed /Users/jmercedes/Desktop/calyx-math/target/release/calyx (memory above 6000 MB)
+guard: peak footprint 6127 MB, 20.67 s

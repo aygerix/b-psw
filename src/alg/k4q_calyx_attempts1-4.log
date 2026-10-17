@@ -1,0 +1,28 @@
+start 2026-10-17 14:13:40
+attempt 1 14:13:40
+guard: memory pressure level 2 for 60 s; nothing launched (launch only at level 1, or at level 2 with --mem <= 1000 and swap not growing)
+real 60.42
+user 0.06
+sys 0.10
+exit=75
+attempt 2 14:14:40
+guard: memory pressure level 2 for 60 s; nothing launched (launch only at level 1, or at level 2 with --mem <= 1000 and swap not growing)
+real 60.28
+user 0.06
+sys 0.09
+exit=75
+attempt 3 14:15:40
+guard: memory pressure level 2 for 60 s; nothing launched (launch only at level 1, or at level 2 with --mem <= 1000 and swap not growing)
+real 60.31
+user 0.06
+sys 0.09
+exit=75
+attempt 4 14:16:41
+generators: 19, variables: 13
+guard: killed /Users/jmercedes/Desktop/calyx-math/target/release/calyx (memwatch: memory pressure: 40% available, swap 10770 MB)
+guard: peak footprint 1581 MB, 5.03 s
+real 29.21
+user 4.55
+sys 0.39
+exit=137
+end 2026-10-17 14:17:10

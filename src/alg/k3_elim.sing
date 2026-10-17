@@ -1,0 +1,23 @@
+// k=3 polynomial families: (x,y,z)=(f1,f2,f3)(t) must lie on
+// Q1: yz-1 = c1(x^2-1), Q2: xz-1 = c2(y^2-1), Q3: xy-1 = c3(z^2-1).
+// Find c with a positive-dim component on which x is nonconstant:
+// eliminate y,z; every element of K must vanish identically in x.
+ring R = 0,(y,z,c1,c2,c3,x),dp;
+ideal I = y*z-1-c1*(x^2-1), x*z-1-c2*(y^2-1), x*y-1-c3*(z^2-1);
+ideal K = eliminate(I, y*z);
+print(size(K));
+// coefficients w.r.t. x
+ideal C;
+int i; int j;
+for (i=1; i<=size(K); i++) {
+  matrix M = coeffs(K[i], x);
+  for (j=1; j<=nrows(M); j++) { C = C, M[j,1]; }
+}
+C = simplify(C, 2);
+ring S = 0,(c1,c2,c3),dp;
+ideal C = imap(R, C);
+ideal G = std(C);
+print(dim(G));
+LIB "primdec.lib";
+list L = minAssGTZ(G);
+print(L);

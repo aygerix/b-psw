@@ -1,0 +1,32 @@
+// Reference run of k3_elim.sing with every intermediate basis printed one polynomial per line.
+option(redSB);
+ring R = 0,(y,z,c1,c2,c3,x),dp;
+ideal I = y*z-1-c1*(x^2-1), x*z-1-c2*(y^2-1), x*y-1-c3*(z^2-1);
+int t0 = timer;
+ideal GI = std(I);
+int i; int j;
+print("== GB(I) dp, size:"); print(size(GI));
+for (i=1; i<=size(GI); i++) { print(GI[i]); }
+ideal K = eliminate(I, y*z);
+print("== eliminate raw size:"); print(size(K));
+ideal GK = std(K);
+print("== GB(K) dp, size:"); print(size(GK));
+for (i=1; i<=size(GK); i++) { print(GK[i]); }
+ideal C;
+for (i=1; i<=size(K); i++) {
+  matrix M = coeffs(K[i], x);
+  for (j=1; j<=nrows(M); j++) { C = C, M[j,1]; }
+}
+C = simplify(C, 2);
+ring S = 0,(c1,c2,c3),dp;
+option(redSB);
+ideal C = imap(R, C);
+ideal G = std(C);
+print("== GB(C) in S dp, size:"); print(size(G));
+for (i=1; i<=size(G); i++) { print(G[i]); }
+print("== dim:"); print(dim(G));
+LIB "primdec.lib";
+list L = minAssGTZ(G);
+print("== minAssGTZ count:"); print(size(L));
+for (i=1; i<=size(L); i++) { ideal P = std(L[i]); print("-- prime " + string(i)); for (j=1; j<=size(P); j++) { print(P[j]); } kill P; }
+quit;

@@ -1,0 +1,7 @@
+  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).
+cliques: [0, 0, 7100, 37295, 151707]
+half-families (Fermat identity): [[10, 14, 18], [20, 28, 36], [40, 56, 72], [80, 112, 144]]
+  ***   syntax error, unexpected ')', expecting end of file: ...S," tested, 
+  ***   passes=",hit));
+  ***                ^--
+... skipping file 'half.gp'
