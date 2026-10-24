@@ -1,0 +1,14 @@
+  ***   Warning: new maximum stack size = 8000012288 (7629.406 Mbytes).
+D=-7: admissible split primes 7, classes 6, cofactors m tested 7, candidate q 0, skipped (cost) 1, hits 0
+  skipped: [[2560959248555062987, 18105324736]]
+D=-11: admissible split primes 5, classes 4, cofactors m tested 6, candidate q 1, skipped (cost) 0, hits 0
+D=13: admissible split primes 12, classes 8, cofactors m tested 15, candidate q 9, skipped (cost) 0, hits 0
+D=-15: admissible split primes 8, classes 3, cofactors m tested 9, candidate q 7, skipped (cost) 1, hits 0
+  skipped: [[86495844719236350721, 9300314224]]
+D=17: admissible split primes 7, classes 6, cofactors m tested 8, candidate q 3, skipped (cost) 0, hits 0
+D=-19: admissible split primes 2, classes 2, cofactors m tested 2, candidate q 0, skipped (cost) 0, hits 0
+D=-23: admissible split primes 5, classes 3, cofactors m tested 5, candidate q 1, skipped (cost) 1, hits 0
+  skipped: [[69444174200193754009, 47140360352]]
+  *** _*_: Warning: increasing stack size to 16000000.
+D=29: admissible split primes 9, classes 6, cofactors m tested 12, candidate q 1, skipped (cost) 0, hits 0
+D=-31: admissible split primes 6, classes 4, cofactors m tested 6, candidate q 0, skipped (cost) 0, hits 0

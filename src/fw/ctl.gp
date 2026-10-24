@@ -1,0 +1,14 @@
+default(parisizemax, 2*10^9);
+divs(F)={my(L=List([1])); for(i=1,#F~, my(g=F[i,1]/pollead(F[i,1]), e=F[i,2], M=List());
+   foreach(L, D, my(t=D); for(k=0,e, listput(M,t); t*=g)); L=M); Vec(L)};
+searchP(P,L)={my(F, DV, n2, res=List());
+  F=factor(P-1); n2=poldegree(P-1)\2;
+  DV=select(D->poldegree(D)>=1 && poldegree(D)<=n2, divs(F));
+  for(i=1,#DV, my(D1=DV[i]); for(j=1,#DV, my(D2=DV[j], k); if(j==i || poldegree(D2)!=poldegree(D1), next);
+     k=D2-D1; if(k==0 || poldegree(k)>0, next); k=polcoeff(k,0); if(k<0, next);
+     if(((P-1)%(D1*D2))!=0, next);
+     my(f=1+(2/k)*D1);
+     if(((f*P-1)%L)==0, listput(res,[f,D1,D2,k]))));
+  Vec(res)};
+print(searchP('Y^4-5*'Y^2+7, 1));
+print(searchP(('Y-2)*'Y*('Y^2-'Y-1)+1, 1));

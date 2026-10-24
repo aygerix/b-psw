@@ -1,0 +1,11 @@
+  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).
+Mersenne composites q <= 10000: tested 1207, BPSW passes 0
+Wagstaff composites q <= 10000: tested 1204, BPSW passes 0
+Fermat numbers F_5..F_16: BPSW passes 0
+L_(2^3): 1 prime factors found (complete), subsets tested 0, passes 0
+L_(2^4): 1 prime factors found (complete), subsets tested 0, passes 0
+L_(2^5): 2 prime factors found (complete), subsets tested 1, passes 0
+L_(2^6): 2 prime factors found (complete), subsets tested 1, passes 0
+L_(2^7): 2 prime factors found (complete), subsets tested 1, passes 0
+L_(2^8): 1 prime factors found (partial), subsets tested 0, passes 0
+L_(2^9): 1 prime factors found (partial), subsets tested 0, passes 0

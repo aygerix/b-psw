@@ -1,0 +1,1 @@
+./runall.sh: line 4: 26318 Terminated: 15          ./enum ex$Y.txt > enum$Y.out 2>&1

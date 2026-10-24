@@ -1,0 +1,64 @@
+y'=60 (file z=200): class (2, 0) size 49
+  lam 0.0: log2|G| 76.5 N 8 ratio 0.105
+  lam 0.05: log2|G| 65.1 N 8 ratio 0.123
+  lam 0.08: log2|G| 65.6 N 8 ratio 0.122
+  lam 0.1: log2|G| 35.3 N 5 ratio 0.142
+  lam 0.12: log2|G| 26.8 N 4 ratio 0.149
+  lam 0.15: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.2: log2|G| 4.6 N 1 ratio 0.218
+y'=80 (file z=200): class (2, 0) size 112
+  lam 0.0: log2|G| 120.0 N 14 ratio 0.117
+  lam 0.05: log2|G| 120.0 N 14 ratio 0.117
+  lam 0.08: log2|G| 101.7 N 13 ratio 0.128
+  lam 0.1: log2|G| 77.6 N 11 ratio 0.142
+  lam 0.12: log2|G| 49.5 N 7 ratio 0.142
+  lam 0.15: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.2: log2|G| 4.6 N 1 ratio 0.218
+y'=100 (file z=200): class (2, 0) size 185
+  lam 0.0: log2|G| 151.4 N 17 ratio 0.112
+  lam 0.05: log2|G| 125.6 N 16 ratio 0.127
+  lam 0.08: log2|G| 126.5 N 16 ratio 0.127
+  lam 0.1: log2|G| 114.3 N 15 ratio 0.131
+  lam 0.12: log2|G| 49.0 N 7 ratio 0.143
+  lam 0.15: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.2: log2|G| 4.6 N 1 ratio 0.218
+y'=120 (file z=200): class (2, 0) size 419
+  lam 0.0: log2|G| 216.3 N 23 ratio 0.106
+  lam 0.05: log2|G| 184.1 N 22 ratio 0.120
+  lam 0.08: log2|G| 151.6 N 20 ratio 0.132
+  lam 0.1: log2|G| 115.5 N 16 ratio 0.138
+  lam 0.12: log2|G| 106.5 N 15 ratio 0.141
+  lam 0.15: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.2: log2|G| 4.6 N 1 ratio 0.218
+y'=140 (file z=200): class (2, 0) size 722
+  lam 0.0: log2|G| 266.8 N 31 ratio 0.116
+  lam 0.05: log2|G| 244.5 N 30 ratio 0.123
+  lam 0.08: log2|G| 214.7 N 28 ratio 0.130
+  lam 0.1: log2|G| 126.1 N 18 ratio 0.143
+  lam 0.12: log2|G| 69.5 N 10 ratio 0.144
+  lam 0.15: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.2: log2|G| 4.6 N 1 ratio 0.218
+y'=160 (file z=200): class (2, 0) size 1081
+  lam 0.0: log2|G| 277.5 N 35 ratio 0.126
+  lam 0.05: log2|G| 251.6 N 34 ratio 0.135
+  lam 0.08: log2|G| 218.2 N 28 ratio 0.128
+  lam 0.1: log2|G| 66.9 N 9 ratio 0.135
+  lam 0.12: log2|G| 111.8 N 16 ratio 0.143
+  lam 0.15: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.2: log2|G| 4.6 N 1 ratio 0.218
+y'=180 (file z=200): class (2, 0) size 1814
+  lam 0.0: log2|G| 303.4 N 43 ratio 0.142
+  lam 0.05: log2|G| 308.6 N 44 ratio 0.143
+  lam 0.08: log2|G| 252.7 N 37 ratio 0.146
+  lam 0.1: log2|G| 99.6 N 14 ratio 0.141
+  lam 0.12: log2|G| 33.1 N 5 ratio 0.151
+  lam 0.15: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.2: log2|G| 4.6 N 1 ratio 0.218
+y'=200 (file z=200): class (2, 0) size 3233
+  lam 0.0: log2|G| 397.6 N 58 ratio 0.146
+  lam 0.05: log2|G| 367.5 N 57 ratio 0.155
+  lam 0.08: log2|G| 356.3 N 52 ratio 0.146
+  lam 0.1: log2|G| 317.6 N 46 ratio 0.145
+  lam 0.12: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.15: log2|G| 10.3 N 2 ratio 0.193
+  lam 0.2: log2|G| 4.6 N 1 ratio 0.218

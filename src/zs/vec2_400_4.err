@@ -1,0 +1,2 @@
+  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).
+gp -q vec2_run.gp < /dev/null  2.13s user 0.03s system 97% cpu 2.215 total

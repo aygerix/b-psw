@@ -1,0 +1,9 @@
+D=5: cofactors m<=100000 tested 10490, gcds 10490, skipped(E>EMAX) 0, unfactored 0, candidate q 17006, max log10 G 95.9, hits 0
+D=-7: cofactors m<=100000 tested 10530, gcds 10530, skipped(E>EMAX) 0, unfactored 0, candidate q 19887, max log10 G 126.8, hits 0
+D=-11: cofactors m<=100000 tested 10218, gcds 10218, skipped(E>EMAX) 0, unfactored 0, candidate q 12306, max log10 G 86.3, hits 0
+D=13: cofactors m<=100000 tested 10144, gcds 10144, skipped(E>EMAX) 0, unfactored 0, candidate q 12211, max log10 G 90.3, hits 0
+D=-15: cofactors m<=100000 tested 10581, gcds 10581, skipped(E>EMAX) 0, unfactored 0, candidate q 18880, max log10 G 111.6, hits 0
+D=17: cofactors m<=100000 tested 10682, gcds 10682, skipped(E>EMAX) 0, unfactored 0, candidate q 13540, max log10 G 81.3, hits 0
+D=-19: cofactors m<=100000 tested 10123, gcds 10123, skipped(E>EMAX) 0, unfactored 0, candidate q 12366, max log10 G 72.7, hits 0
+D=-23: cofactors m<=100000 tested 10256, gcds 10256, skipped(E>EMAX) 0, unfactored 0, candidate q 13640, max log10 G 92.7, hits 0
+gp -q lp_1e5.gp < /dev/null 2>&1  30.59s user 0.02s system 99% cpu 30.639 total

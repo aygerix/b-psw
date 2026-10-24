@@ -1,0 +1,3 @@
+P_d samples: [[4, Y], [8, Y^2 + 2], [12, Y^2 + 3], [16, Y^4 + 4*Y^2 + 2]]
+twisted 4|d (5|d allowed), d<=600: candidates 150  cliques by size [0, 1131, 7175, 37359, 151742, 481810, 1210957, 2440533]  Korselt families: [[40, 56, 72], [80, 112, 144], [160, 224, 288], [320, 448, 576]]
+control: untwisted Psi, d<=60: candidates 58  cliques by size [0, 193, 498, 863]  Korselt families: [[10, 14, 18], [20, 28, 36]]

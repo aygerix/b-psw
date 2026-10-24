@@ -1,0 +1,6 @@
+  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).
+  *** polresultant: Warning: increasing stack size to 16000000.
+  *** polresultant: Warning: increasing stack size to 32000000.
+  *** polresultant: Warning: increasing stack size to 64000000.
+  *** polresultant: Warning: increasing stack size to 128000000.
+timeout 3000 gp -q vec2_run12.gp < /dev/null  56.99s user 0.42s system 100% cpu 57.083 total

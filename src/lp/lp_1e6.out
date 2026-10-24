@@ -1,0 +1,56 @@
+  UNFACTORED part D=-15 m=657931 digits 15
+  UNFACTORED part D=-15 m=801301 digits 16
+  UNFACTORED part D=-15 m=885301 digits 15
+  UNFACTORED part D=-15 m=955261 digits 15
+D=-15: cofactors m<=1000000 tested 88902, gcds 88902, skipped(E>EMAX) 0, unfactored 4, candidate q 180786, max log10 G 224.5, hits 0
+D=-83: cofactors m<=1000000 tested 84463, gcds 84463, skipped(E>EMAX) 0, unfactored 0, candidate q 101742, max log10 G 145.7, hits 0
+  UNFACTORED part D=-79 m=797053 digits 15
+D=-79: cofactors m<=1000000 tested 84178, gcds 84178, skipped(E>EMAX) 0, unfactored 1, candidate q 121117, max log10 G 139.1, hits 0
+  UNFACTORED part D=-71 m=356933 digits 16
+  UNFACTORED part D=-71 m=416629 digits 17
+D=-71: cofactors m<=1000000 tested 87384, gcds 87384, skipped(E>EMAX) 0, unfactored 2, candidate q 148340, max log10 G 162.2, hits 0
+D=-67: cofactors m<=1000000 tested 85750, gcds 85750, skipped(E>EMAX) 0, unfactored 0, candidate q 129412, max log10 G 129.1, hits 0
+  UNFACTORED part D=-59 m=372461 digits 15
+D=-59: cofactors m<=1000000 tested 83945, gcds 83945, skipped(E>EMAX) 0, unfactored 1, candidate q 99575, max log10 G 118.6, hits 0
+D=-47: cofactors m<=1000000 tested 84626, gcds 84626, skipped(E>EMAX) 0, unfactored 0, candidate q 122888, max log10 G 134.4, hits 0
+D=-43: cofactors m<=1000000 tested 84891, gcds 84891, skipped(E>EMAX) 0, unfactored 0, candidate q 128409, max log10 G 137.8, hits 0
+D=-31: cofactors m<=1000000 tested 89166, gcds 89166, skipped(E>EMAX) 0, unfactored 0, candidate q 173033, max log10 G 218.3, hits 0
+  UNFACTORED part D=-23 m=732229 digits 16
+  UNFACTORED part D=-23 m=814783 digits 15
+  UNFACTORED part D=-23 m=937627 digits 15
+D=-23: cofactors m<=1000000 tested 85120, gcds 85120, skipped(E>EMAX) 0, unfactored 3, candidate q 131118, max log10 G 236.5, hits 0
+D=-19: cofactors m<=1000000 tested 84100, gcds 84100, skipped(E>EMAX) 0, unfactored 0, candidate q 118436, max log10 G 144.1, hits 0
+D=-11: cofactors m<=1000000 tested 84832, gcds 84832, skipped(E>EMAX) 0, unfactored 0, candidate q 119066, max log10 G 198.0, hits 0
+  UNFACTORED part D=-7 m=655453 digits 15
+  UNFACTORED part D=-7 m=759571 digits 15
+  UNFACTORED part D=-7 m=806941 digits 15
+  UNFACTORED part D=-7 m=983179 digits 15
+D=-7: cofactors m<=1000000 tested 87980, gcds 87980, skipped(E>EMAX) 0, unfactored 4, candidate q 191721, max log10 G 232.9, hits 0
+  UNFACTORED part D=-3 m=7685 digits 2249
+  UNFACTORED part D=-3 m=868405 digits 261387
+  UNFACTORED part D=-3 m=19865 digits 2949
+  UNFACTORED part D=-3 m=21605 digits 6453
+  UNFACTORED part D=-3 m=22765 digits 6769
+  UNFACTORED part D=-3 m=25085 digits 7538
+  UNFACTORED part D=-3 m=28565 digits 8572
+  UNFACTORED part D=-3 m=33205 digits 9968
+  UNFACTORED part D=-3 m=39005 digits 11719
+  UNFACTORED part D=-3 m=40165 digits 12059
+  UNFACTORED part D=-3 m=42485 digits 12659
+  UNFACTORED part D=-3 m=45965 digits 13836
+  UNFACTORED part D=-3 m=56405 digits 16914
+  UNFACTORED part D=-3 m=57565 digits 17129
+  UNFACTORED part D=-3 m=66265 digits 9864
+  UNFACTORED part D=-3 m=73805 digits 22217
+  UNFACTORED part D=-3 m=80765 digits 24290
+  UNFACTORED part D=-3 m=82505 digits 12408
+  UNFACTORED part D=-3 m=85985 digits 3210
+  UNFACTORED part D=-3 m=94685 digits 28484
+  UNFACTORED part D=-3 m=98165 digits 29418
+  UNFACTORED part D=-3 m=106285 digits 31909
+  UNFACTORED part D=-3 m=112085 digits 33722
+  UNFACTORED part D=-3 m=115565 digits 34745
+  UNFACTORED part D=-3 m=117305 digits 17534
+  UNFACTORED part D=-3 m=124265 digits 18679
+  UNFACTORED part D=-3 m=138185 digits 20756
+  UNFACTORED part D=-3 m=144565 digits 43460

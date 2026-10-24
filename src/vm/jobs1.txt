@@ -1,0 +1,17 @@
+cd ~/b-psw/src/c3 && nice -n 10 timeout 14400 ./pomgen2 1000 18.2 pom_1000_18.2.txt > pomgen_1000_18.2.out 2>&1
+cd ~/b-psw/src/c3 && nice -n 10 timeout 14400 ./pomgen2 1500 15 pom_1500_15.txt > pomgen_1500_15.out 2>&1
+cd ~/b-psw/src/c3 && nice -n 10 timeout 14400 ./pomgen2 2000 15 pom_2000_15.txt > pomgen_2000_15.out 2>&1
+cd ~/b-psw/src/us && nice -n 10 ./usplit3 646730219521:759925571584 5 > us3_d5_c1.txt 2> us3_d5_c1.log
+cd ~/b-psw/src/us && nice -n 10 ./usplit3 759925571584:873120923647 5 > us3_d5_c2.txt 2> us3_d5_c2.log
+cd ~/b-psw/src/us && nice -n 10 ./usplit3 873120923647:986316275710 5 > us3_d5_c3.txt 2> us3_d5_c3.log
+cd ~/b-psw/src/us && nice -n 10 ./usplit3 986316275710:1099511627776 5 > us3_d5_c4.txt 2> us3_d5_c4.log
+cd ~/b-psw/src/lp && nice -n 10 gp -q lp_1e6_D41.gp > lp_1e6_D41.out 2>&1
+cd ~/b-psw/src/lp && nice -n 10 gp -q lp_1e6_D53.gp > lp_1e6_D53.out 2>&1
+cd ~/b-psw/src/lp && nice -n 10 gp -q lp_1e6_D61.gp > lp_1e6_D61.out 2>&1
+cd ~/b-psw/src/lp && nice -n 10 gp -q lp_1e6_D73.gp > lp_1e6_D73.out 2>&1
+cd ~/b-psw/src && nice -n 10 gp -q cyc/af1.gp > cyc/af1.out 2>&1
+cd ~/b-psw/src && nice -n 10 gp -q cyc/af2.gp > cyc/af2.out 2>&1
+cd ~/b-psw/src && nice -n 10 gp -q cyc/af3.gp > cyc/af3.out 2>&1
+cd ~/b-psw/src/lp && nice -n 10 gp -q lp_1e6_D89.gp > lp_1e6_D89.out 2>&1
+cd ~/b-psw/src/lp && nice -n 10 gp -q lp_1e6_D97.gp > lp_1e6_D97.out 2>&1
+cd ~/b-psw/src/lp && nice -n 10 gp -q lp_1e6_D101.gp > lp_1e6_D101.out 2>&1

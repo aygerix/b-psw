@@ -1,0 +1,22 @@
+== N -7 320894726 15961367022
+g = 1
+bits 1
+      122.62 real       120.72 user         0.50 sys
+          1094139904  maximum resident set size
+== U -7 5320455674 962684178
+U exact: 481342088 bits
+g = 1
+bits 1
+      154.01 real       152.03 user         0.86 sys
+          1880424448  maximum resident set size
+== U -7 15961367022 320894726
+U exact: 160447363 bits
+g = 1
+bits 1
+       49.11 real        48.77 user         0.16 sys
+           643170304  maximum resident set size
+== N -7 962684178 5320455674
+g = 1
+bits 1
+      399.07 real       387.48 user         2.88 sys
+          3007070208  maximum resident set size

@@ -1,0 +1,16 @@
+  ***   Warning: new maximum stack size = 5000003584 (4768.375 Mbytes).
+  *** _<<_: Warning: increasing stack size to 16000000.
+  *** _<<_: Warning: increasing stack size to 32000000.
+  *** _-_: Warning: increasing stack size to 64000000.
+  *** _^_: Warning: increasing stack size to 128000000.
+  *** _^_: Warning: increasing stack size to 256000000.
+  *** _^_: Warning: increasing stack size to 512000000.
+D=5 k=20: usable 13, classes 4, consistent subsets tested 9, BPSW hits 0
+D=-7 k=20: usable 16, classes 9, consistent subsets tested 9, BPSW hits 0
+D=-11 k=20: usable 17, classes 9, consistent subsets tested 10, BPSW hits 0
+  *** _^_: Warning: increasing stack size to 1024000000.
+D=13 k=20: usable 20, classes 12, consistent subsets tested 5, BPSW hits 0
+D=-15 k=20: usable 23, classes 10, consistent subsets tested 8, BPSW hits 0
+D=17 k=20: usable 19, classes 4, consistent subsets tested 23, BPSW hits 0
+D=-19 k=20: usable 22, classes 9, consistent subsets tested 7, BPSW hits 0
+D=-23 k=20: usable 19, classes 10, consistent subsets tested 11, BPSW hits 0

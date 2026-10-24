@@ -1,0 +1,17 @@
+z=200 pass 1: |S|=1360 new=1161 overflow=0
+z=200 pass 2: |S|=7754 new=6394 overflow=0
+z=200 pass 3: |S|=41237 new=33483 overflow=0
+z=200 pass 4: |S|=146743 new=105506 overflow=0
+z=200 pass 5: |S|=277691 new=130948 overflow=2
+z=200 pass 6: |S|=332953 new=55262 overflow=184
+z=200 pass 7: |S|=343629 new=10676 overflow=1444
+z=200 pass 8: |S|=345064 new=1435 overflow=2800
+z=200 pass 9: |S|=345252 new=188 overflow=3172
+z=200 pass 10: |S|=345272 new=20 overflow=3232
+z=200 pass 11: |S|=345275 new=3 overflow=3232
+z=200 pass 12: |S|=345275 new=0 overflow=3232
+total 345275, nonsmooth 0, overflow 3232
+
+real	21m6.194s
+user	21m3.277s
+sys	0m1.729s

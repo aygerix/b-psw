@@ -1,0 +1,3 @@
+T=1500 Xmax=1e15.0: L-side primes 122, F-side primes 115; B candidates 2576499300, A smooth 51973, pool primes N=3717
+  moduli used 237, log2|G| (p-1, p+1 exponents) = 4018.8, N/log2|G| = 0.925
+  by decade: 1e0:1 1e1:1 1e2:4 1e3:7 1e4:27 1e5:52 1e6:79 1e7:148 1e8:247 1e9:296 1e10:396 1e11:507 1e12:571 1e13:675 1e14:706

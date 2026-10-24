@@ -1,0 +1,4 @@
+  ***   Warning: new maximum stack size = 8000012288 (7629.406 Mbytes).
+m=40666413944507969 factor m=[32665301, 1; 1244942269, 1] O=[12791, 1; 54419, 1; 912853, 1]
+  *** _*_: Warning: increasing stack size to 16000000.
+testm: [0, [], 8]  time 1 s

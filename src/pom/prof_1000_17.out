@@ -1,0 +1,4 @@
+pool 1246 primes in class (1,2), true-order log2|G| = 2506.8, moduli 166, N - 1 - log2|G| = -1261.8
+frontier (log2|G|, N): (2507,1246) (2196,1146) (2011,1113) (1843,1079) (1689,1036) (1559,980) (1449,864) (1275,610) (1091,400) (909,256) (725,154) (506,72) (31,2)
+max N/log2|G| on frontier (bits >= 40): 0.629 at (1559 bits, N = 980)
+greedy frontier end: N = 0, log2|G| = 0.0, N - 1 - log2|G| = -1.0; best seen -1.0 at (N, bits) = (0, 0.0)

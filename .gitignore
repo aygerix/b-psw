@@ -3,3 +3,14 @@
 src/chm
 __pycache__/
 *.pyc
+# compiled C tools (rebuild from the .c sources)
+src/c3/enum
+src/c3/enum_np
+src/c3/pomgen
+src/c3/pomgen2
+src/us/biggcd
+src/us/usplit
+src/us/usplit2
+src/us/usplit3
+# 97 MB CHM export for y = 150 (regenerate with src/c3/export.py); too large for the repo
+src/c3/ex150.txt

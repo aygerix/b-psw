@@ -1,0 +1,8 @@
+  ***   Warning: new maximum stack size = 2000011264 (1907.359 Mbytes).
+  *** select: Warning: increasing stack size to 16000000.
+  UNFACTORED part D=37 m=281581 digits 15
+  UNFACTORED part D=37 m=883411 digits 15
+  UNFACTORED part D=37 m=890221 digits 15
+D=37: cofactors m<=1000000 tested 89121, gcds 89121, skipped(E>EMAX) 0, unfactored 3, candidate q 125636, max log10 G 162.8, hits 0
+  UNFACTORED part D=41 m=750661 digits 15
+  UNFACTORED part D=41 m=786061 digits 15

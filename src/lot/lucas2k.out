@@ -1,0 +1,18 @@
+  ***   Warning: new maximum stack size = 4000006144 (3814.703 Mbytes).
+k=5 digits=7 D=5 strongLucas=1 spsp2=0 time 0s
+k=6 digits=14 D=5 strongLucas=1 spsp2=0 time 0s
+k=7 digits=27 D=5 strongLucas=1 spsp2=0 time 0s
+k=8 digits=54 D=5 strongLucas=1 spsp2=0 time 0s
+k=9 digits=108 D=5 strongLucas=1 spsp2=0 time 0s
+k=10 digits=215 D=5 strongLucas=1 spsp2=0 time 0s
+k=11 digits=429 D=5 strongLucas=1 spsp2=0 time 0s
+k=12 digits=857 D=5 strongLucas=1 spsp2=0 time 0s
+k=13 digits=1713 D=5 strongLucas=1 spsp2=0 time 0s
+k=14 digits=3425 D=5 strongLucas=1 spsp2=0 time 0s
+k=15 digits=6849 D=5 strongLucas=1 spsp2=0 time 3s
+k=16 digits=13697 D=5 strongLucas=1 spsp2=0 time 18s
+k=17 digits=27393 D=5 strongLucas=1 spsp2=0 time 101s
+k=18 digits=54785 D=5 strongLucas=1 spsp2=0 time 479s
+k=19 digits=109570 D=5 strongLucas=1 spsp2=0 time 2136s
+  *** _*_: Warning: increasing stack size to 16000000.
+k=20 digits=219140 D=5 strongLucas=1 spsp2=0 time 10157s

@@ -1,0 +1,24 @@
+  ***   Warning: new maximum stack size = 8000012288 (7629.406 Mbytes).
+  ***   Warning: new maximum stack size = 3000008704 (2861.031 Mbytes).
+  *** _^_: Warning: increasing stack size to 16000000.
+  *** _^_: Warning: increasing stack size to 32000000.
+  *** _^_: Warning: increasing stack size to 64000000.
+  *** _^_: Warning: increasing stack size to 128000000.
+  *** _^_: Warning: increasing stack size to 256000000.
+  *** _^_: Warning: increasing stack size to 512000000.
+  *** _^_: Warning: increasing stack size to 1024000000.
+  *** _^_: Warning: increasing stack size to 2048000000.
+  *** _*_: Warning: increasing stack size to 3000008704.
+  ***   at top-level: ...],t,my(t0=getabstime(),r=testm(t[1],t[2],t[3],
+  ***                                             ^---------------------
+  ***   in function testm: my(R=lastq(D,m,j1,j2),hits=List());foreach(R[1
+  ***                           ^-----------------------------------------
+  ***   in function lastq: ...(1<<W1)-1);g=gcd(N1,lift(lucUV(W2,Q,D,N1)[1]))
+  ***                                                  ^---------------------
+  ***   in function lucUV: ...my(U2=(U+V)*i2,V2=(D*U+V)*i2);U=U2;V=V2;Qk=Qk*
+  ***                                                  ^---------------------
+  *** _*_: the PARI stack overflows !
+  current stack size: 3000008704 (2861.031 Mbytes)
+  [hint] you can increase 'parisizemax' using default()
+
+... skipping file 'big11.gp'

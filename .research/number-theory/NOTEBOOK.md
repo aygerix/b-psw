@@ -523,3 +523,853 @@ Register rows: F1, C3F (Korselt), C4; ANY Selfridge D.
    gcd condition imposed (constructive, per G2), then R3, then R2. Optional cheap side search: Y with
    Psi10(Y) * Psi18(Y) | V_{2^m}.
  - Process state at checkpoint: no task-owned solver or worker running (memwatch is the user's persistent service).
+
+## Session 2 (2026-10-24) — new results
+### Lemma 12 (PROVED, elementary): constraints from the selected D
+Register rows: F1. Let D* be the Selfridge D of n (the list is every D == 1 mod 4 with |D| >= 5, ordered by |D|).
+ (a) Which D can be selected. Write D* = s^2 D0 with D0 squarefree, a product of prime discriminants l* (l* = +-l == 1 mod 4).
+     Every l* with 5 <= |l*| < |D*| comes earlier in the list, so (l*/n) is 0 or +1 for those. Hence
+     D* is in {l* : l >= 5 prime} or {-3 l* : l >= 5 prime} or {-3 s^2 : s >= 3 odd}.
+     Proof: if D0 had two prime-discriminant factors of size >= 5, both are +1 (a 0 gives (D*/n) = 0), so (D*/n) = (-3/n) or 1.
+     Then -3 l1* (or l1*) comes earlier with the same symbol, and s > 1 repeats an earlier D0.  QED
+ (b) mod-l lemma. If |D*| = l is prime then (D*/n) = (n/l) = -1, so n is not 1 mod l. Hence l does not divide ord_p 2 for
+     any p | n. If moreover D* > 0 (l == 1 mod 4), n is not -1 mod l either, so l does not divide z(p).
+     For D = 5: NO prime factor of a BPSW psp has 5 | ord_p(2) or 5 | z(p). This kills every Lucas-forced member
+     Psi_d(L_2K) with 5 | d, for every K, in one line. That includes the whole {10,14,18}*2^i family for D = 5, and
+     subsumes Attempt C's mod-5 argument. [PROVED]
+### Lemma 13 (PROVED): one-side-automatic products and an equal-orders criterion (D = 5)
+ (a) If all p | n (squarefree, >= 2 primes) have the same Fibonacci entry point z(p) = N and (5/n) = -1, then n is
+     a strong Lucas psp (Selfridge D = 5). Proof: p == (5/p) mod N (split: N | p-1, inert: N | p+1), so
+     n == (5/n) = -1 mod N, so N | n+1 and every p has the same v2(z) <= v2(n+1).  QED
+     (Dual, classical: any product of >= 2 primes with the same ord_p 2 = N is a strong psp base 2.)
+ (b) Hence: >= 2 primes with the SAME pair (ord_p 2, z(p)) = (N1, N2), gcd(N1, N2) | 2, an odd number of them inert
+     ==> their product is a BPSW psp. (5 cannot divide N1 N2 by Lemma 12(b).) This is the "doubly small order"
+     coincidence. Attempt D's 396 DSO primes would have shown such a pair as a tiny subset-product solution.
+### F3 loophole (non-squarefree n) checked [COMPUTED: src/wief/lw.gp]
+p^2 | n needs p Wieferich (base 2) AND z_D(p^2) = z_D(p) for the selected D ("Lucas-Wieferich"). Known Wieferich primes:
+ - 1093: Lucas-Wieferich for D in {1065, 4877, 5485, 8777, -13451, -14103, 15105, 18193} (|D| <= 20000).
+ - 3511: Lucas-Wieferich only for D = 7205.
+By Lemma 12(a) only prime discriminants can be selected: D* = 4877 or -13451 for 1093, nothing for 3511.
+Selecting D* = 4877 needs (l*/n) in {0, +1} for every prime discriminant with |l*| < 4877: about 650 Jacobi conditions.
+That adds about 650 bits of parity constraints to any construction. STATUS: the loophole is real, but with the known
+Wieferich primes it is unusable at feasible size. A Wieferich prime p that is Lucas-Wieferich for a small prime
+discriminant D would reopen it; expected first hit near |D| ~ 2p.
+### Korselt/Williams identities as zero-sum problems (PROVED reformulation; COMPUTED classification)
+Register rows: C4, C3F (+C3L for Williams). For monic f_j and n = prod f_j: lcm_j(f_j - 1) | n - 1 iff n(theta) = 1 to order
+m(theta) at every root theta of every f_j - 1 (m = max multiplicity). The member with f_j(theta) = 1 contributes
+nothing, so the condition is uniform in j. For f_j = Psi_d these are cyclotomic units, and the condition becomes
+additive: unit exponents (and torsion) of Psi_d(theta_e) sum to 0. At double roots, also sum Psi_d'/Psi_d(theta_e) = 0.
+Williams side: n(theta) = -1 at the roots of f_j + 1 (torsion bit 1), and the two special sets must be disjoint.
+ - Tools: src/zs/vec2.gp (unit/derivative data), src/zs/zs2.py (DFS with unit-compatibility pruning; exact).
+ - Positive control: recovers {10,14,18}, {20,28,36}, {40,56,72}, {80,112,144}.
+ - RESULT [COMPUTED: src/zs/vec2_1200_12.out]: for d <= 1200 with all special points in fields of degree <= 12
+   (e <= 400), the ONLY Korselt Psi-families (k <= 9) are {10,14,18}*2^i, i <= 3. There is NO Williams Psi-family (k <= 12).
+   Bounded computation, not a proof for larger d or degree.
+ - Consequence: for D = 5, the all-forced Lucas route (S1 with Psi members at Y = L_2K) is DEAD in this range,
+   because the only family contains 10*2^i (Lemma 12(b)).
+ - Mixed families (src/zs/zs3.py): Lucas-forced members (type F, 5 not | d) together with Williams members (type W,
+   Psi_d + 1 | n + 1), both types present, k <= 9: NONE in the same three data ranges [COMPUTED].
+
+### Strategic review (2026-10-24, after Lemmas 12-13, the F3 check and the zero-sum classification)
+ - Distance to result: the polynomial and exponential family line is now closed IN RANGE on every axis.
+   Pure Korselt Psi-families: only {10,14,18}*2^i. Williams Psi-families: none. Mixed forced/Williams: none.
+   All-forced D = 5: impossible for that family by Lemma 12(b). Q != +-1: no one-variable Psi structure
+   (Q = -t^2 or Q = 4 gives homogeneous two-variable forms, and the "-1" breaks the identity).
+   Exactness: every closure above is either a proof or a bounded computation, tagged as such.
+ - Theory of success: none credible for an explicit n at laptop scale.
+   (i) Subset products are capped by the two-sided S-unit structure: for fixed y the pool {p : p^2 - 1 y-smooth}
+   is finite, and known high-density algorithms need N >= 2^(c sqrt B). Index relaxation (cofactors of p -+ 1
+   absorbed by the order index) gains only about 3x [HEURISTIC estimate, see below].
+   (ii) Exponential families give finitely many candidates per family, and only one family exists in range.
+   (iii) Non-squarefree n is blocked by Selfridge ordering.
+ - Index-relaxation estimate [HEURISTIC]: allowing p - 1 = 2Au, p + 1 = 4Bu' (A, B smooth, u, u' <= U, 2 a u-th power,
+   gamma a u'-th power) multiplies the pool by about 2-3x at y = 100, p ~ 1e12, U = 1000 (per side: P(u = 1 | cofactor
+   <= U) ~ 0.15 versus E[1/u] ~ 0.24).
+   That is not enough against the ~170x gap at 300 bits recorded in Attempt A. Deprioritised; not run.
+ - Kill: further Psi/zero-sum scaling (more d, more fields). Exponential half-families. Williams-identity searches.
+ - Keep (live): see "Live directions (session 2)" below.
+
+### Literature check (2026-10-24, alphaXiv; looking for tools or constructions only)
+ - Helmreich-Webster, 2306.17691 [READ by me]: tabulate ABSOLUTE Lucas pseudoprimes (Williams' criterion p - (5/p) | n - (5/n))
+   for d = 5 up to 2^64 (4,247,414 numbers; most have k = 2). Two-factor ones are exactly n = p(p+2) with (5/p) = -1 and
+   (5/p+2) = +1, so n + 1 = (p+1)^2 and the Lucas side is automatic. But the base-2 side forces odd(ord_p 2) | gcd(p-1, n-1) | 2,
+   i.e. p = 3 [PROVED here, two lines]. Split primes in any absolute Lucas psp with (5/n) = -1 have p - 1 | n + 1, so for
+   spsp(2) they must have ord_p 2 a power of 2 (Fermat-number factors) [PROVED here].
+ - Hall, 2601.19817 [READ]: 200 Arnault composites (~350 bits, spsp to bases <= 11) all fail strong Lucas, with no near-misses.
+ - Draziotis-Martidis-Tiganourias, 2002.07095 [READ]: birthday attack for subset products (2^(n/2)); nothing structural.
+ Conclusion: no construction or algorithm beyond what the notebook already uses.
+
+### Live directions (session 2), ranked by plausibility x testability
+ P1 Pool-growth discriminating experiment (the only route with guaranteed existence). Extend the CHM closure to y = 200
+    (then 250 if feasible). Measure the class-restricted inert pool N(y) and the full-pool group size B(y), and fit
+    log N against sqrt(B). Hypothesis H: N(y) eventually exceeds 2^(c sqrt B(y)) for the best subset-product algorithm
+    (Wagner / Kuperberg-AGHS). If H holds, compute the crossover scale and its cost; if it fails, the Pomerance route has
+    no theory of success with known algorithms. First step: time src/chm at y = 200.
+ P2 Close the exponential-family question fully for D = 5. Twisted shapes P_d(Y) = i^-deg Psi_d(iY) (4 | d) at Y = L_M,
+    M odd, and Aurifeuillian factors of L_5m, both run through the zero-sum tool. Cheap; low plausibility.
+ P3 Algorithmic: handle the 2-primary part of G (and any Jacobi/F_2 constraints) by linear algebra inside a k-tree
+    pipeline, so the effective B drops by the 2-rank (~20-30% of B at y <= 150). Test on synthetic instances; matters
+    only together with P1.
+ P4 (theory, low priority) Uniqueness of Korselt Psi-families: are they exactly the doubling orbit {10,14,18}*2^i?
+ P5 (passive) F3: a new Wieferich prime that is Lucas-Wieferich for a small prime discriminant would reopen p^2 | n.
+
+## Session 2, continued (2026-10-24)
+### Lemma 12(c) (PROVED; checked): the selected D is a prime discriminant or -15
+Register rows: F1, F3. For a BPSW psp n the Selfridge D* is a prime discriminant l* (l >= 5) or D* = -15 (Q* = 4).
+Proof. By 12(a) the other cases are D* = -3s^2 (s >= 3 odd) and D* = -3l* (l >= 7).
+ - In both, (D*/n) = -1 forces (-3/n) = -1 (for -3l*: l* precedes D*, so (l*/n) = 1).
+ - Then for every prime 5 <= l' below s^2 (resp. below l), both l'* and -3l'* precede D* and
+   (-3l'*/n) = -(l'*/n). Neither may be -1, so (l'*/n) = 0, i.e. l' | n.
+ - D* = -3s^2: Q* = (1+3s^2)/4 is odd, prime to 3 (Q* == 1 mod 3), and 1 < Q* < s^2. Every prime factor of Q*
+   divides n, so gcd(n, Q*) > 1. Mod such a prime U_k == V_k == 1 for k >= 1, so the strong Lucas test fails.
+ - D* = -3l*, l >= 11: 5 | n and 7 | n, but v2(ord_5 2) = 2 and v2(ord_7 2) = 0, contradicting F1.
+   l = 7: D* = 21, Q* = -5 and 5 | n, so the Lucas test fails.  QED
+ Side result (same argument): if D* = l* with l >= 23, then (-3/n) is 0 or 1.
+ [COMPUTED: src/lem/l12c.gp. 1,282,319 odd composites up to 3e6. When D* is not a prime discriminant it is -15 (26,785 n),
+ or -27/21 with gcd(n, Q*) > 1 (604 / 3,514). No violations.]
+
+### Lemma 14 (PROVED, elementary): the criterion with the cofactor m = n/p
+For squarefree n and p | n with m = n/p, the odd-part conditions of Lemma 1 at p are equivalent to:
+ - p inert: odd(ord_p 2) * odd(z(p)) | m - 1;
+ - p split: odd(ord_p 2) | m - 1 and odd(z(p)) | m + 1.
+Proof: n - 1 == m - 1 mod (p - 1). Also n + 1 == 1 - m mod (p + 1) (inert) and n + 1 == m + 1 mod (p - 1) (split).
+ Consequences:
+ - Last-prime lemma. Every prime q | n divides gcd(2^(2^j1 odd(m-1)) - 1, U_(2^j2 odd(m -+ 1))), a number
+   computable from m and D*. Since gcd(2^a - 1, F_b) is small (Attempt D; Bugeaud-Corvaja-Zannier type), the
+   other primes determine q up to a short list. A search over cofactors m <= M0 covers every n with n/q <= M0,
+   with q unbounded. Cost is about M0^2 bit operations. Estimate: for M0 <= 1e6 this mostly re-covers n < 2^64.
+   NOT RUN; low priority.
+ - D* in {-7, -15} (Q* = 2 or 4, so N(alpha) is a power of 2). At every p (inert or split), the odd-part
+   conditions are equivalent to alpha^n == conj(alpha) mod p up to 2-power torsion. For inert p this reads
+   odd(ord_p alpha) | m - 1. So BPSW with D* = -7 is the quadratic Frobenius test for x^2 - x + 2 (odd parts) plus the
+   2-adic classes. Restatement only: the count is unchanged, since ord_p alpha has size about p^2.
+
+### Exponential families for D = 5: the remaining cases closed in range
+ - Forced Psi members plus ONE free Williams member f in Q[Y] (src/fw/fw1.gp, fw2.gp).
+   Reformulation [PROVED]: f - 1 = c D1, f + 1 = c D2, where D1, D2 are monic divisors of P - 1 (P = product of the
+   forced Psi), D2 - D1 = kappa is a constant, c = 2/kappa, and lcm(Psi_d - 1) | fP - 1. This is a finite check per
+   forced set. If all special points of the forced set are roots of D1, the forced set is itself Korselt.
+   The divisor-pair step was checked on two hand-built cases (src/fw/ctl.gp).
+   RESULT [COMPUTED: src/fw/r3_60.out, fw2_r4_30.out]: 0 families for r = 2 (d <= 60), r = 3 (d <= 60) and
+   r = 4 (d <= 30).
+   - Free members satisfying the Williams half do exist: 48 distinct non-Psi f for r = 3 (d <= 40), 29 for
+     r = 4 (d <= 30). Many are Dickson-type, e.g. f = 2 D_5(Y) - 1.
+   - All of them fail the Korselt condition of the forced members.
+ - Twisted members P_d(Y) = i^(-deg) Psi_d(iY) with 4 | d, at Y = L_M, M odd. Here z | Md is forced [PROVED:
+   u = i phi^M gives iY = u + 1/u]. Korselt twisted families with 5 not | d, d <= 200, k <= 6: NONE
+   [COMPUTED: src/fw/twist.gp; the untwisted control recovers {10,14,18} and {20,28,36}].
+ - Fermat-forced Phi_d(2^K) families. A split member needs p - 1 | n + 1 (Williams' criterion for split p). With
+   d | p - 1 and odd(d) | n - 1 this forces d = 2^m. Then Phi_d - 1 = X^(2^(m-1)) needs n(0) = -1, but n(0) = 1.
+   So split members are impossible [PROVED], and the all-inert case is cyc_sym.out (0 pairs, d <= 160).
+ - Other Selfridge D have no one-variable forcing. For Q* != +-1 the forced members are binary forms in
+   (V_K, Q^(K/2)). A Korselt identity among distinct irreducible forms would force prod_(i!=j) F_i^(deg F_j) =
+   F_j^(D - deg F_j) [PROVED], which unique factorisation rules out.
+ STATUS: the exponential/polynomial-identity world (S1 and its mixed and twisted variants) is closed for every
+ Selfridge D in the computed ranges. D = 5 is the only D with one-variable forcing.
+ - Williams families whose special points are all real are impossible: by Lemma 6 every member takes the same
+   value at each real special point, so all f_j - 1 = a_j G and f_j + 1 = a_j H, giving f_j equal [PROVED from Lemma 6].
+   This covers every member class whose f -+ 1 split into Psi_e (cyclotomic special points), including the
+   Dickson-type free members found above.
+   Check [COMPUTED: src/rw/ratw.py]: all 17 irreducible members with special points in {-2..2} (complete for that
+   class, degree <= 4), Williams families k <= 9: none.
+
+### Literature tools (2026-10-24, alphaXiv; read by me: Grantham 1903.06820, Khashin 1807.07249)
+ - Grantham Thm 4.3: a Frobenius psp for f is a Fermat psp to base f(0). For x^2 - x + 2 this gives base 2, which
+   matches the D* = -7 reformulation in Lemma 14. Grantham offers $6.20 for a Frobenius psp for x^2 + 5x + 5 that is
+   2 or 3 mod 5. He calls it "equally challenging" as PSW.
+ - Khashin (Frobenius test, z = 1 + sqrt(c) or 2 + sqrt(c), c = first non-residue):
+   - no Frobenius psp below 2^64;
+   - every one has a prime factor > 3000;
+   - Prop 3.4: no prime factor p with n/p < 2^21.
+   Prop 3.4 uses the last-prime gcd (his Cor 2.10, our Lemma 14 consequence). He reports the gcd "decomposes into small
+   primes", with 1-3 candidates per cofactor up to several million [READ, not re-checked]. This matches the
+   BCZ-type smallness that sinks every small-cofactor construction.
+
+### Strategic review (2026-10-24, session 2b)
+ - Distance to result:
+   - New rigorous results: Lemma 12(c) and Lemma 14.
+   - Sub-routes closed by proof: real-special-point Williams families, split Fermat-forced members, multi-D forcing.
+   - Closed by bounded computation: forced + free and twisted exponential families.
+   - No new mechanism that could output n.
+ - Mechanism census:
+   - Pools: two-sided S-unit cap; the AGHS heuristic gap is a log factor in the exponent.
+   - Identities: overdetermined; real special points dead; the cyclotomic coincidence gives one family, dead mod 5.
+   - Few factors: Sum 1/p^2-type finite.
+   - Forcing: one side only (Fermat via 2^K, Lucas via L_2K, and only for D = 5).
+   Every mechanism needs, per prime, BOTH ord_p 2 and z(p) small or shared. That event is the DSO / S-unit
+   coincidence, rare by Bugeaud-Corvaja-Zannier-type gcd bounds.
+ - The missing ingredient, stated precisely:
+   - EITHER a source of many primes whose two orders are simultaneously controlled. Every known source controls
+     one order algebraically and leaves the other to smoothness or luck.
+   - OR a subset-product algorithm for the structured groups (Z/A)^* x (Z/B)^* that works at density
+     N ~ 2^(sqrt(B)/log B), below Wagner/Kuperberg's 2^(c sqrt B).
+   Neither exists in the literature I have read. P1 (more CHM pool growth) cannot supply either. KILLED as pool
+   enlargement; reason recorded in session 1's AGHS item.
+ - Kill:
+   - P1 (pool growth).
+   - P2 (done: twisted none; Aurifeuillian Lucas factors carry 5 | z, so they die by Lemma 12(b)).
+   - P3 (only useful with P1).
+ - Keep or open (live; first experiment; kill condition):
+   L1 Last-prime gcd search for BPSW (Lemma 14).
+      Covers every BPSW psp having a prime q with n/q <= M0, q unbounded.
+      First step: M0 = 2e4, D* in {5, -7, -11, 13, -15, 17, -19, -23}.
+      Kill: gcds always small and no candidate. Then record the theorem and extend M0 only while the cost per
+      decade stays under a day.
+   L2 Theory: classify Korselt Psi-families (P4).
+      Ingredients: the top common special point (Lemma 6 argument, Korselt half) and cyclotomic unit relations at the
+      other special points.
+      First step: prove that every member has Phi_d(1) = 1 (d not a prime power) and that 2 is a simple common
+      special point, then bound the special-point fields.
+      Kill: no progress after two derivation attempts. Then record the partial lemma.
+   L3 Two-order source.
+      Question: does any number-theoretic construction control ord_p 2 and z(p) at once without smoothness?
+      Candidates to test:
+       (a) primes dividing values of norm forms tying 2 and phi together, e.g. N(phi^k - 2^m) (inert p | it has
+           z | 2k and ord | 4m). These are DSO primes, so first measure their number and size.
+       (b) Mersenne primes M_q, q == 3 mod 4: inert for D = 5, ord = q, z(M_q) = 2^q exactly
+           [PROVED: v2(z) = v2(p+1) for inert p == 3 mod 4]. They are DSO with B = 1. Products fail F1 (different
+           2-adic classes 2^q); a single M_q needs class-(0,q) partners, i.e. p == -1 mod 2^q with ord_p 2 odd.
+      First step: tabulate inert primes p | N(phi^k - 2^m) for k, m <= 200 and compare with the CHM pools.
+      Kill: no prime > 2^40 and no density gain over CHM.
+
+### L1 result: last-prime gcd search (src/lp/lastprime.gp) [COMPUTED]
+ - Method:
+   - For each Selfridge D, enumerate cofactors m = n/q: odd, squarefree, all primes in one 2-adic class,
+     pairwise F2-compatible, prime to DQ.
+   - Compute G = gcd(2^E1 - 1, U_E2) exactly, with q split iff (D/m) = -1.
+   - Factor G and run bpsw(m q) on every prime q | G.
+ - Controls [COMPUTED: src/lp/ctl_lp.gp]: both divisibility rules hold for every prime factor of all 72 squarefree
+   spsp(2) and all 71 squarefree strong Lucas psp below 2e6 (0 violations).
+ - THEOREM (computer-assisted): let n be a BPSW psp whose Selfridge D is one of 5, -7, -11, 13, -15, 17, -19, -23.
+   Then n/q > 1e5 for every prime q | n. In particular n = pq needs min(p,q) > 1e5, and the larger factor is
+   unbounded a priori.
+   [COMPUTED: src/lp/lp_1e5.out. About 10.5k admissible cofactors per D; every gcd factored completely; 12k-20k
+   candidate q per D; 0 hits; 31 s.] A run to 1e6 for all prime discriminants |D| <= 101 and -15 is in progress
+   (src/lp/lp_1e6.out).
+   (The run also includes D = -3, which Selfridge never selects; harmless.)
+ - Gcd composition [COMPUTED: src/lp/lp_big.gp]:
+   - The largest gcds (up to 1e127) are products of 20-30 SMALL primes (< 1e6). They occur when m - 1 is smooth,
+     e.g. m = 89461 = 137*653 with E = 89460 gives 27 primes.
+   - So for smooth E the gcd is just the DSO / CHM pool of primes whose orders divide E. Large-index DSO primes are
+     rare, consistent with the heuristic count Sum_(d|E1, e|E2) 4/(de log de) = O(1).
+   - The method gives a rigorous infinite-region exclusion, not a new pool.
+ - Twisted families, d <= 600 (5 | d allowed), k <= 8: the only Korselt families are {40,56,72}, {80,112,144},
+   {160,224,288} and {320,448,576}, i.e. 4*{10,14,18}*2^i. All have 5 | d, so z is divisible by 5 and Lemma 12(b)
+   kills them for D = 5. [COMPUTED: src/fw/twist600.out]
+ - Unfactored parts from the M0 = 1e6 run are post-processed with src/lp/lp_fix.gp (full factorisation of G(m)).
+   D = -15: 4 such m. Each was a composite of 15-16 digits with prime factors just above the 1e7 trial bound.
+   All resolved; 0 hits.
+
+### Lemma 15 (PROVED; checked): the index budget of a 3-factor BPSW psp with all primes inert
+Register rows: F1, F2 (via Lemma 14). Any Selfridge D*.
+Let n = p1 p2 p3 be a BPSW psp, p1 < p2 < p3, all three inert for D*. Put O_i = odd(ord_{p_i} 2) * odd(z(p_i)) and
+I_i = (p_i^2 - 1)/O_i. Note I_i = 2^(j1+j2) * [(p_i - 1)/ord] * [(p_i + 1)/z], i.e. the two order indices times the class.
+Then
+   I1 I2 I3 >= prod(p_i^2 - 1) / N,   N = 1/2 sum_cyc (p_i^2 - 1)(p_j - p_k)^2,
+and hence I1 I2 I3 > (2/3)(p1^2 - 1)(1 - p2^-2)(1 - p3^-2). So some prime has index >= about 0.87 p1^(2/3).
+For closely spaced primes the bound is much larger, about p^4/Delta^2.
+Proof.
+ - Lemma 14 (inert case) gives p_j p_k - 1 = c_i O_i with c_i a positive integer.
+ - Hence prod(c_i / I_i) = R := prod_cyc(p_j p_k - 1) / prod(p_i^2 - 1).
+ - Identity: prod_cyc(p_j p_k - 1) - prod(p_i^2 - 1) = 1/2 sum_cyc (p_i^2 - 1)(p_j - p_k)^2 = N > 0.
+   To see it, expand both sides in s1, s2, s3. The difference is (s2^2 - 3 s1 s3) - (s1^2 - 3 s2), and each bracket is a
+   sum of squares.
+ - So R > 1, and R prod I_i = prod c_i is an integer. Then prod c_i >= prod I_i + 1, so R - 1 >= 1/prod I_i.
+ - Finally N < 1/2 p3^2 (p1^2 + 2 p2^2) < (3/2) p2^2 p3^2.  QED
+Scope:
+ - It applies only to the all-inert 3-factor case.
+ - With one or more split primes, Lemma 14 gives O_i | m_i^2 - 1, the degree count no longer balances, and no
+   constraint follows.
+ - For k = 2 the same count gives I_p I_q >= (p+1)(q+1) (known heuristic, now exact).
+ - For k >= 4 there is no constraint.
+Checks [COMPUTED: src/lem/l15.gp]:
+ - The identity was checked symbolically.
+ - N < (3/2) p2^2 p3^2 held on 1e5 random triples.
+ - The integrality argument was tested non-vacuously on all 551,300 odd triples <= 301, taking O_i = gcd(x_i^2 - 1,
+   x_j x_k - 1): 0 violations, and 35 cases within a factor 2 of the bound, so the bound is nearly sharp.
+ - Live test: no triple of inert primes (D = 5) with n <= 2e7 has all three c_i integral, so it is vacuous there.
+Use:
+ - A 3-factor all-inert BPSW psp needs a large combined index somewhere, i.e. a DSO-type prime of size >= p1^(2/3).
+ - This complements L1 (which covers n/q <= 1e6).
+
+### Remark (HEURISTIC + Chebotarev): Kummer-forced indices cannot manufacture DSO primes
+ - Forcing I_F >= k and I_L >= k' for every prime of a family means the primes split completely in
+   L = Q(zeta_k, 2^(1/k), sqrt D, zeta_k', beta^(1/k')), with [L:Q] about k phi(k) k' phi(k').
+ - The least such prime is expected to be >= [L:Q] (Linnik-type). So O_p = (p^2 - 1)/I >= p^2/(k k') >= p^(3/2):
+   at best half-way to DSO, and the remaining order is not smooth.
+ - The rank-2 group <2, beta> in K* (beta has norm 1 and is not torsion; 2 is not a unit) makes "both orders small at
+   p" a codimension-2 condition in every extension field, so no field change removes it.
+ - The only known way around it is exponent arithmetic (smooth orders shared across primes), i.e. the S-unit pools.
+
+### Attempt D2 (2026-10-24): DSO census at highly composite exponents [COMPUTED: src/dso2/]
+Register rows: none chosen (a census). Question (missing ingredient (ii)): do large-index primes with BOTH orders
+small exist when the orders are allowed to be highly composite? Attempt D only measured ord, z <= 1500.
+ - Method: G(E) = gcd(2^E - 1, U_E(1,Q)) contains EVERY prime with ord_p 2 | E and z(p) | E.
+   Take E = lcm(1..k), k <= 20 (E <= 2.3e8), factor G completely (src/dso2/hcgcd.gp, cof.gp), then test BPSW
+   usability: p inert, or p split with gcd(odd ord, odd z) = 1 (F2).
+ - D = 5, k = 20: 240 primes, the largest 232792561 = E + 1.
+   - Every prime above ~2e4 is SPLIT with ord_p 2 and z(p) sharing almost all odd primes, e.g.
+     ord = z = 2^4 3 7 11 13 17 for p = 22870849. These "diagonal" primes have p - 1 smooth and both indices small.
+     They are useless for BPSW: a shared odd l would need l | n - 1 and l | n + 1.
+   - The gcd cofactors above the 1e7 trial bound (30 and 105 digits) were products of 8-9 digit diagonal primes.
+   - BPSW-usable: 12 primes, all inert, max 1597.
+ - Six Selfridge D (5, -7, -11, 13, -15, 17), k = 16 and 20 (src/dso2/usableD.gp):
+   235-257 primes each, 13-23 usable, largest usable <= 51481.
+ - Conclusion [COMPUTED, bounded]: highly composite exponents produce many DSO primes, but only diagonal split ones.
+   No large usable DSO prime exists for orders dividing lcm(1..20), for any of these D.
+   This is the codimension-2 obstruction seen directly: one-sided smoothness (p - 1) gives diagonal primes;
+   usability needs two-sided smoothness or two independent index coincidences.
+   Missing ingredient (ii) is not available from this source.
+
+### Strategic review (2026-10-24, session 2c)
+ - New since 2b:
+   - L1 theorem to 1e5 (all 8 small D) and, in progress, 1e6 for 26 D.
+   - Lemma 15 (3-factor budget).
+   - Kummer remark.
+   - Attempt D2 census.
+   - fw2 r2 d <= 150 (running).
+ - Conservation principle (HEURISTIC, with rigorous pieces): every way of making one constraint automatic costs the
+   same probability elsewhere. Instances checked here:
+   - Smooth n - 1 forces z-roughness. With n == +-1 mod lcm(1..y), all D < y have (D/n) = 1 and the other side
+     must avoid every l <= y. [PROVED, elementary]
+   - Shared large primes R | p - 1 cost 1/R per pool prime.
+   - Proth/Riesel shapes control one side only.
+   - Q* == 1 mod p gives z(p) = 3, but only for p | D* + 3 (small). [PROVED]
+   - Two-base exponential families f(2^t, phi^2t) cannot force both orders: f would have to divide an X-only and a
+     Y-only polynomial. [PROVED]
+   - Kummer forcing gives O_p >= p^(3/2). [heuristic + Chebotarev]
+   - Highly composite exponents give only diagonal split primes. [COMPUTED]
+ - Distance: unchanged. No mechanism outputs n.
+   - Few-factor regions beyond L1 have heuristic expected yield <= 1e-6.
+   - The pool route needs >= 2^100 work at every scale [HEURISTIC; session 1 AGHS item].
+ - Live CONSTRUCTIVE directions (G4), each with first step and kill:
+   C1 L1 extension: finish 1e6 x 26 D, then the next decade only for D in {5, -7, -11, 13, -15}.
+      Kill: a decade costs > 1 day.
+   C2 Structured spsp(2) lottery with exact Lucas side: composite Mersenne M_q (q <= 1e4), Wagstaff (2^q+1)/3,
+      Fermat F_k (k <= 16), composite divisors of L_(2^k).
+      - Each family is automatically strong in one test (spsp(2), or strong Lucas for L_(2^k)).
+      - For q == 3 mod 4, BPSW on M_q is a Lucas-Lehmer run with seed 3: it passes iff all prime factors share
+        z = 2^(r+1).
+      - Kill: done once (minutes). It is a lottery, recorded as such.
+   C3 Exact exhaustion of small smooth pools.
+      - Rigorously decide whether any BPSW psp is a product of primes with p^2 - 1 y-smooth, for y = 41 then 100,
+        n unbounded.
+      - First step: compatibility cliques per class and per side-assignment, then exact subset enumeration (Gray code).
+      - Kill: cliques > 45 primes at y = 41.
+   C4 (theory feeding constructions) Exceptional cyclotomic units.
+      - The Fermat-exponential pair condition Res(Phi_a + 1, Phi_b) = +-1 says Phi_a(zeta_b) + 1 is a unit, i.e.
+        an exceptional-unit pair (u, u - 1) in Q(zeta_b).
+      - Classifying these for all a, b would close or open the cyclotomic half-family world for every d, not just
+        d <= 160.
+      - First step: literature check (exceptional units in cyclotomic fields), then derive the classification of
+        Phi_a(zeta_b) + 1 being a unit.
+
+### C2 result: structured spsp(2) lottery [COMPUTED: src/lot/lot.gp -> lot.out]
+Exact BPSW on the following families, all 0 passes:
+ - all composite M_q, q prime <= 1e4 (1207 numbers);
+ - all composite Wagstaff (2^q+1)/3, q <= 1e4 (1204);
+ - F_5..F_16;
+ - all products of >= 2 known prime factors of L_(2^k), k <= 9.
+This is a lottery (expected yield about 0), recorded as such; C2 is closed.
+fw2 r = 2, d <= 150 (forced Psi pair + one free Williams member):
+ - The process died (no final line, last write 04:30) after the pairs starting at d = 118, with 0 hits.
+ - Recorded as UNFINISHED and partial (G3). Not re-run: the sub-route is already closed in range by r <= 4 runs.
+
+### Structured subset products (2026-10-24): re-examining missing ingredient (i)
+Register rows: C1, C2, C5 (pool setting).
+ - Observation [PROVED, elementary]:
+   - In G = (Z/A)^* x (Z/B)^*, A, B odd, the target (1, -1) has trivial image in every odd l-primary component, since
+     -1 has order 2.
+   - So the odd part of the subset-product problem is a ZERO-SUM problem: find nonempty S with sum_{p in S} v_p = 0 in
+     G_odd = sum_l G_l, together with an affine F_2-type condition on the 2-part (Jacobi symbols, the C_2 parts, the
+     classes).
+   - Also (Z/r)^* = C_(r-1) splits into l-parts for l | r - 1. So G_odd is a product of many small elementary-abelian
+     l-groups (l small, multiplicity about pi(y)/(l-1)) and a "cyclic" remainder (large l, multiplicity ~1).
+ - Measured structure of the best annealed pools [COMPUTED: src/grpstruct.py on data/sn_150.txt]:
+   z = 150, class (2,0), N = 13 primes, log2|G| = 91.4 bits:
+   - 2-part 28.0 bits (17 components, up to C_16);
+   - odd l <= 13: 52.1 bits (3: 10 components incl. Z/9; 5, 7, 13: 3 each; 11: 1);
+   - odd l > 13: only 10.3 bits (l = 23, 53).
+   The annealer already selects vocabularies whose r - 1 is smooth, so the group is mostly structured.
+ - Literature [READ by me: Kothari-Metger-O'Donnell-Shutty-Wu, arXiv 2609.40321; it summarises Kothari-O'Donnell-Wu,
+   STOC 2026]:
+   - For random vectors in F_q^n, a nonempty zero-sum subset is found in poly time with m >= q^(q^2) n^(1 + floor((q+3)/4))
+     vectors (average case, rigorous). Worst case needs m >= q^(q^2) (n+1)^(q-1).
+   - For q = 3: m about n^2/3 (rigorous), about 0.1022 n^2 (informal).
+   - Wagner-type methods cost 2^O(n / log(m/n)). The information threshold is m about n log2 q.
+   So per field the threshold is POLYNOMIAL, not 2^(c sqrt B).
+   This is the first algorithmic family that could in principle beat the session-1 AGHS/Kuperberg bound for BPSW pools.
+ - Why it does not rescue the route at laptop scale [HEURISTIC, with the numbers above]:
+   (a) Algorithms matter only at density N/B > 1. The measured best density is 0.11-0.14 for every B <= 272 at
+       z = 100 and z = 150, and N_best(B) is so far LINEAR in B:
+       (59, 8), (91, 13), (126, 16), (212, 26), (272, 30).
+   (b) For a product of different fields, the only general method I see is staging, one field at a time. Its element
+       cost MULTIPLIES across fields: for the z = 150 group, about 1e11 elements versus the information threshold of 91.
+       A joint algorithm for products of small fields, or over Z/Q with Q = prod l, is not in the papers read. That is
+       the precise open algorithmic question.
+   (c) Even with a joint algorithm needing N about B^2, the S-unit extrapolation (raw pair count
+       ~ exp(1.89 sqrt(pi(y))), fitted at y = 41, 100, 150 to within 1%) puts the crossover at y about 700-1000.
+       There are about 1e10 smooth pairs there, beyond laptop enumeration.
+ - Decision:
+   - Record (b) as the sharpened form of missing ingredient (i): a joint zero-sum algorithm for random vectors in
+     prod_l F_l^(n_l), small l, with polynomial sample threshold.
+   - Measure the frontier trend at z = 200 (P1 revived for this reason only; CHM running) to see whether N_best(B)
+     bends upward before B ~ 500.
+
+### Lemma 16 (PROVED; checked): composite L_(2^k) are strong Lucas pseudoprimes for Selfridge's parameters
+For k >= 2, n = L_(2^k) = V_(2^k)(1,-1) passes the strong Lucas test with Selfridge D = 5.
+Proof.
+ - Lucas numbers mod 5 have period 4 (2, 1, 3, 4). So n == L_0 = 2 mod 5 and (5/n) = (n/5) = -1, i.e. D* = 5.
+ - L_(2^(k+1)) + 1 = L_(2^k)^2 - 1 = (L_(2^k) - 1)(L_(2^k) + 1). By induction from L_2 + 1 = 4, 2^(k+1) | n + 1.
+   So n + 1 = d 2^s with s >= k+1 and d odd.
+ - V_(2^k) | V_(2^k d) for odd d, hence V_(d 2^k) == 0 mod n, with k < s.  QED
+Every composite L_(2^k) (k >= 5) is therefore BPSW iff it is a strong pseudoprime to base 2. This is the exact mirror
+of composite Fermat numbers, which are spsp(2) and BPSW iff strong-Lucas.
+Check [COMPUTED: src/lot/lucas2k.gp]: k = 5..15 all give D = 5 and strong Lucas = 1, as proved; all fail spsp(2).
+k = 16..20 is running (lottery).
+Both mirror families are one-side-automatic. Their products mix incompatible 2-adic classes (Fermat factors
+(m+1, *) against Lucas factors (0, k+1)).
+
+## Session 3 (2026-10-24, continued)
+### P1 result: the frontier at y = 200 and its growth curve [COMPUTED: src/frontier_np.py, frontier_np2.py, frontier3.py]
+ - CHM closure at y = 200 finished: 345,275 smooth pairs (21 min; data/sn_200.txt). Inert rows: 13,525.
+   Largest classes: (2,0) 3233, (1,2) 2119, (0,3) 1439, (0,4) 995, (3,0) 749, (0,5) 701.
+ - Tools. frontier_np.py is a vectorised copy of frontier.py (same annealer, same objective). It reproduces the
+   z = 100 frontier exactly, in 2.7 s instead of minutes.
+   frontier3.py adds per-prime exponent caps (side A/B/X plus a cap e_q), an optional split-prime pool, and
+   restriction of one pair file to any y' < y.
+ - Frontier at z = 200, class (2,0) [the best class], 4 seeds x 200k iterations:
+   (B, N) = (397.6, 58), (367.5, 57), (335.1, 52), (43.0, 6). Density N/B <= 0.155 everywhere.
+   - 50x more annealing than the z = 150 run moved N from 55 to 58 at B ~ 390, so the annealer is not the limit.
+   - Exponent caps change nothing measurable (y = 100: N = 14 at B = 107, ratio 0.131).
+ - Growth curve (frontier restricted to y' from the one z = 200 file; best ratio over lambda):
+
+   | y' | 60 | 80 | 100 | 120 | 140 | 160 | 180 | 200 |
+   |---|---|---|---|---|---|---|---|---|
+   | class (2,0) size | 49 | 112 | 185 | 419 | 722 | 1081 | 1814 | 3233 |
+   | best N/B | 0.149 | 0.142 | 0.143 | 0.141 | 0.144 | 0.143 | 0.151 | 0.155 |
+   | N at B ~ 110-150 | 8 (B 65) | 14 (B 120) | 15 (B 114) | 20 (B 152) | 18 (B 126) | 16 (B 112) | 14 (B 100) | - |
+
+   The class grows 66x from y' = 60 to 200; the best density grows from 0.149 to 0.155.
+   At FIXED B ~ 120, N_best stays 14-20 for every y' from 80 to 200.
+ - Split primes [COMPUTED]: of 39,875 split primes p = 2x+1 from the y = 200 pairs, exactly ONE has coprime odd
+   parts of ord_p 2 and z(p) (and 5 does not divide either): p = 974849, a factor of F_11 (ord = 2^12,
+   odd(z) = 7*17). All the others are diagonal. Split primes contribute nothing to pools.
+ - Conclusion [COMPUTED, bounded; the extrapolation is HEURISTIC]: within S-unit (smooth-neighbour) pools the
+   achievable density is N/B ~ 0.15, flat in y and in B up to B ~ 400.
+   - At small B (where generic subset-sum algorithms would be affordable, e.g. BCJ ~ 2^(0.29 B) for B <= 150) the
+     expected number of solutions is 2^(N - B) ~ 2^(-100).
+   - At large B, even N/B >= 1 would leave a density-1 subset-sum problem, about 2^(0.29 B) work.
+   So the pool route fails at EVERY B reachable here: small B gives too few primes, large B gives an intractable search.
+   That closes P1 for this project's scale. The missing ingredient stays (i) a structured-group algorithm or
+   (ii) a non-S-unit source of two-sided primes.
+
+### Literature (2026-10-24, alphaXiv; read by me) - constructions and tools only
+ - Shallue-Webster, arXiv 1806.08697 ("Fast tabulation of challenge pseudoprimes"):
+   - No PSW challenge pseudoprimes (psp(2), (5/n) = -1, n | F_(n+1)) with 2 or 3 prime factors below 2^80.
+     This covers the D* = 5, t <= 3 part of BPSW below 2^80 (BPSW with D* = 5 implies PSW).
+   - Algorithm: pre-product k; the last prime p divides gcd(2^(k-1) - 1, U_(k-eps(k))) when k is small (our Lemma
+     14 / L1), else a sieve in the progression p == k^-1 mod L, -k^-1 mod W.
+   - 7 "admissible" split primes below 2^40 (gcd(ord, z) <= 2), e.g. 4278255361 = Phi_80(2) with ord 80.
+   - 2047 = M_11 is a (2, 23, 131)-challenge pseudoprime. D = 23^2 - 4*131 = 5, and (P, Q) is chosen so that
+     gamma has 2-power order mod 23 and mod 89. With per-n parameters the Lucas side is trivial; Selfridge's
+     rigid choice is what makes BPSW hard.
+   - Rewards: $20 for a PSW challenge psp with an even number of prime factors, $20 with exactly three, $6 divisible by 3.
+ - Baillie-Fiori-Wagstaff, arXiv 2006.14425:
+   - Theorem 1: every spsp(2) n == 3 mod 4 is a strong lpsp(2^k, 2^(2k-1)). The reason: D = -4^k, so gamma = i is
+     torsion. Selfridge never selects such a degenerate D: for P = 1, gamma is torsion only for D = -3.
+   - Pomerance's heuristic construction (Section 8): p in [T, T^k], p == 3 mod 8, (5/p) = -1. (p-1)/2 is
+     squarefree over primes q < T with q == 1 mod 4; (p+1)/4 is squarefree over primes q < T with q == 3 mod 4.
+     Then n == 1 mod Q1 and == -1 mod Q3 with an odd number of factors.
+     - The partition is FIXED by q mod 4, and the class is automatically (1,2): v2(z) = v2(p+1) = 2 for inert
+       p == 3 mod 4.
+     - The authors note a search with this construction "would be very slow".
+
+### DSO-closed families: exhaustive subset check [COMPUTED: src/dso2/subsets.gp -> subsets.out]
+Every BPSW psp with Selfridge D* = D whose prime factors ALL have ord_p 2 | E and z_D(p) | E (E = lcm(1..20))
+is a product of the usable primes of G(E) = gcd(2^E - 1, U_E). All subsets were enumerated after the Lemma 1
+filters (one 2-adic class; odd(ord) coprime to odd(z) over the set), and each survivor got the exact bpsw().
+ - D = 5, -7, -11, 13, -15, 17, -19, -23: 13-23 usable primes each, only 5-23 class-consistent subsets, 0 hits.
+ - THEOREM [COMPUTED]: no BPSW psp with D* in this list has all prime factors with both orders dividing lcm(1..20).
+   n is unbounded within the family (every subset was tested).
+
+### Lemma 17 (PROVED, elementary): split primes of a BPSW psp are thin; a 2-factor BPSW psp has exactly one
+Register rows: F1 (classes), F2 (coprime sides). Let n be a BPSW psp with Selfridge D*, and p | n split ((D*/p) = 1).
+ (a) odd(ord_p 2) * odd(z(p)) | odd(p - 1), and min(v2 ord_p 2, v2 z(p)) <= 1.
+     Proof: both orders divide p - 1, their odd parts are coprime (one divides n - 1, the other n + 1), and
+     j1 <= v2(n-1), j2 <= v2(n+1), where one of v2(n -+ 1) equals 1.
+     Consequence: I_F(p) * I_L(p) >= (p - 1) / 2^(j1+j2) * 2^(v2(p-1)) >= (p-1)/4, so one index is >= sqrt(p)/2.
+     Every split prime of a BPSW psp is a one-sided DSO prime. Call such p ADMISSIBLE.
+ (b) n has an odd number of inert primes (since (D*/n) = -1, and no p | D*Q*). If n = pq, exactly one of p, q
+     is split.
+ (c) Last-prime form. If q is the ONLY inert prime of n, put m = n/q (the split part). Then
+     odd(ord_q 2) * odd(z_q) | O := odd(m - 1). So q | gcd(2^(2^j1 A) - 1, U_(2^j2 B)) for a unitary divisor A of O
+     (B = O/A); take A generated by the primes of odd(ord_q 2). This is Lemma 14 at q.
+     Each of the 2^omega(O) gcds can be computed modulo the smaller number, of about 2^j sqrt(O) bits.
+ Census [COMPUTED: src/us/usplit.c, a segmented sieve with a largest-prime-factor filter; 7.6 s to 1e8 for 6 D]:
+ admissible split primes below 1e8:
+   - D = 5: 1 (61681: ord 40, z 1542). This matches Shallue-Webster, whose next is 363101449.
+   - D = -7: 5. D = -11: 3. D = 13: 8. D = -15: 4. D = 17: 4.
+   Examples: 6700417 | F_5 (D = 13, ord 64); 2796203 = (2^23 + 1)/3 (D = 17, ord 46); 15467 (D = -11, z = 19).
+ Search [COMPUTED: src/us/gq.gp (lastq), drive.gp; control ctl.gp]:
+   - Every class-consistent, cross-coprime product m of admissible split primes below 1e8 (m <= 1e16; 1-11 cofactors
+     per D) has 0-5 candidate q. 0 BPSW hits.
+   - Control: for m = 5581 (D = -11) the solver returns q = 61 with O_61 = 15*31 | 5580, as it must.
+ THEOREM B [COMPUTED: src/us/us_1e10.txt (scan to 1e10, 455M primes, 22 min), run10.gp, pairs10.gp, big29.gp]:
+ for D* in {5, -7, -11, 13, -15, 17, -19, -23, 29, -31} there is no BPSW psp with Selfridge D* that has exactly one
+ inert prime factor and all its split prime factors < 1e10. The size of n and of the inert prime is unbounded.
+   - Admissible split primes < 1e10 per D: 5, 5, 4, 11, 6, 4, 2, 4, 8, 6.
+   - Every class-consistent, cross-coprime product of them was tested: 62 split parts, 20 candidate inert q,
+     0 hits. Only one split part exceeds 1e16: D = 29, m = 32665301 * 1244942269 = 4.07e16, with
+     O = 12791 * 54419 * 912853 (0 candidates, 1 s).
+   - Independent check: the D = 5 list is EXACTLY Shallue-Webster's admissible primes below 1e10 (61681,
+     363101449, 4278255361, 4562284561, 4582537681), found by an independent program.
+ COROLLARY: every 2-factor BPSW psp n = pq with D* in this list has its split prime > 1e10.
+   - D = 5 beyond 1e10: SW's two further primes below 2^40, 26509131221 and 422013019339 (orders re-verified),
+     give 0 candidates (sw2.gp).
+   - So the corollary holds with 2^40 for D* = 5 IF SW's list is complete; my own D = 5 scan to 2^40 is running
+     (usplit3, Montgomery arithmetic, about 4.5 h).
+
+### Missing ingredient (i) made precise: it contains modular subset sum [PROVED reduction; consequence HEURISTIC]
+ - For distinct primes l_1..l_r, the sum of the cyclic groups Z/l_i is cyclic of order M = prod l_i (CRT).
+   So any algorithm finding zero-sum (or target-sum) subsets of random elements of
+   G = (Z/A)^* x (Z/B)^* in poly(log|G|) time would, restricted to the large-prime part of G_odd (multiplicity 1:
+   q == 1 mod l for one q only), solve random modular subset sum mod squarefree smooth M at density ~1.
+   No such algorithm is known (lattice methods need density < 0.94 and a planted solution; BCJ-type methods
+   cost 2^(0.29 n)).
+ - The tractable structure (F_2 linear algebra; F_3^n via Kothari-O'Donnell-Wu) needs SMALL EXPONENT.
+   Forcing small exponent (moduli q with q - 1 | E0 fixed, e.g. E0 = 5040) shrinks the S-unit pool. Staging the
+   three fields of E0 = 5040 needs about n_3^2 n_5^2 n_7^2 ~ 1e7 samples against pools of ~50.
+ - Status: (i) is a subset-sum breakthrough, not a missing trick. Redirected; no further algorithm work planned
+   unless a pool with N/B >> 1 at B <= 150 appears. That needs a new prime source, i.e. (ii).
+
+### Lemma 18 (PROVED; checked): the 2-adic classes are governed by (2/p) and (Q*/p)
+Register rows: F1 (classes). Any D*, Q* = (1 - D*)/4, p not dividing 2D*Q*, eps = (D*/p).
+ (a) v2(ord_p 2) = v2(p - 1) iff (2/p) = -1; otherwise it is smaller.  [standard]
+ (b) v2(z(p)) = v2(p - eps) iff (Q*/p) = -1; otherwise it is smaller.
+Proof of (b) for inert p: let g generate F_(p^2)^*, h = g^(p-1) (it generates T_p, order p + 1), and write
+alpha = g^a. Then alpha^(p+1) = N(alpha) = Q* = g^((p+1)c), so a == c mod (p - 1), say a = c + (p-1)t.
+Then gamma = alpha/beta = alpha^2/Q* = g^(2a - (p+1)c) = h^(2t - c). So gamma is a square in T_p iff c is even,
+i.e. iff Q* is a square in F_p^*. Split p: gamma = alpha^2/Q* in F_p^*, the same conclusion.  QED
+ [COMPUTED: src/lem/l18.gp, all primes p < 2e5 for 10 Selfridge D, about 18,000 inert and 18,000 split each:
+  0 violations of (a) or (b).]
+Consequences.
+ - D* = 5 (Q* = -1) has three families of inert primes:
+   - p == 3 mod 8: class (1,2);
+   - p == 7 mod 8: class (0, v2(p+1)) with v2(p+1) >= 3;
+   - p == 1 mod 4: class (j1, 0), i.e. z(p) is ODD.
+   Since all primes of n share one class:
+   - class (1,2): every inert prime is == 3 mod 8 (Pomerance's family);
+   - class (0,j), j >= 3: every inert prime is == 2^j - 1 mod 2^(j+1);
+   - class (j1,0): every inert prime is == 1 mod 4.
+   This is the class list the frontier found: (2,0), (1,2), (0,3), (0,4), (3,0), (0,5).
+ - D* = -15 (Q* = 4, a square): z(p) never has the full 2-part. D* = -7 (Q* = 2): the Fermat and Lucas sides are
+   full or reduced together, so inert p == 3, 5 mod 8 give classes (1,2), (2,1).
+
+### Strategic review (2026-10-24, session 3)
+ - New since 2c:
+   - P1 closed at this scale: pool density about 0.15, flat in y and B.
+   - Lemma 17 (split primes are admissible and thin) with Theorem B (exactly one inert prime, split primes
+     < 1e10, ten D).
+   - Lemma 18 (2-adic classes from (2/p) and (Q*/p)).
+   - DSO-closed theorem.
+   - Ingredient (i) reduces to modular subset sum.
+ - Where a BPSW psp can still be (for |D*| <= 31, combining L1, Lemma 17, Theorem B and the DSO-closed theorem):
+   - n has >= 3 inert prime factors, or a split prime > 1e10;
+   - n/q > 1e5 for every prime q | n (1e6 once lp_1e6 finishes);
+   - not every prime factor has both orders dividing lcm(1..20).
+   Every split prime is one of a thin list (5-11 per D below 1e10).
+ - Distance to an explicit n: unchanged. Every remaining region has heuristic expected yield <= 1e-5:
+   - 3-inert with q1 q2 > 1e6: about sum 2/Lambda(m);
+   - pools: 2^(N - B) with N/B ~ 0.15.
+ - Theory of success: none at laptop scale. The two missing ingredients are pinned down:
+   (i) subset sum (a known hard problem);
+   (ii) a non-S-unit source of inert primes with both orders controlled. For inert p, 2 lies in F_p^* and gamma in
+       T_p (they meet only in +-1), so control needs two coincidences. Only exponent sharing (smoothness) or
+       Kummer splitting provides them, and both are measured or estimated.
+ - Live directions after this review (>= 3):
+   E1 Exclusion theorems (running; cheap):
+      - Theorem B to 1e11 for nine D (running) and 2^40 for D = 5 (running);
+      - L1 at 1e6 (running).
+      Kill: a decade costs > 1 day.
+   E2 Theory: real polynomial Williams families. A family would give infinitely many BPSW psp (all values == 3
+      mod 8, inert). The open step is positivity at non-real special points. First step: express the
+      special-point conditions as |n| = 1 on the zero set of n^2 - 1 (all special points satisfy n(theta) = +-1,
+      and lcm(f_j^2 - 1) | n^2 - 1). Then look for a Jensen / argument-principle contradiction.
+      Kill: two derivation attempts without a new inequality.
+   E3 Three-inert exact search beyond L1 with the cheap unitary-divisor gcd (cofactors q1 q2 in (1e6, 1e9]).
+      Only if E1 finishes and a C implementation of lastq is written (about 2e7 pairs per D).
+      Kill: cost > 1 day per D.
+
+## Session 4 (2026-10-24, continued)
+### C3: exact exhaustion of two-sided-smooth pools [COMPUTED: src/c3/exact.py, export.py, enum.c]
+Register rows: none chosen. The statement is about every n whose prime factors all lie in the pool.
+ - Pool P_y = { p prime : p^2 - 1 is y-smooth } (p = 2x + 1 with x, x+1 y-smooth). This is exactly the pool of the
+   Pomerance / Chen-Greene construction. For a Selfridge D, every BPSW psp with D* = D and all prime factors in
+   P_y is a product of
+   - inert p, or admissible split p (Lemma 17a),
+   - in ONE 2-adic class (F1),
+   - with no odd prime on both sides (F2): an independent set of the side-conflict graph,
+   - an odd number of inert primes, none dividing D*Q*, with Lemma 12(b) applied.
+   The enumerator lists EVERY such independent set (n unbounded) and tests the exact Lemma 1 congruences
+   (prime-power residues; the 2-adic part mod 2^(max j + 1)). Hits are re-verified with the verbatim bpsw.
+ - Completeness of the pair lists. Our CHM closure (src/chm.c) is NOT complete
+   [READ by me: Conrey-Holmstrom-McLaughlin 1212.5161; Buzek et al. 2211.04315].
+   - y = 41: 868 pairs. It misses x = 63927525375 = 3^3 5^3 7^7 23 (x + 1 = 2^13 11^4 13 41), Lehmer's largest.
+     CHM report the same omission. With it the list has 869 pairs = Lehmer's complete count (1964).
+     File: data/sn_41_complete.txt.
+   - y = 100: sn_100 has 13,340 pairs. The union with the 100-smooth members of sn_200 plus
+     9591468737351909375 (79-smooth, above our 2^63 cap; CHM's only miss) has 13,374 pairs. That is exactly
+     Luca-Najman's complete count: 13,325 plus 49 in their erratum.
+     Every element was re-verified smooth, so our set equals theirs; completeness is CITED.
+     File: data/sn_100_complete.txt.
+   - Consequence for earlier work: the P1 frontier used CHM lists that miss about 0.25% of pairs. The
+     qualitative conclusions do not change.
+ - Controls.
+   - Fermat-only mode (Lucas data dropped, base-2 strong test at the end): y = 41, at most 3 primes. 31 hits, all
+     spsp(2): 2047, 3277, 4033, 4681, 15841, 29341, ... Brute force over all spsp(2) < 3e6 with at most 3 prime
+     factors in P_41 \ {5} gives 16 numbers, and the enumerator finds exactly these 16. C and Python agree.
+   - Lucas-only mode: y = 41 finds 5777, 10877, 5459, 24569, ... (strong Lucas psp). Every congruence hit is a
+     strong Lucas psp for the tested D; the ones that fail the full test have Selfridge D = 5, an earlier D.
+   - C and Python agree on every subset count at y = 41.
+ - y = 41 (complete list), D* in {5, -7, -11, 13, -15, 17, -19, -23, 29, -31}:
+   - pools 82-162 primes, at most 1 admissible split prime per D, classes of at most 37;
+   - 55-876 consistent odd subsets per D, 0 congruence hits.
+   The side-conflict graph is very dense.
+
+### Theorem C (PROVED, computer-assisted; completeness CITED): no BPSW psp has all prime factors in P_100
+Register rows: none chosen. The statement covers every n, with no size bound.
+ - Statement. Let P_100 = { p prime : p^2 - 1 is 100-smooth }. Then no BPSW pseudoprime with Selfridge
+   D* in {5, -7, -11, 13, -15, 17, -19, -23, 29, -31} has all of its prime factors in P_100.
+ - Ingredients:
+   - Luca-Najman's complete list of 13,374 pairs (x, x+1), both 100-smooth (CITED; our file
+     data/sn_100_complete.txt reproduces the count exactly). This gives 3043 primes p = 2x+1.
+   - Lemma 1 (F1, F2), Lemma 12(b), Lemma 17 (admissible split primes, odd number of inert primes).
+   - Squarefree: p^2 | n with n spsp(2) forces 2^(p-1) == 1 mod p^2. No prime of P_100 satisfies this
+     (checked directly).
+   - Exhaustive enumeration with src/c3/enum.c over the exports src/c3/ex100.txt.
+ - Result (src/c3/enum100.out): 384 classes over the 10 D; 3,336,445,924 independent sets; 1,668,209,907
+   parity-odd congruence checks; 0 hits; complete (no cap).
+   - Pools per D: 804 (D=5) to 1571 (D=-19) primes, in 29-48 classes. Largest class: 399 (D=-15, class (2,0)).
+   - Independent sets per D: 2.9e6 (D=29) to 1.98e9 (D=-15).
+   - Largest independent set: 24. The side-conflict graph keeps every consistent subset to at most 24 primes,
+     out of pools of about 1500.
+ - What it does NOT say: nothing about n with even one prime factor outside P_100. y = 150 and y = 200 (CHM
+   lists, not proven complete) are bounded evidence only (running).
+
+### Pomerance pool by direct generation: saturation and density [COMPUTED: src/c3/pomgen.c -> pomgen.out]
+ - Pool: p = 4B - 1, B a product of primes == 3 mod 4 (<= T) and A = 2B - 1 a product of primes == 1 mod 4
+   (<= T, not 5). For fixed T this is an S-unit equation 2B - A = 1, so the pool is FINITE. Measured
+   saturation: no new primes from 1e12 to 1e18.2 at T = 300, or from 1e15 to 1e17 at T = 500.
+ - N / log2|G|, where |G| is the group generated by the moduli actually used:
+
+   | T   | 100   | 200   | 300   | 500   |
+   |-----|-------|-------|-------|-------|
+   | N/B | 0.064 | 0.079 | 0.102 | 0.161 |
+
+   At T = 500: N = 156 primes, log2|G| = 969.
+ - Growth is accelerating (a local exponent of about 0.9 between T = 300 and 500). Read naively, the crossover
+   N = log2|G| would come at T of a few thousand, where the pool primes are far beyond 2^64.
+
+### Lemma 19 (PROVED): complete classification of 3-member Williams polynomial families over C
+Register rows: C4, C3F, C3L. Supersedes the computer-assisted Lemma 4 with a conceptual proof valid over C.
+ - Statement. Let f, g, h in C[t] be nonconstant, n = fgh, with f -+ 1 | n -+ 1 (and the same for g, h).
+   Then {f, g, h} = {f, zeta f, zeta^2 f} with zeta^3 = 1. Over R (hence over Q), f = g = h.
+ - Proof.
+   1. f -+ 1 | n -+ 1 means gh == 1 mod (f^2 - 1), so f^2 - 1 | gh - 1 and gh - 1 != 0 (as k >= 2 and the
+      polynomials are nonconstant). So 2 deg f <= deg g + deg h, and cyclically.
+   2. Summing, all three inequalities are equalities, so deg f = deg g = deg h = d. Hence gh - 1 = a(f^2 - 1)
+      for a constant a. Multiplying by f: n = a f^3 + (1 - a) f, i.e. n = P_a(f). Likewise n = P_b(g) = P_c(h).
+   3. Uniqueness of the right component of a given degree (approximate cube root: the polynomial part of
+      n^(1/3) determines f up to an affine map) gives g = u f + v and h = u' f + v'.
+   4. Compare P_b(u f + v) = P_a(f) as polynomials in f. The f^2 coefficient gives v = 0. Then
+      gh = u u' f^2 = a f^2 + 1 - a gives a = 1 and u u' = 1. Similarly fh = b g^2 + 1 - b gives b = 1,
+      u' = u^2; and fg = c h^2 + 1 - c gives c = 1, u = u'^2. So u^3 = 1.  QED
+ - Coprime normal form for any odd k (PROVED, same idea). If n -+ 1 = prod (f_j -+ 1) (the pairwise-coprime case of
+   Lemma 8(b)), then Pi(X) := prod_j (X - f_j) satisfies Pi(1) - Pi(0) = 1 and Pi(-1) - Pi(0) = -1. Hence
+     prod_j (X - f_j) = X (X^2 - 1) R(X) + X - n,   with R in C[t][X] monic of degree k - 3.
+   - k = 3: R = 1, so prod (X - f_j) = X^3 - n and the f_j are zeta^j n^(1/3).
+   - k = 5: R = X^2 + r1 X + r0, so the members are the five roots of
+     X^5 + r1 X^4 + (r0 - 1) X^3 - r1 X^2 + (1 - r0) X - n.
+     The zeta-family is r0 = 1, r1 = 0. The Dickson case r0 = -4, r1 = 0 (D_5(X,1) = n) needs
+     sqrt(f^2 - 4) to be a polynomial, so it gives no polynomial family. It does give the Lucas-type
+     algebraic family zeta^j w + zeta^-j w^-1.
+ - Conjecture W' (open; evidence: Lemmas 3, 4, 7, 19, Theorem 9 and all LM/Groebner runs). Every complex Williams
+   family is "monomial": f_j = c_j u^(e_j) with E/e_j odd (E = sum e_j) and c_j^(E/e_j) = prod c_i.
+   Real examples exist, e.g. {v, v, v, v^3, v^3, v^3, v^3} with n = v^15, but their members are powers of
+   one polynomial. So W' would imply: no family with distinct irreducible members over Q, for any k and any degree.
+   Real case still open: shared NON-real special points on both sides (Lemma 8(a)).
+
+### Negative check: no class-group forcing of Lucas indices [COMPUTED: scratch forced3.gp]
+ - Hypothesis. For D = -31 (h = 3, (alpha) = p2^3), alpha = u pi^3 in the Hilbert class field H. Then gamma would
+   be a cube in T_p and 3 would never divide z(p) for inert p == 2 mod 3. D = -23 is similar.
+ - Test: inert p < 2e5 with 3 | p + 1. The fraction with 3 | z(p) is 0.743-0.758 for all 13 D tested
+   (h = 1, 2, 3, 5). This is the random-element value 3/4.
+ - Conclusion: the unit u^(1-p) is not a cube in T_p, so there is no forcing. Class field structure gives no free
+   Lucas index for any Selfridge D.
+
+### Calibration: the Pomerance pool crosses density 0.6 at T = 1000 [COMPUTED: src/c3/pomgen.c, src/pom/profile.py]
+This corrects the session-3 reading "pool density about 0.15, flat in y". That measurement used CHM lists at
+y <= 200 only. Direct generation shows the density rising steeply with T.
+ - Full pool, D = 5, class (1,2), Pomerance side rule, all primes p <= Xmax. N/log2|G| uses p-1, p+1 exponents.
+
+   | T    | Xmax    | N    | log2|G| | N/log2|G| | saturated?                                          |
+   |------|---------|------|---------|-----------|-----------------------------------------------------|
+   | 300  | 1e18.2  | 55   | 540.7   | 0.102     | yes (no new primes after 1e12)                      |
+   | 500  | 1e18.2  | 156  | 969.3   | 0.161     | yes (no new primes after 1e14)                      |
+   | 1000 | 1e15    | 1070 | 2346.7  | 0.456     | no                                                  |
+   | 1000 | 1e17    | 1247 | 2507.8  | 0.497     | no (per-decade counts still 99, 78 at 1e15, 1e16)   |
+
+ - True orders (profile.py). Index effects are negligible: 539.7 vs 540.7 bits at T = 300, 2506.8 vs 2507.8 at
+   T = 1000. Every pool prime lies in class (1,2) with the expected sides.
+ - Greedy frontier: drop the primes attaining the top exponent of one modulus whenever that improves N - bits.
+   - T = 300 and 500: the full pool is best (0.100, 0.161).
+   - T = 1000 (1e17): best (bits, N) = (1559, 980), ratio 0.629. Further points (1843, 1079) and (1689, 1036);
+     the deficit at the best point is 579 bits.
+ - Growth: N grew 8x from T = 500 to 1000 while log2|G| grew 2.6x. Extrapolating, the frontier ratio reaches 1 near
+   T = 1300-1500, at about 2000-3500 bits with N = 2000-3500 (HEURISTIC extrapolation).
+   This is consistent with Chen-Greene's weak-version numbers (density 1 at 1240 bits, 2.6 at 1838 bits), allowing
+   for the single-class loss.
+ - What it means. Pomerance's heuristic predicts BPSW psp built from pool primes of about 1e10 already in the
+   T ~ 1500 pool, roughly 2000-3500 primes and about 10^20000 in size. The pool is not the bottleneck; the
+   subset-product search is.
+ - Search cost at the crossover (HEURISTIC; standard generalised-birthday analysis).
+   - With 2^m leaf lists, Wagner's k-tree needs N >= 2^m B/(m+1) primes and time ~2^(m + B/(m+1)).
+   - At B ~ 2500 the minimum over m is about 2^99 time with N >= 2^49 primes. With the actual N ~ 3000, the best
+     m is about 3, giving time 2^600.
+   - Better random-knapsack algorithms (BCJ-type 2^(0.29 N) at density 1; Flaxman-Przydatek polynomial time only when
+     B <= c log^2 N) do not reach B ~ 2500 either.
+   - Raising T does not help: N/B grows only polynomially in T while B grows linearly, so B/log(N/B) -> infinity.
+ - Sharpened missing ingredient (i): a subset-product algorithm for groups prod (Z/q^e)^* (q <= ~1500) that beats
+   generic random-knapsack bounds by hundreds of bits. Equivalently, exploitable non-randomness in the discrete logs
+   of two-sided-smooth primes. Known structure: every pool prime is == -1 mod 3, never == -1 mod an F-side q, never
+   == +1 mod an L-side q, and is == +-1 on its own support. That frees only the q = 3 coordinate (about 1.6 bits).
+
+### Strategic review (2026-10-24, session 4b, after Theorem C, Lemma 19 and the T = 1000 calibration)
+ - Machine rebooted at about 09:00. Lost jobs were restarted with lower memory caps (gp parisizemax <= 3 GB):
+   - D = 5 split scan, resumed at 6.31e11 (usplit3 now accepts X0:X);
+   - L1 for the remaining positive D;
+   - big11 (Theorem B at 1e11, three large cofactors);
+   - pomgen calibration at T = 1000/1500/2000;
+   - the one-side-automatic family sweep.
+ - New since session 3:
+   - Theorem C: rigorous exclusion of the whole P_100 pool.
+   - Lemma 19: k = 3 Williams families classified over C, plus the coprime normal form.
+   - Negative check: no class-group forcing.
+   - Calibration: the Pomerance pool density is 0.63 at T = 1000 and rising steeply. This corrects "flat ~0.15".
+ - Distance to an explicit n.
+   - The pool side is no longer the obstruction: heuristically, BPSW psp exist inside the T ~ 1500 Pomerance pool.
+   - The obstruction is now a single, explicit computational problem: a random-like subset-product in a group of
+     about 2000-3500 bits.
+   - For it, every known algorithm costs >= 2^99:
+     - Wagner/Kuperberg/AGHS need N ~ 2^(c sqrt B);
+     - KOW-type polynomial-threshold zero-sum algorithms exist only per small field, with constants q^(q^2),
+       and need N >= poly(B) >> two-sided pool sizes;
+     - "free modulus" variants (all pool primes == 1 mod R) cost a factor R in pool density, which a two-sided pool
+       cannot afford.
+   - Every non-subset-product mechanism examined is closed or heuristically empty:
+     - polynomial families: Lemmas 3, 4, 7, 19, Theorem 9; W' open;
+     - exponential families: Attempt C;
+     - DSO pools;
+     - class-field forcing;
+     - Fermat/Mersenne/Lucas automatic families: lottery sweeps running.
+ - Theory of success.
+   - Constructive: needs either an algebraic family (W' says none over Q) or a structured subset-product algorithm.
+     No candidate for either is in hand.
+   - Exclusion side: rigorous theorems keep shrinking where small BPSW psp can live:
+     - Theorem B: one inert prime, split primes < 1e11;
+     - L1: n/q > 1e6;
+     - Theorem C: P_100;
+     - DSO-closed families.
+ - Kill / continue:
+   - KILL the C3 y = 150/200 enumeration (CHM lists incomplete, explosive cost, yield ~0). Done 08:40.
+   - CONTINUE the exclusion pipeline.
+   - CONTINUE the calibration to T = 1500/2000 (gives the crossover directly).
+   - CONTINUE E2/W' as theory.
+ - Live directions (>= 3):
+   E1 Exclusions: Theorem B at 1e11 (9 D) and 2^40 (D = 5); L1 positive D; record.
+   E2 Theory: prove W' (complex Williams families are monomial), or at least the real non-coprime case.
+   E4 Calibration: measure the Pomerance crossover T*. Estimate the size and factor count of the smallest predicted
+      BPSW psp, and publish the explicit crossover pool as a well-defined subset-product instance.
+   E5 Algorithms (long shot): a joint zero-sum method for prod_l F_l^(n_l) whose sample threshold is polynomial and
+      does not multiply across l. A positive result here is the only thing that would convert E4 into an explicit n.
+
+## Session 5 (2026-10-24, continued after the reboot)
+### Theorem B extended to 1e11 for nine D [COMPUTED: src/us/us3_1e11_9D.txt, rows_1e11.gp, run11.gp -> run11.out, biggcd.c -> big7.out, big11b.gp]
+ - THEOREM B (1e11). For D* in {-7, -11, 13, -15, 17, -19, -23, 29, -31} there is no BPSW psp with Selfridge D*
+   that has exactly one inert prime factor and all of its split prime factors below 1e11. The size of n and of the
+   inert prime is unbounded. (D* = 5 stays at 1e10 + SW's two primes until the 2^40 scan finishes.)
+ - Inputs. The 1e11 scan finds 61 admissible split primes for the nine D:
+   13:12, 29:9, -11:5, -15:8, 17:7, -23:5, -31:6, -7:7, -19:2.
+   It reproduces the 1e10 list exactly (cross-validation of the segmented scan). New primes above 1e10:
+   -23: 67974381749; -15: 19767865951, 29929785679; -11: 28769448247; -7: 11954925473, 41291876971;
+   13: 61620938419; 17: 48695287049, 71309972101, 77059587233; 29: 51354510013.
+ - Search. 73 class-consistent, cross-coprime split parts m, 23 candidate inert q, 0 hits.
+   Per D (split parts / candidate q): -7: 8/0, -11: 6/1, 13: 15/9, -15: 10/7, 17: 8/3, -19: 2/0, -23: 6/2, 29: 12/1,
+   -31: 6/0.
+ - Three split parts needed big gcds (the cost filter in run11 skipped them):
+   - D = -7, m = 62020897 * 41291876971, O = 3 * 160447363 * 2660227837, class (1,1).
+     The four nontrivial unitary splits need gcd(2^W1 - 1, U_W2(1,2)) with W1, W2 up to 1.6e10. GP overflowed a
+     3 GB stack, so I wrote src/us/biggcd.c (GMP).
+     - Mode N reduces mod 2^W1 - 1 by folding; mode U computes U_W2 exactly.
+     - Validated against GP on (-7, 22022, 30030), (13, 1200, 2800), (5, 6000, 2400) and small cases.
+     - All four gcds are 1 (49-399 s, at most 3.0 GB RSS).
+     - The four trivial splits (min(W1, W2) <= 6) give g = 1 directly.
+   - D = -15, m = 4375578271 * 19767865951, class (0,0): 16 splits, 0 candidates.
+   - D = -23, m = 1021622741 * 67974381749, class (2,1): 4 splits, 1 candidate, not a psp.
+ - COROLLARY (1e11). Every 2-factor BPSW psp n = pq with D* in the nine values above has its split prime > 1e11.
+
+### Compute moved to the GCP VM "dirichlet" (2026-10-24, user directive) — RESUME NOTES
+ - All experiments now run on `dirichlet` (the user's GCP VM; 8 cores AMD EPYC 7B12,
+   31 GB). This replaces the earlier laptop-only rule. The laptop holds the repo, notebook and analysis.
+   - Access: `gcloud compute ssh dirichlet --project <project> --zone <zone>`. Project and zone are kept in the local agent memory, not in this public repo.
+   - Work tree: `~/b-psw/src` (copy of src/ without the CHM lists ex100/ex150 and macOS binaries).
+   - Rebuilt there: us/usplit3, us/biggcd, c3/pomgen2. Validation: the VM usplit3 scan to 1e8 reproduces all
+     145 rows of the laptop 1e11 list below 1e8 (D = -7, -11, 13, -15, 17), byte for byte after sorting.
+   - Do not touch `~/f4-gpu-code` (another project). Jobs run under nice 10, at most 7 at once.
+ - Queue 1 (src/vm/jobs1.txt, started by vm/setup1.sh; log vm/runq1.log):
+   - pomgen2 T = 1000 to 1e18.2, T = 1500 to 1e15, T = 2000 to 1e15 (c3/pomgen_*.out, c3/pom_*.txt);
+   - D = 5 split scan [646730219521, 2^40) in four chunks (us/us3_d5_c1..c4.txt). The laptop runs covered
+     p < 646730219521 (us/us3_2p40_d5.txt and us/us3_2p40_d5_b.txt; the laptop resume job was stopped);
+   - L1 at M0 = 1e6 for D = 41, 53, 61, 73, 89, 97, 101 (lp/lp_1e6_D*.out). D = 37 finished on the laptop (lp_1e6c.out):
+     89121 cofactors, 125636 candidate q, 0 hits, unfactored m = 281581, 883411, 890221;
+   - autofam2 (cyc/af1..3.out): Mersenne, Wagstaff, Fibonacci sweeps to p = 20000 plus F_5..F_17. Unlike autofam.gp
+     there is no ispseudoprime filter. Known prime/PRP indices act as positive controls.
+ - W' discriminating patterns (alg/lm_mixed.py). Done on the laptop before the move:
+   (1,1,1,1,2), (1,1,1,2,2), (1,1,2,2,2): 150 trials each, 0 solutions (min residuals 3.7e-4, 3.5e-5, 1.1e-4).
+   Remaining: (1,2,2,2,2), (1,1,1,3,3), (2,2,2,3,3), (1,1,1,1,1,1,3), (2,2,2,2,2,2,2). They need numpy/scipy on the VM.
+
+### Lemma 20 (PROVED; one step checked for odd k <= 301): W' holds in the coprime normal form when R is constant
+Register rows: C4/C3F/C3L (Williams polynomial families). Partial progress on E2.
+ - Setting. Take k odd and f_1..f_k in C[t] nonconstant with n = prod f_j, f_j - 1 | n - 1 and f_j + 1 | n + 1, and the
+   f_j^2 - 1 pairwise coprime (coprime normal form, session 4). Then
+     prod_j (X - f_j) = S(X) - n,   where S(X) = X (X^2 - 1) R(X) + X and R in C[t][X] is monic of degree k - 3.
+   Equivalently, the f_j are k distinct polynomials with S(f_1) = ... = S(f_k) = n. Since S(0) = 0 and S(+-1) = +-1,
+   this says sum_{odd i < k} e_i(f) = 0 and sum_{even 0 < i < k} e_i(f) = 0.
+ - Statement. If R has constant coefficients (R in C[X]), then S = X^k and {f_j} = {zeta^j u} with zeta^k = 1, n = u^k.
+ - Proof.
+   1. S(f_j) = n with S in C[X] and n nonconstant. So S(X) - n is irreducible over C(n) (it is linear in n), and all
+      k of its roots lie in C(t). Its splitting field E satisfies C(n) c E c C(t), and Gal(E/C(n)) = Mon(S).
+   2. n is a polynomial in t, so the only place of C(t) over n = infinity is t = infinity. Hence E has a unique
+      place over n = infinity. So the decomposition group there is all of Mon(S). Over C it equals the inertia
+      group, which is cyclic (tame ramification). So Mon(S) is cyclic.
+   3. Mon(S) is transitive on k points, so it is regular of order k, and E = C(f_1).
+      - The automorphisms of C(f_1) over C(n) fix the unique place over infinity, so they are affine:
+        f_j = l_j f_1 + m_j, with S(l_j X + m_j) = S(X).
+      - A degree-k polynomial with an affine symmetry group of order k is a(X - c)^k + b.
+   4. S is monic with S(0) = 0, S(1) = 1, S(-1) = -1. Write S = (X + mu)^k - mu^k. Then
+      h(mu) = h(-mu) = 0, where h(z) = (1 + z)^k - 1 - z^k.
+      - gcd(h(z), h(-z)) = z for every odd k in [3, 301] [COMPUTED: src/wp/mu_check.gp].
+      - So mu = 0, S = X^k and f_j = zeta^j f_1.  QED (for k <= 301; step 4 for general k is open but routine).
+ - Scope.
+   - This is the special case C(e_1(f), ..., e_k(f)) = C(n).
+   - The same argument works whenever the subfield K0 = C(e_1(f), ..., e_k(f)) is proper. Then K0 = C(s) with s a
+     polynomial, the splitting field is a cyclic Kummer cover C(w), s = w^m + c, and the f_j become polynomials in w
+     permuted by w -> zeta_m w.
+   - The open case of W' is exactly K0 = C(t): the symmetric functions generate everything, and the Galois argument
+     gives nothing.
+ - Reformulation for k = 5. W' in the coprime case is equivalent to: distinct f_1..f_5 in C[t] with e3 = -e1 and
+   e4 = -e2 force e1 = e2 = 0.
+   - The four LM patterns tested so far, (1,1,1,1,2), (1,1,1,2,2), (1,1,2,2,2), (1,2,2,2,2), are exactly the
+     Newton-polygon-admissible unequal patterns. The hull vertices lie in {0, 5} union one of {1,3} and one of {2,4},
+     because the X^1/X^3 coefficients and the X^2/X^4 coefficients have equal degrees.
