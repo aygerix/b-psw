@@ -1,0 +1,30 @@
+LIB "primdec.lib"; LIB "modstd.lib";
+ring R = 32003, (c1_0,c2_0,c2_1,c2_2,c3_0,c3_1,c3_2,c4_0,c4_1,c4_2,c5_0,c5_1,t,X), dp;
+poly f1 = c1_0*t^0 + t^2;
+poly f2 = c2_0*t^0 + c2_1*t^1 + c2_2*t^2;
+poly f3 = c3_0*t^0 + c3_1*t^1 + c3_2*t^2;
+poly f4 = c4_0*t^0 + c4_1*t^1 + c4_2*t^2;
+poly f5 = c5_0*t^0 + c5_1*t^1;
+poly P = (X - f1)*(X - f2)*(X - f3)*(X - f4)*(X - f5);
+matrix C = coeffs(P, X);
+poly E1 = -C[5,1]; poly E2 = C[4,1]; poly E3 = -C[3,1]; poly E4 = C[2,1];
+matrix G1 = coeffs(E1 + E3, t); matrix G2 = coeffs(E2 + E4, t);
+matrix H1 = coeffs(E1, t); matrix H2 = coeffs(E2, t);
+ideal I; ideal H; int i;
+for (i = 1; i <= nrows(G1); i++) { I = I, G1[i,1]; }
+for (i = 1; i <= nrows(G2); i++) { I = I, G2[i,1]; }
+for (i = 1; i <= nrows(H1); i++) { H = H, H1[i,1]; }
+for (i = 1; i <= nrows(H2); i++) { H = H, H2[i,1]; }
+ring S = 32003, (z,y,c1_0,c2_0,c2_1,c2_2,c3_0,c3_1,c3_2,c4_0,c4_1,c4_2,c5_0,c5_1), dp;
+ideal I = simplify(imap(R, I), 2); ideal H = simplify(imap(R, H), 2);
+ideal Ip = I, 1 - y*c2_2*c3_2*c4_2*c5_1;
+"pattern 2,2,2,2,1: unknowns 12, equations", size(I);
+int tt = timer;
+ideal G = std(Ip);
+"std(Ip): dim", dim(G) - 1, "(z is free, subtract 1), time", timer - tt;
+ideal rG = radical(Ip);
+"H in radical(Ip):", size(reduce(H, std(rG))) == 0, "time", timer - tt;
+list mp = minAssGTZ(Ip);
+"minimal primes:", size(mp);
+for (i = 1; i <= size(mp); i++) { "prime", i, "dim", dim(std(mp[i])) - 1, "contains H:", size(reduce(H, std(mp[i]))) == 0; }
+quit;

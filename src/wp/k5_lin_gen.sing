@@ -1,0 +1,51 @@
+// W' for k = 5, all members linear, GENERAL case (coprime or not).
+// f_j = a_j t + b_j, normalised f_1 = t (a1 = 1, b1 = 0; valid since a1 != 0).
+// Williams condition f_j -+ 1 | F -+ 1 (F = prod f_i) <=> R_j := prod_{i != j} f_i equals 1 at both roots
+// t = (s - b_j)/a_j, s = +-1, of f_j^2 - 1 (roots are simple). Clearing a_j^4:
+//   prod_{i != j} (a_i (s - b_j) + b_i a_j) - a_j^4 = 0,  j = 1..5, s = +-1  (10 equations, 8 unknowns).
+// Nonzero leading coefficients: Rabinowitsch 1 - y a2 a3 a4 a5.
+// Monomial solutions: a_j = zeta^(s_j) (zeta^5 = 1, sum s_j == 0 mod 5), b_j = 0.
+LIB "primdec.lib"; LIB "modstd.lib";
+proc run(int ch)
+{
+  ring S = ch, (y, a2, a3, a4, a5, b2, b3, b4, b5), dp;
+  matrix A[1][5] = 1, a2, a3, a4, a5;
+  matrix B[1][5] = 0, b2, b3, b4, b5;
+  ideal I; int j, i, s; poly P;
+  for (j = 1; j <= 5; j++) {
+    for (s = -1; s <= 1; s = s + 2) {
+      P = 1;
+      for (i = 1; i <= 5; i++) { if (i != j) { P = P * (A[1,i] * (s - B[1,j]) + B[1,i] * A[1,j]); } }
+      I = I, P - A[1,j]^4;
+    }
+  }
+  I = simplify(I, 2);
+  ideal Ip = I, 1 - y*a2*a3*a4*a5;
+  int t0 = timer;
+  ideal G;
+  if (ch == 0) { G = modStd(Ip); } else { G = std(Ip); }
+  "char", ch, ": dim", dim(G), "vdim", vdim(G), "time", timer - t0;
+  // does every solution have b_j = 0? test b_j in radical
+  int allb = 1;
+  for (i = 2; i <= 5; i++) {
+    ideal T = Ip, 1 - y*0;  // placeholder to keep names
+    ring S2 = ch, (z, y, a2, a3, a4, a5, b2, b3, b4, b5), dp;
+    ideal Ip2 = imap(S, Ip);
+    poly h = var(i + 5);   // b_i is variable index i+5 in S2 (z,y,a2..a5,b2..b5): b2 -> 7
+    ideal T2 = Ip2, 1 - z*h;
+    ideal GT = std(T2);
+    int u = (size(GT) == 1 && deg(GT[1]) == 0);
+    "b", i, "vanishes on V:", u;
+    allb = allb * u;
+    setring S; kill S2;
+  }
+  "ALL b_j VANISH (every solution has f_j = a_j t):", allb;
+  if (ch != 0 && vdim(G) > 0) {
+    list L = minAssGTZ(Ip);
+    "components:", size(L);
+    for (i = 1; i <= size(L); i++) { "comp", i, ":", L[i]; }
+  }
+}
+run(32003);
+run(0);
+quit;

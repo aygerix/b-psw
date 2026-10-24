@@ -1,0 +1,29 @@
+// W' for k = 7, all members linear, over GF(29) and GF(32003) (29 == 1 mod 7: zeta_7 rational there).
+// Conditions (coprime normal form): e1 + e3 + e5 = 0 and e2 + e4 + e6 = 0 identically in t.
+// Normalisation f1 = t. Monomial solutions: f_j = zeta^(s_j) t (720 of them).
+LIB "primdec.lib";
+proc run(int ch) {
+  ring R = ch, (a2,a3,a4,a5,a6,a7,b2,b3,b4,b5,b6,b7,t,X), dp;
+  poly P = (X - t);
+  P = P*(X - a2*t - b2)*(X - a3*t - b3)*(X - a4*t - b4)*(X - a5*t - b5)*(X - a6*t - b6)*(X - a7*t - b7);
+  matrix C = coeffs(P, X);            // C[i+1,1] = coeff of X^i ; P = X^7 - e1 X^6 + e2 X^5 - ...
+  poly E1 = -C[7,1]; poly E2 = C[6,1]; poly E3 = -C[5,1]; poly E4 = C[4,1]; poly E5 = -C[3,1]; poly E6 = C[2,1];
+  matrix G1 = coeffs(E1 + E3 + E5, t); matrix G2 = coeffs(E2 + E4 + E6, t);
+  matrix H1 = coeffs(E1, t); matrix H2 = coeffs(E2, t); matrix H3 = coeffs(E3, t);
+  ideal I; ideal H; int i;
+  for (i = 1; i <= nrows(G1); i++) { I = I, G1[i,1]; }
+  for (i = 1; i <= nrows(G2); i++) { I = I, G2[i,1]; }
+  for (i = 1; i <= nrows(H1); i++) { H = H, H1[i,1]; }
+  for (i = 1; i <= nrows(H2); i++) { H = H, H2[i,1]; }
+  for (i = 1; i <= nrows(H3); i++) { H = H, H3[i,1]; }
+  ring S = ch, (y,a2,a3,a4,a5,a6,a7,b2,b3,b4,b5,b6,b7), dp;
+  ideal I = simplify(imap(R, I), 2); ideal H = simplify(imap(R, H), 2);
+  ideal Ip = I, 1 - y*a2*a3*a4*a5*a6*a7;
+  int tt = timer;
+  ideal G = std(Ip);
+  "char", ch, ": dim", dim(G), "vdim", vdim(G), "time", timer - tt;
+  "H (e1, e2, e3 coefficients) in radical:", size(reduce(H, std(radical(Ip)))) == 0, "time", timer - tt;
+}
+run(29);
+run(32003);
+quit;

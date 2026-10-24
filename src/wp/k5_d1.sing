@@ -1,0 +1,49 @@
+// W' for k = 5, all members linear: f1 = t (normalised by an affine change of t), fj = aj*t + bj.
+// Coprime normal form: e1 + e3 = 0 and e2 + e4 = 0 identically in t.
+// Claim to test: every component with all aj != 0 and the fj pairwise distinct has e1 = e2 = 0
+// (so the fj are the five fifth roots of n, the monomial family).
+LIB "primdec.lib";
+proc satI(ideal A, ideal B) { def SS = sat(A, B); if (typeof(SS) == "list") { return(SS[1]); } return(SS); }
+LIB "elim.lib";
+ring R = 0, (a2,a3,a4,a5,b2,b3,b4,b5,t,X), dp;
+poly f1 = t;
+poly f2 = a2*t + b2; poly f3 = a3*t + b3; poly f4 = a4*t + b4; poly f5 = a5*t + b5;
+poly P = (X - f1)*(X - f2)*(X - f3)*(X - f4)*(X - f5);
+// P = X^5 - e1 X^4 + e2 X^3 - e3 X^2 + e4 X - e5
+matrix C = coeffs(P, X);          // C[i+1,1] = coefficient of X^i
+poly E1 = -C[5,1]; poly E2 = C[4,1]; poly E3 = -C[3,1]; poly E4 = C[2,1];
+poly g1 = E1 + E3; poly g2 = E2 + E4;
+matrix G1 = coeffs(g1, t); matrix G2 = coeffs(g2, t);
+ideal I;
+int i;
+for (i = 1; i <= nrows(G1); i++) { I = I, G1[i,1]; }
+for (i = 1; i <= nrows(G2); i++) { I = I, G2[i,1]; }
+I = simplify(I, 2);
+ring S = 0, (a2,a3,a4,a5,b2,b3,b4,b5), dp;
+ideal I = imap(R, I);
+poly e1 = imap(R, E1); poly e2 = imap(R, E2);
+"generators:"; size(I);
+// nonconstant members
+ideal J = satI(I, ideal(a2*a3*a4*a5));
+// pairwise distinct members (f1 = t has a1 = 1, b1 = 0)
+list pairs = list(ideal(a2-1,b2), ideal(a3-1,b3), ideal(a4-1,b4), ideal(a5-1,b5),
+                  ideal(a2-a3,b2-b3), ideal(a2-a4,b2-b4), ideal(a2-a5,b2-b5),
+                  ideal(a3-a4,b3-b4), ideal(a3-a5,b3-b5), ideal(a4-a5,b4-b5));
+for (i = 1; i <= size(pairs); i++) { J = satI(J, pairs[i]); }
+"dim of the nondegenerate locus:"; dim(std(J));
+list mp = minAssGTZ(J);
+"number of minimal primes:"; size(mp);
+ring T1 = 0, (a2,a3,a4,a5,b2,b3,b4,b5,t), dp;
+list mpT = imap(S, mp);
+poly e1T = imap(R, E1); poly e2T = imap(R, E2);
+matrix C1 = coeffs(e1T, t); matrix C2 = coeffs(e2T, t);
+int j; int ok;
+for (j = 1; j <= size(mpT); j++) {
+  ideal Q = std(mpT[j]);
+  ok = 1;
+  for (i = 1; i <= nrows(C1); i++) { if (reduce(C1[i,1], Q) != 0) { ok = 0; } }
+  for (i = 1; i <= nrows(C2); i++) { if (reduce(C2[i,1], Q) != 0) { ok = 0; } }
+  "component", j, "dim", dim(Q), "e1 = e2 = 0 on it:", ok;
+  if (ok == 0) { Q; }
+}
+quit;

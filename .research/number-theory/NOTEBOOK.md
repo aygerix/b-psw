@@ -1373,3 +1373,912 @@ Register rows: C4/C3F/C3L (Williams polynomial families). Partial progress on E2
    - The four LM patterns tested so far, (1,1,1,1,2), (1,1,1,2,2), (1,1,2,2,2), (1,2,2,2,2), are exactly the
      Newton-polygon-admissible unequal patterns. The hull vertices lie in {0, 5} union one of {1,3} and one of {2,4},
      because the X^1/X^3 coefficients and the X^2/X^4 coefficients have equal degrees.
+
+### Calibration: the Pomerance pool is past the crossover at T = 1500 [COMPUTED on the VM: c3/pomgen2 -> pomgen_1500_15.out, pom/profile2.py -> prof2_1500_15.out]
+ - src/pom/profile2.py: stdlib-only rewrite of profile.py. It uses trial division (p +- 1 are T-smooth) and an
+   incremental greedy frontier. On pom_1000_17.txt it reproduces profile.py exactly: 1246 primes, 2506.8 bits,
+   max frontier ratio 0.629 at (1559 bits, N = 980). Run time 5.5 s instead of hours.
+ - T = 1500, all pool primes p <= 1e15 (12 min on one VM core):
+   - full pool N = 3716 in class (1,2) (3717 from pomgen; p = 3 drops out of the class check), log2|G| = 4017.8,
+     ratio 0.925;
+   - per-decade counts are still rising (1e12: 571, 1e13: 675, 1e14: 706), so the pool is far from saturated;
+   - greedy frontier: max ratio 1.389 at (2355 bits, N = 3272);
+     best N - 1 - log2|G| = +919.2 at (N, bits) = (3296, 2375.8).
+ - Meaning (HEURISTIC, random-product model; the same model as Pomerance and Chen-Greene).
+   - In an explicit set of 3296 primes below 1e15, about 2^919 odd-size subsets S have product == 1 mod L1 and
+     == -1 mod L2.
+   - By Lemma 1 every such product is a BPSW psp with D* = 5. Each pool prime is inert for D = 5, in class (1,2), and
+     its odd orders divide L1 and L2. The product is squarefree, so not a square, and (5/n) = -1.
+   - The crossover T* lies in (1000, 1500): deficit 579 bits at T = 1000 (to 1e17), surplus 919 at T = 1500 (to 1e15).
+ - The obstacle is purely algorithmic: density-1.39 subset sum in a 2376-bit group with N = 3296.
+   - Generalised birthday with 2^m lists needs N >= 2^m B/(m+1). Here m = 2 gives time 2^(2 + 792).
+   - Reaching 2^60 would need m ~ 39, i.e. N ~ 3e13 primes.
+   - Lattice view: binary ISIS in dimension 3296 with det 2^2376. BKZ-60 finds kernel vectors of length about
+     2^12, against about 2^3.7 needed for {0,1} vectors.
+   - Note: a smooth modulus does not help. Any random integer knapsack embeds into one modulo a smooth M of the same
+     size, so subset sum mod M = prod q_i is as hard as generic subset sum.
+ - Next.
+   (a) Locate T* precisely (T = 1100-1400) with a parallel pomgen.
+   (b) Write the explicit instance file: primes, L1, L2, target and the exact implication. Publishing it would be the
+       E4 deliverable: anyone solving that knapsack gets a BPSW counterexample.
+   (c) Push T = 1500 and 2000 to 1e17+ to watch N/B grow.
+
+## Advisor review of commit d73c3db (2026-10-24) — accepted points, corrections, new direction
+Source: the user's advisor (review text pasted by the user). Their bundle (3780-prime instance, certificates) was not
+downloaded. Each claim below is either re-derived here or marked TO REPRODUCE.
+
+### Lemma 20 is now PROVED for every odd k (proof due to the advisor's review)
+ - Step 4 needed gcd(h(z), h(-z)) = z with h(z) = (1 + z)^k - 1 - z^k.
+ - For z != 0 with Re z >= 0 we have |1 + z|^2 = 1 + |z|^2 + 2 Re z >= 1 + |z|^2. Since (1 + x)^r > 1 + x^r for
+   x > 0 and r = k/2 > 1:
+     |1 + z|^k >= (1 + |z|^2)^(k/2) > 1 + |z|^k >= |1 + z^k|.
+   So h(z) != 0 there.
+ - Every nonzero root of h has Re z < 0, and every nonzero root of h(-z) has Re z > 0. The common root 0 is simple
+   (h'(0) = k). So Lemma 20 (constant R) holds for all odd k >= 3. The k <= 301 computation remains as a check.
+
+### Scope corrections (accepted)
+ - C1. The open case of W' was misstated. The Galois argument constrains a family only when the members generate a
+   PROPER extension E = C(f_1..f_k) of the symmetric-function field K0. Then Gal(E/K0) is cyclic (Kummer, after
+   Luroth reparametrisation by a generator of E).
+   - When K0 = E, nothing follows: the f_j are polynomials in a generator of K0. Example: composing any
+     hypothetical family with t -> t^2 makes K0 proper in C(t) but leaves K0 = E.
+   - Corrected statement: the open case is K0 = C(f_1, ..., f_k). Even in the cyclic case, the orbits and the forms
+     inside them still have to be controlled.
+ - C2. Generalised-birthday numbers. These are cost ESTIMATES for one method (k-tree with 2^m lists of subset sums of
+   N/2^m primes each), not lower bounds for algorithms on these arithmetic columns. Numerical errors corrected:
+   - Session 4b said "B ~ 2500: about 2^99 time with N >= 2^49 primes". The requirement is N >= 2^m B/(m+1)
+     = 50 * 2^49 (m = 49).
+   - Session 4b said "with N ~ 3000 the best m is about 3, time 2^600". With N = 3000 and B = 2500, m = 2 already
+     needs 3333 primes. So only m = 1 is available, with time about 2^1251.
+   - Session 5 (today) said "reaching 2^60 would need m ~ 39, N ~ 3e13". Wrong: the time 2^(m + B/(m+1)) is at
+     least 2^(2 sqrt(B) - 1), about 2^96 for B = 2376, attained near m = 48 with N >= 2^53.6. With this method,
+     2^60 is out of reach for ANY N at this B.
+ - C3. Theorem B (both the 1e10 and 1e11 versions) is a statement about SQUAREFREE n. The enumeration takes each split
+   prime once and tests m*q.
+   - Non-squarefree n (q^e with e > 1, repeated split primes, q^3 alone) needs order-lifting arguments. A repeated
+     prime must be base-2 Wieferich and also satisfy z(p^2) = z(p).
+   - The F3 check (src/wief/lw.gp) covers only the known Wieferich primes. It does not rule out unknown ones.
+   - The semiprime corollary n = pq is unaffected.
+ - C4. The instance built today (data/bpsw_instance_T1500_1e15.json, 3296 primes) did not exclude pool primes that
+   divide the moduli.
+   - The review lists 83, 107, 227, 563, 587, 1187, 1283. If such a p is selected and its own prime divides L2 (or
+     L1), the congruence n == -1 (resp. 1) mod p is impossible.
+   - The implication "congruences => BPSW psp" is still true (vacuously for such S), but N overstates the usable
+     pool by 7. The review's cleaned subpool has 3289 primes at the same 2375.848 bits. Fix: drop p | L1 L2
+     (iterate), and add the check to verify_instance.py.
+
+### New results claimed in the review (TO REPRODUCE independently)
+ - R1. Min-cut formulation. Fix the side assignment and the candidate set (all units mod the union modulus). Then
+   max_S (|S| - lambda b(S)) is a maximum-weight closure problem:
+   - prime nodes have reward 1;
+   - level (q,1) costs lambda log2(q-1), and each level (q,e), e >= 2, costs lambda log2 q;
+   - a prime implies all levels it needs.
+   A minimum cut solves it exactly for each lambda, and parametric lambda gives the supported frontier. Claimed:
+   T = 1000 (cleaned) gives N = 1037, b = 1585.92, ratio 0.6539, versus greedy 0.629 at (1559, 980).
+ - R2. The Grantham-Alford list (OEIS A018188, 2030 primes): all of them fit the moduli of the selected T = 1500
+   subpool, 1539 are already in it, and 491 are new. The union has N = 3780 at b = 2375.848 (ratio 1.591, heuristic
+   log2 E = 1404).
+ - R3. Generation: the 3780 prime columns generate all of G (full rank of the projection to G/lG for all 67
+   primes l | |G|).
+   - So there is no subgroup compression.
+   - Integer generation is not {0,1} generation. A collision of two subset products gives a {-1,0,1} relation,
+     not the unsigned target. That is the precise open step.
+
+### Strategy change (adopted)
+ - The research object is now the explicit Boolean system: about 237 modular equations (one per odd prime power
+   q^e | A B) in N binary unknowns, sum_i c_{q,i} x_i == 0 (F side) or phi(q^e)/2 (L side) mod phi(q^e).
+   Individual coordinates are small (largest phi(q^e) about 1.8e5). The difficulty is the coupling with {0,1}
+   coefficients.
+ - New exclusion runs only when they simplify a live construction (state the quantitative effect first). The jobs
+   already running (D = 5 split scan to 2^40, L1 for positive D) are allowed to finish.
+ - Work items:
+   W1. Min-cut subpool optimiser, kept with greedy as a comparison (reproduce R1).
+   W2. Clean T = 1500 instance with the unit condition. Extend the pool past 1e15 (this should recover the
+       Grantham-Alford primes above 1e15). Re-optimise.
+   W3. Build the discrete-log system and reproduce the generation certificate R3.
+   W4. Conditional activation: impose n == 1 mod a_p and n == -1 mod b_p only for selected p. Measure its effect
+       against the fixed 237-row system.
+   W5. A specific structural hypothesis about the arithmetic columns (forced +-1 residues on supports), tested
+       against matched random instances with the same coordinate groups and preserved constraints, as the
+       number of retained bits grows.
+
+### W1-W3 reproduced independently on the VM (2026-10-24) [COMPUTED: src/pom/mincut.py, dlog_system.py, lprofile.py]
+ - W1, min cut (src/pom/mincut.py: Dinic max-flow, stdlib).
+   - T = 1000 (pom_1000_17.txt): unit cleaning removes 83, 107, 227, 563, 587. Max ratio N = 1037, b = 1585.9156,
+     ratio 0.653881 via Dinkelbach in 2 steps, under 1 s. This matches the review's R1 exactly.
+   - T = 1500 (pom_1500_15.txt): unit cleaning removes 83, 107, 227, 563, 587, 1187, 1283 (3716 -> 3709).
+     - lambda = 1 optimum: N = 3289, b = 2375.8483, N - 1 - b = 912.15. Same set and value as the review's cleaned
+       subpool. Here the cleaned greedy point is already optimal.
+     - max ratio: N = 3255, b = 2347.64, ratio 1.3865.
+ - W3, system and generation (src/pom/dlog_system.py -> pom/sys_1500_15.txt on the VM).
+   - 237 prime-power rows, N = 3289 binary unknowns, log2|G| = 2375.8483, largest phi(q^e) = 118098 (q^e = 3^11).
+   - Discrete logs checked against the actual products of 5 random 101-subsets.
+   - Generation: all 67 primes l | |G| give full-rank projections to G/lG, so the columns generate G. This
+     reproduces R3.
+ - l-primary profile of G (src/pom/lprofile.py): the bits are spread, no part dominates.
+   - l = 2: 465.0 bits (19.6%, rank 237, exponent up to 2^8);
+   - l = 3, 5, 7: 588.8 bits (24.8%, ranks 116, 58, 39);
+   - 11 <= l <= 50: 590.2 bits (24.8%, ranks 6-24);
+   - 51 <= l <= 200: 524.7 bits (22.1%, ranks 1-5);
+   - l > 200: 207.1 bits (8.7%, ranks 1-3).
+ - W2 in progress: T = 1500 pool to 1e17 with pomgen3, 6 workers. pomgen3 matches the serial pool to 1e13 exactly
+   (2336 primes).
+
+### Literature (read 2026-10-24): what KOW/KMOSW zero-sum algorithms need [READ: arXiv 2609.40321, Sections 1, 5, 6]
+ - Mechanism, F_q^n average case (Thm 1.10). Recursive dimension reduction by "affine reducible" vectors (c, u):
+   - In each of B ~ log2(4q^2) disjoint blocks, take a SIGNED zero-sum in the quotient V/<u>. This gives disjoint
+     P_j, N_j with sum_P = sum_N + beta_j u.
+   - Choosing P_j or N_j per block makes c + a u an unsigned subset sum for every a in F_q.
+   - Signed zero-sums are free over F_3 (coefficients {0, +-1} = F_3: Gaussian elimination). For q >= 5 they cost
+     (d + k)^k vectors with k = floor((q+3)/4) (equation trees).
+ - Consequence for us (DERIVED). Each block needs a signed zero-sum in the whole remaining quotient, here a mixed
+   group of about 2^2370 elements in the first step. The method is per field. The P/N two-choice trick is general
+   (any abelian group, any cyclic direction u), but its input (signed zero-sums) is as hard as the problem, except
+   in F_2 and F_3 parts. Staging across fields multiplies the costs. So no published method applies to the joint
+   system. The missing ingredient stays (i): a joint zero-sum method for products of small fields and small-rank
+   large-l parts.
+ - Reusable piece: the P/N two-choice construction. Anything that cheaply yields many disjoint signed relations in
+   a quotient converts them into unsigned affine families.
+
+### W4 (conditional activation) quantified; crossover T* located [COMPUTED on the VM: pom/condgain.py, vm/tstar.sh]
+ - W4. Within the min-cut subpool S* (N = 3289, b = 2375.848), take a random subset S (each prime w.p. 1/2).
+   - S needs only its own levels, saving Delta = b(S*) - b(S) bits: mean 0.65, median 0, max 11.2.
+   - Gain of the conditional formulation in the heuristic count: log2 E[2^Delta] ~ 2.6 bits (sampled, K = 4000);
+     the independent-level estimate is 3.4 bits. Only one top level is needed by <= 3 primes.
+   - Conclusion: min cut already removes the primes whose levels are rare, so dropping congruences required only
+     by unused primes is worth about 3 bits out of 912. It does not change the problem.
+ - T*: greedy frontier on pools to 1e15 (profile2, before unit cleaning):
+   T = 1100: 0.688 (1696 bits); T = 1200: 0.833 (1856 bits); T = 1300: 1.015 at (2060 bits, N = 2090), surplus
+   +29 bits; T = 1500: 1.389. So T* ~ 1300 at Xmax = 1e15 (min cut would move it slightly lower).
+
+### W5a: low-weight relations show no structure beyond the known support pattern [COMPUTED on the VM: src/pom/structtest.py -> pom/struct_1500_15.out]
+ - Hypothesis tested: the arithmetic columns c_i (discrete logs of the 3289 instance primes) carry relations
+   beyond the known support pattern.
+ - Matched random model, per prime and coordinate: keep the exact q-adic depth of p -+ 1 on its own side and the
+   forbidden residues +-1 off the support; everything else uniform. 8 replicas.
+ - Projections onto the k coordinates with the smallest phi(q^e). Counts: P2 pairs with equal projection, Z2 pairs
+   summing to 0, T2 pairs summing to the target projection, T3 triples summing to the target.
+   | k | bits | P2 real / random      | Z2 real / random      | T2 real / random    | T3 real / random        |
+   |---|------|-----------------------|-----------------------|---------------------|-------------------------|
+   | 2 | 14.1 | 540 / 538.0 +- 22.5   | 551 / 530.1 +- 31.4   | 237 / 248.4 +- 16.8 | -                       |
+   | 3 | 21.5 | 4 / 5.4 +- 2.3        | 3 / 5.6 +- 2.6        | 4 / 1.6 +- 0.9      | 2140 / 2126.4 +- 47.4   |
+   | 4 | 28.8 | 0 / 0                 | 0 / 0                 | 0 / 0               | 10 / 10.4 +- 3.5        |
+   | 5, 6 | 36.4, 44.0 | 0 / 0       | 0 / 0                 | 0 / 0               | 0 / 0                   |
+ - Result: consistent with the matched model in every statistic. The one mild excess (T2 = 4 vs 1.6 at k = 3,
+   Poisson tail about 0.08) is not significant across these comparisons.
+ - Weight-2/3 statistics only reach about 3 log2 N ~ 35 bits. W5b (exact subset-sum distributions of 20-26 prime
+   blocks on random 2^14-2^16 projections) tests sums of many columns.
+
+### W5b/W5c: mid-weight sums and single-row characters also match the model [COMPUTED on the VM: src/pom/subsum_tv.py, subsum_tv2.py, rowbias.py]
+ - W5b (subsum_tv2.py). Exact distribution of all 2^20 subset sums of a block of 20 consecutive instance primes,
+   projected to H = Z/phi(q1^e1) x Z/phi(q2^e2), |H| in [2^14, 2^16]. Statistics: TV distance from uniform and the
+   collision mass C = |H| sum P(h)^2. Each real block is compared with 20 matched-random replicas (z-score).
+   - 24 trials: mean z(TV) = +0.18, mean z(C) = +0.20; the sd of a mean of 24 N(0,1) is 0.20. Not significant.
+   - Two trials had z(C) of +4.1 and +3.2. C is driven by rare low-weight coincidences inside a block, so its
+     tail is heavier than normal. The low-weight test on all 3289 columns (W5a) shows no excess of such relations.
+   - The first unreplicated run (subsum_tv.py, one replica, blocks of 20 and 26) gave real > random in 5/6 trials
+     at block 20 and 3/6 at block 26; the replicated run supersedes it.
+ - W5c (rowbias.py). For every row q^e and prime l | phi(q^e), l <= 50: the number of off-support pool primes that
+   are l-th power residues mod q^e versus the model's exact expectation.
+   - 569 (row, l) tests: sum z^2 = 613.8 against 569 +- 33.7 (+1.3 sd). Largest |z| = 3.83 (q = 673, l = 7), about
+     the expected maximum of 569 normal deviates.
+ - Conclusion for W5 (HEURISTIC, three tests): no detectable structure in the arithmetic columns beyond the forced
+   support pattern, at weights 2-3 (W5a), at weight ~10 on 2^15-element projections (W5b), or in single-row
+   characters (W5c). An algorithm must therefore get its leverage from the construction, not from hidden
+   regularities of these columns.
+
+## Session 6 (2026-10-24, continued)
+### W2 done: the T = 1500 pool to 1e17 and the new instance [COMPUTED on the VM: c3/pomgen3 (6 workers), pom/fit.py, mincut.py, instance.py, verify_instance.py]
+ - Pool (T = 1500, p <= 1e17): 5018 primes, against 3717 at 1e15 (about 650 per decade, so the count is still
+   growing but no longer accelerating). Unit cleaning removes the same 7 primes as at 1e15.
+ - Free additions at fixed moduli (fit.py): of the 1729 new primes, 964 have odd orders dividing the L1, L2 of the
+   1e15 instance. The instance stays at log2|G| = 2375.85 with N = 4253 (log2 E = 1876.2, ratio 1.79).
+   File: data/bpsw_instance_T1500_1e17_samemoduli.json.
+ - New min cut on the 1e17 pool:
+   - lambda = 1: N = 4451, b = 2525.41, N - 1 - b = 1924.6 bits;
+   - max ratio 1.7925 at N = 4231, b = 2360.36 (Dinkelbach, 3 steps).
+   File: data/bpsw_instance_T1500_1e17.json.
+ - Both files pass verify_instance.py (independent orders, unit condition, gcd(L1, L2) = 1), on the VM and again on
+   the laptop.
+ - T = 1400 at 1e15 (profile2): max ratio 1.151, best surplus +325.9 bits. Hence T* is between 1300 and 1400
+   at 1e15.
+ - Heuristic surplus now about 2^1925 solutions. This does not change the algorithmic picture: see the next section.
+
+### Exclusions finished in this session [COMPUTED on the VM]
+ - D = 5 split scan to 2^40 (usplit3, four chunks from 6.47e11, merged with the earlier ranges):
+   - 58 usable split primes, 7 admissible (Lemma 17a): 61681, 363101449, 4278255361, 4562284561, 4582537681,
+     26509131221, 422013019339 (file src/us/us3_2p40_d5_all.txt, rows_2p40_d5.gp).
+   - This is exactly Shallue-Webster's admissible list below 2^40, now found by an independent program.
+   - run40_d5.gp (drive.gp, every class-consistent cross-coprime product): 7 cofactors, 2 candidate q, 0 hits.
+   - THEOREM B now holds for D* = 5 with all split primes below 2^40, with no dependence on SW's list. COROLLARY:
+     a 2-factor BPSW psp with D* = 5 has its split prime above 2^40.
+ - L1 (last prime, cofactors m <= 1e6) for D = 41 and 53: 84074 and 85089 cofactors, 0 hits (3 and 1 unfactored
+   15-digit parts). The queue stopped after the killed pomgen job (GNU xargs stops when a child dies from a signal).
+   D = 61, 73, 89, 97, 101 and the af1-3 sweeps were relaunched at 16:00 UTC (vm/jobs2.txt).
+
+### Structural analysis: the two-torus obstruction (why every known pool is subexponential) [elementary facts PROVED; densities HEURISTIC; T3 COMPUTED: src/tt/kummer_indep.py -> tt/kummer_1e8.out]
+Goal: say exactly why no construction so far gives pools large enough for any feasible subset-sum attack, and
+name the missing ingredient as a precise mathematical object.
+ - T1 (PROVED, elementary). Let p be inert in K = Q(sqrt 5). In the cyclic group F_{p^2}^* (order p^2 - 1) put
+   G+ = F_p^* (order p - 1) and T = ker Norm (order p + 1). Then G+ and T meet in {+-1} and G+T has index 2.
+   - Base 2 lies in G+, and gamma = phi/phibar = -phi^2 lies in T.
+   - Lemma 1 for p asks odd(ord 2) | n - 1 (a condition in G+) and odd(ord gamma) | n + 1 (a condition in T).
+   - With common moduli (L1, L2), p is usable iff 2 is in mu_{2 L1}(G+) and gamma is in mu_{4 L2}(T). These are
+     two conditions in two different one-dimensional tori.
+ - T2 (PROVED, Lemma 17). For split p, 2 and gamma both lie in F_p^* and their odd orders must be coprime. So for
+   each odd q^e || p - 1, one of them must be a q^e-th power: split primes are thin.
+ - T3 (Kummer independence, HEURISTIC, now TESTED).
+   - Claim. For odd q != 5, the q-index events of 2 and gamma are independent: 2 and gamma are independent in
+     Q(zeta_q, sqrt 5)^* modulo q-th powers.
+   - Test. 2,880,968 inert primes p <= 1e8, q <= 47.
+     - P(q | index of 2 | q | p - 1) * q = 0.988 .. 1.030.
+     - P(q | index of gamma | q | p + 1) * q = 0.973 .. 1.017.
+     - Independence over 112 (q1, q2) pairs: sum chi^2 = 106.1 against 112 +- 15.
+     - 2-adic part: deterministic in p mod 8 (v2 of the gamma-index is 1 for p == 1, 5 mod 8 and 0 for
+       p == 3, 7 mod 8, Lemma 18), and independent of the odd events (20.9% in every class).
+   - So the probability that an inert p is usable for (L1, L2) is P1 P2 with P1 ~ s1/(p-1) and P2 ~ s2/(p+1).
+     Here s1 is the L1-part of p - 1 and s2 the L2-part of p + 1 (the rest must be absorbed by the indices).
+ - T4 (HEURISTIC). Hence E(#usable inert p <= x) ~ sum_{p <= x} s1 s2 / p^2.
+   - This is the Pomerance pool (p - 1 and p + 1 both supported on the moduli), plus index stragglers weighing
+     1/(r1 r2).
+   - For moduli built from the primes <= T, saddle point at u ~ sqrt(T)/e with total exp((c + o(1)) sqrt T),
+     times the side-separation factor 2^-omega(p^2 - 1), which itself grows with p.
+   - Measured at T = 1500: 3717 primes to 1e15 and 5018 to 1e17, about 650 per decade and still rising.
+ - T5 (PROVED, elementary). Contrast with the Alford-Granville-Pomerance (AGP) mechanism.
+   - One-torus problems (Carmichael in G+; T-type problems such as the (-1,1)-Carmichael numbers of arXiv
+     2207.08641) take a free modulus k: every pool prime is == 1 mod k, so the k-part is automatic for every
+     subset.
+   - The candidates p = dk + 1 with d | L then need only primality, giving N ~ tau(L)/log p, exponential in
+     omega(L), against log2 phi(L) group bits.
+   - In two tori, free moduli on both sides put all pool primes in ONE class mod k1 k2. Then d1 = (p-1)/k1 and
+     d2 = (p+1)/k2 satisfy k1 d1 + 2 = k2 d2, so the pool is the solution set of a two-term S-unit-type
+     equation in (d1, d2).
+ - T6 (CITED from memory unless marked).
+   - Two-term S-unit equations with |S| = s have at most exp(O(s)) solutions (Evertse 1984). For generic
+     coefficients the count is at most 2 (Evertse-Gyory-Stewart-Tijdeman 1988).
+   - The best constructions of many solutions are subexponential:
+     - exp((4 - eps)(s/log s)^(1/2)) (Erdos-Stewart-Tijdeman);
+     - exp(s^(2 - sqrt2 - eps)) for x + y = z (Konyagin-Soundararajan 2007);
+     - >> exp(s^(1/4)/log s) for a + 1 = c (arXiv 1902.07397, abstract read today).
+   - Measured: the T = 100 smooth-neighbour count (Luca-Najman) behaves like exp(1.07 sqrt(s log s)).
+ - T7 (COMPUTED consequence). With N = exp(B^c), c < 1, k-tree costs >= 2^(Omega(B^(1-c))); with the measured
+   pools it is >= 2^96 at every T past the crossover.
+   - Also tested today: only the l >= 5 part of G is generically hard; 2- and 3-groups have structured methods
+     (src/pom/mincut_hard.py, a min cut on hard bits only, 1e17 pool).
+   - The hard part cannot be pushed below about 1594 bits while keeping N >= 4205. The best N / hard-bits ratio
+     is 2.64; past lambda = 3 the cut is empty. The easy part is 755 bits (2-rank 237, 3-rank 116).
+   - Splitting off the structured part therefore leaves a dense random subset sum of about 1600 bits: still
+     >= 2^80 by k-tree.
+ - Literature fit (CITED from memory). The open pseudoprime problems of this shape are all two-torus Carmichael
+   problems for inert primes:
+   - Williams numbers (p - 1 | n - 1 and p + 1 | n + 1 for all p | n; open since 1977);
+   - the PSW $620 problem (n == +-2 mod 5, 2-psp, F_{n+1} == 0 mod n);
+   - Grantham's Frobenius challenge for x^2 + 5x + 5.
+   Every infinitude proof I know in this area controls ONE torus: AGP; Grantham's Perrin pseudoprimes, which use
+   primes split completely in the cubic field; the (-1,1)-Carmichael numbers.
+ - THE MISSING INGREDIENT, stated precisely: a two-torus analogue of the AGP free modulus. That is, a family of
+   inert primes whose size is exponential in the number s of moduli primes (concretely >= 2^40 at <= 1000 group
+   bits), such that ONE condition forces both 2 in G+ and gamma in T into fixed small subgroups.
+   - T3 rules out Kummer/Chebotarev correlations for odd q != 5 (q = 5 never divides p -+ 1 for inert p).
+   - So such a family can only come from a non-Kummer source:
+     (a) an algebraic identity linking p - 1 and p + 1 (polynomial families: W', Lemmas 19-20); or
+     (b) S-unit equations k1 d1 + 2 = k2 d2 with exponentially many solutions, which is allowed by Evertse's bound
+         but contrary to every known construction.
+ - Consequence for the program (decision).
+   - The explicit instance (2^1925 predicted solutions) is a well-posed benchmark. Its generic cost is >= 2^96,
+     so no further compute goes into enlarging it.
+   - Constructive work moves to (a) and (b). Exclusions continue only as already queued.
+
+### Closed variants checked against the two-torus analysis (session 6) [ELEMENTARY arguments; record so they are not retried]
+ - Twisted Stormer, i.e. free moduli on both sides.
+   - Setup: all pool primes p == 1 mod k1 and p == -1 mod k2, with d1 = (p-1)/k1 and d2 = (p+1)/k2 S-units.
+   - Two solutions give k1 (d1 - d1') = k2 (d2 - d2'). With k1, k2 coprime and larger than the S-unit range D,
+     this forces d1 = d1'. So there is at most one solution, and small twists save at most log2(k1 k2) bits.
+   - Restricting AGP divisors d | L1 to a residue class mod M2 (to make M2 | p + 1 automatic) is the same thing:
+     the cofactor (dk + 2)/M2 must be small, so d is pinned to O(1) values.
+ - F_2-linear rows (all pool primes == +-1 mod q, signs mixed).
+   - A prime on the wrong side of q must absorb q in its index, with probability 1/q.
+   - For q = 7: about 19% of the pool survives, to save 1.58 bits. Pool counts are linear and group costs
+     logarithmic, so every density-for-bits exchange of this kind loses.
+ - Rank-one coincidences gamma == 2^k (mod a prime above a split p, i.e. p | 4^k + 3*2^k + 1).
+   - Lemma 17 coprimality then forces z(p) to be a power of 2: the Lucas-free primes dividing L_(2^m), only a few
+     per m, and m is fixed by the common class.
+ - Splitting G into easy {2,3}-parts and a hard rest (mincut_hard.py). At least 1594 hard bits remain (above).
+ - Chebyshev/Dickson parametrisations (p = T_n(t), t = 3/2 gives Lucas numbers, t = 5/4 gives 2^(2n) + 1).
+   - They produce primes with ONE small order (one torus). Both small is DSO again: gcd(L_(2n), 2^(2m) + 1).
+
+### Live directions (session 6), ranked by plausibility x testability
+ - V1. W' (polynomial Williams families), the remaining algebraic route to an explicit construction, and a
+   structural theorem if it holds.
+   - First step: exact elimination for k = 5 in the equal-degree pattern (1,1,1,1,1), then (2,2,2,2,2): do
+     e3 = -e1, e4 = -e2 force e1 = e2 = 0?
+   - Then the Newton-polygon reduction at infinity for general degrees.
+   - Kill: if exact elimination is out of reach for d = 2, write up d = 1 and park.
+ - V2. Two-torus abundance from non-Kummer sources.
+   - Question: S-unit equations x - y = 2 with x in 2<S1>, y in 4<S2> and |S| = s. How does the solution
+     count of designed S (KS-style, not intervals of primes) compare with S = {primes <= T} at equal group bits?
+   - First experiment: greedy/min-cut choice of S from a larger candidate set (two-sided-smooth candidates with
+     a free side assignment).
+   - Kill: if the best designed S gains less than a constant factor in N/B.
+ - V3. The benchmark instance (2^1925 predicted solutions) is kept as a published, verified challenge. No further
+   enlargement. Algorithmic ideas are logged only if they beat k-tree on some l-primary part.
+ - V4. Exclusions: only the queued jobs (L1 for D = 61..101, autofam sweeps). Record the results when done.
+
+### Lemma 21 (W' for k = 5, coprime normal form, low degrees) [COMPUTED, exact; src/wp/gen_pattern.py, k5_d1q.sing, pat_*_{p,q}.sing on the VM]
+Register rows: C4/C3F/C3L (Williams polynomial families). Part of V1.
+ - Setting. Five nonconstant polynomials f_j in C[t] with prod (f_j - 1) = n - 1 and prod (f_j + 1) = n + 1,
+   n = prod f_j (coprime normal form). Equivalently e1 + e3 = 0 and e2 + e4 = 0 identically in t.
+   - Normalisation: affine change of t making the member of largest degree D monic with no t^(D-1) term.
+   - Nonconstancy and exact degrees: the leading coefficients are inverted with one Rabinowitsch variable.
+ - Geometric reformulation (for orientation; not used in the proofs).
+   - A family is a polynomial curve on V = {e1 + e3 = 0, e2 + e4 = 0} in A^5.
+   - The closure of V is a (3,4) complete intersection in P^5, so K = O(1) and it is of general type.
+   - Lang's conjecture predicts that its rational curves lie in a proper closed subset. The question is to
+     identify them.
+ - Results.
+   - All members linear: exactly 24 solutions, all monomial (f_j = zeta^(s_j) t, s a permutation).
+     - modStd over Q (exactness = 1) on I + (1 - y a2 a3 a4 a5) gives dim 0, vdim 24, and the 24 monomial points
+       satisfy it, so they are all the solutions, each simple.
+     - Over GF(32003): the same 24 points in 6 Frobenius orbits, and the coefficients of e1, e2 lie in the radical.
+     - A plain-Buchberger re-run over Q is in progress (pat_11111_q).
+   - Patterns (2,2,1,1,1), (2,2,2,1,1), (2,2,2,2,1): plain std over Q gives the unit ideal, so there are NO
+     solutions.
+   - Pattern (2,1,1,1,1): unit ideal over GF(32003); exact run in progress.
+   - (2,2,2,2,2): running over GF(32003). Expected: the monomial 1-parameter family f_j = zeta^(s_j)(t^2 + c).
+ - Validation. The generator reproduces the hand-derived all-linear system. The degree bound 3 d_j <= sum d_i
+   (Lemma 19, step 1) is satisfied by every pattern above; patterns violating it have no solutions a priori.
+ - CORRECTION (session 6) to the session-5 Newton-polygon remark ("vertices in {0,5} union one of {1,3} and one of
+   {2,4}"). The admissible patterns are fewer, by this argument (PROVED, elementary):
+   - P(X) = X^5 - a X^4 + b X^3 + a X^2 - b X - n with a = e1, b = e2. Over C((1/t)) the points are (5, 0),
+     (4, -deg a), (3, -deg b), (2, -deg a), (1, -deg b), (0, -deg n). Root degrees are the slopes of the lower
+     hull, increasing from left to right.
+   - (2, -deg a) is never a vertex: (4, -deg a) has the same height, and convexity with a positive first
+     slope would put the hull above it at x = 4. Likewise (1, -deg b) against (3, -deg b).
+   - So the vertices lie in {0, 3, 4, 5}: the SMALLEST member degree occurs at least three times.
+   - With 3 d_max <= sum d (Lemma 19, step 1) the admissible patterns are, sorted ascending:
+     (d,d,d,d,d); (d,d,d,d,e) with d < e <= 2d; (d,d,d,e,e) with d < e <= 3d;
+     (d,d,d,e1,e2) with d < e1 < e2 and 2 e2 <= 3d + e1.
+     - For d = 1: (1,1,1,1,1), (1,1,1,1,2), (1,1,1,2,2), (1,1,1,3,3).
+     - For d = 2: (2,2,2,2,2), (2,2,2,2,e) with e = 3, 4; (2,2,2,e,e) with e = 3..6; (2,2,2,3,4), (2,2,2,4,5).
+   - (1,1,2,2,2) and (1,2,2,2,2) are not admissible. Their unit ideals in Lemma 21 are consistent with this; the
+     earlier LM runs on them were unnecessary.
+   - Composition with any polynomial h maps families to families and multiplies all degrees by deg h, so only
+     primitive families (C(f_1..f_5) = C(t)) need classifying.
+ - Pattern (1,1,1,3,3): NON-trivial solutions exist, all of the W' monomial type (checked by hand and over
+   GF(32003)).
+   - f = (t^3, mu t^3, gamma t, omega gamma t, omega^2 gamma t), with gamma a primitive 9th root of unity,
+     omega^3 = 1 primitive and mu = -1 - gamma^3 (a primitive cube root of unity). Then n = t^9.
+   - Hand check:
+     - e1 + e3 = 0 forces alpha + beta + gamma = 0 and alpha beta + beta gamma + gamma alpha = 0 for the linear
+       coefficients, so they are gamma times the cube roots of unity, and 1 + mu = -alpha beta gamma.
+     - e2 + e4 = 0 then gives gamma^6 + gamma^3 + 1 = 0.
+   - This is the generalised monomial family f_j = c_j u^(e_j) (u = t, E = 9, E/e_j in {3, 9} odd,
+     c_j^(E/e_j) = 1 = prod c_i), the complex analogue of {v,v,v,v^3,v^3,v^3,v^3}.
+   - Lesson for the test criterion: e1 = e2 = 0 characterises the equal-exponent family only. For unequal degrees
+     the right criterion is "every member is c_j t^(d_j)" (u = t is forced after normalisation when a member is
+     linear). gen_pattern.py now uses it (crit m).
+   - Over GF(32003), every component (6 Frobenius orbits) satisfies crit m. Exact run over Q: pat_33111_q
+     (in progress).
+ - Status of "W' for k = 5 (coprime normal form) whenever some member is linear". The admissible patterns are
+   exactly (1,1,1,1,1), (1,1,1,1,2), (1,1,1,2,2), (1,1,1,3,3).
+   - (1,1,1,2,2): exact over Q, unit ideal.
+   - (1,1,1,1,1): exact via modStd.
+   - (1,1,1,1,2) and (1,1,1,3,3): exact runs in progress.
+
+### Function-field contrast: why the two-torus problem is trivial over F_q[T] and what that says about W' [PROVED, elementary; INTERPRETATION]
+ - Over F_q[T] (q odd), take N = P_1 ... P_k squarefree, with every P_i irreducible of the same degree d and inert in
+   a fixed quadratic extension K = F_q(T)(sqrt D).
+   - (O/P_i)^* has order q^d - 1 and the norm-1 torus has order q^d + 1.
+   - |N| = q^(kd), and for k odd: q^d - 1 | q^(kd) - 1 and q^d + 1 | q^(kd) + 1. Also (D/N) = (-1)^k = -1.
+   - So N passes the Fermat test to EVERY base and the Lucas test for EVERY element of K (Williams-number
+     analogue). All P_i have the same 2-adic group structure, so the class condition holds automatically.
+   - BPSW-type pseudoprimes are therefore abundant and trivial in function fields.
+ - The mechanism: distinct primes of the same degree have the SAME NORM q^d. The two group orders depend only
+   on the norm, and the norm of N is a power of it, so both tori are controlled at once. That is the two-torus
+   free modulus missing over Q.
+ - Over Z distinct primes have distinct norms. A polynomial family is the closest analogue:
+   - the monomial families f_j = zeta^j u (all |f_j| = |u|) are exactly the "equal norm" families;
+   - they are Galois-conjugate, hence never all rational.
+ - Reading: W' (only monomial families exist, Lemmas 19-21) is precisely the statement that the
+   function-field mechanism has no rational analogue in polynomial form. Together with T3 (no Kummer
+   correlation), this pins the missing ingredient down: a set of DISTINCT rational primes behaving as if they
+   had a common norm for both tori. Every construction examined either collapses to equal norms
+   (monomial/conjugate families) or to independent conditions (Pomerance pools).
+
+### Lottery sweeps finished (autofam2, faithful test, no PRP pre-filter) [COMPUTED on the VM: src/cyc/af1-3.gp -> cyc/af1-3.out]
+ - Prime indices p in [3, 20000]:
+   - composite Mersenne M_p (all are spsp(2)): 2238 composites, 0 strong Lucas, 0 BPSW;
+   - composite Wagstaff (2^p + 1)/3 (all spsp(2)): 2232 composites, 0 strong Lucas, 0 BPSW;
+   - composite Fibonacci F_p with p == +-2 mod 5: 1125 composites, 0 spsp(2), 0 BPSW;
+   - Fermat numbers F_5..F_17: all spsp(2), none a strong Lucas psp.
+ - Positive controls: every known prime/PRP index in range passes both tests ("BOTH" lines, e.g. M_4423, W_14479,
+   Fib_9677, M_19937).
+ - Reading: these one-side-automatic families are one-torus lotteries. The other side behaves like a random
+   condition of probability ~ 1/p per prime factor, as the two-torus analysis predicts. No further sweeps.
+ - L1 (cofactors m <= 1e6) for D = 89: 85294 cofactors, 116380 candidate q, 0 hits. D = 61, 73, 97, 101 are
+   still running.
+
+### Checkpoint, session 6 (2026-10-24, 17:30 UTC) — READ THIS FIRST WHEN RESUMING
+ - Headline results of session 6.
+   1. W2 done: verified instance with N = 4451 primes, log2|G| = 2525.4, heuristic 2^1925 solutions
+      (data/bpsw_instance_T1500_1e17.json), plus a same-moduli variant.
+   2. W5 closed: no structure in the arithmetic columns (weights 2-3, ~10, single rows).
+   3. Exclusion: Theorem B for D* = 5 with all split primes below 2^40, independent of SW. Lottery sweeps
+      (Mersenne/Wagstaff/Fibonacci to index 20000, F_5..F_17): 0 hits.
+   4. Two-torus obstruction (main conceptual result):
+      - an inert prime is usable iff 2 is small in F_p^* AND gamma is small in T_p;
+      - the two index events are independent (tested on 2.9M primes);
+      - so pools are S-unit-type and subexponential. Every generic attack costs >= 2^96, and the {2,3}-part
+        split leaves >= 1594 hard bits.
+      - Missing ingredient = two-torus free modulus.
+      - Function-field contrast: equal norms make it trivial over F_q[T]. Over Q the only equal-norm analogues
+        are the conjugate (monomial) families, which is exactly W'.
+   5. Lemma 21 (W' for k = 5 when some member is linear): (1,1,1,2,2) and (1,1,1,3,3) exact over Q,
+      (1,1,1,1,1) exact via modStd; plain-std confirmations of (1,1,1,1,1) and (1,1,1,1,2) still running on
+      the VM (pat_11111_q.out, pat_21111_q.out). (1,1,1,3,3) has genuine generalised-monomial solutions
+      (n = t^9).
+      - Newton-polygon correction: the smallest degree occurs at least 3 times.
+ - Running on the VM at checkpoint (all in ~/b-psw/src; outputs in place):
+   - wp/pat_11111_q, pat_21111_q (exact over Q), pat_22222_p (GF(32003), all members quadratic),
+     k7_d1p (k = 7, all members linear, GF(29) and GF(32003));
+   - lp/lp_1e6_D{61,73,97,101} (L1 last prime; D = 41, 53, 89 finished with 0 hits).
+ - Next actions, in order.
+   1. Collect the W' runs. If (2,2,2,2,2) is monomial-only, run the remaining d = 2 admissible patterns
+      (list in the Newton-polygon correction) as long as each finishes within ~1 h over GF(32003); exact
+      confirmation over Q only for those.
+   2. V2 (designed S-unit sets) at T = 200: enumerate two-sided-smooth candidates with a free side assignment
+      and compare the best assignment with the mod-4 rule. The kill condition is a constant-factor gain.
+   3. Look for any mechanism producing distinct rational primes that behave as if they shared a norm for both
+      tori. This is the only route to a construction left by the analysis.
+ - Open requests to the user: permission to download OEIS A018188 (b-file, about 2030 lines) to reproduce R2;
+   whether to commit/push session 6.
+
+## Session 7 (2026-10-24, continued after the context reset)
+
+### V2 closed: a free side assignment gains a constant factor only [COMPUTED on the VM: src/v2/freegen.c, src/v2/sides.py]
+ - Pools without a side rule (freegen.c): p = 4B - 1 prime, B and A = 2B - 1 composed of odd primes q <= T (q != 5),
+   (5/p) = -1, kept if class (1,2) (true orders). Counts: T = 150 to 1e12: 521 candidates; T = 200 to 1e12: 1724
+   (1723 in class (1,2)); T = 300 to 1e13: 7446.
+ - sides.py: each row needs its F-primes (odd ord_p 2) on F and its L-primes (odd z(p)) on L. For a side assignment
+   the admitted rows go through the exact min cut (mincut.py, unit cleaning first) at fixed lambda = 0.05.
+   Local search by single flips, from the mod-4 rule and from 3 random assignments.
+
+   | T   | rows | mean #requirements | mod-4: N, b, N/b   | best found: N, b, N/b | gain in N/b |
+   |-----|------|--------------------|--------------------|-----------------------|-------------|
+   | 150 | 521  | 7.8                | 12, 177.9, 0.067   | 22, 229.9, 0.096      | 1.42        |
+   | 200 | 1723 | 8.6                | 24, 303.2, 0.079   | 36, 335.1, 0.107      | 1.36        |
+   | 300 | 7446 | 9.7                | 53, 519.5, 0.102   | 68, 509.2, 0.134      | 1.31        |
+
+ - The gain is flat (slightly falling) in T. Session 3's annealer on the CHM pool at y = 200 (all classes, best class
+   (2,0)) reached 0.155, i.e. about 2x the mod-4 rule. Either way it is a constant factor.
+ - The cause is the side-separation factor. A random assignment admits about 2^-(#requirements) of the rows, and
+   the requirements per row grow with T (7.8 -> 9.7). No assignment can satisfy many rows with disjoint random
+   requirement patterns.
+ - KILL condition met. "Designed S" (non-interval prime sets) is already covered: the min cut selects the
+   best subset of levels, and the known designed S-unit constructions (KS 2007; arXiv 1902.07397 for a + 1 = c)
+   are subexponential with worse exponents than intervals.
+
+### L1 (last-prime gcd search, cofactors m <= 1e6) finished for all queued D [COMPUTED on the VM: lp/lp_1e6_D*.out]
+ - D = 41, 53, 61, 73, 89, 97, 101: 0 hits.
+   - D = 61: 83,374 cofactors, 89,980 candidate q.
+   - D = 73: 86,957 cofactors, 117,691 candidates, 3 unfactored.
+   - D = 97: 85,391 cofactors, 131,542 candidates, 1 unfactored.
+   - D = 101: 87,759 cofactors, 117,459 candidates.
+ - V4 has no queued jobs left.
+
+### Literature check (2026-10-24, alphaXiv; constructions and tools only)
+ - Lim, Mashalkar, Schaefer, arXiv 2105.13513 (read).
+   - Theorem: for fixed L, any product of >= 2 odd prime divisors p of F_L with p == +-1 (mod L) is a Fibonacci
+     pseudoprime. The key lemma is p == (5/p) (mod L): a one-torus free modulus on the Lucas side, the
+     Fibonacci analogue of Cipolla's construction from factors of 2^M - 1.
+   - Their BPSW attempt: about 2^30 such products from F_L, L <= 9999, tested for base 2. None passed.
+   - Fits the two-torus analysis: the free modulus fixes one torus; base 2 is then a lottery.
+   - Pool size per fixed L is about 5 primes on average (L <= 1408), i.e. the sum over j of 1/j, not exponential.
+     The exponential AGP pool needs "p + 1 | kL" (d | L varies), not a large index.
+ - Hall, arXiv 2601.19817 (read). 200 Arnault-type composites (350 bits, strong psp to bases <= 11) all fail
+   strong Lucas, with the "U-collapse" log2 n - log2(U_d mod n) at most 8 bits. Same conclusion: the Fermat-side
+   structure gives no Lucas progress.
+ - Mulder, Sterner, van Woerden, arXiv 2509.17699 (read).
+   - Smooth twins as short vectors of the "prime number lattice" (Schnorr), solved with G6K.
+   - Heuristic: the largest B-smooth twin has r ~ e^(2e sqrt B); for B = 1500 about 282 bits. A 196-bit
+     751-smooth twin was found.
+   - Conjecture 7.1: exactly 348,865 200-smooth twins (our CHM list sn_200 has 345,275, so CHM misses about 1%).
+   - Relevance: a source of very large two-sided-smooth p. It does not change the pool counting, since all such
+     p are still S-unit solutions over the same primes.
+ - No paper found with a two-sided (two-torus) construction: Williams numbers, quadratic Frobenius psp with
+   (D/n) = -1, or BPSW psp. The two-torus case remains open in the literature.
+
+### Theorem D (PROVED): the two indices are independent for every Frobenian (Chebotarev) selection
+Upgrades T3 from TESTED to PROVED in its local form. It also states exactly which constructions this rules out.
+ - Notation.
+   - K = Q(sqrt 5), phi = (1 + sqrt 5)/2, gamma = -phi^2 = phi/phibar.
+   - p is an inert prime (p == +-2 mod 5). Base 2 lies in F_p^*; gamma mod p lies in the norm-one torus T_p,
+     cyclic of order p + 1.
+   - Indices: i_2(p) = (p - 1)/ord_p 2 and i_g(p) = (p + 1)/ord(gamma mod p).
+   - For an odd prime q != 5 and a >= 1, E_2(q^a) is the event q^a | i_2(p), and E_g(q^b) is the event q^b | i_g(p).
+ - Statement. Let q_1..q_r be distinct odd primes, all != 5, with exponent pairs (a_i, b_i) where min(a_i, b_i) = 0
+   (for one q both cannot be positive: q cannot divide both p - 1 and p + 1). Among inert primes, the natural
+   density of the intersection of all E_2(q_i^a_i) and E_g(q_i^b_i) is prod_i d(q_i, a_i, b_i), where
+     d(q, a, 0) = 1/(phi(q^a) q^a),   d(q, 0, b) = 1/(phi(q^b) q^b),   d(q, 0, 0) = 1.
+   In words, the 2-events and the gamma-events at distinct primes are independent, and each has its Chebotarev
+   density.
+ - Proof.
+   1. Translation into splitting conditions.
+      - E_2(q^a) holds iff q^a | p - 1 and 2 is a q^a-th power in F_p^*, i.e. iff p splits completely in
+        Q(zeta_{q^a}, 2^{1/q^a}).
+      - E_g(q^b) holds iff q^b | p + 1 and gamma is a q^b-th power in T_p. If q^b | p + 1 and q odd, then
+        q does not divide p - 1, so (T_p)^{q^b} = T_p cap (F_{p^2}^*)^{q^b}. Hence E_g(q^b) holds iff
+        p == -1 (mod q^b) and gamma is a q^b-th power in F_{p^2}^*.
+   2. Kummer rank. Let m = prod q_i^max(a_i,b_i) and F = K(zeta_m). Claim: <2, gamma> has order m^2 in
+      F^*/F^{*m}. Suppose 2^a gamma^b is a q-th power in F for a prime q | m.
+      - Valuations at a prime P of F above 2: 2 is unramified in F (disc K = 5, m odd). So v_P(2) = 1,
+        v_P(gamma) = 0, and q | a.
+      - Then gamma^b = (-1)^b phi^(2b) is a q-th power. Since -1 = (-1)^q, phi^(2b) is a q-th power. If q does
+        not divide b, then phi itself is a q-th power in F, because 2b is invertible mod q.
+      - That is impossible:
+        - If phi = y^q with y in F, then K(zeta_q, phi^{1/q}) lies in K(zeta_{lcm(m,q)}), which is abelian
+          over K.
+        - But if phi is not a q-th power in K(zeta_q), then Gal(K(zeta_q, phi^{1/q})/K) is the affine group
+          Z/q x| (Z/q)^*, which is non-abelian for q >= 3. (phi is fixed by Gal(K(zeta_q)/K), so the Kummer
+          pairing makes the action the cyclotomic character.)
+        - And phi is not a q-th power in K(zeta_q): otherwise N_{K(zeta_q)/K} gives phi^(q-1) in K^{*q}, so
+          phi in K^{*q}, which contradicts phi being a fundamental unit (units of K are +-phi^Z).
+      - Hence q | b, and the claim follows. So Gal(L/F) = (Z/m)^2 for L = F(2^{1/m}, gamma^{1/m}). L is Galois
+        over Q, because gammabar = gamma^{-1}.
+   3. Fibres. The congruences (p == 1 mod q_i^a_i where a_i > 0, p == -1 mod q_j^b_j where b_j > 0, p inert)
+      fix the restriction sigma of Frob_p to F. Over a fixed sigma, the lifts tau form a coset of
+      Gal(L/F) = (Z/m)^2, and we write tau(2^{1/m}) = zeta^x 2^{1/m}, tau(gamma^{1/m}) = zeta^y gamma^{-1/m}
+      (sigma inverts gamma).
+      - The 2-condition (splitting of Q(zeta_{q^a}, 2^{1/q^a})) reads x == 0 (mod q^a).
+      - The gamma-condition concerns the Frobenius of the degree-2 prime pO_K over K, which is tau^2.
+        A direct computation gives tau^2(gamma^{1/m}) = zeta^(-2y) gamma^{1/m}. Since q is odd, the condition
+        reads y == 0 (mod q^b).
+      - x and y are independent uniform coordinates on the fibre. Chebotarev then gives density
+        (density of sigma) * prod q^-a * prod q^-b.
+      - The density of sigma is (1/2) prod 1/phi(q^a) prod 1/phi(q^b), since K and Q(zeta_m) are linearly
+        disjoint (5 does not divide m).  QED
+ - The 2-adic part is not covered here. It is deterministic in p mod 8 (Lemma 18), which agrees with the
+   T3 table.
+ - What Theorem D rules out (scope, per the audit rule).
+   - Any construction that selects usable primes by Frobenius (Chebotarev) conditions in a finite Galois
+     extension of Q. This includes congruence classes, splitting conditions in number fields and power-residue
+     conditions. The Fermat index and the Lucas index stay independent under any such selection: no
+     "Kummer-type" two-torus free modulus exists.
+   - It does NOT rule out THIN (density-zero, non-Frobenian) sources of correlation. These are:
+     - S-unit sets: p -+ 1 smooth (the Pomerance pool). Here the orders are smooth because p - 1 and p + 1 are
+       smooth, which is an ADDITIVE link, (p + 1) - (p - 1) = 2.
+     - Polynomial-value families: W'.
+     - Cyclotomic/Lucas factor sets (DSO). These are thin, and Theorem D still governs their large-index part
+       heuristically.
+   - The infinite-product heuristic T4 (summing over all q) still needs uniformity in m. That is not proved
+     (Chebotarev error terms), so T4 remains HEURISTIC; Theorem D makes its local factors exact.
+ - Mechanism classification (CONSEQUENCE + HEURISTIC). Up to Frobenian selections (no gain, Theorem D), a
+   correlated two-torus source must come from an additive relation between p - 1 and p + 1:
+   - smoothness (S-units; subexponential by every known construction);
+   - polynomial factorisation (Williams families; only monomial ones found, Lemmas 19-21);
+   - coincidences of small orders (DSO; rare, by Theorem D-type heuristics).
+   An explicit counterexample therefore needs one of:
+   - (I) an S-unit set with far more solutions of x + 2 = y per bit than intervals;
+   - (II) a non-monomial polynomial Williams family;
+   - (III) a subset-product algorithm beating the generic 2^(2 sqrt B) bound on these instances by hundreds of
+     bits.
+   All three are open; none is ruled out.
+
+### (I) at small scale: designed prime sets do not beat intervals for twin S-units [COMPUTED on the VM: src/v2/sunit_design.py -> v2/sud_100.out, sud_200.out]
+ - Question. For S a subset of the primes <= y, let N(S) = #{x : x and x + 1 both S-units}, using the complete list
+   for y = 100 (13,374 pairs) and the CHM list for y = 200 (345,275; about 99% complete per arXiv 2509.17699).
+   Does some S beat the interval {first s primes} at equal size s, or at equal sum log2 q?
+ - Method. Greedy backward elimination from all primes <= y: drop the prime whose removal loses the fewest pairs.
+ - Result. At every s, for y = 100 and y = 200, the greedy optimum IS the interval (ratio 1.000; the only
+   deviation is at s = 45, where dropping 197 instead of 199 keeps 79 more pairs out of 302,711). Since
+   intervals also minimise sum log q at given s, they are optimal at equal bits as well, within this search.
+ - Interval growth (y = 200 list):
+   | s      | 12  | 24     | 36     | 46      |
+   |--------|-----|--------|--------|---------|
+   | N      | 653 | 11,134 | 86,009 | 345,275 |
+   | ln N / sqrt(T) | 1.07 | 0.99 | 0.92 | 0.90 |
+   The constant is drifting down toward the heuristic 2/e ~ 0.74 (saddle-point estimate). The earlier fit
+   exp(1.07 sqrt(s log s)) used T = 100 only and overestimates growth.
+ - Scope. This is greedy, not exact, and restricted to S inside [2, y]. Adding primes > y cannot be tested with
+   these lists. Each added prime q > y contributes only the pairs with q | x(x+1), roughly a 1/q fraction.
+ - Reading. Route (I) gets no help from small-scale design. KS-type gains are asymptotic (in the exponent's
+   exponent) and invisible here.
+
+### Literature: why the AGP/AGHS subset-product succeeds and ours does not [READ: AGHS arXiv 1203.6664]
+ - AGHS (Alford, Grantham, Hayman, Shallue): Carmichael numbers with 10^10 prime factors.
+   - The modulus Lambda = 2^16 3^7 5^5 ... 97 has about 190 bits.
+   - The pool has |P| = 1.03e10 (all d + 1 prime with d | Lambda), i.e. about 2^33 elements.
+   - The algorithm is Kuperberg/k-tree pairing in a nested subgroup chain, in time about 4^(sqrt log|G|): 98 s.
+   - It exploits non-uniformity: p == 1 mod q^h more often than uniform (since p - 1 | Lambda). Phase 2 only
+     works in the subgroup mod prod_{i <= m} q_i^h_i, with the elements that are already == 1 modulo the larger
+     prime powers.
+ - Same accounting for us: |G| ~ 2^2400 with N ~ 2^12 (T = 1500 instance), and at |G| ~ 2^190 (T ~ 100) N ~ 10.
+   The difference is entirely the pool size: exponential in omega(Lambda) for one torus (AGP), and S-unit sized
+   for two tori.
+ - Their non-uniformity trick has a weak analogue here. Pool primes are +-1 on their own support, but that is
+   about 10 of 240 coordinates, at random. So there is no large subgroup on which most pool primes are trivial.
+
+### W' runs collected (session 7) [COMPUTED on the VM: src/wp/linsearch2.py -> wp/ls2_k7.out; pat_*_q, pat_22222_p, k7_d1p]
+ - k = 7, all members linear, complex LM on the full system (chart sum r = 0, prod u = 1), 20000 starts:
+   1219 starts converge to monomial solutions, 0 to non-monomial ones.
+   - The smallest non-monomial residual^2 is 0.471.
+   - Every one of these local minima has the same shape: two roots +-e and five roots at 0 (an "odd configuration", see
+     Lemma 22).
+ - Plain std over Q for (1,1,1,1,1) and (2,1,1,1,1), std over GF(32003) for (2,2,2,2,2), and the k = 7 linear
+   coprime system (GF(29), GF(32003)) all hit the 2 h timeout without output.
+   - (1,1,1,1,1) is already exact via modStd (Lemma 21). The other three stay open as exact computations.
+ - Still running: linsearch2 for k = 9, 11, 13; k5_lin_gen (k = 5 linear, general non-coprime case, std then modStd).
+
+### Lemma 22 (PROVED): linear Williams families as chords of one polynomial; two necessary conditions [odd case COMPUTED: src/wp/oddconf.gp]
+Register rows: C4/C3F/C3L, linear members, complex coefficients. Theory only: by Lemma 3 no REAL linear family with
+same-sign slopes exists, so nothing here affects the BPSW search.
+ - Reformulation. Write f_j = (t - s_j)/d_j (d_j != 0) and F = prod f_j = P(t)/U, with P = prod (t - s_j) and U = prod d_j.
+   - f_j - 1 has the single root s_j + d_j, and f_j + 1 the single root s_j - d_j.
+   - So {f_j} is a Williams family iff F(s_j + d_j) = 1 and F(s_j - d_j) = -1 for all j.
+   - Equivalently: F is a degree-k polynomial with leading coefficient 1/prod d_j. Each root s_j is the midpoint of a
+     chord [s_j - d_j, s_j + d_j] whose ends lie in F^-1(-1) and F^-1(1).
+   - With E_j, O_j the even and odd parts of x -> F(s_j + x): E_j(d_j) = 0 and O_j(d_j) = 1.
+ - (a) Half-plane condition.
+   - |F(s_j + d_j)| = |F(s_j - d_j)| gives prod_{i != j} |delta_i + d_j| / |delta_i - d_j| = 1, with delta_i = s_j - s_i.
+   - Each factor exceeds 1 exactly when Re(delta_i conj(d_j)) > 0.
+   - Hence, for every j, the line through s_j perpendicular to d_j either contains all roots or has roots strictly on
+     both sides.
+   - Corollary: if the roots are collinear and not all equal, the two extreme roots have d_j perpendicular to that line.
+ - (b) Parameter count.
+   - A root s that is a centre of symmetry of F (F(s + x) = -F(s - x)) has E_s = 0 identically. Then every one of the
+     k solutions of O_s(d) = 1 is admissible.
+   - Any other distinct root imposes one condition on F.
+   - The product condition prod d_j = U is one more.
+   - Generic F (k - 1 parameters after affine normalisation): overdetermined by 2.
+   - "Odd configurations" F = t^m0 prod_{i <= r} (t^2 - e_i^2)/U: overdetermined by 1.
+   - The monomial family (one k-fold root, which is a centre): overdetermined by 0. It is the only free case.
+   - This explains why the LM search is drawn to odd configurations.
+ - Odd configurations with r = 1 (roots 0^(k-2), +-e), exact check for every odd k <= 41.
+   - The chord condition at e gives (1 + x)^(k-2) (2 + x) = (1 - x)^(k-2) (2 - x), and U = x (1 + x)^(k-2) (2 + x) with
+     e = 1.
+   - The product condition says that two roots of d^k - d^(k-2) - U have product x x', with x, x' admissible at e.
+   - All choices were tested with polroots at 60 digits: no solution for any k <= 41.
+   - The smallest relative mismatch decays roughly like k^-1.5 (0.29 at k = 5, 0.0058 at k = 41), so these are near
+     misses, never exact.
+
+### Lemma 23 (PROVED): structure of REAL quadratic Williams families; Theorem 9' (PROVED): none exist for k = 5
+Register rows: C4/C3F/C3L, all members quadratic, real coefficients, positive leading coefficients (the case of prime
+values at large t), distinct members. This extends Theorem 9 (k = 4) and closes the k = 5 patterns A1/A2 that Calyx
+handled only partly (A1 Monte Carlo; A2 out of memory).
+ - Setting. f_j in R[t] of degree 2 with leading coefficients > 0 (j = 1..k, k odd), pairwise distinct, F = prod f_j,
+   and f_j -+ 1 | F -+ 1.
+ - Step 1: every special point is non-real.
+   - Suppose f_j(t0) = +-1 for some real t0. By Lemma 6 all members take that value at t0, with equal multiplicity m.
+   - If m = 2, then f_i = E + a_i (t - t0)^2 for all i.
+   - If m = 1, the other root of f_i - E is also real, hence also common. Then f_i = E + a_i (t - t0)(t - t1).
+   - Either way all members are affine in one quadratic h, with slopes of one sign. Lemma 3 (applied in the variable
+     u = h) rules this out.
+   - Consequence: f_j > 1 on R. Write f_j = alpha_j (t - x_j)^2 + beta_j, with alpha_j > 0 and beta_j > 1.
+     Call x_j the AXIS of f_j.
+ - Step 2: axis classes.
+   - The special points of f_j are x_j +- i y_j^-+, where y_j^-+ = sqrt((beta_j -+ 1)/alpha_j). They lie on the line
+     Re t = x_j.
+   - Group the members by axis into classes c with axes x_1 < ... < x_m, sizes s_c, and h_c distinct special heights.
+     Then h_c = a_c + b_c: a_c distinct "-" heights and b_c distinct "+" heights.
+   - Special points can be shared only inside a class.
+   - Two distinct members of one class share at most one height, so h_c >= 3 when s_c = 2 and h_c >= 4 when s_c = 3.
+   - A "-" height never equals a "+" height (it would need F = 1 and F = -1 at one point).
+   - m >= 2: one class means all members are affine in (t - x)^2, which Lemma 3 forbids.
+ - Step 3: winding on an axis line.
+   - Fix a class c. Put W_c(y) = prod_{j not in c} f_j(x_c + i y), the product over the N_c = k - s_c other members.
+   - For j in c, f_j(x_c + i y) = beta_j - alpha_j y^2 is real and nonzero at the special heights.
+   - So F = +-1 at a special height of c forces W_c(y) to be real there.
+   - Im W_c(x_c + i y) is an odd polynomial in y of degree <= 2 N_c - 1. So unless it vanishes identically, W_c is real
+     at <= N_c - 1 heights y > 0. Hence h_c <= k - s_c - 1.
+   - Im W_c vanishes identically iff the other members' zero sets are mirror-symmetric about x_c.
+ - Step 4: monotone winding and parity at the end classes.
+   - Take the LEFTMOST class (all other axes lie to the right, with offsets Delta_j > 0).
+   - For each other member, y -> f_j(x_1 + i y) runs along a parabola. Its argument decreases strictly from 0 to -pi:
+     d(arg)/dy = -2 alpha_j Delta_j (A_j + alpha_j y^2)/|f_j|^2 < 0, where A_j = f_j(x_1) > 1.
+   - So Theta = arg W decreases strictly from 0 to -N pi. W is real exactly at heights eta_1 < ... < eta_(N-1), with
+     W(eta_j) = (-1)^j |W(eta_j)|.
+   - Special heights of the class are assigned increasingly to these eta_j. With sigma(y) = number of class members that
+     are negative at height y:
+     - a "-" height needs j == sigma (mod 2);
+     - a "+" height needs j == sigma + 1 (mod 2).
+     The lowest special height is a "-" point with sigma = 0, so it needs j even.
+   - The rightmost class is the mirror image, with the same rules.
+ - THEOREM 9' (k = 5). The leftmost class cannot exist, so there is no real quadratic Williams family with k = 5 and
+   positive leading coefficients.
+   - Singleton class: both special heights need even j in {1, 2, 3}, i.e. both equal j = 2. Contradiction.
+   - Size 2: h >= 3, but only N - 1 = 2 heights are available.
+   - Size >= 3: h >= 4, but at most 1 height is available.
+   - The same count reproves k = 3: a singleton needs an even j in {1}.
+ - k = 7 (reduction only, NOT closed).
+   - End classes must be singletons: two even j's in {1..5}, i.e. j = 2 and j = 4. A size-2 end class fails for every
+     sharing pattern (checked by hand: the parity forces j = 5 > 4).
+   - A non-symmetric middle class has size <= 2 (h_c <= 6 - s_c).
+   - We need one shared "-" height and one shared "+" height overall (Lemma 8(a): overlap >= d_min = 2 on each side).
+   - What remains: [1 | 2- | 2+ | 1 | 1] and [1 | 2- | 1 | 2+ | 1], up to t -> -t and f -> -f. If some middle class is
+     mirror-symmetric, add [1 | 5 | 1] (many sharing patterns) and [1 | 1 | 3 | 1 | 1] (path pattern).
+   - Each of these systems is overdetermined by at least m + 2 >= 4. Next step: real LM on each, then exact elimination.
+ - Scope. The argument uses degree 2 essentially: axes exist, and sharing means proportionality. For degree >= 3
+   members, special points need not lie on lines, so the k = 5 proof does not carry over.
+
+### W' numerics: recall caveat, and k = 7 real-quadratic structures [COMPUTED on the VM: wp/ls2_k9, k11, k13; src/wp/rq_struct.py, rq_k7.py -> wp/rq_k7.out]
+ - Linear complex LM, how often it recovers the KNOWN monomial solutions (recall):
+   - k = 7: 1219/20000;
+   - k = 9: 14/10000;
+   - k = 11: 0/5000;
+   - k = 13: 0/3000.
+   So "0 non-monomial solutions" is evidence only for k <= 7, weak for k = 9, and uninformative for k >= 11. The k = 9
+   and k = 11 local minima again have the odd shape (two roots +-e, the rest at 0), with residual^2 0.14 and 0.31.
+ - Real quadratic k = 7, every structure left by Lemma 23 (25 structures: A_a, A_b, A_c, C, and 21 sharing patterns
+   for [1 | 5 | 1]):
+   - Parametrisation: real LM in the axes and special heights. A member is fixed by its two heights:
+     alpha = 2/(y+^2 - y-^2) and beta = 1 + alpha y-^2.
+   - Box penalties block the degenerate limit (heights >> axis spread, alpha -> 0, all axes merging).
+   - Result: 120 starts per structure. 0 zeros. Every start ends on that degenerate boundary, with residual^2 of
+     0.84-0.87 depending on the structure; no interior local minimum is lower.
+   - WEAK evidence: there is no positive control, since no real family is known.
+ - Literature refresh (alphaXiv, recency-ranked; 2025-2026 items read at abstract level):
+   - Counting Frobenius pseudoprimes (2503.17330);
+   - (a,a)-Carmichael numbers (2607.02738), one torus;
+   - Carmichael numbers 2^n p^m + 1 (2606.28829, 2609.25104);
+   - forbidden multiplicative configurations in S-smooth numbers (2604.15515, read: about {n, p_1 n, ..., p_r n},
+     not additive).
+   Still no two-torus construction (Williams numbers, quadratic Frobenius psp with (D/n) = -1, BPSW psp) in the
+   literature.
+
+### Mechanism reductions examined this session (ELEMENTARY; recorded so they are not retried)
+Each candidate was reduced to an existing obstruction.
+ - One-sided free modulus (all pool primes p = c q - 1 for a fixed large prime q, so the q-part of n + 1 is automatic).
+   - For fixed q this is the S-unit equation q c - 2 = (smooth) with c in <S2>.
+   - Against the plain pool at the same size, the count changes by about (u log u / T)^v, with q = T^v: a LOSS for
+     every T > u log u.
+   - A Fermat-side 2^a modulus (p = 2^a A + 1) is the same computation.
+ - "Doubly light" primes (odd(ord_p 2) and odd(z(p)) both tiny).
+   - Writing P + 1 = c 2^a with P | 2^(2u) - 1 forces P = 2^u - 1 (Mersenne), up to small exceptions.
+   - z(M_q) = 2^q exactly for q == 3 mod 4. gamma is not a square in T_p: its square roots +-i phi have norm -1.
+   - So every Mersenne prime has its own 2-adic Lucas class. Two of them never combine, and one needs class-(0, q)
+     partners (already L3(b), session 2).
+ - The t = 2^s relaxation of Williams families (allowing f_j -+ 1 | t^a (F -+ 1)).
+   - Each t-adic excess must be absorbed by the 2-power index, with probability 2^(-s (a - b)).
+   - Without excess the condition is exact W'. The same holds for any smooth t, since F(0) = 1 gives only one
+     power of t for free.
+ - Chebyshev chains p -> (p^2 + 2p - 1)/2 (= T_2((p+1)/2)).
+   - p' - 1 = (p - 1)(p + 3)/2 and p' + 1 = (p + 1)^2/2. Sides are inherited, but L-side exponents double.
+   - Structured twin-smooth families (T_2, T_4, PTE) beat intervals only once u > roughly T/8, where the counts are
+     negligible anyway.
+ - Discriminants with 2 split (D = -7, 17, ...): then 2 = pi pibar, and 2 and gamma are both powers of pi in F_(p^2).
+   This is a reformulation only: pi and pibar are independent, so the Kummer rank is still 2 (Theorem D).
+ - Families with a fixed integer cofactor C (n = C prod f_j): for k = 3 the Lemma 19 computation forces C^3 = 1. So a
+   pool part cannot be attached to a polynomial family. A pool part that varies with t is the subset-product problem
+   again.
+ - k-tree with the FULL (all-size) T-pool: N ~ exp(0.74 sqrt T) and B ~ 1.7 T bits give time about
+   2^(2.66 sqrt T) >= 2^96 at the crossover T* ~ 1300. So even an unlimited twin-smooth generator leaves route (III)
+   infeasible without new structure.
+ - Sizes: n with 5 | n or 3 | n just changes the selected D or adds free small pool members. There is no loophole in
+   src/bpsw.py: Jacobi 0 means skip, p | Q fails, perfect squares fail.
+
+### Checkpoint, session 7 (2026-10-24, ~20:00 UTC) — READ THIS FIRST WHEN RESUMING
+ - New rigorous results this session.
+   1. Theorem D (two-index independence for Frobenian selections) and the mechanism classification (I)/(II)/(III).
+   2. Theorem 9' and Lemma 23: no real quadratic Williams family with k = 5 and positive leading coefficients.
+      - Structure: axis classes, all special points on the vertical axis lines.
+      - Winding: the argument of the other members' product is monotone on the leftmost axis line, giving a parity
+        assignment of special heights.
+      - This closes the k = 5 real quadratic patterns that Calyx left open. k = 3 is reproved the same way.
+   3. Lemma 22: linear families as chords of one polynomial F; half-plane condition; parameter count (odd
+      configurations are the near-solvable ones). Odd configurations with r = 1 have no solution for k <= 41.
+ - Closed or killed this session.
+   - V2 (free side assignment: constant factor only).
+   - (I) at small scale (designed S never beats intervals).
+   - L1 for all queued D.
+   - The mechanism reductions above.
+ - Evidence only: linear W' for k = 7 (LM; recall 6%); real quadratic k = 7 (LM, no positive control).
+ - Honest assessment.
+   - Every known route to an explicit BPSW pseudoprime now needs one of:
+     (II) a REAL non-monomial Williams family (degree >= 2; open for k >= 7, or for degree >= 3);
+     (III) a subset-product method that beats k-tree by about 2^60 on unstructured instances;
+     (I) a twin S-unit set far denser than intervals.
+   - Nothing found this session raises the plausibility of any of the three.
+ - Live directions, ranked by plausibility x testability.
+   - R1 (V1-real). Real Williams families.
+     - Next: (a) k = 7 real quadratics exactly, structure by structure; (b) a general real-quadratic argument (look
+       for a second monotone quantity for middle classes, e.g. along lemniscate components of |F| = 1, where roots of
+       F - 1 and F + 1 alternate); (c) real cubics: all members share the real special points (Lemma 6), so the
+       family lies on a 2-parameter linear system, a small system.
+     - Kill: k = 7 quadratic and k = 5 cubic both closed with no new mechanism in sight. Then write up and park.
+   - R2 (V1-complex). General W' theory (linear case all k, via Lemma 22). Theory only. Low priority.
+   - R3 (V3). Benchmark instance, passive. Log only algorithmic ideas that beat k-tree on some l-primary part.
+   - R4 (new, open). A two-torus source outside (I)/(II)/(III). No candidate at present. The precise target: an
+     infinite family of inert primes with BOTH orders dividing a fixed modulus of size e^(O(s)) and count e^(c s).
+ - Running at checkpoint: k5_lin_gen (Singular, until ~20:14 UTC timeout).
+ - Open requests to the user: OEIS A018188 download (R2 reproduction); commit/push of sessions 6-7.
+
+### Lemma 24 (PROVED): degree parity and the real cubic reduction [k = 3 COMPUTED: src/wp/gen_cubic_real.py -> cub3_real.sing, cub3_real_ctl.sing]
+Register rows: C4/C3F/C3L, real coefficients, positive leading coefficients, distinct members.
+ - (a) Parity. All members of a real Williams family have degrees of the same parity.
+   - Proof. By Lemma 6 every real special point is common to all members, with equal multiplicity. So the real roots
+     of f_j - 1, counted with multiplicity, form the same multiset R_- for every j. Its size is congruent to
+     deg f_j (mod 2), because non-real roots come in conjugate pairs.  QED
+ - (b) Odd degrees.
+   - Each f_j - 1 has odd degree, so it has a real root. Write f_j - 1 = R_-(t) g_j and f_j + 1 = R_+(t) h_j, with
+     R_-+ the common real parts (odd degree) and g_j, h_j without real roots.
+   - If R_- = f_j - 1 up to scalars for every j, all members are affine in R_-, which Lemma 3 forbids. So
+     deg R_-+ < deg f_j.
+ - (c) All members cubic.
+   - Then R_- = t - r and R_+ = t - r' are simple, with r' < r. Positive leading coefficient and unique crossings
+     force f to reach -1 before +1.
+   - Normalise r = 0, r' = -1:
+       f_j = a_j t^3 + b_j t^2 + (b_j - a_j + 2) t + 1,
+       g_j = (f_j - 1)/t,  h_j = (f_j + 1)/(t + 1) = a_j t^2 + (b_j - a_j) t + 2.
+   - Complex special points are NEVER shared by distinct members. Sharing one root of g_i and g_j shares its
+     conjugate, so g_i = lambda g_j; then g(-1) = 2 forces lambda = 1 and f_i = f_j. The + side is the same, using
+     h(0) = 2.
+   - So away from the two real points the family is "coprime". The system is 2k unknowns and 4k equations
+     (g_j | (F - 1)/t and h_j | (F + 1)/(t + 1)), overdetermined by 2k.
+ - Computation over GF(32003), with the remainders taken in the parameter field and members kept distinct by
+   1 - y prod a_j prod_(i<j) ((a_i - a_j) + c (b_i - b_j)):
+   - k = 3: unit ideal, i.e. no family. This agrees with Lemma 19.
+   - Positive control (distinctness dropped): the solution set is exactly the diagonal a_1 = a_2 = a_3,
+     b_1 = b_2 = b_3 (dim 2). So the encoding finds the families that do exist.
+   - k = 5 and k = 7 are running on the VM (cub5_real.out, cub7_real.out).
+ - Scope. (a)-(c) cover every real family with an odd-degree member and reduce the all-cubic case to one rigid
+   system per k. Still open: mixed odd degrees (e.g. cubics with quintics), all-even families beyond quadratics, and
+   real quadratics for k >= 7.
+
+## Session 8 (2026-10-24, continued after the context reset)
+
+### Theorem 10 (PROVED; independent adversarial audit pending): no real quadratic Williams family, for ANY k
+Register rows: C4/C3F/C3L, all members quadratic, real coefficients, positive leading coefficients, pairwise distinct.
+This supersedes Theorem 9 (k = 4), Theorem 9' (k = 5) and the k = 7 reduction of Lemma 23; the rq_k7 runs are moot.
+Lemma 7 (monic integer quadratics) is a special case. k need not be odd.
+ - Statement. Let k >= 2 and let f_1..f_k in R[t] be pairwise distinct quadratics with positive leading coefficients.
+   Then the conditions f_j - 1 | F - 1 and f_j + 1 | F + 1 (F = prod f_i) cannot all hold.
+ - Step 1 (Lemma 23, step 1). Every special point is non-real, so f_j > 1 on R. Write f_j = al_j((t - x_j)^2 + b_j^2)
+   with al_j > 0 and al_j b_j^2 > 1, and put c_j = 1/al_j < b_j^2. The "+" points (f_j = -1) are x_j +- i y_j^+ with
+   y_j^+ = sqrt(b_j^2 + c_j); the "-" points are x_j +- i y_j^- with y_j^- = sqrt(b_j^2 - c_j) < y_j^+.
+ - Lemma (the top of the oval is the "+" point). For f = al((t - x)^2 + b^2) with c = 1/al < b^2, the set
+   {t : Im t >= 0, |f(t)| <= 1} lies in {Im t <= y^+}, and its only point at height y^+ is x + i y^+.
+   - Proof. Put t - x = u + i v and U = u^2 >= 0. Then |f|^2 <= al^2 iff
+     (u^2 - v^2 + b^2)^2 + 4 u^2 v^2 <= c^2 iff  U^2 + 2U(b^2 + v^2) + (b^2 - v^2)^2 - c^2 <= 0.
+     The left side is increasing in U >= 0, so it forces (b^2 - v^2)^2 <= c^2, i.e. v^2 <= b^2 + c. If v^2 = b^2 + c,
+     the constant term is 0 and U^2 + 2U(b^2 + v^2) <= 0 forces U = 0.  QED
+ - Step 2 (modulus at the topmost special point). Let H = max_j y_j^+, attained by j*, and a* = x_{j*} + i H.
+   - f_{j*}(a*) = -1, so f_{j*} + 1 | F + 1 gives F(a*) = -1, i.e. W(a*) := prod_{i != j*} f_i(a*) = 1.
+   - For i != j*: if x_i + i y_i^+ = a*, then |f_i(a*)| = 1. Otherwise Im a* = H >= y_i^+ and a* is not the top point
+     of member i, so a* lies outside the closed upper sublevel set of f_i (Lemma), and |f_i(a*)| > 1. (The lower
+     component lies in Im t < 0.)
+   - So |W(a*)| > 1 unless EVERY member has its top point at a*. That case is excluded in Step 3. Contradiction.
+ - Step 3 (all members share a*). Then f_i = al_i g - 1 with g = (t - x)^2 + H^2 common and al_i distinct. Take the
+   member with the largest al_i. At its "-" point, g = 2/al_i, and W = prod_{l != i} (2 al_l/al_i - 1). Every factor
+   lies in (-1, 1), so |W| < 1, not 1. Contradiction.  QED
+ - Sanity check (scratch topcheck.py, 2e4 random ovals and 2e4 random families k <= 11): no sublevel point above y^+,
+   and the topmost "+" point was never covered by another member. Analytic proof above is what counts.
+ - Why the earlier proofs were long: Lemma 23 used the ARGUMENT of W along axis lines (parity of real crossings). The
+   MODULUS at one extremal point is enough. General principle, valid for every real family with positive leading
+   coefficients:
+   - COVERING LEMMA (trivial, recorded as a tool). If w is a special point of f_j and |f_i(w)| >= 1 for all i != j,
+     then |f_i(w)| = 1 for all i != j. So every special point of f_j lies in the union of the open sublevel sets
+     {|f_i| < 1}, i != j, unless it lies on every other lemniscate |f_i| = 1.
+ - What blocks degree >= 3. The proof needs "the top of each sublevel component is a special point". For a real
+   polynomial f, at the top point t0 of a component of {|f| <= 1} one only gets f'(t0) = -i lambda f(t0) (lambda > 0),
+   which does not force f(t0) = +-1; the quadratic case gets it from the reflection symmetry about the axis.
+   - So the open real cases are: odd degree >= 3 (cubics: Lemma 24, Groebner running), even degree >= 4.
+   - A higher-degree proof needs a replacement extremal principle: e.g. show that if the topmost special point a* is
+     covered by a component K of {|f_i| < 1}, then K's boundary carries a special point higher than a*.
+
+### Literature (read 2026-10-24): Ha-Soundararajan "popular cofactor" and route (I) [READ: arXiv 1902.07397]
+ - Construction (a + 1 = c with >> exp(s^(1/4)/log s) solutions). Count r == 1 (mod q) with r a product of k primes
+   from (y/2, y] and q a product of l primes from (y/4, y/2]. The cofactor u = (r - 1)/q takes at most 4^l y^(k - l)
+   values, so some u_0 is popular. S = primes in (y/4, y] plus the primes of u_0. Proof of equidistribution: large sieve.
+ - Their remarks (CITED from the paper): for S = first s primes one expects exp(s^(1/2 - eps)) solutions of a + 1 = c,
+   and for general S no more than exp(s^(1/2 + eps)) (heuristic, after Lagarias-Soundararajan and EST).
+ - Translation to our pool. A popular u_0 is a ONE-SIDED FREE MODULUS: p = 2 r - 1 with p + 1 = 2r smooth and
+   p - 1 = 2 q u_0. Every product of such p is == 1 mod 2 u_0, so u_0 costs no group bits.
+   - Heuristic count for one u_0 at size X: the average over u is X/u_0 * rho(u_X) rho(u_(X/u_0)), against
+     X rho(u_X)^2 for the plain pool; the ratio is (u log u / T)^v with u_0 = T^v. This is exactly the existing
+     criterion ("one-sided free modulus loses unless u log u > T", session 7). Pigeonhole gives only >= average.
+   - So the popular-cofactor trick buys PROVABILITY, not density. It would help only if some u_0 had far more
+     solutions than average, i.e. if the smooth numbers had small image in (Z/u_0)^*. That is DSO-type behaviour
+     of u_0 for many bases at once, which Theorem D-type heuristics make rare.
+ - Consequence for (I). If the general-S heuristic exp(s^(1/2 + eps)) holds, intervals are optimal up to the
+   constant in the exponent, and the k-tree cost stays >= 2^(c sqrt s). Route (I) can then only win by a constant
+   factor in that exponent; the small-scale greedy tests (session 7) found none.

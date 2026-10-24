@@ -1,0 +1,42 @@
+// W' k = 5, all members linear, exact over Q via modStd (modular with final verification).
+// I' = I + (1 - y*a2*a3*a4*a5): the solutions with every member nonconstant.
+// If vdim(std(I')) = 24 and the 24 monomial points (f_j = zeta^(s_j) t, s a permutation) satisfy I',
+// then they are ALL the solutions, each simple.
+LIB "modstd.lib";
+ring R = 0, (a2,a3,a4,a5,b2,b3,b4,b5,t,X), dp;
+poly f1 = t;
+poly f2 = a2*t + b2; poly f3 = a3*t + b3; poly f4 = a4*t + b4; poly f5 = a5*t + b5;
+poly P = (X - f1)*(X - f2)*(X - f3)*(X - f4)*(X - f5);
+matrix C = coeffs(P, X);
+poly E1 = -C[5,1]; poly E2 = C[4,1]; poly E3 = -C[3,1]; poly E4 = C[2,1];
+matrix G1 = coeffs(E1 + E3, t); matrix G2 = coeffs(E2 + E4, t);
+ideal I; int i;
+for (i = 1; i <= nrows(G1); i++) { I = I, G1[i,1]; }
+for (i = 1; i <= nrows(G2); i++) { I = I, G2[i,1]; }
+ring S = 0, (y,a2,a3,a4,a5,b2,b3,b4,b5), dp;
+ideal I = simplify(imap(R, I), 2);
+ideal Ip = I, 1 - y*a2*a3*a4*a5;
+int tt = timer;
+ideal G = modStd(Ip);
+"modStd done, time", timer - tt;
+"dim", dim(G), "vdim", vdim(G);
+// check that the monomial points lie on I': substitute a_j = zeta^(s_j), b_j = 0 over Q(zeta_5)
+ring Z = (0, w), (y,a2,a3,a4,a5,b2,b3,b4,b5), dp;
+minpoly = w^4 + w^3 + w^2 + w + 1;
+ideal Ip = imap(S, Ip);
+int ok = 1;
+list perms = list(list(1,2,3,4), list(1,2,4,3), list(1,3,2,4), list(1,3,4,2), list(1,4,2,3), list(1,4,3,2),
+                  list(2,1,3,4), list(2,1,4,3), list(2,3,1,4), list(2,3,4,1), list(2,4,1,3), list(2,4,3,1),
+                  list(3,1,2,4), list(3,1,4,2), list(3,2,1,4), list(3,2,4,1), list(3,4,1,2), list(3,4,2,1),
+                  list(4,1,2,3), list(4,1,3,2), list(4,2,1,3), list(4,2,3,1), list(4,3,1,2), list(4,3,2,1));
+int k;
+for (k = 1; k <= size(perms); k++) {
+  list s = perms[k];
+  number A2 = w^s[1]; number A3 = w^s[2]; number A4 = w^s[3]; number A5 = w^s[4];
+  number Y = 1/(A2*A3*A4*A5);
+  ideal V = subst(Ip, y, Y, a2, A2, a3, A3, a4, A4, a5, A5, b2, 0, b3, 0, b4, 0, b5, 0);
+  if (size(simplify(V, 2)) != 0) { ok = 0; }
+  kill s; kill A2; kill A3; kill A4; kill A5; kill Y; kill V;
+}
+"all 24 monomial points satisfy I':", ok;
+quit;

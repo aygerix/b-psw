@@ -1,0 +1,24 @@
+ring R0 = (32003,a1,a2,a3,b1,b2,b3),(t),dp;
+poly F = 1;
+poly f1 = a1*t^3 + b1*t^2 + (b1 - a1 + 2)*t + 1; F = F*f1;
+poly f2 = a2*t^3 + b2*t^2 + (b2 - a2 + 2)*t + 1; F = F*f2;
+poly f3 = a3*t^3 + b3*t^2 + (b3 - a3 + 2)*t + 1; F = F*f3;
+poly Em = (F - 1)/t; poly Ep = (F + 1)/(t + 1);
+ideal eqs;
+poly g = t^2 + (b1/a1)*t + (b1 - a1 + 2)/a1; poly h = t^2 + ((b1 - a1)/a1)*t + 2/a1;
+poly rg = reduce(Em, std(g)); poly rh = reduce(Ep, std(h));
+eqs = eqs, numerator(leadcoef(jet(rg,1) - jet(rg,0))), numerator(leadcoef(jet(rg,0) + 0*t)), numerator(leadcoef(jet(rh,1) - jet(rh,0))), numerator(leadcoef(jet(rh,0) + 0*t));
+poly g = t^2 + (b2/a2)*t + (b2 - a2 + 2)/a2; poly h = t^2 + ((b2 - a2)/a2)*t + 2/a2;
+poly rg = reduce(Em, std(g)); poly rh = reduce(Ep, std(h));
+eqs = eqs, numerator(leadcoef(jet(rg,1) - jet(rg,0))), numerator(leadcoef(jet(rg,0) + 0*t)), numerator(leadcoef(jet(rh,1) - jet(rh,0))), numerator(leadcoef(jet(rh,0) + 0*t));
+poly g = t^2 + (b3/a3)*t + (b3 - a3 + 2)/a3; poly h = t^2 + ((b3 - a3)/a3)*t + 2/a3;
+poly rg = reduce(Em, std(g)); poly rh = reduce(Ep, std(h));
+eqs = eqs, numerator(leadcoef(jet(rg,1) - jet(rg,0))), numerator(leadcoef(jet(rg,0) + 0*t)), numerator(leadcoef(jet(rh,1) - jet(rh,0))), numerator(leadcoef(jet(rh,0) + 0*t));
+ring R1 = 32003,(a1,a2,a3,b1,b2,b3,y),dp;
+ideal eqs = imap(R0, eqs);
+ideal I = eqs, 1 - y*a1*a2*a3*((a1 - a2) + 7*(b1 - b2))*((a1 - a3) + 7*(b1 - b3))*((a2 - a3) + 7*(b2 - b3));
+option(redSB); int t0 = timer; ideal G = std(I);
+print("k = 3, real cubic ansatz, distinct members, GF(32003), c = 7: dim = " + string(dim(G)) + ", size = " + string(size(G)));
+if (size(G) == 1 && G[1] == 1) { print("UNIT IDEAL: no family with distinct members (over the algebraic closure)"); }
+else { print("vdim = " + string(vdim(G))); print(G); }
+quit;
