@@ -1,0 +1,6 @@
+SUMMARY mode=rnd ctl=real Bp=50.0 d=+4 beta=20: BKZ success 0.25 (1/4), shortest-relation/GH mean 1.1187 sd 0.0159, time 0.1s; enum success 1.00, mean #solutions 16.75, mean #points 27.8, enum time 50.4s
+SUMMARY mode=rnd ctl=unif Bp=50.0 d=+4 beta=20: BKZ success 0.75 (3/4), shortest-relation/GH mean 1.0919 sd 0.0685, time 0.1s; enum success 1.00, mean #solutions 15.00, mean #points 21.5, enum time 203.2s
+SUMMARY mode=rnd ctl=supp Bp=50.0 d=+4 beta=20: BKZ success 0.25 (1/4), shortest-relation/GH mean 1.0682 sd 0.0602, time 0.1s; enum success 1.00, mean #solutions 14.50, mean #points 21.2, enum time 187.5s
+SUMMARY mode=rnd ctl=hgt Bp=50.0 d=+4 beta=20: BKZ success 0.50 (2/4), shortest-relation/GH mean 1.1032 sd 0.0484, time 0.1s; enum success 1.00, mean #solutions 10.50, mean #points 21.8, enum time 125.9s
+TIMEOUT/FAIL 60 +4 2 60 rnd real 24 enum
+TIMEOUT/FAIL 60 +4 2 60 rnd unif 24 enum

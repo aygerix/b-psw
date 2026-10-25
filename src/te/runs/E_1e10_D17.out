@@ -1,0 +1,15 @@
+D=17 passes expected: 5
+anchor3 D=17 Q=-4 X=10000000000 mode=bpsw threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.100 chunkA=32768 chunkC=65536
+TABLE D=17 X=10000000000 inert=227526327 overflow=0 bytes=3640.4MB time=239.90s cpu=881.66s
+PASS D=17 S=1 A=1 B=1 mode=bpsw cap=auto X=10000000000 inert=227526327 Aprimes=227526054 Acands=23613598948 Cprimes=273 Cpairs=9635462180 Cinner=117420229 prefilter=26 hits=0 wall=2650.80s
+DIAG Aunsolv=0 Asieved=15749153439 Ashape=0 Afinal=26 Abig=0 Cunsolv=0 Cnoinv=693 Cincompat=263705 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=9370.47 threadsec_C=1032.53 us_per_Acand=0.3968 us_per_Cpair=0.1072 sieve=on cpu=10057.60s
+PASS D=17 S=16183 A=279 B=58 mode=bpsw cap=auto X=10000000000 inert=227526327 Aprimes=132842792 Acands=21701628 Cprimes=0 Cpairs=0 Cinner=0 prefilter=1 hits=0 wall=28.28s
+DIAG Aunsolv=94683535 Asieved=10925270 Ashape=0 Afinal=1 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=15.43 threadsec_C=0.00 us_per_Acand=0.7109 us_per_Cpair=0.0000 sieve=on cpu=110.57s
+PASS D=17 S=53152009 A=340718 B=39 mode=bpsw cap=auto X=10000000000 inert=227526327 Aprimes=112065334 Acands=47564 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=24.28s
+DIAG Aunsolv=115460993 Asieved=22120 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.05 threadsec_C=0.00 us_per_Acand=1.0980 us_per_Cpair=0.0000 sieve=on cpu=96.45s
+PASS D=17 S=2796203 A=46 B=121574 mode=bpsw cap=auto X=10000000000 inert=227526327 Aprimes=214855860 Acands=115256 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=26.10s
+DIAG Aunsolv=12670467 Asieved=45925 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.14 threadsec_C=0.00 us_per_Acand=1.2341 us_per_Cpair=0.0000 sieve=on cpu=103.64s
+PASS D=17 S=125597 A=7388 B=17 mode=bpsw cap=auto X=10000000000 inert=227526327 Aprimes=113698186 Acands=902154 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=22.21s
+DIAG Aunsolv=113828141 Asieved=402097 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.88 threadsec_C=0.00 us_per_Acand=0.9710 us_per_Cpair=0.0000 sieve=on cpu=88.20s
+TIME 2992.17 s wall 11334.26 s user 3716268 KB
+SUMMARY D=17 X=1e10 status=COMPLETE rc=0 passes=5/5 hits=0 hitlines=0

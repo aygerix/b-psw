@@ -1,0 +1,17 @@
+halt 1
+halt 1
+halt 1
+RESULT h3_a1_b000_g100 D=3 G=1 dim=1 time=0
+RESULT h3_a1_b011_g021 D=5 G=3 dim=-1 time=0
+RESULT h3_a1_b011_g030 D=5 G=3 dim=-1 time=0
+RESULT h3_a1_b011_g111 D=5 G=3 dim=-1 time=0
+RESULT h3_a1_b011_g120 D=5 G=3 dim=-1 time=0
+RESULT h3_a1_b011_g201 D=5 G=3 dim=-1 time=0
+RESULT h3_a1_b011_g210 D=5 G=3 dim=-1 time=0
+halt 1
+RESULT h3_a2_b011_g200 D=8 G=2 dim=1 time=0
+RESULT h3_a2_b011_g211 D=8 G=4 dim=1 time=0
+RESULT h3_a2_b011_g221 D=8 G=5 dim=-1 time=0
+halt 1
+RESULT h3_a3_b011_g222 D=11 G=6 dim=-1 time=0
+halt 1

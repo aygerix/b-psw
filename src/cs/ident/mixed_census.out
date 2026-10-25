@@ -1,0 +1,20 @@
+[0;31m  ***   Warning: new maximum stack size = 1500000256 (1430.512 Mbytes).[0m
+A=t^2 - t - 2 k=3 0<=a<=5 |b|<=7: NON-composed Korselt families=5  #dead histogram (0..k)=[0, 0, 1, 4]
+   fam [[0, 1], [0, 4], [2, -3]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 110  sprp2 9  slprp 0  BPSW 0
+   fam [[0, 1], [0, 4], [2, 1]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 112  sprp2 4  slprp 0  BPSW 0
+   fam [[0, 1], [0, 4], [4, -6]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 100  sprp2 1  slprp 0  BPSW 0
+   fam [[0, 1], [0, 4], [4, 2]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 95  sprp2 3  slprp 0  BPSW 0
+   fam [[0, 1], [1, 0], [1, 1]] degrees [2, 3, 3] Lucas defects [2, 1, 3] dead 2: prime tuples |t|<=20000: 76  sprp2 10  slprp 0  BPSW 0
+A=t^2 + 1 k=3 0<=a<=5 |b|<=7: NON-composed Korselt families=0  #dead histogram (0..k)=[0, 0, 0, 0]
+A=t^2 + t + 1 k=3 0<=a<=5 |b|<=7: NON-composed Korselt families=0  #dead histogram (0..k)=[0, 0, 0, 0]
+A=t^2 - 2 k=3 0<=a<=5 |b|<=7: NON-composed Korselt families=0  #dead histogram (0..k)=[0, 0, 0, 0]
+A=t^2 + t k=3 0<=a<=5 |b|<=7: NON-composed Korselt families=0  #dead histogram (0..k)=[0, 0, 0, 0]
+A=t^2 - 3*t k=3 0<=a<=5 |b|<=7: NON-composed Korselt families=4  #dead histogram (0..k)=[0, 0, 1, 3]
+   fam [[0, 1], [0, 4], [2, -5]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 110  sprp2 9  slprp 0  BPSW 0
+   fam [[0, 1], [0, 4], [2, -1]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 112  sprp2 4  slprp 0  BPSW 0
+   fam [[0, 1], [0, 4], [4, -2]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 95  sprp2 3  slprp 0  BPSW 0
+   fam [[0, 1], [1, -1], [1, 0]] degrees [2, 3, 3] Lucas defects [2, 1, 3] dead 2: prime tuples |t|<=20000: 76  sprp2 10  slprp 0  BPSW 0
+A=t^2 - t - 1 k=3 0<=a<=5 |b|<=7: NON-composed Korselt families=2  #dead histogram (0..k)=[0, 0, 0, 2]
+   fam [[0, 1], [0, 4], [2, -1]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 0  sprp2 0  slprp 0  BPSW 0
+   fam [[0, 1], [0, 4], [4, -2]] degrees [2, 2, 3] Lucas defects [2, 2, 3] dead 3: prime tuples |t|<=20000: 0  sprp2 0  slprp 0  BPSW 0
+A=t^2 + 2 k=3 0<=a<=5 |b|<=7: NON-composed Korselt families=0  #dead histogram (0..k)=[0, 0, 0, 0]

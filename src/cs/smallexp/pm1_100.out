@@ -1,0 +1,2 @@
+top cliques by slack |C| - rank (slack >= 1 with the parity row means a GF(2) solution exists):
+maximal cliques with |C|>=3: 0, max |C| = 0, max slack = None

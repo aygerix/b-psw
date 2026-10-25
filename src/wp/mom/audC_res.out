@@ -1,0 +1,4 @@
+BB: n=19215 uncovered=0 always=[] counts={'INTiv': 3893, 'INTiw': 3795, 'INTjv': 15544, 'INTjw': 15614}
+BV: n=61 uncovered=0 always=['INTjv'] counts={'EXTjw': 58, 'INTiw': 56, 'INTjv': 61}
+BW: n=63 uncovered=0 always=['INTjw'] counts={'EXTjv': 59, 'INTiv': 56, 'INTjw': 63}
+WW: n=7089 uncovered=0 always=['INTjw'] counts={'EXTjv': 5959, 'INTjw': 7089}

@@ -1,0 +1,7 @@
+D37_2_0 knuth lam 0.200000 inc 0.000000 probes 600 est_nodes 2.553e+06 stderr 9.77e+04 mean_depth 19.79 max_depth 23 closures 12476 time 18.05
+D-11_2_1 knuth lam 0.200000 inc 0.000000 probes 600 est_nodes 6.082e+06 stderr 2.59e+05 mean_depth 20.86 max_depth 24 closures 13119 time 12.70
+D-11_2_1i knuth lam 0.200000 inc 0.200000 probes 600 est_nodes 6.026e+06 stderr 2.55e+05 mean_depth 20.86 max_depth 24 closures 13119 time 12.46
+D-11_2_0_F knuth lam 0.200000 inc 0.283200 probes 600 est_nodes 4.471e+06 stderr 3.33e+05 mean_depth 20.12 max_depth 26 closures 12672 time 8.58
+D-11_2_0_L knuth lam 0.200000 inc 0.283200 probes 600 est_nodes 8.878e+06 stderr 1.04e+06 mean_depth 21.27 max_depth 28 closures 13365 time 10.59
+D-15_2_0_LL_F_F knuth lam 0.200000 inc 6.872200 probes 600 est_nodes 6.42e+06 stderr 2.88e+05 mean_depth 21.10 max_depth 25 closures 13262 time 7.66
+D-15_2_0_LL_F_L knuth lam 0.200000 inc 6.872200 probes 600 est_nodes 4.038e+06 stderr 1.66e+05 mean_depth 20.46 max_depth 24 closures 12875 time 7.59

@@ -1,0 +1,21 @@
+k9 m9 odd V' (k = 9, lin = 0, m = 0..2): IDENTITY HOLDS
+k9 m9 even V' (k = 9, lin = 0, m = 0..2): IDENTITY HOLDS
+k9 8+lin odd V' (k = 9, lin = 1, m = 0..2): IDENTITY HOLDS
+k9 8+lin even V' (k = 9, lin = 1, m = 0..2): IDENTITY HOLDS
+k9 m9 Phi = -35 Z0- - 9/2 Z1- (k = 9, lin = 0, m = 0..2): IDENTITY HOLDS
+k9 8+lin Phi = -31 Z0- - 4 Z1- (k = 9, lin = 1, m = 0..2): IDENTITY HOLDS
+k9 m9 Z0- formula (k = 9, lin = 0, m = 0..2): IDENTITY HOLDS
+k9 8+lin Z0- formula (k = 9, lin = 1, m = 0..2): IDENTITY HOLDS
+k11 m11 even V' (k = 11, lin = 0, m = 0..3): IDENTITY HOLDS
+k11 m11 odd V' (k = 11, lin = 0, m = 0..3): IDENTITY HOLDS
+k11 10+lin even V' (k = 11, lin = 1, m = 0..3): IDENTITY HOLDS
+k11 10+lin odd V' (k = 11, lin = 1, m = 0..3): IDENTITY HOLDS
+   NEGATIVE CONTROL (75/4 -> 76/4): m = 1 residual NONZERO: -1/4*vv1*uu1 + 1/8*vv1
+   NEGATIVE CONTROL (75/4 -> 76/4): m = 2 residual NONZERO: -1/4*vv1*uu1 + (1/8*vv1 + (-1/4*vv2*uu2 + 1/8*vv2))
+NEGATIVE CONTROL (75/4 -> 76/4) (k = 9, lin = 0, m = 0..2): FAILS
+direct random-point check k = 9, m = 9, lin = 0: 6/6 exact agreements
+direct random-point check k = 9, m = 8, lin = 1: 6/6 exact agreements
+
+real	0m0.487s
+user	0m0.143s
+sys	0m0.006s

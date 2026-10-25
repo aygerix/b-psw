@@ -1,0 +1,28 @@
+~/b-psw/src/cs/e3b/strat_lp.py:49: RuntimeWarning: divide by zero encountered in divide
+  coef.append(-2 / At if j == 0 else -2 / (At * (th - rr[:, j - 1])))
+~/b-psw/src/cs/e3b/strat_lp.py:49: RuntimeWarning: invalid value encountered in divide
+  coef.append(-2 / At if j == 0 else -2 / (At * (th - rr[:, j - 1])))
+k=5 m=[2, 1, 1, 1, 1] sym=True slices=0 unknowns=9 equations=14 expected dim=-5
+  batch 0: kept 7
+  batch 1: kept 14
+  batch 2: kept 25
+  batch 3: kept 35
+  batch 4: kept 48
+  batch 5: kept 60
+  batch 6: kept 68
+  batch 7: kept 74
+  batch 8: kept 82
+  batch 9: kept 87
+  batch 10: kept 94
+  batch 11: kept 102
+  batch 12: kept 109
+  batch 13: kept 116
+  batch 14: kept 126
+  batch 15: kept 130
+  batch 16: kept 143
+  batch 17: kept 153
+  batch 18: kept 166
+  batch 19: kept 170
+converged non-degenerate: 170 / 20000
+  local dim 0  actual gcd degrees [2, 1, 1, 1, 1] (sum 6): 167
+  local dim 2  actual gcd degrees [2, 1, 1, 1, 1] (sum 6): 3

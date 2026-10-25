@@ -1,0 +1,29 @@
+k= 5 M=256      real roots=3  max|R_j-1| middle=2.40 e-209  R_1-1=1.56 e5 R_k-1=-0.111  positive=1
+k= 5 M=100000   real roots=3  max|R_j-1| middle=1.60 e-206  R_1-1=6.30 e7 R_k-1=-0.000300  positive=1
+k= 5 M=3/7: only 1 real roots (complex family)
+      complex check: max |R_j - 1| over middle = 0.e-211 ; |R_1-1| = 1.14 ; |R_k-1| = 1.54 e2
+k= 5 M=-5       real roots=3  max|R_j-1| middle=4.13 e-210  R_1-1=1.22 e4 R_k-1=-60.7  positive=0
+k= 7 M=1024     real roots=5  max|R_j-1| middle=5.14 e-206  R_1-1=1.21 e9 R_k-1=-0.116  positive=1
+k= 7 M=100000   real roots=5  max|R_j-1| middle=2.77 e-204  R_1-1=1.23 e11 R_k-1=-0.00126  positive=1
+k= 7 M=3/7: only 1 real roots (complex family)
+      complex check: max |R_j - 1| over middle = 0.e-210 ; |R_1-1| = 5.00 ; |R_k-1| = 2.57 e4
+k= 7 M=-5: degree drops to 4 (leading coefficient vanishes)
+k= 9 M=4096     real roots=7  max|R_j-1| middle=9.08 e-202  R_1-1=1.57 e14 R_k-1=-0.117  positive=1
+k= 9 M=100000   real roots=7  max|R_j-1| middle=1.16 e-199  R_1-1=3.98 e15 R_k-1=-0.00509  positive=1
+k= 9 M=3/7: only 1 real roots (complex family)
+      complex check: max |R_j - 1| over middle = 0.e-207 ; |R_1-1| = 6.42 e2 ; |R_k-1| = 2.27 e7
+k= 9 M=-5       real roots=7  max|R_j-1| middle=4.84 e-205  R_1-1=-3.59 e10 R_k-1=3.38 e5  positive=0
+k=11 M=16384    real roots=9  max|R_j-1| middle=1.99 e-195  R_1-1=3.29 e20 R_k-1=-0.117  positive=1
+k=11 M=100000   real roots=9  max|R_j-1| middle=7.98 e-196  R_1-1=2.07 e21 R_k-1=-0.0203  positive=1
+k=11 M=3/7: only 3 real roots (complex family)
+      complex check: max |R_j - 1| over middle = 0.e-204 ; |R_1-1| = 4.81 e5 ; |R_k-1| = 9.32 e10
+k=11 M=-5       real roots=9  max|R_j-1| middle=1.69 e-201  R_1-1=2.47 e14 R_k-1=-9.40 e7  positive=0
+k=13 M=65536    real roots=11  max|R_j-1| middle=3.92 e-189  R_1-1=1.10 e28 R_k-1=-0.117  positive=1
+k=13 M=100000   real roots=11  max|R_j-1| middle=1.58 e-189  R_1-1=1.70 e28 R_k-1=-0.0786  positive=1
+k=13 M=3/7: only 5 real roots (complex family)
+      complex check: max |R_j - 1| over middle = 1.70 e-201 ; |R_1-1| = 1.56 e9 ; |R_k-1| = 1.65 e15
+k=13 M=-5       real roots=11  max|R_j-1| middle=1.72 e-198  R_1-1=-8.74 e18 R_k-1=1.33 e11  positive=0
+
+real	0m0.139s
+user	0m0.062s
+sys	0m0.005s

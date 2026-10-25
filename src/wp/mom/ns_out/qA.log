@@ -1,0 +1,7 @@
+03:19:12 start r5l0: env [NS_AMIN=0.01] args [5 0 real -+ 2000 11 250 400 0 1e-3]
+03:21:56 done r5l0 (exit 0)
+03:21:56 start r5l1: env [NS_AMIN=0.01] args [5 1 real -+ 2000 12 250 400 0 1e-3]
+03:24:07 done r5l1 (exit 0)
+03:24:07 start r7l0: env [NS_AMIN=0.01] args [7 0 real -+ 2000 13 250 400 0 1e-3]
+03:32:58 done r7l0 (exit 0)
+03:32:58 start r7l1: env [NS_AMIN=0.01] args [7 1 real -+ 2000 14 250 400 0 1e-3]

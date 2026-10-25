@@ -1,0 +1,46 @@
+start 0: phase1 fail 9.39e+02
+start 1: phase1 fail 4.99e+01
+start 2: phase1 fail 4.99e+01
+start 3: phase1 fail 9.39e+02
+start 4: phase1 fail 4.99e+01
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar subtract
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:27: RuntimeWarning: overflow encountered in scalar multiply
+  c[n] = v * d[n - 3]
+start 5: phase1 fail 4.99e+01
+start 6: phase1 fail 4.99e+01
+start 7: phase1 fail 4.99e+01
+start 8: phase1 fail 4.99e+01
+start 9: phase1 fail 4.99e+01
+start 10: phase1 fail 4.99e+01
+start 11: phase1 fail 4.99e+01
+start 12: phase1 fail 4.99e+01
+start 13: phase1 fail 4.99e+01
+start 14: phase1 fail 4.99e+01
+start 15: phase1 fail 4.99e+01
+start 16: phase1 fail 4.99e+01
+start 17: phase1 fail 4.99e+01
+start 18: phase1 fail 4.99e+01
+start 19: phase1 fail 4.99e+01
+start 20: phase1 fail 4.99e+01
+start 21: phase1 fail 4.99e+01
+start 22: phase1 fail 1.46e+03
+start 23: phase1 fail 4.99e+01
+start 24: phase1 fail 4.99e+01
+start 25: phase1 fail 4.99e+01
+start 26: phase1 fail 4.99e+01
+start 27: phase1 fail 4.99e+01
+start 28: phase1 fail 9.39e+02
+start 29: phase1 fail 4.99e+01
+start 30: phase1 fail 4.99e+01
+start 31: phase1 fail 4.99e+01
+start 32: phase1 fail 4.99e+01
+start 33: phase1 fail 4.99e+01
+start 34: phase1 fail 4.99e+01
+start 35: phase1 fail 4.99e+01
+start 36: phase1 fail 4.99e+01
+start 37: phase1 fail 4.99e+01
+start 38: phase1 fail 4.99e+01
+start 39: phase1 fail 4.99e+01

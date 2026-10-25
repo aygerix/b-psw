@@ -1,0 +1,10 @@
+real pt 1: gd [2, 1, 1, 1, 1] resid 5.15e-53 imag 8.81e-63 T = 0.117629795483447  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real pt 2: gd [2, 1, 1, 1, 1] resid 4.42e-56 imag 1.46e-60 T = 0.052964409489815  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real pt 3: gd [2, 1, 1, 1, 1] resid 7.19e-53 imag 1.9e-56 T = 0.0973728952594204  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real pt 4: gd [2, 1, 1, 1, 1] resid 3.07e-53 imag 6.57e-62 T = 0.154718611911569  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real pt 5: gd [2, 1, 1, 1, 1] resid 3.0e-58 imag 3.16e-62 T = 0.105322125384512  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real pt 6: gd [2, 1, 1, 1, 1] resid 7.61e-54 imag 9.11e-62 T = 0.0946368681230663  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real pt 7: gd [2, 1, 1, 1, 1] resid 3.24e-54 imag 6.24e-64 T = 0.0911876661164617  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real pt 8: gd [2, 1, 1, 1, 1] resid 6.26e-59 imag 3.73e-84 T = 0.0263393268900223  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real pt 9: gd [2, 1, 1, 1, 1] resid 3.99e-58 imag 5.13e-153 T = 0.0167755343724585  minpoly degrees (T, u2..u5): ['>12', '>12', '>12', '>12', '>12']
+real points tested: 9

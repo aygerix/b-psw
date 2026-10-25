@@ -1,0 +1,6 @@
+my run 0: 77 distinct
+my run 1: 83 distinct
+E3b union: 57 distinct
+runs 0,1: common 74, Lincoln-Petersen 86
+my union 86 vs E3b union 57: common 57, Lincoln-Petersen 86
+union 86; union closed under conjugation 87 (real 15)

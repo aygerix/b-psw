@@ -1,0 +1,38 @@
+AMIN = 0.01, DPOW = 2.0, RINF = 0.0^1.0, WREM = 0.0, WMODE = c, BDEF = 0.001, PAIR = 0.0, SYMQ = 1
+[v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001] 250/2000, 12s
+[v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001] 500/2000, 24s
+[v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001] 750/2000, 36s
+[v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001] 1000/2000, 49s
+[v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001] 1250/2000, 61s
+[v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001] 1500/2000, 73s
+[v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001] 1750/2000, 85s
+[v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001] 2000/2000, 98s
+== v3_k9_l0_sym1_mp_s327_sg0.001_Wc_b0.001: identity residual quantiles (0,1,10,50,90%): 9.79e-01 1.26e+00 1.44e+00 1.70e+00 2.32e+00
+   constrained-W identity residual quantiles: 3.06e+00 3.08e+00 3.44e+00 6.62e+00 1.14e+01
+   remainder residual quantiles: 4.99e-03 9.01e-03 1.21e-02 2.21e-02 1.58e-01
+   max(identity, remainder) quantiles: 9.79e-01 1.26e+00 1.44e+00 1.70e+00 2.32e+00
+   non-degenerate (sep, special-point gaps, min|a| >= 1e-3): 422 of 2000
+   identity residual < 1e-12: 0; non-degenerate: 0; and remainder < 1e-12: 0
+   identity residual < 1e-10: 0; non-degenerate: 0; and remainder < 1e-10: 0
+   identity residual < 1e-08: 0; non-degenerate: 0; and remainder < 1e-08: 0
+   identity residual < 1e-06: 0; non-degenerate: 0; and remainder < 1e-06: 0
+   identity residual < 0.0001: 0; non-degenerate: 0; and remainder < 0.0001: 0
+   identity residual < 0.01: 0; non-degenerate: 0; and remainder < 0.01: 0
+   sep, gap, min|a| >= 0.001: n =    422, min max(id, rem) 1.531e+00: identity 1.531e+00 (rem 2.87e-02, sep 1.14e-01, gap 2.19e-01, min|a| 3.90e-01, margin 1.60e-01, imag 0.00e+00)
+   sep, gap, min|a| >= 0.01 : n =    422, min max(id, rem) 1.531e+00: identity 1.531e+00 (rem 2.87e-02, sep 1.14e-01, gap 2.19e-01, min|a| 3.90e-01, margin 1.60e-01, imag 0.00e+00)
+   sep, gap, min|a| >= 0.05 : n =    422, min max(id, rem) 1.531e+00: identity 1.531e+00 (rem 2.87e-02, sep 1.14e-01, gap 2.19e-01, min|a| 3.90e-01, margin 1.60e-01, imag 0.00e+00)
+   sep, gap, min|a| >= 0.1  : n =    418, min max(id, rem) 1.531e+00: identity 1.531e+00 (rem 2.87e-02, sep 1.14e-01, gap 2.19e-01, min|a| 3.90e-01, margin 1.60e-01, imag 0.00e+00)
+   sep, gap, min|a| >= 0.3  : n =    249, min max(id, rem) 1.718e+00: identity 1.718e+00 (rem 3.60e-02, sep 4.99e-01, gap 4.07e-01, min|a| 4.36e-01, margin 1.67e-01, imag 0.00e+00)
+   best: id 1.531e+00 rem 2.870e-02 sep 1.144e-01 gap 2.187e-01 margin 1.598e-01
+      a = [4.4646592268+0.j 0.4775212042+0.j 0.3898620969+0.j 0.972877368 +0.j 4.4646592268+0.j 0.4775212042+0.j 0.3898620969+0.j 0.972877368 +0.j 1.04714791  +0.j]
+      c = [ 0.2962286474+0.j -1.1456391207+0.j  1.4620011126+0.j -1.3711830854+0.j  4.1684305794+0.j  1.623160325 +0.j -1.0721390157+0.j  2.3440604534+0.j  0.523573955 +0.j]
+   best: id 1.531e+00 rem 2.870e-02 sep 1.144e-01 gap 2.187e-01 margin 1.598e-01
+      a = [0.9728773801+0.j 0.4775212033+0.j 0.3898621067+0.j 4.464659114 +0.j 0.9728773801+0.j 0.4775212033+0.j 0.3898621067+0.j 4.464659114 +0.j 1.0471478886+0.j]
+      c = [-1.3711830808+0.j  1.6231602733+0.j  1.4620011377+0.j  4.1684306024+0.j  2.3440604608+0.j -1.1456390701+0.j -1.072139031 +0.j  0.2962285117+0.j  0.5235739443+0.j]
+   best: id 1.531e+00 rem 2.870e-02 sep 1.144e-01 gap 2.187e-01 margin 1.598e-01
+      a = [0.4775212128+0.j 0.9728773735+0.j 4.4646592106+0.j 0.3898620928+0.j 0.4775212128+0.j 0.9728773735+0.j 4.4646592106+0.j 0.3898620928+0.j 1.0471479007+0.j]
+      c = [-1.1456391184+0.j  2.3440604412+0.j  4.1684306019+0.j  1.462001113 +0.j  1.6231603312+0.j -1.3711830677+0.j  0.2962286087+0.j -1.0721390202+0.j  0.5235739504+0.j]
+   best: id 1.531e+00 rem 2.870e-02 sep 1.144e-01 gap 2.187e-01 margin 1.598e-01
+      a = [0.4775211939+0.j 0.3898621071+0.j 4.464659152 +0.j 0.9728773923+0.j 0.4775211939+0.j 0.3898621071+0.j 4.464659152 +0.j 0.9728773923+0.j 1.0471478909+0.j]
+      c = [-1.1456390889+0.j -1.072139059 +0.j  0.2962285985+0.j  2.3440604562+0.j  1.6231602828+0.j  1.4620011661+0.j  4.1684305536+0.j -1.3711830638+0.j  0.5235739454+0.j]
+total time 98s

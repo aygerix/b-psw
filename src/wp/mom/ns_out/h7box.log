@@ -1,0 +1,41 @@
+AMIN = 0.05, DPOW = 2.0, RINF = 0.0^1.0, WREM = 0.0, WMODE = c
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 250/3000, 41s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 500/3000, 84s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 750/3000, 124s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 1000/3000, 168s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 1250/3000, 212s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 1500/3000, 255s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 1750/3000, 295s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 2000/3000, 338s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 2250/3000, 377s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 2500/3000, 414s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 2750/3000, 454s
+[v3_k7_l0_box_m_s203_sg0.001_Wc] 3000/3000, 495s
+== v3_k7_l0_box_m_s203_sg0.001_Wc: identity residual quantiles (0,1,10,50,90%): 2.28e-14 5.79e-03 1.10e-02 7.70e-02 4.05e-01
+   constrained-W identity residual quantiles: 3.16e-15 6.04e-03 1.37e-02 1.15e-01 9.45e-01
+   remainder residual quantiles: 1.66e-16 1.38e-03 1.26e-02 2.61e+05 4.78e+18
+   max(identity, remainder) quantiles: 2.28e-14 1.07e-02 2.17e-02 2.61e+05 4.78e+18
+   non-degenerate (sep, special-point gaps, min|a| >= 1e-3): 1509 of 3000
+   identity residual < 1e-12: 2; non-degenerate: 2; and remainder < 1e-12: 2
+   identity residual < 1e-10: 2; non-degenerate: 2; and remainder < 1e-10: 2
+   identity residual < 1e-08: 2; non-degenerate: 2; and remainder < 1e-08: 2
+   identity residual < 1e-06: 2; non-degenerate: 2; and remainder < 1e-06: 2
+   identity residual < 0.0001: 2; non-degenerate: 2; and remainder < 0.0001: 2
+   identity residual < 0.01: 231; non-degenerate: 158; and remainder < 0.01: 2
+   sep, gap, min|a| >= 0.001: n =   1509, min max(id, rem) 2.276e-14: identity 2.276e-14 (rem 3.17e-16, sep 1.21e-01, gap 4.13e-01, min|a| 1.96e-01, margin 1.54e-01, imag 0.00e+00)
+   sep, gap, min|a| >= 0.01 : n =   1298, min max(id, rem) 2.276e-14: identity 2.276e-14 (rem 3.17e-16, sep 1.21e-01, gap 4.13e-01, min|a| 1.96e-01, margin 1.54e-01, imag 0.00e+00)
+   sep, gap, min|a| >= 0.05 : n =   1008, min max(id, rem) 2.276e-14: identity 2.276e-14 (rem 3.17e-16, sep 1.21e-01, gap 4.13e-01, min|a| 1.96e-01, margin 1.54e-01, imag 0.00e+00)
+   sep, gap, min|a| >= 0.1  : n =    539, min max(id, rem) 2.276e-14: identity 2.276e-14 (rem 3.17e-16, sep 1.21e-01, gap 4.13e-01, min|a| 1.96e-01, margin 1.54e-01, imag 0.00e+00)
+   best: id 2.276e-14 rem 3.172e-16 sep 1.209e-01 gap 4.130e-01 margin 1.537e-01
+      a = [0.3680395624+0.j 0.1960982582+0.j 0.9836779087+0.j 2.1340711661+0.j 0.5636741275+0.j 0.2612039262+0.j 5.7042283931+0.j]
+      c = [-1.0305241539+0.j -0.7980854439+0.j -1.3902685302+0.j -1.3371711469+0.j -1.1987390467+0.j -0.8998996825+0.j  0.9957566271+0.j]
+   best: id 4.585e-14 rem 1.660e-16 sep 1.209e-01 gap 4.130e-01 margin 1.537e-01
+      a = [5.7042283931+0.j 0.5636741275+0.j 0.2612039262+0.j 0.9836779087+0.j 0.3680395624+0.j 0.1960982582+0.j 2.1340711661+0.j]
+      c = [ 0.9957566271+0.j -1.1987390467+0.j -0.8998996825+0.j -1.3902685302+0.j -1.0305241539+0.j -0.7980854439+0.j -1.3371711469+0.j]
+   best: id 6.302e-03 rem 1.094e-02 sep 7.582e-01 gap 6.337e-03 margin -7.656e-01
+      a = [36.3227641559+0.j 21.012588102 +0.j 40.          +0.j 13.3071003258+0.j  1.8773757064+0.j  2.6286985348+0.j  1.0229047409+0.j]
+      c = [22.5998194909+0.j -1.8795966495+0.j 13.9675981176+0.j  2.7960279298+0.j -1.8796793441+0.j -1.7779480633+0.j -1.5167698305+0.j]
+   best: id 6.302e-03 rem 1.094e-02 sep 7.582e-01 gap 6.337e-03 margin -7.656e-01
+      a = [ 1.8773754252+0.j 36.3227650512+0.j  1.0229048557+0.j 21.0125823241+0.j 39.9999999998+0.j 13.307102435 +0.j  2.6286989574+0.j]
+      c = [-1.8796793256+0.j 22.5998200673+0.j -1.5167698606+0.j -1.8795979227+0.j 13.9675938804+0.j  2.7960293462+0.j -1.7779479652+0.j]
+total time 495s

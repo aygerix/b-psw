@@ -1,0 +1,19 @@
+# VM run: for f in F L T; do python3 two_bad.py $f 600 7; done   (output copied verbatim)
+form F Dmax 600 kmax 7
+  k=3: exactly-two-bad sets (gcd 1) = 170; with additive condition = 0: []
+  k=4: exactly-two-bad sets (gcd 1) = 1; with additive condition = 0: []
+  k=5: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+  k=6: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+  k=7: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+form L Dmax 600 kmax 7
+  k=3: exactly-two-bad sets (gcd 1) = 170; with additive condition = 0: []
+  k=4: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+  k=5: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+  k=6: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+  k=7: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+form T Dmax 600 kmax 7
+  k=3: exactly-two-bad sets (gcd 1) = 3; with additive condition = 0: []
+  k=4: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+  k=5: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+  k=6: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []
+  k=7: exactly-two-bad sets (gcd 1) = 0; with additive condition = 0: []

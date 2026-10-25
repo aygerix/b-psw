@@ -1,0 +1,104 @@
+CAT inert shared=0 ratio=generic  sumE=321.2737  E2cells=0.00000  E3cells=9.336e-13
+CAT split shared=0 ratio=generic  sumE=6.3198  E2cells=0.00074  E3cells=6.568e-07
+CAT split shared=0 ratio=1:1  sumE=0.0564  E2cells=0.00022  E3cells=4.502e-07
+CAT split shared=0 ratio=1:2  sumE=0.0282  E2cells=0.00005  E3cells=5.628e-08
+CAT split shared=0 ratio=1:3  sumE=0.0375  E2cells=0.00007  E3cells=5.116e-08
+CAT split shared=0 ratio=1:4  sumE=0.0140  E2cells=0.00001  E3cells=7.034e-09
+CAT split shared=0 ratio=2:1  sumE=0.0280  E2cells=0.00005  E3cells=5.628e-08
+CAT split shared=0 ratio=2:3  sumE=0.0206  E2cells=0.00002  E3cells=6.797e-09
+CAT split shared=0 ratio=3:1  sumE=0.0373  E2cells=0.00007  E3cells=5.116e-08
+CAT split shared=0 ratio=3:2  sumE=0.0206  E2cells=0.00002  E3cells=6.797e-09
+CAT split shared=0 ratio=3:4  sumE=0.0109  E2cells=0.00000  E3cells=8.671e-10
+CAT split shared=0 ratio=4:1  sumE=0.0139  E2cells=0.00001  E3cells=7.034e-09
+CAT split shared=0 ratio=4:3  sumE=0.0108  E2cells=0.00000  E3cells=8.670e-10
+CAT split shared=1 ratio=generic  sumE=423.0004  E2cells=0.59517  E3cells=1.180e-03
+CAT split shared=1 ratio=1:1  sumE=118.4619  E2cells=0.70188  E3cells=3.219e-03
+CAT split shared=1 ratio=1:2  sumE=60.8013  E2cells=0.33140  E3cells=1.251e-03
+CAT split shared=1 ratio=1:3  sumE=13.1301  E2cells=0.02583  E3cells=3.928e-05
+CAT split shared=1 ratio=1:4  sumE=18.3696  E2cells=0.06007  E3cells=1.474e-04
+CAT split shared=1 ratio=2:1  sumE=50.0421  E2cells=0.29267  E3cells=1.547e-03
+CAT split shared=1 ratio=2:3  sumE=17.6765  E2cells=0.06409  E3cells=2.128e-04
+CAT split shared=1 ratio=3:1  sumE=13.1283  E2cells=0.02583  E3cells=3.928e-05
+CAT split shared=1 ratio=3:2  sumE=25.3036  E2cells=0.07738  E3cells=1.342e-04
+CAT split shared=1 ratio=3:4  sumE=7.7674  E2cells=0.00874  E3cells=7.109e-06
+CAT split shared=1 ratio=4:1  sumE=29.1197  E2cells=0.22738  E3cells=1.390e-03
+CAT split shared=1 ratio=4:3  sumE=21.4462  E2cells=0.10387  E3cells=3.735e-04
+TOTAL sumE=1126.119 E2cells=2.5156 E3cells=9.5427e-03
+SIGN inert expected primes p>X: 321.274
+SIGN split expected primes p>X: 804.845
+EBIN inert log10E=-13 sumE=0.00000
+EBIN inert log10E=-12 sumE=0.00000
+EBIN inert log10E=-11 sumE=0.00019
+EBIN inert log10E=-10 sumE=0.00418
+EBIN inert log10E=-9 sumE=0.03639
+EBIN inert log10E=-8 sumE=0.17806
+EBIN inert log10E=-7 sumE=0.66093
+EBIN inert log10E=-6 sumE=2.22452
+EBIN inert log10E=-5 sumE=7.25148
+EBIN inert log10E=-4 sumE=22.57535
+EBIN inert log10E=-3 sumE=61.29729
+EBIN inert log10E=-2 sumE=161.89293
+EBIN inert log10E=-1 sumE=65.15243
+EBIN split log10E=-12 sumE=0.00000
+EBIN split log10E=-11 sumE=0.00034
+EBIN split log10E=-10 sumE=0.01168
+EBIN split log10E=-9 sumE=0.12637
+EBIN split log10E=-8 sumE=0.69195
+EBIN split log10E=-7 sumE=2.59472
+EBIN split log10E=-6 sumE=8.60274
+EBIN split log10E=-5 sumE=28.46123
+EBIN split log10E=-4 sumE=100.07315
+EBIN split log10E=-3 sumE=313.50378
+EBIN split log10E=-2 sumE=350.77922
+OBSERVED p > X by category:
+  OBS inert shared=0 ratio=generic  n=285
+  OBS split shared=0 ratio=generic  n=1
+  OBS split shared=1 ratio=1:1  n=101
+  OBS split shared=1 ratio=1:2  n=52
+  OBS split shared=1 ratio=1:3  n=11
+  OBS split shared=1 ratio=1:4  n=19
+  OBS split shared=1 ratio=2:1  n=37
+  OBS split shared=1 ratio=2:3  n=19
+  OBS split shared=1 ratio=3:1  n=12
+  OBS split shared=1 ratio=3:2  n=21
+  OBS split shared=1 ratio=3:4  n=4
+  OBS split shared=1 ratio=4:1  n=26
+  OBS split shared=1 ratio=4:3  n=17
+  OBS split shared=1 ratio=generic  n=356
+observed p > X: inert 285  split 676
+expected small-large 2-cells: 4.734 (inert 0.0003)
+observed cells by (n_small, n_large): [((0, 1), 953), ((0, 2), 2), ((1, 0), 1221), ((1, 1), 4), ((2, 0), 1)]
+cells with >= 2 primes and their E (expected large primes in the cell):
+  cell (388, 485, 1) small=2 large=0 E=0.003568  P(>= 0 large) ~ 1
+  cell (2850, 2850, 1) small=1 large=1 E=0.01803  P(>= 1 large) ~ 0.0179
+  cell (3600, 3600, 1) small=0 large=2 E=0.01697  P(>= 2 large) ~ 0.000142
+  cell (3840, 3840, 1) small=1 large=1 E=0.01686  P(>= 1 large) ~ 0.0167
+  cell (3988, 1994, 1) small=1 large=1 E=0.01392  P(>= 1 large) ~ 0.0138
+  cell (4215, 8430, 1) small=1 large=1 E=0.01734  P(>= 1 large) ~ 0.0172
+  cell (8020, 6015, 1) small=0 large=2 E=0.04137  P(>= 2 large) ~ 0.000833
+calibration by cell E (log10 bin): expected = sum of E over ALL cells in the bin, observed = large primes in cells of the bin
+  EB inert log10E= -13  expected     0.000  observed 0
+  EB inert log10E= -12  expected     0.000  observed 0
+  EB inert log10E= -11  expected     0.000  observed 0
+  EB inert log10E= -10  expected     0.004  observed 0
+  EB inert log10E=  -9  expected     0.036  observed 0
+  EB inert log10E=  -8  expected     0.178  observed 0
+  EB inert log10E=  -7  expected     0.661  observed 0
+  EB inert log10E=  -6  expected     2.225  observed 2
+  EB inert log10E=  -5  expected     7.251  observed 11
+  EB inert log10E=  -4  expected    22.575  observed 19
+  EB inert log10E=  -3  expected    61.297  observed 58
+  EB inert log10E=  -2  expected   161.893  observed 151
+  EB inert log10E=  -1  expected    65.152  observed 44
+  EB split log10E= -12  expected     0.000  observed 0
+  EB split log10E= -11  expected     0.000  observed 0
+  EB split log10E= -10  expected     0.012  observed 0
+  EB split log10E=  -9  expected     0.126  observed 0
+  EB split log10E=  -8  expected     0.692  observed 0
+  EB split log10E=  -7  expected     2.595  observed 1
+  EB split log10E=  -6  expected     8.603  observed 13
+  EB split log10E=  -5  expected    28.461  observed 30
+  EB split log10E=  -4  expected   100.073  observed 80
+  EB split log10E=  -3  expected   313.504  observed 248
+  EB split log10E=  -2  expected   350.779  observed 304
+88.75 s 13948 KB

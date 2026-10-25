@@ -1,0 +1,13 @@
+inert primes 7 <= p < 3000000: 108478
+selector (a, b, m): observed density * exact prediction^-1, mismatches with Lemma S1 (must be 0)
+  theta = 2^1 gamma^0, m =   3: obs 0.666688  exact 0.666667  ratio 1.0000  (count 72321), mismatches 0
+  theta = 2^0 gamma^1, m =   3: obs 0.666771  exact 0.666667  ratio 1.0002  (count 72330), mismatches 0
+  theta = 2^1 gamma^1, m =   3: obs 0.333459  exact 0.333333  ratio 1.0004  (count 36173), mismatches 0
+  theta = 2^1 gamma^1, m =  21: obs 0.016437  exact 0.015873  ratio 1.0355  (count 1783), mismatches 0
+  theta = 2^3 gamma^1, m =   9: obs 0.075020  exact 0.074074  ratio 1.0128  (count 8138), mismatches 0
+  theta = 2^1 gamma^3, m =   9: obs 0.074172  exact 0.074074  ratio 1.0013  (count 8046), mismatches 0
+  theta = 2^1 gamma^2, m =  63: obs 0.001761  exact 0.001764  ratio 0.9983  (count 191), mismatches 0
+  theta = 2^2 gamma^1, m =  77: obs 0.000756  exact 0.000866  ratio 0.8731  (count 82), mismatches 0
+  theta = 2^1 gamma^1, m =  63: obs 0.001761  exact 0.001764  ratio 0.9983  (count 191), mismatches 0
+  theta = 2^3 gamma^7, m =  21: obs 0.127648  exact 0.126984  ratio 1.0052  (count 13847), mismatches 0
+advisor selector: P(A) = 0.16677 (1/6 = 0.16667), P(B) = 0.02411 (1/42 = 0.02381), P(A and B) = 0.004093 (1/252 = 0.003968), P(S) = 0.8173 (206/252 = 0.8175), P(A and B | S) = 0.00501 (1/206 = 0.00485); absolute density of A and B is unchanged by S

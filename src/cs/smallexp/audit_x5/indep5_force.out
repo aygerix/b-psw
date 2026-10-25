@@ -1,0 +1,7 @@
+A: F_5 split t = a - 2b, a,b in {0,+-1}, disjoint: OK
+F r= 8 bound=   59049 consumed=   61101 consumed-bound=   2052 zero-block discards=148 one-sided discards=0 |I|=4760 [13.9s]
+F r= 9 bound=  100000 consumed=  101270 consumed-bound=   1270 zero-block discards=127 one-sided discards=0 |I|=4433 [23.3s]
+F r=10 bound=  161051 consumed=  163636 consumed-bound=   2585 zero-block discards=115 one-sided discards=0 |I|=7282 [41.3s]
+F r=11 bound=  248832 consumed=  251556 consumed-bound=   2724 zero-block discards=84 one-sided discards=0 |I|=14219 [63.4s]
+F r=12 bound=  371293 consumed=  372294 consumed-bound=   1001 zero-block discards=77 one-sided discards=0 |I|=16297 [82.5s]
+F r=13 bound=  537824 consumed=  538832 consumed-bound=   1008 zero-block discards=72 one-sided discards=0 |I|=25165 [69.0s]

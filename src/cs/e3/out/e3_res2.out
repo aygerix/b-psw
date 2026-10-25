@@ -1,0 +1,16 @@
+(a) shared curve: R_j mod (c - 2/r3^2, q - 1/r3 + r3^2) =  0   0   0
+(b) I3 (degenerate loci removed): dim =  1    time  6
+    after removing the shared curve: dim =  0 , vdim =  30    time  7
+    eliminant in r3:
+     [mult  1 ] deg  18 :  47*r3^18+102*r3^15-36*r3^12+189*r3^9-162*r3^6-2187*r3^3-729
+     [mult  2 ] deg  6 :  r3^6-42*r3^3+9
+    minimal primes:  2
+     prime  1  vdim  18 :
+        47*r3^18+102*r3^15-36*r3^12+189*r3^9-162*r3^6-2187*r3^3-729
+        110309*r3^16+278874*r3^13-139671*r3^10+805599*r3^7-163539*r3^4+3308202*c-6682014*r3
+        45637*r3^17-32934*r3^14-143007*r3^11-16101*r3^8-1529253*r3^5-1566054*r3^2+1102734*q
+     prime  2  vdim  6 :
+        r3^6-42*r3^3+9
+        r3^4+36*c-33*r3
+        -17*r3^5+705*r3^2+72*q
+total time  7

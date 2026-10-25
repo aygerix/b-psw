@@ -1,4 +1,4 @@
-/* anchor3.c -- Theorem E engine: two-torus anchor enumeration.  Specification: src/te/SPEC.md.
+/* anchor3.c -- Theorem E engine: two-torus anchor enumeration.  Specification: src/te/SPEC.md.  Change log: FIXES block at end of file.
  *
  * Build (Makefile line):   anchor3: anchor3.c ; gcc -O2 -fopenmp -o anchor3 anchor3.c -lgmp -lm
  *
@@ -13,7 +13,7 @@
  *   --split S A B : one pass with split part S, A_S = A, B_S = B (repeatable; default one pass S=A=B=1).
  *   --nosieve : disable the small-prime factorisation of the Fermat-mod-m prefilter (control: prefilter
  *               survivor counts must be identical with and without it).
- *
+ *   --quiet   : silences control-mode hit lines (FERMAT/LUCAS/WEAK/PLANTFOUND) only; bpsw-mode HIT lines always print (FIX F1).
  * ======================================================================================================
  * COMPLETENESS ARGUMENT (restated from SPEC.md, with pointers to the code; tags [..] are greppable)
  * ======================================================================================================
@@ -665,7 +665,7 @@ static void record_hit(const char *tag, tstate *ts, u64 p1, u64 p2, u64 p3, u128
   {
     if(NHITS == CapHITS){ CapHITS = CapHITS ? 2 * CapHITS : 256; HITS = realloc(HITS, sizeof(hitrec) * CapHITS); }
     memset(&HITS[NHITS], 0, sizeof(hitrec)); HITS[NHITS].p1 = p1; HITS[NHITS].p2 = p2; HITS[NHITS].p3 = p3; HITS[NHITS].m = m; NHITS++;
-    if(!gQuiet){
+    if(!gQuiet || gMode == MODE_BPSW){   /* FIX F1: a bpsw HIT (counterexample) is never silenced by --quiet */
       char *ns = mpz_get_str(NULL, 10, ts->n);
       if(p1){ printf("%s n = %s = %llu * %llu * %llu%s%s  [branch %c]\n", tag, ns, (unsigned long long)p1, (unsigned long long)p2, (unsigned long long)p3, PC.S1 ? "" : " * ", PC.S1 ? "" : PC.Ss, branch); }
       else { mpz_t mm; mpz_init(mm); mpz_set_u128(mm, m); factor_string(mm, buf, sizeof buf); mpz_clear(mm);
@@ -1483,3 +1483,29 @@ int main(int argc, char **argv){
     double wt; ctrs c = run_pass(&wt); print_pass(&c, wt);
   }
   return 0; }
+
+/* ======================================================================================================
+ * FIXES (post-review change log; appended here so the tag line numbers in the header stay valid)
+ * ======================================================================================================
+ * F1 (2026-10-24, review 2, low severity, confirmed by reading).  Finding: with --quiet, record_hit() printed no
+ *    HIT line, so a bpsw-mode hit (a counterexample) would survive only as the count hits=N in the PASS line,
+ *    without n or its factors; SPEC requires every hit to be printed with its factors.  (No production driver
+ *    passes --quiet; the search itself was unaffected.)  Change: record_hit() line 668, the print block now runs
+ *    when !gQuiet || gMode == MODE_BPSW, i.e. --quiet silences only the control-mode hit lines (FERMAT, LUCAS,
+ *    WEAK, PLANTFOUND, W1ONE), which the self-test relies on.  Usage text line 16 updated in place, line 1 points
+ *    here.  No enumeration, prefilter or test code changed; line count of lines 1-1485 unchanged.
+ * Not applied (not defects of this file): review 1 found no defect; its notes concern the driver run_E.sh (check
+ *    rc and one PASS / 'incompatible' line per --split), the usability of --cap -2 / --sample (optional), and a
+ *    branch-C observation (no valid p1 < p2 with the true two-torus M; expected arithmetic).
+ * VALIDATION OF F1 (2026-10-25, fixed binary; scripts and table: src/te/val/fixF1/; 62/62 rows PASS):
+ *  - --selftest: PASSED, 0 failures.
+ *  - Hit-print test (test-only variant hp2: bpsw mode with M := ord and final test strong Fermat, so bpsw-mode HIT
+ *    lines occur; D = 5, X = 2e4 caps auto/0/-1, X = 1e5 caps auto/0; branch A and C print paths): fixed source,
+ *    with and without --quiet: HIT lines == hits=N (35, 35, 2009, 122, 122) and identical n-sets.  Pre-fix source
+ *    with --quiet: 0 HIT lines for the same hits=N (the reviewed defect reproduced); verbose n-sets identical.
+ *  - Calibration bpsw D = 5, X = 1e7: hits=0, all PASS/DIAG counters identical to the pre-fix run; --quiet equal.
+ *  - C1 one-torus brute-force equality 72/72, W1-final-test variant 54/54, split parts S > 1 108/108; C2 bpsw/weak
+ *    vs reference 72/72; C3 planted: default cap 792/792, cap 0 642/642, cap -1 217/217 (all 23 plant runs PASS).
+ *  - Every control output (c1 144, c1w 54, c6 108, c3 23 files) is identical to the pre-fix output after stripping
+ *    timing fields.
+ */

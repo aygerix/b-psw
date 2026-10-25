@@ -1,0 +1,14 @@
+out/v5_16_1e5.txt distinct n 864 inert 348 sprp2 173 slprp 0 korselt 413
+  sum over distinct inert n of 1/dLt = 1.9111e-02  median log dL/log n 0.500
+   dLt 53 n 1152271 rho 1/1 d 1 X 6 D -11
+   dLt 6077 n 19384289 rho 1/1 d 1 X 8 D 13
+   dLt 14573 n 50642240791 rho -1/1 d 2 X -43 D -11
+   dLt 114361 n 9701285761 rho 1/1 d 1 X 16 D -7
+   dLt 1140427 n 1101573374329 rho 1/1 d 1 X 28 D -11
+out/v5_30_3e5.txt distinct n 1968 inert 769 sprp2 365 slprp 0 korselt 886
+  sum over distinct inert n of 1/dLt = 1.9111e-02  median log dL/log n 0.500
+   dLt 53 n 1152271 rho 1/1 d 1 X 6 D -11
+   dLt 6077 n 19384289 rho 1/1 d 1 X 8 D 13
+   dLt 14573 n 50642240791 rho -1/1 d 2 X -43 D -11
+   dLt 114361 n 9701285761 rho 1/1 d 1 X 16 D -7
+   dLt 1140427 n 1101573374329 rho 1/1 d 1 X 28 D -11

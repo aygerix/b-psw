@@ -1,0 +1,54 @@
+E4 pre-registration (written before any computation), 2026-10-25.
+
+MECHANISM (FIC, "forced-index coupling").
+  Take primes whose index on ONE torus is forced algebraically and is unbounded:
+    S_F = inert primitive prime factors p of Phi_e(2), e <= EMAX   (ord_p 2 = e, Fermat index (p-1)/e forced)
+    S_L = inert primitive prime factors p of Phi*_f = prod_{d|f} F_d^mu(f/d), f <= FMAX  (z(p) = f, Lucas index (p+1)/f forced)
+  Such a prime costs ZERO new group bits on the forced side (its order e or f is a divisor of exponents already
+  paid for: every e <= 200 is 200-smooth). It is a free addition to a pool iff its OTHER side is usable.
+  Hypothesis H1: the forcing on one torus raises the index on the other torus (a non-Frobenian coupling of the
+  two Kummer events on a thin, infinite-level set). Under H1 the source supplies usable primes at no group cost.
+
+WHY IT IS NOT RECORDED.
+  Theorem S / D: Frobenian selections (finite Galois level, bounded index events) -- not applicable, the forced
+    index (p-1)/e is unbounded and p-dependent.
+  1/R law (census_1e10, onesided to 1e15/1e17): generic primes, absorbed R <= 1e4; joint 'both' 2 vs 2.19.
+  Attempt D / D2: BOTH orders small (gcd census), not the conditional law of one index given the other forced.
+  Attempt C ('exponential index forcing'): forced members inside Korselt families, not a pool source.
+  The conditional law of the other index on the forced thin set, at p up to ~1e60, has not been measured.
+
+PREDICTION (H0 = Kummer independence: the other-side element is uniform in the odd part of its cyclic group).
+  Per prime, with No = odd part of p+1 (S_F) or p-1 (S_L):
+    P(odd index = d) = phi(No/d)/No;  E[log index] = sum_{q^a||No} log q * sum_j j P(v_q = j).
+    Usable at row bound T: P_T = s_T/No, s_T = T-smooth part of No (the index absorbs the T-rough part).
+  Source yield (free primes added to a pool) = Delta N_T = sum_p P_T(p), summed over p > 1e10 (outside the census).
+  Expected: Delta N_200 << 1 and Delta N_1500 << 1, so N/(b+1) at (213.7, 33) stays 0.1537 and dG ~ 0.
+  Per-prime cost of the source under H0 = log2(1/P_T(p)) search-bits per usable prime (no group bits).
+  To close the small-b gap (Delta N ~ 180 at b ~ 214) H1 would need kappa = obs/pred >~ 1e3 in the usability tail.
+
+DISCRIMINATING EXPERIMENT + MATCHED CONTROL.
+  For each forced prime p: factor the other group order (p+1 or p-1), compute the other order exactly (z(p) or
+  ord_p 2), the odd index, and the Kummer predictions. CONTROL: for each forced p, KCTL random inert primes of the
+  same bit length and the SAME residue class mod e (S_F: p' == 1 mod e) resp. mod f (S_L: p' == -1 mod f).
+  The control keeps size and every Frobenian datum at the forced modulus and removes exactly the forcing.
+  Statistics (forced vs control, each vs its own Kummer prediction): sum log(odd index); counts of odd index >= t,
+  t = 3, 10, 100, 1000; usability counts at T = 200, 1500, 10^4; stratified p < 1e10 / p >= 1e10.
+  Kill H1: forced obs/pred within the control's obs/pred (and both ~1) in every statistic.
+  Confirm H1: forced obs/pred >> control in the tails / usability, beyond sampling error.
+COST CAP: <= 2 core-hours total, run with timeout <= 3600 nice -n 10, <= 2 processes, measure on EMAX=80, FMAX=120 first.
+
+ADDENDUM (written after the main run, before the replication run).
+  Main run (full_F.out, full_L.out): FF null in every statistic. LF, stratum p > 2^33 (n = 180): log-index ratio
+  1.39 (z +1.99), t10 11 vs 5.8 (Poisson P ~ 0.03), t100 2 vs 0.61, t1000 1 vs 0.07; control ratios <= 1.
+  The stratum p < 2^33 shows the opposite (t10 4 vs 8.9). Large indices are single primes q unrelated to f.
+  Reading before replication: consistent with noise after multiplicity (72 numbers inspected).
+  REPLICATION (disjoint exponents: f with 230 < 0.694 phi(f) <= 300, e with 230 < phi(e) <= 300):
+    H0 predicts LF(p > 2^33) log ratio 1.00 +- 1/z-scale, t10 ratio 1.
+    The main-run effect predicts log ratio ~1.4 and t10 ratio ~1.9.
+    Decision: replicated if the combined (main + replication) LF p > 2^33 log-index z >= 3 AND the replication
+    alone has z >= 2 in the same direction. Otherwise recorded as noise.
+
+DECISION (after replication; outputs in out/, summaries out/full_summary.txt, out/rep_summary.txt, out/combL_summary.txt).
+  Replication alone (147 LF, 78 with p > 2^33): log ratio 0.64, z = -1.18 (opposite sign). Combined LF p > 2^33:
+  log ratio 1.16, z = +0.98 < 3.  => The main-run LF excess is recorded as NOISE (pre-registered rule).
+  FIC verdict: COMPUTED null for index coupling on cyclotomic thin sets (bounded ranges above). Total compute ~0.6 core-h.

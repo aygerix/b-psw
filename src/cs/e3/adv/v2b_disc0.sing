@@ -1,0 +1,34 @@
+// src/cs/e3/adv/v2b_disc0.sing -- (i) disc(A) = 0 slice of the 3-good locus in invariant coordinates (a, b, u);
+// (ii) consistency of v2's R_j (invariants, Res(f_j+1, F+1)) with e3_R's R_j ((q,c,r3), mu = 1, Res(f_j+1, prod - 1)).
+LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring S = 0, (a, b, u), dp;
+execute(read("out/v2_R.txt"));
+poly disc = (a + u + a*u + a*u*b)^2 - 4*a^2*u^2*b;
+poly dg0 = a*u*(1 + a*b);
+"disc factors: "; factorize(disc);
+ideal Z = SAT(ideal(disc, V1, V2, V3), dg0);
+"3-good on disc = 0: dim ", dim(std(Z));
+list mp = minAssGTZ(Z); int i; int m;
+for (i = 1; i <= size(mp); i++) { ideal Pc = std(mp[i]); "  comp ", i, ": dim ", dim(Pc), " vdim ", vdim(Pc); for (m = 1; m <= size(Pc); m++) { "     ", Pc[m]; } kill Pc; }
+"on the rho-curve closure? reduce rho-curve generators mod each component:";
+for (i = 1; i <= size(mp); i++) { ideal Pc = std(mp[i]); "  comp ", i, ": ", reduce(a - 2, Pc), "   ", reduce(u*b + u - 1, Pc); kill Pc; }
+ring T = 0, (q, c, r3), dp;
+execute(read("../out/e3_R_decl.txt"));
+setring S;
+list VV = list(V1, V2, V3); int j; list dbs;
+for (j = 1; j <= 3; j++) { dbs[j] = deg(VV[j], intvec(0,1,0)); }
+// homogenise in b: Vh(a, b, u, w) with b -> b/w, times w^db ; then map a -> c r3^2, b -> q, u -> r3^3, w -> r3^2
+ring Sh = 0, (a, b, u, w), dp;
+list VV = imap(S, VV); list Vh;
+for (j = 1; j <= 3; j++) { poly f = VV[j]; poly h = 0; int k;
+  matrix Mb = coeffs(f, b);
+  for (k = 1; k <= nrows(Mb); k++) { h = h + Mb[k,1] * b^(k-1) * w^(dbs[j] - (k-1)); }
+  Vh[j] = h; kill f; kill h; kill k; kill Mb; }
+setring T;
+map psi = Sh, c*r3^2, q, r3^3, r3^2;
+list Wt; for (j = 1; j <= 3; j++) { setring Sh; poly hh = Vh[j]; setring T; Wt[j] = psi(hh); setring Sh; kill hh; setring T; }
+list RT = list(R1, R2, R3);
+for (j = 1; j <= 3; j++) { "j = ", j, ":  theirs divides mine (mapped)? ", reduce(Wt[j], std(RT[j])) == 0, "   mine (mapped) factors:"; factorize(Wt[j]); }
+quit;

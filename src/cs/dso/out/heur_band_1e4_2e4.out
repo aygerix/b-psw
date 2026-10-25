@@ -1,0 +1,103 @@
+CAT inert shared=0 ratio=generic  sumE=1322.5184  E2cells=0.00001  E3cells=9.477e-13
+CAT split shared=0 ratio=generic  sumE=8.3495  E2cells=0.00110  E3cells=1.069e-06
+CAT split shared=0 ratio=1:1  sumE=0.1224  E2cells=0.00059  E3cells=1.307e-06
+CAT split shared=0 ratio=1:2  sumE=0.0612  E2cells=0.00015  E3cells=1.634e-07
+CAT split shared=0 ratio=1:3  sumE=0.0413  E2cells=0.00007  E3cells=5.438e-08
+CAT split shared=0 ratio=1:4  sumE=0.0305  E2cells=0.00004  E3cells=2.042e-08
+CAT split shared=0 ratio=2:1  sumE=0.0610  E2cells=0.00015  E3cells=1.634e-07
+CAT split shared=0 ratio=2:3  sumE=0.0218  E2cells=0.00002  E3cells=6.937e-09
+CAT split shared=0 ratio=3:1  sumE=0.0412  E2cells=0.00007  E3cells=5.438e-08
+CAT split shared=0 ratio=3:2  sumE=0.0218  E2cells=0.00002  E3cells=6.937e-09
+CAT split shared=0 ratio=3:4  sumE=0.0124  E2cells=0.00001  E3cells=9.505e-10
+CAT split shared=0 ratio=4:1  sumE=0.0303  E2cells=0.00004  E3cells=2.042e-08
+CAT split shared=0 ratio=4:3  sumE=0.0123  E2cells=0.00001  E3cells=9.505e-10
+CAT split shared=1 ratio=generic  sumE=1003.7269  E2cells=1.73839  E3cells=3.734e-03
+CAT split shared=1 ratio=1:1  sumE=354.5712  E2cells=2.98470  E3cells=1.583e-02
+CAT split shared=1 ratio=1:2  sumE=227.5209  E2cells=2.08499  E3cells=1.086e-02
+CAT split shared=1 ratio=1:3  sumE=39.2962  E2cells=0.11006  E3cells=1.947e-04
+CAT split shared=1 ratio=1:4  sumE=44.7709  E2cells=0.15225  E3cells=3.772e-04
+CAT split shared=1 ratio=2:1  sumE=159.2992  E2cells=1.72924  E3cells=1.720e-02
+CAT split shared=1 ratio=2:3  sumE=40.4561  E2cells=0.15778  E3cells=5.327e-04
+CAT split shared=1 ratio=3:1  sumE=39.2943  E2cells=0.11006  E3cells=1.947e-04
+CAT split shared=1 ratio=3:2  sumE=59.9964  E2cells=0.19201  E3cells=3.320e-04
+CAT split shared=1 ratio=3:4  sumE=15.7565  E2cells=0.01722  E3cells=1.354e-05
+CAT split shared=1 ratio=4:1  sumE=113.0776  E2cells=1.57621  E3cells=1.681e-02
+CAT split shared=1 ratio=4:3  sumE=46.7094  E2cells=0.22664  E3cells=7.986e-04
+TOTAL sumE=3475.800 E2cells=11.0818 E3cells=6.6876e-02
+BAND inert cells with max(d,e) in (10000, 20000]: E=1001.2447 E2cells=1.6952e-06 E3cells=1.4097e-14
+BAND split cells with max(d,e) in (10000, 20000]: E=1348.4363 E2cells=8.5662e+00 E3cells=5.7333e-02
+SIGN inert expected primes p>X: 1322.518
+SIGN split expected primes p>X: 2153.281
+LBIN inert log2L=7 sumE=0.0000 E2cells=0.00000
+LBIN inert log2L=8 sumE=0.0000 E2cells=0.00000
+LBIN inert log2L=9 sumE=0.0004 E2cells=0.00000
+LBIN inert log2L=10 sumE=0.0022 E2cells=0.00000
+LBIN inert log2L=11 sumE=0.0088 E2cells=0.00000
+LBIN inert log2L=12 sumE=0.0251 E2cells=0.00000
+LBIN inert log2L=13 sumE=0.0636 E2cells=0.00000
+LBIN inert log2L=14 sumE=0.1645 E2cells=0.00000
+LBIN inert log2L=15 sumE=0.3815 E2cells=0.00000
+LBIN inert log2L=16 sumE=0.8909 E2cells=0.00000
+LBIN inert log2L=17 sumE=2.0830 E2cells=0.00000
+LBIN inert log2L=18 sumE=4.8649 E2cells=0.00000
+LBIN inert log2L=19 sumE=9.7009 E2cells=0.00000
+LBIN inert log2L=20 sumE=17.4678 E2cells=0.00000
+LBIN inert log2L=21 sumE=31.6018 E2cells=0.00000
+LBIN inert log2L=22 sumE=56.7998 E2cells=0.00000
+LBIN inert log2L=23 sumE=92.0773 E2cells=0.00000
+LBIN inert log2L=24 sumE=158.1100 E2cells=0.00000
+LBIN inert log2L=25 sumE=260.8858 E2cells=0.00000
+LBIN inert log2L=26 sumE=359.6640 E2cells=0.00000
+LBIN inert log2L=27 sumE=280.1093 E2cells=0.00000
+LBIN inert log2L=28 sumE=47.6167 E2cells=0.00000
+LBIN split log2L=4 sumE=0.0007 E2cells=0.00000
+LBIN split log2L=5 sumE=0.0080 E2cells=0.00000
+LBIN split log2L=6 sumE=0.0593 E2cells=0.00001
+LBIN split log2L=7 sumE=0.3026 E2cells=0.00012
+LBIN split log2L=8 sumE=1.3567 E2cells=0.00091
+LBIN split log2L=9 sumE=5.4154 E2cells=0.00624
+LBIN split log2L=10 sumE=22.0228 E2cells=0.04232
+LBIN split log2L=11 sumE=78.7356 E2cells=0.26195
+LBIN split log2L=12 sumE=243.2295 E2cells=1.08107
+LBIN split log2L=13 sumE=786.9480 E2cells=5.77438
+LBIN split log2L=14 sumE=553.6268 E2cells=3.27907
+LBIN split log2L=15 sumE=248.0641 E2cells=0.52015
+LBIN split log2L=16 sumE=118.1382 E2cells=0.10901
+LBIN split log2L=17 sumE=49.9379 E2cells=0.00565
+LBIN split log2L=18 sumE=23.9967 E2cells=0.00080
+LBIN split log2L=19 sumE=11.2480 E2cells=0.00008
+LBIN split log2L=20 sumE=5.3875 E2cells=0.00001
+LBIN split log2L=21 sumE=2.5624 E2cells=0.00000
+LBIN split log2L=22 sumE=1.2177 E2cells=0.00000
+LBIN split log2L=23 sumE=0.5739 E2cells=0.00000
+LBIN split log2L=24 sumE=0.2657 E2cells=0.00000
+LBIN split log2L=25 sumE=0.1177 E2cells=0.00000
+LBIN split log2L=26 sumE=0.0480 E2cells=0.00000
+LBIN split log2L=27 sumE=0.0162 E2cells=0.00000
+LBIN split log2L=28 sumE=0.0021 E2cells=0.00000
+EBIN inert log10E=-13 sumE=0.00000
+EBIN inert log10E=-12 sumE=0.00003
+EBIN inert log10E=-11 sumE=0.00145
+EBIN inert log10E=-10 sumE=0.01670
+EBIN inert log10E=-9 sumE=0.09725
+EBIN inert log10E=-8 sumE=0.39148
+EBIN inert log10E=-7 sumE=1.35485
+EBIN inert log10E=-6 sumE=4.48408
+EBIN inert log10E=-5 sumE=14.63730
+EBIN inert log10E=-4 sumE=47.54618
+EBIN inert log10E=-3 sumE=148.18916
+EBIN inert log10E=-2 sumE=528.19118
+EBIN inert log10E=-1 sumE=577.60875
+EBIN split log10E=-13 sumE=0.00000
+EBIN split log10E=-12 sumE=0.00007
+EBIN split log10E=-11 sumE=0.00369
+EBIN split log10E=-10 sumE=0.05364
+EBIN split log10E=-9 sumE=0.37032
+EBIN split log10E=-8 sumE=1.53802
+EBIN split log10E=-7 sumE=5.31608
+EBIN split log10E=-6 sumE=17.33714
+EBIN split log10E=-5 sumE=57.58583
+EBIN split log10E=-4 sumE=199.73790
+EBIN split log10E=-3 sumE=660.64300
+EBIN split log10E=-2 sumE=928.43488
+EBIN split log10E=-1 sumE=282.26090

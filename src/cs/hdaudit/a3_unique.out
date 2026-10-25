@@ -1,0 +1,36 @@
+M = 135: dim = 0  vdim = 6  time = 0
+  G5(a) in ideal: 1
+  eliminant in a: 
+[1]:
+   _[1]=1
+   _[2]=1141822a3-15421455a2+60725700a-68890500
+[2]:
+   1,1
+M = 7: dim = 0  vdim = 6  time = 0
+  G5(a) in ideal: 1
+  eliminant in a: 
+[1]:
+   _[1]=1
+   _[2]=50a3-441a2+1372a-1372
+[2]:
+   1,1
+M = 256: dim = 0  vdim = 6  time = 0
+  G5(a) in ideal: 0
+  eliminant in a: 
+[1]:
+   _[1]=1
+   _[2]=121190663a3-1664377344a2+6602358784a-7516192768
+[2]:
+   1,1
+M = -3: dim = 0  vdim = 6  time = 0
+  G5(a) in ideal: 1
+  eliminant in a: 
+[1]:
+   _[1]=1
+   _[2]=20a3+21a2-882a+1512
+[2]:
+   1,1
+
+real	0m0.065s
+user	0m0.034s
+sys	0m0.011s

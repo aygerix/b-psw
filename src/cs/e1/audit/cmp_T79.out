@@ -1,0 +1,48 @@
+#### D=-31 (1,2) T0=79
+lam 0.080000 DONE M_ub 4.838146 best 4.838135 N 13 bits 102.023 nodes 407 exact 5 pruned 199 time 0.01 sb 0 sbclosures 0
+lam 0.100000 DONE M_ub 3.056966 best 3.056960 N 7 bits 39.430 nodes 225 exact 12 pruned 101 time 0.01 sb 0 sbclosures 0
+lam 0.120000 DONE M_ub 2.486835 best 2.486832 N 5 bits 20.943 nodes 107 exact 20 pruned 34 time 0.00 sb 0 sbclosures 0
+lam 0.150000 DONE M_ub 2.077935 best 2.077933 N 4 bits 12.814 nodes 31 exact 6 pruned 10 time 0.00 sb 0 sbclosures 0
+lam 0.200000 DONE M_ub 1.618624 best 1.618622 N 3 bits 6.907 nodes 13 exact 2 pruned 5 time 0.00 sb 0 sbclosures 0
+D = -31, class (1,2), T0 = 79: primes 167, items 116, rows 21, constraints 1209
+lam 0.0800: status 0 (Optimization terminated successfully), primal M = 4.838135380280107, dual bound = 4.838135380280107, at (bits 102.02330774649872, N 13), 6.2 s; primes [3, 43, 571, 739, 1979, 3067, 6571, 8059, 39883, 40699, 41539, 179827, 201499]
+lam 0.1000: status 0 (Optimization terminated successfully), primal M = 3.0569598176630817, dual bound = 3.0569598176630817, at (bits 39.43040182336918, N 7), 5.0 s; primes [3, 11, 43, 251, 491, 827, 2243]
+lam 0.1200: status 0 (Optimization terminated successfully), primal M = 2.4868322950205672, dual bound = 2.4868322950205672, at (bits 20.943064208162003, N 5), 4.7 s; primes [3, 11, 43, 251, 491]
+lam 0.1500: status 0 (Optimization terminated successfully), primal M = 2.077932821317445, dual bound = 2.077932821317445, at (bits 12.813781191217036, N 4), 3.3 s; primes [3, 11, 43, 251]
+lam 0.2000: status 0 (Optimization terminated successfully), primal M = 1.6186218808782984, dual bound = 1.6186218808782984, at (bits 6.906890595608518, N 3), 1.0 s; primes [3, 11, 251]
+#### D=-7 (1,2) T0=79
+lam 0.080000 DONE M_ub 5.646281 best 5.646268 N 15 bits 116.922 nodes 1035 exact 4 pruned 514 time 0.03 sb 0 sbclosures 0
+lam 0.100000 DONE M_ub 3.473133 best 3.473119 N 14 bits 105.269 nodes 527 exact 15 pruned 249 time 0.02 sb 0 sbclosures 0
+lam 0.120000 DONE M_ub 1.898253 best 1.898245 N 11 bits 75.848 nodes 177 exact 25 pruned 64 time 0.01 sb 0 sbclosures 0
+lam 0.150000 DONE M_ub 1.312257 best 1.312256 N 2 bits 4.585 nodes 39 exact 9 pruned 11 time 0.00 sb 0 sbclosures 0
+lam 0.200000 DONE M_ub 1.083009 best 1.083007 N 2 bits 4.585 nodes 13 exact 3 pruned 4 time 0.00 sb 0 sbclosures 0
+D = -7, class (1,2), T0 = 79: primes 158, items 109, rows 21, constraints 1130
+lam 0.0800: status 0 (Optimization terminated successfully), primal M = 5.646267720356021, dual bound = 5.646267720356021, at (bits 116.92165349554973, N 15), 7.1 s; primes [3, 19, 283, 1459, 3499, 9859, 19603, 23827, 48299, 132859, 234499, 246739, 279187, 647219, 32106619]
+lam 0.1000: status 0 (Optimization terminated successfully), primal M = 3.4731191477452237, dual bound = 3.4731191477452237, at (bits 105.26880852254774, N 14), 6.5 s; primes [3, 19, 1459, 3499, 9859, 19603, 23827, 48299, 132859, 234499, 246739, 279187, 647219, 32106619]
+lam 0.1200: status 0 (Optimization terminated successfully), primal M = 1.898245122178361, dual bound = 1.898245122178361, at (bits 75.84795731518032, N 11), 4.5 s; primes [3, 59, 83, 419, 1259, 7019, 35531, 48299, 97499, 234499, 647219]
+lam 0.1500: status 0 (Optimization terminated successfully), primal M = 1.3122556248918267, dual bound = 1.3122556248918267, at (bits 4.584962500721156, N 2), 3.4 s; primes [3, 19]
+lam 0.2000: status 0 (Optimization terminated successfully), primal M = 1.083007499855769, dual bound = 1.083007499855769, at (bits 4.584962500721156, N 2), 1.9 s; primes [3, 19]
+#### D=5 (2,0) T0=79
+lam 0.080000 DONE M_ub 5.575047 best 5.575036 N 14 bits 105.312 nodes 653 exact 13 pruned 314 time 0.01 sb 0 sbclosures 0
+lam 0.100000 DONE M_ub 3.628633 best 3.628624 N 12 bits 83.714 nodes 241 exact 14 pruned 107 time 0.01 sb 0 sbclosures 0
+lam 0.120000 DONE M_ub 1.954358 best 1.954349 N 12 bits 83.714 nodes 93 exact 24 pruned 23 time 0.00 sb 0 sbclosures 0
+lam 0.150000 DONE M_ub 0.599024 best 0.599022 N 2 bits 9.340 nodes 21 exact 6 pruned 5 time 0.00 sb 0 sbclosures 0
+lam 0.200000 DONE M_ub 0.283009 best 0.283007 N 1 bits 3.585 nodes 11 exact 3 pruned 3 time 0.00 sb 0 sbclosures 0
+D = 5, class (2,0), T0 = 79: primes 112, items 92, rows 20, constraints 717
+lam 0.0800: status 0 (Optimization terminated successfully), primal M = 5.575036133559632, dual bound = 5.575036133559632, at (bits 105.3120483305047, N 14), 1.6 s; primes [53, 113, 137, 157, 173, 197, 593, 953, 4817, 8093, 16073, 67733, 604997, 8429893]
+lam 0.1000: status 0 (Optimization terminated successfully), primal M = 3.628624047887519, dual bound = 3.628624047887519, at (bits 83.7137595211248, N 12), 1.5 s; primes [53, 113, 137, 173, 197, 317, 593, 953, 2213, 4817, 604997, 8429893]
+lam 0.1200: status 0 (Optimization terminated successfully), primal M = 1.9543488574650236, dual bound = 1.9543488574650236, at (bits 83.7137595211248, N 12), 1.7 s; primes [53, 113, 137, 173, 197, 317, 593, 953, 2213, 4817, 604997, 8429893]
+lam 0.1500: status 0 (Optimization terminated successfully), primal M = 0.5990224995673097, dual bound = 0.5990224995673097, at (bits 9.339850002884624, N 2), 1.6 s; primes [37, 113]
+lam 0.2000: status 0 (Optimization terminated successfully), primal M = 0.28300749985576873, dual bound = 0.28300749985576873, at (bits 3.584962500721156, N 1), 0.6 s; primes [13]
+#### D=-7 (2,1) T0=79
+lam 0.080000 DONE M_ub 6.722015 best 6.722005 N 14 bits 90.975 nodes 807 exact 5 pruned 399 time 0.02 sb 0 sbclosures 0
+lam 0.100000 DONE M_ub 4.902518 best 4.902507 N 14 bits 90.975 nodes 377 exact 6 pruned 183 time 0.01 sb 0 sbclosures 0
+lam 0.120000 DONE M_ub 3.083018 best 3.083008 N 14 bits 90.975 nodes 183 exact 5 pruned 87 time 0.01 sb 0 sbclosures 0
+lam 0.150000 DONE M_ub 1.046329 best 1.046324 N 7 bits 39.691 nodes 71 exact 7 pruned 29 time 0.00 sb 0 sbclosures 0
+lam 0.200000 DONE M_ub 0.800000 best 0.800000 N 1 bits 1.000 nodes 13 exact 7 pruned 0 time 0.00 sb 0 sbclosures 0
+D = -7, class (2,1), T0 = 79: primes 144, items 104, rows 21, constraints 993
+lam 0.0800: status 0 (Optimization terminated successfully), primal M = 6.722005336372696, dual bound = 6.722005336372696, at (bits 90.97493329534132, N 14), 4.1 s; primes [13, 61, 101, 157, 173, 853, 1301, 1693, 3541, 7741, 34781, 47701, 112573, 135469]
+lam 0.1000: status 0 (Optimization terminated successfully), primal M = 4.902506670465933, dual bound = 4.902506670465933, at (bits 90.97493329534132, N 14), 3.8 s; primes [13, 61, 101, 157, 173, 853, 1301, 1693, 3541, 7741, 34781, 47701, 112573, 135469]
+lam 0.1200: status 0 (Optimization terminated successfully), primal M = 3.0830080045590793, dual bound = 3.0830080045590793, at (bits 90.97493329534132, N 14), 5.0 s; primes [13, 61, 101, 157, 173, 853, 1301, 1693, 3541, 7741, 34781, 47701, 112573, 135469]
+lam 0.1500: status 0 (Optimization terminated successfully), primal M = 1.0463240233458875, dual bound = 1.0463240233458875, at (bits 39.69117317769441, N 7), 3.8 s; primes [13, 61, 101, 157, 173, 1301, 7741]
+lam 0.2000: status 0 (Optimization terminated successfully), primal M = 0.8, dual bound = 0.8, at (bits 1.0, N 1), 1.5 s; primes [5]

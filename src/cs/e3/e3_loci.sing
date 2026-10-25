@@ -1,0 +1,74 @@
+// src/cs/e3/e3_loci.sing -- E3: loci with 1, 2, 3 good members on the k = 3 shared-A Korselt variety.
+// Setup as e3_setup.sing (r2 = 0 by translation). Variables p, l are birational functions of (q, c, r3) on the
+// Korselt variety (l r3 (1 + c q) = c, p c r3^2 = -(c r3^3 + c q r3 + c + r3)), so we eliminate them and work in (q, c, r3).
+LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring R = 0, (t, a1, a2, a3, p, l, q, c, r3), dp;
+poly A = t^2 + p*t + q;
+poly f1 = 1 + c*A; poly f2 = 1 + A*t; poly f3 = 1 + l*A*(t - r3);
+poly F = f1*f2*f3;
+poly H = division(F - 1, A)[1][1,1];
+ideal K = subst(H, t, 0), subst(H, t, r3);
+poly dg = c*l*r3*(p^2 - 4*q)*(1 + c*q);
+poly G1  = subst(f1 + 1, t, a1); poly G1b = subst(f2*f3 - 1, t, a1);
+poly G2  = subst(f2 + 1, t, a2); poly G2b = subst(f1*f3 - 1, t, a2);
+poly G3  = subst(f3 + 1, t, a3); poly G3b = subst(f1*f2 - 1, t, a3);
+list GG = list(ideal(G1, G1b), ideal(G2, G2b), ideal(G3, G3b));
+list AV = list(a1, a2, a3);
+ideal KS = SAT(K, dg);
+proc report(ideal E, string tag) {
+  int i; int j;
+  "  ", tag, ": dim in (q,c,r3)-space = ", dim(std(E)) - 6, ", ngens = ", size(E);
+  list mp = minAssGTZ(E);
+  "  minimal associated primes: ", size(mp);
+  for (i = 1; i <= size(mp); i++) {
+    ideal P = mp[i];
+    "   prime ", i, ": dim = ", dim(std(P)) - 6, ", gens:";
+    for (j = 1; j <= size(P); j++) { if (size(P[j]) <= 40) { "     ", P[j]; } else { "     [", size(P[j]), " terms, deg ", deg(P[j]), "]"; } }
+    kill P;
+  }
+}
+int t0; int t1; int j; int k;
+// stage 1: one good member
+for (j = 1; j <= 3; j++) {
+  t0 = timer;
+  ideal Ij = SAT(KS + GG[j], dg);
+  ideal Ej = eliminate(Ij, AV[j]*p*l);
+  t1 = timer;
+  "STAGE 1, member ", j, " good: time(s) = ", t1 - t0;
+  int i;
+  for (i = 1; i <= size(Ej); i++) { list fa = factorize(Ej[i]); int m;
+    for (m = 1; m <= size(fa[1]); m++) { if (deg(fa[1][m]) > 0) { "   factor: ", size(fa[1][m]), " terms, total deg ", deg(fa[1][m]), ", deg(q,c,r3) = ", deg(fa[1][m], intvec(0,0,0,0,0,0,1,0,0)), deg(fa[1][m], intvec(0,0,0,0,0,0,0,1,0)), deg(fa[1][m], intvec(0,0,0,0,0,0,0,0,1)), ", mult ", fa[2][m]; } }
+    kill fa; kill m; }
+  kill i; kill Ij; kill Ej;
+}
+// stage 2: two good members
+for (j = 1; j <= 3; j++) { for (k = j + 1; k <= 3; k++) {
+  t0 = timer;
+  ideal Ijk = SAT(KS + GG[j] + GG[k], dg);
+  ideal Ejk = eliminate(Ijk, AV[j]*AV[k]*p*l);
+  t1 = timer;
+  "STAGE 2, members ", j, ",", k, " good: elimination time(s) = ", t1 - t0;
+  report(Ejk, "eliminated");
+  "  decomposition time(s) = ", timer - t1;
+  kill Ijk; kill Ejk;
+} }
+// stage 3: all three good
+t0 = timer;
+ideal I3 = SAT(KS + GG[1] + GG[2] + GG[3], dg);
+t1 = timer;
+"STAGE 3, all good: saturation time(s) = ", t1 - t0, ", dim (with a's, in the 8 non-t vars) = ", dim(std(I3)) - 1;
+list mp3 = minAssGTZ(I3);
+"  minimal associated primes (with a's): ", size(mp3), ", time(s) = ", timer - t1;
+int i;
+for (i = 1; i <= size(mp3); i++) {
+  ideal P = mp3[i];
+  "   prime ", i, ": dim = ", dim(std(P)) - 1;
+  for (j = 1; j <= size(P); j++) { if (size(P[j]) <= 40) { "     ", P[j]; } else { "     [", size(P[j]), " terms, deg ", deg(P[j]), "]"; } }
+  kill P;
+}
+ideal E3 = eliminate(I3, a1*a2*a3*p*l);
+report(E3, "STAGE 3 eliminated to (q,c,r3)");
+"total time(s) = ", timer;
+quit;

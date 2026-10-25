@@ -1,0 +1,6 @@
+A-reduction tests: 225 families, 225 with nontrivial gcd, mismatches: 0
+harmonic relation L = X(Y+Z)*2 - 4YZ = 0;  (Y+Z) mod X = 25*x^2 + 25
+
+real	0m0.084s
+user	0m0.056s
+sys	0m0.006s

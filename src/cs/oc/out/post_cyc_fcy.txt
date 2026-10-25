@@ -1,0 +1,133 @@
+src/cs/oc/oc_post.py:37: SymPyDeprecationWarning: 
+
+The `sympy.ntheory.residue_ntheory.mobius` has been moved to `sympy.functions.combinatorial.numbers.mobius`.
+
+See https://docs.sympy.org/latest/explanation/active-deprecations.html#deprecated-ntheory-symbolic-functions
+for details.
+
+This has been deprecated since SymPy version 1.13. It
+will be removed in a future version of SymPy.
+
+  mu = mobius(par // d)
+=== family cyc: 112 members, bits 3..1632
+  D=   5 members=111 inert=24 classes=25 top: (1,1):32/u9 (0,1):22/u2 (1,2):17/u2 (0,0):6/u2
+    subset search D=5 class=(0, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(1, 1): usable=9 subsets=502 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(1, 2): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(0, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(3, 3): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(3, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+  D=  -7 members=112 inert=19 classes=25 top: (1,1):38/u11 (0,0):23/u2 (1,2):7/u2 (3,0):5/u2
+    subset search D=-7 class=(2, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(3, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(0, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(1, 1): usable=11 subsets=2024 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(1, 2): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(3, 2): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+  D= -11 members=111 inert=45 classes=28 top: (1,1):20/u6 (0,1):19/u1 (1,2):14/u3 (1,0):13/u2
+    subset search D=-11 class=(0, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(1, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(1, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(1, 1): usable=6 subsets=57 prefilter_pass=0 BPSW_hits=0
+  D=  13 members=111 inert=26 classes=28 top: (1,0):35/u6 (0,0):21/u3 (1,2):9/u3 (3,0):6/u2
+    subset search D=13 class=(2, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(0, 0): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(1, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(1, 0): usable=6 subsets=57 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(3, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(1, 1): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+  D= -15 members=111 inert=21 classes=23 top: (1,0):44/u10 (0,0):27/u4 (3,2):8/u3 (1,1):6/u2
+    subset search D=-15 class=(0, 0): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=-15 class=(1, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-15 class=(2, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-15 class=(1, 0): usable=10 subsets=1012 prefilter_pass=0 BPSW_hits=0
+    subset search D=-15 class=(3, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+  D=  17 members=111 inert=21 classes=27 top: (1,1):34/u9 (0,1):22/u2 (1,2):12/u3 (3,0):7/u2
+    subset search D=17 class=(2, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(0, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(1, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(1, 1): usable=9 subsets=502 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(0, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(3, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+  D= -19 members=111 inert=48 classes=28 top: (1,0):27/u5 (1,1):17/u5 (0,2):11/u1 (0,0):10/u0
+    subset search D=-19 class=(1, 0): usable=5 subsets=26 prefilter_pass=0 BPSW_hits=0
+    subset search D=-19 class=(1, 1): usable=5 subsets=26 prefilter_pass=0 BPSW_hits=0
+  D= -23 members=112 inert=53 classes=26 top: (1,0):31/u4 (0,1):15/u1 (1,1):11/u5 (1,2):8/u3
+    subset search D=-23 class=(3, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(0, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(1, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(1, 1): usable=5 subsets=26 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(1, 0): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+=== family fcy: 174 members, bits 3..1650
+  D=   5 members=174 inert=14 classes=41 top: (2,0):38/u8 (1,1):15/u8 (2,1):11/u4 (2,2):11/u4
+    subset search D=5 class=(0, 3): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(1, 1): usable=8 subsets=247 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(2, 1): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(2, 0): usable=8 subsets=247 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(0, 4): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(2, 2): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(0, 1): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(1, 2): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(3, 3): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=5 class=(3, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+  D=  -7 members=173 inert=64 classes=42 top: (2,0):26/u6 (2,2):17/u5 (1,1):16/u7 (2,1):15/u1
+    subset search D=-7 class=(3, 0): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(1, 1): usable=7 subsets=120 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(2, 2): usable=5 subsets=26 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(2, 0): usable=6 subsets=57 prefilter_pass=0 BPSW_hits=0
+    subset search D=-7 class=(0, 0): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+  D= -11 members=173 inert=59 classes=40 top: (2,0):25/u7 (2,1):16/u5 (2,2):16/u1 (1,2):10/u3
+    subset search D=-11 class=(2, 1): usable=5 subsets=26 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(2, 0): usable=7 subsets=120 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(0, 0): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(1, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(0, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(2, 3): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(1, 1): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=-11 class=(3, 3): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+  D=  13 members=174 inert=82 classes=40 top: (2,0):30/u4 (1,0):18/u5 (2,2):14/u3 (2,1):13/u2
+    subset search D=13 class=(1, 2): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(2, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(2, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(0, 4): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(1, 0): usable=5 subsets=26 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(2, 0): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(0, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(2, 3): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(1, 1): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=13 class=(3, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+  D= -15 members=174 inert=28 classes=40 top: (2,1):35/u9 (2,0):22/u6 (1,0):20/u7 (0,0):15/u6
+    subset search D=-15 class=(2, 0): usable=6 subsets=57 prefilter_pass=0 BPSW_hits=0
+    subset search D=-15 class=(2, 1): usable=9 subsets=502 prefilter_pass=0 BPSW_hits=0
+    subset search D=-15 class=(0, 0): usable=6 subsets=57 prefilter_pass=0 BPSW_hits=0
+    subset search D=-15 class=(1, 0): usable=7 subsets=120 prefilter_pass=0 BPSW_hits=0
+    subset search D=-15 class=(3, 2): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+  D=  17 members=173 inert=78 classes=40 top: (2,0):42/u9 (1,2):14/u3 (1,0):12/u0 (0,1):10/u2
+    subset search D=17 class=(0, 3): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(1, 2): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(2, 0): usable=9 subsets=502 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(0, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(1, 1): usable=6 subsets=57 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(2, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(2, 2): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(0, 5): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=17 class=(3, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+  D= -19 members=173 inert=78 classes=43 top: (2,0):47/u8 (1,0):16/u4 (3,0):12/u2 (0,0):9/u2
+    subset search D=-19 class=(0, 1): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=-19 class=(1, 0): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=-19 class=(2, 0): usable=8 subsets=247 prefilter_pass=0 BPSW_hits=0
+    subset search D=-19 class=(0, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-19 class=(1, 1): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=-19 class=(2, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-19 class=(2, 2): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-19 class=(3, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+  D= -23 members=173 inert=85 classes=43 top: (2,0):30/u4 (2,1):17/u4 (1,0):11/u4 (3,0):11/u2
+    subset search D=-23 class=(0, 3): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(1, 2): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(2, 0): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(2, 1): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(1, 0): usable=4 subsets=11 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(2, 3): usable=3 subsets=4 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(1, 1): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(3, 0): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0
+    subset search D=-23 class=(3, 3): usable=2 subsets=1 prefilter_pass=0 BPSW_hits=0

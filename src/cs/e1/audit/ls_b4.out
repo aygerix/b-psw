@@ -1,0 +1,20 @@
+D = -23, class (2,0): pool 3273, rows 45, restarts 200, seed 11
+lam 0.2: best N - lam*bits = 0.80000 at (N 1, bits 1.0); config [(3, 'L', 1)]
+lam 0.25: best N - lam*bits = 0.75000 at (N 1, bits 1.0); config [(3, 'L', 1)]
+lam 0.3: best N - lam*bits = 0.70000 at (N 1, bits 1.0); config [(3, 'L', 1)]
+primal frontier (b: N@bits): 60:6@49.032 100:12@96.823 140:18@132.72 180:23@169.787 214:27@210.516 227:29@223.622 250:31@238.493 275:31@238.493 300:31@238.493 350:31@238.493 400:31@238.493
+D = 17, class (1,2): pool 2851, rows 44, restarts 200, seed 11
+lam 0.2: best N - lam*bits = 1.40000 at (N 2, bits 3.0); config [(3, 'L', 1), (5, 'F', 1)]
+lam 0.25: best N - lam*bits = 1.25000 at (N 2, bits 3.0); config [(3, 'L', 1), (5, 'F', 1)]
+lam 0.3: best N - lam*bits = 1.10000 at (N 2, bits 3.0); config [(3, 'L', 1), (5, 'F', 1)]
+primal frontier (b: N@bits): 60:8@49.561 100:14@94.529 140:19@133.552 180:25@179.944 214:29@207.854 227:32@224.691 250:35@242.125 275:39@272.18 300:42@299.298 350:43@326.919 400:43@326.919
+D = -15, class (0,0): pool 2715, rows 45, restarts 200, seed 11
+lam 0.2: best N - lam*bits = 0.00000 at (N 0, bits 0.0); config []
+lam 0.25: best N - lam*bits = 0.00000 at (N 0, bits 0.0); config []
+lam 0.3: best N - lam*bits = 0.00000 at (N 0, bits 0.0); config []
+primal frontier (b: N@bits): 60:6@54.267 100:10@88.05 140:17@135.767 180:22@171.782 214:22@171.782 227:22@171.782 250:22@171.782 275:22@171.782 300:22@171.782 350:22@171.782 400:22@171.782
+D = -19, class (1,0): pool 2364, rows 45, restarts 200, seed 11
+lam 0.2: best N - lam*bits = 0.00000 at (N 0, bits -0.0); config []
+lam 0.25: best N - lam*bits = 0.00000 at (N 0, bits -0.0); config []
+lam 0.3: best N - lam*bits = 0.00000 at (N 0, bits -0.0); config []
+primal frontier (b: N@bits): 60:5@54.291 100:10@99.796 140:11@138.926 180:11@138.926 214:11@138.926 227:11@138.926 250:11@138.926 275:11@138.926 300:11@138.926 350:11@138.926 400:11@138.926

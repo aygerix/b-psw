@@ -1,0 +1,12 @@
+cyc [0,64) n= 18 split= 18  excess p+1   +0.3  excess p-1   +9.6  bits 40  p-1 excess/bits 0.238
+cyc [64,128) n= 19 split= 19  excess p+1   -0.5  excess p-1  +14.3  bits 91  p-1 excess/bits 0.157
+cyc [128,256) n= 16 split= 16  excess p+1   -0.2  excess p-1  +22.2  bits 181  p-1 excess/bits 0.123
+cyc [256,512) n= 19 split= 19  excess p+1   -0.0  excess p-1  +31.9  bits 359  p-1 excess/bits 0.089
+cyc [512,1024) n= 15 split= 15  excess p+1   -0.8  excess p-1  +31.1  bits 694  p-1 excess/bits 0.045
+fcy [0,64) n= 37 split= 34  excess p+1   +2.1  excess p-1  +10.7  bits 40  p-1 excess/bits 0.271
+fcy [64,128) n= 26 split= 26  excess p+1   -0.2  excess p-1  +30.4  bits 92  p-1 excess/bits 0.332
+fcy [128,256) n= 27 split= 26  excess p+1   -0.4  excess p-1  +42.0  bits 186  p-1 excess/bits 0.226
+fcy [256,512) n= 25 split= 25  excess p+1   +5.0  excess p-1  +46.1  bits 387  p-1 excess/bits 0.119
+fcy [512,1024) n= 20 split= 18  excess p+1   +4.9  excess p-1  +44.8  bits 737  p-1 excess/bits 0.061
+131.83user 0.11system 2:25.15elapsed 90%CPU (0avgtext+0avgdata 61944maxresident)k
+0inputs+8outputs (0major+12534minor)pagefaults 0swaps

@@ -1,0 +1,40 @@
+== phitest
+phi(V) - W = 0
+formal p's: phi(V) - W = 0
+k = 5 formal: 0
+== mkd
+Sun Oct 25 06:56:59 UTC 2026
+[0;31m  ***   Warning: new maximum stack size = 2000003072 (1907.352 Mbytes).[0m
+[0;31m  *** _*_: Warning: increasing stack size to 16000000.[0m
+[0;31m  *** _*_: Warning: increasing stack size to 32000000.[0m
+pc7_mono_D3_p.sing: 16 eqs, total length 3008806 (3306 ms)
+pc7_mono_D3_0.sing: 16 eqs, total length 3008806 (3268 ms)
+pc7_mono_D2_p.sing: 12 eqs, total length 795007 (1141 ms)
+Sun Oct 25 06:57:07 UTC 2026
+-rw-rw-r-- 1 <user> <user>  795353 Oct 25 06:57 pc7_mono_D2_p.sing
+-rw-rw-r-- 1 <user> <user> 3009159 Oct 25 06:57 pc7_mono_D3_0.sing
+-rw-rw-r-- 1 <user> <user> 3009163 Oct 25 06:57 pc7_mono_D3_p.sing
+-rw-rw-r-- 1 <user> <user>    4971 Oct 25 06:56 pc7_mono_DF1.sing
+-rw-rw-r-- 1 <user> <user>   12365 Oct 25 06:56 pc7_mono_DF2.sing
+-rw-rw-r-- 1 <user> <user>   25611 Oct 25 06:56 pc7_mono_DF3.sing
+== DF1
+dim:
+2
+size:
+17
+== DF2
+dim:
+-1
+size:
+1
+J[1]=1
+== DF3
+dim:
+-1
+size:
+1
+J[1]=1
+== D3_p
+Sun Oct 25 06:57:07 UTC 2026
+
+halt 1

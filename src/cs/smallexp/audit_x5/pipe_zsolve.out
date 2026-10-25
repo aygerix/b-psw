@@ -1,0 +1,28 @@
+[5, 5, 5]            bound=     1024 pulled=     1000 ratio=0.977 |I|=     49 zero-blocks discarded=105 | target pulled=817 |J|=59 [1s]
+[5, 5, 5]            bound=     1024 pulled=      993 ratio=0.970 |I|=     66 zero-blocks discarded=88 | target pulled=778 |J|=92 [0s]
+[5, 5, 5, 5]         bound=     3125 pulled=     1614 ratio=0.516 |I|=     86 zero-blocks discarded=64 | target pulled=1437 |J|=148 [1s]
+[5, 5, 5, 5]         bound=     3125 pulled=     2140 ratio=0.685 |I|=    119 zero-blocks discarded=92 | target pulled=1818 |J|=63 [1s]
+[5, 5, 5, 5, 5]      bound=     7776 pulled=     4614 ratio=0.593 |I|=    479 zero-blocks discarded=101 | target pulled=3792 |J|=457 [3s]
+[5, 5, 5, 5, 5]      bound=     7776 pulled=     4030 ratio=0.518 |I|=    272 zero-blocks discarded=74 | target pulled=3465 |J|=572 [2s]
+[5, 5, 5, 5, 5, 5]   bound=    16807 pulled=     8342 ratio=0.496 |I|=    478 zero-blocks discarded=91 | target pulled=7546 |J|=374 [5s]
+[5, 5, 5, 5, 5, 5]   bound=    16807 pulled=     8602 ratio=0.512 |I|=    716 zero-blocks discarded=102 | target pulled=7272 |J|=367 [4s]
+[5, 5, 5, 5, 5, 5, 5] bound=    32768 pulled=    15461 ratio=0.472 |I|=   1636 zero-blocks discarded=84 | target pulled=13725 |J|=1730 [9s]
+[5, 5, 5, 5, 5, 5, 5] bound=    32768 pulled=    13953 ratio=0.426 |I|=    888 zero-blocks discarded=89 | target pulled=12408 |J|=757 [8s]
+[5, 5, 5, 5, 5, 5, 5, 5] bound=    59049 pulled=    22171 ratio=0.375 |I|=   3236 zero-blocks discarded=56 | target pulled=22171 |J|=1667 [14s]
+[5, 5, 5, 5, 5, 5, 5, 5] bound=    59049 pulled=    25640 ratio=0.434 |I|=   2060 zero-blocks discarded=72 | target pulled=22987 |J|=2464 [16s]
+[5, 5, 5, 5, 5, 5, 5, 5, 5] bound=   100000 pulled=    43658 ratio=0.437 |I|=   4288 zero-blocks discarded=72 | target pulled=43658 |J|=2788 [27s]
+[5, 5, 5, 5, 5, 5, 5, 5, 5] bound=   100000 pulled=    45534 ratio=0.455 |I|=   6570 zero-blocks discarded=85 | target pulled=40907 |J|=3967 [27s]
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5] bound=   161051 pulled=    67614 ratio=0.420 |I|=   8478 zero-blocks discarded=58 [22s]
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5] bound=   161051 pulled=    67922 ratio=0.422 |I|=   9461 zero-blocks discarded=58 [20s]
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] bound=   248832 pulled=   100825 ratio=0.405 |I|=  12963 zero-blocks discarded=47 [32s]
+[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5] bound=   371293 pulled=   157053 ratio=0.423 |I|=  13376 zero-blocks discarded=29 [42s]
+[25, 25]             bound=    59049 pulled=   123806 ratio=2.097 |I|=    169 zero-blocks discarded=25834 | target pulled=75784 |J|=166 [25s]
+Traceback (most recent call last):
+  File "~/b-psw/src/cs/smallexp/audit_x5/pipe_zsolve.py", line 54, in <module>
+    main()
+  File "~/b-psw/src/cs/smallexp/audit_x5/pipe_zsolve.py", line 51, in main
+    run(mods, 1, g)
+  File "~/b-psw/src/cs/smallexp/audit_x5/pipe_zsolve.py", line 34, in run
+    assert I is not None, f"pool exhausted {mods}"
+           ^^^^^^^^^^^^^
+AssertionError: pool exhausted [125]

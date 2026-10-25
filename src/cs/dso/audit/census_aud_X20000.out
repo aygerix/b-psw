@@ -1,0 +1,7 @@
+A: 121590383 bits (9.6 s)
+B: 84413165 bits (15.9 s)
+G = gcd(A,B): 58826 bits (47.8 s)
+listed primes 4113 (max 125024551), not dividing G: 0, max exponent 8
+COFACTOR = 1: prime support of G equals the list
+total 47.8 s
+47.79 s 268044 KB

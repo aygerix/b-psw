@@ -1,0 +1,8 @@
+families x d: 951  integral X: 2321645  prime triples: 2918  time 15.5s
+{'tri': 2918, 'inert': 1220, 's2': 658, 'sl': 0, 'bp': 0, 'kor': 1627}
+inert 1220: log dLt/log n min 0.284 median 0.500 max 0.605
+inert with n > 2^64 (1168): min 0.356 median 0.500
+member-1 dL1: max 377, max log dL1/log p1 0.391, dL1 == 1 on 643/1220 inert
+members 2,3 on inert: mean log dL2/log p2 0.6774  mean log dL3/log p3 0.6774
+sum over inert of 1/dLt = 1.1439e-01;  smallest dLt: (53, 1152271, [43, 127, 211], 1, 1, 1, 6, -11)
+time 17.5s

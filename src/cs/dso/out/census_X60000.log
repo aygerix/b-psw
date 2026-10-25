@@ -1,0 +1,14 @@
+[0;31m  *** polcyclo: Warning: increasing stack size to 16000000.[0m
+[0;31m  *** polcyclo: Warning: increasing stack size to 32000000.[0m
+[0;31m  *** polcyclo: Warning: increasing stack size to 64000000.[0m
+[0;31m  *** polcyclo: Warning: increasing stack size to 128000000.[0m
+[0;31m  *** polcyclo: Warning: increasing stack size to 256000000.[0m
+[0;31m  *** vecprod: Warning: increasing stack size to 512000000.[0m
+A: 1094277577 bits, 58.300000000000000000000000000000000000 s
+B: 759693269 bits, 41.400000000000000000000000000000000000 s
+[0;31m  *** gcd: Warning: increasing stack size to 1024000000.[0m
+G = gcd(A,B): 177210 bits, 417.00000000000000000000000000000000000 s
+split+factor: 11121 primes, 23.600000000000000000000000000000000000 s
+orders: 0.50000000000000000000000000000000000000 s; rows 11121; max p 662671081
+done total 540.80000000000000000000000000000000000 s
+778.91 s 1515120 KB

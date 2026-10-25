@@ -1,0 +1,13 @@
+Chernick F-form S={1,2,3}, m=6*276: n=27278026129  factors prime/composite-ok=True  D*=-11  strong_fermat2=True  strong_lucas=False  BPSW=False
+Chernick F-form S={1,2,3}, m=6*370: n=65700513721  factors prime/composite-ok=True  D*=-7  strong_fermat2=True  strong_lucas=False  BPSW=False
+Chernick F-form S={1,2,3,6}, m=6*506: n=3060522900274753  factors prime/composite-ok=True  D*=5  strong_fermat2=True  strong_lucas=False  BPSW=False
+Chernick F-form S={1,4,10,15,30}, m=60*947: n=10660798499708458244672488801  factors prime/composite-ok=True  D*=-11  strong_fermat2=True  strong_lucas=False  BPSW=False
+Lucas-Carmichael L-form S={1,2,3}, m=6*14: n=3479111  factors prime/composite-ok=True  D*=-7  strong_fermat2=False  strong_lucas=True  BPSW=False
+Lucas-Carmichael L-form S={1,2,3}, m=6*70: n=442590119  factors prime/composite-ok=True  D*=-7  strong_fermat2=False  strong_lucas=True  BPSW=False
+Lucas-Carmichael L-form S={1,2,3}, m=6*490: n=152378042039  factors prime/composite-ok=True  D*=-7  strong_fermat2=False  strong_lucas=True  BPSW=False
+composite Fibonacci F_37: n=24157817  factors prime/composite-ok=True  D*=5  strong_fermat2=False  strong_lucas=True  BPSW=False
+composite Fibonacci F_53: n=53316291173  factors prime/composite-ok=True  D*=5  strong_fermat2=False  strong_lucas=True  BPSW=False
+composite Fibonacci F_67: n=44945570212853  factors prime/composite-ok=True  D*=5  strong_fermat2=False  strong_lucas=True  BPSW=False
+composite Mersenne M_11: n=2047  factors prime/composite-ok=True  D*=5  strong_fermat2=True  strong_lucas=False  BPSW=False
+composite Mersenne M_23: n=8388607  factors prime/composite-ok=True  D*=5  strong_fermat2=True  strong_lucas=False  BPSW=False
+composite Mersenne M_29: n=536870911  factors prime/composite-ok=True  D*=-7  strong_fermat2=True  strong_lucas=False  BPSW=False

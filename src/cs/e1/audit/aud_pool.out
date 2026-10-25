@@ -1,0 +1,4 @@
+union records 232587 (new from c3 116678, new from CHM 115909), conflicting duplicates 0, non-smooth lines 0; classes 778, admissible (min(j1,j2) <= 1) 554, inert primes in inadmissible classes 0
+records per D: {-31: 26789, -23: 27134, -19: 26835, -15: 27146, -11: 26845, -7: 27113, 5: 13682, 13: 17793, 17: 18748, 29: 20502}
+instances compared 778, mismatching 0
+instances in index but not in my classes: 0 | my classes 778

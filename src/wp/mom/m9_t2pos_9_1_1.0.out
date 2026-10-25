@@ -1,0 +1,36 @@
+start 0: res 4.05e+02 S 1.691 vmax 1.162 2^kT2+ -3.0076e+04 margin 9.55e-10 dmin 1.77e-08 fail
+start 1: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 2.28e-11 fail
+start 2: res 4.85e+03 S 6.444 vmax 3.859 2^kT2+ 2.2548e+05 margin 0.00e+00 dmin 0.00e+00 fail
+start 3: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 0.00e+00 fail
+start 4: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 1.42e-12 fail
+start 5: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 0.00e+00 fail
+start 6: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin -5.55e-17 dmin 0.00e+00 fail
+start 7: res 2.75e-08 S 33.255 vmax 10.013 2^kT2+ 1.0000e+02 margin 2.02e-02 dmin 2.38e-01 SOL
+   u = array([ 1.39444668,  2.5191491 , -0.14113407,  0.07179769,  1.61180796,
+        0.73880513, -6.48760722, -2.71440342])
+   v = array([ 0.25013877,  8.40558959,  1.37881324,  4.87787557,  0.34801273,
+        0.09201372,  7.88912913, 10.013415  ])
+start 8: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 0.00e+00 fail
+start 9: res 4.85e+03 S 6.444 vmax 3.859 2^kT2+ 2.2548e+05 margin 8.59e-10 dmin 2.57e-09 fail
+start 10: res 1.95e+04 S 4.411 vmax 4.192 2^kT2+ -7.3222e+05 margin 0.00e+00 dmin 0.00e+00 fail
+start 11: res 1.22e-07 S 46.454 vmax 13.554 2^kT2+ 1.0000e+02 margin 1.80e-08 dmin 1.80e-01 fail
+start 12: res 1.95e+04 S 4.411 vmax 4.192 2^kT2+ -7.3222e+05 margin 0.00e+00 dmin 0.00e+00 fail
+start 13: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 1.74e-15 fail
+start 14: res 6.66e+01 S 2.501 vmax 1.317 2^kT2+ -1.6945e+04 margin 2.53e-14 dmin 1.77e-13 fail
+start 15: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 0.00e+00 fail
+start 16: res 6.66e+01 S 2.501 vmax 1.317 2^kT2+ -1.6945e+04 margin 4.50e-14 dmin 2.50e-10 fail
+start 17: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 0.00e+00 fail
+start 18: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 0.00e+00 fail
+start 19: res 1.46e+03 S 0.250 vmax 0.031 2^kT2+ -1.1325e+04 margin 0.00e+00 dmin 0.00e+00 fail
+start 20: res 4.05e+02 S 1.691 vmax 1.162 2^kT2+ -3.0076e+04 margin 0.00e+00 dmin 2.58e-08 fail
+start 21: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 8.33e-16 dmin 7.59e-12 fail
+start 22: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 2.08e-14 fail
+start 23: res 1.95e+04 S 4.411 vmax 4.192 2^kT2+ -7.3222e+05 margin 0.00e+00 dmin 0.00e+00 fail
+start 24: res 1.95e+04 S 4.411 vmax 4.192 2^kT2+ -7.3222e+05 margin 0.00e+00 dmin 0.00e+00 fail
+start 25: res 2.05e-08 S 33.394 vmax 8.673 2^kT2+ 1.0000e+02 margin 7.29e-02 dmin 3.43e-01 SOL
+   u = array([ 0.77975189, -2.42114415, -0.77834   , -2.04085632, -6.42062688,
+       -1.04047834,  0.44455578,  2.70740012])
+   v = array([0.12440311, 8.41210196, 0.5291699 , 7.35981176, 7.3982164 ,
+       0.84789802, 0.04934654, 8.6726763 ])
+start 26: res 6.66e+01 S 2.501 vmax 1.317 2^kT2+ -1.6945e+04 margin 2.33e-10 dmin 4.38e-09 fail
+start 27: res 4.30e+01 S 0.483 vmax 0.264 2^kT2+ 1.1099e+04 margin 0.00e+00 dmin 0.00e+00 fail

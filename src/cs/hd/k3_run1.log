@@ -1,0 +1,97 @@
+RESULT k3_a1_b011_s000_t1 D=5 G=3 dim=-1 time=0
+RESULT k3_a3_b011_s000_t2 D=11 G=6 dim=-1 time=0
+RESULT k3_a3_b011_s100_t2 D=11 G=7 dim=-1 time=2
+RESULT k3_a3_b011_s011_t1 D=11 G=5 dim=-1 time=7
+RESULT k3_a0_b111_s011_t0 D=3 G=2 dim=0 time=0
+RESULT k3_a0_b112_s000_t1 D=4 G=3 dim=-1 time=0
+RESULT k3_a0_b112_s012_t0 D=4 G=3 dim=-1 time=0
+RESULT k3_a0_b112_s111_t0 D=4 G=3 dim=-1 time=0
+RESULT k3_a0_b113_s000_t1 D=5 G=3 dim=-1 time=0
+RESULT k3_a0_b113_s001_t1 D=5 G=4 dim=-1 time=0
+RESULT k3_a0_b113_s003_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a0_b113_s012_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a0_b113_s013_t0 D=5 G=4 dim=-1 time=0
+RESULT k3_a0_b113_s111_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a0_b113_s112_t0 D=5 G=4 dim=-1 time=0
+RESULT k3_a0_b114_s001_t1 D=6 G=4 dim=-1 time=0
+RESULT k3_a0_b114_s002_t1 D=6 G=5 dim=-1 time=0
+RESULT k3_a0_b114_s004_t0 D=6 G=4 dim=-1 time=0
+RESULT k3_a0_b114_s013_t0 D=6 G=4 dim=-1 time=6
+RESULT k3_a0_b114_s014_t0 D=6 G=5 dim=-1 time=7
+RESULT k3_a0_b114_s112_t0 D=6 G=4 dim=-1 time=1
+RESULT k3_a0_b114_s113_t0 D=6 G=5 dim=-1 time=14
+RESULT k3_a0_b122_s000_t1 D=5 G=3 dim=-1 time=0
+RESULT k3_a0_b122_s001_t1 D=5 G=4 dim=-1 time=0
+TIMEOUT k3x011/k3_a5_b011_s000_t3.sing
+TIMEOUT k3sing/k3_a0_b122_s012_t0.sing
+TIMEOUT k3sing/k3_a0_b122_s022_t0.sing
+TIMEOUT k3sing/k3_a0_b122_s102_t0.sing
+TIMEOUT k3sing/k3_a0_b122_s111_t0.sing
+RESULT k3_a0_b123_s001_t1 D=6 G=4 dim=-1 time=17
+TIMEOUT k3sing/k3_a0_b122_s112_t0.sing
+RESULT k3_a0_b123_s002_t1 D=6 G=5 dim=-1 time=17
+RESULT k3_a0_b123_s011_t1 D=6 G=5 dim=-1 time=1
+RESULT k3_a0_b123_s010_t1 D=6 G=4 dim=-1 time=9
+TIMEOUT k3sing/k3_a0_b123_s013_t0.sing
+TIMEOUT k3sing/k3_a0_b123_s022_t0.sing
+TIMEOUT k3sing/k3_a0_b123_s023_t0.sing
+TIMEOUT k3sing/k3_a0_b123_s103_t0.sing
+TIMEOUT k3sing/k3_a0_b123_s112_t0.sing
+TIMEOUT k3sing/k3_a0_b123_s113_t0.sing
+TIMEOUT k3sing/k3_a0_b123_s121_t0.sing
+TIMEOUT k3sing/k3_a0_b123_s122_t0.sing
+TIMEOUT k3sing/k3_a0_b222_s000_t1.sing
+TIMEOUT k3sing/k3_a0_b222_s001_t1.sing
+TIMEOUT k3sing/k3_a0_b222_s012_t0.sing
+TIMEOUT k3sing/k3_a0_b222_s022_t0.sing
+TIMEOUT k3sing/k3_a0_b222_s111_t0.sing
+RESULT k3_a1_b000_s011_t0 D=3 G=2 dim=-1 time=0
+RESULT k3_a1_b001_s000_t1 D=4 G=3 dim=-1 time=0
+RESULT k3_a1_b001_s012_t0 D=4 G=3 dim=-1 time=0
+RESULT k3_a1_b001_s111_t0 D=4 G=3 dim=-1 time=0
+RESULT k3_a1_b002_s000_t1 D=5 G=3 dim=-1 time=0
+RESULT k3_a1_b002_s001_t1 D=5 G=4 dim=-1 time=0
+RESULT k3_a1_b002_s003_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a1_b002_s012_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a1_b002_s013_t0 D=5 G=4 dim=-1 time=0
+RESULT k3_a1_b002_s111_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a1_b002_s112_t0 D=5 G=4 dim=-1 time=0
+RESULT k3_a1_b003_s001_t1 D=6 G=4 dim=-1 time=0
+RESULT k3_a1_b003_s002_t1 D=6 G=5 dim=-1 time=0
+RESULT k3_a1_b003_s004_t0 D=6 G=4 dim=-1 time=0
+RESULT k3_a1_b003_s013_t0 D=6 G=4 dim=-1 time=0
+RESULT k3_a1_b003_s014_t0 D=6 G=5 dim=-1 time=0
+RESULT k3_a1_b003_s112_t0 D=6 G=4 dim=-1 time=0
+RESULT k3_a1_b003_s113_t0 D=6 G=5 dim=-1 time=0
+RESULT k3_a1_b011_s000_t1 D=5 G=3 dim=-1 time=0
+RESULT k3_a1_b011_s001_t1 D=5 G=4 dim=-1 time=0
+RESULT k3_a1_b011_s012_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a1_b011_s022_t0 D=5 G=4 dim=-1 time=0
+RESULT k3_a1_b011_s102_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a1_b011_s111_t0 D=5 G=3 dim=-1 time=0
+RESULT k3_a1_b011_s112_t0 D=5 G=4 dim=-1 time=0
+RESULT k3_a1_b012_s001_t1 D=6 G=4 dim=-1 time=0
+RESULT k3_a1_b012_s002_t1 D=6 G=5 dim=-1 time=0
+RESULT k3_a1_b012_s010_t1 D=6 G=4 dim=-1 time=0
+RESULT k3_a1_b012_s011_t1 D=6 G=5 dim=-1 time=0
+TIMEOUT k3sing/k3_a0_b222_s112_t0.sing
+RESULT k3_a1_b012_s013_t0 D=6 G=4 dim=-1 time=29
+TIMEOUT k3sing/k3_a1_b012_s022_t0.sing
+RESULT k3_a1_b012_s103_t0 D=6 G=4 dim=-1 time=4
+TIMEOUT k3sing/k3_a1_b012_s023_t0.sing
+TIMEOUT k3sing/k3_a1_b012_s112_t0.sing
+TIMEOUT k3sing/k3_a1_b012_s113_t0.sing
+TIMEOUT k3sing/k3_a1_b012_s121_t0.sing
+RESULT k3_a1_b111_s000_t1 D=6 G=3 dim=-1 time=0
+RESULT k3_a1_b111_s001_t1 D=6 G=4 dim=-1 time=0
+TIMEOUT k3sing/k3_a1_b012_s122_t0.sing
+TIMEOUT k3sing/k3_a1_b111_s012_t0.sing
+TIMEOUT k3sing/k3_a1_b111_s022_t0.sing
+TIMEOUT k3sing/k3_a1_b111_s111_t0.sing
+RESULT k3_a2_b000_s000_t1 D=6 G=3 dim=-1 time=0
+RESULT k3_a2_b000_s001_t1 D=6 G=4 dim=-1 time=0
+RESULT k3_a2_b000_s012_t0 D=6 G=3 dim=-1 time=0
+RESULT k3_a2_b000_s022_t0 D=6 G=4 dim=-1 time=0
+RESULT k3_a2_b000_s111_t0 D=6 G=3 dim=-1 time=0
+RESULT k3_a2_b000_s112_t0 D=6 G=4 dim=-1 time=0
+TIMEOUT k3sing/k3_a1_b111_s112_t0.sing

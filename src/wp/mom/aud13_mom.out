@@ -1,0 +1,17 @@
+  validation lin=0: 6 random rational member sets x 2 halves, V coefficients ALL EQUAL (exact)
+lin = 0:
+  E0 = M1_1**2/2 + M1_2*S - 51*M1_2/4 - 9*M1_4/2 - 2*M2_0*S + 261*M2_0/8 + 57*M2_2/2 - 20*M3_0 + 39*S**2/8 - 321*S/32 + 255/256
+  E1 = 12*M1_2 + M1_4 - 27*M2_0 - 6*M2_2 + 4*M3_0 - 5*S**2/2 + 351*S/16 - 255/32
+  PHI = -11*M1_2 + 23*M2_0 + S**2 - 209*S/4 + 1785/32
+  S-identity at t0 = -7/5 (lambda = 59/110): multipliers on (E0, E1) = [{al: 25/4, be: -5/2}]  HOLDS
+  S-bound: RHS + lam*Phimax > 0 requires S < [7.31053895207]  (Phimax = 729/32)
+  Phimax check: 2 e2max / 2^10 = 729/32 vs 729/32
+  validation lin=1: 6 random rational member sets x 2 halves, V coefficients ALL EQUAL (exact)
+lin = 1:
+  E0 = M1_1**2/2 + M1_2*S - 9*M1_2 - 4*M1_4 - 2*M2_0*S + 191*M2_0/8 + 51*M2_2/2 - 18*M3_0 + 31*S**2/8 - 6*S + 127/256
+  E1 = 39*M1_2/4 + M1_4 - 89*M2_0/4 - 6*M2_2 + 4*M3_0 - 9*S**2/4 + 15*S - 143/32
+  PHI = -10*M1_2 + 21*M2_0 + S**2 - 40*S + 1113/32
+  S-identity at t0 = -7/5 (lambda = 27/50): multipliers on (E0, E1) = [{al: 25/4, be: -5/2}]  HOLDS
+  S-bound: RHS + lam*Phimax > 0 requires S < [6.29890940493]  (Phimax = 585/32)
+  Phimax check: 2 e2max / 2^10 = 585/32 vs 585/32
+validation: PASS

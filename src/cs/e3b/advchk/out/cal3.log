@@ -1,0 +1,11 @@
+k=3 m=[0, 2, 2] sym=False slices=0 unknowns=7 equations=8 expected dim=-1
+converged non-degenerate: 4 / 3000
+  local dim 0  actual gcd degrees [0, 2, 2] (sum 4): 4
+k=3 m=[2, 1, 1] sym=False slices=0 unknowns=5 equations=6 expected dim=-1
+converged non-degenerate: 388 / 3000
+  local dim 0  actual gcd degrees [2, 1, 1] (sum 4): 14
+  local dim 1  actual gcd degrees [2, 1, 1] (sum 4): 374
+k=3 m=[2, 2, 1] sym=False slices=0 unknowns=6 equations=8 expected dim=-2
+converged non-degenerate: 0 / 3000
+k=3 m=[1, 2, 2] sym=False slices=0 unknowns=7 equations=9 expected dim=-2
+converged non-degenerate: 0 / 3000

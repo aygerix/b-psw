@@ -1,0 +1,20 @@
+// HD: linear common-root k = 5, members 1..4 Lucas-good (defect 1), any signs; a1 = 1. Is there ANY (complex) solution
+// with a_i nonzero and pairwise distinct? E_j = prod_{i != j}(a_j - 2 a_i) - a_j^4.
+LIB "elim.lib"; LIB "solve.lib";
+ring R = 0, (a2, a3, a4, a5), dp;
+poly a1 = 1;
+list a = a1, a2, a3, a4, a5;
+proc E(int j) { poly p = 1; int i; for (i = 1; i <= 5; i++) { if (i != j) { p = p * (a[j] - 2*a[i]); } } return(p - a[j]^4); }
+ideal I = E(1), E(2), E(3), E(4);
+poly nz = a2*a3*a4*a5*(a2-1)*(a3-1)*(a4-1)*(a5-1)*(a2-a3)*(a2-a4)*(a2-a5)*(a3-a4)*(a3-a5)*(a4-a5);
+int t0 = timer;
+ideal S = sat(I, nz)[1];
+S = std(S);
+"time(s) =", timer - t0; "dim =", dim(S); "vdim =", vdim(S);
+if (vdim(S) > 0 && vdim(S) < 400) {
+  ring L = 0, (a5, a4, a3, a2), lp;
+  ideal S = fetch(R, S); S = std(S);
+  "lex basis size", size(S); 
+  poly u = S[1]; "univariate in a2 degree:", deg(u); factorize(u);
+}
+quit;

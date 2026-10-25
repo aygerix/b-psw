@@ -1,0 +1,20 @@
+[0;31m  ***   Warning: new maximum stack size = 2500001792 (2384.188 Mbytes).[0m
+  trial 1: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): 14
+  trial 2: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): 14
+partA m=9 lin=0: failures 0 of 6
+  trial 1: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): 14
+  trial 2: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): 14
+partA m=8 lin=1: failures 0 of 6
+  trial 1: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): 18
+  trial 2: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): 18
+partA m=11 lin=0: failures 0 of 4
+  trial 1: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): 18
+  trial 2: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): 18
+partA m=10 lin=1: failures 0 of 4
+  trial 1: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): T'=0
+  trial 2: r0,r1,r2 ok = [1, 1, 1]  V==Laurent 1  coefficient of T'(-1) in V''(-1): T'=0
+partA m=3 lin=0: failures 0 of 4
+partB m=9 lin=0: lam = [-56, -14]~   symbolic residual D - lam.Z == 0 ? 1
+partB m=8 lin=1: lam = [-56, -14]~   symbolic residual D - lam.Z == 0 ? 1
+partB m=11 lin=0: lam = [-90, -18]~   symbolic residual D - lam.Z == 0 ? 1
+partB m=10 lin=1: lam = [-90, -18]~   symbolic residual D - lam.Z == 0 ? 1

@@ -1,0 +1,17 @@
+SUMMARY real b=8 bH=21.0 r=8 gen: success 1.00 over 10, primes 64, list-ops 8.28e+04 (log2 16.3), time 0.01s
+SUMMARY real b=8 bH=21.0 r=8 split: success 0.80 over 10, primes 397, list-ops 4.14e+05 (log2 18.7), time 0.02s
+SUMMARY real b=8 bH=21.0 r=16 gen: success 0.80 over 10, primes 128, list-ops 1.67e+05 (log2 17.4), time 0.01s
+SUMMARY real b=8 bH=21.0 r=16 split: success 0.80 over 10, primes 653, list-ops 6.42e+05 (log2 19.3), time 0.03s
+SUMMARY real b=8 bH=21.0 r=24 gen: success 0.80 over 10, primes 256, list-ops 2.73e+05 (log2 18.1), time 0.02s
+SUMMARY real b=8 bH=21.0 r=24 split: success 0.80 over 10, primes 902, list-ops 5.25e+05 (log2 19.0), time 0.04s
+SUMMARY real b=8 bH=21.0 r=32 gen: success 0.80 over 10, primes 512, list-ops 5.58e+05 (log2 19.1), time 0.05s
+SUMMARY real b=8 bH=21.0 r=32 split: success 0.90 over 10, primes 1158, list-ops 6.35e+05 (log2 19.3), time 0.05s
+SUMMARY real b=8 bH=21.0 r=40 gen: success 0.90 over 10, primes 1024, list-ops 1.45e+06 (log2 20.5), time 0.13s
+SUMMARY real b=8 bH=21.0 r=40 split: success 0.80 over 10, primes 1421, list-ops 1.35e+06 (log2 20.4), time 0.06s
+SUMMARY real b=8 bH=21.0 r=48 gen: success 0.80 over 10, primes 2048, list-ops 2.81e+06 (log2 21.4), time 0.27s
+SUMMARY real b=8 bH=21.0 r=48 split: success 0.80 over 10, primes 1677, list-ops 1.6e+06 (log2 20.6), time 0.08s
+SUMMARY real b=8 bH=21.0 r=56 gen: success 0.90 over 10, primes 4096, list-ops 4.15e+06 (log2 22.0), time 0.52s
+SUMMARY real b=8 bH=21.0 r=56 split: success 0.80 over 10, primes 1926, list-ops 1.01e+06 (log2 19.9), time 0.09s
+SUMMARY real b=8 bH=21.0 r=64 split: success 0.60 over 10, primes 2202, list-ops 3.93e+06 (log2 21.9), time 0.10s
+SUMMARY real b=8 bH=21.0 r=80 split: success 0.80 over 10, primes 2701, list-ops 2.56e+06 (log2 21.3), time 0.13s
+SUMMARY real b=8 bH=21.0 r=100 split: success 0.80 over 10, primes 3341, list-ops 3.15e+06 (log2 21.6), time 0.22s

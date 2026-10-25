@@ -1,0 +1,22 @@
+# D = -31, X = 10000, census rows = 2358, max p = 53028541
+# inert 1086, split 1271, ramified 1
+# p > X: 1130
+cell-size histogram: [(1, 2340), (2, 9)]
+  cell (ord, z) = (179, 179): [(359, 1), (1433, 1)]  gcd(odd ord, odd z) = 179  unusable (shared odd prime)
+  cell (ord, z) = (1116, 1116): [(1117, 1), (140617, 1)]  gcd(odd ord, odd z) = 279  unusable (shared odd prime)
+  cell (ord, z) = (2220, 2220): [(2221, 1), (4441, 1)]  gcd(odd ord, odd z) = 555  unusable (shared odd prime)
+  cell (ord, z) = (3236, 809): [(6473, 1), (25889, 1)]  gcd(odd ord, odd z) = 809  unusable (shared odd prime)
+  cell (ord, z) = (3708, 3708): [(3709, 1), (7417, 1)]  gcd(odd ord, odd z) = 927  unusable (shared odd prime)
+  cell (ord, z) = (4419, 4419): [(8839, 1), (327007, 1)]  gcd(odd ord, odd z) = 4419  unusable (shared odd prime)
+  cell (ord, z) = (6656, 6656): [(13313, 1), (39937, 1)]  gcd(odd ord, odd z) = 13  unusable (shared odd prime)
+  cell (ord, z) = (7328, 3664): [(14657, 1), (102593, 1)]  gcd(odd ord, odd z) = 229  unusable (shared odd prime)
+  cell (ord, z) = (8698, 8698): [(8699, 1), (78283, 1)]  gcd(odd ord, odd z) = 4349  unusable (shared odd prime)
+usable primes: 1102 (inert 1086, split 16)
+2-adic classes (v2 ord, v2 z): #usable [#inert]: [((1, 2), 180, 180), ((2, 1), 165, 165), ((0, 0), 157, 156), ((2, 0), 118, 118), ((0, 2), 110, 110), ((1, 0), 75, 75), ((0, 1), 64, 64), ((0, 3), 53, 53), ((3, 0), 47, 47), ((4, 0), 40, 40), ((0, 4), 30, 30), ((0, 5), 15, 15), ((5, 0), 12, 12), ((0, 6), 7, 7), ((6, 0), 6, 6), ((2, 2), 3, 0), ((8, 0), 3, 3), ((7, 6), 2, 0), ((0, 8), 2, 1), ((1, 1), 2, 0)]
+pairwise-closed graph: 0 edges, max clique 1
+exact search (k <= 5) done in 6.8 s
+  k = 2: subsets in scope 6.346e+04, anchor survivors 0, full solutions 0
+  k = 3: subsets in scope 2.97e+06, anchor survivors 0, full solutions 0
+  k = 4: subsets in scope 1.123e+08, anchor survivors 45, full solutions 0
+  k = 5: subsets in scope 3.52e+09, anchor survivors 1237, full solutions 0
+bpsw.py tests: 9, passes: 0

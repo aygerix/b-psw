@@ -1,0 +1,10 @@
+LIB "normal.lib"; LIB "primdec.lib";
+ring r = 0, (a, M), dp;
+poly G = (7*M^3+57*M^2+57*M+7)*a^3 - (98*M^3+308*M^2+98*M)*a^2 + (392*M^3+392*M^2)*a - 448*M^3;
+print(factorize(G));
+print("genus = " + string(genus(ideal(G))));
+// singular points (affine)
+ideal sg = std(ideal(G, diff(G,a), diff(G,M)));
+print("affine singular locus dim = " + string(dim(sg)) + " vdim = " + string(vdim(sg)));
+print(sg);
+quit;

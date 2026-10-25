@@ -1,0 +1,37 @@
+D=-7 class=(1,1) members=17 exhaustive subsets=131054 pass=0  10.3s
+D=-15 class=(1,0) members=16 exhaustive subsets=65519 pass=0  14.5s
+D=-15 class=(0,0) members=15 exhaustive subsets=32752 pass=0  16.0s
+D=5 class=(1,1) members=15 exhaustive subsets=32752 pass=0  18.3s
+D=17 class=(1,1) members=14 exhaustive subsets=16369 pass=0  19.1s
+D=5 class=(2,0) members=14 exhaustive subsets=16369 pass=0  21.0s
+D=17 class=(2,0) members=13 exhaustive subsets=8178 pass=0  21.4s
+D=-7 class=(0,0) members=12 exhaustive subsets=4083 pass=0  21.7s
+D=-15 class=(2,0) members=11 exhaustive subsets=2036 pass=0  21.8s
+D=13 class=(0,0) members=10 exhaustive subsets=1013 pass=0  21.9s
+D=13 class=(1,0) members=10 exhaustive subsets=1013 pass=0  21.9s
+D=-11 class=(1,1) members=10 exhaustive subsets=1013 pass=0  22.0s
+D=-11 class=(2,0) members=9 exhaustive subsets=502 pass=0  22.0s
+D=-19 class=(2,0) members=9 exhaustive subsets=502 pass=0  22.0s
+D=-15 class=(2,1) members=9 exhaustive subsets=502 pass=0  22.1s
+D=5 class=(0,1) members=8 exhaustive subsets=247 pass=0  22.1s
+D=-19 class=(1,0) members=8 exhaustive subsets=247 pass=0  22.1s
+D=-19 class=(1,1) members=8 exhaustive subsets=247 pass=0  22.1s
+D=-11 class=(0,1) members=7 exhaustive subsets=120 pass=0  22.1s
+D=17 class=(0,1) members=7 exhaustive subsets=120 pass=0  22.1s
+D=-23 class=(1,1) members=7 exhaustive subsets=120 pass=0  22.1s
+D=-23 class=(1,0) members=7 exhaustive subsets=120 pass=0  22.1s
+D=-23 class=(2,0) members=7 exhaustive subsets=120 pass=0  22.1s
+D=-23 class=(2,1) members=7 exhaustive subsets=120 pass=0  22.1s
+D=-7 class=(2,0) members=7 exhaustive subsets=120 pass=0  22.1s
+D=-19 class=(0,1) members=6 exhaustive subsets=57 pass=0  22.1s
+D=-23 class=(0,1) members=6 exhaustive subsets=57 pass=0  22.1s
+D=13 class=(2,0) members=6 exhaustive subsets=57 pass=0  22.1s
+D=-11 class=(0,0) members=6 exhaustive subsets=57 pass=0  22.1s
+D=-11 class=(2,1) members=6 exhaustive subsets=57 pass=0  22.1s
+D=13 class=(1,1) members=6 exhaustive subsets=57 pass=0  22.1s
+classes searched 73, subsets 315928, necessary-condition passes 0, BPSW hits 0, 22.1s
+control: {'n': 315928, 'fagree': 315928, 'fpos': 32, 'lcmp': 13136, 'lagree': 13136, 'lpos': 0}
+
+real	0m22.999s
+user	0m21.662s
+sys	0m0.085s

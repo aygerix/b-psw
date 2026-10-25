@@ -1,0 +1,27 @@
+Z2 ^10                       layers [(2, 1, 10)]  bound         11  pulled(zs) mean      11.0 max      11  pulled(target) mean      10.7  |I| mean     5.0     0.1s
+Z2 ^50                       layers [(2, 1, 50)]  bound         51  pulled(zs) mean      51.0 max      51  pulled(target) mean      51.1  |I| mean    24.8     0.5s
+Z2 ^200                      layers [(2, 1, 200)]  bound        201  pulled(zs) mean     201.0 max     201  pulled(target) mean     200.2  |I| mean   100.2     1.5s
+Z3 ^5                        layers [(3, 1, 5)]  bound         36  pulled(zs) mean      19.3 max      31  pulled(target) mean      26.2  |I| mean     6.9     0.1s
+Z3 ^20                       layers [(3, 1, 20)]  bound        441  pulled(zs) mean     290.5 max     305  pulled(target) mean     284.9  |I| mean   133.9     0.9s
+Z3 ^60                       layers [(3, 1, 60)]  bound       3721  pulled(zs) mean    2483.0 max    2489  pulled(target) mean    2439.3  |I| mean  1230.3     4.0s
+Z4 ^5                        layers [(2, 1, 5), (2, 2, 5)]  bound         36  pulled(zs) mean      18.2 max      23  pulled(target) mean      23.6  |I| mean     7.5     0.1s
+Z4 ^20                       layers [(2, 1, 20), (2, 2, 20)]  bound        441  pulled(zs) mean     224.8 max     236  pulled(target) mean     234.4  |I| mean   110.8     0.5s
+Z5 ^2                        layers [(5, 1, 2)]  bound        243  pulled(zs) mean      16.1 max      35  pulled(target) mean     113.8  |I| mean     1.9     0.4s
+Z5 ^4                        layers [(5, 1, 4)]  bound       3125  pulled(zs) mean     150.6 max     270  pulled(target) mean     752.9  |I| mean     3.4     1.2s
+Z5 ^6                        layers [(5, 1, 6)]  bound      16807  pulled(zs) mean     923.0 max    2116  pulled(target) mean    5004.0  |I| mean     4.3     2.3s
+Z6 ^6                        layers [(2, 1, 6), (3, 1, 6)]  bound        343  pulled(zs) mean      98.5 max     133  pulled(target) mean     121.9  |I| mean    27.9     0.3s
+Z9 ^4                        layers [(3, 1, 4), (3, 2, 4)]  bound        625  pulled(zs) mean      46.6 max      62  pulled(target) mean     103.6  |I| mean    10.8     0.1s
+Z8 ^4                        layers [(2, 1, 4), (2, 2, 4), (2, 3, 4)]  bound        125  pulled(zs) mean      34.6 max      46  pulled(target) mean      44.6  |I| mean    13.9     0.1s
+Z12 ^4                       layers [(2, 1, 4), (2, 2, 4), (3, 1, 4)]  bound        625  pulled(zs) mean     128.0 max     142  pulled(target) mean     122.8  |I| mean    22.2     0.2s
+Z10 ^3                       layers [(2, 1, 3), (5, 1, 3)]  bound       4096  pulled(zs) mean      69.6 max      84  pulled(target) mean     601.0  |I| mean     7.4     0.6s
+[2, 4, 8, 3, 9]              layers [(2, 1, 3), (2, 2, 2), (2, 3, 1), (3, 1, 2), (3, 2, 1)]  bound        864  pulled(zs) mean      50.5 max     107  pulled(target) mean      71.3  |I| mean    12.9     0.6s
+[4, 12, 36]                  layers [(2, 1, 3), (2, 2, 3), (3, 1, 2), (3, 2, 1)]  bound        576  pulled(zs) mean      47.6 max      98  pulled(target) mean      83.1  |I| mean    10.0     0.2s
+Z2 ^400                      layers [(2, 1, 400)]  bound        401  pulled(zs) mean     401.0 max     401  pulled(target) mean     401.0  |I| mean   182.0     3.3s
+Z3 ^100                      layers [(3, 1, 100)]  bound      10201  pulled(zs) mean    6794.0 max    6807  pulled(target) mean    6762.0  |I| mean  3309.5    11.7s
+Z5 ^8                        layers [(5, 1, 8)]  bound      59049  pulled(zs) mean    4931.0 max    8740  pulled(target) mean   19593.0  |I| mean     3.5     7.2s
+Z5 ^10                       layers [(5, 1, 10)]  bound     161051  pulled(zs) mean   23155.0 max   23155  pulled(target) mean   44199.0  |I| mean     7.0     9.8s
+Z4 ^60                       layers [(2, 1, 60), (2, 2, 60)]  bound       3721  pulled(zs) mean    1893.5 max    1928  pulled(target) mean    1933.0  |I| mean   818.0     2.7s
+Z6 ^20                       layers [(2, 1, 20), (3, 1, 20)]  bound       9261  pulled(zs) mean    3108.0 max    3121  pulled(target) mean    2971.0  |I| mean  1518.0     2.8s
+Z25 ^2                       layers [(5, 1, 2), (5, 2, 2)]  bound      59049  pulled(zs) mean     158.0 max     245  pulled(target) mean     554.7  |I| mean     5.3     2.3s
+Z20 ^3                       layers [(2, 1, 3), (2, 2, 3), (5, 1, 3)]  bound      16384  pulled(zs) mean     120.0 max     135  pulled(target) mean     756.0  |I| mean     7.0     0.7s
+Z30 ^3                       layers [(2, 1, 3), (3, 1, 3), (5, 1, 3)]  bound      65536  pulled(zs) mean     260.0 max     291  pulled(target) mean    1841.0  |I| mean    29.0     2.1s

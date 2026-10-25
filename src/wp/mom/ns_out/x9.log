@@ -1,0 +1,6 @@
+AMIN = 0.01, DPOW = 4.0, RINF = 30.0^4.0, WREM = 1.0, WMODE = c, BDEF = 0.0
+[v3_k9_l0_cx_mp_s63_sg0.001_w1_Wc] 250/1500, 754s
+[v3_k9_l0_cx_mp_s63_sg0.001_w1_Wc] 500/1500, 1541s
+[v3_k9_l0_cx_mp_s63_sg0.001_w1_Wc] 750/1500, 2349s
+[v3_k9_l0_cx_mp_s63_sg0.001_w1_Wc] 1000/1500, 2862s
+[v3_k9_l0_cx_mp_s63_sg0.001_w1_Wc] 1250/1500, 3295s

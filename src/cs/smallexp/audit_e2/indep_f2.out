@@ -1,0 +1,19 @@
+A r=1: every (r+1)-multiset has nonempty zero-sum: True; some r-multiset zero-sum free: True  => D = 2  (0.0s)
+A r=2: every (r+1)-multiset has nonempty zero-sum: True; some r-multiset zero-sum free: True  => D = 3  (0.0s)
+A r=3: every (r+1)-multiset has nonempty zero-sum: True; some r-multiset zero-sum free: True  => D = 4  (0.0s)
+A r=4: every (r+1)-multiset has nonempty zero-sum: True; some r-multiset zero-sum free: True  => D = 5  (0.1s)
+C: standard basis of F_2^r is zero-sum free for r = 1..16 (so D >= r+1)
+B r=1: 200 trials, dependency always found among r+1 vectors, exact XOR = 0; max index used 2
+B r=2: 200 trials, dependency always found among r+1 vectors, exact XOR = 0; max index used 3
+B r=10: 200 trials, dependency always found among r+1 vectors, exact XOR = 0; max index used 11
+B r=50: 200 trials, dependency always found among r+1 vectors, exact XOR = 0; max index used 51
+B r=200: 200 trials, dependency always found among r+1 vectors, exact XOR = 0; max index used 201
+B r=400: 200 trials, dependency always found among r+1 vectors, exact XOR = 0; max index used 401
+B r=1000: 5 trials, dependency always found among r+1 vectors, exact XOR = 0; max index used 1001
+B r=2600: 5 trials, dependency always found among r+1 vectors, exact XOR = 0; max index used 2601
+D zsolve r=10: zero-sum pulled [11] (claim r+1=11); target pulled range [10, 15]; all exact sums verified
+D zsolve r=50: zero-sum pulled [51] (claim r+1=51); target pulled range [50, 53]; all exact sums verified
+D zsolve r=200: zero-sum pulled [201] (claim r+1=201); target pulled range [200, 204]; all exact sums verified
+D zsolve r=400: zero-sum pulled [401] (claim r+1=401); target pulled range [400, 403]; all exact sums verified
+D zsolve r=1000: zero-sum pulled [1001] (claim r+1=1001); target pulled range [1000, 1000]; all exact sums verified
+D target outside span (first coord 0 in all x, u_0 = 1): result None (expected None)

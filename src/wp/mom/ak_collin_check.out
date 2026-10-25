@@ -1,0 +1,2 @@
+collinear cubic families tested: 26988, failures of the argmin-a criterion: 0
+ray + linear families tested: 24710, with no all->=1 or all-<=1 special point: 0

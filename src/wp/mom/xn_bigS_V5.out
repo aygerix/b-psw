@@ -1,0 +1,31 @@
+start 0: boundary system not solved (maxres 3.49e+04)
+start 1: boundary system not solved (maxres 3.49e+04)
+start 2: min d2 -147325 (fam -147325, refl -147325) viol 4.0e-08 margin 0.00e+00 S 17.3595 v sorted [7.1095 5.0312 5.0312]
+start 3: boundary system not solved (maxres 8.17e+04)
+start 4: boundary system not solved (maxres 3.49e+04)
+start 5: min d2 -147325 (fam -147325, refl -147325) viol 1.4e-05 margin 0.00e+00 S 17.3595 v sorted [7.1095 5.0313 5.0312]
+start 6: boundary system not solved (maxres 3.49e+04)
+start 7: boundary system not solved (maxres 8.17e+04)
+start 8: min d2 -103136 (fam -103136, refl -103136) viol 5.0e-08 margin 0.00e+00 S 12.0779 v sorted [5.0313 3.4295 3.4295]
+start 9: boundary system not solved (maxres 3.49e+04)
+start 10: boundary system not solved (maxres 3.49e+04)
+start 11: boundary system not solved (maxres 1.20e-08)
+start 12: boundary system not solved (maxres 3.49e+04)
+start 13: boundary system not solved (maxres 2.70e+04)
+start 14: boundary system not solved (maxres 3.49e+04)
+start 15: boundary system not solved (maxres 3.38e+04)
+start 16: min d2 -103136 (fam -103136, refl -103136) viol 6.7e-10 margin 0.00e+00 S 12.0778 v sorted [5.0312 3.4295 3.4295]
+start 17: boundary system not solved (maxres 3.49e+04)
+start 18: boundary system not solved (maxres 1.08e+04)
+start 19: boundary system not solved (maxres 3.49e+04)
+start 20: boundary system not solved (maxres 3.44e+04)
+start 21: boundary system not solved (maxres 3.49e+04)
+start 22: boundary system not solved (maxres 8.17e+04)
+start 23: boundary system not solved (maxres 1.82e+07)
+start 24: min d2 -147325 (fam -147325, refl -147325) viol 9.3e-10 margin 5.37e-14 S 17.3595 v sorted [7.1095 5.0313 5.0313]
+start 25: min d2 -147326 (fam -147326, refl -147326) viol 2.6e-09 margin 0.00e+00 S 17.3596 v sorted [7.1095 5.0313 5.0313]
+start 26: min d2 -147327 (fam -147327, refl -147327) viol 8.6e-04 margin 0.00e+00 S 17.3597 v sorted [7.1095 5.0312 5.0312]
+start 27: boundary system not solved (maxres 8.17e+04)
+start 28: boundary system not solved (maxres 3.49e+04)
+start 29: boundary system not solved (maxres 3.49e+04)
+k=9 lin=0 V0=5.0: best min d2 = -103136

@@ -1,0 +1,13 @@
+[0;31m  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).[0m
+Dl - (1 - e1^2 + 2 e2 + e2^2) = 0
+(I1) f0 + 1 - H L' = 0;  f0(1) - 1 = 0;  f0(-1) - 1 = 0
+(I1) f - 1 - G K- = 0;  f + 1 - H K+ = 0
+deg_t K- = 2, lc = c;  deg_t K+ = 2, lc = c
+(I4, resultant) (S- - S+)/2 - 4/c = 0
+(I3, resultant) sum_{K+} f0 - sum_{K-} f0 = 4
+(I5) poldisc(K+) * c^-2 - (lam^2 w^2 - 4(mu + lam e1) w + 4) at w = 1/c: 0
+(I5') mu + lam e1 - 2(1 + e2)/Dl = 0
+numeric (I4), 200 random complex shapes and c: max rel err = 3.890888133070952498 E-95
+Step 1 product formulas, 20 random real pencils (k = 7, 9, mixed signs): max abs err = 2549064.997797541320
+lemma control (zeros allowed): max Re u over nonzero roots: -0.00010362609707789339527349377123718938818100308999136585738516417851943565641186740
+rc=0

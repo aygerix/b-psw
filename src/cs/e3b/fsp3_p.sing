@@ -1,0 +1,59 @@
+// src/cs/e3b/fsp3.sing -- E3b: FSP locus in reduced coordinates (T = t^2, u_i = (t - r_i)/t), t != 0.
+// f_1(x) = 1 - 2 (x^2 - 1)/(T - 1);  f_i(x) = 1 - 2 E_i(x)/E_i(t);  with x = t s:  f_i = 1 - 2 (T s^2 - 1)(s - 1 + u_i)/((T - 1) u_i).
+// Korselt_j at r_j (s = 1 - u_j):  beta_j = f_1(r_j) = B_j/(T - 1), B_j = T + 1 - 2 T (1 - u_j)^2, and
+//   f_i(r_j) = (beta_j u_i - (beta_j - 1) u_j)/u_i.   K_j = [B_j prod_i (B_j u_i - (B_j - T + 1) u_j) - (T-1)^4 prod_i u_i] / (B_j - T + 1).
+// Extra Lucas conditions: L1 (f_1 full) prod (4 - u_i) = prod u_i;  Lj: sigma^2 + u_j sigma + u_j - 1/T = 0 with prod_{i != j} f_i(t sigma) = 1.
+LIB "elim.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+proc SATL(ideal I, list fs) { int i; ideal J = I; for (i = 1; i <= size(fs); i++) { J = SAT(J, fs[i]); } return(J); }
+system("--ticks-per-sec", 1000);
+ring R = 32003, (s, T, u2, u3, u4, u5), (dp(1), dp(5));
+list uu = list(0, u2, u3, u4, u5);
+int i; int j;
+ideal KOR;
+for (j = 2; j <= 5; j++) {
+  poly B = T + 1 - 2*T*(1 - uu[j])^2;
+  poly pn = B; poly pu = 1;
+  for (i = 2; i <= 5; i++) { if (i != j) { pn = pn*(B*uu[i] - (B - T + 1)*uu[j]); pu = pu*uu[i]; } }
+  list dv = division(pn - (T - 1)^4*pu, B - T + 1);
+  if (dv[2][1] != 0) { "ERROR Korselt division"; }
+  KOR[j - 1] = dv[1][1,1]; kill B; kill pn; kill pu; kill dv;
+}
+poly L1 = (4 - u2)*(4 - u3)*(4 - u4)*(4 - u5) - u2*u3*u4*u5;
+// numerators of f_i(t s) (common denominator (T - 1) u_i), f_1 numerator / (T - 1)
+list nf; list df;
+nf[1] = (T - 1) - 2*(T*s^2 - 1); df[1] = T - 1;
+for (i = 2; i <= 5; i++) { nf[i] = (T - 1)*uu[i] - 2*(T*s^2 - 1)*(s - 1 + uu[i]); df[i] = (T - 1)*uu[i]; }
+list LR; list LF;
+for (j = 2; j <= 5; j++) {
+  poly Q = T*s^2 + T*uu[j]*s + T*uu[j] - 1;
+  poly pn = 1; poly pd = 1;
+  for (i = 1; i <= 5; i++) { if (i != j) { pn = pn*nf[i]; pd = pd*df[i]; } }
+  LR[j] = resultant(Q, pn - pd, s);
+  // both roots: remainder of (pn - pd) mod Q (Q has lead T in s): pseudo-remainder coefficients
+  poly Rm = reduce(T^12*(pn - pd), std(Q));
+  matrix M = coeffs(Rm, s); ideal Ic; int m; for (m = 1; m <= nrows(M); m++) { Ic[m] = M[m,1]; } LF[j] = Ic;
+  kill Q; kill pn; kill pd; kill Rm; kill M; kill Ic; kill m;
+}
+ring S = 32003, (T, u2, u3, u4, u5), dp;
+ideal KOR = imap(R, KOR); poly L1 = imap(R, L1); list LR = imap(R, LR); list LF = imap(R, LF);
+int k; for (k = 1; k <= 4; k++) { "Korselt ", k + 1, ": terms ", size(KOR[k]), " deg ", deg(KOR[k]); }
+"L2 resultant: terms ", size(LR[2]), " deg ", deg(LR[2]);
+int t0 = rtimer;
+ideal G0 = std(KOR);
+"std(Korselt) without saturation: dim ", dim(G0), "  time ms ", rtimer - t0;
+list fs = list(T, T - 1, u2, u3, u4, u5, u2 - u3, u2 - u4, u2 - u5, u3 - u4, u3 - u5, u4 - u5);
+t0 = rtimer;
+ideal FS = SATL(KOR, fs);
+ideal G = std(FS);
+"FSP locus (saturated): dim ", dim(G), "  degree ", mult(G), "  time ms ", rtimer - t0;
+write(":w out/fsp3_FS_" + string(32003) + ".txt", "ideal FS = " + string(FS) + ";");
+proc test(ideal I, string tag) { int t0 = rtimer; ideal J = SATL(FS + I, fs); ideal Gs = std(J);
+  tag, ": dim ", dim(Gs), "  vdim ", vdim(Gs), "  time ms ", rtimer - t0; return(J); }
+ideal TT;
+TT = test(ideal(L1), "FSP + f1 full  (Sum m = 6)");
+TT = test(ideal(LR[2]), "FSP + member 2 extra (Sum m = 6)");
+TT = test(ideal(L1, LR[2]), "FSP + f1 full + member 2 extra (Sum m = 7)");
+TT = test(ideal(LR[2], LR[3]), "FSP + members 2, 3 extra (Sum m = 7)");
+TT = test(LF[2], "FSP + member 2 full (Sum m = 7)");
+quit;

@@ -1,0 +1,1 @@
+instances with <= 8 conflict rows: 855 (x 3 lambdas = 2565); skipped 1098; disagreements (exact > claimed, or claimed > exact + 1e-5, or missing): 0; max |claimed - exact| otherwise 2.92e-05

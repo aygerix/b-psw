@@ -1,0 +1,12 @@
+h3_a1_b011_g111.sing RESULT h3_a1_b011_g111 D=5 G=3 dim=-1 time=0
+h3_a1_b111_g022.sing RESULT h3_a1_b111_g022 D=6 G=4 dim=-1 time=0
+h3_a1_b111_g112.sing RESULT h3_a1_b111_g112 D=6 G=4 dim=-1 time=0
+h3_a1_b112_g220.sing RESULT h3_a1_b112_g220 D=7 G=4 dim=-1 time=0
+h3_a1_b112_g121.sing halt 1
+h3_a1_b122_g122.sing halt 1
+h3_a1_b122_g212.sing halt 1
+h3_a1_b123_g131.sing halt 1
+h3_a1_b123_g230.sing RESULT h3_a1_b123_g230 D=9 G=5 dim=-1 time=36
+h3_a1_b123_g221.sing halt 1
+h3_a1_b134_g231.sing halt 1
+h3_a1_b133_g222.sing halt 1

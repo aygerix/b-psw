@@ -1,0 +1,5 @@
+Z3 ^5                        layers [(3, 1, 5)]  bound         36  pulled(zs) mean      18.6 max      29  pulled(target) mean      27.2  |I| mean     4.8     0.2s
+Z3 ^20                       layers [(3, 1, 20)]  bound        441  pulled(zs) mean     296.6 max     317  pulled(target) mean     286.4  |I| mean   133.2     2.9s
+Z3 ^60                       layers [(3, 1, 60)]  bound       3721  pulled(zs) mean    2500.8 max    2528  pulled(target) mean    2483.0  |I| mean  1182.2    10.1s
+Z3 ^100                      layers [(3, 1, 100)]  bound      10201  pulled(zs) mean    6748.0 max    6756  pulled(target) mean    6716.0  |I| mean  3262.0    21.5s
+EXIT 0

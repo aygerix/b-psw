@@ -1,0 +1,32 @@
+AMIN = 0.01, DPOW = 4.0, RINF = 30.0^4.0, WREM = 0.0, WMODE = c
+[v3_k5_l0_cx_m_s201_sg0.001_Wc] 250/500, 13s
+[v3_k5_l0_cx_m_s201_sg0.001_Wc] 500/500, 24s
+   (constrained-W identity residual reported separately: min 5.525424684932123e-16 )
+== v3_k5_l0_cx_m_s201_sg0.001_Wc: identity residual quantiles (0,1,10,50,90%): 8.86e-16 8.88e-16 1.33e-15 2.64e-15 6.88e-15
+   remainder residual quantiles: 2.67e-17 3.30e-17 7.46e-17 1.69e-16 4.78e-16
+   max(identity, remainder) quantiles: 8.86e-16 8.88e-16 1.33e-15 2.64e-15 6.88e-15
+   non-degenerate (sep, special-point gaps, min|a| >= 1e-3): 500 of 500
+   identity residual < 1e-12: 465; non-degenerate: 465; and remainder < 1e-12: 465
+   identity residual < 1e-10: 465; non-degenerate: 465; and remainder < 1e-10: 465
+   identity residual < 1e-08: 465; non-degenerate: 465; and remainder < 1e-08: 465
+   identity residual < 1e-06: 465; non-degenerate: 465; and remainder < 1e-06: 465
+   identity residual < 0.0001: 465; non-degenerate: 465; and remainder < 0.0001: 465
+   identity residual < 0.01: 465; non-degenerate: 465; and remainder < 0.01: 465
+   sep, gap, min|a| >= 0.001: n =    500, min max(id, rem) 8.864e-16: identity 8.864e-16 (rem 1.57e-16, sep 4.00e-01, gap 9.59e-02, min|a| 7.00e-01, margin nan, imag 4.89e+00)
+   sep, gap, min|a| >= 0.01 : n =    500, min max(id, rem) 8.864e-16: identity 8.864e-16 (rem 1.57e-16, sep 4.00e-01, gap 9.59e-02, min|a| 7.00e-01, margin nan, imag 4.89e+00)
+   sep, gap, min|a| >= 0.05 : n =    488, min max(id, rem) 8.864e-16: identity 8.864e-16 (rem 1.57e-16, sep 4.00e-01, gap 9.59e-02, min|a| 7.00e-01, margin nan, imag 4.89e+00)
+   sep, gap, min|a| >= 0.1  : n =    375, min max(id, rem) 8.882e-16: identity 8.882e-16 (rem 4.17e-16, sep 7.98e-01, gap 1.30e-01, min|a| 5.43e-01, margin nan, imag 6.52e+00)
+   sep, gap, min|a| >= 0.3  : n =     47, min max(id, rem) 1.110e-15: identity 1.110e-15 (rem 1.61e-16, sep 8.26e-01, gap 3.02e-01, min|a| 5.41e-01, margin nan, imag 7.23e+00)
+   best: id 8.864e-16 rem 1.566e-16 sep 3.997e-01 gap 9.595e-02 margin nan
+      a = [3.0085531936+0.0781123498j 0.7324921283+0.0374115182j 0.6989205259-0.0447836229j 2.6840683007-0.7358661059j 3.0693197298+1.1656524258j]
+      c = [-1.9291563746+0.037400084j  -1.4634249041+0.181056273j  -1.4280376758-0.207088047j  -2.2959784453+3.7246670067j -2.0637639237-3.2628763736j]
+   best: id 8.882e-16 rem 2.902e-16 sep 4.119e-01 gap 1.113e-01 margin nan
+      a = [0.7501047343+0.0388166379j 2.9090275542+1.2456867722j 1.2132989982+0.0901273654j 0.8029630199-0.1255050812j 7.2479882777-4.9109491247j]
+      c = [-1.5425046973+0.088550939j  -2.1014212847-3.3141154416j -1.9961330551+0.8751661623j -1.6420606338-0.2719354935j  0.7282184909-0.8166629128j]
+   best: id 8.882e-16 rem 1.181e-16 sep 7.099e-01 gap 4.377e-02 margin nan
+      a = [1.5962086008-0.3510361375j 2.7132017805-1.2893760253j 3.1897085128+1.3770223773j 0.6196392752-0.1415425445j 0.7685815421+0.3724329519j]
+      c = [-2.497122278 -1.6514429707e-01j -2.4377359452+3.2721457182e+00j -2.0420723699-3.1205694638e+00j -1.4842532693-2.2325684614e-03j -1.9504941851-1.8259761794e-02j]
+   best: id 8.882e-16 rem 3.153e-17 sep 9.343e-01 gap 1.340e-01 margin nan
+      a = [1.262044505 +4.0365473573e-01j 3.4332613505-2.0666369035e+00j 0.5177006677-2.1421936352e-06j 1.3456855773-4.6624355238e-01j 3.3697283947+1.9505517798e+00j]
+      c = [-2.0874168757+1.2939182035e-01j -1.9505813917+2.4491601419e+00j -1.1879940258+1.7237310498e-06j -2.2080366936-1.7819011607e-01j -1.9747994809-2.5695433771e+00j]
+total time 25s

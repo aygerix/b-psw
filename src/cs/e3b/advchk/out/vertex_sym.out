@@ -1,0 +1,8 @@
+explicit forms match family: 1 1
+deg_r, deg_s of n2: 8 2;  n4: 2 8
+resultant in s is nonzero: 1, degree in r: 60
+factor degrees (r): [[1, 4], [4, 2], [24, 2]]
+linear factors (rational r): [r]
+candidate (r, s) solutions: 48
+max Sum m over vertex-sym points: 6;  Sum m histogram: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+real points: 8

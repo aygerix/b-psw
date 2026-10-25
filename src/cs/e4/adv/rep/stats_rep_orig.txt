@@ -1,0 +1,51 @@
+../rAB_orig.out: #END MODE L X 3..1000 band (230,300] TL 60 exps 113 phifail 17 recs 117 Nfail 0 ms 1667809
+../rAB_orig.out: #END MODE L X 1001..1700 band (230,300] TL 60 exps 52 phifail 5 recs 48 Nfail 0 ms 764541
+../cR_orig.out: #END ctl n 440 fail 0 ms 82300
+exponents: 165 (F 0, L 165), Phi factorisation failures 40
+forced primes: FF 0, LF 147; other-order factoring failures 0; controls 388 (fail 0)
+  LF bits: min 10 median 35 max 300; n(p>2^33) 78, n(p>2^64) 41
+LF all     n=147  ctl n=388
+   log    obs    30.16 pred    44.36 z  -1.56 ratio  0.680 | ctl obs    71.01 pred    92.11 z  -1.60 ratio  0.771 kappa  0.882
+   hq     obs    22.00 pred    25.24 z  -0.65 ratio  0.872 | ctl obs    43.00 pred    51.97 z  -1.24 ratio  0.827 kappa  1.053
+   t3     obs    22.00 pred    24.73 z  -0.67 ratio  0.890 | ctl obs    44.00 pred    51.29 z  -1.23 ratio  0.858 kappa  1.037
+   t10    obs     2.00 pred     5.65 z  -1.61 ratio  0.354 | ctl obs     9.00 pred    12.44 z  -1.02 ratio  0.724 kappa  0.489
+   t100   obs     0.00 pred     0.69 z  -0.84 ratio  0.000 | ctl obs     0.00 pred     1.19 z  -1.09 ratio  0.000
+   t1000  obs     0.00 pred     0.07 z  -0.27 ratio  0.000 | ctl obs     0.00 pred     0.11 z  -0.34 ratio  0.000
+   U200   obs    20.00 pred    20.04 z  -0.21 ratio  0.998 | ctl obs     0.00 pred     0.01 z  -0.09 ratio  0.000 | nondet: n 127 obs 0 pred 0.0442
+   U1500  obs    37.00 pred    37.01 z  -0.08 ratio  1.000 | ctl obs     6.00 pred     6.00 z  -0.07 ratio  0.999 kappa  1.001 | nondet: n 110 obs 0 pred 0.00708
+   U10000 obs    56.00 pred    56.00 z  -0.02 ratio  1.000 | ctl obs    20.00 pred    20.00 z  -0.04 ratio  1.000 kappa  1.000 | nondet: n 91 obs 0 pred 0.000623
+LF p<2^33  n=69  ctl n=76
+   log    obs    16.61 pred    23.25 z  -1.02 ratio  0.714 | ctl obs     9.65 pred    18.97 z  -1.55 ratio  0.509 kappa  1.404
+   hq     obs    11.00 pred    13.40 z  -0.66 ratio  0.821 | ctl obs     5.00 pred    10.57 z  -1.71 ratio  0.473 kappa  1.734
+   t3     obs    11.00 pred    13.06 z  -0.70 ratio  0.842 | ctl obs     5.00 pred    10.38 z  -2.02 ratio  0.482 kappa  1.748
+   t10    obs     1.00 pred     2.98 z  -1.20 ratio  0.336 | ctl obs     2.00 pred     2.61 z  -0.40 ratio  0.766 kappa  0.439
+   t100   obs     0.00 pred     0.32 z  -0.57 ratio  0.000 | ctl obs     0.00 pred     0.20 z  -0.45 ratio  0.000
+   t1000  obs     0.00 pred     0.03 z  -0.16 ratio  0.000 | ctl obs     0.00 pred     0.03 z  -0.17 ratio  0.000
+   U200   obs    20.00 pred    20.04 z  -0.21 ratio  0.998 | ctl obs     0.00 pred     0.01 z  -0.09 ratio  0.000 | nondet: n 49 obs 0 pred 0.0441
+   U1500  obs    36.00 pred    36.01 z  -0.08 ratio  1.000 | ctl obs     5.00 pred     5.00 z  -0.06 ratio  0.999 kappa  1.001 | nondet: n 33 obs 0 pred 0.00628
+   U10000 obs    53.00 pred    53.00 z  -0.02 ratio  1.000 | ctl obs    15.00 pred    15.00 z  -0.03 ratio  1.000 kappa  1.000 | nondet: n 16 obs 0 pred 0.000362
+LF p>2^33  n=78  ctl n=312
+   log    obs    13.55 pred    21.10 z  -1.18 ratio  0.642 | ctl obs    61.35 pred    73.14 z  -1.00 ratio  0.839 kappa  0.765
+   hq     obs    11.00 pred    11.84 z  -0.24 ratio  0.929 | ctl obs    38.00 pred    41.40 z  -0.53 ratio  0.918 kappa  1.012
+   t3     obs    11.00 pred    11.66 z  -0.24 ratio  0.943 | ctl obs    39.00 pred    40.91 z  -0.36 ratio  0.953 kappa  0.989
+   t10    obs     1.00 pred     2.67 z  -1.08 ratio  0.375 | ctl obs     7.00 pred     9.82 z  -0.94 ratio  0.713 kappa  0.526
+   t100   obs     0.00 pred     0.37 z  -0.62 ratio  0.000 | ctl obs     0.00 pred     0.98 z  -1.00 ratio  0.000
+   t1000  obs     0.00 pred     0.05 z  -0.22 ratio  0.000 | ctl obs     0.00 pred     0.09 z  -0.29 ratio  0.000
+   U200   obs     0.00 pred     0.00 z  -0.01 ratio  0.000 | ctl obs     0.00 pred     0.00 z  -0.00 ratio  0.000 | nondet: n 78 obs 0 pred 8.78e-05
+   U1500  obs     1.00 pred     1.00 z  -0.03 ratio  0.999 | ctl obs     1.00 pred     1.00 z  -0.03 ratio  0.999 kappa  1.000 | nondet: n 77 obs 0 pred 0.000797
+   U10000 obs     3.00 pred     3.00 z  -0.02 ratio  1.000 | ctl obs     5.00 pred     5.00 z  -0.02 ratio  1.000 kappa  1.000 | nondet: n 75 obs 0 pred 0.000261
+LF p>2^64  n=41  ctl n=164
+   log    obs     5.49 pred    11.62 z  -1.30 ratio  0.473 | ctl obs    30.73 pred    41.49 z  -1.23 ratio  0.741 kappa  0.638
+   hq     obs     5.00 pred     6.55 z  -0.60 ratio  0.764 | ctl obs    22.00 pred    24.16 z  -0.44 ratio  0.911 kappa  0.839
+   t3     obs     5.00 pred     6.35 z  -0.66 ratio  0.788 | ctl obs    22.00 pred    23.85 z  -0.46 ratio  0.922 kappa  0.854
+   t10    obs     0.00 pred     1.54 z  -1.32 ratio  0.000 | ctl obs     3.00 pred     5.01 z  -0.93 ratio  0.599 kappa  0.000
+   t100   obs     0.00 pred     0.22 z  -0.48 ratio  0.000 | ctl obs     0.00 pred     0.52 z  -0.72 ratio  0.000
+   t1000  obs     0.00 pred     0.03 z  -0.18 ratio  0.000 | ctl obs     0.00 pred     0.05 z  -0.22 ratio  0.000
+   U200   obs     0.00 pred     0.00 z  -0.00 ratio  0.000 | ctl obs     0.00 pred     0.00 z  -0.00 ratio  0.000 | nondet: n 41 obs 0 pred 2.52e-13
+   U1500  obs     0.00 pred     0.00 z  -0.00 ratio  0.000 | ctl obs     0.00 pred     0.00 z  -0.00 ratio  0.000 | nondet: n 41 obs 0 pred 1.89e-10
+   U10000 obs     0.00 pred     0.00 z  -0.00 ratio  0.000 | ctl obs     0.00 pred     0.00 z  -0.00 ratio  0.000 | nondet: n 41 obs 0 pred 4.22e-07
+usable forced primes with p > 2^33 (both odd orders T-smooth):
+  T=10000 LF x=419 p=41725948237 (36 bits, p mod 8 = 5) ord2=13908649412 z=419 class (v2 ord2, v2 z)=(2,0) gpf odd ord2 2309, gpf odd z 419
+  T=10000 LF x=591 p=22221540969737 (45 bits, p mod 8 = 1) ord2=5555385242434 z=591 class (v2 ord2, v2 z)=(1,0) gpf odd ord2 3923, gpf odd z 197
+  T=1500 LF x=1596 p=486077598803 (39 bits, p mod 8 = 3) ord2=486077598802 z=1596 class (v2 ord2, v2 z)=(1,2) gpf odd ord2 1237, gpf odd z 19
+  T=10000 LF x=1596 p=486077598803 (39 bits, p mod 8 = 3) ord2=486077598802 z=1596 class (v2 ord2, v2 z)=(1,2) gpf odd ord2 1237, gpf odd z 19

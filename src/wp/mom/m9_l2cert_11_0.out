@@ -1,0 +1,19 @@
+   realprecision = 173 significant digits (160 digits displayed)
+k = 5, cubic members 5, linear 0:
+   E1 = -v1*u1 + (-v2*u2 + (-v3*u3 + (-v4*u4 + (-v5*u5 + (-2*v1 + (-2*v2 + (-2*v3 + (-2*v4 + (-2*v5 + 15/16)))))))))
+   E2 = (v1 + (v2 + (v3 + (v4 + (v5 - 15/4)))))
+   E1r = v1*u1 + (v2*u2 + (v3*u3 + (v4*u4 + (v5*u5 + (-3*v1 + (-3*v2 + (-3*v3 + (-3*v4 + (-3*v5 + 15/16)))))))))
+   E2r = (v1 + (v2 + (v3 + (v4 + (v5 - 15/4)))))
+k = 5, cubic members 4, linear 1:
+   E1 = -v1*u1 + (-v2*u2 + (-v3*u3 + (-v4*u4 + (-3/2*v1 + (-3/2*v2 + (-3/2*v3 + (-3/2*v4 + 7/16)))))))
+   E2 = (v1 + (v2 + (v3 + (v4 - 9/4))))
+   E1r = v1*u1 + (v2*u2 + (v3*u3 + (v4*u4 + (-5/2*v1 + (-5/2*v2 + (-5/2*v3 + (-5/2*v4 + 7/16)))))))
+   E2r = (v1 + (v2 + (v3 + (v4 - 9/4))))
+==== LEVEL-2 Krawczyk certificate: k = 11, 11 cubics
+  residuals of the 6 equations at the numerical start: [1.1348505540980304330 E-13, -8.767805018659892565 E-14, -1.0618103145425493207 E-13, 2.1777949427021326385 E-14, 3.298711944736396930 E-19, -2.601349816450426452 E-19]
+  unknown coordinates: [u1, u6, u11, v1, v6, v11]  |det| of numerical minor = 6300.123878908333771
+  Newton residual (float): 2.070105401319523792 E-171;  correction from the numerical start: 1.3666117798680570645 E-9
+  Krawczyk: max |Y F(x~)| = 4.312630887864526287 E-111, rho = 1e-60, max row sum |I - Y J(B)| = 1.0292777634717474690 E-37
+  KRAWCZYK PASSED
+  domain inequalities on the box: HOLD (min 8v - max(u^2,(1-u)^2) = 0.06708102830868710000); distinct: YES
+  CERTIFICATE VALID: a real admissible point satisfying orders 0, 1, 2 at t = -1 for BOTH halves EXISTS

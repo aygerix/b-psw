@@ -1,0 +1,17 @@
+instances verified: 1953; with any mismatch: 0
+record classes without an instance: [] 0
+D=-15 (2,0) full: {'n': 6523, 'mine': 6523, 'missing': 0, 'extra': 0, 'diff': 0, 'itembad': 0, 'nonsmooth': 0}
+   sub ('FF', 2145, True, ((3, 5), 'FF'))
+   sub ('FL', 2144, True, ((3, 5), 'FL'))
+   sub ('LF_F', 2225, True, ((3, 5, 7), 'LFF'))
+   sub ('LF_L', 2218, True, ((3, 5, 7), 'LFL'))
+   sub ('LL_F_F', 1731, True, ((3, 5, 7, 11), 'LLFF'))
+   sub ('LL_F_L', 1697, True, ((3, 5, 7, 11), 'LLFL'))
+   sub ('LL_L', 2135, True, ((3, 5, 7), 'LLL'))
+D=-11 (2,0) full: {'n': 3284, 'mine': 3284, 'missing': 0, 'extra': 0, 'diff': 0, 'itembad': 0, 'nonsmooth': 0}
+   sub ('F', 2214, True, ((5,), 'F'))
+   sub ('L', 2239, True, ((5,), 'L'))
+
+real	0m49.037s
+user	0m48.167s
+sys	0m0.859s

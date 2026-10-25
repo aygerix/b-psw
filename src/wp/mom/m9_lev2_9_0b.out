@@ -1,0 +1,10 @@
+trial 0: level 2 maxres 6.27e+02 margin 5.281e-13 dmin 2.464e-12 fail
+trial 1: level 2 maxres 5.73e+02 margin 0.000e+00 dmin 0.000e+00 fail
+trial 2: level 2 maxres 6.27e+02 margin -5.551e-17 dmin 0.000e+00 fail
+trial 3: level 2 maxres 5.73e+02 margin 0.000e+00 dmin 0.000e+00 fail
+trial 4: level 2 maxres 6.27e+02 margin 0.000e+00 dmin 4.578e-13 fail
+trial 5: level 2 maxres 6.27e+02 margin 0.000e+00 dmin 0.000e+00 fail
+trial 6: level 2 maxres 6.27e+02 margin 2.331e-14 dmin 6.813e-12 fail
+trial 7: level 2 maxres 6.27e+02 margin 2.331e-14 dmin 2.516e-11 fail
+trial 8: level 2 maxres 6.27e+02 margin 3.523e-12 dmin 2.446e-11 fail
+trial 9: level 2 maxres 6.27e+02 margin 5.758e-13 dmin 2.656e-11 fail

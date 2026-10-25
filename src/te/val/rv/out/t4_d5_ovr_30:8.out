@@ -1,0 +1,10 @@
+T4 overrides: 7240 primes, M(p3) ~ 2^30, M(p2) ~ 2^8 (plant-mode get_M)
+T4 runC D=5 p3=9999810047 M3=862150384 S=1 A=1 B=1 Wsmall=1: pairs engine 6685 (ref 6685) records engine 1567 ref 1567, max inner 12, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=9999836087 M3=58813392 S=1 A=1 B=1 Wsmall=1: pairs engine 7239 (ref 7239) records engine 53208 ref 53208, max inner 171, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=9999810047 M3=862150384 S=4582537681 A=1 B=1 Wsmall=1: pairs engine 6685 (ref 6685) records engine 1593 ref 1593, max inner 12, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=9999836087 M3=58813392 S=4582537681 A=1 B=1 Wsmall=1: pairs engine 7239 (ref 7239) records engine 53218 ref 53218, max inner 171, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=9999810047 M3=862150384 S=4582537681 A=3 B=1 Wsmall=1: pairs engine 6685 (ref 6685) records engine 681 ref 681, max inner 4, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=9999836087 M3=58813392 S=4582537681 A=3 B=1 Wsmall=1: pairs engine 7239 (ref 7239) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=9999810047 M3=862150384 S=1 A=2305843009213693951 B=2 Wsmall=1: pairs engine 6685 (ref 6685) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=9999836087 M3=58813392 S=1 A=2305843009213693951 B=2 Wsmall=1: pairs engine 7239 (ref 7239) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+RESULT runC D=5: ok (0 problems)

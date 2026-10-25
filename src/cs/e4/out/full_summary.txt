@@ -1,0 +1,100 @@
+====================================================================================================
+FF (forced) vs FFc (matched control): obs, pred, z, obs/pred; kappa = ratio_forced / ratio_control
+-- stratum all: n_forced = 491, n_control = 1800
+   log     forced obs     132.63 pred     124.83 z  +0.51 ratio  1.062 | control obs     464.98 pred     478.84 z  -0.46 ratio  0.971 | kappa  1.094
+   hq      forced obs      79.00 pred      71.94 z  +0.83 ratio  1.098 | control obs     255.00 pred     274.17 z  -1.16 ratio  0.930 | kappa  1.181
+   t3      forced obs      78.00 pred      71.22 z  +0.97 ratio  1.095 | control obs     262.00 pred     269.85 z  -0.58 ratio  0.971 | kappa  1.128
+   t10     forced obs      18.00 pred      16.07 z  +0.50 ratio  1.120 | control obs      53.00 pred      61.99 z  -1.19 ratio  0.855 | kappa  1.310
+   t100    forced obs       1.00 pred       1.50 z  -0.41 ratio  0.668 | control obs       8.00 pred       6.00 z  +0.82 ratio  1.333 | kappa  0.501
+   t1000   forced obs       0.00 pred       0.14 z  -0.37 ratio  0.000 | control obs       1.00 pred       0.60 z  +0.52 ratio  1.674 | kappa  0.000
+   U200    forced obs     105.00 pred     105.12 z  -0.34 ratio  0.999 | control obs      16.00 pred      16.09 z  -0.29 ratio  0.995 | kappa  1.004
+   U1500   forced obs     153.00 pred     153.01 z  -0.12 ratio  1.000 | control obs      89.00 pred      89.03 z  -0.16 ratio  1.000 | kappa  1.000
+   U10000  forced obs     196.00 pred     196.00 z  -0.04 ratio  1.000 | control obs     186.00 pred     186.01 z  -0.07 ratio  1.000 | kappa  1.000
+-- stratum p<2^33: n_forced = 274, n_control = 498
+   log     forced obs      83.32 pred      69.33 z  +1.24 ratio  1.202 | control obs     134.31 pred     143.04 z  -0.54 ratio  0.939 | kappa  1.280
+   hq      forced obs      46.00 pred      39.97 z  +0.95 ratio  1.151 | control obs      76.00 pred      82.91 z  -0.76 ratio  0.917 | kappa  1.256
+   t3      forced obs      46.00 pred      39.46 z  +1.25 ratio  1.166 | control obs      79.00 pred      81.68 z  -0.36 ratio  0.967 | kappa  1.205
+   t10     forced obs      14.00 pred       9.18 z  +1.66 ratio  1.525 | control obs      14.00 pred      18.04 z  -1.00 ratio  0.776 | kappa  1.966
+   t100    forced obs       0.00 pred       0.76 z  -0.87 ratio  0.000 | control obs       2.00 pred       1.80 z  +0.15 ratio  1.111 | kappa  0.000
+   t1000   forced obs       0.00 pred       0.06 z  -0.25 ratio  0.000 | control obs       0.00 pred       0.18 z  -0.43 ratio  0.000 | kappa    nan
+   U200    forced obs     103.00 pred     103.12 z  -0.34 ratio  0.999 | control obs      16.00 pred      16.09 z  -0.29 ratio  0.995 | kappa  1.004
+   U1500   forced obs     151.00 pred     151.01 z  -0.11 ratio  1.000 | control obs      85.00 pred      85.02 z  -0.15 ratio  1.000 | kappa  1.000
+   U10000  forced obs     189.00 pred     189.00 z  -0.04 ratio  1.000 | control obs     166.00 pred     166.00 z  -0.06 ratio  1.000 | kappa  1.000
+-- stratum p>2^33: n_forced = 217, n_control = 1302
+   log     forced obs      49.31 pred      55.50 z  -0.61 ratio  0.888 | control obs     330.67 pred     335.80 z  -0.20 ratio  0.985 | kappa  0.902
+   hq      forced obs      33.00 pred      31.97 z  +0.18 ratio  1.032 | control obs     179.00 pred     191.26 z  -0.89 ratio  0.936 | kappa  1.103
+   t3      forced obs      32.00 pred      31.77 z  +0.05 ratio  1.007 | control obs     183.00 pred     188.17 z  -0.45 ratio  0.973 | kappa  1.036
+   t10     forced obs       4.00 pred       6.89 z  -1.15 ratio  0.581 | control obs      39.00 pred      43.94 z  -0.78 ratio  0.887 | kappa  0.654
+   t100    forced obs       1.00 pred       0.74 z  +0.30 ratio  1.349 | control obs       6.00 pred       4.20 z  +0.88 ratio  1.428 | kappa  0.944
+   t1000   forced obs       0.00 pred       0.07 z  -0.27 ratio  0.000 | control obs       1.00 pred       0.41 z  +0.91 ratio  2.414 | kappa  0.000
+   U200    forced obs       2.00 pred       2.00 z  -0.00 ratio  1.000 | control obs       0.00 pred       0.00 z  -0.02 ratio  0.000 | kappa    nan
+   U1500   forced obs       2.00 pred       2.00 z  -0.03 ratio  0.999 | control obs       4.00 pred       4.00 z  -0.05 ratio  0.999 | kappa  1.000
+   U10000  forced obs       7.00 pred       7.00 z  -0.01 ratio  1.000 | control obs      20.00 pred      20.00 z  -0.04 ratio  1.000 | kappa  1.000
+-- stratum p>2^64: n_forced = 102, n_control = 612
+   log     forced obs      18.63 pred      22.19 z  -0.55 ratio  0.839 | control obs     144.34 pred     151.23 z  -0.41 ratio  0.954 | kappa  0.879
+   hq      forced obs      14.00 pred      12.60 z  +0.40 ratio  1.111 | control obs      78.00 pred      85.01 z  -0.76 ratio  0.918 | kappa  1.211
+   t3      forced obs      14.00 pred      12.66 z  +0.45 ratio  1.106 | control obs      80.00 pred      83.85 z  -0.50 ratio  0.954 | kappa  1.159
+   t10     forced obs       1.00 pred       2.65 z  -1.05 ratio  0.378 | control obs      16.00 pred      20.30 z  -1.00 ratio  0.788 | kappa  0.479
+   t100    forced obs       0.00 pred       0.34 z  -0.58 ratio  0.000 | control obs       2.00 pred       1.97 z  +0.02 ratio  1.013 | kappa  0.000
+   t1000   forced obs       0.00 pred       0.04 z  -0.19 ratio  0.000 | control obs       1.00 pred       0.19 z  +1.83 ratio  5.167 | kappa  0.000
+   U200    forced obs       2.00 pred       2.00 z  -0.00 ratio  1.000 | control obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | kappa    nan
+   U1500   forced obs       2.00 pred       2.00 z  -0.00 ratio  1.000 | control obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | kappa    nan
+   U10000  forced obs       2.00 pred       2.00 z  -0.00 ratio  1.000 | control obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | kappa    nan
+====================================================================================================
+LF (forced) vs LFc (matched control): obs, pred, z, obs/pred; kappa = ratio_forced / ratio_control
+-- stratum all: n_forced = 436, n_control = 1494
+   log     forced obs     117.66 pred     114.24 z  +0.24 ratio  1.030 | control obs     343.99 pred     381.27 z  -1.39 ratio  0.902 | kappa  1.142
+   hq      forced obs      67.00 pred      66.03 z  +0.12 ratio  1.015 | control obs     205.00 pred     214.67 z  -0.66 ratio  0.955 | kappa  1.063
+   t3      forced obs      70.00 pred      64.78 z  +0.79 ratio  1.081 | control obs     196.00 pred     212.19 z  -1.34 ratio  0.924 | kappa  1.170
+   t10     forced obs      15.00 pred      14.66 z  +0.09 ratio  1.023 | control obs      48.00 pred      50.66 z  -0.39 ratio  0.948 | kappa  1.080
+   t100    forced obs       2.00 pred       1.48 z  +0.43 ratio  1.353 | control obs       3.00 pred       5.04 z  -0.91 ratio  0.595 | kappa  2.275
+   t1000   forced obs       1.00 pred       0.13 z  +2.39 ratio  7.586 | control obs       0.00 pred       0.50 z  -0.71 ratio  0.000 | kappa    nan
+   U200    forced obs     119.00 pred     119.11 z  -0.33 ratio  0.999 | control obs      10.00 pred      10.07 z  -0.27 ratio  0.993 | kappa  1.006
+   U1500   forced obs     169.00 pred     169.01 z  -0.10 ratio  1.000 | control obs      61.00 pred      61.02 z  -0.14 ratio  1.000 | kappa  1.000
+   U10000  forced obs     203.00 pred     203.00 z  -0.04 ratio  1.000 | control obs     132.00 pred     132.01 z  -0.07 ratio  1.000 | kappa  1.000
+-- stratum p<2^33: n_forced = 256, n_control = 414
+   log     forced obs      51.49 pred      66.66 z  -1.36 ratio  0.772 | control obs     101.42 pred     106.54 z  -0.36 ratio  0.952 | kappa  0.811
+   hq      forced obs      37.00 pred      38.06 z  -0.17 ratio  0.972 | control obs      56.00 pred      60.15 z  -0.54 ratio  0.931 | kappa  1.044
+   t3      forced obs      37.00 pred      37.26 z  -0.05 ratio  0.993 | control obs      51.00 pred      59.47 z  -1.32 ratio  0.858 | kappa  1.158
+   t10     forced obs       4.00 pred       8.86 z  -1.70 ratio  0.452 | control obs      14.00 pred      13.73 z  +0.08 ratio  1.020 | kappa  0.443
+   t100    forced obs       0.00 pred       0.87 z  -0.94 ratio  0.000 | control obs       2.00 pred       1.42 z  +0.49 ratio  1.404 | kappa  0.000
+   t1000   forced obs       0.00 pred       0.06 z  -0.25 ratio  0.000 | control obs       0.00 pred       0.15 z  -0.38 ratio  0.000 | kappa    nan
+   U200    forced obs     119.00 pred     119.11 z  -0.33 ratio  0.999 | control obs      10.00 pred      10.06 z  -0.25 ratio  0.994 | kappa  1.005
+   U1500   forced obs     168.00 pred     168.01 z  -0.10 ratio  1.000 | control obs      56.00 pred      56.02 z  -0.13 ratio  1.000 | kappa  1.000
+   U10000  forced obs     199.00 pred     199.00 z  -0.03 ratio  1.000 | control obs     118.00 pred     118.00 z  -0.06 ratio  1.000 | kappa  1.000
+-- stratum p>2^33: n_forced = 180, n_control = 1080
+   log     forced obs      66.18 pred      47.58 z  +1.99 ratio  1.391 | control obs     242.56 pred     274.72 z  -1.41 ratio  0.883 | kappa  1.575
+   hq      forced obs      30.00 pred      27.97 z  +0.38 ratio  1.073 | control obs     149.00 pred     154.51 z  -0.44 ratio  0.964 | kappa  1.112
+   t3      forced obs      33.00 pred      27.52 z  +1.27 ratio  1.199 | control obs     145.00 pred     152.72 z  -0.75 ratio  0.949 | kappa  1.263
+   t10     forced obs      11.00 pred       5.80 z  +2.26 ratio  1.895 | control obs      34.00 pred      36.93 z  -0.50 ratio  0.921 | kappa  2.059
+   t100    forced obs       2.00 pred       0.61 z  +1.79 ratio  3.270 | control obs       1.00 pred       3.62 z  -1.38 ratio  0.276 | kappa 11.833
+   t1000   forced obs       1.00 pred       0.07 z  +3.47 ratio 13.954 | control obs       0.00 pred       0.35 z  -0.59 ratio  0.000 | kappa    nan
+   U200    forced obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | control obs       0.00 pred       0.01 z  -0.09 ratio  0.000 | kappa    nan
+   U1500   forced obs       1.00 pred       1.00 z  -0.02 ratio  0.999 | control obs       5.00 pred       5.00 z  -0.05 ratio  0.999 | kappa  1.000
+   U10000  forced obs       4.00 pred       4.00 z  -0.02 ratio  1.000 | control obs      14.00 pred      14.00 z  -0.04 ratio  1.000 | kappa  1.000
+-- stratum p>2^64: n_forced = 87, n_control = 522
+   log     forced obs      32.67 pred      23.23 z  +1.45 ratio  1.407 | control obs     112.20 pred     136.42 z  -1.51 ratio  0.822 | kappa  1.710
+   hq      forced obs      13.00 pred      13.50 z  -0.14 ratio  0.963 | control obs      72.00 pred      76.73 z  -0.54 ratio  0.938 | kappa  1.026
+   t3      forced obs      15.00 pred      13.11 z  +0.64 ratio  1.144 | control obs      70.00 pred      75.48 z  -0.76 ratio  0.927 | kappa  1.233
+   t10     forced obs       5.00 pred       3.22 z  +1.05 ratio  1.553 | control obs      14.00 pred      18.62 z  -1.12 ratio  0.752 | kappa  2.066
+   t100    forced obs       1.00 pred       0.31 z  +1.26 ratio  3.255 | control obs       0.00 pred       1.77 z  -1.34 ratio  0.000 | kappa    nan
+   t1000   forced obs       1.00 pred       0.03 z  +5.44 ratio 31.499 | control obs       0.00 pred       0.19 z  -0.43 ratio  0.000 | kappa    nan
+   U200    forced obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | control obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | kappa    nan
+   U1500   forced obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | control obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | kappa    nan
+   U10000  forced obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | control obs       0.00 pred       0.00 z  -0.00 ratio  0.000 | kappa    nan
+====================================================================================================
+Source yield for p > 2^34 (outside census2 range), forced order e (or f) with odd part T-smooth:
+  free usable primes at rows <= T: count of U_T (obs) vs sum of P_T (Kummer pred)
+  FF n=217  T=200 (n=210) obs 2 pred 2  T=1500 (n=217) obs 2 pred 2.001  T=10000 (n=217) obs 7 pred 7
+  LF n=180  T=200 (n=159) obs 0 pred 6.086e-06  T=1500 (n=180) obs 1 pred 1.001  T=10000 (n=180) obs 4 pred 4
+Unconditional yield per prime, p > 2^33: forced obs rate vs control pred rate (kappa_total)
+  FF: n=217, control n=1302
+    T=200 forced 0.009217 (pred-from-own-order 0.009217) control 3.237e-07 kappa_total 2.85e+04
+    T=1500 forced 0.009217 (pred-from-own-order 0.009222) control 0.003074 kappa_total 3
+    T=10000 forced 0.03226 (pred-from-own-order 0.03226) control 0.01536 kappa_total 2.1
+  LF: n=180, control n=1080
+    T=200 forced 0 (pred-from-own-order 3.385e-08) control 7.501e-06 kappa_total 0
+    T=1500 forced 0.005556 (pred-from-own-order 0.005558) control 0.004632 kappa_total 1.2
+    T=10000 forced 0.02222 (pred-from-own-order 0.02222) control 0.01296 kappa_total 1.71
+  FF size (bits of p): min 3 median 28 max 204
+  LF size (bits of p): min 3 median 27 max 224

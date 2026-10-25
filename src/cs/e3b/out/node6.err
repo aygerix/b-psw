@@ -1,0 +1,4 @@
+~/b-psw/src/cs/e3b/node_model.py:89: RuntimeWarning: invalid value encountered in divide
+  return -2 * (x - r) / ((th**2 - 1) * (th - r))
+~/b-psw/src/cs/e3b/node_model.py:77: RuntimeWarning: invalid value encountered in divide
+  return 1 - 2 * (x**2 - 1) * (x - r) / ((th**2 - 1) * (th - r))

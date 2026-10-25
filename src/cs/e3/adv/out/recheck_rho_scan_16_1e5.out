@@ -1,0 +1,4 @@
+rows 2917  gp/bpsw.py mismatches 0  bpsw.py passes 0
+all-inert tuples 1220; of these member-1 Lucas defect 1: 643
+inert: log dL/log n  min 0.284  median 0.500  max 0.605
+heuristic expected strong-Lucas absorptions sum_inert 1/dL = 1.144e-01

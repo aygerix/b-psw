@@ -1,0 +1,21 @@
+// AUDIT: k = 5 two-dead classification. For fixed M, all (a,b,c) with slopes {1,a,b,c,M} distinct, nonzero, and
+// members a, b, c Lucas-good: prod_{t != s}(s - 2t) = s^4 for s = a, b, c.  Count solutions (vdim). The G5 triple gives 6.
+LIB "elim.lib";
+proc run(int M) {
+  ring r = 0, (a,b,c,T), dp;
+  poly ea = (a-2)*(a-2*M)*(a-2*b)*(a-2*c) - a^4;
+  poly eb = (b-2)*(b-2*M)*(b-2*a)*(b-2*c) - b^4;
+  poly ec = (c-2)*(c-2*M)*(c-2*a)*(c-2*b) - c^4;
+  poly nz = a*b*c*(a-b)*(a-c)*(b-c)*(a-1)*(b-1)*(c-1)*(a-M)*(b-M)*(c-M);
+  int t0 = timer;
+  ideal S = std(ideal(ea, eb, ec, 1 - T*nz));
+  print("M = " + string(M) + ": dim = " + string(dim(S)) + "  vdim = " + string(vdim(S)) + "  time = " + string(timer - t0));
+  // the G5 polynomial must vanish on all solutions (elementary symmetric functions)
+  poly G5a = (7*M^3+57*M^2+57*M+7)*a^3 - (98*M^3+308*M^2+98*M)*a^2 + (392*M^3+392*M^2)*a - 448*M^3;
+  print("  G5(a) in ideal: " + string(reduce(G5a, S) == 0));
+  ideal E = eliminate(S, b*c*T);
+  print("  eliminant in a: "); print(factorize(E[1]));
+}
+ring r0 = 0, x, dp;
+run(135); run(7); run(256); run(-3);
+quit;

@@ -1,0 +1,14 @@
+disc(A) = 0 surface: factors
+[1]:
+   _[1]=1
+   _[2]=c^2*r3^6-2*q*c^2*r3^4+q^2*c^2*r3^2+2*c^2*r3^3+2*c*r3^4+2*q*c^2*r3+2*q*c*r3^2+c^2+2*c*r3+r3^2
+[2]:
+   1,1
+member  1  good on disc=0: dim  1
+member  2  good on disc=0: dim  1
+member  3  good on disc=0: dim  1
+all three good on disc=0: dim  0
+  comp  1 : dim  0  vdim  6
+      17*r3^6-8*r3^3+16
+      17*r3^4+8*c-8*r3
+      -1/2*c*r3+r3^2+q

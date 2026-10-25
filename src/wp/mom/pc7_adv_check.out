@@ -1,0 +1,38 @@
+(0) trP sanity (expect 0): 0
+(I) d = 1 trP(f-1) - trP(f+1) - 2d/c: 0
+(I) d = 2 trP(f-1) - trP(f+1) - 2d/c: 0
+(I) d = 3 trP(f-1) - trP(f+1) - 2d/c: 0
+(I) d = 4 trP(f-1) - trP(f+1) - 2d/c: 0
+(I) d = 5 trP(f-1) - trP(f+1) - 2d/c: 0
+(I) d = 6 trP(f-1) - trP(f+1) - 2d/c: 0
+(II.a) f0(1) - 1: 0
+(II.b) f0(-1) - 1: 0
+(II.c) f0(r1) + 1: 0
+(II.d) f0(r2) + 1: 0
+(II.e) deg f0 <= 3 (expect 0 = coefficient of t^4): 0
+(II.f) full quartic: trP(P, fc-1) - trP(P, fc+1) - 8/c: 0
+(II.g) (fc-1) mod G: 0
+(II.h) (fc+1) mod H: 0
+(II.i) K-(r1) - 2/(1-r1^2): 0
+(II.j) K-(r2) - 2/(1-r2^2): 0
+(II.k) lead(K-) - c: 0
+(II.l) deg K- - 2: 0
+(II.m) K+(1) - 2/H(1): 0
+(II.n) K+(-1) - 2/H(-1): 0
+(II.o) lead(K+) - c: 0
+(II.p) (f0 + ci P) - (f0 + cj P) - (ci - cj) P: 0
+(II.q) lam at r1 = -r2: 0
+(II.r) mu - 2/(1 - r^2) at r1 = -r2: 0
+(III.a): 0
+(III.b): 0
+(IV.a) f0 + 1 - aa H: 0
+(IV.b) phi_j(G) - f_j: 0
+(IV.c) phi_j - 1 - u(cj u + aa + 2cj/aa): 0
+(IV.d) phi_j + 1 - (u + 2/aa)(cj u + aa): 0
+(IV.e) phi_j(u*) - 1: 0
+(IV.f) u* - (-aa/cj - 2/aa): 0
+(IV.g) phi_j(-aa/cj) + 1: 0
+(IV.h) -2/aa - (r^2 - 1): 0
+(IV.i) (cj G + aa + 2cj/aa)(t = r) - aa: 0
+ADV: ALL CHECKS PASSED
+ok = 1

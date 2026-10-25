@@ -1,0 +1,6 @@
+k=3 m=[0, 2, 2] unknowns=9 equations=10 expected dim=-1  (Korselt dim 3, sum m 4)
+converged non-degenerate: 0 / 3000
+k=3 m=[2, 2, 1] unknowns=8 equations=10 expected dim=-2  (Korselt dim 3, sum m 5)
+converged non-degenerate: 0 / 3000
+k=3 m=[1, 2, 2] unknowns=10 equations=12 expected dim=-2  (Korselt dim 3, sum m 5)
+converged non-degenerate: 0 / 3000

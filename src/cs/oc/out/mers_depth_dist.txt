@@ -1,0 +1,4 @@
+inert Mersenne (D,q) pairs, D in Selfridge seq |D|<=103 non-square, q in [5,4423]: full class (j2=q) 211, reduced 173
+depth t distribution (excluding deterministic D=-7,-15): {0: 71, 1: 38, 2: 29, 3: 12, 4: 3, 5: 2, 6: 2, 7: 1} n=158
+P(t>=s) observed vs Kummer 2^-s: [(1, 0.551, 0.5), (2, 0.31, 0.25), (3, 0.127, 0.125), (4, 0.051, 0.0625), (5, 0.032, 0.03125)]
+pairs of inert Mersenne primes sharing a Lucas class (same D): [(-87, (5, 5), (7, 5))]

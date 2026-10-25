@@ -1,0 +1,12 @@
+start 0: d2 fam 7553.63 refl -1.75075e+06 | constraint viol 9.1e-13 margin 0.00e+00 dmin 1.30e-06 S 1.73057 maxv 1.467
+start 1: d2 fam 5496.56 refl 2.55986e+06 | constraint viol 2.8e+00 margin -1.11e-16 dmin 0.00e+00 S 2.40109 maxv 1.657
+start 2: d2 fam 1983.5 refl 2.39035e+07 | constraint viol 3.2e+01 margin 2.06e-10 dmin 8.57e-04 S 6.71280 maxv 2.53
+start 3: d2 fam 7572.23 refl 1.63228e+06 | constraint viol 2.1e-02 margin 0.00e+00 dmin 0.00e+00 S 1.56618 maxv 1.316
+start 4: d2 fam 35758.7 refl -6.42542e+06 | constraint viol 5.1e+01 margin 0.00e+00 dmin 1.61e-03 S 12.48181 maxv 3.614
+start 5: d2 fam 3066.1 refl 3.62385e+06 | constraint viol 4.3e+00 margin 1.11e-16 dmin 5.05e-03 S 5.46009 maxv 2.535
+start 6: d2 fam 7572.81 refl 1.63276e+06 | constraint viol 1.8e-12 margin 0.00e+00 dmin 0.00e+00 S 1.56623 maxv 1.316
+start 7: d2 fam 5.15972e+06 refl 2.37621e+08 | constraint viol 8.8e+04 margin 8.03e-12 dmin 3.38e-01 S 34.35186 maxv 13
+start 8: d2 fam -499678 refl 3.45486e+07 | constraint viol 9.5e+04 margin 0.00e+00 dmin 2.31e-01 S 27.49372 maxv 9.012
+start 9: d2 fam -12170.4 refl 5.04228e+07 | constraint viol 3.1e+01 margin 9.90e-03 dmin 7.82e-02 S 14.18346 maxv 3.91
+start 10: d2 fam 2829.51 refl 799697 | constraint viol 3.5e-04 margin 0.00e+00 dmin 8.64e-10 S 2.42703 maxv 1.075
+start 12: d2 fam 496293 refl -8.02233e+08 | constraint viol 7.5e+03 margin 1.04e-08 dmin 7.78e-02 S 31.46497 maxv 13.17

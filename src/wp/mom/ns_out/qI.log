@@ -1,0 +1,3 @@
+06:11:01 start x9s: env [NS_DPOW=4 NS_WREM=1 NS_RINF=30 NS_RPOW=4 NS_WMODE=c] args [9 0 cx -+ 750 65 250 400 0 1e-3]
+06:27:15 done x9s (exit 0)
+06:27:15 start x9l1s: env [NS_DPOW=4 NS_WREM=1 NS_RINF=30 NS_RPOW=4 NS_WMODE=c] args [9 1 cx -+ 750 66 250 400 0 1e-3]

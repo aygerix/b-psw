@@ -1,0 +1,4 @@
+r=0 best score 2.22045e-16  a=[16.03413 16.03413] c=[6.32165 6.32165]
+r=2 best score 3.33067e-16  a=[6.75363 6.75363] c=[5.18544 5.18544]
+r=4 best score 6.66134e-16  a=[14.23094 14.23094] c=[3.56724 3.56724]
+n=2: max covering score 6.66134e-16 (>0 means fully covered configuration exists)

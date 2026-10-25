@@ -1,0 +1,17 @@
+census3 X = 10000000000, T0 = 200: primes 455052510, Fermat-smooth 3451180
+  D = 37: records 10948 (split 27)
+  D = 41: records 10984 (split 30)
+  D = -43: records 13098 (split 29)
+  D = -47: records 13212 (split 30)
+  D = 53: records 11370 (split 28)
+  D = -59: records 13232 (split 27)
+  D = 61: records 11506 (split 32)
+  D = -67: records 13126 (split 27)
+  D = -71: records 13136 (split 23)
+  D = 73: records 11607 (split 22)
+  D = -79: records 13084 (split 28)
+  D = -83: records 13073 (split 32)
+  D = 89: records 11793 (split 26)
+  D = 97: records 11882 (split 23)
+211.62user 0.07system 3:34.04elapsed 98%CPU (0avgtext+0avgdata 10276maxresident)k
+0inputs+11816outputs (0major+2357minor)pagefaults 0swaps

@@ -1,0 +1,11 @@
+# name ENV -- k lin field sides nstarts seed batch iters planted sigma
+r5l0 NS_AMIN=0.01 -- 5 0 real -+ 2000 11 250 400 0 1e-3
+r5l1 NS_AMIN=0.01 -- 5 1 real -+ 2000 12 250 400 0 1e-3
+r7l0 NS_AMIN=0.01 -- 7 0 real -+ 2000 13 250 400 0 1e-3
+r7l1 NS_AMIN=0.01 -- 7 1 real -+ 2000 14 250 400 0 1e-3
+r9l0a NS_AMIN=0.01 -- 9 0 real -+ 2000 21 250 400 0 1e-3
+r9l1a NS_AMIN=0.01 -- 9 1 real -+ 2000 22 250 400 0 1e-3
+r11l0a NS_AMIN=0.01 -- 11 0 real -+ 1500 31 250 400 0 1e-3
+r11l1a NS_AMIN=0.01 -- 11 1 real -+ 1500 32 250 400 0 1e-3
+r9l0b NS_AMIN=0.01 -- 9 0 real -+ 2000 23 250 400 0 1e-3
+r9l1b NS_AMIN=0.01 -- 9 1 real -+ 2000 24 250 400 0 1e-3

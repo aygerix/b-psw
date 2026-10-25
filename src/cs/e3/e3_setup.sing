@@ -1,0 +1,44 @@
+// src/cs/e3/e3_setup.sing -- E3: k = 3 shared-A Korselt variety, setup + 1-good-member timing.
+// f1 = 1 + c A, f2 = 1 + A (t - r2), f3 = 1 + l A (t - r3), A = t^2 + p t + q.  Translation normalisation r2 = 0.
+// Korselt: A g_j | F - 1  <=>  H = (F-1)/A vanishes at t = r2 = 0 and t = r3 (H exact quotient; handles A(r_j) = 0).
+// Good member j: exists a with f_j(a) = -1 and F(a) = -1.
+LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring R = 0, (t, a1, a2, a3, p, l, c, q, r3), dp;
+poly A = t^2 + p*t + q;
+poly f1 = 1 + c*A; poly f2 = 1 + A*t; poly f3 = 1 + l*A*(t - r3);
+poly F = f1*f2*f3;
+list dv = division(F - 1, A);
+"remainder of (F-1) mod A (must be 0):"; dv[2];
+poly H = dv[1][1,1];
+poly K2 = subst(H, t, 0); poly K3 = subst(H, t, r3);
+"K2 ="; factorize(K2); "K3 ="; factorize(K3);
+poly D = p^2 - 4*q;           // A squarefree
+poly dg = c*l*r3*D;          // c, l != 0 (leading coeffs), r3 != r2 = 0, disc != 0
+ideal K = K2, K3;
+// good-member equations, member j at point a_j
+poly G1  = subst(f1 + 1, t, a1); poly G1b = subst(f2*f3 - 1, t, a1);
+poly G2  = subst(f2 + 1, t, a2); poly G2b = subst(f1*f3 - 1, t, a2);
+poly G3  = subst(f3 + 1, t, a3); poly G3b = subst(f1*f2 - 1, t, a3);
+int t0; int t1;
+// Korselt variety itself
+t0 = timer; ideal KS = SAT(K, dg); t1 = timer;
+"Korselt (saturated): dim = ", dim(std(KS)), "  time(s) = ", t1 - t0; KS;
+// 1 good member, each j: saturate, eliminate a_j, report dim and generators
+int j;
+list GG = list(ideal(G1, G1b), ideal(G2, G2b), ideal(G3, G3b));
+list AV = list(a1, a2, a3);
+for (j = 1; j <= 3; j++) {
+  t0 = timer;
+  ideal Ij = KS + GG[j];
+  Ij = SAT(Ij, dg);
+  ideal Ej = eliminate(Ij, AV[j]);
+  t1 = timer;
+  "member ", j, " good: dim(with a) = ", dim(std(Ij)), "  dim(eliminated) = ", dim(std(Ej)), "  ngens = ", size(Ej), "  time(s) = ", t1 - t0;
+  "  generators (eliminated), factorised:";
+  int i;
+  for (i = 1; i <= size(Ej); i++) { factorize(Ej[i]); }
+  kill i;
+}
+quit;

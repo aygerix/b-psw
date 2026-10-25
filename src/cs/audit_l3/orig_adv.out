@@ -1,0 +1,8 @@
+sq_table(3) = (2, [0, 1], {0: (0, 0), 1: (1, 0), 2: (1, 1)})
+r=1: original solver OK on all families within (r+1)^2 = 4
+r=2: original solver OK on all families within (r+1)^2 = 9
+r=3: original solver OK on all families within (r+1)^2 = 16
+r=5: original solver OK on all families within (r+1)^2 = 36
+r=8: original solver OK on all families within (r+1)^2 = 81
+r=13: original solver OK on all families within (r+1)^2 = 196
+r=20: original solver OK on all families within (r+1)^2 = 441

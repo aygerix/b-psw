@@ -1,0 +1,70 @@
+// src/cs/e3/e3_R.sing -- E3 via the rational parametrisation of the Korselt variety (translation: r2 = 0).
+//   l = c / (r3 (1 + c q)),  p = P / (c r3^2),  P = -(c r3^3 + c q r3 + c + r3)    [from K2, K3; e3_setup.out]
+// Then c A = At / r3^2 with At = c r3^2 t^2 + P t + c r3^2 q, and
+//   f1 = 1 + At / r3^2,  f2 = 1 + At t / (c r3^2),  f3 = 1 + At (t - r3) / (r3^3 (1 + c q)).
+// Good member j <=> f_j + 1 and prod_{i != j} f_i - 1 have a common root <=> Res_t(N_j, M_j) = 0 (denominators cleared).
+// Loci R_i = R_j = 0 and R_1 = R_2 = R_3 = 0, saturated by c r3 (1 + c q) disc(A).
+LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring B = 0, (t, q, c, r3), dp;
+poly P = -(c*r3^3 + c*q*r3 + c + r3);
+poly At = c*r3^2*t^2 + P*t + c*r3^2*q;
+poly u = 1 + c*q;
+poly D1 = r3^2; poly D2 = c*r3^2; poly D3 = r3^3*u;          // f_j = (D_j + At g~_j) / D_j
+poly n1 = D1 + At; poly n2 = D2 + At*t; poly n3 = D3 + At*(t - r3);
+poly dg = c*r3*u*(P^2 - 4*q*c^2*r3^4);
+// Korselt sanity check: (n1 n2 n3 - D1 D2 D3) divisible by (n_j - D_j) in Q(q,c,r3)[t]
+"Korselt check: F - 1 mod (f_j - 1) numerators:";
+poly FF = n1*n2*n3 - D1*D2*D3;
+"  j=1: ", reduce(FF, std(At)) ;   // f1 - 1 = At / D1
+// for j = 2, 3 the linear factors t and (t - r3): evaluate the quotient
+poly Hq = division(FF, At)[1][1,1]; "  remainder by At = ", division(FF, At)[2][1];
+"  H(0) = ", subst(Hq, t, 0), "   H(r3) = ", subst(Hq, t, r3);
+poly N1 = 2*D1 + At;            poly M1 = n2*n3 - D2*D3;
+poly N2 = 2*D2 + At*t;          poly M2 = n1*n3 - D1*D3;
+poly N3 = 2*D3 + At*(t - r3);   poly M3 = n1*n2 - D1*D2;
+int t0 = timer;
+poly Q1 = resultant(N1, M1, t); poly Q2 = resultant(N2, M2, t); poly Q3 = resultant(N3, M3, t);
+"resultants time(s) = ", timer - t0;
+proc clean(poly f, poly g) {   // remove factors dividing a power of g (degenerate) and constants
+  list fa = factorize(f); poly r = 1; int i;
+  for (i = 1; i <= size(fa[1]); i++) {
+    poly h = fa[1][i];
+    if (deg(h) > 0) { if (reduce(g^4, std(h)) != 0) { r = r * h^fa[2][i]; } else { "    dropped degenerate factor: ", h, " ^", fa[2][i]; } }
+    kill h;
+  }
+  return(r);
+}
+poly R1 = clean(Q1, dg); poly R2 = clean(Q2, dg); poly R3 = clean(Q3, dg);
+list RR = list(R1, R2, R3);
+int j; int k; int i;
+for (j = 1; j <= 3; j++) {
+  "R", j, ": factors:"; list fa = factorize(RR[j]);
+  for (i = 1; i <= size(fa[1]); i++) { if (deg(fa[1][i]) > 0) { "   deg(q,c,r3) = ", deg(fa[1][i], intvec(0,1,0,0)), deg(fa[1][i], intvec(0,0,1,0)), deg(fa[1][i], intvec(0,0,0,1)), "  mult ", fa[2][i], ":  ", fa[1][i]; } }
+  kill fa;
+}
+write(":w out/e3_R_polys.txt", "R1 = " + string(R1) + ";", "R2 = " + string(R2) + ";", "R3 = " + string(R3) + ";");
+ring S = 0, (q, c, r3), dp;
+poly R1 = imap(B, R1); poly R2 = imap(B, R2); poly R3 = imap(B, R3); poly dg = imap(B, dg);
+list RR = list(R1, R2, R3);
+int j; int k; int i; int m; int t0;
+for (j = 1; j <= 3; j++) { for (k = j + 1; k <= 3; k++) {
+  t0 = timer;
+  ideal Ijk = SAT(ideal(RR[j], RR[k]), dg);
+  list mp = minAssGTZ(Ijk);
+  "STAGE 2, members ", j, ",", k, ": dim = ", dim(std(Ijk)), ", components = ", size(mp), ", time(s) = ", timer - t0;
+  for (i = 1; i <= size(mp); i++) { ideal Pc = mp[i]; "   comp ", i, ": dim ", dim(std(Pc)), ", gens:";
+    for (m = 1; m <= size(Pc); m++) { if (size(Pc[m]) <= 60) { "     ", Pc[m]; } else { "     [", size(Pc[m]), " terms, deg ", deg(Pc[m]), "]"; } }
+    kill Pc; }
+  kill Ijk; kill mp;
+} }
+t0 = timer;
+ideal I3 = SAT(ideal(R1, R2, R3), dg);
+list mp3 = minAssGTZ(I3);
+"STAGE 3, all good: dim = ", dim(std(I3)), ", components = ", size(mp3), ", time(s) = ", timer - t0;
+for (i = 1; i <= size(mp3); i++) { ideal Pc = mp3[i]; "   comp ", i, ": dim ", dim(std(Pc)), ", vdim ", vdim(std(Pc)), ", gens:";
+  for (m = 1; m <= size(Pc); m++) { if (size(Pc[m]) <= 60) { "     ", Pc[m]; } else { "     [", size(Pc[m]), " terms, deg ", deg(Pc[m]), "]"; } }
+  kill Pc; }
+"total time(s) = ", timer;
+quit;

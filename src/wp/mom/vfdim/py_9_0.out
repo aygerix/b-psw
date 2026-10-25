@@ -1,0 +1,9 @@
+==== k = 9: 9 cubics, linear member 0; unknowns ['u9', 'v1', 'v5', 'v9']
+  fixed rationals: ['106430607/50000000', '52863123/100000000', '63479229/100000000', '61430133/100000000', '-56430607/50000000', '47136877/100000000', '36520771/100000000', '38569867/100000000', '671003/12500000', '6200607/100000000', '5964843/100000000', '671003/12500000', '6200607/100000000', '5964843/100000000']
+  [k=9,m=9] Newton correction from the numerical start: 2.334e-9
+  [k=9,m=9] det of the 4x4 Jacobian minor at the centre (float): -51917076.9943
+  [k=9,m=9] max |Y F(x~)| = 4.875e-111, rho = 1e-60, row sums |I - Y J(B)|: [1.0959295514251316e-38, 8.229337876876277e-39, 8.229337876876277e-39, 1.635898319539691e-38]
+  [k=9,m=9] KRAWCZYK PASSED (unique zero in B; ||I - Y J(B)||_inf < 1 so J nonsingular on B)
+  domain on box: HOLD (min margin 0.0930873); distinct: YES
+  centre of unknowns: ['0.500000000000000', '0.605156203958605', '0.605156203958605', '1.610736813501485']
+  VERDICT VALID

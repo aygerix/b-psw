@@ -1,0 +1,37 @@
+// h3_a1_b234_g142: a=1 b=(2, 3, 4) target gcd degrees (1, 4, 2) (sum 7), D=12
+LIB "elim.lib"; option(redSB);
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+ring R = 0, (x, b1_0, b1_1, b2_0, b2_1, b2_2, b3_0, b3_1, b3_2, b3_3, c2, c3, h1_0, h2_0, h2_1, h2_2, h2_3, h3_0, h3_1), dp;
+poly A = x^1;
+poly B1 = x^2+b1_0*x^0+b1_1*x^1;
+poly H1 = x^1+h1_0*x^0;
+poly B2 = x^3+b2_0*x^0+b2_1*x^1+b2_2*x^2;
+poly H2 = x^4+h2_0*x^0+h2_1*x^1+h2_2*x^2+h2_3*x^3;
+poly B3 = x^4+b3_0*x^0+b3_1*x^1+b3_2*x^2+b3_3*x^3;
+poly H3 = x^2+h3_0*x^0+h3_1*x^1;
+poly c1 = 1;
+poly f1 = 1 + c1*A*B1; poly f2 = 1 + c2*A*B2; poly f3 = 1 + c3*A*B3;
+poly L1 = (c1*B1)^2 - (c1*B1 - 2*c2*B2)*(c1*B1 - 2*c3*B3);
+poly L2 = (c2*B2)^2 - (c2*B2 - 2*c1*B1)*(c2*B2 - 2*c3*B3);
+poly L3 = (c3*B3)^2 - (c3*B3 - 2*c1*B1)*(c3*B3 - 2*c2*B2);
+proc rem(poly P, poly M) { matrix C = coeffs(reduce(P, std(M)), x); ideal I = C; return(I); }
+// remainders w.r.t. the monic (in x) polynomial M: use division in x with parameters as coefficients
+proc remx(poly P, poly M) { int dM = deg(M, intvec(1, 0:(nvars(basering)-1))); poly Q = P; int dQ = deg(Q, intvec(1, 0:(nvars(basering)-1)));
+  while (dQ >= dM && Q != 0) { matrix CQ = coeffs(Q, x); poly t = CQ[dQ+1, 1]; Q = Q - t*x^(dQ-dM)*M; dQ = deg(Q, intvec(1, 0:(nvars(basering)-1))); }
+  matrix C = coeffs(Q, x); ideal I = C; return(I); }
+ideal I = 0;
+I = I + remx(f2*f3 - 1, B1);
+I = I + remx(f1 + 1, H1);
+I = I + remx(L1, H1);
+I = I + remx(f1*f3 - 1, B2);
+I = I + remx(f2 + 1, H2);
+I = I + remx(L2, H2);
+I = I + remx(f1*f2 - 1, B3);
+I = I + remx(f3 + 1, H3);
+I = I + remx(L3, H3);
+poly nz = (c2)*(c3)*(resultant(A, B1, x))*(resultant(A, B2, x))*(resultant(A, B3, x))*(resultant(B2, B1, x))*(resultant(B3, B1, x))*(resultant(B3, B2, x));
+ring S0 = 0, (b1_0, b1_1, b2_0, b2_1, b2_2, b3_0, b3_1, b3_2, b3_3, c2, c3, h1_0, h2_0, h2_1, h2_2, h2_3, h3_0, h3_1, TT), dp;
+ideal I = imap(R, I); poly nz = imap(R, nz);
+int t0 = timer; ideal S = std(I + ideal(1 - TT*nz));   // Rabinowitsch: V(S) = V(I) minus V(nz)
+print("RESULT h3_a1_b234_g142 D=12 G=7 dim=" + string(dim(S)) + " time=" + string(timer - t0));
+quit;

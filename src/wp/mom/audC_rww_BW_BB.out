@@ -1,0 +1,5 @@
+BW: starts 300, max violation (>0 refutes) = -5.37748e-12 at (np.float64(14.825717600953011), np.float64(3.999999999999995)), (np.float64(14.825717600916837), np.float64(4.000000000000001)); regions W B
+BB: starts 300, max violation (>0 refutes) = -2.95319e-14 at (np.float64(31.973576930006324), np.float64(15.980184061698337)), (np.float64(31.973576930007003), np.float64(15.980184061698663)); regions B B
+WW: starts 300, max violation (>0 refutes) = -7.49401e-14 at (np.float64(2.1037251318036017), np.float64(-1.9184632471217813)), (np.float64(2.1037251318036434), np.float64(-1.9184632471227472)); regions W W
+
+[exited with code 0]

@@ -1,0 +1,12 @@
+== mkh3
+Sun Oct 25 06:38:46 UTC 2026
+[0;31m  ***   Warning: new maximum stack size = 2000003072 (1907.352 Mbytes).[0m
+pc7_mono_H3_p.sing: total length 410933 (411 ms)
+pc7_mono_H3_0.sing: total length 410933 (412 ms)
+Sun Oct 25 06:38:48 UTC 2026
+-rw-rw-r-- 1 <user> <user> 411309 Oct 25 06:38 pc7_mono_H3_0.sing
+-rw-rw-r-- 1 <user> <user> 411313 Oct 25 06:38 pc7_mono_H3_p.sing
+== H3_p
+Sun Oct 25 06:38:48 UTC 2026
+
+halt 1

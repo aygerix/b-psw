@@ -1,0 +1,18 @@
+// k = 3 linear Korselt families with NO common root (a = 0), members 2, 3 Lucas-good: list all solutions over C.
+LIB "elim.lib"; LIB "primdec.lib"; LIB "solve.lib"; option(redSB);
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+ring R = 0, (th2_1, th3_1, c2, c3, sg1, sg2), dp;
+proc f1(poly x) { return(1 + (x-0)); }
+proc f2(poly x) { return(1 + c2*(x-th2_1)); }
+proc f3(poly x) { return(1 + c3*(x-th3_1)); }
+ideal I = f2(0)*f3(0) - 1, f1(th2_1)*f3(th2_1) - 1, f1(th3_1)*f2(th3_1) - 1,
+          f2(sg1) + 1, f1(sg1)*f3(sg1) - 1, f3(sg2) + 1, f1(sg2)*f2(sg2) - 1;
+poly nz = c2*c3*th2_1*th3_1*(th2_1-th3_1)*(sg1-sg2)*(c2-1)*(c3-1)*(c2-c3);
+ideal S = std(SAT(I, nz));
+"dim", dim(S), "vdim", vdim(S);
+list P = minAssGTZ(S); int i;
+for (i = 1; i <= size(P); i++) { "component", i; P[i]; }
+// also: is member 1 good too (zeta family)?
+ideal S1 = std(S + ideal(f1(-2)*0 + (1 + (-2-0)) + 1));
+def L = solve(S, 30, 0, "nodisplay"); setring L; SOL;
+quit;

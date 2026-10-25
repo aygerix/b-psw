@@ -1,0 +1,14 @@
+~/b-psw/src/wp/mom/sf_geom.py:91: RuntimeWarning: overflow encountered in exp
+  r = 1/(1 + np.exp(-z)); return -abs(np.prod(1 - 2*r))
+T1 negative-quadratic oval: samples inside = 19874, violations (Im > y_top) = 0, max Im/y_top inside = 0.999840, max |f(top) - 1| = 6.00e-15
+T2 mixed-sign Step 2 (random): pairs tested = 220196, |f_i(a*)| <= 1 cases = 0, min |f_i(a*)| = 1.000126
+T2 adversarial signs (j*=+1, i=-1): inf(|f_i(a*)| - 1) found = -4.885e-15, |top_i - a*| there = 3.280e-09
+T2 adversarial signs (j*=-1, i=+1): inf(|f_i(a*)| - 1) found = -2.220e-15, |top_i - a*| there = 3.509e-09
+T2 adversarial signs (j*=-1, i=-1): inf(|f_i(a*)| - 1) found = -5.107e-15, |top_i - a*| there = 1.511e-09
+T2 adversarial signs (j*=+1, i=+1): inf(|f_i(a*)| - 1) found = -6.217e-15, |top_i - a*| there = 3.300e-09
+T3 all-negative shared top (random, 1e5 families, k <= 11): max |W| = 0.999582
+T3 adversarial k=2: sup |W| found = 1.000000000, ratios al_l/al_max = [1.]
+T3 adversarial k=3: sup |W| found = 1.000000000, ratios al_l/al_max = [1. 0.]
+T3 adversarial k=5: sup |W| found = 1.000000000, ratios al_l/al_max = [1. 1. 1. 0.]
+T3 adversarial k=9: sup |W| found = 1.000000000, ratios al_l/al_max = [0. 1. 1. 1. 1. 1. 1. 1.]
+T3 mixed shared top: positive member value at a* = -1+0j, negative member value = 1+0j

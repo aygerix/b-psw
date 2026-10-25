@@ -1,0 +1,20 @@
+mode 2, T = 300, X = 1e17.0: smooth-side candidates 24089056, prime candidates with r <= 10000000: 6618
+decade: pool, observed stragglers, predicted stragglers (r > 1), ratio (pool+obs)/pool
+  1e1 :      1      0      0.00  1.000
+  1e2 :      4      0      0.14  1.000
+  1e3 :      2      0      0.11  1.000
+  1e4 :      7      0      0.38  1.000
+  1e5 :      9      0      0.20  1.000
+  1e6 :     11      1      0.51  1.091
+  1e7 :     10      0      0.38  1.000
+  1e8 :      5      1      0.17  1.200
+  1e9 :      1      0      0.18  1.000
+  1e10:      2      0      0.21  1.000
+  1e11:      1      0      0.07  1.000
+  1e12:      1      0      0.09  1.000
+  1e13:      0      0      0.04  0.000
+  1e14:      0      0      0.01  0.000
+  1e15:      0      0      0.01  0.000
+  1e16:      0      0      0.00  0.000
+total: pool 54, observed stragglers 2, predicted 2.49 (+ tail <= 0.00481 over r > RCUT, all candidates)
+6.18 s

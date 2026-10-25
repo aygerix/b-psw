@@ -1,0 +1,2 @@
+Part A: subsets 524268; Fermat (q_i | n-1) 0; Selfridge D found 0; one Lucas class 0; BPSW 0; 2.5s
+Part B (Fermat side only, 51 exponents): spsp(2)-type subsets by size {2: 0, 3: 0, 4: 0, 5: 0} 7.1s

@@ -1,0 +1,29 @@
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar subtract
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:27: RuntimeWarning: overflow encountered in scalar multiply
+  c[n] = v * d[n - 3]
+~/b-psw/src/wp/mom/m9_feas.py:52: RuntimeWarning: overflow encountered in exp
+  r = np.exp(rho)
+~/b-psw/src/wp/mom/m9_feas.py:53: RuntimeWarning: overflow encountered in square
+  v = (r + 0.5) ** 2 / 8
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar add
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+start 3: steps 48: obj -2.0959e+04 -> -1.7848e+04; 2^kT'' -1.7709e+04 2^kT~'' -1.7709e+04; e2(s) 4.202e+03 e2(al) 4.202e+03; margin 1.43e-11 dmin 7.79e-10 eqres 7.3e-12
+   u = [ 0.5      2.01552  0.5      0.5      0.5      0.5      0.5     -1.01552]
+   v = [0.03125  0.50779  1.314939 0.03125  0.03125  0.03125  0.03125  0.50779 ]
+start 5: steps 54: obj -7.8447e+04 -> -1.7848e+04; 2^kT'' -1.7709e+04 2^kT~'' -1.7709e+04; e2(s) 4.202e+03 e2(al) 4.202e+03; margin 2.16e-10 dmin 3.48e-09 eqres 7.3e-12
+~/chowla_venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:527: RuntimeWarning: overflow encountered in dot
+  cost_new = 0.5 * np.dot(f_new, f_new)
+   u = [ 0.5      0.5      2.01552 -1.01552  0.5      0.5      0.5      0.5    ]
+   v = [1.314939 0.03125  0.50779  0.50779  0.03125  0.03125  0.03125  0.03125 ]
+start 15: steps 44: obj -1.8639e+04 -> -1.7848e+04; 2^kT'' -1.7709e+04 2^kT~'' -1.7709e+04; e2(s) 4.202e+03 e2(al) 4.202e+03; margin 1.69e-10 dmin 2.76e-09 eqres 1.1e-10
+   u = [ 2.01552  0.5      0.5      0.5      0.5      0.5     -1.01552  0.5    ]
+   v = [0.50779  0.03125  0.03125  0.03125  1.314939 0.03125  0.50779  0.03125 ]
+start 17: steps 43: obj -1.9657e+04 -> -1.7848e+04; 2^kT'' -1.7709e+04 2^kT~'' -1.7709e+04; e2(s) 4.202e+03 e2(al) 4.202e+03; margin 1.49e-10 dmin 3.53e-09 eqres 2.5e-11
+   u = [ 0.5      2.01552  0.5      0.5      0.5      0.5      0.5     -1.01552]
+   v = [1.314939 0.50779  0.03125  0.03125  0.03125  0.03125  0.03125  0.50779 ]
+start 23: steps 53: obj -2.0613e+04 -> -1.7848e+04; 2^kT'' -1.7709e+04 2^kT~'' -1.7709e+04; e2(s) 4.202e+03 e2(al) 4.202e+03; margin 1.51e-10 dmin 2.59e-09 eqres 7.3e-12
+   u = [ 0.5      2.01552  0.5      0.5      0.5      0.5      0.5     -1.01552]
+   v = [0.03125  0.50779  0.03125  1.314939 0.03125  0.03125  0.03125  0.50779 ]

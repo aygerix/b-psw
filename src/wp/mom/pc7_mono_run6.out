@@ -1,0 +1,63 @@
+== slice
+  B1 (0,0,0): 63/64*ep^6
+  B1 (1,0,0): 5*ep^4
+  B1 (1,1,0): 6*ep^2
+  B1 (2,0,0): 20*ep^2
+  B1 (2,2,0): 4/ep^2
+  B1 (3,1,0): 4/ep^2
+  B1 (4,0,0): 40/ep^2
+  B1 (5,0,0): 16/ep^4
+B1: 11 nonzero monomial coefficients, 8 not positive on (0,1]
+  B1+B5 (0,0,0): 63/32*ep^6
+  B1+B5 (1,1,0): 12*ep^2
+  B1+B5 (2,0,0): 40*ep^2
+  B1+B5 (2,2,0): 8/ep^2
+  B1+B5 (3,1,0): 8/ep^2
+  B1+B5 (4,0,0): 80/ep^2
+B1+B5: 6 nonzero monomial coefficients, 6 not positive on (0,1]
+  -B4 (0,0,0): 189/16*ep^5
+  -B4 (1,0,0): 20*ep^3
+  -B4 (1,1,0): 8*ep
+  -B4 (2,0,0): 40*ep
+  -B4 (2,1,0): 4/ep
+  -B4 (3,0,0): 40/ep
+  -B4 (4,0,0): 16/ep^3
+-B4: 7 nonzero monomial coefficients, 7 not positive on (0,1]
+  -(B4+B8) (1,0,0): 40*ep^3
+  -(B4+B8) (2,1,0): 8/ep
+  -(B4+B8) (3,0,0): 80/ep
+-(B4+B8): 3 nonzero monomial coefficients, 3 not positive on (0,1]
+B4+B8 identity: 1
+B1+B5 identity: 1
+== mkh2
+[0;31m[0;31m  ***   at top-level:[0;35m mkh(7,4,"pc7_mono_H4_p.sing",32003)
+[0;31m[0;31m  ***                 ^-----------------------------------
+[0;31m  ***   in function mkh: ...[0;35m(M,m,eval(Str("P",m))),E=[0;35mhsym(k,e1,e2,lam,mu,M
+[0;31m[0;31m  ***                                                ^---------------------
+[0;31m  ***   in function hsym: ...[0;35m=0,M,(G^(k-1)*QV[n+1]%HM)[0;35m*H^n)%HM,TW=sum(n=0,M
+[0;31m[0;31m  ***                                                 ^---------------------
+  *** _*_: the PARI stack overflows !
+  current stack size: 8000000 (7.629 Mbytes)
+  [hint] set 'parisizemax' to a nonzero value in your GPRC
+[0m
+... skipping file 'pc7_mono_mkh2.gp'
+-rw-rw-r-- 1 <user> <user> 157000 Oct 25 06:36 pc7_mono_H3_0.sing
+-rw-rw-r-- 1 <user> <user> 157008 Oct 25 06:36 pc7_mono_H3_p.sing
+== H3_p
+Sun Oct 25 06:36:58 UTC 2026
+   ? `polyBucket` ^ `number` failed
+   ? error occurred in or before pc7_mono_H3_p.sing line 22: `(I0), hp*bp - 1, hm*bm - 1, y*(hm - hp)*((hm - hp)^2/4 - 2*(hp + hm) + 4) - 1;`
+   ? expected ideal-expression. type 'help ideal;'
+   ? `I` is not defined
+   ? error occurred in or before pc7_mono_H3_p.sing line 23: `:"; dim(J); "size:"; size(J); "seconds:"; timer - t0; if (size(J) < 10) { J; }`
+   ? expected ideal-expression. type 'help ideal;'
+dim:
+   ? `J` is not defined
+   ? error occurred in or before pc7_mono_H3_p.sing line 23: `:"; dim(J); "size:"; size(J); "seconds:"; timer - t0; if (size(J) < 10) { J; }`
+size:
+   ? `J` is not defined
+   ? error occurred in or before pc7_mono_H3_p.sing line 23: `:"; dim(J); "size:"; size(J); "seconds:"; timer - t0; if (size(J) < 10) { J; }`
+seconds:
+0
+   ? `J` is not defined
+rc 0

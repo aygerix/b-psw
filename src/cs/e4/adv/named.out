@@ -1,0 +1,22 @@
+p=162259276829213363391578010288127 bits 107 isprime(proven) 1 (5/p) -1 p mod 8 7
+   p-1 = [2, 1; 3, 1; 107, 1; 6361, 1; 69431, 1; 20394401, 1; 28059810762433, 1]   p+1 = Mat([2, 107])
+   ord2 = 107 = Mat([107, 1])   z = 162259276829213363391578010288128 = Mat([2, 107])   class (v2 ord2, v2 z) = (0,107)
+   odd(ord2) primes mod 4: [3]  odd(z) primes mod 4: []
+p=170141183460469231731687303715884105727 bits 127 isprime(proven) 1 (5/p) -1 p mod 8 7
+   p-1 = [2, 1; 3, 3; 7, 2; 19, 1; 43, 1; 73, 1; 127, 1; 337, 1; 5419, 1; 92737, 1; 649657, 1; 77158673929, 1]   p+1 = Mat([2, 127])
+   ord2 = 127 = Mat([127, 1])   z = 170141183460469231731687303715884105728 = Mat([2, 127])   class (v2 ord2, v2 z) = (0,127)
+   odd(ord2) primes mod 4: [3]  odd(z) primes mod 4: []
+p=18104700793 bits 35 isprime(proven) 1 (5/p) -1 p mod 8 1
+   p-1 = [2, 3; 3, 1; 23, 1; 163, 1; 311, 1; 647, 1]   p+1 = [2, 1; 139, 1; 167, 1; 271, 1; 1439, 1]
+   ord2 = 1508725066 = [2, 1; 23, 1; 163, 1; 311, 1; 647, 1]   z = 167 = Mat([167, 1])   class (v2 ord2, v2 z) = (1,0)
+   odd(ord2) primes mod 4: [3, 3, 3, 3]  odd(z) primes mod 4: [3]
+   divides Phi*_167: 1
+p=486077598803 bits 39 isprime(proven) 1 (5/p) -1 p mod 8 3
+   p-1 = [2, 1; 31, 1; 97, 1; 223, 1; 293, 1; 1237, 1]   p+1 = [2, 2; 3, 1; 7, 2; 19, 1; 43508557, 1]
+   ord2 = 486077598802 = [2, 1; 31, 1; 97, 1; 223, 1; 293, 1; 1237, 1]   z = 1596 = [2, 2; 3, 1; 7, 1; 19, 1]   class (v2 ord2, v2 z) = (1,2)
+   odd(ord2) primes mod 4: [3, 1, 3, 1, 1]  odd(z) primes mod 4: [3, 3, 3]
+   divides Phi*_1596: 1
+p=13 q=3: 2 is a q-th power mod p? 0; symbol exponent s on P_1 = 2; exponent of the product over the 2 conjugates = 0
+p=18104700793 q=23: 2 is a q-th power mod p? 0; symbol exponent s on P_1 = 5; exponent of the product over the 22 conjugates = 0
+p=18104700793 q=163: 2 is a q-th power mod p? 0; symbol exponent s on P_1 = 19; exponent of the product over the 162 conjugates = 0
+p=18104700793 q=311: 2 is a q-th power mod p? 0; symbol exponent s on P_1 = 140; exponent of the product over the 310 conjugates = 0

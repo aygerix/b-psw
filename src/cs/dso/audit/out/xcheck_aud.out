@@ -1,0 +1,9 @@
+Attempt D file: 396 rows (min p 7, max p 469561); census rows with ord, z <= 1500: 398
+  in census not in Attempt D: [3, 5]  in Attempt D not in census: []
+  rows differing: []
+direct (p <= 1e9, ord, z <= 6e4) filtered to X = 10000: 2189 rows; census 2189; identical True
+direct (p <= 1e9, ord, z <= 6e4) filtered to X = 20000: 4113 rows; census 4113; identical True
+direct (p <= 1e9, ord, z <= 6e4) filtered to X = 60000: 11121 rows; census 11121; identical True
+X = 10000: inert DSO primes with 200-smooth odd orders (5 excluded): 280; in census2 279; identical orders 279; missing [(3, 2, 4, -1)]
+X = 20000: inert DSO primes with 200-smooth odd orders (5 excluded): 387; in census2 386; identical orders 386; missing [(3, 2, 4, -1)]
+X = 60000: inert DSO primes with 200-smooth odd orders (5 excluded): 618; in census2 617; identical orders 617; missing [(3, 2, 4, -1)]

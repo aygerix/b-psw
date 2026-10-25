@@ -1,0 +1,86 @@
+// src/cs/e3b/fsp_k5.sing -- E3b: k = 5 shared-A Korselt families with a FULLY SHARED Lucas point (FSP).
+// Coordinates: shared point x = 0 (all f_j(0) = -1), scaling r2 = 1.  g_1 = c, g_j = c (r_j - x)/r_j (j = 2..5),
+// B = c A = c x^2 + P x - 2 (so A(0) = -2/c), f_1 = 1 + B, f_j = 1 + B (r_j - x)/r_j.
+// Korselt_j: K_j(u_j) = 0, u_j = B(r_j), K_j(u) = [(1+u) prod_{i != 1,j} (r_i + u (r_i - r_j)) - prod r_i] / u.
+// Lucas: N_j = f_j + 1 = x M_j, Phi_j = x Psi_j; m_j = 1 + deg gcd(M_j, Psi_j)  (exact: gcd(xM, xPsi) = x gcd(M, Psi)).
+//   M_1 = c x + P;  M_j = (c x + P)(r_j - x) + 2;
+//   Psi_1 = [prod_i (2x - r_i) - prod_i r_i] / x;
+//   Psi_j = [(-x - r_j) prod_{i != j} ((r_j - x) r_i - 2 r_j (r_i - x)) - (r_j - x)^4 prod_{i != j} r_i] / x.
+LIB "primdec.lib"; LIB "elim.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring R = 0, (x, U, c, P, r3, r4, r5), dp;
+poly r2 = 1;
+list rr = list(r2, r3, r4, r5);          // rr[j-1] = r_j, j = 2..5
+poly B = c*x^2 + P*x - 2;
+int i; int j;
+// Korselt
+ideal KOR;
+for (j = 1; j <= 4; j++) {
+  poly pr = 1; poly pr0 = 1;
+  for (i = 1; i <= 4; i++) { if (i != j) { pr = pr * (rr[i] + U*(rr[i] - rr[j])); pr0 = pr0 * rr[i]; } }
+  poly KU = (1 + U)*pr - pr0;
+  KU = division(KU, U)[1][1,1];
+  poly uj = subst(B, x, rr[j]);
+  KOR[j] = subst(KU, U, uj);
+  kill pr; kill pr0; kill KU; kill uj;
+}
+// Lucas pieces
+list MM; list PS;
+poly pr = 1; poly pr0 = 1;
+for (i = 1; i <= 4; i++) { pr = pr*(2*x - rr[i]); pr0 = pr0*rr[i]; }
+MM[1] = c*x + P; PS[1] = division(pr - pr0, x)[1][1,1];
+kill pr; kill pr0;
+for (j = 1; j <= 4; j++) {
+  poly pr = 1; poly pr0 = 1;
+  for (i = 1; i <= 4; i++) { if (i != j) { pr = pr*((rr[j] - x)*rr[i] - 2*rr[j]*(rr[i] - x)); pr0 = pr0*rr[i]; } }
+  poly Ph = (-x - rr[j])*pr - (rr[j] - x)^4*pr0;
+  if (subst(Ph, x, 0) != 0) { "ERROR Phi_j(0) != 0"; }
+  MM[j+1] = (c*x + P)*(rr[j] - x) + 2;
+  PS[j+1] = division(Ph, x)[1][1,1];
+  kill pr; kill pr0; kill Ph;
+}
+poly dg = c*r3*r4*r5*(r3-1)*(r4-1)*(r5-1)*(r3-r4)*(r3-r5)*(r4-r5)*(P^2 + 8*c);
+// export to the parameter ring
+ring S = 0, (c, P, r3, r4, r5), dp;
+ideal KOR = imap(R, KOR); poly dg = imap(R, dg);
+int t0 = timer;
+ideal KS = SAT(KOR, dg);
+"FSP Korselt locus: dim = ", dim(std(KS)), " (expected 1), time ", timer - t0;
+list mp = minAssGTZ(KS);
+"components: ", size(mp);
+int m;
+for (i = 1; i <= size(mp); i++) { ideal Pc = std(mp[i]); "  comp ", i, ": dim ", dim(Pc), ", deg ", mult(Pc), ", ngens ", size(Pc);
+  for (m = 1; m <= size(Pc); m++) { if (size(Pc[m]) <= 30) { "     ", Pc[m]; } else { "     [", size(Pc[m]), " terms, deg ", deg(Pc[m]), "]"; } }
+  kill Pc; }
+// Lucas conditions delta_j >= 1 (resultants) and delta_j = 2 (pseudo-remainder) per member, written to a file
+setring R;
+list RES; list REM;
+RES[1] = subst(PS[1]*c^3, x, -P/c);    // c^3 Psi_1(-P/c), Psi_1 cubic
+for (j = 2; j <= 5; j++) {
+  RES[j] = resultant(MM[j], PS[j], x);
+  matrix Mq = coeffs(reduce(PS[j]*c^2, std(MM[j])), x);   // remainder of c^2 Psi_j mod M_j (lead coeff of M_j is -c)
+  ideal Ir; for (m = 1; m <= nrows(Mq); m++) { Ir[m] = Mq[m,1]; }
+  REM[j] = Ir; kill Mq; kill Ir;
+}
+setring S;
+list RES = imap(R, RES); list REM = imap(R, REM);
+for (j = 1; j <= 5; j++) { "member ", j, ": delta >= 1 polynomial: ", size(RES[j]), " terms, deg ", deg(RES[j]); }
+// strata on the FSP locus: for each subset, intersect
+proc stratum(ideal I, string tag) {
+  int t0 = timer; ideal J = SAT(KS + I, dg); ideal Js = std(J); int d = dim(Js);
+  tag, ": dim ", d, "  (time ", timer - t0, ")";
+  if (d >= 0) { list mp = minAssGTZ(J); int i; int m;
+    for (i = 1; i <= size(mp); i++) { ideal Pc = std(mp[i]); "     comp ", i, ": dim ", dim(Pc), ", deg ", mult(Pc);
+      for (m = 1; m <= size(Pc); m++) { if (size(Pc[m]) <= 30) { "        ", Pc[m]; } else { "        [", size(Pc[m]), " terms, deg ", deg(Pc[m]), "]"; } }
+      kill Pc; } }
+  return(J);
+}
+ideal T;
+T = stratum(ideal(RES[1]), "f1 full (delta1 = 1, Sum m >= 6)"); kill T; ideal T;
+T = stratum(ideal(RES[2]), "f2 delta >= 1 (Sum m >= 6)"); kill T; ideal T;
+T = stratum(REM[2], "f2 full (delta2 = 2, Sum m >= 7)"); kill T; ideal T;
+T = stratum(ideal(RES[1], RES[2]), "f1 full + f2 delta>=1 (Sum m >= 7)"); kill T; ideal T;
+T = stratum(ideal(RES[2], RES[3]), "f2, f3 delta>=1 (Sum m >= 7)"); kill T; ideal T;
+"total time ", timer;
+quit;

@@ -1,0 +1,2 @@
+bb2 ../fx/split15/m15_LL_F_F.txt lam 0.200000 T 8.500000 status DONE M_ub 8.568895 best_exact 8.568892 N 76 bits 337.1555 cons 1 nodes 3904127 exact 1 pruned 1952063 time 667.8
+rc 0

@@ -1,0 +1,23 @@
+// ** redefining blowup0 (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining blowup0 (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining elimRing (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining elimRing (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining elim (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining elim (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining elim2 (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining elim2 (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining elim1 (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining elim1 (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining nselect (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining nselect (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining sat (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining sat (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining sat_with_exp (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining sat_with_exp (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining select (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining select (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining select1 (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+// ** redefining select1 (LIB "primdec.lib"; LIB "elim.lib";) fsp_k5.sing:9
+
+halt 1
+rc=124

@@ -1,0 +1,5 @@
+k = 5: constraint at q1 = b1/2^(k-2): 0;  identity remainder: 0;  deg_y G = 3;  M = 256: real roots in (1, M) = 3, G(1) != 0: 1, G(M) != 0: 1, squarefree: 1
+k = 7: constraint at q1 = b1/2^(k-2): 0;  identity remainder: 0;  deg_y G = 5;  M = 1024: real roots in (1, M) = 5, G(1) != 0: 1, G(M) != 0: 1, squarefree: 1
+k = 9: constraint at q1 = b1/2^(k-2): 0;  identity remainder: 0;  deg_y G = 7;  M = 4096: real roots in (1, M) = 7, G(1) != 0: 1, G(M) != 0: 1, squarefree: 1
+k = 11: constraint at q1 = b1/2^(k-2): 0;  identity remainder: 0;  deg_y G = 9;  M = 16384: real roots in (1, M) = 9, G(1) != 0: 1, G(M) != 0: 1, squarefree: 1
+k = 13: constraint at q1 = b1/2^(k-2): 0;  identity remainder: 0;  deg_y G = 11;  M = 65536: real roots in (1, M) = 11, G(1) != 0: 1, G(M) != 0: 1, squarefree: 1

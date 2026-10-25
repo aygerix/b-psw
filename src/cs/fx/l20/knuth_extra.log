@@ -1,0 +1,4 @@
+D-15_2_0 l0.225 knuth lam 0.225000 inc 0.200000 probes 600 est_nodes 1.333e+07 stderr 9.92e+05 mean_depth 20.50 max_depth 27 closures 12901 time 28.49
+D-15_2_0 l0.225 knuth lam 0.225000 inc 1.000000 probes 600 est_nodes 1.235e+07 stderr 1.04e+06 mean_depth 20.36 max_depth 27 closures 12817 time 28.55
+split15/m15_FF.txt l0.225 knuth lam 0.225000 inc 0.200000 probes 400 est_nodes 1.967e+05 stderr 1.03e+04 mean_depth 16.14 max_depth 20 closures 6855 time 6.12
+split15/m15_LL_F.txt l0.225 knuth lam 0.225000 inc 0.200000 probes 400 est_nodes 5.065e+06 stderr 2.48e+05 mean_depth 20.80 max_depth 24 closures 8722 time 8.30

@@ -1,0 +1,21 @@
+== band (2e3,4e3]
+TOTAL sumE=811.529 E2cells=3.0836 E3cells=2.1978e-02
+BAND inert cells with max(d,e) in (2000, 4000]: E=236.9669 E2cells=8.9568e-06 E3cells=5.8476e-13
+BAND split cells with max(d,e) in (2000, 4000]: E=314.4907 E2cells=2.3818e+00 E3cells=1.8849e-02
+SIGN inert expected primes p>X: 312.683
+SIGN split expected primes p>X: 498.846
+15.33 s 2120 KB
+== mixed band (2e3,4e3]
+MIXED cells (1 inert + 1 usable split, same (d,e)), d,e <= 4000, primes > 2000: expected 3.2769e-05; band max(d,e) > 2000: 9.8200e-06
+7.35 s
+== mixed X=1e4 (primes > 1e4)
+MIXED cells (1 inert + 1 usable split, same (d,e)), d,e <= 10000, primes > 10000: expected 5.5741e-06; band max(d,e) > 10000: 0.0000e+00
+44.88 s
+== heur_cmp X=1e4
+TOTAL sumE=1126.119 E2cells=2.5156 E3cells=9.5427e-03
+SIGN inert expected primes p>X: 321.274
+SIGN split expected primes p>X: 804.845
+observed p > X: inert 285  split 676
+expected small-large 2-cells: 4.734 (inert 0.0003)
+observed cells by (n_small, n_large): [((0, 1), 953), ((0, 2), 2), ((1, 0), 1221), ((1, 1), 4), ((2, 0), 1)]
+BATCH3-DONE

@@ -1,0 +1,4 @@
+05:11:59 start r9pair: env [NS_AMIN=0.01 NS_WMODE=c NS_BDEF=1e-3 NS_PAIR=1e-3] args [9 0 real -+ 2000 411 250 400 0 1e-3]
+05:20:59 done r9pair (exit 0)
+05:20:59 start c11l1pair: env [NS_AMIN=0.01 NS_WMODE=c NS_BDEF=1e-3 NS_PAIR=1e-3] args [11 1 real - 1500 412 250 400 0 1e-3]
+05:38:47 done c11l1pair (exit 0)

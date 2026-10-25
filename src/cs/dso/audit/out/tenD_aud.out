@@ -1,0 +1,120 @@
+== D = 5 (Q = -1)
+G = gcd(A,B): 29052 bits, 6.0000000000000000000000000000000000000 s
+rows 2189; max p 14271001; total 8.0000000000000000000000000000000000000 s
+census rerun identical to ../dsoD_5_X10000.txt
+rows 2189 inert 903 split 1285 ramified 1 max p 14271001 mismatches/bad 0
+listed primes 2189 (max 14271001), not dividing G: 0, max exponent 8
+COFACTOR = 1: prime support of G equals the list
+# usable 903 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 7.288e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 5.86e+06, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 4.066e+08, anchor survivors 130, full solutions 0
+k = 5: subsets in scope 2.373e+10, anchor survivors 5619, full solutions 0
+== D = -7 (Q = 2)
+G = gcd(A,B): 32340 bits, 4.0000000000000000000000000000000000000 s
+rows 2416; max p 18463369; total 5.8000000000000000000000000000000000000 s
+census rerun identical to ../dsoD_m7_X10000.txt
+rows 2416 inert 1092 split 1323 ramified 1 max p 18463369 mismatches/bad 0
+listed primes 2416 (max 18463369), not dividing G: 0, max exponent 8
+COFACTOR = 1: prime support of G equals the list
+# usable 1102 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 6.479e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 3.066e+06, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 1.169e+08, anchor survivors 32, full solutions 0
+k = 5: subsets in scope 3.694e+09, anchor survivors 1649, full solutions 0
+== D = -11 (Q = 3)
+G = gcd(A,B): 28159 bits, 6.8000000000000000000000000000000000000 s
+rows 2136; max p 25154273; total 8.7000000000000000000000000000000000000 s
+census rerun identical to ../dsoD_m11_X10000.txt
+rows 2136 inert 949 split 1186 ramified 1 max p 25154273 mismatches/bad 0
+listed primes 2136 (max 25154273), not dividing G: 0, max exponent 5
+COFACTOR = 1: prime support of G equals the list
+# usable 963 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 3.953e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 1.383e+06, anchor survivors 0, full solutions 0
+k = 4: subsets in scope 4.115e+07, anchor survivors 14, full solutions 0
+k = 5: subsets in scope 1.061e+09, anchor survivors 737, full solutions 0
+== D = 13 (Q = -3)
+G = gcd(A,B): 29123 bits, 10.200000000000000000000000000000000000 s
+rows 2200; max p 17678041; total 12.900000000000000000000000000000000000 s
+census rerun identical to ../dsoD_13_X10000.txt
+rows 2200 inert 1035 split 1164 ramified 1 max p 17678041 mismatches/bad 0
+listed primes 2200 (max 17678041), not dividing G: 0, max exponent 5
+COFACTOR = 1: prime support of G equals the list
+# usable 1046 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 4.769e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 1.87e+06, anchor survivors 0, full solutions 0
+k = 4: subsets in scope 6.341e+07, anchor survivors 32, full solutions 0
+k = 5: subsets in scope 1.894e+09, anchor survivors 871, full solutions 0
+== D = -15 (Q = 4)
+G = gcd(A,B): 35097 bits, 10.100000000000000000000000000000000000 s
+rows 2594; max p 48912491; total 12.700000000000000000000000000000000000 s
+census rerun identical to ../dsoD_m15_X10000.txt
+rows 2594 inert 1175 split 1417 ramified 2 max p 48912491 mismatches/bad 0
+listed primes 2594 (max 48912491), not dividing G: 0, max exponent 8
+COFACTOR = 1: prime support of G equals the list
+# usable 1186 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 1.029e+05, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 8.161e+06, anchor survivors 3, full solutions 0
+k = 4: subsets in scope 5.572e+08, anchor survivors 134, full solutions 0
+k = 5: subsets in scope 3.261e+10, anchor survivors 11083, full solutions 0
+== D = 17 (Q = -4)
+G = gcd(A,B): 28612 bits, 10.300000000000000000000000000000000000 s
+rows 2163; max p 7969601; total 13.200000000000000000000000000000000000 s
+census rerun identical to ../dsoD_17_X10000.txt
+rows 2163 inert 951 split 1211 ramified 1 max p 7969601 mismatches/bad 0
+listed primes 2163 (max 7969601), not dividing G: 0, max exponent 8
+COFACTOR = 1: prime support of G equals the list
+# usable 959 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 8.138e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 6.948e+06, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 5.152e+08, anchor survivors 203, full solutions 0
+k = 5: subsets in scope 3.22e+10, anchor survivors 8412, full solutions 0
+== D = -19 (Q = 5)
+G = gcd(A,B): 28466 bits, 8.9000000000000000000000000000000000000 s
+rows 2154; max p 9312601; total 11.300000000000000000000000000000000000 s
+census rerun identical to ../dsoD_m19_X10000.txt
+rows 2154 inert 991 split 1162 ramified 1 max p 9312601 mismatches/bad 0
+listed primes 2154 (max 9312601), not dividing G: 0, max exponent 8
+COFACTOR = 1: prime support of G equals the list
+# usable 1002 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 4.218e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 1.457e+06, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 4.157e+07, anchor survivors 23, full solutions 0
+k = 5: subsets in scope 1.01e+09, anchor survivors 598, full solutions 0
+== D = -23 (Q = 6)
+G = gcd(A,B): 27407 bits, 9.1000000000000000000000000000000000000 s
+rows 2092; max p 5007601; total 11.800000000000000000000000000000000000 s
+census rerun identical to ../dsoD_m23_X10000.txt
+rows 2092 inert 958 split 1133 ramified 1 max p 5007601 mismatches/bad 0
+listed primes 2092 (max 5007601), not dividing G: 0, max exponent 5
+COFACTOR = 1: prime support of G equals the list
+# usable 964 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 4.084e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 1.431e+06, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 4.173e+07, anchor survivors 24, full solutions 0
+k = 5: subsets in scope 1.04e+09, anchor survivors 391, full solutions 0
+== D = 29 (Q = -7)
+G = gcd(A,B): 28701 bits, 9.2000000000000000000000000000000000000 s
+rows 2171; max p 126074881; total 12.300000000000000000000000000000000000 s
+census rerun identical to ../dsoD_29_X10000.txt
+rows 2171 inert 1009 split 1161 ramified 1 max p 126074881 mismatches/bad 0
+listed primes 2171 (max 126074881), not dividing G: 0, max exponent 8
+COFACTOR = 1: prime support of G equals the list
+# usable 1022 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 4.513e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 1.691e+06, anchor survivors 3, full solutions 0
+k = 4: subsets in scope 5.375e+07, anchor survivors 32, full solutions 0
+k = 5: subsets in scope 1.476e+09, anchor survivors 582, full solutions 0
+== D = -31 (Q = 8)
+G = gcd(A,B): 31432 bits, 10.600000000000000000000000000000000000 s
+rows 2358; max p 53028541; total 13.400000000000000000000000000000000000 s
+census rerun identical to ../dsoD_m31_X10000.txt
+rows 2358 inert 1086 split 1271 ramified 1 max p 53028541 mismatches/bad 0
+listed primes 2358 (max 53028541), not dividing G: 0, max exponent 8
+COFACTOR = 1: prime support of G equals the list
+# usable 1102 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 6.346e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 2.97e+06, anchor survivors 0, full solutions 0
+k = 4: subsets in scope 1.123e+08, anchor survivors 45, full solutions 0
+k = 5: subsets in scope 3.52e+09, anchor survivors 1237, full solutions 0

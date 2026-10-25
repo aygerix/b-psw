@@ -1,0 +1,7 @@
+q= 3  Lucas: 149944 with q|p+1, q|index  49846, rate 0.3324 (1/q = 0.3333, z -0.74)   Fermat: 150056,  50017, rate 0.3333 (z -0.01)
+q= 7  Lucas:  49943 with q|p+1, q|index   7087, rate 0.1419 (1/q = 0.1429, z -0.61)   Fermat:  50045,   7156, rate 0.1430 (z +0.09)
+q=11  Lucas:  30049 with q|p+1, q|index   2696, rate 0.0897 (1/q = 0.0909, z -0.72)   Fermat:  29725,   2724, rate 0.0916 (z +0.44)
+q=13  Lucas:  25037 with q|p+1, q|index   1938, rate 0.0774 (1/q = 0.0769, z +0.29)   Fermat:  24943,   1936, rate 0.0776 (z +0.41)
+q=17  Lucas:  18843 with q|p+1, q|index   1064, rate 0.0565 (1/q = 0.0588, z -1.38)   Fermat:  18834,   1087, rate 0.0577 (z -0.65)
+q=19  Lucas:  16730 with q|p+1, q|index    854, rate 0.0510 (1/q = 0.0526, z -0.92)   Fermat:  16506,    908, rate 0.0550 (z +1.37)
+q=23  Lucas:  13580 with q|p+1, q|index    605, rate 0.0446 (1/q = 0.0435, z +0.61)   Fermat:  13675,    592, rate 0.0433 (z -0.11)

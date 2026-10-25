@@ -1,0 +1,9 @@
+it=0 res=2.49e+00 dmin=0.0186
+it=1 res=3.27e+00 dmin=0.00138
+it=2 res=3.91e+00 dmin=0
+it=3 res=9.19e+00 dmin=0.183
+it=4 res=3.72e-09 dmin=1.58e-10
+it=50 res=4.00e+00 dmin=0.0557
+it=100 res=1.93e-09 dmin=4.41e-11
+it=150 res=9.88e+00 dmin=0.33
+k=4 lin=0 mode=mod: 0 genuine solutions in 200 starts

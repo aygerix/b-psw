@@ -1,0 +1,2 @@
+N0 = 10000000: squarefree odd composites tested 3388296; strong psp(2) 161, strong Lucas psp 178, both 0; criterion mismatches 0; cases where the 2-adic side condition would fail: Fermat 0, Lucas 0
+178.10 s 481324 KB

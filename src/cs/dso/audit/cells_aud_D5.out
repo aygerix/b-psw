@@ -1,0 +1,3 @@
+rows_X10000.txt: rows 2189, cell sizes [(1, 2175), (2, 7)], multi-cells by (signs, shared odd prime): {((1, 1), True): 7}; subsets tested 7, bpsw passes 0
+rows_X20000.txt: rows 4113, cell sizes [(1, 4095), (2, 9)], multi-cells by (signs, shared odd prime): {((1, 1), True): 9}; subsets tested 9, bpsw passes 0
+rows_X60000.txt: rows 11121, cell sizes [(1, 11073), (2, 24)], multi-cells by (signs, shared odd prime): {((1, 1), True): 24}; subsets tested 24, bpsw passes 0

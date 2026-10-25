@@ -1,0 +1,60 @@
+// src/cs/e3b/sym_strata.sing -- E3b: Lucas gcd-degree strata on the x -> -x symmetric Korselt locus (k = 5, A = x^2 - 1).
+// f_3(x) = f_2(-x), f_5(x) = f_4(-x).  Variables c, l2, r2, l4, r4 (+ auxiliaries).  On this locus m_3 = m_2, m_5 = m_4,
+// m_1 in {0, 2} when N_1 = c x^2 + 2 - c is squarefree (c != 2).  Lucas: deg gcd(N_j, Phi_j).
+// Conditions:  C1 = member 1 full (Phi_1 even: Phi_1(X0) = 0, X0 = (c - 2)/c);
+//   G(j, m) = deg gcd(N_j, Phi_j) >= m via monic Q = x^m + ... with N_j == Phi_j == 0 mod Q, Q-coefficients eliminated.
+LIB "elim.lib"; LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+proc SATL(ideal I, list fs) { int i; ideal J = I; for (i = 1; i <= size(fs); i++) { J = SAT(J, fs[i]); } return(J); }
+system("--ticks-per-sec", 1000);
+option(redSB);
+ring R = 0, (x, a1, a2, a3, c, l2, r2, l4, r4), (dp(4), dp(5));
+poly A = x^2 - 1;
+list g = list(c, l2*(x - r2), -l2*(x + r2), l4*(x - r4), -l4*(x + r4));
+list rr = list(0, r2, -r2, r4, -r4);
+proc Kj(int j) {
+  poly a = rr[j]^2 - 1; list y; int i;
+  for (i = 1; i <= 5; i++) { if (i != j) { y = insert(y, subst(g[i], x, rr[j])); } }
+  return(y[1]+y[2]+y[3]+y[4] + a*(y[1]*y[2]+y[1]*y[3]+y[1]*y[4]+y[2]*y[3]+y[2]*y[4]+y[3]*y[4])
+         + a^2*(y[1]*y[2]*y[3]+y[1]*y[2]*y[4]+y[1]*y[3]*y[4]+y[2]*y[3]*y[4]) + a^3*y[1]*y[2]*y[3]*y[4]);
+}
+proc NP(int j) { poly N = 2 + A*g[j]; poly pr = 1; int i; for (i = 1; i <= 5; i++) { if (i != j) { pr = pr*(g[j] - 2*g[i]); } } return(list(N, pr - g[j]^4)); }
+proc xco(poly f) { matrix M = coeffs(f, x); ideal I; int i; for (i = 1; i <= nrows(M); i++) { I[i] = M[i,1]; } return(I); }
+ideal KOR = Kj(2), Kj(4);
+// member 1 full: Phi_1(x) is even; with X0 = (c-2)/c, c^2 Phi_1|_{x^2 = X0} = 0
+list L1 = NP(1); poly Ph1 = L1[2];
+poly C1 = reduce(c^2*Ph1, std(c*x^2 - (c - 2)));   // remainder mod N_1 (x^2 -> (c-2)/c), times c^2 to clear
+ideal IC1 = xco(C1);
+// member j gcd >= m: auxiliary monic Q in a1..a3
+proc Gm(int j, int m) {
+  list L = NP(j); poly Q;
+  if (m == 1) { Q = x + a1; } if (m == 2) { Q = x^2 + a1*x + a2; }
+  ideal I = xco(reduce(L[1], std(Q))), xco(reduce(L[2], std(Q)));
+  return(I);
+}
+proc full(int j) { list L = NP(j); poly N = L[1]; poly P = L[2];
+  // pseudo-remainder of Phi_j by N_j (lead coeff l_j): multiply by l_j^2 and reduce with x^3 -> ...
+  poly lc = l2; if (j >= 4) { lc = l4; }
+  matrix Mn = coeffs(N, x);   // N = sum Mn[i] x^(i-1)
+  poly R = lc^2*P; int it;
+  for (it = 1; it <= 2; it++) { matrix Mr = coeffs(R, x); int d = nrows(Mr) - 1;
+    if (d >= 3) { R = lc*R - Mr[d+1,1]*x^(d-3)*N; } kill Mr; kill d; }
+  return(xco(R));
+}
+ring S0 = 0, (a1, a2, a3, c, l2, r2, l4, r4), (dp(3), dp(5));
+list fs = list(c, l2, l4, r2, r4, r2 - r4, r2 + r4);
+proc stratum(ideal I, string tag, int nelim) {
+  int t0 = rtimer;
+  ideal J = SATL(I, fs);
+  if (nelim > 0) { J = eliminate(J, a1*a2*a3); }
+  ideal Js = std(J); int d = dim(Js) - 3;     // a1..a3 are free (eliminated) variables
+  tag, ": dim ", d, "  (time ms ", rtimer - t0, ")";
+  return(J);
+}
+ideal KOR = imap(R, KOR); ideal IC1 = imap(R, IC1);
+ideal T;
+T = stratum(KOR, "symmetric Korselt locus", 0);
+T = stratum(KOR + IC1, "C1: member 1 full (Sum m >= 2)", 0);
+setring R; ideal G21 = Gm(2, 1); setring S0; ideal G21 = imap(R, G21);
+T = stratum(KOR + G21, "member 2 (and 3) gcd >= 1 (Sum m >= 2)", 1);
+quit;

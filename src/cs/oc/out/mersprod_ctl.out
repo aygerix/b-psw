@@ -1,0 +1,3 @@
+pair control: 208335 pairs, criterion agrees 208335/208335, spsp hits 63, e.g. [(23, 89), (31, 151), (79, 8191), (103, 2143), (103, 11119)]
+Mersenne subsets q<=521: 4083 checked, criterion agrees 4083, disagrees 0, strong base-2 psp 0
+positive control: 200000 random triples from 646 primes with odd ord: criterion agrees 200000/200000, spsp hits 0

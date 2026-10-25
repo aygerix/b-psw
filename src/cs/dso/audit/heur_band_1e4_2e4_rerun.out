@@ -1,0 +1,7 @@
+== band (1e4,2e4] rebuilt dso_heur
+TOTAL sumE=3475.800 E2cells=11.0818 E3cells=6.6876e-02
+BAND inert cells with max(d,e) in (10000, 20000]: E=1001.2447 E2cells=1.6952e-06 E3cells=1.4097e-14
+BAND split cells with max(d,e) in (10000, 20000]: E=1348.4363 E2cells=8.5662e+00 E3cells=5.7333e-02
+SIGN inert expected primes p>X: 1322.518
+SIGN split expected primes p>X: 2153.281
+518.13 s 2132 KB

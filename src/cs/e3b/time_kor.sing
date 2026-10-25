@@ -1,0 +1,16 @@
+// timing: Korselt ideal alone over F_32003, k = 5, A = x^2 - 1
+ring R = 32003, (x, c, l2, l3, l4, l5, r2, r3, r4, r5), (dp(1), dp(9));
+< "pat_lib.sing";
+ideal K = korselt();
+int i; for (i = 1; i <= 4; i++) { "K", i + 1, ": terms ", size(K[i]), ", deg ", deg(K[i]); }
+ring S = 32003, (c, l2, l3, l4, l5, r2, r3, r4, r5), dp;
+ideal K = imap(R, K);
+poly dg = c*l2*l3*l4*l5*(r2-r3)*(r2-r4)*(r2-r5)*(r3-r4)*(r3-r5)*(r4-r5);
+int t0 = rtimer; system("--ticks-per-sec", 1000); t0 = rtimer;
+ideal G = std(K);
+"std(K): dim ", dim(G), "  time ms ", rtimer - t0;
+t0 = rtimer;
+LIB "elim.lib";
+ideal Ks = sat(K, dg)[1];
+"sat: dim ", dim(std(Ks)), "  time ms ", rtimer - t0;
+quit;

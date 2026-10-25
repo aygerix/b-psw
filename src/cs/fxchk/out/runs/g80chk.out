@@ -1,0 +1,31 @@
+instances in index files: 1953  with run records: 1953
+instance/lambda pairs WITHOUT a DONE record: 0 []
+inconsistent duplicate DONE values: 0 []
+header pool size != index pool size: []
+monotonicity violations (M must not increase with lambda): [] 0
+  D    5: max r 0.2131  G80 >= 2.230  binding ((5, 1, 2), 2144, 60, 13.0)
+  D   -7: max r 0.2145  G80 >= 2.221  binding ((-7, 1, 2), 4186, 60, 13.083)
+  D  -11: max r 0.2215  G80 >= 2.175  binding ((-11, 2, 0), 3284, 60, 13.5113)
+  D   13: max r 0.2112  G80 >= 2.243  binding ((13, 2, 1), 2123, 60, 12.883)
+  D  -15: max r 0.2249  G80 >= 2.153  binding ((-15, 2, 0), 6523, 275, 62.075)
+  D   17: max r 0.2197  G80 >= 2.187  binding ((17, 1, 2), 2851, 60, 13.4)
+  D  -19: max r 0.2131  G80 >= 2.230  binding ((-19, 1, 2), 1044, 60, 13.0)
+  D  -23: max r 0.2098  G80 >= 2.253  binding ((-23, 2, 0), 3273, 60, 12.8)
+  D   29: max r 0.2145  G80 >= 2.221  binding ((29, 1, 2), 1614, 60, 13.083)
+  D  -31: max r 0.2233  G80 >= 2.163  binding ((-31, 1, 2), 4078, 60, 13.6186)
+  D   37: max r 0.2139  G80 >= 2.225  binding ((37, 2, 0), 5027, 60, 13.049)
+  D   41: max r 0.2131  G80 >= 2.230  binding ((41, 1, 2), 850, 60, 13.0)
+  D  -43: max r 0.2131  G80 >= 2.230  binding ((-43, 1, 2), 2089, 60, 13.0)
+  D  -47: max r 0.2139  G80 >= 2.225  binding ((-47, 2, 1), 3237, 60, 13.049)
+  D   53: max r 0.2131  G80 >= 2.230  binding ((53, 1, 2), 2243, 60, 13.0)
+  D  -59: max r 0.2066  G80 >= 2.275  binding ((-59, 0, 5), 1061, 60, 12.6)
+  D   61: max r 0.2210  G80 >= 2.178  binding ((61, 0, 3), 1856, 60, 13.483)
+  D  -67: max r 0.2230  G80 >= 2.165  binding ((-67, 1, 2), 1435, 60, 13.6)
+  D  -71: max r 0.2098  G80 >= 2.253  binding ((-71, 0, 2), 2225, 60, 12.8)
+  D   73: max r 0.2131  G80 >= 2.230  binding ((73, 0, 3), 2445, 60, 13.0)
+  D  -79: max r 0.2131  G80 >= 2.230  binding ((-79, 0, 3), 1811, 60, 13.0)
+  D  -83: max r 0.2098  G80 >= 2.253  binding ((-83, 2, 0), 3192, 60, 12.8)
+  D   89: max r 0.2197  G80 >= 2.187  binding ((89, 0, 3), 1842, 60, 13.4)
+  D   97: max r 0.2134  G80 >= 2.229  binding ((97, 2, 1), 2769, 60, 13.015)
+OVERALL max r 0.2249  certified G80 >= 2.1526  at ((-15, 2, 0), 6523, 275, 62.075)
+D=-15 (2,0) without lambda=0.225: max r 0.2491 at b=169 -> G80 2.005; M values {0.2: 8.568929, 0.25: 0.103761, 0.3: 0.0}

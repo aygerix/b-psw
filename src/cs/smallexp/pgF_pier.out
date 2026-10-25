@@ -1,0 +1,10 @@
+D=5 class (0, 0): k=21 max-indep=19 rows=14 log2|G_S|=112.7 exp=3365017344 (other primes) layers=[(2, 1, 15), (2, 2, 10), (2, 3, 7), (2, 4, 6), (2, 5, 5), (2, 6, 4), (2, 7, 3), (2, 8, 1)]... bound=inf  odd indep sets=1048555 E[hits]=0.177
+D=5 class (1, 0): k=5 max-indep=4 rows=5 log2|G_S|=23.1 exp=672 (other primes) layers=[(2, 1, 6), (2, 2, 3), (2, 3, 2), (2, 4, 2), (2, 5, 1), (3, 1, 4), (7, 1, 1)] bound=inf  odd indep sets=11 E[hits]=0.000229
+D=5 class (2, 0): k=15 max-indep=13 rows=13 log2|G_S|=87.3 exp=93312 (2,3,5-smooth) layers=[(2, 1, 14), (2, 2, 8), (2, 3, 5), (2, 4, 4), (2, 5, 2), (2, 6, 1), (2, 7, 1), (3, 1, 12)]... bound=23181500160000  odd indep sets=16369 E[hits]=0.039
+   solver: no solution from the pool (exhausted)
+D=5 class (3, 0): k=4 max-indep=3 rows=6 log2|G_S|=48.9 exp=616896 (other primes) layers=[(2, 1, 7), (2, 2, 4), (2, 3, 4), (2, 4, 4), (2, 5, 2), (2, 6, 2), (3, 1, 5), (3, 2, 3)]... bound=inf  odd indep sets=4 E[hits]=7.92e-10
+D=5 class (4, 0): k=5 max-indep=5 rows=5 log2|G_S|=25.7 exp=1296 (2,3,5-smooth) layers=[(2, 1, 6), (2, 2, 3), (2, 3, 2), (2, 4, 2), (3, 1, 4), (3, 2, 2), (3, 3, 1), (3, 4, 1)] bound=907200  odd indep sets=11 E[hits]=0.0019
+   solver: no solution from the pool (exhausted)
+D=5 class (5, 0): k=3 max-indep=3 rows=2 log2|G_S|=11.7 exp=816 (other primes) layers=[(2, 1, 3), (2, 2, 1), (2, 3, 1), (2, 4, 1), (3, 1, 1), (17, 1, 1)] bound=inf  odd indep sets=1 E[hits]=0.000306
+D=5 class (6, 0): k=2 max-indep=2 rows=4 log2|G_S|=13.8 exp=48 (2,3,5-smooth) layers=[(2, 1, 5), (2, 2, 2), (2, 3, 1), (2, 4, 1), (3, 1, 3)] bound=1152  odd indep sets=0 E[hits]=0
+HITS: []

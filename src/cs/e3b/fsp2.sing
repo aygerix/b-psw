@@ -1,0 +1,57 @@
+// src/cs/e3b/fsp2.sing -- E3b: the FSP locus (a Lucas point t common to all five members) in clean coordinates.
+// A = x^2 - 1, E_i(x) = (x^2 - 1)(x - r_i), f_1 = 1 - 2 (x^2 - 1)/(t^2 - 1), f_i = 1 - 2 E_i(x)/E_i(t) (i = 2..5).
+// [Derivation: f_j(t) = -1 for all j <=> c = -2/(t^2-1), g_i(t) = c.]  Unknowns t, r2..r5.
+// Korselt_j: [prod_{i != j} nf_i(r_j) - prod_{i != j} df_i] / (r_j^2 - 1) = 0, f_i = nf_i/df_i.
+// Extra Lucas conditions:  L1 (f_1 full: Lucas at -t):  prod (3t + r_i) - prod (t - r_i) = 0;
+//   Lj (another Lucas point of cubic member j): root of Q_j = x^2 + (t - r_j) x + t^2 - r_j t - 1 with prod_{i!=j} f_i = 1.
+// CHAR and saturation list set below; reports dim of the FSP locus and of FSP + each extra condition / each pair.
+LIB "elim.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+proc SATL(ideal I, list fs) { int i; ideal J = I; for (i = 1; i <= size(fs); i++) { J = SAT(J, fs[i]); } return(J); }
+system("--ticks-per-sec", 1000);
+ring R = CHAR, (x, t, r2, r3, r4, r5), (dp(1), dp(5));
+list rr = list(0, r2, r3, r4, r5);
+proc E(int i, poly z) { return((z^2 - 1)*(z - rr[i])); }
+list nf; list df;
+nf[1] = (t^2 - 1) - 2*(x^2 - 1); df[1] = t^2 - 1;
+int i; int j;
+for (i = 2; i <= 5; i++) { nf[i] = E(i, t) - 2*E(i, x); df[i] = E(i, t); }
+ideal KOR;
+for (j = 2; j <= 5; j++) {
+  poly pn = 1; poly pd = 1;
+  for (i = 1; i <= 5; i++) { if (i != j) { pn = pn*subst(nf[i], x, rr[j]); pd = pd*df[i]; } }
+  list dv = division(pn - pd, rr[j]^2 - 1);
+  if (dv[2][1] != 0) { "ERROR Korselt division"; }
+  KOR[j - 1] = dv[1][1,1]; kill pn; kill pd; kill dv;
+}
+poly L1 = (3*t + r2)*(3*t + r3)*(3*t + r4)*(3*t + r5) - (t - r2)*(t - r3)*(t - r4)*(t - r5);
+// Lj: numerator of prod_{i != j} f_i(x) - 1 reduced mod Q_j(x); gcd >= 1 <=> resultant, both roots <=> remainder 0
+list LR; list LF;
+for (j = 2; j <= 5; j++) {
+  poly Q = x^2 + (t - rr[j])*x + t^2 - rr[j]*t - 1;
+  poly pn = 1; poly pd = 1;
+  for (i = 1; i <= 5; i++) { if (i != j) { pn = pn*nf[i]; pd = pd*df[i]; } }
+  poly Lam = reduce(pn - pd, std(Q));
+  LR[j] = resultant(Q, Lam, x);
+  matrix M = coeffs(Lam, x); ideal Ic; int m; for (m = 1; m <= nrows(M); m++) { Ic[m] = M[m,1]; } LF[j] = Ic;
+  kill Q; kill pn; kill pd; kill Lam; kill M; kill Ic; kill m;
+}
+ring S = CHAR, (t, r2, r3, r4, r5), dp;
+ideal KOR = imap(R, KOR); poly L1 = imap(R, L1); list LR = imap(R, LR); list LF = imap(R, LF);
+int k; for (k = 1; k <= 4; k++) { "Korselt ", k + 1, ": terms ", size(KOR[k]), " deg ", deg(KOR[k]); }
+"L1 deg ", deg(L1), ";  L2 resultant terms ", size(LR[2]), " deg ", deg(LR[2]);
+list fs = list(t - 1, t + 1, r2 - r3, r2 - r4, r2 - r5, r3 - r4, r3 - r5, r4 - r5,
+               t - r2, t - r3, t - r4, t - r5, r2^2 - 1, r3^2 - 1, r4^2 - 1, r5^2 - 1);
+int t0 = rtimer;
+ideal FS = SATL(KOR, fs);
+ideal G = std(FS);
+"FSP locus: dim ", dim(G), "  time ms ", rtimer - t0;
+proc test(ideal I, string tag) { int t0 = rtimer; ideal J = SATL(FS + I, fs); ideal Gs = std(J);
+  tag, ": dim ", dim(Gs), "  vdim ", vdim(Gs), "  time ms ", rtimer - t0; return(J); }
+ideal T;
+T = test(ideal(L1), "FSP + f1 full  (Sum m = 6)");
+T = test(ideal(LR[2]), "FSP + member 2 extra point (Sum m = 6)");
+T = test(ideal(L1, LR[2]), "FSP + f1 full + member 2 extra (Sum m = 7)");
+T = test(ideal(LR[2], LR[3]), "FSP + members 2, 3 extra (Sum m = 7)");
+T = test(LF[2], "FSP + member 2 full (Sum m = 7)");
+quit;

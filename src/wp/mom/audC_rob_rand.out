@@ -1,0 +1,2 @@
+rand pairs 20000: not robustly covered 0; min C = 0.002257 at [(np.float64(28.029057692984864), np.float64(13.055234981265157)), (np.float64(28.051144454133894), np.float64(13.07087422929674))]
+pass counts: {'EXTiv': 4544, 'EXTiw': 4480, 'EXTjv': 4405, 'EXTjw': 4505, 'INTiv': 9577, 'INTiw': 9653, 'INTjv': 9701, 'INTjw': 9596}

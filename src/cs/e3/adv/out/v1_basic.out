@@ -1,0 +1,34 @@
+[0;31m  ***   Warning: new stack size = 200000000 (190.735 Mbytes).[0m
+== V1a: Korselt equations with general mu (r2 = 0)
+  (F-1) divisible by A: 1
+  H(0)  = Mat([r3*la*c*q + (-c + r3*la), 1])
+  H(r3) = Mat([r3^2*mu*c*p + (r3*mu*c*q + ((r3^3*mu + 1)*c + r3*mu)), 1])
+  claimed K2 - H(0) relation: H(0) == c - la r3 (1 + c q): 1
+  claimed K3: H(r3) == c (1 + mu r3 A(r3)) + mu r3: 1
+  r2 = r3 = r: H(r) = c
+  scaling: f2(beta x) - 1 == mu beta^3 * Abar * x : 1
+== V1b: rho-family from invariants (I1, I2, I3) = (2, rho - 1, 1/rho), r3 = 1; compare with stated B-form
+  famI(2, r-1, 1/r) == stated family: 1
+  Korselt over Q(r)[x]: [1, 1, 1]   gcd degrees: [2, 1, 1]
+  f_j(2r): [-1, -1, -1]
+  (F+1) % (f1+1) = 0
+  f2+1 = [r, -1; x - 2*r, 1; 2*x^2 - x - 2, 1]   f3+1 = [2*r - 1, -1; x - 2*r, 1; 2*x^2 - 3*x - 1, 1]
+  Res(2x^2-x-2, F+1) = [r, 2; 4*r^2 - r - 1, 1]   Res(2x^2-3x-1, F+1) = [2*r - 1, 2; 8*r^2 - 6*r - 1, 1]
+  f2+1 double root at 2r <=> Mat([4*r^2 - r - 1, 1])   f3+1 double root at 2r <=> Mat([8*r^2 - 6*r - 1, 1])
+  disc(B) = Mat([16*r^2 - 8*r + 17, 1])
+  mu=1 normalisation: Korselt [1, 1, 1]  gcd degrees [2, 1, 1]  invariants (c r3^2, q/r3^2, mu r3^3) = [2, w^3 - 1, 1/w^3]
+  rho=1, x=2T: [8*T^2 - 10*T + 1, 8*T^3 - 10*T^2 + 1, 16*T^3 - 28*T^2 + 10*T + 1]  at T=1: [-1, -1, -1]
+== V1c: Lemma 5 curve (I1 = 1, I2 = 1/(2u) - 3/2, I3 = u) and P23
+  generic u: Korselt [1, 1, 1] gcd degrees [0, 2, 0]
+  u = -1, x -> -Y: [Y^2 - Y - 1, Y^3 - Y^2 - 2*Y + 1, Y^3 - 3*Y - 1]
+  minpolys of 2cos(2pi/10), 2cos(2pi/14), 2cos(2pi/18): [x^2 - x - 1, x^3 - x^2 - 2*x + 1, x^3 - 3*x - 1]
+  rational u = nu/de (|nu| <= 60, de <= 30) with pattern != [0,2,0]: List([[3, [0, 2, 2]]])
+  P23 members [x^2 - x - 1/3, 3*x^3 - 3*x^2 - 4*x + 1, -3*x^3 + 6*x^2 + x - 3]  Korselt [1, 1, 1]  gcd degrees [0, 2, 2]
+  integral values of P23 f1 at X/d (d <= 200, |X| <= 2000): 0
+== V1d: isolated-point polynomials
+  sextic irreducible over Q: 1  rational roots: []
+  quadratic disc = 1728 = [2, 6; 3, 3]  issquare: 0
+  degree-18 in r3 = sextic(r3^3): 1
+== V1e: dominant scan row n = 1152271
+  product: 1  primes: [1, 1, 1]  Korselt p-1 | n-1: [1, 1, 1]
+  rho = 1, x = 6 values: [43, 127, 211]

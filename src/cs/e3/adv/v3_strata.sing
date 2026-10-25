@@ -1,0 +1,61 @@
+// src/cs/e3/adv/v3_strata.sing -- adversarial re-check of the E3 Lucas gcd-degree strata in INVARIANT coordinates
+// (r2 = 0, r3 = 1; a = I1 = c, b = I2 = q, u = I3 = mu). Different method from e3_full.sing: no auxiliary
+// quadratic (al, be) and no elimination. For a cubic member N_j:
+//   R = G mod N_j (deg <= 2);  full <=> R = 0;  gcd degree >= 2 <=> R = 0, or deg R = 2 and R | N_j,
+//   i.e. closure of V(coeffs of N_j mod R) minus V(r2), r2 = x^2-coefficient of R.
+LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring Bp = (0, a, b, u), (x), dp;
+poly At = a*u*x^2 - (a + u + a*u + a*u*b)*x + a*u*b;
+poly E = u*(1 + a*b);
+poly n1 = u + At; poly n2 = a + At*x; poly n3 = E + At*(x - 1);
+poly G = n1*n2*n3 + u*a*E;
+list NN = list(n1 + u, n2 + a, n3 + E);
+proc nums(poly f) {   // numerators of the x-coefficients of f (ring Bp)
+  matrix M = coeffs(f, x); ideal I; int i;
+  for (i = 1; i <= nrows(M); i++) { number cf = leadcoef(M[i,1]); I[i] = numerator(cf); kill cf; }
+  return(I);
+}
+list FULLc; list GE2c; list R2c;
+int j;
+for (j = 1; j <= 3; j++) {
+  poly rem = reduce(G, std(NN[j]));
+  FULLc[j] = nums(rem);
+  if (j >= 2) {
+    matrix Mr = coeffs(rem, x);
+    if (nrows(Mr) == 3) { number lc2 = leadcoef(Mr[3,1]); R2c[j] = numerator(lc2); kill lc2; } else { R2c[j] = 0; }
+    poly s = reduce(NN[j], std(rem));
+    GE2c[j] = nums(s);
+    kill Mr; kill s;
+  }
+  kill rem;
+}
+ring S = 0, (a, b, u), dp;
+poly disc = (a + u + a*u + a*u*b)^2 - 4*a^2*u^2*b;
+poly dg = a*u*(1 + a*b)*disc;
+list FULLc = imap(Bp, FULLc); list GE2c = imap(Bp, GE2c); list R2c = imap(Bp, R2c);
+proc describe(ideal I, string tag) {
+  int t0 = timer; ideal J = SAT(I, dg); ideal Js = std(J); int d = dim(Js);
+  tag, ": dim = ", d, "  (time ", timer - t0, ")";
+  if (d >= 0) { list mp = minAssGTZ(J); int i; int k;
+    for (i = 1; i <= size(mp); i++) { ideal Pc = std(mp[i]); "   comp ", i, ": dim ", dim(Pc), ", vdim ", vdim(Pc), ":";
+      for (k = 1; k <= size(Pc); k++) { if (size(Pc[k]) <= 40) { "     ", Pc[k]; } else { "     [", size(Pc[k]), " terms, deg ", deg(Pc[k]), "]"; } }
+      kill Pc; } }
+  return(J);
+}
+list FULL; list GE2;
+for (j = 1; j <= 3; j++) { FULL[j] = describe(FULLc[j], "member " + string(j) + " full"); }
+for (j = 2; j <= 3; j++) {
+  "member ", j, ": r2 numerator = ", R2c[j];
+  ideal Gj = SAT(GE2c[j], R2c[j]);
+  GE2[j] = describe(Gj, "member " + string(j) + " gcd >= 2 (deg R = 2, R | N_j)");
+  kill Gj;
+}
+ideal T;
+T = describe(FULL[1] + GE2[2], "f1 full AND f2 gcd >= 2"); kill T; ideal T;
+T = describe(FULL[1] + GE2[3], "f1 full AND f3 gcd >= 2"); kill T; ideal T;
+T = describe(GE2[2] + GE2[3], "f2 gcd >= 2 AND f3 gcd >= 2"); kill T; ideal T;
+// also: f2 >= 2 AND f3 >= 2 AND f1 good is implied empty if f1 dead there; and f1-full with f2, f3 both good
+"total time ", timer;
+quit;

@@ -1,0 +1,3 @@
+pattern (m1,m2,m4) = (2,3,0), Sum m = 8:  8  equations, 7 unknowns
+
+halt 1

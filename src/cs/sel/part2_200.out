@@ -1,0 +1,3 @@
+class (2, 0) (1948 records), b <= 250.0: mod-4 best N/(b+1) = 0.0888 at (224.4, 20); optimised (random1) = 0.2181 at (3.6, 1)  -> existence gap 4.58
+class (1, 2) (1293 records), b <= 250.0: mod-4 best N/(b+1) = 0.0802 at (248.3, 20); optimised (from mod4) = 0.1680 at (10.9, 2)  -> existence gap 5.95
+class (0, 3) (854 records), b <= 250.0: mod-4 best N/(b+1) = 0.0424 at (69.8, 3); optimised (from mod4) = 0.5000 at (1.0, 1)  -> existence gap 2.00

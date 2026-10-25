@@ -1,0 +1,18 @@
+D=   5 Q= -1  OC4 tested      0  mismatches 0  sign-dependence 0 | OC3 inert 108479 violations 0
+D=  -7 Q=  2  OC4 tested  27135  mismatches 0  sign-dependence 0 | OC3 inert 108473 violations 0
+D= -11 Q=  3  OC4 tested  27111  mismatches 0  sign-dependence 0 | OC3 inert 108497 violations 0
+D=  13 Q= -3  OC4 tested  27181  mismatches 0  sign-dependence 0 | OC3 inert 108479 violations 0
+D= -15 Q=  4  OC4 tested  54278  mismatches 0  sign-dependence 0 | OC3 inert 108492 violations 0
+D=  17 Q= -4  OC4 tested      0  mismatches 0  sign-dependence 0 | OC3 inert 108495 violations 0
+D= -19 Q=  5  OC4 tested  27131  mismatches 0  sign-dependence 0 | OC3 inert 108449 violations 0
+D= -23 Q=  6  OC4 tested  27106  mismatches 0  sign-dependence 0 | OC3 inert 108446 violations 0
+D=  29 Q= -7  OC4 tested  27240  mismatches 0  sign-dependence 0 | OC3 inert 108501 violations 0
+D= -31 Q=  8  OC4 tested  27122  mismatches 0  sign-dependence 0 | OC3 inert 108496 violations 0
+D=  37 Q= -9  OC4 tested      0  mismatches 0  sign-dependence 0 | OC3 inert 108374 violations 0
+D=  41 Q=-10  OC4 tested  27122  mismatches 0  sign-dependence 0 | OC3 inert 108473 violations 0
+D= -43 Q= 11  OC4 tested  27159  mismatches 0  sign-dependence 0 | OC3 inert 108454 violations 0
+D= -47 Q= 12  OC4 tested  27051  mismatches 0  sign-dependence 0 | OC3 inert 108569 violations 0
+
+real	0m18.882s
+user	0m18.470s
+sys	0m0.009s

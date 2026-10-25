@@ -1,0 +1,13 @@
+(1) E^v_X(Q) - (H Da + K Dc)/(2a^3) = 0
+(2) E^w_X(Q) - (G Da - K Dc)/(2a^3) = 0
+(3) G + H - 6a^2 = 0;  R + K/(2a^3) = 0
+(4) N_g(f_Q) - 1 - Mw = 0
+(5) N_h(f_Q) - 1 - Mv = 0
+(6) htr_g(f_Q - 1) - (-lam(1+u) + kap R) = 0
+(7) htr_h(-f_Q - 1) - (-lam(2-u) - kap R) = 0
+(8) disc of Qw, Qv in (lam:kap): (4*a^2 + (-8*c - 32)*a + 4*c^2)/a^2 ; (-32*a + 4*c^2)/a^2
+(9) H(c+4,c) = [c - 4, 1; 3*c + 8, 1];  dH/da at a = c+4: -c^2 + 2*c + 32
+(10) s^2 - 2*sqrt2*s + 2 - (s - sqrt2)^2 = 0  [quadgen(8) = sqrt 2]
+(11) 2a^3 R + K = 0 identity checked in (3); D-slice ends: (sqrt(8a))^2 - a sqrt(8a) - 4a and (a - sqrt(8a)) end, with a = s^2/8:
+     top end   : [s - 4, 1; s, 2]
+     bottom end: [s - 4, 1; s, 2]

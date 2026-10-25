@@ -1,0 +1,35 @@
+D=13 passes expected: 15
+anchor3 D=13 Q=-3 X=10000000000 mode=bpsw threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.100 chunkA=32768 chunkC=65536
+TABLE D=13 X=10000000000 inert=227528093 overflow=0 bytes=3640.4MB time=226.57s cpu=900.05s
+PASS D=13 S=1 A=1 B=1 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=227527744 Acands=28018756961 Cprimes=349 Cpairs=14827161098 Cinner=268397640 prefilter=32 hits=0 wall=6061.42s
+DIAG Aunsolv=0 Asieved=18627546509 Ashape=0 Afinal=32 Abig=0 Cunsolv=0 Cnoinv=711 Cincompat=538 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=20954.84 threadsec_C=2710.92 us_per_Acand=0.7479 us_per_Cpair=0.1828 sieve=on cpu=12826.64s
+PASS D=13 S=127 A=7 B=9 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=119556665 Acands=1371119026 Cprimes=14 Cpairs=305380728 Cinner=49402785 prefilter=0 hits=0 wall=778.56s
+DIAG Aunsolv=107971414 Asieved=849163037 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=42 Cincompat=529 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=1708.10 threadsec_C=99.58 us_per_Acand=1.2458 us_per_Cpair=0.3261 sieve=on cpu=1137.87s
+PASS D=13 S=3295783 A=61033 B=27 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=121455359 Acands=117064 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=210.44s
+DIAG Aunsolv=106072734 Asieved=49122 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.15 threadsec_C=0.00 us_per_Acand=1.3195 us_per_Cpair=0.0000 sieve=on cpu=378.81s
+PASS D=13 S=3375758863 A=840159 B=2009 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=111318529 Acands=3614 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=192.78s
+DIAG Aunsolv=116209564 Asieved=1570 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.00 threadsec_C=0.00 us_per_Acand=1.3497 us_per_Cpair=0.0000 sieve=on cpu=396.26s
+PASS D=13 S=418564441 A=61033 B=27 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=119542912 Acands=113538 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=204.13s
+DIAG Aunsolv=107985181 Asieved=47412 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.15 threadsec_C=0.00 us_per_Acand=1.3567 us_per_Cpair=0.0000 sieve=on cpu=394.00s
+PASS D=13 S=249595441 A=37010 B=1686 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=112149469 Acands=9359 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=238.59s
+DIAG Aunsolv=115378624 Asieved=2568 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.02 threadsec_C=0.00 us_per_Acand=2.2081 us_per_Cpair=0.0000 sieve=on cpu=413.93s
+PASS D=13 S=51481 A=260 B=99 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=57945608 Acands=12307068 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=254.80s
+DIAG Aunsolv=169582485 Asieved=6071239 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=12.35 threadsec_C=0.00 us_per_Acand=1.0035 us_per_Cpair=0.0000 sieve=on cpu=407.69s
+PASS D=13 S=174877 A=236 B=741 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=75035838 Acands=2166447 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=215.75s
+DIAG Aunsolv=152492255 Asieved=1105244 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=2.18 threadsec_C=0.00 us_per_Acand=1.0042 us_per_Cpair=0.0000 sieve=on cpu=389.05s
+PASS D=13 S=17678041 A=3292 B=179 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=150654487 Acands=494174 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=235.48s
+DIAG Aunsolv=76873606 Asieved=226712 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.53 threadsec_C=0.00 us_per_Acand=1.0767 us_per_Cpair=0.0000 sieve=on cpu=420.82s
+PASS D=13 S=3091482775957 A=194228 B=132639 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=74525498 Acands=36 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=212.26s
+DIAG Aunsolv=153002595 Asieved=0 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.00 threadsec_C=0.00 us_per_Acand=3.7932 us_per_Cpair=0.0000 sieve=on cpu=412.10s
+PASS D=13 S=910083228721 A=213980 B=17721 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=57551816 Acands=243 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=202.55s
+DIAG Aunsolv=169976277 Asieved=28 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.00 threadsec_C=0.00 us_per_Acand=3.1913 us_per_Cpair=0.0000 sieve=on cpu=395.50s
+PASS D=13 S=7634353 A=33484 B=38 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=130335110 Acands=777401 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=202.16s
+DIAG Aunsolv=97192983 Asieved=333726 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.94 threadsec_C=0.00 us_per_Acand=1.2043 us_per_Cpair=0.0000 sieve=on cpu=385.34s
+PASS D=13 S=580310641 A=495992 B=45 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=51180395 Acands=49017 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=192.44s
+DIAG Aunsolv=176347698 Asieved=18449 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.07 threadsec_C=0.00 us_per_Acand=1.4134 us_per_Cpair=0.0000 sieve=on cpu=364.68s
+PASS D=13 S=428353 A=9312 B=23 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=103201113 Acands=3014306 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=188.17s
+DIAG Aunsolv=124326980 Asieved=1299724 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=3.42 threadsec_C=0.00 us_per_Acand=1.1358 us_per_Cpair=0.0000 sieve=on cpu=363.12s
+PASS D=13 S=6700417 A=64 B=52347 mode=bpsw cap=auto X=10000000000 inert=227528093 Aprimes=80580513 Acands=73050 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=192.02s
+DIAG Aunsolv=146947580 Asieved=29338 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.10 threadsec_C=0.00 us_per_Acand=1.3817 us_per_Cpair=0.0000 sieve=on cpu=372.78s
+TIME 9808.76 s wall 19954.78 s user 3716228 KB
+SUMMARY D=13 X=1e10 status=COMPLETE rc=0 passes=15/15 hits=0 hitlines=0

@@ -1,0 +1,16 @@
+// k3_a1_b011_s000_t1: shape a=1 b=(0, 1, 1), singles (0, 0, 0), triples 1, D=5
+LIB "elim.lib"; option(redSB);
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+ring R = 0, (th2_1, th3_1, c2, c3, sg1), dp;
+proc Aof(poly x) { return((x-0)); }
+proc B1(poly x) { return(1); }
+proc B2(poly x) { return((x-th2_1)); }
+proc B3(poly x) { return((x-th3_1)); }
+proc f1(poly x) { return(1 + Aof(x)*B1(x)); }
+proc f2(poly x) { return(1 + c2*Aof(x)*B2(x)); }
+proc f3(poly x) { return(1 + c3*Aof(x)*B3(x)); }
+ideal I = f1(th2_1)*f3(th2_1) - 1, f1(th3_1)*f2(th3_1) - 1, f1(sg1) + 1, f2(sg1) + 1, f3(sg1) + 1;
+poly nz = c2*c3*(th2_1-0)*(th3_1-0)*(th3_1-th2_1)*(c2-c3);
+int t0 = timer; ideal S = SAT(I, nz); S = std(S);
+print("RESULT k3_a1_b011_s000_t1 D=5 G=3 dim=" + string(dim(S)) + " time=" + string(timer - t0));
+quit;

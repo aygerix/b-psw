@@ -1,0 +1,8 @@
+SUMMARY mode=rnd ctl=real Bp=30.0 d=+4 beta=20: BKZ success 1.00 (10/10), shortest-relation/GH mean 1.0989 sd 0.0636, time 0.0s; enum success 1.00, mean #solutions 15.90, mean #points 23.3, enum time 0.0s
+SUMMARY mode=rnd ctl=unif Bp=30.0 d=+4 beta=20: BKZ success 1.00 (10/10), shortest-relation/GH mean 1.0515 sd 0.0673, time 0.0s; enum success 1.00, mean #solutions 16.60, mean #points 21.5, enum time 0.0s
+SUMMARY mode=rnd ctl=supp Bp=30.0 d=+4 beta=20: BKZ success 1.00 (10/10), shortest-relation/GH mean 1.0563 sd 0.0737, time 0.0s; enum success 1.00, mean #solutions 15.30, mean #points 20.2, enum time 0.0s
+SUMMARY mode=rnd ctl=hgt Bp=30.0 d=+4 beta=20: BKZ success 0.90 (9/10), shortest-relation/GH mean 1.0891 sd 0.0650, time 0.0s; enum success 1.00, mean #solutions 15.00, mean #points 20.0, enum time 0.0s
+SUMMARY mode=rnd ctl=real Bp=40.0 d=+4 beta=20: BKZ success 1.00 (10/10), shortest-relation/GH mean 1.0995 sd 0.0679, time 0.0s; enum success 1.00, mean #solutions 13.90, mean #points 22.4, enum time 0.4s
+SUMMARY mode=rnd ctl=unif Bp=40.0 d=+4 beta=20: BKZ success 0.50 (5/10), shortest-relation/GH mean 1.0763 sd 0.0559, time 0.0s; enum success 1.00, mean #solutions 16.60, mean #points 28.7, enum time 0.8s
+SUMMARY mode=rnd ctl=supp Bp=40.0 d=+4 beta=20: BKZ success 0.80 (8/10), shortest-relation/GH mean 1.0941 sd 0.0586, time 0.0s; enum success 1.00, mean #solutions 14.80, mean #points 24.7, enum time 0.8s
+SUMMARY mode=rnd ctl=hgt Bp=40.0 d=+4 beta=20: BKZ success 0.90 (9/10), shortest-relation/GH mean 1.0624 sd 0.0502, time 0.0s; enum success 1.00, mean #solutions 16.60, mean #points 26.3, enum time 0.6s

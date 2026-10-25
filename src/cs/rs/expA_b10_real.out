@@ -1,0 +1,7 @@
+SUMMARY real b=10 bH=27.0 r=20 gen: success 0.67 over 6, primes 160, list-ops 8.05e+05 (log2 19.6), time 0.06s
+SUMMARY real b=10 bH=27.0 r=20 split: success 1.00 over 6, primes 960, list-ops 7.44e+05 (log2 19.5), time 0.08s
+SUMMARY real b=10 bH=27.0 r=40 gen: success 1.00 over 6, primes 640, list-ops 1.47e+06 (log2 20.5), time 0.23s
+SUMMARY real b=10 bH=27.0 r=40 split: success 1.00 over 6, primes 1760, list-ops 1.12e+06 (log2 20.1), time 0.14s
+SUMMARY real b=10 bH=27.0 r=60 gen: success 1.00 over 6, primes 2560, list-ops 1.14e+07 (log2 23.4), time 1.25s
+SUMMARY real b=10 bH=27.0 r=60 split: success 1.00 over 6, primes 2560, list-ops 1.33e+06 (log2 20.3), time 0.20s
+SUMMARY real b=10 bH=27.0 r=80 split: success 0.83 over 6, primes 3360, list-ops 1.86e+06 (log2 20.8), time 0.27s

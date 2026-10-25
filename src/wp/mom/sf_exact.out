@@ -1,0 +1,18 @@
+g = a*t^2 + (a + c)*t + (c + 2)   h = a*t^2 + c*t + 2
+g - (a t^2 + (a+c) t + c + 2) = 0
+h - (a t^2 + c t + 2) = 0
+disc(g) - ((a-c)^2 - 8a) = 0
+disc(h) - (c^2 - 8a) = 0
+g(-1) = 2   h(0) = 2
+reflection residual: 0
+psv(0) = 1  psv(-1) = -1
+lead(psv)/(lead(phi)(r-r2)^3) = 1
+k = 2: sign vectors with all P_j = 1: 1, non-constant among them: 0
+k = 3: sign vectors with all P_j = 1: 2, non-constant among them: 0
+k = 4: sign vectors with all P_j = 1: 1, non-constant among them: 0
+k = 5: sign vectors with all P_j = 1: 2, non-constant among them: 0
+k = 6: sign vectors with all P_j = 1: 1, non-constant among them: 0
+k = 7: sign vectors with all P_j = 1: 2, non-constant among them: 0
+k = 8: sign vectors with all P_j = 1: 1, non-constant among them: 0
+k = 9: sign vectors with all P_j = 1: 2, non-constant among them: 0
+linear member through (r1, 1), (r2, -1): f(r1) = 1, f(r2) = -1

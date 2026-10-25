@@ -1,0 +1,23 @@
+5_1_2 T=1.000000 bb2 ../e1/inst/inst_D5_1_2.txt lam 0.200000 T 1.000000 status DONE M_ub 1.000000 best_exact X N 0 bits 0.0000 cons 1 nodes 16179 exact 0 pruned 8090 time 3.1
+-7_1_2 T=1.083009 bb2 ../e1/inst/inst_D-7_1_2.txt lam 0.200000 T 1.083009 status DONE M_ub 1.083009 best_exact X N 0 bits 0.0000 cons 1 nodes 2346797 exact 0 pruned 1173399 time 463.8
+13_2_1 T=0.883009 bb2 ../e1/inst/inst_D13_2_1.txt lam 0.200000 T 0.883009 status DONE M_ub 0.883009 best_exact X N 0 bits 0.0000 cons 1 nodes 97941 exact 0 pruned 48971 time 20.3
+17_1_2 T=1.400000 bb2 ../e1/inst/inst_D17_1_2.txt lam 0.200000 T 1.400000 status DONE M_ub 1.400000 best_exact X N 2 bits 3.0000 cons 1 nodes 45269 exact 6671 pruned 15964 time 10.4
+-19_1_2 T=1.000000 bb2 ../e1/inst/inst_D-19_1_2.txt lam 0.200000 T 1.000000 status DONE M_ub 1.000000 best_exact X N 0 bits 0.0000 cons 1 nodes 255 exact 0 pruned 128 time 0.1
+-23_2_0 T=0.800000 bb2 ../e1/inst/inst_D-23_2_0.txt lam 0.200000 T 0.800000 status DONE M_ub 0.800000 best_exact X N 1 bits 1.0000 cons 1 nodes 147269 exact 71479 pruned 2156 time 32.7
+29_1_2 T=1.083009 bb2 ../e1/inst/inst_D29_1_2.txt lam 0.200000 T 1.083009 status DONE M_ub 1.083009 best_exact X N 0 bits 0.0000 cons 1 nodes 2319 exact 0 pruned 1160 time 0.6
+-31_1_2 T=1.618624 bb2 ../e1/inst/inst_D-31_1_2.txt lam 0.200000 T 1.618624 status DONE M_ub 1.618624 best_exact X N 0 bits 0.0000 cons 1 nodes 373273 exact 0 pruned 186637 time 81.4
+37_2_0 T=1.049025 bb2 ../fx/instxD/inst_D37_2_0.txt lam 0.200000 T 1.049025 status DONE M_ub 1.049025 best_exact X N 0 bits 0.0000 cons 1 nodes 2056489 exact 0 pruned 1028245 time 419.1
+41_1_2 T=1.000000 bb2 ../fx/instxD/inst_D41_1_2.txt lam 0.200000 T 1.000000 status DONE M_ub 1.000000 best_exact X N 0 bits 0.0000 cons 1 nodes 149 exact 0 pruned 75 time 0.0
+-43_1_2 T=1.000000 bb2 ../fx/instxD/inst_D-43_1_2.txt lam 0.200000 T 1.000000 status DONE M_ub 1.000000 best_exact X N 0 bits 0.0000 cons 1 nodes 5143 exact 0 pruned 2572 time 1.2
+-47_2_1 T=1.049025 bb2 ../fx/instxD/inst_D-47_2_1.txt lam 0.200000 T 1.049025 status DONE M_ub 1.049025 best_exact X N 0 bits 0.0000 cons 1 nodes 1619949 exact 0 pruned 809975 time 345.8
+53_1_2 T=1.000000 bb2 ../fx/instxD/inst_D53_1_2.txt lam 0.200000 T 1.000000 status DONE M_ub 1.000000 best_exact X N 0 bits 0.0000 cons 1 nodes 1591 exact 0 pruned 796 time 0.4
+-59_0_5 T=0.600000 bb2 ../fx/instxD/inst_D-59_0_5.txt lam 0.200000 T 0.600000 status DONE M_ub 0.600000 best_exact X N 1 bits 2.0000 cons 1 nodes 97 exact 30 pruned 19 time 0.0
+61_0_3 T=1.483009 bb2 ../fx/instxD/inst_D61_0_3.txt lam 0.200000 T 1.483009 status DONE M_ub 1.483009 best_exact X N 0 bits 0.0000 cons 1 nodes 1261 exact 0 pruned 631 time 0.4
+-67_1_2 T=1.600000 bb2 ../fx/instxD/inst_D-67_1_2.txt lam 0.200000 T 1.600000 status DONE M_ub 1.600000 best_exact X N 2 bits 2.0000 cons 1 nodes 545 exact 129 pruned 144 time 0.2
+-71_0_2 T=0.800000 bb2 ../fx/instxD/inst_D-71_0_2.txt lam 0.200000 T 0.800000 status DONE M_ub 0.800000 best_exact X N 1 bits 1.0000 cons 1 nodes 2347 exact 556 pruned 618 time 0.7
+73_0_3 T=1.000000 bb2 ../fx/instxD/inst_D73_0_3.txt lam 0.200000 T 1.000000 status DONE M_ub 1.000000 best_exact X N 2 bits 5.0000 cons 1 nodes 5999 exact 1042 pruned 1958 time 1.6
+-79_0_3 T=1.000000 bb2 ../fx/instxD/inst_D-79_0_3.txt lam 0.200000 T 1.000000 status DONE M_ub 1.000000 best_exact X N 2 bits 5.0000 cons 1 nodes 1985 exact 296 pruned 697 time 0.5
+-83_2_0 T=0.800000 bb2 ../fx/instxD/inst_D-83_2_0.txt lam 0.200000 T 0.800000 status DONE M_ub 0.800000 best_exact X N 1 bits 1.0000 cons 1 nodes 71997 exact 19502 pruned 16497 time 17.8
+89_0_3 T=1.400000 bb2 ../fx/instxD/inst_D89_0_3.txt lam 0.200000 T 1.400000 status DONE M_ub 1.400000 best_exact X N 2 bits 3.0000 cons 1 nodes 1407 exact 218 pruned 486 time 0.4
+97_2_1 T=1.015000 bb2 ../fx/instxD/inst_D97_2_1.txt lam 0.200000 T 1.015000 status DONE M_ub 1.015038 best_exact X N 4 bits 14.9248 cons 1 nodes 19023 exact 863 pruned 8649 time 5.5
+ALLDONE

@@ -1,0 +1,8 @@
+rho-family rho=3/7: gcd degrees [2, 1, 1]   A-reduction identity holds: 1
+Lemma 5 (Psi10, Psi14, Psi18): gcd degrees [0, 2, 0]   A-reduction identity holds: 1
+random k=3 a=3: gcd degrees [0, 0, 0]   A-reduction identity holds: 1
+random k=3 a=2: gcd degrees [0, 0, 0]   A-reduction identity holds: 1
+random k=3 a=3: gcd degrees [0, 0, 0]   A-reduction identity holds: 1
+random k=5 a=2: gcd degrees [0, 0, 0, 0, 0]   A-reduction identity holds: 1
+random k=5 a=1: gcd degrees [0, 0, 0, 0, 0]   A-reduction identity holds: 1
+random k=5 a=3: gcd degrees [0, 0, 0, 0, 0]   A-reduction identity holds: 1

@@ -1,0 +1,2 @@
+T1 table D=-19 X=10000000000 width=1000000 extra=[4294000000,4295500000): 11 production segments, 63752 inert primes certified, bad=0 missing=0 extra=0 overflow=0
+RESULT table D=-19: ok (0 problems)

@@ -1,0 +1,114 @@
+rows 518 inert 220 split 297 ramified 1 max p 469561 mismatches/bad 0
+== my control search X=2000 (CTRL=1)
+# usable 517 (ctrl 1, filter12b 0)
+k = 2: subsets in scope 3.544e+04, anchor survivors 168, full solutions 133
+k = 3: subsets in scope 1.792e+06, anchor survivors 6876, full solutions 159
+k = 4: subsets in scope 6.942e+07, anchor survivors 224207, full solutions 322
+k = 5: subsets in scope 2.172e+09, anchor survivors 6512863, full solutions 872
+0.97 s 1948 KB
+== my control hits checked with strong_fermat2
+control hits 1486 strong base-2 psp confirmed 1486
+== original control rerun
+  k = 2: subsets in scope 3.544e+04, anchor survivors 168, full solutions 133
+  k = 3: subsets in scope 1.792e+06, anchor survivors 6876, full solutions 159
+  k = 4: subsets in scope 6.942e+07, anchor survivors 224207, full solutions 322
+  k = 5: subsets in scope 2.172e+09, anchor survivors 6512863, full solutions 872
+bpsw.py tests: 1486, passes: 1486  [CONTROL: passes = strong base-2 psp confirmed]
+CONTROL brute force (classes <= 70 members, k <= 4): 18 solutions, found by search 18, missed 0
+== my exact search D=5 X=10000 filter12b=1
+# usable 903 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 7.288e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 5.86e+06, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 4.066e+08, anchor survivors 130, full solutions 0
+k = 5: subsets in scope 2.373e+10, anchor survivors 5619, full solutions 0
+0.44 s 3364 KB
+== my exact search D=5 X=10000 filter12b=0
+# usable 906 (ctrl 0, filter12b 0)
+k = 2: subsets in scope 7.288e+04, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 5.86e+06, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 4.066e+08, anchor survivors 130, full solutions 0
+k = 5: subsets in scope 2.373e+10, anchor survivors 5619, full solutions 0
+0.72 s 3364 KB
+== my exact search D=5 X=20000 filter12b=1
+# usable 1680 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 2.494e+05, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 3.667e+07, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 4.67e+09, anchor survivors 390, full solutions 0
+k = 5: subsets in scope 5.022e+11, anchor survivors 29708, full solutions 0
+3.50 s 7676 KB
+== my exact search D=5 X=20000 filter12b=0
+# usable 1683 (ctrl 0, filter12b 0)
+k = 2: subsets in scope 2.494e+05, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 3.667e+07, anchor survivors 1, full solutions 0
+k = 4: subsets in scope 4.67e+09, anchor survivors 390, full solutions 0
+k = 5: subsets in scope 5.022e+11, anchor survivors 29708, full solutions 0
+2.93 s 7748 KB
+== my exact search D=5 X=60000 filter12b=1
+# usable 4456 (ctrl 0, filter12b 1)
+k = 2: subsets in scope 1.77e+06, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 6.969e+08, anchor survivors 3, full solutions 0
+k = 4: subsets in scope 2.376e+11, anchor survivors 2219, full solutions 0
+k = 5: subsets in scope 6.845e+13, anchor survivors 458999, full solutions 0
+108.34 s 44944 KB
+== my exact search D=5 X=60000 filter12b=0
+# usable 4461 (ctrl 0, filter12b 0)
+k = 2: subsets in scope 1.77e+06, anchor survivors 0, full solutions 0
+k = 3: subsets in scope 6.969e+08, anchor survivors 3, full solutions 0
+k = 4: subsets in scope 2.376e+11, anchor survivors 2219, full solutions 0
+k = 5: subsets in scope 6.845e+13, anchor survivors 458999, full solutions 0
+106.30 s 45076 KB
+== original analysis rerun X=10000
+pairwise-closed graph: 0 edges, max clique 1
+  k = 2: subsets in scope 7.288e+04, anchor survivors 0, full solutions 0
+  k = 3: subsets in scope 5.86e+06, anchor survivors 1, full solutions 0
+  k = 4: subsets in scope 4.066e+08, anchor survivors 130, full solutions 0
+  k = 5: subsets in scope 2.373e+10, anchor survivors 5619, full solutions 0
+bpsw.py tests: 7, passes: 0
+== original analysis rerun X=20000
+pairwise-closed graph: 0 edges, max clique 1
+  k = 2: subsets in scope 2.494e+05, anchor survivors 0, full solutions 0
+  k = 3: subsets in scope 3.667e+07, anchor survivors 1, full solutions 0
+  k = 4: subsets in scope 4.67e+09, anchor survivors 390, full solutions 0
+  k = 5: subsets in scope 5.022e+11, anchor survivors 29708, full solutions 0
+bpsw.py tests: 9, passes: 0
+== closed graph
+rows_X10000.txt: inert usable 903, same-class pairs 72879, closed edges 0
+rows_X20000.txt: inert usable 1679, same-class pairs 249352, closed edges 0
+rows_X60000.txt: inert usable 4452, same-class pairs 1770025, closed edges 0
+rows_Dm7_X10000.txt: inert usable 1092, same-class pairs 64451, closed edges 0
+rows_Dm11_X10000.txt: inert usable 949, same-class pairs 39246, closed edges 0
+rows_D13_X10000.txt: inert usable 1035, same-class pairs 47065, closed edges 0
+rows_Dm15_X10000.txt: inert usable 1175, same-class pairs 102502, closed edges 0
+rows_D17_X10000.txt: inert usable 951, same-class pairs 81055, closed edges 0
+rows_Dm19_X10000.txt: inert usable 991, same-class pairs 42177, closed edges 0
+rows_Dm23_X10000.txt: inert usable 958, same-class pairs 40761, closed edges 0
+rows_D29_X10000.txt: inert usable 1009, same-class pairs 44937, closed edges 0
+rows_Dm31_X10000.txt: inert usable 1086, same-class pairs 63303, closed edges 0
+== cells ten D
+rows_D13_X10000.txt: rows 2200, cell sizes [(1, 2190), (2, 5)], multi-cells by (signs, shared odd prime): {((1, 1), True): 5}; subsets tested 5, bpsw passes 0
+rows_D17_X10000.txt: rows 2163, cell sizes [(1, 2147), (2, 8)], multi-cells by (signs, shared odd prime): {((1, 1), True): 8}; subsets tested 8, bpsw passes 0
+rows_D29_X10000.txt: rows 2171, cell sizes [(1, 2157), (2, 7)], multi-cells by (signs, shared odd prime): {((1, 1), True): 7}; subsets tested 7, bpsw passes 0
+rows_D5_X10000.txt: rows 2189, cell sizes [(1, 2175), (2, 7)], multi-cells by (signs, shared odd prime): {((1, 1), True): 7}; subsets tested 7, bpsw passes 0
+rows_Dm11_X10000.txt: rows 2136, cell sizes [(1, 2128), (2, 4)], multi-cells by (signs, shared odd prime): {((1, 1), True): 4}; subsets tested 4, bpsw passes 0
+rows_Dm15_X10000.txt: rows 2594, cell sizes [(1, 2582), (2, 6)], multi-cells by (signs, shared odd prime): {((1, 1), True): 6}; subsets tested 6, bpsw passes 0
+rows_Dm19_X10000.txt: rows 2154, cell sizes [(1, 2146), (2, 4)], multi-cells by (signs, shared odd prime): {((1, 1), True): 4}; subsets tested 4, bpsw passes 0
+rows_Dm23_X10000.txt: rows 2092, cell sizes [(1, 2090), (2, 1)], multi-cells by (signs, shared odd prime): {((1, 1), True): 1}; subsets tested 1, bpsw passes 0
+rows_Dm31_X10000.txt: rows 2358, cell sizes [(1, 2340), (2, 9)], multi-cells by (signs, shared odd prime): {((1, 1), True): 9}; subsets tested 9, bpsw passes 0
+rows_Dm7_X10000.txt: rows 2416, cell sizes [(1, 2404), (2, 6)], multi-cells by (signs, shared odd prime): {((1, 1), True): 6}; subsets tested 6, bpsw passes 0
+== rows multiplicity
+usable 1680; (side,row) pairs: q <= 200: 88 (mean multiplicity 48.09); q > 200: 972 (mean multiplicity 1.760); multiplicity histogram q > 200: [(1, 636), (2, 164), (3, 74), (4, 48), (5, 9), (6, 20), (7, 8), (8, 7)]
+usable primes with all rows <= 200: 387
+== pool metric rerun X=2e4
+class (2, 0): N = 567, B = 5722.0 bits (side conflicts ignored), conflicting rows 136
+   side-consistent greedy frontier: first point (2123.4, 146), best N/(B+1) = 0.0970 at (174.3, 17); best on 60 <= B <= 300: (174.3, 17) ratio 0.0970; points [(2123.4, 146), (1813.4, 129), (1530.4, 112), (1238.2, 95), (957.6, 78), (697.9, 61), (493.6, 44), (286.3, 27), (107.9, 9)]
+class (1, 2): N = 302, B = 3457.1 bits (side conflicts ignored), conflicting rows 87
+   side-consistent greedy frontier: first point (1231.3, 75), best N/(B+1) = 0.1149 at (25.1, 3); best on 60 <= B <= 300: (75.4, 7) ratio 0.0916; points [(1231.3, 75), (1046.1, 66), (868.6, 57), (700.1, 48), (549.5, 39), (417.0, 30), (267.6, 21), (140.1, 12), (25.1, 3)]
+class (0, 3): N = 183, B = 2133.0 bits (side conflicts ignored), conflicting rows 52
+   side-consistent greedy frontier: first point (915.9, 53), best N/(B+1) = 0.0679 at (57.9, 4); best on 60 <= B <= 300: (282.8, 19) ratio 0.0669; points [(915.9, 53), (802.3, 47), (685.7, 41), (564.9, 35), (464.8, 29), (356.0, 23), (255.5, 17), (174.2, 11), (76.6, 5)]
+class (1, 0): N = 124, B = 1936.5 bits (side conflicts ignored), conflicting rows 42
+   side-consistent greedy frontier: first point (828.4, 43), best N/(B+1) = 0.0653 at (60.3, 4); best on 60 <= B <= 300: (60.3, 4) ratio 0.0653; points [(828.4, 43), (705.3, 38), (599.6, 33), (518.9, 28), (421.0, 23), (333.3, 18), (226.1, 13), (135.6, 8), (45.8, 3)]
+class (0, 0): N = 119, B = 1741.4 bits (side conflicts ignored), conflicting rows 33
+   side-consistent greedy frontier: first point (666.2, 37), best N/(B+1) = 0.0926 at (31.4, 3); best on 60 <= B <= 300: (71.6, 5) ratio 0.0689; points [(666.2, 37), (579.0, 33), (510.9, 29), (431.7, 25), (362.2, 21), (284.8, 17), (215.8, 13), (138.7, 9), (71.6, 5)]
+class (3, 0): N = 95, B = 1384.0 bits (side conflicts ignored), conflicting rows 28
+   side-consistent greedy frontier: first point (620.0, 38), best N/(B+1) = 0.0707 at (69.7, 5); best on 60 <= B <= 300: (69.7, 5) ratio 0.0707; points [(620.0, 38), (551.6, 34), (466.3, 30), (391.6, 26), (324.9, 22), (266.3, 18), (200.7, 14), (147.4, 10), (89.0, 6)]
+BATCH2-DONE

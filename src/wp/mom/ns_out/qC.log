@@ -1,0 +1,8 @@
+04:15:50 start c9bB: env [NS_AMIN=0.01 NS_WMODE=c NS_BDEF=1e-3] args [9 0 real - 2000 401 250 400 0 1e-3]
+04:21:11 done c9bB (exit 0)
+04:21:11 start c7l1B: env [NS_AMIN=0.01 NS_WMODE=c NS_BDEF=1e-3] args [7 1 real - 3000 402 250 400 0 1e-3]
+04:27:49 done c7l1B (exit 0)
+04:27:49 start c9cB: env [NS_AMIN=0.002 NS_WMODE=c NS_BDEF=1e-3] args [9 0 real - 2000 403 250 400 0 1e-3]
+04:32:57 done c9cB (exit 0)
+04:32:57 start c11aB: env [NS_AMIN=0.01 NS_WMODE=c NS_BDEF=1e-3] args [11 0 real - 1500 404 250 400 0 1e-3]
+04:45:03 done c11aB (exit 0)

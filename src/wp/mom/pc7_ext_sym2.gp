@@ -1,0 +1,17 @@
+Dl = 1 - e1^2 + 2*e2 + e2^2;
+lam = 2*e1/Dl; mu = 2*(1 - e1^2 + e2)/Dl;
+twoRe(s, q) = lam*(s^3 - 3*q*s) + mu*(s^2 - 2*q) - lam*s - 2*mu;
+sm = (c*e1 - lam)/c; qm = (c*e2 + mu)/c;
+sp = -lam/c; qp = (mu + lam*e1 - c)/c;
+RX = twoRe(sm, qm); RY = twoRe(sp, qp) + 4;
+dm = sm^2 - 4*qm; dp = sp^2 - 4*qp;
+N = numerator(RX);
+print("check RY(c) = RX(-c): ", RY - subst(RX, c, -c));
+for(i = 0, 3, print("a", i, " = ", factor(polcoef(N, i, c))));
+rr(P) = factor(subst(subst(P, e1, r1 + r2), e2, r1*r2));
+for(i = 0, 3, print("a", i, " (r) = ", rr(polcoef(N, i, c))));
+DM = numerator(dm); DP = numerator(dp);
+for(i = 0, 2, print("dm", i, " (r) = ", rr(polcoef(DM, i, c))));
+for(i = 0, 2, print("dp", i, " (r) = ", rr(polcoef(DP, i, c))));
+print("dm den ", rr(denominator(dm)), "  dp den ", rr(denominator(dp)));
+print("RX den ", rr(denominator(RX)));

@@ -1,0 +1,17 @@
+(1) d = 1: residual = 0   [deg P = 1, main var of f: t]
+(1) d = 2: residual = 0   [deg P = 2, main var of f: t]
+(1) d = 3: residual = 0   [deg P = 3, main var of f: t]
+(1) d = 4: residual = 0   [deg P = 4, main var of f: t]
+(1) d = 5: residual = 0   [deg P = 5, main var of f: t]
+(1) d = 6: residual = 0   [deg P = 6, main var of f: t]
+(1) d = 7: residual = 0   [deg P = 7, main var of f: t]
+(2a) f0 + 1 - H*Lp = 0
+(2b) fc - 1 - G*Km = 0,  fc + 1 - H*Kp = 0
+(2c) sum_{Km} P - sum_{Kp} P - 8/c = 0
+(2d) (X + cP) mod Km = 0,  (Y + cP) mod Kp = 0
+(3) f_i - (1 + (c_i - c_j) P) mod (f_j - 1) = 0;  f_i - (-1 + (c_i - c_j) P) mod (f_j + 1) = 0
+(4) f0+1-aa*H = 0, H-G-2/aa = 0, phi-1 = 0, phi+1 = 0, phi(G) - f_j = 0;  interpolant at e1=0: lam = 0, mu - aa = 0
+(5) lead coeff of Km in t: c
+    L(r) - 2/(1-r^2) with H = (t-r)(t-s): 0
+ALL CHECKS PASSED
+ok = 1

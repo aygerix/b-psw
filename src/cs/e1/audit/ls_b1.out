@@ -1,0 +1,20 @@
+D = 5, class (2,0): pool 3273, rows 44, restarts 300, seed 11
+lam 0.2: best N - lam*bits = 0.28301 at (N 1, bits 3.585); config [(3, 'F', 1), (7, 'L', 1)]
+lam 0.25: best N - lam*bits = 0.10376 at (N 1, bits 3.585); config [(3, 'F', 1), (7, 'L', 1)]
+lam 0.3: best N - lam*bits = -0.00000 at (N 0, bits 0.0); config []
+primal frontier (b: N@bits): 60:9@58.22 100:14@93.558 140:18@134.148 180:24@173.971 214:32@210.252 227:35@224.472 250:39@246.092 275:42@273.587 300:48@296.25 350:54@338.253 400:54@338.253
+D = -7, class (1,2): pool 4186, rows 45, restarts 300, seed 11
+lam 0.2: best N - lam*bits = 1.08301 at (N 2, bits 4.585); config [(3, 'F', 2), (5, 'L', 1)]
+lam 0.25: best N - lam*bits = 1.00000 at (N 1, bits -0.0); config []
+lam 0.3: best N - lam*bits = 1.00000 at (N 1, bits -0.0); config []
+primal frontier (b: N@bits): 60:8@53.916 100:14@98.759 140:19@137.501 180:26@174.998 214:33@212.209 227:35@224.654 250:39@247.062 275:46@274.14 300:52@299.532 350:61@345.906 400:64@367.67
+D = -31, class (1,2): pool 4078, rows 45, restarts 300, seed 11
+lam 0.2: best N - lam*bits = 1.61862 at (N 3, bits 6.907); config [(3, 'L', 2), (5, 'F', 2)]
+lam 0.25: best N - lam*bits = 1.27328 at (N 3, bits 6.907); config [(3, 'L', 2), (5, 'F', 2)]
+lam 0.3: best N - lam*bits = 1.10000 at (N 2, bits 3.0); config [(3, 'L', 1), (5, 'F', 1)]
+primal frontier (b: N@bits): 60:9@54.658 100:14@93.788 140:22@138.857 180:28@174.8 214:33@209.925 227:34@217.51 250:37@243.863 275:40@267.845 300:50@297.967 350:54@344.012 400:54@344.012
+D = 17, class (2,0): pool 4574, rows 44, restarts 300, seed 11
+lam 0.2: best N - lam*bits = 1.04902 at (N 3, bits 9.755); config [(3, 'L', 1), (5, 'L', 1), (7, 'F', 1), (19, 'L', 1)]
+lam 0.25: best N - lam*bits = 0.75000 at (N 1, bits 1.0); config [(3, 'L', 1)]
+lam 0.3: best N - lam*bits = 0.70000 at (N 1, bits 1.0); config [(3, 'L', 1)]
+primal frontier (b: N@bits): 60:9@56.012 100:14@94.618 140:19@133.074 180:25@175.67 214:32@209.065 227:34@224.439 250:39@249.107 275:46@268.642 300:52@296.215 350:63@343.367 400:63@343.367

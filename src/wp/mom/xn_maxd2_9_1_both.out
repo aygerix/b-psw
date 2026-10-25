@@ -1,0 +1,16 @@
+start 11: d2 fam 6851.24 refl 7116.73 | constraint viol 2.2e+02 margin 0.00e+00 dmin 0.00e+00 S 0.50385 maxv 0.2799
+start 13: d2 fam -8854.71 refl -8854.71 | constraint viol 6.5e-10 margin 0.00e+00 dmin 3.86e-10 S 2.48677 maxv 1.315
+start 21: d2 fam -8854.72 refl -8854.72 | constraint viol 5.1e-11 margin 2.35e-09 dmin 1.89e-08 S 2.48677 maxv 1.315
+start 39: d2 fam -8854.72 refl -8854.72 | constraint viol 4.2e-10 margin 3.50e-10 dmin 1.57e-07 S 2.48677 maxv 1.315
+~/b-psw/src/wp/mom/xn_feas.py:18: RuntimeWarning: overflow encountered in exp
+  r = np.exp(p[:m])
+~/b-psw/src/wp/mom/xn_feas.py:31: RuntimeWarning: invalid value encountered in subtract
+  mg = np.sqrt(8 * v) - (np.abs(u - 0.5) + 0.5)
+~/b-psw/src/wp/mom/xn_feas.py:33: RuntimeWarning: invalid value encountered in subtract
+  dmin = min(np.linalg.norm(pts[i] - pts[j]) for i in range(len(u)) for j in range(i + 1, len(u))) if len(u) > 1 else 1.0
+start 42: d2 fam nan refl nan | constraint viol nan margin nan dmin 3.47e-02 S inf maxv inf
+start 48: d2 fam -8854.72 refl -8854.72 | constraint viol 1.5e-11 margin 0.00e+00 dmin 0.00e+00 S 2.48677 maxv 1.315
+start 50: d2 fam -8854.72 refl -8854.72 | constraint viol 1.8e-09 margin 4.22e-10 dmin 1.09e-07 S 2.48677 maxv 1.315
+start 51: d2 fam -1.18073e+11 refl 6.78546e+10 | constraint viol 1.7e+10 margin 0.00e+00 dmin 0.00e+00 S 44.48690 maxv 40.48
+start 67: d2 fam -8854.72 refl -8854.72 | constraint viol 4.5e-13 margin 0.00e+00 dmin 1.52e-07 S 2.48677 maxv 1.315
+start 68: d2 fam -8854.72 refl -8854.72 | constraint viol 0.0e+00 margin 2.83e-12 dmin 2.89e-07 S 2.48677 maxv 1.315

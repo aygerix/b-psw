@@ -1,0 +1,4 @@
+formula check: max rel err 0.000352 (median 3.76e-08)
+points scanned: 4680 ; points with ALL directions bad (min_phi kappa_min > 0): 0
+max over P of min_phi kappa_min = -2.832 at a=0.9892 ut=0 (bad fraction 0.500)
+bad-direction fraction: min 0.499 median 0.500 max 0.501

@@ -1,0 +1,5 @@
+SUMMARY rand b=8 bH=21.0 r=16 gen: success 0.90 over 10, primes 128, list-ops 1.15e+05 (log2 16.8), time 0.01s
+SUMMARY rand b=8 bH=21.0 r=16 split: success 0.90 over 10, primes 646, list-ops 3.68e+05 (log2 18.5), time 0.03s
+SUMMARY rand b=8 bH=21.0 r=48 gen: success 1.00 over 10, primes 2048, list-ops 1.68e+06 (log2 20.7), time 0.25s
+SUMMARY rand b=8 bH=21.0 r=48 split: success 0.80 over 10, primes 1670, list-ops 9.04e+05 (log2 19.8), time 0.07s
+SUMMARY rand b=8 bH=21.0 r=80 split: success 0.80 over 10, primes 2701, list-ops 2.51e+06 (log2 21.3), time 0.14s

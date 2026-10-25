@@ -1,0 +1,18 @@
+# lagr_bb.py (Python) vs bbc.c (C) on D=5 class (2,0), full pool
+D = 5, class (2,0), T0 = 200, PMAX = inf: pool 3273 primes (conflicting duplicate records: 0), rows 44, items 302
+lambda = 0.3300: DONE M_ub = 0.0 best = 0.00000 at (bits 0.00, N 0); nodes 8173 (exact 0, pruned 4087); 26.7 s
+lambda = 0.2500: DONE M_ub = 0.10378 best = 0.10376 at (bits 3.58, N 1); nodes 70649 (exact 10307, pruned 25018); 185.2 s
+   hull point primes: [13]
+
+real	3m33.152s
+user	3m27.789s
+sys	0m0.121s
+
+lam 0.330000 DONE M_ub 0.000000 best 0.000000 N 0 bits 0.000 nodes 8173 exact 0 pruned 4087 time 2.38
+  hull primes:
+lam 0.250000 DONE M_ub 0.103761 best 0.103759 N 1 bits 3.585 nodes 70647 exact 10306 pruned 25018 time 16.39
+  hull primes: 13
+
+real	0m19.338s
+user	0m18.778s
+sys	0m0.005s

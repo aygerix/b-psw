@@ -1,0 +1,33 @@
+// src/cs/e3/e3_res2.sing -- E3 stage 3 complete: (a) the shared curve c r3^2 = 2, q = 1/r3 - r3^2 lies in R1=R2=R3=0;
+// (b) the residual 3-good locus after saturating away the shared curve and the degenerate loci: dimension, degree, points.
+LIB "elim.lib"; LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring S = 0, (q, c, r3), dp;
+execute(read("out/e3_R_decl.txt"));
+poly P = -(c*r3^3 + c*q*r3 + c + r3);
+poly dg = c*r3*(1 + c*q)*(P^2 - 4*q*c^2*r3^4);
+// (a) shared curve: substitute c = 2/r3^2, q = 1/r3 - r3^2 (clear denominators by r3^N)
+ring T = (0, r3), (q, c), dp;
+poly R1 = imap(S, R1); poly R2 = imap(S, R2); poly R3 = imap(S, R3);
+ideal Cv = c - 2/r3^2, q - 1/r3 + r3^2;
+"(a) shared curve: R_j mod (c - 2/r3^2, q - 1/r3 + r3^2) = ", reduce(R1, std(Cv)), " ", reduce(R2, std(Cv)), " ", reduce(R3, std(Cv));
+setring S;
+// (b) residual locus
+int t0 = timer;
+ideal I3 = SAT(ideal(R1, R2, R3), dg);
+"(b) I3 (degenerate loci removed): dim = ", dim(std(I3)), "   time ", timer - t0;
+ideal I3r = SAT(I3, c*r3^2 - 2);
+ideal G = std(I3r);
+"    after removing the shared curve: dim = ", dim(G), ", vdim = ", vdim(G), "   time ", timer - t0;
+if (dim(G) == 0) {
+  ideal E = eliminate(G, q*c);
+  "    eliminant in r3:"; list fa = factorize(E[1]); int i;
+  for (i = 1; i <= size(fa[1]); i++) { if (deg(fa[1][i]) > 0) { "     [mult ", fa[2][i], "] deg ", deg(fa[1][i]), ": ", fa[1][i]; } }
+  list mp = minAssGTZ(G);
+  "    minimal primes: ", size(mp);
+  int j;
+  for (i = 1; i <= size(mp); i++) { "     prime ", i, " vdim ", vdim(std(mp[i])), ":"; for (j = 1; j <= size(mp[i]); j++) { "       ", mp[i][j]; } }
+}
+"total time ", timer - t0;
+quit;

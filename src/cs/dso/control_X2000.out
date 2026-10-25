@@ -1,0 +1,14 @@
+# D = 5, X = 2000, census rows = 518, max p = 469561
+# inert 220, split 297, ramified 1
+# p > X: 216
+cell-size histogram: [(1, 516), (2, 1)]
+usable primes: 517 (inert 517, split 0)
+2-adic classes (v2 ord, v2 z): #usable [#inert]: [((2, 0), 176, 176), ((0, 0), 147, 147), ((1, 0), 132, 132), ((3, 0), 32, 32), ((4, 0), 18, 18), ((5, 0), 6, 6), ((6, 0), 3, 3), ((7, 0), 2, 2), ((8, 0), 1, 1)]
+pairwise-closed graph: 0 edges, max clique 1
+exact search (k <= 5) done in 133.3 s
+  k = 2: subsets in scope 3.544e+04, anchor survivors 168, full solutions 133
+  k = 3: subsets in scope 1.792e+06, anchor survivors 6876, full solutions 159
+  k = 4: subsets in scope 6.942e+07, anchor survivors 224207, full solutions 322
+  k = 5: subsets in scope 2.172e+09, anchor survivors 6512863, full solutions 872
+bpsw.py tests: 1486, passes: 1486  [CONTROL: passes = strong base-2 psp confirmed]
+CONTROL brute force (classes <= 70 members, k <= 4): 18 solutions, found by search 18, missed 0

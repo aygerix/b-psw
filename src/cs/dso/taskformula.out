@@ -1,0 +1,1 @@
+task heuristic 1/(phi(de) ln(de)), d in [2,X], e in [3,X], X=10000: sum E = 23.017, sum E^2/2 = 0.1111  (census: 2189 primes, 7 two-cells, 0 inert)

@@ -1,0 +1,21 @@
+// src/cs/e3/e3_sq.sing -- E3 side locus: A with a repeated root (disc(A) = 0), which e3_res2 / e3_full saturated away.
+// Same coordinates (q, c, r3), r2 = 0, mu = 1. Reports the 3-good locus and each member's good / full locus on disc = 0.
+LIB "elim.lib"; LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring S = 0, (q, c, r3), dp;
+execute(read("out/e3_R_decl.txt"));
+poly P = -(c*r3^3 + c*q*r3 + c + r3);
+poly dsc = P^2 - 4*q*c^2*r3^4;
+poly dg0 = c*r3*(1 + c*q);
+"disc(A) = 0 surface: factors"; factorize(dsc);
+ideal Z = SAT(ideal(dsc), dg0);
+int j; int i; int m;
+list RR = list(R1, R2, R3);
+for (j = 1; j <= 3; j++) { ideal Ij = SAT(Z + RR[j], dg0); "member ", j, " good on disc=0: dim ", dim(std(Ij)); kill Ij; }
+ideal I3 = SAT(Z + ideal(R1, R2, R3), dg0);
+"all three good on disc=0: dim ", dim(std(I3));
+if (dim(std(I3)) >= 0) { list mp = minAssGTZ(I3);
+  for (i = 1; i <= size(mp); i++) { "  comp ", i, ": dim ", dim(std(mp[i])), " vdim ", vdim(std(mp[i]));
+    for (m = 1; m <= size(mp[i]); m++) { "     ", mp[i][m]; } } }
+quit;

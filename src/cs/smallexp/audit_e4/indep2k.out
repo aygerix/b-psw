@@ -1,0 +1,18 @@
+a=[2]x30 ranks=[30] bound=31 norecycle used=31 recycle mean=31.0 max=31 ratio_to_bound=1.000  0.5s
+a=[4]x5 ranks=[5, 5] bound=36 norecycle used=36 recycle mean=20.5 max=30 ratio_to_bound=0.569  0.3s
+a=[4]x20 ranks=[20, 20] bound=441 norecycle used=441 recycle mean=225.7 max=250 ratio_to_bound=0.512  2.5s
+a=[4]x60 ranks=[60, 60] bound=3721 norecycle used=3721 recycle mean=1878.8 max=1925 ratio_to_bound=0.505  12.2s
+a=[4]x100 ranks=[100, 100] bound=10201 norecycle used=10201 recycle mean=5130.3 max=5220 ratio_to_bound=0.503  17.3s
+a=[8]x4 ranks=[4, 4, 4] bound=125 norecycle used=125 recycle mean=40.3 max=66 ratio_to_bound=0.323  1.0s
+a=[8]x10 ranks=[10, 10, 10] bound=1331 norecycle used=1331 recycle mean=333.9 max=390 ratio_to_bound=0.251  1.8s
+a=[16]x3 ranks=[3, 3, 3, 3] bound=256 norecycle used=256 recycle mean=49.5 max=73 ratio_to_bound=0.193  0.9s
+a=[2, 4, 8]x3 ranks=[3, 2, 1] bound=24 norecycle used=24 recycle mean=11.2 max=19 ratio_to_bound=0.466  0.3s
+a=[2, 4, 8, 16]x6 ranks=[6, 4, 3, 1] bound=280 norecycle used=280 recycle mean=64.5 max=86 ratio_to_bound=0.230  0.6s
+a=[32]x2 ranks=[2, 2, 2, 2, 2] bound=243 norecycle used=243 recycle mean=35.6 max=56 ratio_to_bound=0.147  0.6s
+adversarial (Z/4)^5 recycle=False: used 36 of (r+1)^2=36, |I|=36
+adversarial (Z/4)^5 recycle=True: used 36 of (r+1)^2=36, |I|=36
+adversarial (Z/4)^20 recycle=False: used 441 of (r+1)^2=441, |I|=441
+adversarial (Z/4)^20 recycle=True: used 441 of (r+1)^2=441, |I|=441
+adversarial (Z/4)^60 recycle=False: used 3721 of (r+1)^2=3721, |I|=3721
+adversarial (Z/4)^60 recycle=True: used 3721 of (r+1)^2=3721, |I|=3721
+EXIT 0

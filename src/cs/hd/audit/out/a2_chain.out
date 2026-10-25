@@ -1,0 +1,22 @@
+k= 3 M=64          #good= 1 (middle ones: 1)  R1-1=3.72 e2  Rk-1=-0.0909  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0154  incr=1
+k= 3 M=100000      #good= 1 (middle ones: 1)  R1-1=6.00 e5  Rk-1=-6.00 e-5  max|a_j/2^(j-1)-1| (j=2..k-1)=1.00 e-5  incr=1
+k= 5 M=256         #good= 3 (middle ones: 1)  R1-1=1.56 e5  Rk-1=-0.111  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0360  incr=1
+k= 5 M=100000      #good= 3 (middle ones: 1)  R1-1=6.30 e7  Rk-1=-0.000300  max|a_j/2^(j-1)-1| (j=2..k-1)=9.38 e-5  incr=1
+k= 7 M=1024        #good= 5 (middle ones: 1)  R1-1=1.21 e9  Rk-1=-0.116  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0425  incr=1
+k= 7 M=100000      #good= 5 (middle ones: 1)  R1-1=1.23 e11  Rk-1=-0.00126  max|a_j/2^(j-1)-1| (j=2..k-1)=0.000444  incr=1
+k= 9 M=4096        #good= 7 (middle ones: 1)  R1-1=1.57 e14  Rk-1=-0.117  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0443  incr=1
+k= 9 M=100000      #good= 7 (middle ones: 1)  R1-1=3.98 e15  Rk-1=-0.00509  max|a_j/2^(j-1)-1| (j=2..k-1)=0.00185  incr=1
+k=11 M=16384       #good= 9 (middle ones: 1)  R1-1=3.29 e20  Rk-1=-0.117  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0447  incr=1
+k=11 M=100000      #good= 9 (middle ones: 1)  R1-1=2.07 e21  Rk-1=-0.0203  max|a_j/2^(j-1)-1| (j=2..k-1)=0.00744  incr=1
+k=13 M=65536       #good=11 (middle ones: 1)  R1-1=1.10 e28  Rk-1=-0.117  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0449  incr=1
+k=13 M=100000      #good=11 (middle ones: 1)  R1-1=1.70 e28  Rk-1=-0.0786  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0296  incr=1
+k=15 M=262144      #good=13 (middle ones: 1)  R1-1=5.92 e36  Rk-1=-0.117  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0449  incr=1
+k=15 M=100000      #good=13 (middle ones: 1)  R1-1=2.13 e36  Rk-1=-0.279  max|a_j/2^(j-1)-1| (j=2..k-1)=0.115  incr=1
+k=15 M=1000000000  #good=13 (middle ones: 1)  R1-1=2.34 e40  Rk-1=-3.28 e-5  max|a_j/2^(j-1)-1| (j=2..k-1)=1.20 e-5  incr=1
+k=21 M=16777216    #good=19 (middle ones: 1)  R1-1=1.54 e70  Rk-1=-0.118  max|a_j/2^(j-1)-1| (j=2..k-1)=0.0449  incr=1
+k=21 M=100000       continuation FAILED at M=1.689 e6
+k=21 M=1000000000  #good=19 (middle ones: 1)  R1-1=9.50 e71  Rk-1=-0.00209  max|a_j/2^(j-1)-1| (j=2..k-1)=0.000767  incr=1
+
+real	0m25.843s
+user	0m25.516s
+sys	0m0.012s

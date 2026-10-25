@@ -1,0 +1,11 @@
+D rational square? False
+y1 in [2.6524270100764857360786664, 2.6524270100764857360786664], width 8.256e-83
+y3 in [0.0177044494228683971237537, 0.0177044494228683971237537], width 8.205e-82
+min poly sign change across y1 enclosure: True
+y1  y > 0 certified; v > 1/32: True ; certified lower bound of 8v - (sqrt y + 1/2)^2 = 0.310225650697
+y2  y > 0 certified; v > 1/32: True ; certified lower bound of 8v - (sqrt y + 1/2)^2 = 0.149990323100
+y3  y > 0 certified; v > 1/32: True ; certified lower bound of 8v - (sqrt y + 1/2)^2 = 0.095317482716
+y4  y > 0 certified; v > 1/32: True ; certified lower bound of 8v - (sqrt y + 1/2)^2 = 0.099835510000
+centre: 8 vc - 1/4 = 12.63592 True
+pair v distinct and != vc: True
+ALL DOMAIN INEQUALITIES CERTIFIED: True

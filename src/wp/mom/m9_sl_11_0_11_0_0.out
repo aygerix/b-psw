@@ -1,0 +1,15 @@
+start 0: fail 3.69e+02 (margin 1.7e-12, dmin 1.7e-10)
+start 1: fail 3.69e+02 (margin 6.5e-11, dmin 9.0e-11)
+start 2: fail 1.26e+02 (margin 1.2e-05, dmin 1.3e-07)
+start 3: fail 3.69e+02 (margin 5.3e-11, dmin 8.0e-11)
+start 4: fail 1.26e+02 (margin 1.2e-05, dmin 8.4e-09)
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar subtract
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:27: RuntimeWarning: overflow encountered in scalar multiply
+  c[n] = v * d[n - 3]
+~/chowla_venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:527: RuntimeWarning: overflow encountered in dot
+  cost_new = 0.5 * np.dot(f_new, f_new)
+start 5: fail 6.39e+04 (margin -5.6e-17, dmin 1.1e-16)
+start 6: fail 1.28e+02 (margin 7.0e-06, dmin 1.7e-07)

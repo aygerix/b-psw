@@ -1,0 +1,55 @@
+start 0: phase1 fail 1.96e+01
+start 1: phase1 fail 1.96e+01
+start 2: phase1 fail 1.96e+01
+start 3: phase1 fail 1.96e+01
+start 4: phase1 fail 1.96e+01
+start 5: phase1 fail 1.96e+01
+start 6: phase1 fail 1.96e+01
+start 7: phase1 fail 1.96e+01
+start 8: phase1 tau 0.01602 -> tau 0.01602 eqres 1.43e+05 OK
+start 9: phase1 fail 1.96e+01
+start 10: phase1 tau 0.00000 -> tau 0.00000 eqres 1.46e+07 OK
+start 11: phase1 tau 0.02373 -> tau 0.02373 eqres 1.11e+05 OK
+start 12: phase1 fail 1.96e+01
+~/chowla_venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:527: RuntimeWarning: overflow encountered in dot
+  cost_new = 0.5 * np.dot(f_new, f_new)
+start 13: phase1 fail 1.96e+01
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar subtract
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:27: RuntimeWarning: overflow encountered in scalar multiply
+  c[n] = v * d[n - 3]
+start 14: phase1 fail 1.96e+01
+start 15: phase1 fail 1.95e+04
+start 16: phase1 fail 1.96e+01
+start 17: phase1 fail 1.96e+01
+start 18: phase1 tau -0.00000 -> tau -0.00000 eqres 3.47e+06 
+start 19: phase1 fail 1.96e+01
+start 20: phase1 fail 1.96e+01
+start 21: phase1 fail 1.96e+01
+start 22: phase1 fail 4.01e+02
+start 23: phase1 fail 1.96e+01
+start 24: phase1 tau 0.00002 -> tau 0.00002 eqres 1.78e+07 OK
+start 25: phase1 fail 1.96e+01
+start 26: phase1 fail 1.96e+01
+start 27: phase1 fail 1.96e+01
+start 28: phase1 tau 0.00078 -> tau 0.00078 eqres 8.20e+05 OK
+start 29: phase1 fail 1.46e+03
+start 30: phase1 fail 1.96e+01
+start 31: phase1 fail 1.96e+01
+start 32: phase1 fail 1.95e+04
+start 33: phase1 fail 1.96e+01
+start 34: phase1 fail 1.96e+01
+start 35: phase1 fail 1.96e+01
+start 36: phase1 fail 1.96e+01
+start 37: phase1 tau 0.00848 -> tau 0.00848 eqres 2.81e+06 OK
+start 38: phase1 tau 0.00180 -> tau 0.00180 eqres 1.58e+01 OK
+start 39: phase1 fail 1.96e+01
+BEST tau = 0.02373207418812573
+x = array([ 0.127016539221435 ,  0.4246031648057035,  0.0824291443069672,  3.5794166786877852,  1.7727215240336756,  2.2664817840474747,  0.1475125608839511,  0.0966508990330672,  0.0817571425763338,  0.7897536340199973, -0.1648991429248274,
+        1.3295314928796587, -1.3376687694384872,  3.734419434668716 , -0.3403627962454356,  0.2958032270949565])
+u = array([ 0.5817571425763338,  1.2897536340199973,  0.3351008570751726,  1.8295314928796587, -0.8376687694384872,  4.234419434668716 ,  0.1596372037545644,  0.7958032270949564])
+v = array([0.127016539221435 , 0.4246031648057035, 0.0824291443069672, 3.5794166786877852, 1.7727215240336756, 2.2664817840474747, 0.1475125608839511, 0.0966508990330672])
+residuals = [-2.0008883439004421e-10  8.4401108324527740e-10 -6.3118932303041220e-10  2.3283064365386963e-10]
+margins sqrt(8v)-1/2-|w| = [0.4262767426534634 0.5532941999891008 0.1471557532833894 3.521667758643525  1.9282006112317192 0.0237320741881257 0.2459615048136952 0.0835187800585879]  min dist 0.18714525040713106

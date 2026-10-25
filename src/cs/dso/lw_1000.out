@@ -1,0 +1,2 @@
+p = 1093: ord_p(2) = 364, Selfridge D with |D| <= 1000: tested 498, skipped (p | D or p | Q) []; Lucas-Wieferich hits [D, z(p), (D/p)]: [(9, 364, 1, 'square D (never selected)')]
+p = 3511: ord_p(2) = 1755, Selfridge D with |D| <= 1000: tested 498, skipped (p | D or p | Q) []; Lucas-Wieferich hits [D, z(p), (D/p)]: [(9, 3510, 1, 'square D (never selected)')]

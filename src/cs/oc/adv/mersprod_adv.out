@@ -1,0 +1,6 @@
+Part A: 524268 subsets of the 19 exponents <= 4423, spsp(2) by criterion: 0 []  3.2s
+Part B: 2621060 subsets (size 2-5) of the 51 odd exponents, spsp(2) by criterion: 0 []  24.2s
+Part C pairs: 171 products, strong base-2 passes 0, BPSW 0  44.4s
+Part C triples q<=1279: 364 products, strong base-2 passes 0  45.8s
+43.10user 0.01system 0:45.91elapsed 93%CPU (0avgtext+0avgdata 11112maxresident)k
+0inputs+16outputs (0major+1475minor)pagefaults 0swaps

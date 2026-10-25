@@ -1,0 +1,94 @@
+reconstructing m9 points
+  X[1,2]: direct boundary residuals ['-2.85e-67', '4.4e-68', '-1.84e-67', '-2.28e-66']
+  X[1,3]: direct boundary residuals ['-4.19e-65', '1.37e-65', '-6.42e-66', '-1.84e-66']
+  X[1,4]: direct boundary residuals ['-1.69e-66', '3.75e-67', '-2.71e-66', '-1.65e-66']
+  X[2,3]: direct boundary residuals ['-7.97e-66', '1.38e-66', '6.32e-65', '-2.35e-65']
+  C90: Newton residual 6.87e-65, |x - printed centre| = 4.45e-39 (centre printed to 30 digits)
+  C81: Newton residual 1.72e-64, |x - printed centre| = 1.78e-38 (centre printed to 30 digits)
+  L90: level-2 Newton residual 2.53e-63, max |x - start| = 5.48e-9
+  L81: level-2 Newton residual 9.63e-64, max |x - start| = 3.96e-9
+
+== X[1,2]: 9 cubics + 0 lin, level 1; S = 3.17174, R(S) = 4.3346582, max v = 1.61074, domain margin min(8v - (|w|+1/2)^2, v - 1/32) = 0.02243
+   equalities (direct): E0 -2.34e-67, E1 -1.12e-66; odd parts -5.04e-68, 1.16e-66
+   moment forms vs direct: |E0m - E0| 2.34e-67, |E1m - E1| 1.12e-66, |PHIm - Phi| 1.02e-66
+   CS: P - S M12/2 = -5.09719  (ok)
+   PHI: Phi = -58.245356  (VIOLATED);  (e2(beta)+e2(gamma))/2^10 = 4.2801134, Phi - that = -62.5
+   N3L (all Bh, best Bh = Sb): Phi - 2^-10(Sb^2 - sum b^2 - sum om^2) = -62.5255  (VIOLATED)
+   N3U: 2^-10[Bbar Sb - sum b^2 + (Mtot-1) sum om^2] - Phi = 69.1208  (ok)
+   POS on xn t0 list: min Ve(t0) - 2^-8 t0^8 = -19.6958 at t0 = 3/5  (VIOLATED); #violated t0 = 14; fine grid [-12, 12] min -19.823 at t = 0.7
+   Re(-7/5) = -15.912862;  S-identity: Re(-7/5) - lam Phi - RHS = 1.33e-66;  Phi < Phimax: True;  RHS + lam Phimax = 27.5469
+   CERT R=[17/4, 35/8] S=[3.07031, 3.22070] rows ['CS', 'PHI']: Farkas identity lhs 119874.1916 rhs 119874.1916 (diff -2.14e-64); sum_members Psi = 113244.0 (>= 0 expected), -kappa = 6629.76;  violated used rows: [('PHI', '0', '58.245')]
+
+== X[1,3]: 9 cubics + 0 lin, level 1; S = 3.17174, R(S) = 4.3346582, max v = 1.61074, domain margin min(8v - (|w|+1/2)^2, v - 1/32) = 0.02243
+   equalities (direct): E0 -2.42e-65, E1 5.93e-66; odd parts -1.78e-65, 7.76e-66
+   moment forms vs direct: |E0m - E0| 2.42e-65, |E1m - E1| 5.93e-66, |PHIm - Phi| 2.54e-66
+   CS: P - S M12/2 = -5.09719  (ok)
+   PHI: Phi = -58.245356  (VIOLATED);  (e2(beta)+e2(gamma))/2^10 = 4.2799818, Phi - that = -62.5
+   N3L (all Bh, best Bh = Sb): Phi - 2^-10(Sb^2 - sum b^2 - sum om^2) = -62.5253  (VIOLATED)
+   N3U: 2^-10[Bbar Sb - sum b^2 + (Mtot-1) sum om^2] - Phi = 69.1219  (ok)
+   POS on xn t0 list: min Ve(t0) - 2^-8 t0^8 = -19.6958 at t0 = 3/5  (VIOLATED); #violated t0 = 14; fine grid [-12, 12] min -19.823 at t = 0.7
+   Re(-7/5) = -15.912862;  S-identity: Re(-7/5) - lam Phi - RHS = -1.66e-64;  Phi < Phimax: True;  RHS + lam Phimax = 27.5469
+   CERT R=[17/4, 35/8] S=[3.07031, 3.22070] rows ['CS', 'PHI']: Farkas identity lhs 119874.1922 rhs 119874.1922 (diff -3.11e-63); sum_members Psi = 113244.0 (>= 0 expected), -kappa = 6629.76;  violated used rows: [('PHI', '0', '58.245')]
+
+== X[1,4]: 9 cubics + 0 lin, level 1; S = 3.17174, R(S) = 4.3346582, max v = 1.61074, domain margin min(8v - (|w|+1/2)^2, v - 1/32) = 0.02243
+   equalities (direct): E0 -2.2e-66, E1 -6.38e-67; odd parts 5.07e-67, 1.01e-66
+   moment forms vs direct: |E0m - E0| 2.2e-66, |E1m - E1| 6.38e-67, |PHIm - Phi| 8.25e-67
+   CS: P - S M12/2 = -5.09719  (ok)
+   PHI: Phi = -58.245356  (VIOLATED);  (e2(beta)+e2(gamma))/2^10 = 4.2800117, Phi - that = -62.5
+   N3L (all Bh, best Bh = Sb): Phi - 2^-10(Sb^2 - sum b^2 - sum om^2) = -62.5254  (VIOLATED)
+   N3U: 2^-10[Bbar Sb - sum b^2 + (Mtot-1) sum om^2] - Phi = 69.1217  (ok)
+   POS on xn t0 list: min Ve(t0) - 2^-8 t0^8 = -19.6958 at t0 = 3/5  (VIOLATED); #violated t0 = 14; fine grid [-12, 12] min -19.823 at t = 0.7
+   Re(-7/5) = -15.912862;  S-identity: Re(-7/5) - lam Phi - RHS = -1.21e-65;  Phi < Phimax: True;  RHS + lam Phimax = 27.5469
+   CERT R=[17/4, 35/8] S=[3.07031, 3.22070] rows ['CS', 'PHI']: Farkas identity lhs 119874.1921 rhs 119874.1921 (diff -4.36e-64); sum_members Psi = 113244.0 (>= 0 expected), -kappa = 6629.76;  violated used rows: [('PHI', '0', '58.245')]
+
+== X[2,3]: 9 cubics + 0 lin, level 1; S = 3.17174, R(S) = 4.3346582, max v = 1.61074, domain margin min(8v - (|w|+1/2)^2, v - 1/32) = 0.01288
+   equalities (direct): E0 2.76e-65, E1 -1.11e-65; odd parts -3.56e-65, 1.25e-65
+   moment forms vs direct: |E0m - E0| 2.76e-65, |E1m - E1| 1.11e-65, |PHIm - Phi| 6.2e-66
+   CS: P - S M12/2 = -5.09719  (ok)
+   PHI: Phi = -58.245377  (VIOLATED);  (e2(beta)+e2(gamma))/2^10 = 4.2748549, Phi - that = -62.5
+   N3L (all Bh, best Bh = Sb): Phi - 2^-10(Sb^2 - sum b^2 - sum om^2) = -62.5202  (VIOLATED)
+   N3U: 2^-10[Bbar Sb - sum b^2 + (Mtot-1) sum om^2] - Phi = 69.1629  (ok)
+   POS on xn t0 list: min Ve(t0) - 2^-8 t0^8 = -19.6958 at t0 = 3/5  (VIOLATED); #violated t0 = 13; fine grid [-12, 12] min -19.823 at t = 0.7
+   Re(-7/5) = -15.912873;  S-identity: Re(-7/5) - lam Phi - RHS = 2.0e-64;  Phi < Phimax: True;  RHS + lam Phimax = 27.5469
+   CERT R=[17/4, 35/8] S=[3.07031, 3.22070] rows ['CS', 'PHI']: Farkas identity lhs 119874.234 rhs 119874.234 (diff 1.81e-63); sum_members Psi = 113244.0 (>= 0 expected), -kappa = 6629.76;  violated used rows: [('PHI', '0', '58.245')]
+
+== C90: 9 cubics + 0 lin, level 1; S = 3.17171870142, R(S) = 4.3346406, max v = 1.61074, domain margin min(8v - (|w|+1/2)^2, v - 1/32) = 0.02243
+   equalities (direct): E0 -3.69e-65, E1 1.23e-65; odd parts -3.18e-65, 9.08e-66
+   moment forms vs direct: |E0m - E0| 3.21e-66, |E1m - E1| 7.87e-68, |PHIm - Phi| 6.18e-67
+   CS: P - S M12/2 = -5.09712  (ok)
+   PHI: Phi = -58.244607  (VIOLATED);  (e2(beta)+e2(gamma))/2^10 = 4.2799112, Phi - that = -62.5
+   N3L (all Bh, best Bh = Sb): Phi - 2^-10(Sb^2 - sum b^2 - sum om^2) = -62.5245  (VIOLATED)
+   N3U: 2^-10[Bbar Sb - sum b^2 + (Mtot-1) sum om^2] - Phi = 69.1232  (ok)
+   POS on xn t0 list: min Ve(t0) - 2^-8 t0^8 = -19.6956 at t0 = 3/5  (VIOLATED); #violated t0 = 14; fine grid [-12, 12] min -19.8228 at t = 0.7
+   Re(-7/5) = -15.91232;  S-identity: Re(-7/5) - lam Phi - RHS = -2.61e-64;  Phi < Phimax: True;  RHS + lam Phimax = 27.547
+   CERT R=[17/4, 35/8] S=[3.07031, 3.22070] rows ['CS', 'PHI']: Farkas identity lhs 119872.6527 rhs 119872.6527 (diff -1.54e-64); sum_members Psi = 113244.0 (>= 0 expected), -kappa = 6628.37;  violated used rows: [('PHI', '0', '58.245')]
+
+== C81: 8 cubics + 1 lin, level 1; S = 8.49683229133, R(S) = 7.6378534, max v = 3.57942, domain margin min(8v - (|w|+1/2)^2, v - 1/32) = 0.05118
+   equalities (direct): E0 -8.66e-65, E1 1.86e-65; odd parts -8.57e-65, 1.79e-65
+   moment forms vs direct: |E0m - E0| 5.72e-65, |E1m - E1| 4.17e-66, |PHIm - Phi| 3.81e-66
+   CS: P - S M12/2 = -113.591  (ok)
+   PHI: Phi = -199.05713  (VIOLATED);  (e2(beta)+e2(gamma))/2^10 = 1.2150001, Phi - that = -200.0
+   N3L (all Bh, best Bh = Sb): Phi - 2^-10(Sb^2 - sum b^2 - sum om^2) = -200.266  (VIOLATED)
+   N3U: 2^-10[Bbar Sb - sum b^2 + (Mtot-1) sum om^2] - Phi = 204.528  (ok)
+   POS on xn t0 list: min Ve(t0) - 2^-8 t0^8 = -116.563 at t0 = -2  (VIOLATED); #violated t0 = 16; fine grid [-12, 12] min -118.381 at t = -2.05
+   Re(-7/5) = -131.4381;  S-identity: Re(-7/5) - lam Phi - RHS = -5.88e-64;  Phi < Phimax: True;  RHS + lam Phimax = -14.0754
+
+== L90: 9 cubics + 0 lin, level 2; S = 61.8610617183, R(S) = 21.701092, max v = 16.5833, domain margin min(8v - (|w|+1/2)^2, v - 1/32) = 0.1192
+   equalities (direct): E0 1.2e-63, E1 -2.02e-65; odd parts -1.33e-63, 4.05e-65
+   moment forms vs direct: |E0m - E0| 5.57e-64, |E1m - E1| 1.96e-65, |PHIm - Phi| 5.04e-65
+   CS: P - S M12/2 = -52013.3  (ok)
+   PHI: Phi = 0.55291786  (ok);  (e2(beta)+e2(gamma))/2^10 = 0.55291786, Phi - that = -4.91e-65
+   N3L (all Bh, best Bh = Sb): Phi - 2^-10(Sb^2 - sum b^2 - sum om^2) = 0.00698042  (ok)
+   N3U: 2^-10[Bbar Sb - sum b^2 + (Mtot-1) sum om^2] - Phi = 3.41716  (ok)
+   POS on xn t0 list: min Ve(t0) - 2^-8 t0^8 = -19409.5 at t0 = -18/5  (VIOLATED); #violated t0 = 15; fine grid [-12, 12] min -19647.9 at t = -3.69
+   Re(-7/5) = -521.24073;  S-identity: Re(-7/5) - lam Phi - RHS = 7.56e-63;  Phi < Phimax: True;  RHS + lam Phimax = -509.318
+
+== L81: 8 cubics + 1 lin, level 2; S = 50.3235177428, R(S) = 19.520943, max v = 13.036, domain margin min(8v - (|w|+1/2)^2, v - 1/32) = 1.218
+   equalities (direct): E0 4.6e-64, E1 -5.84e-65; odd parts -5.03e-64, 6.34e-65
+   moment forms vs direct: |E0m - E0| 1.72e-64, |E1m - E1| 3.23e-65, |PHIm - Phi| 3.93e-66
+   CS: P - S M12/2 = -25020.4  (ok)
+   PHI: Phi = 0.32297283  (ok);  (e2(beta)+e2(gamma))/2^10 = 0.32297283, Phi - that = -6.0e-66
+   N3L (all Bh, best Bh = Sb): Phi - 2^-10(Sb^2 - sum b^2 - sum om^2) = 0.010121  (ok)
+   N3U: 2^-10[Bbar Sb - sum b^2 + (Mtot-1) sum om^2] - Phi = 2.44027  (ok)
+   POS on xn t0 list: min Ve(t0) - 2^-8 t0^8 = -10792.2 at t0 = -17/5  (VIOLATED); #violated t0 = 15; fine grid [-12, 12] min -10973.3 at t = -3.5
+   Re(-7/5) = -366.08443;  S-identity: Re(-7/5) - lam Phi - RHS = 3.02e-63;  Phi < Phimax: True;  RHS + lam Phimax = -356.387

@@ -1,0 +1,15 @@
+== -7 2 1 4185 0 0 0
+lam 0.200000 DONE M_ub 0.800000 best 0.800000 N 1 bits 1.000 nodes 3997857 exact 1998929 pruned 0 time 931.26 sb 0 sbclosures 0 inc 0.000000
+rc 0
+== -7 1 2 4186 0 0 0
+lam 0.200000 DONE M_ub 1.083009 best 1.083007 N 2 bits 4.585 nodes 2945555 exact 380752 pruned 1092026 time 695.29 sb 0 sbclosures 0 inc 0.000000
+rc 0
+== -11 2 1 3229 0 0 0
+lam 0.200000 DONE M_ub 0.000000 best 0.000000 N 0 bits 0.000 nodes 5966523 exact 0 pruned 2983262 time 1283.42 sb 0 sbclosures 0 inc 0.000000
+rc 0
+== -11 2 0 3284 0 0 0
+lam 0.200000 DONE M_ub 1.511325 best 1.511325 N 0 bits 0.000 nodes 11441372 exact 0 pruned 0 time 2555.72 sb 0 sbclosures 0 inc 0 split 2
+rc 0
+== -15 2 0 6523 0 0 0
+lam 0.200000 DONE M_ub 8.568929 best 8.568929 N 0 bits 0.000 nodes 26260707 exact 0 pruned 0 time 5537.95 sb 0 sbclosures 0 inc 0 split 7
+rc 0

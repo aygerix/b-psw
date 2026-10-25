@@ -1,0 +1,5 @@
+max |Re p(w) - Re p(v)| = 6.857531070304873e-16
+max |a Re[w p(w) - v p(v)] - 3| = 6.128431095930864e-14
+random pairs: violations a_i>a_j & Q<=0: 4498 ;  a_i<a_j & Q>=0: 26353  (of 400000)
+adversarial up: min normalised value -inf at a_i=32 c_i=16 a_j=8 c_j=0  Q=-inf
+adversarial dn: min normalised value -1.95239e+16 at a_i=0.726739 c_i=-1.35167 a_j=0.726739 c_j=2.28272  Q=4.34

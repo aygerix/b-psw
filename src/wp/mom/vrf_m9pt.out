@@ -1,0 +1,10 @@
+D square? 0   numerator/denominator: 0 0  D*den^2 square? 0
+y2 = 8196769/10000000000  y4 = 1306449/100000000
+INDEPENDENT exact residuals [E1, E2, E1r, E2r] mod minimal polynomial of y1: [0, 0, 0, 0]
+y1 = 2.65242701007648590832061292793075419682  y3 = 0.0177044494228683964375601698534602630183
+numeric residuals (200 digits): [7.847083098423092972 E-213, -1.7437962440941473810 E-213, 7.847083098423986488 E-213, -1.7437962440944479508 E-213]
+full-family remainder R = (F-1) mod t prod g: max |coef| = 7061166895686.873710 (nonzero expected: only the 4 boundary eqs are claimed)
+margins 8v - (|w|+1/2)^2: [0.3102256506968615698, 0.3102256506968615698, 1499903231/10000000000, 1499903231/10000000000, 0.09531748271625968553, 0.09531748271625968553, 9983551/100000000, 9983551/100000000, 157949/12500]
+total degree in Y's: E1 2, E2 2, 70 Z0 + 9 Z1 = -2E1 - 9E2: 1
+derived y3(y1) - claimed y3(y1): 0
+derived quadratic degree 2; proportional to claimed minimal poly? 1

@@ -1,0 +1,85 @@
+1|1|2|2|2              n=13 M=14 sqsol=197 true=1 distinct=1 max_sum=5  [2, 3, 0, 0, 0]Px1
+1|1|2|2|3              n=13 M=14 sqsol=315 true=22 distinct=22 max_sum=5  [2, 2, 1, 0, 0]Px22
+1|1|2|23               n=12 M=13 sqsol=380 true=0 distinct=0 max_sum=None  
+1|1|2|3|4              n=13 M=14 sqsol=368 true=46 distinct=46 max_sum=6  [2, 1, 1, 1, 1]Px2 [2, 1, 1, 1, 0]Px44
+1|1|2|34               n=12 M=13 sqsol=433 true=107 distinct=105 max_sum=6  [2, 1, 1, 1, 1]Px1 [2, 1, 1, 1, 0]Px104
+1|1|234                n=11 M=12 sqsol=469 true=0 distinct=0 max_sum=None  
+1|12|2|2               n=12 M=13 sqsol=183 true=19 distinct=18 max_sum=5  [2, 3, 0, 0, 0]Px18
+1|12|2|3               n=12 M=13 sqsol=296 true=73 distinct=72 max_sum=5  [2, 2, 1, 0, 0]Px72
+1|12|23                n=11 M=12 sqsol=375 true=0 distinct=0 max_sum=None  
+1|12|3|3               n=12 M=13 sqsol=349 true=55 distinct=54 max_sum=5  [2, 1, 2, 0, 0]Px54
+1|12|3|4               n=12 M=13 sqsol=438 true=123 distinct=123 max_sum=6  [2, 1, 1, 1, 1]Px1 [2, 1, 1, 1, 0]Px122
+1|12|34                n=11 M=12 sqsol=588 true=228 distinct=221 max_sum=5  [2, 1, 1, 1, 0]Px221
+1|123|2                n=11 M=12 sqsol=329 true=0 distinct=0 max_sum=None  
+1|123|4                n=11 M=12 sqsol=611 true=0 distinct=0 max_sum=None  
+1|1234                 n=10 M=11 sqsol=724 true=0 distinct=0 max_sum=None  
+1|2|2|2|3              n=13 M=14 sqsol=104 true=5 distinct=5 max_sum=5  [1, 3, 1, 0, 0]Px5
+1|2|2|23               n=12 M=13 sqsol=129 true=0 distinct=0 max_sum=None  
+1|2|2|3|3              n=13 M=14 sqsol=109 true=4 distinct=4 max_sum=5  [1, 2, 2, 0, 0]Px4
+1|2|2|3|4              n=13 M=14 sqsol=102 true=4 distinct=4 max_sum=5  [1, 2, 1, 1, 0]Px4
+1|2|2|34               n=12 M=13 sqsol=133 true=20 distinct=20 max_sum=5  [1, 2, 1, 1, 0]Px20
+1|2|23|3               n=12 M=13 sqsol=153 true=0 distinct=0 max_sum=None  
+1|2|23|4               n=12 M=13 sqsol=154 true=0 distinct=0 max_sum=None  
+1|2|234                n=11 M=12 sqsol=115 true=0 distinct=0 max_sum=None  
+1|2|3|4|5              n=13 M=14 sqsol=19 true=4 distinct=4 max_sum=5  [1, 1, 1, 1, 1]Px4
+1|2|3|45               n=12 M=13 sqsol=16 true=5 distinct=5 max_sum=5  [1, 1, 1, 1, 1]Px5
+1|2|345                n=11 M=12 sqsol=6 true=1 distinct=1 max_sum=5  [1, 1, 1, 1, 1]Px1
+1|23|23                n=11 M=12 sqsol=563 true=0 distinct=0 max_sum=None  
+1|23|24                n=11 M=12 sqsol=123 true=0 distinct=0 max_sum=None  
+1|23|45                n=11 M=12 sqsol=33 true=0 distinct=0 max_sum=None  
+1|2345                 n=10 M=11 sqsol=1 true=0 distinct=0 max_sum=None  
+12|12|2                n=11 M=12 sqsol=0 true=0 distinct=0 max_sum=None  
+12|12|3                n=11 M=12 sqsol=0 true=0 distinct=0 max_sum=None  
+12|123                 n=10 M=11 sqsol=0 true=0 distinct=0 max_sum=None  
+12|13|2                n=11 M=12 sqsol=329 true=169 distinct=137 max_sum=5  [2, 2, 1, 0, 0]Px137
+12|13|4                n=11 M=12 sqsol=656 true=314 distinct=272 max_sum=5  [2, 1, 1, 1, 0]Px272
+12|134                 n=10 M=11 sqsol=720 true=318 distinct=168 max_sum=6  [2, 1, 1, 1, 1]Px6 [2, 1, 1, 1, 0]Px162
+12|2|2|3               n=12 M=13 sqsol=107 true=7 distinct=7 max_sum=5  [1, 3, 1, 0, 0]Px7
+12|2|23                n=11 M=12 sqsol=115 true=0 distinct=0 max_sum=None  
+12|2|3|3               n=12 M=13 sqsol=130 true=12 distinct=12 max_sum=5  [1, 2, 2, 0, 0]Px12
+12|2|3|4               n=12 M=13 sqsol=138 true=34 distinct=34 max_sum=5  [1, 2, 1, 1, 0]Px34
+12|2|34                n=11 M=12 sqsol=213 true=66 distinct=64 max_sum=5  [1, 2, 1, 1, 0]Px64
+12|23|3                n=11 M=12 sqsol=156 true=0 distinct=0 max_sum=None  
+12|23|4                n=11 M=12 sqsol=146 true=0 distinct=0 max_sum=None  
+12|234                 n=10 M=11 sqsol=140 true=0 distinct=0 max_sum=None  
+12|3|3|3               n=12 M=13 sqsol=100 true=6 distinct=6 max_sum=5  [1, 1, 3, 0, 0]Px6
+12|3|3|4               n=12 M=13 sqsol=126 true=26 distinct=26 max_sum=5  [1, 1, 2, 1, 0]Px26
+12|3|34                n=11 M=12 sqsol=160 true=45 distinct=44 max_sum=5  [1, 1, 2, 1, 0]Px44
+12|3|4|5               n=12 M=13 sqsol=18 true=9 distinct=9 max_sum=5  [1, 1, 1, 1, 1]Px9
+12|3|45                n=11 M=12 sqsol=26 true=19 distinct=19 max_sum=5  [1, 1, 1, 1, 1]Px19
+12|345                 n=10 M=11 sqsol=7 true=3 distinct=3 max_sum=5  [1, 1, 1, 1, 1]Px3
+123|2|2                n=11 M=12 sqsol=104 true=0 distinct=0 max_sum=None  
+123|2|3                n=11 M=12 sqsol=136 true=0 distinct=0 max_sum=None  
+123|2|4                n=11 M=12 sqsol=130 true=0 distinct=0 max_sum=None  
+123|23                 n=10 M=11 sqsol=676 true=0 distinct=0 max_sum=None  
+123|24                 n=10 M=11 sqsol=128 true=0 distinct=0 max_sum=None  
+123|4|4                n=11 M=12 sqsol=192 true=0 distinct=0 max_sum=None  
+123|4|5                n=11 M=12 sqsol=20 true=0 distinct=0 max_sum=None  
+123|45                 n=10 M=11 sqsol=21 true=0 distinct=0 max_sum=None  
+1234|2                 n=10 M=11 sqsol=179 true=0 distinct=0 max_sum=None  
+1234|5                 n=10 M=11 sqsol=6 true=0 distinct=0 max_sum=None  
+12345                  n=9 M=9 sqsol=286 true=0 distinct=0 max_sum=None  
+2|2|2|3|3              n=13 M=14 sqsol=88 true=0 distinct=0 max_sum=None  
+2|2|2|3|4              n=13 M=14 sqsol=86 true=3 distinct=3 max_sum=5  [0, 3, 1, 1, 0]Px3
+2|2|2|34               n=12 M=13 sqsol=77 true=2 distinct=2 max_sum=5  [0, 3, 1, 1, 0]Px2
+2|2|23|3               n=12 M=13 sqsol=115 true=0 distinct=0 max_sum=None  
+2|2|23|4               n=12 M=13 sqsol=100 true=0 distinct=0 max_sum=None  
+2|2|234                n=11 M=12 sqsol=98 true=0 distinct=0 max_sum=None  
+2|2|3|3|4              n=13 M=14 sqsol=78 true=0 distinct=0 max_sum=None  
+2|2|3|34               n=12 M=13 sqsol=70 true=8 distinct=8 max_sum=5  [0, 2, 2, 1, 0]Px8
+2|2|3|4|5              n=13 M=14 sqsol=85 true=6 distinct=6 max_sum=5  [0, 2, 1, 1, 1]Px6
+2|2|3|45               n=12 M=13 sqsol=103 true=9 distinct=9 max_sum=5  [0, 2, 1, 1, 1]Px9
+2|2|345                n=11 M=12 sqsol=88 true=13 distinct=12 max_sum=5  [0, 2, 1, 1, 1]Px12
+2|23|23                n=11 M=12 sqsol=428 true=0 distinct=0 max_sum=None  
+2|23|24                n=11 M=12 sqsol=93 true=0 distinct=0 max_sum=None  
+2|23|3|4               n=12 M=13 sqsol=100 true=0 distinct=0 max_sum=None  
+2|23|34                n=11 M=12 sqsol=94 true=0 distinct=0 max_sum=None  
+2|23|4|5               n=12 M=13 sqsol=115 true=0 distinct=0 max_sum=None  
+2|23|45                n=11 M=12 sqsol=141 true=0 distinct=0 max_sum=None  
+2|234|3                n=11 M=12 sqsol=89 true=0 distinct=0 max_sum=None  
+2|234|5                n=11 M=12 sqsol=119 true=0 distinct=0 max_sum=None  
+2|2345                 n=10 M=11 sqsol=162 true=0 distinct=0 max_sum=None  
+2|34|34                n=11 M=12 sqsol=46 true=0 distinct=0 max_sum=None  
+2|34|35                n=11 M=12 sqsol=98 true=39 distinct=39 max_sum=5  [0, 1, 2, 1, 1]Px39
+23|234                 n=10 M=11 sqsol=394 true=0 distinct=0 max_sum=None  
+23|245                 n=10 M=11 sqsol=137 true=0 distinct=0 max_sum=None  

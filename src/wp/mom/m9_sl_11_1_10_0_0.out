@@ -1,0 +1,4 @@
+start 0: fail 1.01e+02 (margin 1.8e-06, dmin 8.8e-09)
+start 1: fail 1.05e+02 (margin 1.4e-06, dmin 3.0e-08)
+start 2: fail 2.01e+02 (margin 0.0e+00, dmin 7.6e-16)
+start 3: fail 1.01e+02 (margin 6.2e-06, dmin 6.5e-08)

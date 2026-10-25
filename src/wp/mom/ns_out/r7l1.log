@@ -1,0 +1,4 @@
+AMIN = 0.01, DPOW = 2.0, RINF = 0.0^1.0, WREM = 0.0, WMODE = free
+[v3_k7_l1_real_mp_s14_sg0.001] 250/2000, 57s
+[v3_k7_l1_real_mp_s14_sg0.001] 500/2000, 112s
+[v3_k7_l1_real_mp_s14_sg0.001] 750/2000, 173s

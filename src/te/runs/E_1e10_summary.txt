@@ -1,0 +1,7 @@
+SUMMARY D=5 X=1e10 status=COMPLETE rc=0 passes=6/6 hits=0 hitlines=0
+SUMMARY D=-7 X=1e10 status=COMPLETE rc=0 passes=6/6 hits=0 hitlines=0
+SUMMARY D=-11 X=1e10 status=COMPLETE rc=0 passes=6/6 hits=0 hitlines=0
+SUMMARY D=13 X=1e10 status=COMPLETE rc=0 passes=15/15 hits=0 hitlines=0
+SUMMARY D=-15 X=1e10 status=COMPLETE rc=0 passes=8/8 hits=0 hitlines=0
+SUMMARY D=17 X=1e10 status=COMPLETE rc=0 passes=5/5 hits=0 hitlines=0
+SUMMARY D=-19 X=1e10 status=COMPLETE rc=0 passes=3/3 hits=0 hitlines=0

@@ -1,0 +1,4 @@
+04:45:07 start pcx7: env [NS_DPOW=4 NS_RINF=30 NS_RPOW=4 NS_WMODE=c] args [7 0 cx -+ 500 501 250 400 1 1e-3]
+04:48:45 done pcx7 (exit 0)
+04:48:45 start pcx9: env [NS_DPOW=4 NS_RINF=30 NS_RPOW=4 NS_WMODE=c] args [9 0 cx -+ 500 502 250 400 1 1e-3]
+04:57:06 done pcx9 (exit 0)

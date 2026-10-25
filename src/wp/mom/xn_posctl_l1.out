@@ -1,0 +1,7 @@
+N=2 solution 1: S = 2.973145; certificate kinds there: ['CS', 'PHI']  -> consistent
+N=2 solution 2: S = 3.021875; certificate kinds there: ['CS', 'PHI']  -> consistent
+N=2 solution 3: S = 6.285574; certificate kinds there: ['CS', 'PHI']  -> consistent
+N=2 solution 4: S = 9.090017; certificate kinds there: NONE (outside cover)  -> consistent
+N=2 solution 5: S = 4.671034; certificate kinds there: ['CS', 'PHI']  -> consistent
+N=2 solution 6: S = 3.015030; certificate kinds there: ['CS', 'PHI']  -> consistent
+lin=1: 6 boundary solutions checked

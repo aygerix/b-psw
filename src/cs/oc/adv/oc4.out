@@ -1,0 +1,26 @@
+small primes < 3000000 done 130.2s
+random 256-bit primes done 480.2s
+D=   5 inert  109477 OC3viol 0 | OC4 tested      0 bad 0 signdep 0 | L18 bad 0
+D=  -7 inert  109456 OC3viol 0 | OC4 tested  27611 bad 0 signdep 0 | L18 bad 0
+D= -11 inert  109539 OC3viol 0 | OC4 tested  27644 bad 0 signdep 0 | L18 bad 0
+D=  13 inert  109513 OC3viol 0 | OC4 tested  27671 bad 0 signdep 0 | L18 bad 0
+D= -15 inert  109499 OC3viol 0 | OC4 tested  55285 bad 0 signdep 0 | L18 bad 0
+D=  17 inert  109494 OC3viol 0 | OC4 tested      0 bad 0 signdep 0 | L18 bad 0
+D= -19 inert  109437 OC3viol 0 | OC4 tested  27653 bad 0 signdep 0 | L18 bad 0
+D= -23 inert  109463 OC3viol 0 | OC4 tested  27598 bad 0 signdep 0 | L18 bad 0
+D=  29 inert  109497 OC3viol 0 | OC4 tested  27722 bad 0 signdep 0 | L18 bad 0
+D= -31 inert  109502 OC3viol 0 | OC4 tested  27624 bad 0 signdep 0 | L18 bad 0
+D=  37 inert  109343 OC3viol 0 | OC4 tested      0 bad 0 signdep 0 | L18 bad 0
+D=  41 inert  109470 OC3viol 0 | OC4 tested  27611 bad 0 signdep 0 | L18 bad 0
+D= -43 inert  109423 OC3viol 0 | OC4 tested  27620 bad 0 signdep 0 | L18 bad 0
+D= -47 inert  109568 OC3viol 0 | OC4 tested  27583 bad 0 signdep 0 | L18 bad 0
+D=  53 inert  109539 OC3viol 0 | OC4 tested  27558 bad 0 signdep 0 | L18 bad 0
+D= -55 inert  109413 OC3viol 0 | OC4 tested  27650 bad 0 signdep 0 | L18 bad 0
+D= -59 inert  109409 OC3viol 0 | OC4 tested  27583 bad 0 signdep 0 | L18 bad 0
+D=  61 inert  109378 OC3viol 0 | OC4 tested  27562 bad 0 signdep 0 | L18 bad 0
+D= -67 inert  109513 OC3viol 0 | OC4 tested  27580 bad 0 signdep 0 | L18 bad 0
+D= -71 inert  109502 OC3viol 0 | OC4 tested  27679 bad 0 signdep 0 | L18 bad 0
+D=  73 inert  109507 OC3viol 0 | OC4 tested  27631 bad 0 signdep 0 | L18 bad 0
+TOTAL inert 2298942 OC3viol 0 OC4 tested 524865 OC4 bad 0 signdep 0 L18 bad 0
+326.16user 0.09system 8:00.85elapsed 67%CPU (0avgtext+0avgdata 59576maxresident)k
+0inputs+16outputs (0major+11827minor)pagefaults 0swaps

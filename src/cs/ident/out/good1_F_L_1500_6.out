@@ -1,0 +1,16 @@
+~/b-psw/src/cs/ident/good1.py:2: SyntaxWarning: invalid escape sequence '\ '
+  """src/cs/ident/good1.py -- count Korselt-type universal sets S having AT LEAST ONE good member
+form F d<= 1500 (others <= 3000) kmax 6; max |comp| = 319; d skipped (|comp|>45) = 529
+  k=3: sets with >=1 good member (gcd 1) = 310; of these Korselt-type (lcm | sum) = 0: []
+  k=4: sets with >=1 good member (gcd 1) = 1828; of these Korselt-type (lcm | sum) = 0: []
+  k=5: sets with >=1 good member (gcd 1) = 8222; of these Korselt-type (lcm | sum) = 0: []
+  k=6: sets with >=1 good member (gcd 1) = 36829; of these Korselt-type (lcm | sum) = 0: []
+~/b-psw/src/cs/ident/good1.py:2: SyntaxWarning: invalid escape sequence '\ '
+  """src/cs/ident/good1.py -- count Korselt-type universal sets S having AT LEAST ONE good member
+form L d<= 1500 (others <= 3000) kmax 6; max |comp| = 319; d skipped (|comp|>45) = 529
+  k=3: sets with >=1 good member (gcd 1) = 310; of these Korselt-type (lcm | sum) = 0: []
+  k=4: sets with >=1 good member (gcd 1) = 0; of these Korselt-type (lcm | sum) = 0: []
+  k=5: sets with >=1 good member (gcd 1) = 8222; of these Korselt-type (lcm | sum) = 0: []
+  k=6: sets with >=1 good member (gcd 1) = 0; of these Korselt-type (lcm | sum) = 0: []
+
+[exited with code 0]

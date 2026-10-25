@@ -1,0 +1,58 @@
+cert   1 lin=0 R=[0, 1/8] FAIL (0.0s) rows ['CS']: P column -9999999899/100000000 < 0
+cert   2 lin=0 R=[1/8, 1/4] FAIL (0.0s) rows ['CS']: P column -9999999899/100000000 < 0
+cert   3 lin=0 R=[1/4, 3/8] FAIL (0.0s) rows ['CS']: P column -9999999899/100000000 < 0
+cert   4 lin=0 R=[3/8, 1/2] FAIL (0.0s) rows ['CS']: P column -9999999899/100000000 < 0
+cert   5 lin=0 R=[1/2, 5/8] FAIL (0.0s) rows ['CS']: P column -1757687705574303/59246063398400 < 0
+cert   6 lin=0 R=[5/8, 3/4] FAIL (0.0s) rows ['CS']: P column -224300299326221/2437553531000 < 0
+cert   7 lin=0 R=[3/4, 7/8] FAIL (0.0s) rows ['CS']: P column -12720940050519/334131204985 < 0
+cert   8 lin=0 R=[7/8, 1] PASS (0.0s) rows ['CS']: pc 691, kappa max -1.635; S=0.4863: 1 boxes depth 0; S=0.5312: 3 boxes depth 1
+cert   9 lin=0 R=[1, 9/8] PASS (0.0s) rows ['CS']: pc 923, kappa max -1.959; S=0.5312: 1 boxes depth 0; S=0.5801: 7 boxes depth 3
+cert  10 lin=0 R=[9/8, 5/4] FAIL (0.0s) rows []: kappa max 302.90272143795636 >= 0
+cert  11 lin=0 R=[5/4, 11/8] FAIL (0.0s) rows []: kappa max 338.9604797363188 >= 0
+cert  12 lin=0 R=[11/8, 3/2] FAIL (0.0s) rows []: kappa max 359.26730537411976 >= 0
+cert  13 lin=0 R=[3/2, 13/8] FAIL (0.0s) rows []: kappa max 377.5156249999729 >= 0
+cert  14 lin=0 R=[13/8, 7/4] FAIL (0.0s) rows []: kappa max 393.01364326478836 >= 0
+cert  15 lin=0 R=[7/4, 15/8] FAIL (0.0s) rows []: kappa max 405.02493286132716 >= 0
+cert  16 lin=0 R=[15/8, 2] FAIL (0.0s) rows []: kappa max 412.76843452436424 >= 0
+cert  17 lin=0 R=[2, 17/8] FAIL (0.0s) rows []: kappa max 237.3937428590757 >= 0
+cert  18 lin=0 R=[17/8, 9/4] FAIL (0.0s) rows []: kappa max 0.021651107163050933 >= 0
+cert  19 lin=0 R=[9/4, 19/8] FAIL (0.0s) rows []: kappa max 67.6004769878679 >= 0
+cert  20 lin=0 R=[19/8, 5/2] FAIL (0.0s) rows ['CS', 'POS-19/5', 'POS3/5', 'POS4/5']: kappa max 383.8812580518873 >= 0
+cert  21 lin=0 R=[5/2, 21/8] FAIL (0.0s) rows ['CS', 'POS3/5', 'POS4/5']: kappa max 357.0078125000161 >= 0
+cert  22 lin=0 R=[21/8, 11/4] FAIL (0.0s) rows ['CS', 'POS1/5', 'POS3/5']: kappa max 320.24295234676555 >= 0
+cert  23 lin=0 R=[11/4, 23/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -761928510110327/41883714003200 < 0
+cert  24 lin=0 R=[23/8, 3] FAIL (0.0s) rows ['CS', 'PHI']: P column -6255509383723/337026410280 < 0
+cert  25 lin=0 R=[3, 25/8] FAIL (0.0s) rows ['CS', 'PHI']: positivity: S=1.7812: 5 boxes Q <= 0 at domain point W = 2.44141, v = 1.64258: -1.27e+03
+cert  26 lin=0 R=[25/8, 13/4] FAIL (0.0s) rows ['CS', 'PHI']: positivity: S=1.8926: 5 boxes Q <= 0 at domain point W = 2.64063, v = 1.75781: -807
+cert  27 lin=0 R=[13/4, 27/8] FAIL (0.0s) rows ['CS', 'PHI']: kappa max 5.64643946340537 >= 0
+cert  28 lin=0 R=[27/8, 7/2] FAIL (0.0s) rows ['CS', 'PHI']: kappa max 17.12173108674656 >= 0
+cert  29 lin=0 R=[7/2, 29/8] FAIL (0.0s) rows ['CS', 'PHI']: kappa max 26.401721841017093 >= 0
+cert  30 lin=0 R=[29/8, 15/4] FAIL (0.0s) rows ['CS', 'PHI']: P column -37501190430461/5556289785800 < 0
+cert  31 lin=0 R=[15/4, 31/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -5579314584773/970143412400 < 0
+cert  32 lin=0 R=[31/8, 4] FAIL (0.0s) rows ['CS', 'PHI']: kappa max 48.809198606072 >= 0
+cert  33 lin=0 R=[4, 33/8] FAIL (0.0s) rows ['CS', 'PHI']: kappa max 54.989889571041594 >= 0
+cert  34 lin=0 R=[33/8, 17/4] FAIL (0.0s) rows ['CS', 'PHI']: P column -364197464782099/83147336367900 < 0
+cert  35 lin=0 R=[17/4, 35/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -19402255434707/4823936711540 < 0
+cert  36 lin=0 R=[35/8, 9/2] FAIL (0.0s) rows ['CS', 'PHI']: P column -9757691021359/1149769889060 < 0
+cert  37 lin=0 R=[9/2, 37/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -103754830086037/30084915816100 < 0
+cert  38 lin=0 R=[37/8, 19/4] FAIL (0.0s) rows ['CS', 'PHI']: P column -53388929722323/15788542126600 < 0
+cert  39 lin=0 R=[19/4, 39/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -18468665982406/6138881265875 < 0
+cert  40 lin=0 R=[39/8, 5] FAIL (0.0s) rows ['CS', 'PHI']: P column -50055166441/1734704323200 < 0
+cert  41 lin=0 R=[5, 41/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -93377544188011/34131539063850 < 0
+cert  42 lin=0 R=[41/8, 21/4] FAIL (0.0s) rows ['CS', 'PHI']: P column -46492422586163/18522120325775 < 0
+cert  43 lin=0 R=[21/4, 43/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -2832004254731/1171898178000 < 0
+cert  44 lin=0 R=[43/8, 11/2] FAIL (0.0s) rows ['CS', 'PHI']: kappa max 128.45032028196323 >= 0
+cert  45 lin=0 R=[11/2, 45/8] FAIL (0.0s) rows ['CS', 'PHI']: kappa max 135.67388629100668 >= 0
+cert  46 lin=0 R=[45/8, 23/4] FAIL (0.0s) rows ['CS', 'PHI']: P column -58836408226121/27226517375100 < 0
+cert  47 lin=0 R=[23/4, 47/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -876885250919/16104691310200 < 0
+cert  48 lin=0 R=[47/8, 6] FAIL (0.0s) rows ['CS', 'PHI']: P column -2838805199511/1581839865724 < 0
+cert  49 lin=0 R=[6, 49/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -908446779707/13864188076600 < 0
+cert  50 lin=0 R=[49/8, 25/4] FAIL (0.0s) rows ['CS', 'PHI']: P column -696858200187/9677737952620 < 0
+cert  51 lin=0 R=[25/4, 51/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -46125466472371/33551116574900 < 0
+cert  52 lin=0 R=[51/8, 13/2] FAIL (0.0s) rows ['CS', 'PHI']: P column -31468495734939/21322909965100 < 0
+cert  53 lin=0 R=[13/2, 53/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -5948776517597/4466799765000 < 0
+cert  54 lin=0 R=[53/8, 27/4] FAIL (0.0s) rows ['CS', 'PHI']: P column -49784285997107/41323128035450 < 0
+cert  55 lin=0 R=[27/4, 55/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -29594584521407/27095097423100 < 0
+cert  56 lin=0 R=[55/8, 7] FAIL (0.0s) rows ['CS', 'PHI']: P column -26912157293/202517272470 < 0
+cert  57 lin=0 R=[7, 57/8] FAIL (0.0s) rows ['CS', 'PHI']: P column -6563121331093/44031774364200 < 0
+lin=0 certs 1..57: 55 failed

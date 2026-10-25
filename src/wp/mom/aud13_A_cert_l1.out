@@ -1,0 +1,53 @@
+cert   1 lin=1 R=[0, 1/8] PASS (0.0s) rows ['CS']: pc 1e-06, kappa max -1; S=0.2500: 1 boxes depth 0; S=0.2676: 1 boxes depth 0
+cert   2 lin=1 R=[1/8, 1/4] PASS (0.0s) rows ['CS']: pc 1e-06, kappa max -1; S=0.2676: 1 boxes depth 0; S=0.2891: 1 boxes depth 0
+cert   3 lin=1 R=[1/4, 3/8] PASS (0.0s) rows ['CS']: pc 1e-06, kappa max -1; S=0.2891: 1 boxes depth 0; S=0.3145: 1 boxes depth 0
+cert   4 lin=1 R=[3/8, 1/2] PASS (0.0s) rows ['CS']: pc 1e-06, kappa max -1; S=0.3145: 1 boxes depth 0; S=0.3438: 1 boxes depth 0
+cert   5 lin=1 R=[1/2, 5/8] PASS (0.2s) rows ['CS']: pc 1e-06, kappa max -1; S=0.3438: 13 boxes depth 6; S=0.3770: 13 boxes depth 6
+cert   6 lin=1 R=[5/8, 3/4] PASS (0.0s) rows ['CS']: pc 1e-06, kappa max -1; S=0.3770: 1 boxes depth 0; S=0.4141: 1 boxes depth 0
+cert   7 lin=1 R=[3/4, 7/8] PASS (0.0s) rows ['CS']: pc 1.08e+03, kappa max -1; S=0.4141: 1 boxes depth 0; S=0.4551: 3 boxes depth 1
+cert   8 lin=1 R=[7/8, 1] PASS (0.0s) rows []: pc 9.84e+03, kappa max -1; S=0.4551: 1 boxes depth 0; S=0.5000: 1 boxes depth 0
+cert   9 lin=1 R=[1, 9/8] PASS (0.0s) rows []: pc 1e+04, kappa max -1; S=0.5000: 3 boxes depth 1; S=0.5488: 3 boxes depth 1
+cert  10 lin=1 R=[9/8, 5/4] PASS (0.0s) rows []: pc 1e+04, kappa max -1; S=0.5488: 3 boxes depth 1; S=0.6016: 3 boxes depth 1
+cert  11 lin=1 R=[5/4, 11/8] PASS (0.0s) rows []: pc 1e+04, kappa max -1; S=0.6016: 3 boxes depth 1; S=0.6582: 3 boxes depth 1
+cert  12 lin=1 R=[11/8, 3/2] PASS (0.1s) rows []: pc 1e+04, kappa max -1; S=0.6582: 7 boxes depth 2; S=0.7188: 7 boxes depth 2
+cert  13 lin=1 R=[3/2, 13/8] PASS (0.1s) rows []: pc 1e+04, kappa max -1; S=0.7188: 9 boxes depth 3; S=0.7832: 9 boxes depth 3
+cert  14 lin=1 R=[13/8, 7/4] PASS (0.7s) rows []: pc 1e+04, kappa max -1; S=0.7832: 79 boxes depth 8; S=0.8516: 73 boxes depth 7
+cert  15 lin=1 R=[7/4, 15/8] PASS (1.4s) rows []: pc 1e+04, kappa max -1; S=0.8516: 251 boxes depth 16; S=0.9238: 117 boxes depth 10
+cert  16 lin=1 R=[15/8, 2] PASS (1.4s) rows []: pc 1e+04, kappa max -1; S=0.9238: 211 boxes depth 16; S=1.0000: 95 boxes depth 9
+cert  17 lin=1 R=[2, 17/8] PASS (0.6s) rows []: pc 43.7, kappa max -1; S=1.0000: 65 boxes depth 8; S=1.0801: 55 boxes depth 7
+cert  18 lin=1 R=[17/8, 9/4] PASS (0.0s) rows ['CS', 'POS0', 'POS3/5']: pc 1e-06, kappa max -1; S=1.0801: 3 boxes depth 1; S=1.1641: 3 boxes depth 1
+cert  19 lin=1 R=[9/4, 19/8] PASS (0.6s) rows ['CS', 'POS3/5']: pc 1e-06, kappa max -1; S=1.1641: 47 boxes depth 8; S=1.2520: 55 boxes depth 9
+cert  20 lin=1 R=[19/8, 5/2] PASS (0.1s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=1.2520: 9 boxes depth 4; S=1.3438: 7 boxes depth 2
+cert  21 lin=1 R=[5/2, 21/8] PASS (0.5s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=1.3438: 35 boxes depth 7; S=1.4395: 65 boxes depth 12
+cert  22 lin=1 R=[21/8, 11/4] PASS (0.0s) rows ['CS', 'PHI']: pc 4.75e+03, kappa max -1; S=1.4395: 1 boxes depth 0; S=1.5391: 5 boxes depth 2
+cert  23 lin=1 R=[11/4, 23/8] PASS (0.0s) rows ['CS', 'PHI']: pc 4.37e+03, kappa max -1; S=1.5391: 1 boxes depth 0; S=1.6426: 5 boxes depth 2
+cert  24 lin=1 R=[23/8, 3] PASS (0.2s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=1.6426: 13 boxes depth 6; S=1.7500: 23 boxes depth 11
+cert  25 lin=1 R=[3, 25/8] PASS (0.1s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=1.7500: 19 boxes depth 9; S=1.8613: 7 boxes depth 3
+cert  26 lin=1 R=[25/8, 13/4] PASS (0.0s) rows ['CS', 'PHI']: pc 2.74e+03, kappa max -1; S=1.8613: 1 boxes depth 0; S=1.9766: 5 boxes depth 2
+cert  27 lin=1 R=[13/4, 27/8] PASS (0.1s) rows ['CS', 'PHI']: pc 1.99e+03, kappa max -1; S=1.9766: 15 boxes depth 7; S=2.0957: 7 boxes depth 3
+cert  28 lin=1 R=[27/8, 7/2] PASS (0.1s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=2.0957: 11 boxes depth 5; S=2.2188: 19 boxes depth 9
+cert  29 lin=1 R=[7/2, 29/8] PASS (0.1s) rows ['CS', 'PHI']: pc 1.41e+03, kappa max -1; S=2.2188: 11 boxes depth 5; S=2.3457: 7 boxes depth 3
+cert  30 lin=1 R=[29/8, 15/4] PASS (0.1s) rows ['CS', 'PHI']: pc 1.18e+03, kappa max -1; S=2.3457: 11 boxes depth 5; S=2.4766: 7 boxes depth 3
+cert  31 lin=1 R=[15/4, 31/8] PASS (0.1s) rows ['CS', 'PHI']: pc 1.01e+03, kappa max -1; S=2.4766: 11 boxes depth 5; S=2.6113: 7 boxes depth 3
+cert  32 lin=1 R=[31/8, 4] PASS (0.1s) rows ['CS', 'PHI']: pc 824, kappa max -1; S=2.6113: 11 boxes depth 5; S=2.7500: 7 boxes depth 3
+cert  33 lin=1 R=[4, 33/8] PASS (0.1s) rows ['CS', 'PHI']: pc 674, kappa max -1; S=2.7500: 11 boxes depth 5; S=2.8926: 7 boxes depth 3
+cert  34 lin=1 R=[33/8, 17/4] PASS (0.1s) rows ['CS', 'PHI']: pc 545, kappa max -1; S=2.8926: 11 boxes depth 5; S=3.0391: 7 boxes depth 3
+cert  35 lin=1 R=[17/4, 35/8] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -6.762e+04; S=3.0391: 1 boxes depth 0; S=3.1895: 3 boxes depth 1
+cert  36 lin=1 R=[35/8, 9/2] PASS (0.0s) rows ['CS', 'PHI']: pc 457, kappa max -1; S=3.1895: 1 boxes depth 0; S=3.3438: 1 boxes depth 0
+cert  37 lin=1 R=[9/2, 37/8] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=3.3438: 1 boxes depth 0; S=3.5020: 1 boxes depth 0
+cert  38 lin=1 R=[37/8, 19/4] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=3.5020: 1 boxes depth 0; S=3.6641: 1 boxes depth 0
+cert  39 lin=1 R=[19/4, 39/8] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=3.6641: 1 boxes depth 0; S=3.8301: 1 boxes depth 0
+cert  40 lin=1 R=[39/8, 5] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=3.8301: 1 boxes depth 0; S=4.0000: 1 boxes depth 0
+cert  41 lin=1 R=[5, 41/8] PASS (0.1s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=4.0000: 15 boxes depth 7; S=4.1738: 11 boxes depth 5
+cert  42 lin=1 R=[41/8, 21/4] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=4.1738: 1 boxes depth 0; S=4.3516: 1 boxes depth 0
+cert  43 lin=1 R=[21/4, 43/8] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=4.3516: 1 boxes depth 0; S=4.5332: 1 boxes depth 0
+cert  44 lin=1 R=[43/8, 11/2] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=4.5332: 1 boxes depth 0; S=4.7188: 1 boxes depth 0
+cert  45 lin=1 R=[11/2, 45/8] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=4.7188: 1 boxes depth 0; S=4.9082: 1 boxes depth 0
+cert  46 lin=1 R=[45/8, 23/4] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=4.9082: 1 boxes depth 0; S=5.1016: 1 boxes depth 0
+cert  47 lin=1 R=[23/4, 47/8] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=5.1016: 1 boxes depth 0; S=5.2988: 1 boxes depth 0
+cert  48 lin=1 R=[47/8, 6] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=5.2988: 1 boxes depth 0; S=5.5000: 1 boxes depth 0
+cert  49 lin=1 R=[6, 49/8] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=5.5000: 1 boxes depth 0; S=5.7051: 1 boxes depth 0
+cert  50 lin=1 R=[49/8, 25/4] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=5.7051: 1 boxes depth 0; S=5.9141: 1 boxes depth 0
+cert  51 lin=1 R=[25/4, 51/8] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=5.9141: 1 boxes depth 0; S=6.1270: 1 boxes depth 0
+cert  52 lin=1 R=[51/8, 13/2] PASS (0.0s) rows ['CS', 'PHI']: pc 1e-06, kappa max -1; S=6.1270: 1 boxes depth 0; S=6.3438: 1 boxes depth 0
+lin=1 certs 1..52: 0 failed

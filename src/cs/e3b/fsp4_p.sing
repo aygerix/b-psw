@@ -1,0 +1,31 @@
+// src/cs/e3b/fsp4.sing -- E3b: FSP locus in (u_i, beta_i) coordinates (lower degree).  u_i = (t - r_i)/t,
+// beta_j = f_1(r_j);  Korselt_j <=> C_j(beta_j; u) = 0 with
+//   C_j = [beta prod_{i != j} (beta u_i - (beta - 1) u_j) - prod_{i != j} u_i] / (beta - 1)   (cubic in beta, homogeneous deg 3 in u)
+// and T = t^2 is the same for every j:  T = (beta_j + 1) / (beta_j - 1 + 2 (1 - u_j)^2).
+// Extra condition L1 (f_1 full): prod (4 - u_i) = prod u_i.
+LIB "elim.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+proc SATL(ideal I, list fs) { int i; ideal J = I; for (i = 1; i <= size(fs); i++) { J = SAT(J, fs[i]); } return(J); }
+system("--ticks-per-sec", 1000);
+ring R = 32003, (b2, b3, b4, b5, u2, u3, u4, u5), dp;
+list uu = list(0, u2, u3, u4, u5); list bb = list(0, b2, b3, b4, b5);
+int i; int j; ideal I;
+for (j = 2; j <= 5; j++) {
+  poly pn = bb[j]; poly pu = 1;
+  for (i = 2; i <= 5; i++) { if (i != j) { pn = pn*(bb[j]*uu[i] - (bb[j] - 1)*uu[j]); pu = pu*uu[i]; } }
+  list dv = division(pn - pu, bb[j] - 1); if (dv[2][1] != 0) { "ERROR"; }
+  I[size(I) + 1] = dv[1][1,1]; kill pn; kill pu; kill dv;
+}
+proc den(int j) { return(bb[j] - 1 + 2*(1 - uu[j])^2); }
+for (j = 3; j <= 5; j++) { I[size(I) + 1] = (b2 + 1)*den(j) - (bb[j] + 1)*den(2); }
+"equations: "; for (i = 1; i <= size(I); i++) { "  ", i, ": terms ", size(I[i]), " deg ", deg(I[i]); }
+list fs = list(u2, u3, u4, u5, u2 - u3, u2 - u4, u2 - u5, u3 - u4, u3 - u5, u4 - u5, den(2), b2 + 1);
+int t0 = rtimer;
+ideal G0 = std(I);
+"std (no saturation): dim ", dim(G0), " time ms ", rtimer - t0;
+ideal FS = SATL(I, fs); ideal G = std(FS);
+"FSP locus saturated: dim ", dim(G), " degree ", mult(G), " time ms ", rtimer - t0;
+poly L1 = (4 - u2)*(4 - u3)*(4 - u4)*(4 - u5) - u2*u3*u4*u5;
+ideal J1 = SATL(FS + L1, fs); ideal G1 = std(J1);
+"FSP + f1 full: dim ", dim(G1), " vdim ", vdim(G1), " time ms ", rtimer - t0;
+quit;

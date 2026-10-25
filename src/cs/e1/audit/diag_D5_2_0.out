@@ -1,0 +1,8 @@
+lam 0.300000 DONE M_ub 0.000000 best 0.000000 N 0 bits 0.000 nodes 16005 exact 0 pruned 8003 time 6.51 sb 0 sbclosures 0
+  DIAG branching nodes 8002, with deletable primes 8002, total deletable 373835
+  hull primes:
+  primal frontier (b:N): 20:0 40:0 60:0 80:0 100:0 120:0 140:0 160:0 180:0 200:0 220:0 240:0 260:0 280:34 300:43 320:50 340:52 360:55 380:55 400:55 420:55 440:55 460:55 480:55 500:55 520:55 540:55 560:55 580:55 600:55 214:0 275:30
+lam 0.250000 DONE M_ub 0.103761 best 0.103759 N 1 bits 3.585 nodes 70647 exact 10306 pruned 25018 time 23.53 sb 0 sbclosures 0
+  DIAG branching nodes 35323, with deletable primes 35323, total deletable 1175995
+  hull primes: 13
+  primal frontier (b:N): 20:1 40:1 60:1 80:1 100:1 120:1 140:1 160:1 180:1 200:1 220:1 240:1 260:1 280:37 300:45 320:51 340:53 360:56 380:57 400:57 420:57 440:57 460:57 480:57 500:57 520:57 540:57 560:57 580:57 600:57 214:1 275:35

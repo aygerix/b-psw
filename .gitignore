@@ -14,3 +14,32 @@ src/us/usplit2
 src/us/usplit3
 # 97 MB CHM export for y = 150 (regenerate with src/c3/export.py); too large for the repo
 src/c3/ex150.txt
+
+# compiled C tools from session 9 (rebuild from the .c sources)
+src/cs/audit_l3/davenport3
+src/cs/dso/audit/aud_census
+src/cs/dso/audit/aud_heur_mixed
+src/cs/dso/audit/aud_search
+src/cs/dso/audit/aud_taskf
+src/cs/dso/audit/dso_heur_rebuilt
+src/cs/dso/dso_direct
+src/cs/dso/dso_heur
+src/cs/e1/audit/bbc_audit
+src/cs/e1/audit/bbc_diag
+src/cs/e1/audit/bbc_nodel
+src/cs/e1/bbc
+src/cs/e1/bbc2
+src/cs/e1/bbc3
+src/cs/e1/census3
+src/cs/fx/bbc_fx
+src/cs/fx/bbc_lg
+src/cs/fxchk/bb2
+src/cs/fxchk/ruleschk
+src/cs/fxchk/selchk
+src/cs/fxchk/slpsp
+src/cs/sel/census
+src/cs/sel/census2
+src/cs/sel/onesided
+src/cs/smallexp/enum
+src/cs/smallexp/sunit_pairs
+src/cs/smallexp/sunit_stream

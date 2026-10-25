@@ -1,0 +1,23 @@
+M107 p=162259276829213363391578010288127 bits=107 (5/p)=-1 p%8=7
+   ord2=107  z=2^107  class=(0,107)  max odd prime: ord2 107, z 1
+   p-1=2*3*107*6361*69431*20394401*28059810762433   p+1=2^107
+   bpsw_pass(p) = True
+M127 p=170141183460469231731687303715884105727 bits=127 (5/p)=-1 p%8=7
+   ord2=127  z=2^127  class=(0,127)  max odd prime: ord2 127, z 1
+   p-1=2*3^3*7^2*19*43*73*127*337*5419*92737*649657*77158673929   p+1=2^127
+   bpsw_pass(p) = True
+LF167 p=18104700793 bits=35 (5/p)=-1 p%8=1
+   ord2=2*23*163*311*647  z=167  class=(1,0)  max odd prime: ord2 647, z 167
+   p-1=2^3*3*23*163*311*647   p+1=2*139*167*271*1439
+   bpsw_pass(p) = True
+LF1596 p=486077598803 bits=39 (5/p)=-1 p%8=3
+   ord2=2*31*97*223*293*1237  z=2^2*3*7*19  class=(1,2)  max odd prime: ord2 1237, z 19
+   p-1=2*31*97*223*293*1237   p+1=2^2*3*7^2*19*43508557
+   bpsw_pass(p) = True
+mod-4 rule check for 486077598803
+   odd ord2 primes and residues mod 4: [(31, 3), (97, 1), (223, 3), (293, 1), (1237, 1)]
+   odd z primes and residues mod 4:    [(3, 3), (7, 3), (19, 3)]
+bpsw_pass(M107*M127) = False
+bpsw_pass(18104700793*486077598803) = False
+q=107: F_{2^q} == 0 mod M_q: True ; F_{2^(q-1)} == 0 mod M_q: False
+q=127: F_{2^q} == 0 mod M_q: True ; F_{2^(q-1)} == 0 mod M_q: False

@@ -1,0 +1,50 @@
+// ** redefining blowup0 (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining blowup0 (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining elimRing (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining elimRing (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining elim (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining elim (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining elim2 (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining elim2 (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining elim1 (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining elim1 (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining nselect (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining nselect (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining sat (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining sat (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining sat_with_exp (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining sat_with_exp (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining select (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining select (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining select1 (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+// ** redefining select1 (LIB "primdec.lib"; LIB "elim.lib";) e3_full.sing:7
+member 1 Lucas-full (f_j + 1 | F + 1) : dim =  1   (time  0 )
+   comp  1 : dim  1 , vdim  -1 :
+      c*r3^2-2
+      -c*r3+2*r3^2+2*q
+   comp  2 : dim  1 , vdim  -1 :
+      c^2*r3^2+2*c-2*r3
+      c*r3^2+2*q*r3+4
+      -c^2*r3+2*q*c+4
+member 2 Lucas-full (f_j + 1 | F + 1) : dim =  -1   (time  0 )
+member 3 Lucas-full (f_j + 1 | F + 1) : dim =  -1   (time  0 )
+member  2  gcd degree >= 2: eliminated in  0  s
+member 2 gcd degree >= 2 : dim =  1   (time  0 )
+   comp  1 : dim  1 , vdim  -1 :
+      c*r3^2-1
+      -1/2*c*r3+3/2*r3^2+q
+// ** redefining t0 (  int t0 = timer;) e3_full.sing:77
+member  3  gcd degree >= 2: eliminated in  42  s
+member 3 gcd degree >= 2 : dim =  1   (time  0 )
+   comp  1 : dim  1 , vdim  -1 :
+      c*r3^2-1
+      -2*c*r3+2*r3^2+q
+f1 full AND f2 gcd >= 2 : dim =  -1   (time  0 )
+f1 full AND f3 gcd >= 2 : dim =  -1   (time  0 )
+f2 gcd >= 2 AND f3 gcd >= 2 : dim =  0   (time  0 )
+   comp  1 : dim  0 , vdim  3 :
+      r3^3-3
+      c-1/3*r3
+      4/3*r3^2+q
+total time  42
+rc=0

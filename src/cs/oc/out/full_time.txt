@@ -1,0 +1,9 @@
+mer 6.93 s
+wag 23.19 s
+fib 3.88 s
+luc 4.44 s
+gm 10.44 s
+cyc 2.86 s
+rie 7.51 s
+pro 8.37 s
+DONE

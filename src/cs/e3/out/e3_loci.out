@@ -1,0 +1,12 @@
+STAGE 1, member  1  good: time(s) =  0
+   factor:  21  terms, total deg  12 , deg(q,c,r3) =  3 4 6 , mult  1
+STAGE 1, member  2  good: time(s) =  0
+   factor:  14  terms, total deg  10 , deg(q,c,r3) =  2 3 6 , mult  1
+STAGE 1, member  3  good: time(s) =  0
+   factor:  13  terms, total deg  9 , deg(q,c,r3) =  2 3 5 , mult  1
+STAGE 2, members  1 , 2  good: elimination time(s) =  81
+   eliminated : dim in (q,c,r3)-space =  1 , ngens =  27
+
+halt 1
+rc=1
+KILLED by owner at 06:15 UTC after ~13 min in stage-2 minAssGTZ (replaced by resultant chain e3_res.sing)

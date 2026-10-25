@@ -1,0 +1,6 @@
+my run 0: 354 distinct
+my run 1: 456 distinct
+E3b union: 317 distinct
+runs 0,1: common 330, Lincoln-Petersen 489
+my union 480 vs E3b union 317: common 216, Lincoln-Petersen 704
+union 581; union closed under conjugation 636 (real 49)

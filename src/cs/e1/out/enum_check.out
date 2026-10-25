@@ -1,0 +1,72 @@
+## inst37/inst_D-15_2_0.txt
+lam 0.300000 DONE M_ub 0.000000 best 0.000000 N 0 bits 0.000 nodes
+lam 0.250000 DONE M_ub 0.103761 best 0.103759 N 1 bits 3.585 nodes
+lam 0.200000 DONE M_ub 0.283009 best 0.283007 N 1 bits 3.585 nodes
+lam 0.150000 DONE M_ub 0.599024 best 0.599022 N 2 bits 9.340 nodes
+lam 0.100000 DONE M_ub 1.701260 best 1.701254 N 5 bits 32.987 nodes
+lam 0.300000 ENUM M = 0.000000 at (bits 0.000, N 0)
+lam 0.250000 ENUM M = 0.103759 at (bits 3.585, N 1)
+lam 0.200000 ENUM M = 0.283007 at (bits 3.585, N 1)
+lam 0.150000 ENUM M = 0.599022 at (bits 9.340, N 2)
+lam 0.100000 ENUM M = 1.701254 at (bits 32.987, N 5)
+non-integral LP vertices: 0
+## inst37/inst_D-7_2_1.txt
+lam 0.300000 DONE M_ub 0.700001 best 0.700000 N 1 bits 1.000 nodes
+lam 0.250000 DONE M_ub 0.750001 best 0.750000 N 1 bits 1.000 nodes
+lam 0.200000 DONE M_ub 0.800000 best 0.800000 N 1 bits 1.000 nodes
+lam 0.150000 DONE M_ub 0.989215 best 0.989211 N 5 bits 26.739 nodes
+lam 0.100000 DONE M_ub 2.333292 best 2.333284 N 7 bits 46.667 nodes
+lam 0.300000 ENUM M = 0.700000 at (bits 1.000, N 1)
+lam 0.250000 ENUM M = 0.750000 at (bits 1.000, N 1)
+lam 0.200000 ENUM M = 0.800000 at (bits 1.000, N 1)
+lam 0.150000 ENUM M = 0.989211 at (bits 26.739, N 5)
+lam 0.100000 ENUM M = 2.333284 at (bits 46.667, N 7)
+non-integral LP vertices: 0
+## inst43/inst_D-15_2_0.txt
+lam 0.300000 DONE M_ub 0.000000 best 0.000000 N 0 bits 0.000 nodes
+lam 0.250000 DONE M_ub 0.103761 best 0.103759 N 1 bits 3.585 nodes
+lam 0.200000 DONE M_ub 0.283009 best 0.283007 N 1 bits 3.585 nodes
+lam 0.150000 DONE M_ub 0.599024 best 0.599022 N 2 bits 9.340 nodes
+lam 0.100000 DONE M_ub 1.701260 best 1.701254 N 5 bits 32.987 nodes
+lam 0.300000 ENUM M = 0.000000 at (bits 0.000, N 0)
+lam 0.250000 ENUM M = 0.103759 at (bits 3.585, N 1)
+lam 0.200000 ENUM M = 0.283007 at (bits 3.585, N 1)
+lam 0.150000 ENUM M = 0.599022 at (bits 9.340, N 2)
+lam 0.100000 ENUM M = 1.701254 at (bits 32.987, N 5)
+non-integral LP vertices: 0
+## inst43/inst_D-7_1_2.txt
+lam 0.300000 DONE M_ub 1.000000 best 1.000000 N 1 bits 0.000 nodes
+lam 0.250000 DONE M_ub 1.000000 best 1.000000 N 1 bits 0.000 nodes
+lam 0.200000 DONE M_ub 1.083009 best 1.083007 N 2 bits 4.585 nodes
+lam 0.150000 DONE M_ub 1.312257 best 1.312256 N 2 bits 4.585 nodes
+lam 0.100000 DONE M_ub 2.265644 best 2.265640 N 5 bits 27.344 nodes
+lam 0.300000 ENUM M = 1.000000 at (bits 0.000, N 1)
+lam 0.250000 ENUM M = 1.000000 at (bits 0.000, N 1)
+lam 0.200000 ENUM M = 1.083007 at (bits 4.585, N 2)
+lam 0.150000 ENUM M = 1.312256 at (bits 4.585, N 2)
+lam 0.100000 ENUM M = 2.265640 at (bits 27.344, N 5)
+non-integral LP vertices: 0
+## inst43/inst_D17_2_0.txt
+lam 0.300000 DONE M_ub 0.700001 best 0.700000 N 1 bits 1.000 nodes
+lam 0.250000 DONE M_ub 0.750001 best 0.750000 N 1 bits 1.000 nodes
+lam 0.200000 DONE M_ub 1.049025 best 1.049022 N 3 bits 9.755 nodes
+lam 0.150000 DONE M_ub 1.536769 best 1.536767 N 3 bits 9.755 nodes
+lam 0.100000 DONE M_ub 2.418359 best 2.418351 N 7 bits 45.816 nodes
+lam 0.300000 ENUM M = 0.700000 at (bits 1.000, N 1)
+lam 0.250000 ENUM M = 0.750000 at (bits 1.000, N 1)
+lam 0.200000 ENUM M = 1.049022 at (bits 9.755, N 3)
+lam 0.150000 ENUM M = 1.536767 at (bits 9.755, N 3)
+lam 0.100000 ENUM M = 2.418351 at (bits 45.816, N 7)
+non-integral LP vertices: 0
+## inst43/inst_D-31_2_1.txt
+lam 0.300000 DONE M_ub 0.000000 best 0.000000 N 0 bits 0.000 nodes
+lam 0.250000 DONE M_ub 0.103761 best 0.103759 N 1 bits 3.585 nodes
+lam 0.200000 DONE M_ub 0.283009 best 0.283007 N 1 bits 3.585 nodes
+lam 0.150000 DONE M_ub 1.025248 best 1.025245 N 4 bits 19.832 nodes
+lam 0.100000 DONE M_ub 3.262182 best 3.262175 N 8 bits 47.378 nodes
+lam 0.300000 ENUM M = 0.000000 at (bits 0.000, N 0)
+lam 0.250000 ENUM M = 0.103759 at (bits 3.585, N 1)
+lam 0.200000 ENUM M = 0.283007 at (bits 3.585, N 1)
+lam 0.150000 ENUM M = 1.025245 at (bits 19.832, N 4)
+lam 0.100000 ENUM M = 3.262175 at (bits 47.378, N 8)
+non-integral LP vertices: 0

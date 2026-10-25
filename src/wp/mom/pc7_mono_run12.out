@@ -1,0 +1,11 @@
+[0;31m  ***   Warning: new maximum stack size = 2000003072 (1907.352 Mbytes).[0m
+[0;31m  *** polcoef: Warning: increasing stack size to 16000000.[0m
+pc7_mono_HVE_p.sing: 28 eqs, length 172414
+pc7_mono_HWE_p.sing: 28 eqs, length 189405
+pc7_mono_HVE_0.sing: 28 eqs, length 172414
+pc7_mono_HWE_0.sing: 28 eqs, length 189405
+pc7_mono_HVE5_0.sing: 20 eqs, length 39983
+== HVE_p
+Sun Oct 25 07:31:11 UTC 2026
+
+halt 1

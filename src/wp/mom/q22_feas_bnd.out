@@ -1,0 +1,29 @@
+  start 10: best so far 9.895e-04
+  start 20: best so far 9.895e-04
+  start 30: best so far 9.895e-04
+  start 40: best so far 9.895e-04
+  start 50: best so far 9.895e-04
+  start 60: best so far 9.895e-04
+k = 5, mode = bnd, starts = 60: residual quantiles [9.89475676e-04 3.19371026e-03 6.19522936e-03 1.41890077e+11]
+  res 9.895e-04  r1 -0.988780 r2 0.988789  c [ 653.88932 2980.95799 2980.95799 2980.95799 2980.95799]  reality-violations 10  min|logc gap| 0.00e+00
+  res 9.900e-04  r1 -0.988758 r2 0.988776  c [ 653.57122 2980.95799 2980.95799 2980.95799 2980.95799]  reality-violations 10  min|logc gap| 0.00e+00
+  res 2.165e-03  r1 0.985578 r2 -0.985675  c [ 424.11452  800.10315 1464.91131 2980.95799 2980.95799]  reality-violations 10  min|logc gap| 0.00e+00
+  res 2.167e-03  r1 -0.985552 r2 0.985572  c [ 423.74303  799.63903 1464.43747 2980.95799 2980.95799]  reality-violations 10  min|logc gap| 0.00e+00
+  res 2.168e-03  r1 -0.985572 r2 0.985555  c [ 423.7185   799.6171  1464.41082 2980.95799 2980.95799]  reality-violations 10  min|logc gap| 0.00e+00
+  start 10: best so far 3.413e-04
+  start 20: best so far 3.380e-04
+  start 30: best so far 3.380e-04
+  start 40: best so far 3.380e-04
+  start 50: best so far 3.380e-04
+  start 60: best so far 3.380e-04
+k = 7, mode = bnd, starts = 60: residual quantiles [3.37965793e-04 7.21619195e-04 6.79278720e+01 4.04420068e+24]
+  res 3.380e-04  r1 -0.966993 r2 0.968247  c [ 174.03495 2980.95799 2980.95799 2980.95799 2980.95799 2980.95799
+ 2980.95799]  reality-violations 14  min|logc gap| 0.00e+00
+  res 3.380e-04  r1 0.963780 r2 -0.964757  c [ 174.44527 2980.95799 2980.95799 2980.95799 2980.95799 2980.95799
+ 2980.95799]  reality-violations 14  min|logc gap| 0.00e+00
+  res 3.413e-04  r1 -0.962725 r2 0.964276  c [ 174.28623 2980.95799 2980.95799 2980.95799 2980.95799 2980.95799
+ 2980.95799]  reality-violations 14  min|logc gap| 0.00e+00
+  res 3.464e-04  r1 0.960366 r2 -0.962402  c [ 175.59162 2980.95799 2980.95799 2980.95799 2980.95799 2980.95799
+ 2980.95799]  reality-violations 14  min|logc gap| 0.00e+00
+  res 3.602e-04  r1 -0.962312 r2 0.963856  c [ 170.43185 2980.95799 2980.95799 2980.95799 2980.95799 2980.95799
+ 2980.95799]  reality-violations 14  min|logc gap| 0.00e+00

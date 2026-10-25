@@ -1,0 +1,22 @@
+g_i = ai*x^2 + (ai + ci)*x + (ci + 2)   h_i = ai*x^2 + ci*x + 2
+check g_i - [ai(x+1)(x+ci/ai) + 2] = 0
+check h_i - [x(ai x + ci) + 2] = 0
+(1) f_l - 1 - [2(1-rho)x + (cl-rho ci)p] mod g_i = 0
+(2) f_l + 1 - [2(1-rho)(x+1) + (cl-rho ci)p] mod h_i = 0
+(3) al*dV - (1-rho) = 0;  al*du - (cl - rho ci) = 0
+(4a) htr_g(x) + (1+u)/2 = 0;  htr_g(p) - R = 0
+(4b) htr_h(x+1) - (2-u)/2 = 0;  htr_h(p) - R = 0
+(5a) htr_g(f_l-1) - al<n^w,dP> = 0
+(5b) htr_h(-f_l-1) + al<n^v,dP> = 0
+(5c) n^v - n^w = [3, 0]
+(6a) htr_g(f_l-1) - <m^w,dQ> = 0
+(6b) htr_h(-f_l-1) - <m^v,dQ> = 0
+(6c) m^w + m^v - (3V, 0) = [0, 0]
+(7a) htr_g(lin - 1) - <m^w, -Q_i> = 0
+(7b) htr_h(-lin - 1) - <m^v, -Q_i> = 0
+(8a) N_g(2x+1) - (8V + 2u - 1) = 0
+(8b) N_h(2x+1) - (8V - 2u + 1) = 0
+(9) N_g(x) - (u + 2V) = 0;  N_h(x+1) - (1 - u + 2V) = 0
+(10) disc g - ((ai-ci)^2 - 8ai) = 0;  disc h - (ci^2 - 8ai) = 0
+(11) ray: 0, 0
+(12) control (must be nonzero): 1

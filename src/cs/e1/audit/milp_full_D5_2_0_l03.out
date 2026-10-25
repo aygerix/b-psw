@@ -1,0 +1,2 @@
+D = 5, class (2,0), T0 = 200: primes 3273, items 302, rows 44, constraints 30977
+lam 0.3000: status 1 (Time limit reached), primal M = -0.0, dual bound = 1164.2733672039474, at (bits 0.0, N 0), 600.1 s; primes []

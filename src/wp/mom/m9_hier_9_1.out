@@ -1,0 +1,67 @@
+start 0: level 1 not reached (2.0e+01)
+start 1: level 1 not reached (2.0e+01)
+start 2: level 1 not reached (2.0e+01)
+start 3: level 2: maxres 1.62e+02 margin 6.22e-15 dmin 3.39e-12 FAIL
+start 4: level 1 not reached (2.0e+01)
+start 5: level 2: maxres 1.62e+02 margin 0.00e+00 dmin 0.00e+00 FAIL
+start 6: level 1 not reached (2.0e+01)
+~/chowla_venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:527: RuntimeWarning: overflow encountered in dot
+  cost_new = 0.5 * np.dot(f_new, f_new)
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar subtract
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:27: RuntimeWarning: overflow encountered in scalar multiply
+  c[n] = v * d[n - 3]
+start 7: level 1 not reached (2.0e+01)
+start 8: level 1 not reached (2.0e+01)
+start 9: level 2: maxres 1.62e+02 margin 0.00e+00 dmin 0.00e+00 FAIL
+start 10: level 1 not reached (2.0e+01)
+start 11: level 1 not reached (2.0e+01)
+start 12: level 1 not reached (1.9e+04)
+start 13: level 2: maxres 1.62e+02 margin 2.44e-15 dmin 1.00e-11 FAIL
+start 14: level 1 not reached (1.9e+04)
+start 15: level 1 not reached (2.0e+01)
+start 16: level 1 not reached (2.0e+01)
+start 17: level 1 not reached (2.0e+01)
+~/b-psw/src/wp/mom/m9_feas.py:53: RuntimeWarning: overflow encountered in square
+  v = (r + 0.5) ** 2 / 8
+start 18: level 1 not reached (2.0e+01)
+start 19: level 1 not reached (2.0e+01)
+start 20: level 1 not reached (2.0e+01)
+start 21: level 1 not reached (2.0e+01)
+~/b-psw/src/wp/mom/m9_hier.py:91: RuntimeWarning: overflow encountered in square
+  return 0.5 + r * np.tanh(q[m:]), (r + 0.5) ** 2 / 8
+~/b-psw/src/wp/mom/m9_hier.py:63: RuntimeWarning: invalid value encountered in scalar multiply
+  acc += dc[l] * out[n - l]
+~/b-psw/src/wp/mom/m9_hier.py:68: RuntimeWarning: invalid value encountered in multiply
+  xs.append(v * inv(np.array([-2 * v, 2 * v - u + 1, u - 2, 1.0])))
+~/b-psw/src/wp/mom/m9_hier.py:31: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_hier.py:31: RuntimeWarning: invalid value encountered in scalar subtract
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+start 22: level 2: maxres 1.62e+02 margin 0.00e+00 dmin 0.00e+00 FAIL
+start 23: level 1 not reached (2.0e+01)
+start 24: level 1 not reached (1.9e+04)
+start 25: level 1 not reached (2.0e+01)
+start 26: level 2: maxres 1.62e+02 margin 0.00e+00 dmin 0.00e+00 FAIL
+start 27: level 1 not reached (1.9e+04)
+start 28: level 1 not reached (2.0e+01)
+start 29: level 1 not reached (1.9e+04)
+start 30: level 1 not reached (2.0e+01)
+start 31: level 1 not reached (1.9e+04)
+start 32: level 1 not reached (2.0e+01)
+start 33: level 2: maxres 1.62e+02 margin 0.00e+00 dmin 0.00e+00 FAIL
+start 34: level 1 not reached (2.0e+01)
+start 35: level 1 not reached (2.0e+01)
+start 36: level 1 not reached (1.9e+04)
+~/b-psw/src/wp/mom/m9_feas.py:52: RuntimeWarning: overflow encountered in exp
+  r = np.exp(rho)
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar add
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+start 37: level 1 not reached (1.9e+04)
+~/b-psw/src/wp/mom/m9_hier.py:34: RuntimeWarning: overflow encountered in multiply
+  f[3:] = v * d[:k - 3]
+start 38: level 2: maxres 1.62e+02 margin 0.00e+00 dmin 0.00e+00 FAIL
+start 39: level 1 not reached (1.9e+04)
+max level reached per start: [1, 1, 1, 1, 1, 1, 1, 1]

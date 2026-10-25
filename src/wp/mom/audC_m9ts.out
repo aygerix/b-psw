@@ -1,0 +1,7 @@
+m9_sol_9_0.gp      m=9 lin=0 inD=True  passing two-sided tests: 8 ['wge', 'vge', 'vle', 'wge', 'vge', 'wle', 'wge', 'vge']
+m9_sol_9_1.gp      m=8 lin=1 inD=True  passing two-sided tests: 11 ['wge', 'vge', 'wle', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'vge', 'vle']
+m9_sol_11_0.gp     m=11 lin=0 inD=True  passing two-sided tests: 8 ['wge', 'vle', 'wge', 'vge', 'wle', 'vge', 'wge', 'vge']
+m9_sol_11_1.gp     m=10 lin=1 inD=True  passing two-sided tests: 10 ['vge', 'vle', 'vle', 'wge', 'vge', 'wge', 'vge', 'wle', 'wge', 'vge']
+m9_l2cert_11_0.gp  m=11 lin=0 inD=True  passing two-sided tests: 10 ['wge', 'vge', 'vle', 'wge', 'wge', 'vge', 'wle', 'vge', 'wge', 'vge']
+m9_l2cert_9.gp     m=9 lin=0 inD=True  passing two-sided tests: 14 ['wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge']
+m9_l2cert_9.gp     m=8 lin=1 inD=True  passing two-sided tests: 16 ['wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge', 'wge', 'vge']

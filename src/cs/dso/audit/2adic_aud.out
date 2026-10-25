@@ -1,0 +1,3 @@
+rules [inert 1mod4 z odd, inert 3mod4 v2 z = v2(p+1), split 3mod4 v2 z = 1, split 1mod4 z | (p-1)/2, ord rule]
+tested [37253, 37269, 37246, 37162, 148930] violations [0, 0, 0, 0, 0]
+3.17 s

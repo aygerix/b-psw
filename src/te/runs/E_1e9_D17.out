@@ -1,0 +1,15 @@
+D=17 passes expected: 5
+anchor3 D=17 Q=-4 X=1000000000 mode=bpsw threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.100 chunkA=32768 chunkC=65536
+TABLE D=17 X=1000000000 inert=25425089 overflow=0 bytes=406.8MB time=51.40s cpu=89.61s
+PASS D=17 S=1 A=1 B=1 mode=bpsw cap=auto X=1000000000 inert=25425089 Aprimes=25424889 Acands=2171578777 Cprimes=200 Cpairs=612148946 Cinner=14723216 prefilter=18 hits=0 wall=226.51s
+DIAG Aunsolv=0 Asieved=1422887917 Ashape=0 Afinal=18 Abig=0 Cunsolv=0 Cnoinv=484 Cincompat=263705 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=710.84 threadsec_C=115.01 us_per_Acand=0.3273 us_per_Cpair=0.1879 sieve=on cpu=462.51s
+PASS D=17 S=16183 A=279 B=58 mode=bpsw cap=auto X=1000000000 inert=25425089 Aprimes=14845693 Acands=2814004 Cprimes=0 Cpairs=0 Cinner=0 prefilter=1 hits=0 wall=21.02s
+DIAG Aunsolv=10579396 Asieved=1397705 Ashape=0 Afinal=1 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=1.52 threadsec_C=0.00 us_per_Acand=0.5385 us_per_Cpair=0.0000 sieve=on cpu=40.40s
+PASS D=17 S=53152009 A=340718 B=39 mode=bpsw cap=auto X=1000000000 inert=25425089 Aprimes=12521333 Acands=8301 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=28.46s
+DIAG Aunsolv=12903756 Asieved=3784 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.01 threadsec_C=0.00 us_per_Acand=1.0449 us_per_Cpair=0.0000 sieve=on cpu=46.71s
+PASS D=17 S=2796203 A=46 B=121574 mode=bpsw cap=auto X=1000000000 inert=25425089 Aprimes=24009291 Acands=10020 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=40.02s
+DIAG Aunsolv=1415798 Asieved=2991 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.01 threadsec_C=0.00 us_per_Acand=0.9055 us_per_Cpair=0.0000 sieve=on cpu=57.25s
+PASS D=17 S=125597 A=7388 B=17 mode=bpsw cap=auto X=1000000000 inert=25425089 Aprimes=12705699 Acands=89224 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=0 wall=28.31s
+DIAG Aunsolv=12719390 Asieved=36247 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.06 threadsec_C=0.00 us_per_Acand=0.6299 us_per_Cpair=0.0000 sieve=on cpu=40.74s
+TIME 395.85 s wall 736.93 s user 558276 KB
+SUMMARY D=17 X=1e9 status=COMPLETE rc=0 passes=5/5 hits=0 hitlines=0

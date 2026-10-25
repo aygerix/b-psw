@@ -1,0 +1,7 @@
+12345                  n=10 M=10 sqsol=2357 true=847 distinct=237 max_sum=5  [1, 1, 1, 1, 1]x237
+1|2|3|4                n=13 M=13 sqsol=475 true=264 distinct=264 max_sum=4  [1, 1, 1, 1, 0]x135 [1, 1, 1, 1, 0]Px129
+2|3|4|5                n=13 M=13 sqsol=339 true=190 distinct=190 max_sum=4  [0, 1, 1, 1, 1]x100 [0, 1, 1, 1, 1]Px90
+1|1|2|3                n=13 M=13 sqsol=467 true=248 distinct=248 max_sum=4  [2, 1, 1, 0, 0]Px160 [2, 1, 1, 0, 0]x88
+12|3|4                 n=12 M=12 sqsol=637 true=502 distinct=499 max_sum=4  [1, 1, 1, 1, 0]Px277 [1, 1, 1, 1, 0]x222
+2|2|3|4                n=13 M=13 sqsol=241 true=97 distinct=97 max_sum=4  [0, 2, 1, 1, 0]Px54 [0, 2, 1, 1, 0]x43
+23|4|5                 n=12 M=12 sqsol=461 true=302 distinct=302 max_sum=4  [0, 1, 1, 1, 1]x158 [0, 1, 1, 1, 1]Px144

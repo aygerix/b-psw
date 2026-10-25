@@ -1,0 +1,7 @@
+Lemma A (Lucas congruence) checked for all j: 1
+Lemma A (Korselt <=> K_j(A(r_j)) = 0) checked: 1
+Lemma B f_1-full criterion: 1
+Lemma B FSP values: [-1, -1, -1, -1, -1]  F(t) = -1
+Lemma B extra-point equation: 1
+Lemma E support: F(r_i) - 1 = A(r_i) H(r_i), so Korselt_i => F(r_i) = 1 != -1: 1
+Lemma C: N_1 even 1  Phi_1 even 1  f3(x) = f2(-x): 1

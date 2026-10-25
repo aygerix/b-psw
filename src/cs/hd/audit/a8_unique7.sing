@@ -1,0 +1,15 @@
+// AUDIT: k = 7 two-dead uniqueness at fixed M = 7: count solutions (a2..a6) with all middle members good (vdim; one
+// unordered quintuple gives 120). Timing probe only.
+ring r = 0, (a,b,c,d,e,T), dp;
+int M = 7;
+poly ea = (a-2)*(a-2*M)*(a-2*b)*(a-2*c)*(a-2*d)*(a-2*e) - a^6;
+poly eb = (b-2)*(b-2*M)*(b-2*a)*(b-2*c)*(b-2*d)*(b-2*e) - b^6;
+poly ec = (c-2)*(c-2*M)*(c-2*a)*(c-2*b)*(c-2*d)*(c-2*e) - c^6;
+poly ed = (d-2)*(d-2*M)*(d-2*a)*(d-2*b)*(d-2*c)*(d-2*e) - d^6;
+poly ee = (e-2)*(e-2*M)*(e-2*a)*(e-2*b)*(e-2*c)*(e-2*d) - e^6;
+poly nz = a*b*c*d*e*(a-b)*(a-c)*(a-d)*(a-e)*(b-c)*(b-d)*(b-e)*(c-d)*(c-e)*(d-e)*(a-1)*(b-1)*(c-1)*(d-1)*(e-1)*(a-M)*(b-M)*(c-M)*(d-M)*(e-M);
+int t0 = timer;
+option(prot);
+ideal S = std(ideal(ea, eb, ec, ed, ee, 1 - T*nz));
+print("k=7 M=7: dim = " + string(dim(S)) + " vdim = " + string(vdim(S)) + " time = " + string(timer - t0));
+quit;

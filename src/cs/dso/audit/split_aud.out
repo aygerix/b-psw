@@ -1,0 +1,3 @@
+X = 10000: split 1285, coprime odd parts 3 [(641, 64, 320, 1), (4481, 560, 64, 1), (61681, 40, 1542, 1)], usable (5 not | ord z) 0 []; index-inequality violations 0
+X = 20000: split 2433, coprime odd parts 4 [(641, 64, 320, 1), (4481, 560, 64, 1), (61681, 40, 1542, 1), (5206849, 18464, 4512, 1)], usable (5 not | ord z) 1 [(5206849, 18464, 4512, 1)]; index-inequality violations 0
+X = 60000: split 6668, coprime odd parts 9 , usable (5 not | ord z) 4 [(114689, 8192, 57344, 1), (119809, 59904, 256, 1), (5206849, 18464, 4512, 1), (47402561, 1312, 57808, 1)]; index-inequality violations 0

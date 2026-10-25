@@ -1,0 +1,6 @@
+full residual 2.3e-14; Lucas recount [2, 2, 2, 0, 0]; eps=0.001: 100/100 eps=0.01: 100/100 eps=0.1: 0/100 eps=0.3: 0/100
+full residual 2.8e-14; Lucas recount [2, 2, 2, 0, 0]; eps=0.001: 100/100 eps=0.01: 100/100 eps=0.1: 11/100 eps=0.3: 0/100
+full residual 9.6e-15; Lucas recount [2, 2, 2, 0, 0]; eps=0.001: 100/100 eps=0.01: 100/100 eps=0.1: 36/100 eps=0.3: 0/100
+full residual 1.3e-14; Lucas recount [2, 2, 2, 0, 0]; eps=0.001: 100/100 eps=0.01: 100/100 eps=0.1: 33/100 eps=0.3: 0/100
+full residual 1.1e-14; Lucas recount [2, 2, 2, 0, 0]; eps=0.001: 100/100 eps=0.01: 100/100 eps=0.1: 37/100 eps=0.3: 0/100
+full residual 1.2e-13; Lucas recount [2, 2, 2, 0, 0]; eps=0.001: 100/100 eps=0.01: 100/100 eps=0.1: 21/100 eps=0.3: 0/100

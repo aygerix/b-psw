@@ -1,0 +1,17 @@
+mkred done
+ls: cannot access 'pc7_mono_R3*': No such file or directory
+== slice
+[0;31m[0;31m  ***   syntax error, unexpected ')', expecting end of file: ...[0;35m" not positive 
+[0;31m  ***   on (0,1]")[0;35m);chk(B[1],"B1");chk(
+[0;31m[0;31m  ***             ^---------------------[0m
+... skipping file 'pc7_mono_slice.gp'
+== biltest
+[0;31m  *** _/_: Warning: not enough memory, new thread stack 1000001536[0m
+[0;31m  *** _/_: Warning: not enough memory, new thread stack 1000001536[0m
+[0;31m  *** _/_: Warning: not enough memory, new thread stack 500002816[0m
+[0;31m  *** _/_: Warning: not enough memory, new thread stack 250003456[0m
+[0;31m  *** _/_: Warning: not enough memory, new thread stack 125001728[0m
+[0;31m  *** _/_: Warning: not enough memory, new thread stack 62500864[0m
+[0;31m  *** _/_: Warning: not enough memory, new thread stack 31252480[0m
+bilinear formal - direct: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]   (direct nonzero: 20)
+== mkh

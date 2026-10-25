@@ -1,0 +1,36 @@
+// src/cs/e3b/pat_lib.sing -- E3b: pattern ideals for k = 5 shared-A Korselt families, A = x^2 - 1 (over C: any
+// squarefree A after an affine change of x).  g_1 = c, g_j = l_j (x - r_j).  Variables: x (polynomial variable),
+// c, l2..l5, r2..r5, then auxiliary Q-coefficients.  Requires: ring already defined by the caller with these names
+// (see mkring), int-vector MPAT = (m1..m5).
+// Korselt_j: K_j(r_j^2 - 1) = 0.  Lucas_j: deg gcd(N_j, Phi_j) >= m_j, N_j = 2 + A g_j, Phi_j = prod_{i!=j}(g_j - 2 g_i) - g_j^4.
+proc korselt() {
+  poly A = x^2 - 1; list g = list(c, l2*(x - r2), l3*(x - r3), l4*(x - r4), l5*(x - r5));
+  list rr = list(0, r2, r3, r4, r5);
+  ideal K; int i; int j;
+  for (j = 2; j <= 5; j++) {
+    poly a = rr[j]^2 - 1;
+    list y; for (i = 1; i <= 5; i++) { if (i != j) { y = insert(y, subst(g[i], x, rr[j])); } }
+    // e_m of the 4 values y
+    poly e1 = y[1] + y[2] + y[3] + y[4];
+    poly e2 = y[1]*y[2] + y[1]*y[3] + y[1]*y[4] + y[2]*y[3] + y[2]*y[4] + y[3]*y[4];
+    poly e3 = y[1]*y[2]*y[3] + y[1]*y[2]*y[4] + y[1]*y[3]*y[4] + y[2]*y[3]*y[4];
+    poly e4 = y[1]*y[2]*y[3]*y[4];
+    K[j - 1] = e1 + a*e2 + a^2*e3 + a^3*e4;
+    kill a; kill y; kill e1; kill e2; kill e3; kill e4;
+  }
+  return(K);
+}
+proc NPhi(int j) {
+  poly A = x^2 - 1; list g = list(c, l2*(x - r2), l3*(x - r3), l4*(x - r4), l5*(x - r5));
+  poly N = 2 + A*g[j]; poly pr = 1; int i;
+  for (i = 1; i <= 5; i++) { if (i != j) { pr = pr*(g[j] - 2*g[i]); } }
+  poly Phi = pr - g[j]^4;
+  return(list(N, Phi));
+}
+// remainder coefficients (in x) of P modulo the monic (in x) polynomial Q
+proc remco(poly P, poly Q) {
+  poly R = reduce(P, std(Q));   // Q monic in x with x the first (largest) variable of a block ordering
+  matrix M = coeffs(R, x); ideal I; int i;
+  for (i = 1; i <= nrows(M); i++) { I[i] = M[i, 1]; }
+  return(I);
+}

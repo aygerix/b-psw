@@ -1,0 +1,15 @@
+T = 1500: pool rows 5018 (of 5019), straggler rows 82 (of 82 extra primes)
+pool: N = 5018, log2|G| = 4340.6, N/B = 1.156
+  frontier (bits, N): (4341,5018) (3982,4964) (3679,4918) (3386,4858) (3107,4779) (2837,4676) (2635,4555) (2422,4332) (2232,3853) (1978,2593) (1671,1481) (1365,779) (1068,379) (779,176) (393,42)
+  C =  60: min gap N_req/N = 15.2 at (bits 30, N 2), N_req = 30
+  C =  70: min gap N_req/N = 15.2 at (bits 30, N 2), N_req = 30
+  C =  80: min gap N_req/N = 15.2 at (bits 30, N 2), N_req = 30
+  C = 100: min gap N_req/N = 14.6 at (bits 190, N 13), N_req = 190
+  existence: min (b+1)/N = 0.56 at (bits 2363, N 4241)
+pool + stragglers: N = 5100, log2|G| = 4340.6, N/B = 1.175
+  frontier (bits, N): (4341,5100) (3972,5044) (3660,4996) (3360,4933) (3069,4846) (2802,4740) (2599,4605) (2371,4332) (2189,3665) (1887,2267) (1574,1244) (1266,637) (967,312) (666,131) (142,11)
+  C =  60: min gap N_req/N = 16.1 at (bits 112, N 7), N_req = 112
+  C =  70: min gap N_req/N = 15.7 at (bits 201, N 17), N_req = 268
+  C =  80: min gap N_req/N = 12.9 at (bits 142, N 11), N_req = 142
+  C = 100: min gap N_req/N = 12.4 at (bits 173, N 14), N_req = 173
+  existence: min (b+1)/N = 0.55 at (bits 2371, N 4332)

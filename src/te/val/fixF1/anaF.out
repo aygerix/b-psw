@@ -1,0 +1,63 @@
+selftest | anchor3 --selftest | PASS | SELFTEST PASSED: 0 failures, 27.4s
+F1 hit-print | hp_new X=100000 cap=0 verbose | PASS | hits=122 HITlines=122 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=100000 cap=0 quiet | PASS | hits=122 HITlines=122 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=100000 cap=auto verbose | PASS | hits=122 HITlines=122 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=100000 cap=auto quiet | PASS | hits=122 HITlines=122 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=20000 cap=-1 verbose | PASS | hits=2009 HITlines=2009 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=20000 cap=-1 quiet | PASS | hits=2009 HITlines=2009 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=20000 cap=0 verbose | PASS | hits=35 HITlines=35 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=20000 cap=0 quiet | PASS | hits=35 HITlines=35 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=20000 cap=auto verbose | PASS | hits=35 HITlines=35 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_new X=20000 cap=auto quiet | PASS | hits=35 HITlines=35 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_old X=100000 cap=0 verbose | PASS | hits=122 HITlines=122 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_old X=100000 cap=0 quiet | PASS | hits=122 HITlines=0 (expected defect: 0 HIT lines)
+F1 hit-print | hp_old X=100000 cap=auto verbose | PASS | hits=122 HITlines=122 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_old X=100000 cap=auto quiet | PASS | hits=122 HITlines=0 (expected defect: 0 HIT lines)
+F1 hit-print | hp_old X=20000 cap=-1 verbose | PASS | hits=2009 HITlines=2009 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_old X=20000 cap=-1 quiet | PASS | hits=2009 HITlines=0 (expected defect: 0 HIT lines)
+F1 hit-print | hp_old X=20000 cap=0 verbose | PASS | hits=35 HITlines=35 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_old X=20000 cap=0 quiet | PASS | hits=35 HITlines=0 (expected defect: 0 HIT lines)
+F1 hit-print | hp_old X=20000 cap=auto verbose | PASS | hits=35 HITlines=35 (HIT lines == hits) same n-set as verbose
+F1 hit-print | hp_old X=20000 cap=auto quiet | PASS | hits=35 HITlines=0 (expected defect: 0 HIT lines)
+F1 hit-print | new quiet vs old verbose X=20000 cap=auto | PASS | 35 vs 35 n
+F1 hit-print | new quiet vs old verbose X=20000 cap=0 | PASS | 35 vs 35 n
+F1 hit-print | new quiet vs old verbose X=20000 cap=-1 | PASS | 2009 vs 2009 n
+F1 hit-print | new quiet vs old verbose X=100000 cap=auto | PASS | 122 vs 122 n
+F1 hit-print | new quiet vs old verbose X=100000 cap=0 | PASS | 122 vs 122 n
+calibration | bpsw D=5 X=1e7 | PASS | PASS D=5 S=1 A=1 B=1 mode=bpsw cap=auto X=10000000 inert=332441 Aprimes=332331 Acands=11276208 Cprimes=110 Cpairs=5071751 Cinner=108145 prefilter=9 hits=0 | identical to pre-fix run
+calibration | bpsw D=5 X=1e7 --quiet | PASS | PASS line equal to verbose run
+C1 | one-torus fermat/lucas vs brute force (D 5,-7,13; X 2000/6000/20000; caps 0,-1,auto,40) | PASS | 72/72
+C1 | W1-final-test variant vs weakord/weakz (caps 0,-1,auto) | PASS | 54/54
+C2 | bpsw/weak vs reference | PASS | 72/72
+identity | c1 outputs vs pre-fix binary | PASS | 144/144 identical []
+identity | c1w outputs vs pre-fix binary | PASS | 54/54 identical []
+C1 | split parts S > 1 vs split brute force (9 S, fermat/lucas, plain + W1 variant, caps 0,-1,auto) | PASS | 108/108 True
+identity | c6 outputs vs pre-fix binary | PASS | 108/108 identical []
+C3 | c3/D5_X1e6_capauto.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D5_X1e6_lcm_capauto.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D-7_X1e6_capauto.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D-7_X1e6_lcm_capauto.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D5_X1e7_capauto.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D5_X1e7_lcm_capauto.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D5_X2e4_small_capauto.out | PASS | found 40/40 missed 0 invalid 0 dup 0 passes 11/11
+C3 | c3/D5_X3e3_small_capauto.out | PASS | found 32/32 missed 0 invalid 0 dup 0 passes 9/9
+C3 | c3/D5_X2e4_small_cap-1.out | PASS | found 40/40 missed 0 invalid 0 dup 0 passes 11/11
+C3 | c3/D5_X2e4_small_cap0.out | PASS | found 40/40 missed 0 invalid 0 dup 0 passes 11/11
+C3 | c3/D5_X3e3_small_cap-1.out | PASS | found 32/32 missed 0 invalid 0 dup 0 passes 9/9
+C3 | c3/D5_X3e3_small_cap0.out | PASS | found 32/32 missed 0 invalid 0 dup 0 passes 9/9
+C3 | c3/D5_X1e6_cap0.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D5_X1e6_lcm_cap0.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D-7_X1e6_cap0.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D-7_X1e6_lcm_cap0.out | PASS | found 120/120 missed 0 invalid 0 dup 0 passes 31/31
+C3 | c3/D5_X1e6_capA_cap-1.out | PASS | found 25/25 missed 0 invalid 0 dup 0 passes 7/7
+C3 | c3/D5_X1e6_lcm_capA_cap-1.out | PASS | found 26/26 missed 0 invalid 0 dup 0 passes 10/10
+C3 | c3/D-7_X1e6_capA_cap-1.out | PASS | found 32/32 missed 0 invalid 0 dup 0 passes 7/7
+C3 | c3/D-7_X1e6_lcm_capA_cap-1.out | PASS | found 24/24 missed 0 invalid 0 dup 0 passes 5/5
+C3 | c3/D5_X1e7_capA_cap-1.out | PASS | found 17/17 missed 0 invalid 0 dup 0 passes 2/2
+C3 | c3/D5_X1e7_lcm_capA_cap-1.out | PASS | found 21/21 missed 0 invalid 0 dup 0 passes 7/7
+C3 | c3/D5_X1e7_S1_cap0.out | PASS | found 90/90 missed 0 invalid 0 dup 0 passes 1/1
+C3 | total cap=auto | PASS | 792/792 found
+C3 | total cap=0 | PASS | 642/642 found
+C3 | total cap=-1 | PASS | 217/217 found
+identity | c3 outputs vs pre-fix binary | PASS | 23/23 identical []
+SUMMARY Counter({'PASS': 62})

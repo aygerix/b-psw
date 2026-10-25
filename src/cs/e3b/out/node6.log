@@ -1,0 +1,8 @@
+1|1|2|2|2|3              n=12 M=14 exp= -2 conv=    0/4000  max sum m = None  
+1|1|2|2|23               n=11 M=13 exp= -2 conv=    0/4000  max sum m = None  
+1|1|2|2|3|3              n=12 M=13 exp= -1 conv=    0/4000  max sum m = None  
+1|1|2|2|3|4              n=11 M=12 exp= -1 conv=    0/4000  max sum m = None  
+1|1|2|2|34               n=10 M=11 exp= -1 conv=    0/4000  max sum m = None  
+1|1|2|23|3               n=11 M=12 exp= -1 conv=    0/4000  max sum m = None  
+1|1|2|23|4               n=10 M=11 exp= -1 conv=    0/4000  max sum m = None  
+1|1|2|234                n=9 M=10 exp= -1 conv=    0/4000  max sum m = None  

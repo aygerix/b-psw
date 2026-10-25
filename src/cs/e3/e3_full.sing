@@ -1,0 +1,75 @@
+// src/cs/e3/e3_full.sing -- E3 follow-up: Lucas-FULL members and gcd-degree strata on the k = 3 shared-A Korselt variety.
+// Parametrisation as e3_R.sing (r2 = 0, mu = 1): f_j = n_j / D_j with
+//   At = c r3^2 x^2 + P x + c r3^2 q, P = -(c r3^3 + c q r3 + c + r3), n1 = D1 + At, n2 = D2 + At x, n3 = D3 + At (x - r3),
+//   D1 = r3^2, D2 = c r3^2, D3 = r3^3 (1 + c q).
+// Member j is Lucas-full iff f_j + 1 | F + 1, i.e. N_j = n_j + D_j divides G = n1 n2 n3 + D1 D2 D3 in Q(q,c,r3)[x].
+// gcd degree >= 2 for a cubic member: a monic quadratic x^2 + al x + be divides N_j and G.
+LIB "primdec.lib"; LIB "elim.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring Bp = (0, q, c, r3), (x, al, be), dp;
+poly P = -(c*r3^3 + c*q*r3 + c + r3);
+poly At = c*r3^2*x^2 + P*x + c*r3^2*q;
+poly D1 = r3^2; poly D2 = c*r3^2; poly D3 = r3^3*(1 + c*q);
+poly n1 = D1 + At; poly n2 = D2 + At*x; poly n3 = D3 + At*(x - r3);
+poly G = n1*n2*n3 + D1*D2*D3;
+list NN = list(n1 + D1, n2 + D2, n3 + D3);
+ring S = 0, (q, c, r3), dp;
+poly P = -(c*r3^3 + c*q*r3 + c + r3);
+poly dg = c*r3*(1 + c*q)*(P^2 - 4*q*c^2*r3^4);
+proc coeffsx(poly f) {   // in ring Bp: numerators of the x-coefficients of a remainder, mapped to S
+  matrix M = coeffs(f, x); ideal I; int i;
+  for (i = 1; i <= nrows(M); i++) { number cf = leadcoef(M[i,1]); I[i] = numerator(cf); kill cf; }
+  return(I);
+}
+proc describe(ideal I, string tag) {
+  int t0 = timer; ideal J = SAT(I, dg); int d = dim(std(J));
+  tag, ": dim = ", d, "  (time ", timer - t0, ")";
+  if (d >= 0) { list mp = minAssGTZ(J); int i; int j;
+    for (i = 1; i <= size(mp); i++) { ideal Pc = mp[i]; "   comp ", i, ": dim ", dim(std(Pc)), ", vdim ", vdim(std(Pc)), ":";
+      for (j = 1; j <= size(Pc); j++) { if (size(Pc[j]) <= 40) { "     ", Pc[j]; } else { "     [", size(Pc[j]), " terms, deg ", deg(Pc[j]), "]"; } }
+      kill Pc; } }
+  return(J);
+}
+// ---- full members
+list FULL;
+int j;
+for (j = 1; j <= 3; j++) {
+  setring Bp; poly rem = reduce(G, std(NN[j])); ideal Ic = coeffsx(rem);
+  setring S; ideal Ij = imap(Bp, Ic);
+  ideal Jj = describe(Ij, "member " + string(j) + " Lucas-full (f_j + 1 | F + 1)");
+  FULL[j] = Jj;
+  setring Bp; kill rem; kill Ic; setring S; kill Ij; kill Jj;
+}
+// ---- gcd degree >= 2 for the cubic members j = 2, 3 (eliminate al, be)
+list GE2;
+for (j = 2; j <= 3; j++) {
+  setring Bp;
+  poly quad = x^2 + al*x + be;
+  ideal Q2 = std(quad);
+  poly r1 = reduce(NN[j], Q2); poly r2 = reduce(G, Q2);
+  matrix M1 = coeffs(r1, x); matrix M2 = coeffs(r2, x);
+  ideal E;
+  int i;
+  for (i = 1; i <= nrows(M1); i++) { E[size(E) + 1] = M1[i,1]; }
+  for (i = 1; i <= nrows(M2); i++) { E[size(E) + 1] = M2[i,1]; }
+  kill i;
+  ring S2b = 0, (al, be, q, c, r3), dp;
+  // clear denominators: the coefficients are polynomials in al, be with coefficients in Q(q,c,r3)
+  setring Bp; ideal En; int i; for (i = 1; i <= size(E); i++) { En[i] = cleardenom(E[i]); } kill i;
+  setring S2b; ideal Ee = imap(Bp, En);
+  poly P = -(c*r3^3 + c*q*r3 + c + r3); poly dg2 = c*r3*(1 + c*q)*(P^2 - 4*q*c^2*r3^4);
+  int t0 = timer;
+  ideal Es = SAT(Ee, dg2);
+  ideal El = eliminate(Es, al*be);
+  "member ", j, " gcd degree >= 2: eliminated in ", timer - t0, " s";
+  setring S; ideal Ej = imap(S2b, El); ideal Jj = describe(Ej, "member " + string(j) + " gcd degree >= 2");
+  GE2[j] = Jj;
+  setring Bp; kill quad; kill Q2; kill r1; kill r2; kill M1; kill M2; kill E; kill En; kill S2b; setring S; kill Ej; kill Jj;
+}
+// ---- intersections giving total Lucas defect <= 4 other than the rho-curve
+ideal I12 = FULL[1] + GE2[2]; ideal J = describe(I12, "f1 full AND f2 gcd >= 2"); kill J;
+ideal I13 = FULL[1] + GE2[3]; ideal J = describe(I13, "f1 full AND f3 gcd >= 2"); kill J;
+ideal I23 = GE2[2] + GE2[3]; ideal J = describe(I23, "f2 gcd >= 2 AND f3 gcd >= 2"); kill J;
+"total time ", timer;
+quit;

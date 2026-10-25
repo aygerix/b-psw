@@ -1,0 +1,36 @@
+// src/cs/e3b/sym_kor.sing -- E3b: timing + structure of the x -> -x symmetric Korselt locus (k = 5, A = x^2 - 1).
+// f_3(x) = f_2(-x), f_5(x) = f_4(-x): g_3 = -l2 (x + r2), g_5 = -l4 (x + r4).  Variables c, l2, r2, l4, r4.
+LIB "elim.lib"; LIB "primdec.lib";
+system("--ticks-per-sec", 1000);
+ring R = 0, (x, c, l2, r2, l4, r4), (dp(1), dp(5));
+poly A = x^2 - 1;
+list g = list(c, l2*(x - r2), -l2*(x + r2), l4*(x - r4), -l4*(x + r4));
+list rr = list(0, r2, -r2, r4, -r4);
+proc Kj(int j) {
+  poly a = rr[j]^2 - 1; list y; int i;
+  for (i = 1; i <= 5; i++) { if (i != j) { y = insert(y, subst(g[i], x, rr[j])); } }
+  poly e1 = y[1] + y[2] + y[3] + y[4];
+  poly e2 = y[1]*y[2] + y[1]*y[3] + y[1]*y[4] + y[2]*y[3] + y[2]*y[4] + y[3]*y[4];
+  poly e3 = y[1]*y[2]*y[3] + y[1]*y[2]*y[4] + y[1]*y[3]*y[4] + y[2]*y[3]*y[4];
+  poly e4 = y[1]*y[2]*y[3]*y[4];
+  return(e1 + a*e2 + a^2*e3 + a^3*e4);
+}
+poly K2 = Kj(2); poly K3 = Kj(3); poly K4 = Kj(4); poly K5 = Kj(5);
+"K2 terms ", size(K2), " deg ", deg(K2);
+// symmetry check: K3 should equal K2 up to sign under the symmetry (it is literally the same polynomial)
+"K3 - K2 = ", K3 - K2, "   K5 - K4 = ", K5 - K4;
+ring S = 0, (c, l2, r2, l4, r4), dp;
+poly K2 = imap(R, K2); poly K4 = imap(R, K4);
+poly dg = c*l2*l4*r2*r4*(r2 - r4)*(r2 + r4);
+int t0 = rtimer;
+ideal G = std(ideal(K2, K4));
+"std: dim ", dim(G), "  time ms ", rtimer - t0;
+"factors of K2:"; factorize(K2, 2);
+"factors of K4:"; factorize(K4, 2);
+proc satseq(ideal I, list fs) { int i; ideal J = I; for (i = 1; i <= size(fs); i++) { J = sat(J, fs[i])[1]; } return(J); }
+list fs = list(c, l2, l4, r2, r4, r2 - r4, r2 + r4);
+t0 = rtimer;
+ideal Ks = satseq(ideal(K2, K4), fs);
+"sequential sat: dim ", dim(std(Ks)), " ngens ", size(Ks), " time ms ", rtimer - t0;
+"Ks == (K2, K4)? ", size(reduce(Ks, G)) == 0;
+quit;

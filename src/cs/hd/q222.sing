@@ -1,0 +1,16 @@
+// HD / A2 test at k = 3, degrees (2,2,2): f_j - 1 share the root 0 (a = 1), f_j + 1 share the root 1 (b = 1, full triple).
+// f_j = 1 + x (al_j (x - 1) - 2);  other root of f_j - 1: th_j = 1 + 2/al_j.  Korselt: f_i(th_j) f_l(th_j) = 1.
+// Expected (generic count): finitely many families with total defect <= 3 = 2 d_min - 1 (would refute A2: defect >= 2 d_min).
+LIB "primdec.lib"; LIB "solve.lib";
+ring R = 0, (u1, u2, u3), dp;      // u_j = 1/al_j
+proc fv(poly ui, poly uj) { return(ui + 2*(1 + 2*uj)*(uj - ui)); }   // u_i * f_i(th_j)
+ideal I = fv(u1,u2)*fv(u3,u2) - u1*u3, fv(u2,u1)*fv(u3,u1) - u2*u3, fv(u1,u3)*fv(u2,u3) - u1*u2;
+poly nz = u1*u2*u3*(u1-u2)*(u1-u3)*(u2-u3)*(1+2*u1)*(1+2*u2)*(1+2*u3);
+ideal S = sat(I, nz)[1]; S = std(S);
+"dim =", dim(S), " vdim =", vdim(S);
+if (dim(S) == 0) {
+  list P = minAssGTZ(S); int i;
+  for (i = 1; i <= size(P); i++) { "component", i, ":"; P[i]; }
+  ring L = 0, (u3, u2, u1), lp; ideal S = fetch(R, S); S = std(S); "lex:"; S;
+}
+quit;

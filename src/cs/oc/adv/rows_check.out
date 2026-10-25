@@ -1,0 +1,45 @@
+== mer
+rows checked 135, agree 135, mismatch 0, skipped (> 4000 bits) 0, 10.3s
+10.38user 0.07system 0:11.19elapsed 93%CPU (0avgtext+0avgdata 59624maxresident)k
+0inputs+16outputs (0major+11879minor)pagefaults 0swaps
+== wag
+rows checked 175, agree 175, mismatch 0, skipped (> 4000 bits) 0, 8.9s
+9.00user 0.09system 0:09.64elapsed 94%CPU (0avgtext+0avgdata 59796maxresident)k
+0inputs+16outputs (0major+11875minor)pagefaults 0swaps
+== fib
+DEGENERATE p | Q fib 5 -19 their row ['1', '2', '-1', '1', '0', '1', '0', '0.0', '0.0']
+rows checked 164, agree 164, mismatch 0, skipped (> 4000 bits) 0, 6.0s
+6.16user 0.07system 0:06.55elapsed 95%CPU (0avgtext+0avgdata 59956maxresident)k
+0inputs+16outputs (0major+11875minor)pagefaults 0swaps
+== luc
+rows checked 222, agree 222, mismatch 0, skipped (> 4000 bits) 0, 10.6s
+10.82user 0.08system 0:11.13elapsed 97%CPU (0avgtext+0avgdata 59840maxresident)k
+0inputs+32outputs (0major+11870minor)pagefaults 0swaps
+== gm
+rows checked 191, agree 191, mismatch 0, skipped (> 4000 bits) 0, 6.6s
+7.05user 0.08system 0:07.20elapsed 99%CPU (0avgtext+0avgdata 59724maxresident)k
+0inputs+16outputs (0major+11861minor)pagefaults 0swaps
+== cyc
+DEGENERATE p | Q cyc 4 -19 their row ['1', '2', '-1', '1', '0', '1', '0', '0.0', '0.0']
+rows checked 889, agree 889, mismatch 0, skipped (> 4000 bits) 0, 3.5s
+3.98user 0.08system 0:04.08elapsed 99%CPU (0avgtext+0avgdata 60312maxresident)k
+0inputs+80outputs (0major+12014minor)pagefaults 0swaps
+== fcy
+Traceback (most recent call last):
+  File "~/b-psw/src/cs/oc/adv/adv_rows.py", line 119, in <module>
+    for line in open(path):
+                ^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '../out/full_fcy.out'
+Command exited with non-zero status 1
+0.50user 0.08system 0:00.58elapsed 100%CPU (0avgtext+0avgdata 59780maxresident)k
+0inputs+0outputs (0major+11863minor)pagefaults 0swaps
+== rie
+rows checked 6468, agree 6468, mismatch 0, skipped (> 4000 bits) 0, 5.8s
+6.23user 0.08system 0:06.40elapsed 98%CPU (0avgtext+0avgdata 59808maxresident)k
+0inputs+552outputs (0major+11870minor)pagefaults 0swaps
+== pro
+rows checked 6446, agree 6446, mismatch 0, skipped (> 4000 bits) 0, 5.0s
+5.43user 0.08system 0:05.60elapsed 98%CPU (0avgtext+0avgdata 59916maxresident)k
+0inputs+560outputs (0major+11867minor)pagefaults 0swaps
+== fcy (rows taken from ../out/full_inherit.out; full_fcy.out exists only in the laptop copy and equals its 13-field rows)
+rows checked 1387, agree 1387, mismatch 0, skipped (> 4000 bits) 0, 6.5s

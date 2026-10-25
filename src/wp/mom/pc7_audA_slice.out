@@ -1,0 +1,15 @@
+variables in B1: [ep, p1, p2, p3, p4, p5]
+  m(0,0,0,0): Mat([ep, 6])   positive on (0,1]: 1
+  m(1,0,0,0): Mat([ep, 4])   positive on (0,1]: 1
+  m(1,1,0,0): Mat([ep, 2])   positive on (0,1]: 1
+  m(1,1,1,0): matrix(0,2)   positive on (0,1]: 1
+  m(2,0,0,0): Mat([ep, 2])   positive on (0,1]: 1
+  m(2,1,0,0): Mat([2, 3])   positive on (0,1]: 1
+  m(2,2,0,0): Mat([ep, -2])   positive on (0,1]: 1
+  m(3,0,0,0): matrix(0,2)   positive on (0,1]: 1
+  m(3,1,0,0): Mat([ep, -2])   positive on (0,1]: 1
+  m(4,0,0,0): Mat([ep, -2])   positive on (0,1]: 1
+  m(5,0,0,0): Mat([ep, -4])   positive on (0,1]: 1
+B1: 11 nonzero monomial coefficients, 0 with 4 parts, 0 not positive, max single exponent 5
+min B1 over 2000 random (ep, positive w): 0.10284887207984719886331788876181983797
+rc=0

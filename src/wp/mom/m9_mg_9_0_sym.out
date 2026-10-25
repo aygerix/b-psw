@@ -1,0 +1,50 @@
+start 0: phase1 fail 1.67e+03
+start 1: phase1 fail 9.36e+01
+start 2: phase1 tau 0.00002 -> tau 0.00002 eqres 8.18e+07 OK
+start 3: phase1 fail 2.94e+01
+start 4: phase1 fail 9.36e+01
+~/chowla_venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:527: RuntimeWarning: overflow encountered in dot
+  cost_new = 0.5 * np.dot(f_new, f_new)
+start 5: phase1 fail 2.94e+01
+start 6: phase1 fail 9.36e+01
+start 7: phase1 fail 9.36e+01
+start 8: phase1 tau 0.02124 -> tau 0.02124 eqres 1.78e+06 OK
+start 9: phase1 fail 9.36e+01
+start 10: phase1 fail 9.36e+01
+start 11: phase1 tau 0.06951 -> tau 0.06951 eqres 1.76e+04 OK
+start 12: phase1 fail 1.67e+03
+start 13: phase1 fail 9.36e+01
+start 14: phase1 fail 2.94e+01
+start 15: phase1 fail 9.36e+01
+start 16: phase1 fail 2.94e+01
+start 17: phase1 fail 2.94e+01
+start 18: phase1 fail 2.94e+01
+start 19: phase1 tau 0.00000 -> tau 0.00000 eqres 8.21e+05 OK
+start 20: phase1 fail 9.36e+01
+start 21: phase1 fail 1.67e+03
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+start 22: phase1 fail 1.67e+03
+start 23: phase1 fail 1.67e+03
+start 24: phase1 tau 0.00171 -> tau 0.00171 eqres 8.62e+09 OK
+start 25: phase1 fail 2.94e+01
+start 26: phase1 tau 0.00051 -> tau 0.00051 eqres 1.77e+05 OK
+start 27: phase1 fail 2.94e+01
+start 28: phase1 fail 2.94e+01
+start 29: phase1 fail 2.94e+01
+start 30: phase1 fail 2.94e+01
+start 31: phase1 fail 9.36e+01
+start 32: phase1 fail 2.94e+01
+start 33: phase1 fail 9.36e+01
+start 34: phase1 fail 2.94e+01
+start 35: phase1 fail 9.36e+01
+start 36: phase1 fail 9.36e+01
+start 37: phase1 fail 1.67e+03
+start 38: phase1 fail 2.94e+01
+start 39: phase1 fail 2.94e+01
+BEST tau = 0.06951485494729981
+x = array([0.605156204392249 , 0.053680237637796 , 0.0620060685662747, 0.059648427249592 , 1.6286121386777186, 0.0286312273614805, 0.1347922858160165, 0.1143013292143569, 1.6107368111675027])
+u = array([ 2.1286121386777186,  0.5286312273614805,  0.6347922858160165,  0.6143013292143569, -1.1286121386777186,  0.4713687726385195,  0.3652077141839835,  0.3856986707856431,  0.5               ])
+v = array([0.605156204392249 , 0.053680237637796 , 0.0620060685662747, 0.059648427249592 , 0.605156204392249 , 0.053680237637796 , 0.0620060685662747, 0.059648427249592 , 1.6107368111675027])
+residuals = [-7.7307049650698900e-12 -1.4551915228366852e-11 -7.7307049650698900e-12 -1.8189894035458565e-11]
+margins sqrt(8v)-1/2-|w| = [0.0716718509786149 0.1266869404794301 0.0695148549472998 0.0764862054131403 0.0716718509786149 0.12668694047943   0.0695148549472998 0.0764862054131403 3.0896928126707475]  min dist 0.020626142999340177

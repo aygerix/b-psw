@@ -1,0 +1,15 @@
+N = 4451, log2|G| = 2526.4  (instance file says 2525.4088)
+bits by prime l (top 8): 2:466, 3:287, 5:167, 7:135, 11:97, 13:89, 17:74, 23:68
+  l=2: ranks by depth [238, 115, 55, 28, 14, 9, 5, 2]
+  l=3: ranks by depth [116, 37, 13, 6, 3, 2, 1, 1, 1, 1]
+  l=5: ranks by depth [58, 12, 2]
+  l=7: ranks by depth [39, 6, 2, 1]
+depth-1 bits at l in {2,3,5}: 557 of 2526 (22.0%)
+best hybrid: kill depths (2,3,5) = (0, 0, 0), ell = 79, residual bits 2526, log2(base elements needed) = 37.3 vs log2 N = 12.1: deficit 25.2 bits
+pure k-tree at ell=79: log2 N needed = 37.3
+   pure k-tree ell=30: log2 N = 88.9
+   pure k-tree ell=40: log2 N = 68.3
+   pure k-tree ell=50: log2 N = 55.6
+   pure k-tree ell=64: log2 N = 45.0
+layer-1 images, l=2: 237 rows with l | q-1, GF(2) rank of the 4451 pool images = 236
+layer-1 images, l=3: 115 rows with l | q-1, GF(3) rank of the 4451 pool images = 115

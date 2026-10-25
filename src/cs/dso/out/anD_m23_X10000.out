@@ -1,0 +1,14 @@
+# D = -23, X = 10000, census rows = 2092, max p = 5007601
+# inert 958, split 1133, ramified 1
+# p > X: 865
+cell-size histogram: [(1, 2090), (2, 1)]
+  cell (ord, z) = (1530, 765): [(1531, 1), (6121, 1)]  gcd(odd ord, odd z) = 765  unusable (shared odd prime)
+usable primes: 964 (inert 958, split 6)
+2-adic classes (v2 ord, v2 z): #usable [#inert]: [((2, 0), 151, 151), ((2, 1), 128, 128), ((1, 0), 97, 97), ((1, 2), 88, 88), ((1, 1), 82, 81), ((0, 3), 72, 72), ((0, 0), 69, 69), ((0, 2), 57, 57), ((0, 1), 51, 51), ((0, 4), 44, 44), ((3, 0), 30, 30), ((3, 1), 16, 16), ((4, 0), 16, 16), ((0, 5), 11, 11), ((0, 6), 10, 10), ((4, 1), 10, 10), ((5, 0), 7, 7), ((0, 7), 6, 6), ((6, 1), 3, 3), ((6, 0), 3, 3)]
+pairwise-closed graph: 0 edges, max clique 1
+exact search (k <= 5) done in 3.7 s
+  k = 2: subsets in scope 4.084e+04, anchor survivors 0, full solutions 0
+  k = 3: subsets in scope 1.431e+06, anchor survivors 1, full solutions 0
+  k = 4: subsets in scope 4.173e+07, anchor survivors 24, full solutions 0
+  k = 5: subsets in scope 1.04e+09, anchor survivors 391, full solutions 0
+bpsw.py tests: 1, passes: 0

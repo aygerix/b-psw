@@ -1,0 +1,15 @@
+03:35:35 start pc7: env [NS_AMIN=0.01 NS_WMODE=c] args [7 0 real -+ 1000 141 250 400 1 1e-3]
+03:38:34 done pc7 (exit 0)
+03:38:34 start rc5l0: env [NS_AMIN=0.01 NS_WMODE=c] args [5 0 real -+ 2000 111 250 400 0 1e-3]
+03:41:18 done rc5l0 (exit 0)
+03:41:18 start rc5l1: env [NS_AMIN=0.01 NS_WMODE=c] args [5 1 real -+ 2000 112 250 400 0 1e-3]
+03:42:43 done rc5l1 (exit 0)
+03:42:43 start rc7l0: env [NS_AMIN=0.01 NS_WMODE=c] args [7 0 real -+ 2000 113 250 400 0 1e-3]
+03:49:26 done rc7l0 (exit 0)
+03:49:26 start rc7l1: env [NS_AMIN=0.01 NS_WMODE=c] args [7 1 real -+ 2000 114 250 400 0 1e-3]
+03:53:52 done rc7l1 (exit 0)
+03:53:52 start pc9: env [NS_AMIN=0.01 NS_WMODE=c] args [9 0 real -+ 1000 142 250 400 1 1e-3]
+03:58:17 done pc9 (exit 0)
+03:58:17 start r9c2: env [NS_AMIN=0.01 NS_WMODE=c] args [9 0 real -+ 2000 123 250 400 0 1e-3]
+04:07:20 done r9c2 (exit 0)
+04:07:20 start r9l1c2: env [NS_AMIN=0.01 NS_WMODE=c] args [9 1 real -+ 2000 124 250 400 0 1e-3]

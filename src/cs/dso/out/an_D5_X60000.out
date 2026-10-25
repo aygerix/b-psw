@@ -1,0 +1,38 @@
+# D = 5, X = 60000, census rows = 11121, max p = 662671081
+# inert 4452, split 6668, ramified 1
+# p > X: 5065
+cell-size histogram: [(1, 11073), (2, 24)]
+  cell (ord, z) = (388, 485): [(3881, 1), (5821, 1)]  gcd(odd ord, odd z) = 97  unusable (shared odd prime)
+  cell (ord, z) = (2850, 2850): [(2851, 1), (14251, 1)]  gcd(odd ord, odd z) = 1425  unusable (shared odd prime)
+  cell (ord, z) = (3600, 3600): [(14401, 1), (79201, 1)]  gcd(odd ord, odd z) = 225  unusable (shared odd prime)
+  cell (ord, z) = (3840, 3840): [(7681, 1), (15361, 1)]  gcd(odd ord, odd z) = 15  unusable (shared odd prime)
+  cell (ord, z) = (3988, 1994): [(3989, 1), (23929, 1)]  gcd(odd ord, odd z) = 997  unusable (shared odd prime)
+  cell (ord, z) = (4215, 8430): [(8431, 1), (33721, 1)]  gcd(odd ord, odd z) = 4215  unusable (shared odd prime)
+  cell (ord, z) = (7562, 37810): [(37811, 1), (151241, 1)]  gcd(odd ord, odd z) = 3781  unusable (shared odd prime)
+  cell (ord, z) = (8020, 6015): [(24061, 1), (48121, 1)]  gcd(odd ord, odd z) = 2005  unusable (shared odd prime)
+  cell (ord, z) = (9500, 11875): [(47501, 1), (142501, 1)]  gcd(odd ord, odd z) = 2375  unusable (shared odd prime)
+  cell (ord, z) = (10226, 51130): [(51131, 1), (204521, 1)]  gcd(odd ord, odd z) = 5113  unusable (shared odd prime)
+  cell (ord, z) = (12004, 15005): [(120041, 1), (720241, 1)]  gcd(odd ord, odd z) = 3001  unusable (shared odd prime)
+  cell (ord, z) = (13959, 27918): [(27919, 1), (139591, 1)]  gcd(odd ord, odd z) = 13959  unusable (shared odd prime)
+  cell (ord, z) = (16665, 33330): [(99991, 1), (133321, 1)]  gcd(odd ord, odd z) = 16665  unusable (shared odd prime)
+  cell (ord, z) = (16839, 33678): [(33679, 1), (168391, 1)]  gcd(odd ord, odd z) = 16839  unusable (shared odd prime)
+  cell (ord, z) = (18495, 36990): [(591841, 1), (32551201, 1)]  gcd(odd ord, odd z) = 18495  unusable (shared odd prime)
+  cell (ord, z) = (24028, 12014): [(24029, 1), (144169, 1)]  gcd(odd ord, odd z) = 6007  unusable (shared odd prime)
+  cell (ord, z) = (28020, 4670): [(84061, 1), (728521, 1)]  gcd(odd ord, odd z) = 2335  unusable (shared odd prime)
+  cell (ord, z) = (28025, 56050): [(168151, 1), (392351, 1)]  gcd(odd ord, odd z) = 28025  unusable (shared odd prime)
+  cell (ord, z) = (29255, 58510): [(58511, 1), (936161, 1)]  gcd(odd ord, odd z) = 29255  unusable (shared odd prime)
+  cell (ord, z) = (47700, 23850): [(47701, 1), (95401, 1)]  gcd(odd ord, odd z) = 11925  unusable (shared odd prime)
+  cell (ord, z) = (52300, 13075): [(52301, 1), (156901, 1)]  gcd(odd ord, odd z) = 13075  unusable (shared odd prime)
+  cell (ord, z) = (53188, 13297): [(53189, 1), (319129, 1)]  gcd(odd ord, odd z) = 13297  unusable (shared odd prime)
+  cell (ord, z) = (54200, 54200): [(108401, 1), (325201, 1)]  gcd(odd ord, odd z) = 6775  unusable (shared odd prime)
+  cell (ord, z) = (54268, 13567): [(54269, 1), (4938389, 1)]  gcd(odd ord, odd z) = 13567  unusable (shared odd prime)
+usable primes: 4456 (inert 4452, split 4)
+2-adic classes (v2 ord, v2 z): #usable [#inert]: [((2, 0), 1512, 1512), ((1, 2), 803, 803), ((0, 3), 474, 474), ((0, 0), 366, 366), ((1, 0), 304, 304), ((3, 0), 248, 248), ((0, 4), 237, 237), ((4, 0), 145, 145), ((0, 5), 120, 120), ((5, 0), 64, 64), ((0, 6), 51, 51), ((6, 0), 32, 32), ((0, 7), 31, 31), ((7, 0), 15, 15), ((0, 8), 15, 15), ((8, 0), 11, 11), ((0, 9), 7, 7), ((9, 0), 7, 7), ((0, 10), 7, 7), ((0, 11), 1, 1)]
+pairwise-closed graph: 0 edges, max clique 1
+exact search (k <= 5) done in 630.6 s
+  k = 2: subsets in scope 1.77e+06, anchor survivors 0, full solutions 0
+  k = 3: subsets in scope 6.969e+08, anchor survivors 3, full solutions 0
+  k = 4: subsets in scope 2.376e+11, anchor survivors 2219, full solutions 0
+  k = 5: subsets in scope 6.845e+13, anchor survivors 458999, full solutions 0
+bpsw.py tests: 24, passes: 0
+631.86 s 203852 KB

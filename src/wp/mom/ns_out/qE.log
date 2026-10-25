@@ -1,0 +1,4 @@
+04:45:48 start pc11mB: env [NS_AMIN=0.01 NS_WMODE=c NS_BDEF=1e-3] args [11 0 real - 500 329 250 400 1 1e-3]
+04:48:58 done pc11mB (exit 0)
+04:48:58 start c11long: env [NS_AMIN=0.01 NS_WMODE=c NS_BDEF=1e-3] args [11 0 real - 1000 405 250 1200 0 1e-3]
+05:09:10 done c11long (exit 0)

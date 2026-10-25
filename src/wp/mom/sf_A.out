@@ -1,0 +1,225 @@
+   start 0: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.099e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 5.50e+02  nfev = 75
+   start 1: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.677e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 8.39e+02  nfev = 55
+   start 2: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.586e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 7.93e+02  nfev = 89
+   start 3: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.423e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 7.12e+02  nfev = 80
+   start 4: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.386e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 6.94e+02  nfev = 69
+   start 5: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.077e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 5.39e+02  nfev = 70
+   start 6: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 2.052e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 1.03e+03  nfev = 66
+   start 7: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.075e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 5.38e+02  nfev = 90
+   start 8: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.249e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 6.25e+02  nfev = 74
+   start 9: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.462e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 7.32e+02  nfev = 84
+   start 10: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.340e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 6.71e+02  nfev = 89
+   start 11: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.774e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 8.88e+02  nfev = 84
+   start 12: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 2.755e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 1.38e+03  nfev = 86
+   start 13: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.305e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 6.53e+02  nfev = 91
+   start 14: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.493e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 7.47e+02  nfev = 74
+   start 15: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.451e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 7.26e+02  nfev = 78
+   start 16: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.030e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 5.15e+02  nfev = 69
+   start 17: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.650e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 8.26e+02  nfev = 95
+   start 18: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.141e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 5.71e+02  nfev = 87
+   start 19: res2(root) = 8.000e+00  res2(rem) = 4.000e+00  dmin = 1.601e+03  |lead| in [1.00e+00, 1.00e+00]  max|coef| = 8.01e+02  nfev = 79
+SUMMARY mode=real defl=True degs=[2, 2] nneg=1 unknowns=4 starts=20: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 20}
+   BEST res2(root) = 8.000e+00 res2(rem) = 4.000e+00; min pair dist = 1.099e+03, |lead| in [1.000e+00, 1.000e+00], max |coef| = 5.501e+02
+   start 0: res2(root) = 2.856e+01  res2(rem) = 1.428e+01  dmin = 6.260e+00  |lead| in [8.28e-01, 1.24e+00]  max|coef| = 3.19e+01  nfev = 800
+   start 1: res2(root) = 2.729e+01  res2(rem) = 1.365e+01  dmin = 1.163e+01  |lead| in [7.92e-01, 1.11e+00]  max|coef| = 1.17e+02  nfev = 800
+   start 2: res2(root) = 6.676e+01  res2(rem) = 3.332e+01  dmin = 1.618e+00  |lead| in [5.78e-01, 1.02e+00]  max|coef| = 1.16e+00  nfev = 93
+   start 3: res2(root) = 4.204e+01  res2(rem) = 2.295e+01  dmin = 1.911e+00  |lead| in [8.35e-01, 1.41e+00]  max|coef| = 2.10e+00  nfev = 60
+   start 4: res2(root) = 2.724e+01  res2(rem) = 1.362e+01  dmin = 1.320e+01  |lead| in [7.17e-01, 1.00e+00]  max|coef| = 1.42e+02  nfev = 800
+   start 5: res2(root) = 3.582e+01  res2(rem) = 1.791e+01  dmin = 2.875e+00  |lead| in [8.95e-01, 1.62e+00]  max|coef| = 7.03e+00  nfev = 800
+   start 6: res2(root) = 2.723e+01  res2(rem) = 1.362e+01  dmin = 1.291e+01  |lead| in [7.90e-01, 1.10e+00]  max|coef| = 1.41e+02  nfev = 800
+   start 7: res2(root) = 4.204e+01  res2(rem) = 2.295e+01  dmin = 1.911e+00  |lead| in [8.35e-01, 1.41e+00]  max|coef| = 2.10e+00  nfev = 53
+   start 8: res2(root) = 2.724e+01  res2(rem) = 1.362e+01  dmin = 1.313e+01  |lead| in [7.90e-01, 1.10e+00]  max|coef| = 1.41e+02  nfev = 800
+   start 9: res2(root) = 2.737e+01  res2(rem) = 1.368e+01  dmin = 1.039e+01  |lead| in [7.96e-01, 1.12e+00]  max|coef| = 9.55e+01  nfev = 800
+   start 10: res2(root) = 4.204e+01  res2(rem) = 2.295e+01  dmin = 1.911e+00  |lead| in [8.35e-01, 1.41e+00]  max|coef| = 2.10e+00  nfev = 63
+   start 11: res2(root) = 2.721e+01  res2(rem) = 1.360e+01  dmin = 1.340e+01  |lead| in [7.88e-01, 1.10e+00]  max|coef| = 1.53e+02  nfev = 800
+   start 12: res2(root) = 2.721e+01  res2(rem) = 1.360e+01  dmin = 1.337e+01  |lead| in [7.19e-01, 1.00e+00]  max|coef| = 1.51e+02  nfev = 800
+   start 13: res2(root) = 2.717e+01  res2(rem) = 1.359e+01  dmin = 1.455e+01  |lead| in [7.86e-01, 1.09e+00]  max|coef| = 1.76e+02  nfev = 800
+   start 14: res2(root) = 4.204e+01  res2(rem) = 2.295e+01  dmin = 1.911e+00  |lead| in [8.35e-01, 1.41e+00]  max|coef| = 2.10e+00  nfev = 69
+   start 15: res2(root) = 4.204e+01  res2(rem) = 2.295e+01  dmin = 1.911e+00  |lead| in [8.35e-01, 1.41e+00]  max|coef| = 2.10e+00  nfev = 97
+   start 16: res2(root) = 2.740e+01  res2(rem) = 1.370e+01  dmin = 1.111e+01  |lead| in [7.97e-01, 1.13e+00]  max|coef| = 9.89e+01  nfev = 800
+   start 17: res2(root) = 2.734e+01  res2(rem) = 1.367e+01  dmin = 1.116e+01  |lead| in [7.95e-01, 1.12e+00]  max|coef| = 1.05e+02  nfev = 800
+   start 18: res2(root) = 4.204e+01  res2(rem) = 2.295e+01  dmin = 1.911e+00  |lead| in [8.35e-01, 1.41e+00]  max|coef| = 2.10e+00  nfev = 75
+   start 19: res2(root) = 2.756e+01  res2(rem) = 1.378e+01  dmin = 8.811e+00  |lead| in [8.01e-01, 1.15e+00]  max|coef| = 6.86e+01  nfev = 800
+SUMMARY mode=real defl=True degs=[2, 2, 2] nneg=1 unknowns=7 starts=20: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 20}
+   BEST res2(root) = 2.717e+01 res2(rem) = 1.359e+01; min pair dist = 1.455e+01, |lead| in [7.864e-01, 1.090e+00], max |coef| = 1.755e+02
+   start 0: res2(root) = 3.441e+04  res2(rem) = 3.977e+04  dmin = 2.230e+00  |lead| in [4.22e-01, 1.33e+01]  max|coef| = 4.42e+01  nfev = 121
+   start 1: res2(root) = 9.400e+01  res2(rem) = 4.847e+01  dmin = 6.158e-01  |lead| in [7.84e-01, 1.00e+00]  max|coef| = 1.01e+00  nfev = 82
+   start 2: res2(root) = 1.292e+03  res2(rem) = 1.029e+03  dmin = 2.986e+00  |lead| in [2.00e-01, 1.00e+00]  max|coef| = 4.74e+00  nfev = 130
+   start 3: res2(root) = 2.158e+02  res2(rem) = 9.745e+01  dmin = 1.413e+00  |lead| in [4.23e-01, 1.00e+00]  max|coef| = 2.10e+00  nfev = 66
+   start 4: res2(root) = 9.769e+01  res2(rem) = 5.482e+01  dmin = 6.476e-01  |lead| in [1.00e+00, 1.46e+00]  max|coef| = 1.46e+00  nfev = 1100
+   start 5: res2(root) = 4.170e+02  res2(rem) = 1.993e+02  dmin = 1.543e+00  |lead| in [8.44e-01, 1.60e+00]  max|coef| = 1.60e+00  nfev = 1100
+   start 6: res2(root) = 1.408e+02  res2(rem) = 5.179e+01  dmin = 7.845e-01  |lead| in [5.42e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 74
+   start 7: res2(root) = 2.503e+02  res2(rem) = 5.473e+02  dmin = 1.561e+00  |lead| in [3.91e-01, 1.00e+00]  max|coef| = 4.26e+00  nfev = 1100
+   start 8: res2(root) = 1.485e+02  res2(rem) = 1.086e+02  dmin = 1.072e+00  |lead| in [8.80e-01, 1.53e+00]  max|coef| = 2.11e+00  nfev = 1100
+   start 9: res2(root) = 1.549e+02  res2(rem) = 6.799e+01  dmin = 1.292e+00  |lead| in [6.22e-01, 1.00e+00]  max|coef| = 1.43e+00  nfev = 1100
+   start 10: res2(root) = 1.304e+02  res2(rem) = 3.606e+02  dmin = 1.972e+00  |lead| in [6.77e-01, 1.72e+00]  max|coef| = 4.63e+00  nfev = 213
+   start 11: res2(root) = 1.506e+03  res2(rem) = 1.800e+03  dmin = 2.658e+00  |lead| in [6.07e-01, 4.07e+00]  max|coef| = 9.48e+00  nfev = 69
+   start 12: res2(root) = 2.028e+02  res2(rem) = 8.891e+01  dmin = 1.081e+00  |lead| in [5.41e-01, 1.00e+00]  max|coef| = 1.26e+00  nfev = 57
+   start 13: res2(root) = 1.401e+02  res2(rem) = 6.785e+02  dmin = 1.896e+00  |lead| in [9.99e-01, 1.19e+00]  max|coef| = 2.92e+00  nfev = 126
+   start 14: res2(root) = 1.904e+02  res2(rem) = 2.546e+02  dmin = 1.653e+00  |lead| in [4.64e-01, 1.00e+00]  max|coef| = 2.66e+00  nfev = 88
+   start 15: res2(root) = 8.588e+01  res2(rem) = 6.909e+01  dmin = 1.217e+00  |lead| in [9.57e-01, 1.52e+00]  max|coef| = 1.99e+00  nfev = 1100
+   start 16: res2(root) = 7.603e+01  res2(rem) = 3.744e+01  dmin = 7.198e-01  |lead| in [6.67e-01, 1.01e+00]  max|coef| = 1.01e+00  nfev = 62
+   start 17: res2(root) = 6.328e+03  res2(rem) = 2.723e+03  dmin = 2.535e+00  |lead| in [8.06e-01, 9.37e+00]  max|coef| = 1.67e+01  nfev = 114
+   start 18: res2(root) = 3.723e+03  res2(rem) = 2.950e+03  dmin = 2.498e+00  |lead| in [4.51e-01, 3.45e+00]  max|coef| = 7.82e+00  nfev = 1100
+   start 19: res2(root) = 1.102e+02  res2(rem) = 5.505e+01  dmin = 1.141e+00  |lead| in [8.14e-01, 1.27e+00]  max|coef| = 1.27e+00  nfev = 56
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2] nneg=1 unknowns=10 starts=20: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 20}
+   BEST res2(root) = 7.603e+01 res2(rem) = 3.744e+01; min pair dist = 7.198e-01, |lead| in [6.669e-01, 1.011e+00], max |coef| = 1.011e+00
+   start 0: res2(root) = 7.485e+01  res2(rem) = 2.671e+02  dmin = 1.862e+00  |lead| in [1.00e+00, 2.14e+00]  max|coef| = 4.06e+00  nfev = 184
+   start 1: res2(root) = 1.287e+02  res2(rem) = 1.380e+02  dmin = 1.953e+00  |lead| in [7.41e-01, 1.37e+00]  max|coef| = 2.77e+00  nfev = 120
+   start 2: res2(root) = 5.651e+01  res2(rem) = 2.764e+01  dmin = 5.252e-01  |lead| in [7.99e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 59
+   start 3: res2(root) = 8.267e+01  res2(rem) = 4.499e+01  dmin = 1.054e+00  |lead| in [6.82e-01, 1.19e+00]  max|coef| = 1.87e+00  nfev = 1100
+   start 4: res2(root) = 2.257e+03  res2(rem) = 6.445e+02  dmin = 1.807e+00  |lead| in [2.80e-01, 1.00e+00]  max|coef| = 2.51e+00  nfev = 93
+   start 5: res2(root) = 1.337e+02  res2(rem) = 6.243e+01  dmin = 1.018e+00  |lead| in [5.11e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 64
+   start 6: res2(root) = 1.241e+02  res2(rem) = 5.032e+01  dmin = 1.127e+00  |lead| in [7.28e-01, 1.10e+00]  max|coef| = 1.47e+00  nfev = 72
+   start 7: res2(root) = 4.769e+01  res2(rem) = 2.596e+01  dmin = 6.821e-01  |lead| in [9.44e-01, 1.24e+00]  max|coef| = 1.39e+00  nfev = 1100
+   start 8: res2(root) = 1.153e+02  res2(rem) = 5.712e+01  dmin = 1.252e+00  |lead| in [4.42e-01, 1.00e+00]  max|coef| = 1.67e+00  nfev = 58
+   start 9: res2(root) = 3.900e+01  res2(rem) = 2.004e+01  dmin = 3.822e-01  |lead| in [8.67e-01, 1.03e+00]  max|coef| = 1.03e+00  nfev = 823
+   start 10: res2(root) = 2.414e+02  res2(rem) = 8.463e+01  dmin = 1.154e+00  |lead| in [5.92e-01, 1.00e+00]  max|coef| = 1.29e+00  nfev = 51
+   start 11: res2(root) = 1.083e+02  res2(rem) = 2.421e+02  dmin = 1.970e+00  |lead| in [7.76e-01, 1.88e+00]  max|coef| = 4.30e+00  nfev = 88
+   start 12: res2(root) = 1.105e+02  res2(rem) = 5.368e+01  dmin = 7.463e-01  |lead| in [8.21e-01, 1.71e+00]  max|coef| = 1.71e+00  nfev = 85
+   start 13: res2(root) = 1.216e+02  res2(rem) = 5.906e+01  dmin = 9.139e-01  |lead| in [5.70e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 70
+   start 14: res2(root) = 2.003e+02  res2(rem) = 2.660e+02  dmin = 2.107e+00  |lead| in [4.79e-01, 1.00e+00]  max|coef| = 3.04e+00  nfev = 60
+   start 15: res2(root) = 4.460e+02  res2(rem) = 6.160e+02  dmin = 2.716e+00  |lead| in [6.92e-01, 2.38e+00]  max|coef| = 4.41e+00  nfev = 68
+   start 16: res2(root) = 1.252e+02  res2(rem) = 5.667e+01  dmin = 6.582e-01  |lead| in [6.14e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 63
+   start 17: res2(root) = 9.704e+01  res2(rem) = 1.293e+02  dmin = 1.190e+00  |lead| in [8.58e-01, 1.44e+00]  max|coef| = 2.25e+00  nfev = 75
+   start 18: res2(root) = 2.117e+02  res2(rem) = 9.631e+01  dmin = 1.300e+00  |lead| in [5.79e-01, 1.00e+00]  max|coef| = 1.86e+00  nfev = 111
+   start 19: res2(root) = 1.636e+03  res2(rem) = 1.511e+03  dmin = 2.553e+00  |lead| in [1.48e-01, 1.00e+00]  max|coef| = 5.39e+00  nfev = 129
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2] nneg=2 unknowns=10 starts=20: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 20}
+   BEST res2(root) = 3.900e+01 res2(rem) = 2.004e+01; min pair dist = 3.822e-01, |lead| in [8.666e-01, 1.026e+00], max |coef| = 1.035e+00
+   start 0: res2(root) = 1.087e+02  res2(rem) = 5.450e+01  dmin = 9.840e-01  |lead| in [8.66e-01, 1.56e+00]  max|coef| = 1.56e+00  nfev = 88
+   start 1: res2(root) = 1.697e+02  res2(rem) = 8.697e+01  dmin = 1.891e+00  |lead| in [1.00e+00, 2.59e+00]  max|coef| = 2.59e+00  nfev = 1100
+   start 2: res2(root) = 1.063e+02  res2(rem) = 6.572e+02  dmin = 1.931e+00  |lead| in [8.74e-01, 1.38e+00]  max|coef| = 3.75e+00  nfev = 82
+   start 3: res2(root) = 5.736e+01  res2(rem) = 2.775e+01  dmin = 8.239e-01  |lead| in [9.68e-01, 1.18e+00]  max|coef| = 1.18e+00  nfev = 89
+   start 4: res2(root) = 1.382e+02  res2(rem) = 2.278e+02  dmin = 2.516e+00  |lead| in [1.00e+00, 1.91e+00]  max|coef| = 3.34e+00  nfev = 90
+   start 5: res2(root) = 5.488e+06  res2(rem) = 1.368e+06  dmin = 1.803e+00  |lead| in [9.02e-02, 1.00e+00]  max|coef| = 3.37e+00  nfev = 64
+   start 6: res2(root) = 1.807e+03  res2(rem) = 2.326e+03  dmin = 2.846e+00  |lead| in [1.00e+00, 6.69e+00]  max|coef| = 7.30e+00  nfev = 91
+   start 7: res2(root) = 4.537e+01  res2(rem) = 2.291e+01  dmin = 3.578e-01  |lead| in [1.00e+00, 1.42e+00]  max|coef| = 1.42e+00  nfev = 1100
+   start 8: res2(root) = 1.435e+02  res2(rem) = 7.792e+01  dmin = 1.556e+00  |lead| in [9.89e-01, 2.35e+00]  max|coef| = 2.35e+00  nfev = 1100
+   start 9: res2(root) = 1.339e+02  res2(rem) = 7.249e+01  dmin = 1.763e+00  |lead| in [1.00e+00, 2.08e+00]  max|coef| = 2.08e+00  nfev = 1100
+   start 10: res2(root) = 9.189e+01  res2(rem) = 4.489e+01  dmin = 9.678e-01  |lead| in [1.00e+00, 1.58e+00]  max|coef| = 1.58e+00  nfev = 225
+   start 11: res2(root) = 7.028e+02  res2(rem) = 2.402e+02  dmin = 1.113e+00  |lead| in [4.13e-01, 1.00e+00]  max|coef| = 1.28e+00  nfev = 72
+   start 12: res2(root) = 1.511e+02  res2(rem) = 7.959e+01  dmin = 1.552e+00  |lead| in [1.00e+00, 2.44e+00]  max|coef| = 2.44e+00  nfev = 1100
+   start 13: res2(root) = 6.820e+01  res2(rem) = 5.741e+01  dmin = 1.226e+00  |lead| in [1.00e+00, 1.39e+00]  max|coef| = 1.92e+00  nfev = 51
+   start 14: res2(root) = 9.026e+01  res2(rem) = 4.734e+01  dmin = 1.408e+00  |lead| in [1.00e+00, 1.53e+00]  max|coef| = 1.53e+00  nfev = 1100
+   start 15: res2(root) = 8.663e+01  res2(rem) = 1.036e+02  dmin = 1.933e+00  |lead| in [1.00e+00, 1.69e+00]  max|coef| = 2.53e+00  nfev = 75
+   start 16: res2(root) = 1.219e+02  res2(rem) = 5.532e+01  dmin = 4.987e-01  |lead| in [9.04e-01, 1.16e+00]  max|coef| = 1.16e+00  nfev = 65
+   start 17: res2(root) = 1.321e+02  res2(rem) = 8.527e+01  dmin = 1.526e+00  |lead| in [9.95e-01, 1.55e+00]  max|coef| = 1.55e+00  nfev = 61
+   start 18: res2(root) = 1.755e+02  res2(rem) = 8.994e+01  dmin = 8.180e-01  |lead| in [6.97e-01, 1.58e+00]  max|coef| = 2.03e+00  nfev = 1100
+   start 19: res2(root) = 1.196e+02  res2(rem) = 1.064e+02  dmin = 1.848e+00  |lead| in [1.00e+00, 2.18e+00]  max|coef| = 2.28e+00  nfev = 74
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2] nneg=3 unknowns=10 starts=20: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 20}
+   BEST res2(root) = 4.537e+01 res2(rem) = 2.291e+01; min pair dist = 3.578e-01, |lead| in [1.000e+00, 1.419e+00], max |coef| = 1.419e+00
+   start 0: res2(root) = 2.735e+02  res2(rem) = 2.800e+02  dmin = 1.624e+00  |lead| in [8.65e-01, 1.95e+00]  max|coef| = 3.67e+00  nfev = 65
+   start 1: res2(root) = 3.284e+04  res2(rem) = 1.696e+04  dmin = 1.427e+00  |lead| in [1.00e+00, 1.02e+01]  max|coef| = 1.42e+01  nfev = 123
+   start 2: res2(root) = 6.318e+05  res2(rem) = 1.022e+05  dmin = 1.812e+00  |lead| in [3.64e-02, 1.00e+00]  max|coef| = 1.28e+01  nfev = 1400
+   start 3: res2(root) = 7.568e+02  res2(rem) = 4.856e+02  dmin = 1.308e+00  |lead| in [8.92e-01, 1.89e+00]  max|coef| = 3.08e+00  nfev = 64
+   start 4: res2(root) = 2.618e+02  res2(rem) = 1.260e+02  dmin = 5.934e-01  |lead| in [8.16e-01, 1.49e+00]  max|coef| = 1.49e+00  nfev = 1400
+   start 5: res2(root) = 2.787e+03  res2(rem) = 1.527e+03  dmin = 1.457e+00  |lead| in [1.70e-01, 1.00e+00]  max|coef| = 2.57e+00  nfev = 90
+   start 6: res2(root) = 6.210e+04  res2(rem) = 1.293e+05  dmin = 2.600e+00  |lead| in [5.53e-02, 1.00e+00]  max|coef| = 6.28e+00  nfev = 116
+   start 7: res2(root) = 1.050e+05  res2(rem) = 2.368e+05  dmin = 2.586e+00  |lead| in [1.00e+00, 2.03e+01]  max|coef| = 4.92e+01  nfev = 92
+   start 8: res2(root) = 4.494e+02  res2(rem) = 2.102e+02  dmin = 8.121e-01  |lead| in [7.23e-01, 1.45e+00]  max|coef| = 1.45e+00  nfev = 70
+   start 9: res2(root) = 7.173e+05  res2(rem) = 2.214e+05  dmin = 1.622e+00  |lead| in [1.03e-01, 1.00e+00]  max|coef| = 8.12e+00  nfev = 116
+   start 10: res2(root) = 1.282e+11  res2(rem) = 8.373e+09  dmin = 9.188e-01  |lead| in [1.58e-01, 1.05e+00]  max|coef| = 7.20e+00  nfev = 52
+   start 11: res2(root) = 5.431e+02  res2(rem) = 4.759e+02  dmin = 1.187e+00  |lead| in [3.51e-01, 1.00e+00]  max|coef| = 2.10e+00  nfev = 89
+   start 12: res2(root) = 3.480e+02  res2(rem) = 1.714e+02  dmin = 6.393e-01  |lead| in [7.82e-01, 1.52e+00]  max|coef| = 1.52e+00  nfev = 54
+   start 13: res2(root) = 1.298e+03  res2(rem) = 4.824e+02  dmin = 9.153e-01  |lead| in [2.46e-01, 1.00e+00]  max|coef| = 2.28e+00  nfev = 101
+   start 14: res2(root) = 1.643e+03  res2(rem) = 2.279e+03  dmin = 1.924e+00  |lead| in [4.05e-01, 1.16e+00]  max|coef| = 4.93e+00  nfev = 81
+   start 15: res2(root) = 2.967e+03  res2(rem) = 1.134e+03  dmin = 1.130e+00  |lead| in [9.61e-01, 1.63e+00]  max|coef| = 3.61e+00  nfev = 80
+   start 16: res2(root) = 9.287e+01  res2(rem) = 4.587e+01  dmin = 3.672e-01  |lead| in [7.71e-01, 1.08e+00]  max|coef| = 1.08e+00  nfev = 130
+   start 17: res2(root) = 5.163e+10  res2(rem) = 3.287e+09  dmin = 1.380e+00  |lead| in [2.41e-01, 1.00e+00]  max|coef| = 4.54e+00  nfev = 1400
+   start 18: res2(root) = 4.906e+02  res2(rem) = 2.423e+02  dmin = 9.884e-01  |lead| in [4.98e-01, 1.00e+00]  max|coef| = 1.54e+00  nfev = 79
+   start 19: res2(root) = 1.733e+04  res2(rem) = 5.915e+03  dmin = 1.283e+00  |lead| in [2.26e-01, 1.00e+00]  max|coef| = 1.55e+00  nfev = 83
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2, 2] nneg=1 unknowns=13 starts=20: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 20}
+   BEST res2(root) = 9.287e+01 res2(rem) = 4.587e+01; min pair dist = 3.672e-01, |lead| in [7.707e-01, 1.082e+00], max |coef| = 1.082e+00
+   start 0: res2(root) = 4.284e+04  res2(rem) = 1.774e+05  dmin = 1.805e+00  |lead| in [4.33e-01, 9.20e+00]  max|coef| = 3.33e+01  nfev = 119
+   start 1: res2(root) = 2.314e+02  res2(rem) = 1.168e+03  dmin = 1.036e+00  |lead| in [4.85e-01, 2.07e+00]  max|coef| = 7.32e+00  nfev = 79
+   start 2: res2(root) = 3.336e+05  res2(rem) = 1.952e+05  dmin = 1.468e+00  |lead| in [7.81e-01, 2.48e+01]  max|coef| = 4.94e+01  nfev = 118
+   start 3: res2(root) = 3.379e+02  res2(rem) = 1.670e+02  dmin = 1.054e+00  |lead| in [3.82e-01, 1.00e+00]  max|coef| = 1.62e+00  nfev = 67
+   start 4: res2(root) = 3.542e+03  res2(rem) = 8.192e+03  dmin = 1.490e+00  |lead| in [1.35e-01, 1.00e+00]  max|coef| = 4.51e+00  nfev = 96
+   start 5: res2(root) = 2.425e+02  res2(rem) = 1.212e+02  dmin = 8.146e-01  |lead| in [7.36e-01, 1.00e+00]  max|coef| = 1.34e+00  nfev = 83
+   start 6: res2(root) = 1.362e+02  res2(rem) = 9.453e+01  dmin = 5.257e-01  |lead| in [6.90e-01, 1.00e+00]  max|coef| = 1.36e+00  nfev = 1400
+   start 7: res2(root) = 2.032e+03  res2(rem) = 8.666e+02  dmin = 1.151e+00  |lead| in [5.87e-01, 1.00e+00]  max|coef| = 4.20e+00  nfev = 79
+   start 8: res2(root) = 3.840e+02  res2(rem) = 1.687e+02  dmin = 1.038e+00  |lead| in [5.49e-01, 1.00e+00]  max|coef| = 1.73e+00  nfev = 73
+   start 9: res2(root) = 1.315e+03  res2(rem) = 5.783e+02  dmin = 1.298e+00  |lead| in [2.56e-01, 1.00e+00]  max|coef| = 1.85e+00  nfev = 97
+   start 10: res2(root) = 1.965e+02  res2(rem) = 9.242e+01  dmin = 9.933e-01  |lead| in [6.79e-01, 1.22e+00]  max|coef| = 1.53e+00  nfev = 69
+   start 11: res2(root) = 2.283e+02  res2(rem) = 1.078e+02  dmin = 8.317e-01  |lead| in [8.32e-01, 1.26e+00]  max|coef| = 1.26e+00  nfev = 80
+   start 12: res2(root) = 4.720e+03  res2(rem) = 1.068e+03  dmin = 1.113e+00  |lead| in [7.98e-01, 1.47e+00]  max|coef| = 2.47e+00  nfev = 85
+   start 13: res2(root) = 6.598e+02  res2(rem) = 4.567e+02  dmin = 1.260e+00  |lead| in [3.49e-01, 1.00e+00]  max|coef| = 2.11e+00  nfev = 154
+   start 14: res2(root) = 2.111e+02  res2(rem) = 9.102e+01  dmin = 8.586e-01  |lead| in [8.56e-01, 1.02e+00]  max|coef| = 1.02e+00  nfev = 1400
+   start 15: res2(root) = 7.552e+02  res2(rem) = 3.082e+02  dmin = 1.407e+00  |lead| in [6.02e-01, 1.02e+00]  max|coef| = 1.55e+00  nfev = 103
+   start 16: res2(root) = 5.327e+02  res2(rem) = 7.694e+03  dmin = 2.240e+00  |lead| in [9.03e-01, 3.07e+00]  max|coef| = 8.11e+00  nfev = 90
+   start 17: res2(root) = 1.899e+02  res2(rem) = 8.586e+01  dmin = 9.926e-01  |lead| in [6.49e-01, 1.03e+00]  max|coef| = 1.23e+00  nfev = 79
+   start 18: res2(root) = 1.997e+02  res2(rem) = 8.656e+01  dmin = 7.865e-01  |lead| in [6.65e-01, 1.05e+00]  max|coef| = 1.05e+00  nfev = 55
+   start 19: res2(root) = 8.606e+03  res2(rem) = 3.624e+03  dmin = 1.642e+00  |lead| in [1.12e-01, 1.00e+00]  max|coef| = 2.35e+00  nfev = 102
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2, 2] nneg=2 unknowns=13 starts=20: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 20}
+   BEST res2(root) = 1.362e+02 res2(rem) = 9.453e+01; min pair dist = 5.257e-01, |lead| in [6.896e-01, 1.000e+00], max |coef| = 1.358e+00
+   start 0: res2(root) = 1.114e+03  res2(rem) = 2.933e+03  dmin = 1.389e+00  |lead| in [3.15e-01, 1.00e+00]  max|coef| = 3.72e+00  nfev = 102
+   start 1: res2(root) = 1.095e+03  res2(rem) = 1.079e+03  dmin = 1.351e+00  |lead| in [1.00e+00, 2.26e+00]  max|coef| = 3.15e+00  nfev = 179
+   start 2: res2(root) = 1.455e+06  res2(rem) = 4.265e+06  dmin = 1.364e+00  |lead| in [4.81e-01, 3.70e+00]  max|coef| = 2.84e+01  nfev = 172
+   start 3: res2(root) = 7.803e+02  res2(rem) = 3.816e+02  dmin = 6.170e-01  |lead| in [7.24e-01, 1.04e+00]  max|coef| = 1.70e+00  nfev = 118
+   start 4: res2(root) = 6.775e+03  res2(rem) = 3.576e+03  dmin = 1.359e+00  |lead| in [1.45e-01, 1.00e+00]  max|coef| = 3.98e+00  nfev = 107
+   start 5: res2(root) = 1.318e+03  res2(rem) = 4.716e+02  dmin = 4.957e-01  |lead| in [5.39e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 1700
+   start 6: res2(root) = 2.010e+02  res2(rem) = 9.436e+01  dmin = 3.285e-01  |lead| in [9.36e-01, 1.17e+00]  max|coef| = 1.17e+00  nfev = 79
+   start 7: res2(root) = 1.618e+30  res2(rem) = 2.608e+27  dmin = 8.481e-01  |lead| in [1.11e-01, 5.73e+00]  max|coef| = 1.91e+03  nfev = 70
+   start 8: res2(root) = 1.452e+05  res2(rem) = 4.801e+04  dmin = 8.172e-01  |lead| in [3.02e-01, 1.00e+00]  max|coef| = 1.13e+00  nfev = 112
+   start 9: res2(root) = 3.445e+20  res2(rem) = 7.984e+18  dmin = 1.577e+00  |lead| in [1.18e-01, 4.75e+00]  max|coef| = 6.23e+02  nfev = 179
+   start 10: res2(root) = 4.163e+07  res2(rem) = 4.669e+06  dmin = 6.274e-01  |lead| in [4.58e-01, 1.00e+00]  max|coef| = 1.09e+00  nfev = 66
+   start 11: res2(root) = 1.180e+03  res2(rem) = 4.347e+02  dmin = 6.270e-01  |lead| in [6.85e-01, 1.18e+00]  max|coef| = 1.18e+00  nfev = 59
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2, 2, 2] nneg=1 unknowns=16 starts=12: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 12}
+   BEST res2(root) = 2.010e+02 res2(rem) = 9.436e+01; min pair dist = 3.285e-01, |lead| in [9.360e-01, 1.169e+00], max |coef| = 1.169e+00
+   start 0: res2(root) = 4.787e+03  res2(rem) = 7.800e+04  dmin = 1.146e+00  |lead| in [4.98e-01, 4.12e+00]  max|coef| = 1.27e+01  nfev = 210
+   start 1: res2(root) = 4.353e+06  res2(rem) = 2.181e+06  dmin = 1.303e+00  |lead| in [5.26e-01, 2.44e+00]  max|coef| = 1.92e+01  nfev = 63
+   start 2: res2(root) = 1.859e+04  res2(rem) = 3.565e+04  dmin = 8.277e-01  |lead| in [7.56e-01, 7.66e+00]  max|coef| = 1.64e+01  nfev = 132
+   start 3: res2(root) = 3.015e+02  res2(rem) = 1.291e+02  dmin = 4.722e-01  |lead| in [8.28e-01, 1.33e+00]  max|coef| = 1.33e+00  nfev = 69
+   start 4: res2(root) = 7.114e+02  res2(rem) = 3.178e+02  dmin = 6.141e-01  |lead| in [6.28e-01, 1.28e+00]  max|coef| = 1.28e+00  nfev = 67
+   start 5: res2(root) = 1.037e+03  res2(rem) = 2.966e+02  dmin = 3.714e+00  |lead| in [8.31e-01, 4.00e+00]  max|coef| = 8.95e+01  nfev = 95
+   start 6: res2(root) = 1.976e+03  res2(rem) = 9.402e+02  dmin = 6.342e-01  |lead| in [3.71e-01, 1.00e+00]  max|coef| = 2.47e+00  nfev = 73
+   start 7: res2(root) = 3.257e+02  res2(rem) = 1.688e+02  dmin = 7.857e-01  |lead| in [9.64e-01, 1.48e+00]  max|coef| = 1.48e+00  nfev = 1700
+   start 8: res2(root) = 2.279e+02  res2(rem) = 1.030e+02  dmin = 4.668e-01  |lead| in [8.32e-01, 1.18e+00]  max|coef| = 1.18e+00  nfev = 91
+   start 9: res2(root) = 8.094e+03  res2(rem) = 3.127e+04  dmin = 1.319e+00  |lead| in [1.93e-01, 1.00e+00]  max|coef| = 3.98e+00  nfev = 205
+   start 10: res2(root) = 9.993e+03  res2(rem) = 2.895e+03  dmin = 7.263e-01  |lead| in [3.61e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 1700
+   start 11: res2(root) = 7.897e+03  res2(rem) = 3.069e+03  dmin = 1.185e+00  |lead| in [1.14e-01, 1.00e+00]  max|coef| = 3.71e+00  nfev = 90
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2, 2, 2] nneg=3 unknowns=16 starts=12: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 12}
+   BEST res2(root) = 2.279e+02 res2(rem) = 1.030e+02; min pair dist = 4.668e-01, |lead| in [8.321e-01, 1.183e+00], max |coef| = 1.183e+00
+   start 0: res2(root) = 5.217e+08  res2(rem) = 9.474e+07  dmin = 9.349e-01  |lead| in [3.88e-01, 1.01e+00]  max|coef| = 6.86e+00  nfev = 103
+   start 1: res2(root) = 7.870e+03  res2(rem) = 3.576e+03  dmin = 7.969e-01  |lead| in [9.56e-01, 1.66e+00]  max|coef| = 1.66e+00  nfev = 69
+   start 2: res2(root) = 1.121e+07  res2(rem) = 4.467e+06  dmin = 1.345e+00  |lead| in [4.43e-01, 1.43e+00]  max|coef| = 3.87e+00  nfev = 94
+   start 3: res2(root) = 5.802e+02  res2(rem) = 2.526e+02  dmin = 2.388e-01  |lead| in [7.49e-01, 1.10e+00]  max|coef| = 1.10e+00  nfev = 59
+   start 4: res2(root) = 2.824e+03  res2(rem) = 1.558e+04  dmin = 7.225e-01  |lead| in [5.00e-01, 2.59e+00]  max|coef| = 9.22e+00  nfev = 108
+   start 5: res2(root) = 5.881e+03  res2(rem) = 2.023e+03  dmin = 5.033e-01  |lead| in [4.48e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 2000
+   start 6: res2(root) = 1.470e+03  res2(rem) = 6.115e+02  dmin = 4.109e-01  |lead| in [7.07e-01, 1.31e+00]  max|coef| = 1.31e+00  nfev = 100
+   start 7: res2(root) = 1.108e+08  res2(rem) = 1.310e+07  dmin = 7.276e-01  |lead| in [3.84e-01, 1.00e+00]  max|coef| = 2.20e+00  nfev = 75
+   start 8: res2(root) = 8.173e+02  res2(rem) = 3.192e+02  dmin = 3.622e-01  |lead| in [7.25e-01, 1.10e+00]  max|coef| = 1.10e+00  nfev = 2000
+   start 9: res2(root) = 2.525e+04  res2(rem) = 7.917e+03  dmin = 7.223e-01  |lead| in [2.80e-01, 1.00e+00]  max|coef| = 1.26e+00  nfev = 169
+   start 10: res2(root) = 9.517e+07  res2(rem) = 2.747e+07  dmin = 9.475e-01  |lead| in [6.73e-01, 1.60e+00]  max|coef| = 2.17e+00  nfev = 101
+   start 11: res2(root) = 3.412e+24  res2(rem) = 6.651e+22  dmin = 1.404e+00  |lead| in [1.75e-01, 1.70e+00]  max|coef| = 1.67e+01  nfev = 71
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2, 2, 2, 2] nneg=1 unknowns=19 starts=12: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 12}
+   BEST res2(root) = 5.802e+02 res2(rem) = 2.526e+02; min pair dist = 2.388e-01, |lead| in [7.494e-01, 1.101e+00], max |coef| = 1.101e+00
+   start 0: res2(root) = 1.696e+06  res2(rem) = 4.262e+05  dmin = 9.094e-01  |lead| in [2.08e-01, 1.05e+00]  max|coef| = 3.77e+00  nfev = 105
+   start 1: res2(root) = 3.145e+08  res2(rem) = 9.607e+07  dmin = 9.269e-01  |lead| in [4.57e-02, 1.00e+00]  max|coef| = 4.23e+00  nfev = 2000
+   start 2: res2(root) = 9.703e+04  res2(rem) = 2.999e+04  dmin = 1.110e+00  |lead| in [4.13e-01, 1.00e+00]  max|coef| = 6.16e+00  nfev = 91
+   start 3: res2(root) = 2.930e+04  res2(rem) = 6.330e+03  dmin = 5.325e-01  |lead| in [5.42e-01, 1.00e+00]  max|coef| = 1.20e+00  nfev = 54
+   start 4: res2(root) = 1.665e+03  res2(rem) = 8.977e+02  dmin = 5.052e-01  |lead| in [7.37e-01, 1.25e+00]  max|coef| = 1.25e+00  nfev = 72
+   start 5: res2(root) = 5.657e+05  res2(rem) = 2.654e+05  dmin = 1.079e+00  |lead| in [4.13e-01, 1.62e+00]  max|coef| = 4.48e+00  nfev = 77
+   start 6: res2(root) = 4.869e+30  res2(rem) = 4.016e+28  dmin = 2.381e+00  |lead| in [1.55e-01, 6.15e+00]  max|coef| = 2.22e+02  nfev = 90
+   start 7: res2(root) = 3.818e+06  res2(rem) = 7.361e+08  dmin = 1.497e+00  |lead| in [5.05e-02, 1.00e+00]  max|coef| = 1.09e+01  nfev = 137
+   start 8: res2(root) = 4.126e+04  res2(rem) = 2.037e+04  dmin = 9.115e-01  |lead| in [3.05e-01, 1.00e+00]  max|coef| = 1.76e+00  nfev = 82
+   start 9: res2(root) = 1.682e+03  res2(rem) = 7.360e+02  dmin = 4.640e-01  |lead| in [6.59e-01, 1.40e+00]  max|coef| = 1.40e+00  nfev = 2000
+   start 10: res2(root) = 7.501e+06  res2(rem) = 8.975e+05  dmin = 8.403e-01  |lead| in [7.63e-02, 1.00e+00]  max|coef| = 2.01e+01  nfev = 147
+   start 11: res2(root) = 5.174e+02  res2(rem) = 2.194e+02  dmin = 2.977e-01  |lead| in [8.55e-01, 1.24e+00]  max|coef| = 1.24e+00  nfev = 101
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2, 2, 2, 2] nneg=2 unknowns=19 starts=12: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 12}
+   BEST res2(root) = 5.174e+02 res2(rem) = 2.194e+02; min pair dist = 2.977e-01, |lead| in [8.555e-01, 1.236e+00], max |coef| = 1.236e+00
+   start 0: res2(root) = 8.677e+02  res2(rem) = 4.339e+02  dmin = 5.976e-01  |lead| in [8.70e-01, 1.37e+00]  max|coef| = 1.37e+00  nfev = 93
+   start 1: res2(root) = 4.348e+07  res2(rem) = 5.452e+06  dmin = 8.517e-01  |lead| in [2.36e-01, 1.63e+00]  max|coef| = 5.57e+00  nfev = 78
+   start 2: res2(root) = 2.109e+12  res2(rem) = 1.865e+11  dmin = 8.510e-01  |lead| in [4.19e-01, 1.00e+00]  max|coef| = 1.60e+00  nfev = 2000
+   start 3: res2(root) = 5.185e+06  res2(rem) = 1.144e+08  dmin = 1.519e+00  |lead| in [3.14e-02, 1.00e+00]  max|coef| = 8.15e+00  nfev = 154
+   start 4: res2(root) = 3.613e+03  res2(rem) = 3.963e+03  dmin = 1.228e+00  |lead| in [2.42e-01, 1.00e+00]  max|coef| = 2.04e+00  nfev = 80
+   start 5: res2(root) = 2.656e+10  res2(rem) = 3.559e+09  dmin = 9.701e-01  |lead| in [1.66e-01, 1.00e+00]  max|coef| = 1.93e+00  nfev = 96
+   start 6: res2(root) = 2.244e+03  res2(rem) = 1.011e+03  dmin = 4.657e-01  |lead| in [7.84e-01, 1.17e+00]  max|coef| = 1.17e+00  nfev = 312
+   start 7: res2(root) = 8.862e+05  res2(rem) = 2.422e+06  dmin = 1.340e+00  |lead| in [8.98e-02, 1.00e+00]  max|coef| = 1.56e+01  nfev = 138
+   start 8: res2(root) = 1.055e+03  res2(rem) = 4.089e+02  dmin = 4.171e-01  |lead| in [4.83e-01, 1.00e+00]  max|coef| = 1.00e+00  nfev = 67
+   start 9: res2(root) = 3.101e+08  res2(rem) = 4.593e+07  dmin = 2.031e+00  |lead| in [1.74e-01, 1.00e+00]  max|coef| = 6.09e+00  nfev = 135
+   start 10: res2(root) = 6.742e+04  res2(rem) = 4.305e+04  dmin = 1.455e+00  |lead| in [2.42e-01, 1.00e+00]  max|coef| = 3.57e+00  nfev = 108
+   start 11: res2(root) = 3.064e+03  res2(rem) = 5.100e+03  dmin = 1.270e+00  |lead| in [3.33e-01, 1.00e+00]  max|coef| = 4.00e+00  nfev = 114
+SUMMARY mode=real defl=True degs=[2, 2, 2, 2, 2, 2, 2] nneg=3 unknowns=19 starts=12: {'zero_distinct': 0, 'zero_coalesced': 0, 'zero_degenerate': 0, 'nonzero': 12}
+   BEST res2(root) = 8.677e+02 res2(rem) = 4.339e+02; min pair dist = 5.976e-01, |lead| in [8.699e-01, 1.365e+00], max |coef| = 1.365e+00
+DONE

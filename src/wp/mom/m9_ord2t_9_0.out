@@ -1,0 +1,26 @@
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar subtract
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:27: RuntimeWarning: overflow encountered in scalar multiply
+  c[n] = v * d[n - 3]
+~/chowla_venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:527: RuntimeWarning: overflow encountered in dot
+  cost_new = 0.5 * np.dot(f_new, f_new)
+~/b-psw/src/wp/mom/m9_feas.py:52: RuntimeWarning: overflow encountered in exp
+  r = np.exp(rho)
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar add
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+start 8: theta 10.0: maxres 7.09e+01 margin 4.80e-10 dmin 1.00e-09 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 10: theta 10.0: maxres 7.09e+01 margin 5.65e-09 dmin 1.29e-08 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 14: theta 10.0: maxres 7.09e+01 margin 1.04e-09 dmin 6.89e-09 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 16: theta 10.0: maxres 7.09e+01 margin 0.00e+00 dmin 2.80e-09 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+~/b-psw/src/wp/mom/m9_feas.py:53: RuntimeWarning: overflow encountered in square
+  v = (r + 0.5) ** 2 / 8
+start 20: theta 10.0: maxres 7.09e+01 margin 1.56e-09 dmin 3.16e-09 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 26: theta 10.0: maxres 7.09e+01 margin 6.21e-09 dmin 1.55e-08 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 27: theta 10.0: maxres 7.09e+01 margin 2.10e-09 dmin 1.83e-09 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 30: theta 10.0: maxres 7.09e+01 margin 2.93e-11 dmin 4.19e-10 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 35: theta 10.0: maxres 7.09e+01 margin 2.03e-09 dmin 6.93e-10 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 42: theta 10.0: maxres 7.09e+01 margin 1.25e-09 dmin 1.57e-09 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 51: theta 10.0: maxres 7.09e+01 margin 2.17e-09 dmin 9.31e-10 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03
+start 59: theta 10.0: maxres 7.09e+01 margin 4.69e-11 dmin 1.46e-09 FAIL; 2^kT'' -1.8141e+04 2^kT~'' -1.8141e+04; e2(s) 5.772e+03 e2(al) 5.772e+03

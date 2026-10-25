@@ -1,0 +1,33 @@
+parsed cases: [[9, 9, 0], [9, 8, 1], [11, 11, 0], [11, 10, 1]]
+==== k = 9, m = 9, lin = 0
+  parity: Z0+ even 1, Z1+ even 1, Z0- odd 1, Z1- odd 1
+  #moment symbols: 12  max (a,b): a <= 3, b <= 5, max a+b = 6
+  max product degree in moments = 2, members per E-monomial <= 2 => R = 2
+  (A) 40 random exact points, all 9 members, direct V and direct reflection: mismatches = 0  (165 ms)
+  (B) symbolic, 2 active members: residuals [0, 0, 0, 0]  (4 ms)
+  (B) symbolic, 3 active members: residuals [0, 0, 0, 0]  (18 ms)
+  (B) symbolic, 4 active members: residuals [0, 0, 0, 0]  (130 ms)
+==== k = 9, m = 8, lin = 1
+  parity: Z0+ even 1, Z1+ even 1, Z0- odd 1, Z1- odd 1
+  #moment symbols: 12  max (a,b): a <= 3, b <= 5, max a+b = 6
+  max product degree in moments = 2, members per E-monomial <= 2 => R = 2
+  (A) 40 random exact points, all 8 members, direct V and direct reflection: mismatches = 0  (142 ms)
+  (B) symbolic, 2 active members: residuals [0, 0, 0, 0]  (5 ms)
+  (B) symbolic, 3 active members: residuals [0, 0, 0, 0]  (23 ms)
+  (B) symbolic, 4 active members: residuals [0, 0, 0, 0]  (165 ms)
+==== k = 11, m = 11, lin = 0
+  parity: Z0+ even 1, Z1+ even 1, Z0- odd 1, Z1- odd 1
+  #moment symbols: 20  max (a,b): a <= 4, b <= 7, max a+b = 8
+  max product degree in moments = 3, members per E-monomial <= 3 => R = 3
+  (A) 40 random exact points, all 11 members, direct V and direct reflection: mismatches = 0  (340 ms)
+  (B) symbolic, 3 active members: residuals [0, 0, 0, 0]  (44 ms)
+  (B) symbolic, 4 active members: residuals [0, 0, 0, 0]  (386 ms)
+  (B) symbolic, 5 active members: residuals [0, 0, 0, 0]  (2187 ms)
+==== k = 11, m = 10, lin = 1
+  parity: Z0+ even 1, Z1+ even 1, Z0- odd 1, Z1- odd 1
+  #moment symbols: 20  max (a,b): a <= 4, b <= 7, max a+b = 8
+  max product degree in moments = 3, members per E-monomial <= 3 => R = 3
+  (A) 40 random exact points, all 10 members, direct V and direct reflection: mismatches = 0  (308 ms)
+  (B) symbolic, 3 active members: residuals [0, 0, 0, 0]  (57 ms)
+  (B) symbolic, 4 active members: residuals [0, 0, 0, 0]  (486 ms)
+  (B) symbolic, 5 active members: residuals [0, 0, 0, 0]  (2661 ms)

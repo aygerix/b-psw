@@ -1,0 +1,12 @@
+SUMMARY mode=rnd ctl=real Bp=40.0 d=1.5 beta=20: BKZ success 0.33 (2/6), shortest-relation/GH mean 1.0393 sd 0.0496, time 0.1s
+SUMMARY mode=rnd ctl=unif Bp=40.0 d=1.5 beta=20: BKZ success 0.17 (1/6), shortest-relation/GH mean 1.0787 sd 0.0376, time 0.1s
+SUMMARY mode=rnd ctl=real Bp=40.0 d=2 beta=20: BKZ success 0.17 (1/6), shortest-relation/GH mean 1.0181 sd 0.0459, time 0.2s
+SUMMARY mode=rnd ctl=unif Bp=40.0 d=2 beta=20: BKZ success 0.00 (0/6), shortest-relation/GH mean 1.0241 sd 0.0134, time 0.2s
+SUMMARY mode=rnd ctl=real Bp=40.0 d=3 beta=20: BKZ success 0.00 (0/6), shortest-relation/GH mean 0.9214 sd 0.0531, time 0.5s
+SUMMARY mode=rnd ctl=unif Bp=40.0 d=3 beta=20: BKZ success 0.50 (3/6), shortest-relation/GH mean 0.9296 sd 0.0669, time 0.4s
+SUMMARY mode=rnd ctl=real Bp=60.0 d=1.5 beta=20: BKZ success 0.00 (0/6), shortest-relation/GH mean 1.1474 sd 0.0377, time 0.3s
+SUMMARY mode=rnd ctl=unif Bp=60.0 d=1.5 beta=20: BKZ success 0.00 (0/6), shortest-relation/GH mean 1.1275 sd 0.0724, time 0.3s
+SUMMARY mode=rnd ctl=real Bp=60.0 d=2 beta=20: BKZ success 0.00 (0/6), shortest-relation/GH mean 1.1486 sd 0.0397, time 0.8s
+SUMMARY mode=rnd ctl=unif Bp=60.0 d=2 beta=20: BKZ success 0.00 (0/6), shortest-relation/GH mean 1.1504 sd 0.0383, time 1.0s
+SUMMARY mode=rnd ctl=real Bp=60.0 d=3 beta=20: BKZ success 0.00 (0/6), shortest-relation/GH mean 1.0115 sd 0.0553, time 2.1s
+SUMMARY mode=rnd ctl=unif Bp=60.0 d=3 beta=20: BKZ success 0.00 (0/6), shortest-relation/GH mean 1.0147 sd 0.0468, time 2.5s

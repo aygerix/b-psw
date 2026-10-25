@@ -1,0 +1,37 @@
+// src/cs/e3/e3_res.sing -- E3 resultant chain (replaces minAssGTZ, which stalled > 4 min at stage 2).
+// R_j(q,c,r3) from e3_R.sing (out/e3_R_polys.txt): R_j = 0 <=> member j good (closure), on the Korselt variety
+// parametrised by (q, c, r3) with r2 = 0. Degenerate: c r3 (1 + c q) disc = 0.
+// Stage 2: Res_q(R_i, R_j) in Q[c, r3], factorised. Stage 3: common factors (curve components) + isolated points.
+option(redSB);
+ring S = 0, (q, c, r3), dp;
+execute(read("out/e3_R_decl.txt"));
+poly P = -(c*r3^3 + c*q*r3 + c + r3);
+poly dg = c*r3*(1 + c*q)*(P^2 - 4*q*c^2*r3^4);
+list RR = list(R1, R2, R3);
+proc show(poly f, string tag) {
+  list fa = factorize(f); int i;
+  tag, ": ", size(fa[1]) - 1, " nonconstant factors";
+  for (i = 1; i <= size(fa[1]); i++) { if (deg(fa[1][i]) > 0) {
+    if (size(fa[1][i]) <= 30) { "   [mult ", fa[2][i], "] ", fa[1][i]; }
+    else { "   [mult ", fa[2][i], "] (", size(fa[1][i]), " terms, deg c ", deg(fa[1][i], intvec(0,1,0)), ", deg r3 ", deg(fa[1][i], intvec(0,0,1)), ")"; } } }
+  return(fa);
+}
+int t0 = timer;
+poly S12 = resultant(R1, R2, q); poly S13 = resultant(R1, R3, q); poly S23 = resultant(R2, R3, q);
+"resultants time(s) = ", timer - t0;
+list F12 = show(S12, "Res_q(R1,R2)"); list F13 = show(S13, "Res_q(R1,R3)"); list F23 = show(S23, "Res_q(R2,R3)");
+"factorisation time(s) = ", timer - t0;
+// common factors of all three (candidate curve components of the 3-good locus)
+poly g = gcd(gcd(S12, S13), S23);
+"gcd of the three pairwise resultants:"; list Fg = show(g, "gcd");
+// For each common factor h(c, r3): is there q with R1 = R2 = R3 = 0 along h = 0 (non-degenerate)?
+int i;
+for (i = 1; i <= size(Fg[1]); i++) { if (deg(Fg[1][i]) > 0) {
+  poly h = Fg[1][i];
+  ideal J = std(ideal(R1, R2, R3, h));
+  "common factor ", h, ": dim of {R1=R2=R3=h=0} = ", dim(J);
+  ideal Js = sat(J, dg); if (typeof(Js) == "list") { }
+  kill h; kill J; kill Js;
+} }
+"total time(s) = ", timer - t0;
+quit;

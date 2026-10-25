@@ -1,0 +1,9 @@
+start 0: level 3 maxres 1.05e+04 margin 3.44e-01 dmin 6.06e-08 S 1.64 vmax 0.75 fail
+start 1: level 3 maxres 1.05e+04 margin 9.23e-08 dmin 9.07e-07 S 1.64 vmax 0.75 fail
+start 2: level 3 maxres 2.97e+04 margin 0.00e+00 dmin 0.00e+00 S 1.49 vmax 0.60 fail
+start 3: level 3 maxres 1.06e+04 margin 1.80e-07 dmin 2.87e-08 S 1.64 vmax 0.75 fail
+start 4: level 3 maxres 1.27e+04 margin -5.55e-17 dmin 0.00e+00 S 1.82 vmax 0.90 fail
+start 5: level 3 maxres 1.27e+04 margin 0.00e+00 dmin 0.00e+00 S 1.82 vmax 0.90 fail
+start 6: level 3 maxres 4.11e+04 margin 0.00e+00 dmin 0.00e+00 S 1.29 vmax 0.71 fail
+start 7: level 3 maxres 1.27e+04 margin 0.00e+00 dmin 0.00e+00 S 1.82 vmax 0.90 fail
+start 8: level 3 maxres 2.97e+04 margin 0.00e+00 dmin 0.00e+00 S 1.49 vmax 0.60 fail

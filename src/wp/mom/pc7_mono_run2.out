@@ -1,0 +1,19 @@
+== L3z
+Sun Oct 25 05:46:07 UTC 2026
+dim:
+9
+vdim:
+-1
+size:
+244
+seconds:
+2
+elim to e2:
+E[1]=0
+seconds:
+2
+rc 0
+== L3_0
+Sun Oct 25 05:46:09 UTC 2026
+
+halt 1

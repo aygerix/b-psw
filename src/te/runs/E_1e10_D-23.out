@@ -1,0 +1,3 @@
+D=-23 passes expected: 5
+anchor3 D=-23 Q=6 X=10000000000 mode=bpsw threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.100 chunkA=32768 chunkC=65536
+TABLE D=-23 X=10000000000 inert=227527427 overflow=0 bytes=3640.4MB time=244.89s cpu=949.73s

@@ -1,0 +1,3 @@
+poly V1 = a4b3u3-2a3b3u3+a4b2u2+6a3b2u3-a4bu2-2a3b2u2-8a2b2u3-a4bu+4a3bu2+11a2bu3+2a3bu-a3u2-12a2bu2-6abu3-a4+2a3u+a2u2+6au3+2a3-14au2+4u3;
+poly V2 = 2a3b2u2+a3bu2+2a2b2u2-5a3bu+5a2bu2+a2bu+a2u2+6abu2+2a3-8a2u+4au2-a2+2au+4u2;
+poly V3 = 2a3b2u2-a2b2u2-5a3bu+7a2bu2-a3u+a2bu-3abu2+2a3-6a2u+6au2+2a2-au-2u2;

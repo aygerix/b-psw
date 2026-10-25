@@ -1,0 +1,12 @@
+==== symmetric slice, 11 cubics (5 pairs + centre u = 1/2); seed asymmetry 3.0e-16
+  residuals of E1, E2 at seed: ['2.43e-13', '-3.2e-12']
+  unknowns ['w1', 'v1'], |det| numerical minor 92477.1
+  fixed rationals: {'w2': '125351/4000000', 'w3': '715989/5000000', 'w4': '11087929/100000000', 'w5': '1009807/2500000', 'v2': '5233443/100000000', 'v3': '6497449/100000000', 'v4': '570241/10000000', 'v5': '134271/1000000', 'vc': '144330899/100000000'}
+  [sym11] Newton correction from the numerical start: 2.3012e-9
+  [sym11] det of the 2x2 Jacobian minor at the centre (float): -92477.1008382
+  [sym11] max |Y F(x~)| = 4.540e-111, rho = 1e-60, row sums |I - Y J(B)|: [1.1969932573862588e-38, 3.080186547024442e-38]
+  [sym11] KRAWCZYK PASSED (unique zero in B; ||I - Y J(B)||_inf < 1 so J nonsingular on B)
+  domain on box: HOLD (min margin 0.0830193); distinct: YES
+  exact check at the centre: E3 - E1 == 0: True , E4 - E2 == 0: True , |E1|, |E2| at centre: 4.26e-109, 1.48e-108
+  singular values of the full 4 x 22 Jacobian at the symmetric point (float): ['700.95', '652.04', '327.775', '194.478']
+  VERDICT VALID: symmetric slice meets the feasible set (11 cubics)

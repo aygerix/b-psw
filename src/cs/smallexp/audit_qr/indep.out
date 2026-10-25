@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "~/b-psw/src/cs/smallexp/audit_qr/qr_indep.py", line 139, in <module>
+    for name, X in gens(l, r, rng):
+  File "~/b-psw/src/cs/smallexp/audit_qr/qr_indep.py", line 106, in gens
+    nsq = [x for x in range(1, l) if not issq(x, l)]
+                                         ^^^^^^^^^^
+  File "~/b-psw/src/cs/smallexp/audit_qr/qr_indep.py", line 16, in issq
+    def issq(x, l): return leg(x, l) >= 0
+                           ^^^^^^^^^
+  File "~/b-psw/src/cs/smallexp/audit_qr/qr_indep.py", line 14, in leg
+    return 1 if pow(x, (l - 1) // 2, l) == 1 else -1
+                ^^^^^^^^^^^^^^^^^^^^^^^
+MemoryError
+indep_exit=1
+exit=143

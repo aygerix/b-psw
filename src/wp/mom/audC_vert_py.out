@@ -1,0 +1,2 @@
+min over vertical B-slices of F_t(c_t) - (c_t - c_lo) = (np.float64(1.691316108518043), (np.float64(14.93004225), np.float64(10.92887633748319), np.float64(4.001165912516809), np.float64(10.92887633748319)))
+random vertical all-B pairs: 20000, INT(t,v) failures: 0

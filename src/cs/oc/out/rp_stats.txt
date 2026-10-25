@@ -1,0 +1,62 @@
+=== rie: 809 members
+  D=5: classes=206; top by usable: (0, 1): 83/397 (max usable bits 61); (0, 3): 14/14 (max usable bits 10); (1, 1): 13/13 (max usable bits 9); (1, 2): 11/11 (max usable bits 9); (0, 7): 9/10 (max usable bits 14); (0, 4): 8/8 (max usable bits 11)
+     inert bits [0,40): n=159 free-side unabsorbed=0 for 159; other side mean rough bits 9.1 (0.45/bit); usable 79
+     inert bits [40,100): n=89 free-side unabsorbed=0 for 89; other side mean rough bits 57.8 (0.83/bit); usable 0
+     inert bits [100,200): n=69 free-side unabsorbed=0 for 69; other side mean rough bits 139.4 (0.93/bit); usable 2
+     inert bits [200,400): n=52 free-side unabsorbed=0 for 52; other side mean rough bits 284.0 (0.95/bit); usable 0
+     inert bits [400,800): n=30 free-side unabsorbed=0 for 30; other side mean rough bits 492.3 (0.82/bit); usable 0
+  D=-7: classes=208; top by usable: (0, 0): 84/416 (max usable bits 61); (1, 1): 13/13 (max usable bits 9); (0, 2): 11/12 (max usable bits 13); (1, 2): 11/11 (max usable bits 9); (0, 3): 8/8 (max usable bits 13); (0, 6): 7/10 (max usable bits 16)
+     inert bits [0,40): n=154 free-side unabsorbed=0 for 154; other side mean rough bits 9.0 (0.45/bit); usable 83
+     inert bits [40,100): n=78 free-side unabsorbed=0 for 78; other side mean rough bits 54.6 (0.78/bit); usable 1
+     inert bits [100,200): n=60 free-side unabsorbed=0 for 60; other side mean rough bits 131.7 (0.88/bit); usable 1
+     inert bits [200,400): n=58 free-side unabsorbed=0 for 58; other side mean rough bits 278.1 (0.93/bit); usable 0
+     inert bits [400,800): n=35 free-side unabsorbed=0 for 35; other side mean rough bits 467.6 (0.78/bit); usable 1
+  D=-11: classes=211; top by usable: (0, 1): 43/191 (max usable bits 61); (0, 0): 38/213 (max usable bits 25); (0, 4): 11/12 (max usable bits 15); (1, 1): 10/10 (max usable bits 9); (0, 7): 8/9 (max usable bits 15); (0, 3): 8/9 (max usable bits 12)
+     inert bits [0,40): n=156 free-side unabsorbed=0 for 156; other side mean rough bits 8.6 (0.43/bit); usable 85
+     inert bits [40,100): n=87 free-side unabsorbed=0 for 87; other side mean rough bits 55.4 (0.79/bit); usable 0
+     inert bits [100,200): n=67 free-side unabsorbed=0 for 67; other side mean rough bits 132.9 (0.89/bit); usable 2
+     inert bits [200,400): n=58 free-side unabsorbed=0 for 58; other side mean rough bits 280.5 (0.93/bit); usable 0
+     inert bits [400,800): n=28 free-side unabsorbed=0 for 28; other side mean rough bits 477.2 (0.80/bit); usable 0
+  D=13: classes=211; top by usable: (0, 0): 42/217 (max usable bits 61); (0, 1): 37/180 (max usable bits 28); (1, 1): 13/13 (max usable bits 9); (0, 3): 11/11 (max usable bits 13); (0, 5): 9/10 (max usable bits 15); (0, 4): 8/8 (max usable bits 12)
+     inert bits [0,40): n=165 free-side unabsorbed=0 for 165; other side mean rough bits 8.5 (0.42/bit); usable 87
+     inert bits [40,100): n=83 free-side unabsorbed=0 for 83; other side mean rough bits 53.8 (0.77/bit); usable 1
+     inert bits [100,200): n=67 free-side unabsorbed=0 for 67; other side mean rough bits 132.3 (0.88/bit); usable 1
+     inert bits [200,400): n=51 free-side unabsorbed=0 for 51; other side mean rough bits 280.7 (0.94/bit); usable 0
+     inert bits [400,800): n=37 free-side unabsorbed=0 for 37; other side mean rough bits 463.1 (0.77/bit); usable 1
+  D=-15: classes=201; top by usable: (0, 0): 82/401 (max usable bits 61); (1, 0): 17/17 (max usable bits 9); (0, 2): 11/11 (max usable bits 12); (0, 6): 10/10 (max usable bits 15); (1, 1): 7/7 (max usable bits 9); (0, 3): 7/7 (max usable bits 14)
+     inert bits [0,40): n=164 free-side unabsorbed=0 for 164; other side mean rough bits 8.7 (0.44/bit); usable 86
+     inert bits [40,100): n=82 free-side unabsorbed=0 for 82; other side mean rough bits 56.8 (0.81/bit); usable 0
+     inert bits [100,200): n=74 free-side unabsorbed=0 for 74; other side mean rough bits 135.3 (0.90/bit); usable 2
+     inert bits [200,400): n=55 free-side unabsorbed=0 for 55; other side mean rough bits 276.3 (0.92/bit); usable 0
+     inert bits [400,800): n=26 free-side unabsorbed=0 for 26; other side mean rough bits 486.6 (0.81/bit); usable 0
+=== pro: 806 members
+  D=5: classes=525; top by usable: (2, 0): 26/26 (max usable bits 12); (4, 0): 9/11 (max usable bits 13); (5, 0): 9/10 (max usable bits 19); (3, 0): 9/9 (max usable bits 16); (2, 1): 9/9 (max usable bits 10); (8, 0): 8/9 (max usable bits 17)
+     inert bits [0,40): n=165 free-side unabsorbed=0 for 165; other side mean rough bits 8.2 (0.41/bit); usable 94
+     inert bits [40,100): n=87 free-side unabsorbed=0 for 87; other side mean rough bits 53.8 (0.77/bit); usable 2
+     inert bits [100,200): n=54 free-side unabsorbed=0 for 54; other side mean rough bits 133.6 (0.89/bit); usable 0
+     inert bits [200,400): n=67 free-side unabsorbed=0 for 67; other side mean rough bits 283.9 (0.95/bit); usable 0
+     inert bits [400,800): n=38 free-side unabsorbed=0 for 38; other side mean rough bits 473.1 (0.79/bit); usable 0
+  D=-7: classes=534; top by usable: (2, 1): 15/15 (max usable bits 10); (2, 2): 13/13 (max usable bits 10); (4, 0): 11/11 (max usable bits 13); (2, 0): 11/11 (max usable bits 13); (3, 0): 10/10 (max usable bits 16); (9, 0): 7/8 (max usable bits 24)
+     inert bits [0,40): n=152 free-side unabsorbed=0 for 152; other side mean rough bits 7.7 (0.38/bit); usable 91
+     inert bits [40,100): n=83 free-side unabsorbed=0 for 83; other side mean rough bits 54.6 (0.78/bit); usable 1
+     inert bits [100,200): n=53 free-side unabsorbed=0 for 53; other side mean rough bits 128.3 (0.86/bit); usable 0
+     inert bits [200,400): n=61 free-side unabsorbed=0 for 61; other side mean rough bits 282.0 (0.94/bit); usable 0
+     inert bits [400,800): n=30 free-side unabsorbed=0 for 30; other side mean rough bits 472.6 (0.79/bit); usable 0
+  D=-11: classes=582; top by usable: (2, 1): 16/16 (max usable bits 10); (2, 0): 14/14 (max usable bits 11); (3, 1): 7/7 (max usable bits 12); (7, 1): 6/6 (max usable bits 19); (5, 6): 6/6 (max usable bits 14); (2, 2): 6/6 (max usable bits 9)
+     inert bits [0,40): n=167 free-side unabsorbed=0 for 167; other side mean rough bits 8.3 (0.41/bit); usable 96
+     inert bits [40,100): n=103 free-side unabsorbed=0 for 103; other side mean rough bits 52.4 (0.75/bit); usable 1
+     inert bits [100,200): n=56 free-side unabsorbed=0 for 56; other side mean rough bits 135.3 (0.90/bit); usable 0
+     inert bits [200,400): n=59 free-side unabsorbed=0 for 59; other side mean rough bits 280.8 (0.94/bit); usable 0
+     inert bits [400,800): n=35 free-side unabsorbed=0 for 35; other side mean rough bits 476.5 (0.79/bit); usable 0
+  D=13: classes=595; top by usable: (2, 1): 14/14 (max usable bits 10); (2, 0): 11/11 (max usable bits 12); (2, 2): 7/7 (max usable bits 9); (4, 0): 6/6 (max usable bits 14); (2, 3): 6/6 (max usable bits 13); (3, 1): 5/5 (max usable bits 12)
+     inert bits [0,40): n=146 free-side unabsorbed=0 for 146; other side mean rough bits 8.0 (0.40/bit); usable 85
+     inert bits [40,100): n=81 free-side unabsorbed=0 for 81; other side mean rough bits 51.8 (0.74/bit); usable 2
+     inert bits [100,200): n=64 free-side unabsorbed=0 for 64; other side mean rough bits 132.4 (0.88/bit); usable 0
+     inert bits [200,400): n=79 free-side unabsorbed=0 for 79; other side mean rough bits 277.9 (0.93/bit); usable 0
+     inert bits [400,800): n=34 free-side unabsorbed=0 for 34; other side mean rough bits 466.1 (0.78/bit); usable 0
+  D=-15: classes=521; top by usable: (2, 0): 28/28 (max usable bits 13); (4, 0): 12/12 (max usable bits 15); (9, 0): 7/9 (max usable bits 24); (8, 0): 7/8 (max usable bits 17); (3, 0): 7/7 (max usable bits 12); (2, 1): 7/7 (max usable bits 11)
+     inert bits [0,40): n=173 free-side unabsorbed=0 for 173; other side mean rough bits 8.9 (0.45/bit); usable 91
+     inert bits [40,100): n=92 free-side unabsorbed=0 for 92; other side mean rough bits 53.2 (0.76/bit); usable 0
+     inert bits [100,200): n=59 free-side unabsorbed=0 for 59; other side mean rough bits 133.5 (0.89/bit); usable 0
+     inert bits [200,400): n=80 free-side unabsorbed=0 for 80; other side mean rough bits 277.1 (0.92/bit); usable 0
+     inert bits [400,800): n=37 free-side unabsorbed=0 for 37; other side mean rough bits 476.7 (0.79/bit); usable 0

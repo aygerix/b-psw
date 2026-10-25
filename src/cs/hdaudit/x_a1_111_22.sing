@@ -1,0 +1,26 @@
+// x_a1_111_22
+option(noredefine);
+ring R = 0, (x, b1_0, b2_0, b2_1, b3_0, b3_1, TT), dp;
+poly A = x^1;
+poly B1 = b1_0*x^0+1*x^1; poly B2 = b2_0*x^0+b2_1*x^1; poly B3 = b3_0*x^0+b3_1*x^1;
+poly f1 = 1 + A*B1; poly f2 = 1 + A*B2; poly f3 = 1 + A*B3; poly F = f1*f2*f3;
+poly Q = division(F - 1, A)[1][1,1];
+if (Q*A != F - 1) { print("division error"); quit; }
+list Bl = B1, B2, B3; list fl = f1, f2, f3;
+poly L1 = 2*B1*(B2+B3) - 4*B2*B3; poly L2 = 2*B2*(B1+B3) - 4*B1*B3; poly L3 = 2*B3*(B1+B2) - 4*B1*B2;
+list Ll = L1, L2, L3;
+proc dx(poly P) { return(deg(P, intvec(1, 0:(nvars(basering)-1)))); }
+proc lcx(poly P) { matrix C = coeffs(P, x); return(C[nrows(C), 1]); }
+proc pdivrem(poly P, poly M) { int dM = dx(M); poly l = lcx(M); poly Qr = P; while (Qr != 0 && dx(Qr) >= dM) { Qr = l*Qr - lcx(Qr)*x^(dx(Qr)-dM)*M; } matrix C = coeffs(Qr, x); ideal I = C; return(I); }
+ideal I = 0;
+I = I + resultant(Bl[1], Q, x);
+I = I + resultant(Bl[2], Q, x);
+I = I + resultant(Bl[3], Q, x);
+I = I + pdivrem(F + 1, fl[1] + 1);
+I = I + pdivrem(F + 1, fl[2] + 1);
+poly nz = (lcx(f1))*(lcx(f2))*(lcx(f3))*(resultant(A, Bl[1], x))*(resultant(A, Bl[2], x))*(resultant(A, Bl[3], x))*(resultant(Bl[2], Bl[1], x))*(resultant(Bl[3], Bl[1], x))*(resultant(Bl[3], Bl[2], x));
+ring S0 = 0, (b1_0, b2_0, b2_1, b3_0, b3_1, TT), dp;
+ideal I = imap(R, I); poly nz = imap(R, nz);
+int t0 = timer; ideal S = std(I + ideal(1 - TT*nz));
+print("RESULT x_a1_111_22 dim=" + string(dim(S)) + " time=" + string(timer - t0));
+quit;

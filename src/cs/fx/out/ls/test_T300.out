@@ -1,0 +1,5 @@
+D = -15, class (2,0): pool 12326, rows 61, restarts 10, seed 11
+lam 0.2: best N - lam*bits = 0.28301 at (N 1, bits 3.585); config [(3, 'F', 1), (7, 'L', 1)]
+lam 0.25: best N - lam*bits = 0.10376 at (N 1, bits 3.585); config [(3, 'F', 1), (7, 'L', 1)]
+lam 0.3: best N - lam*bits = -0.00000 at (N 0, bits 0.0); config []
+primal frontier (b: N@bits): 60:9@56.685 100:16@98.642 140:20@122.682 180:23@177.866 214:25@188.907 227:25@188.907 250:25@188.907 275:25@188.907 300:25@188.907 350:25@188.907 400:25@188.907

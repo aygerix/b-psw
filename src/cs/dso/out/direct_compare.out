@@ -1,0 +1,3 @@
+X=10000: census rows 2189 (max p 14271001); census rows with p<=2e+07: 2189; direct sieve rows: 2189; identical: True
+X=20000: census rows 4113 (max p 125024551); census rows with p<=2e+08: 4113; direct sieve rows: 4113; identical: True
+X=60000: census rows 11121 (max p 662671081); census rows with p<=1e+09: 11121; direct sieve rows: 11121; identical: True

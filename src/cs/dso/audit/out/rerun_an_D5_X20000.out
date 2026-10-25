@@ -1,0 +1,22 @@
+# D = 5, X = 20000, census rows = 4113, max p = 125024551
+# inert 1679, split 2433, ramified 1
+# p > X: 1852
+cell-size histogram: [(1, 4095), (2, 9)]
+  cell (ord, z) = (388, 485): [(3881, 1), (5821, 1)]  gcd(odd ord, odd z) = 97  unusable (shared odd prime)
+  cell (ord, z) = (2850, 2850): [(2851, 1), (14251, 1)]  gcd(odd ord, odd z) = 1425  unusable (shared odd prime)
+  cell (ord, z) = (3600, 3600): [(14401, 1), (79201, 1)]  gcd(odd ord, odd z) = 225  unusable (shared odd prime)
+  cell (ord, z) = (3840, 3840): [(7681, 1), (15361, 1)]  gcd(odd ord, odd z) = 15  unusable (shared odd prime)
+  cell (ord, z) = (3988, 1994): [(3989, 1), (23929, 1)]  gcd(odd ord, odd z) = 997  unusable (shared odd prime)
+  cell (ord, z) = (4215, 8430): [(8431, 1), (33721, 1)]  gcd(odd ord, odd z) = 4215  unusable (shared odd prime)
+  cell (ord, z) = (8020, 6015): [(24061, 1), (48121, 1)]  gcd(odd ord, odd z) = 2005  unusable (shared odd prime)
+  cell (ord, z) = (9500, 11875): [(47501, 1), (142501, 1)]  gcd(odd ord, odd z) = 2375  unusable (shared odd prime)
+  cell (ord, z) = (12004, 15005): [(120041, 1), (720241, 1)]  gcd(odd ord, odd z) = 3001  unusable (shared odd prime)
+usable primes: 1680 (inert 1679, split 1)
+2-adic classes (v2 ord, v2 z): #usable [#inert]: [((2, 0), 567, 567), ((1, 2), 302, 302), ((0, 3), 183, 183), ((1, 0), 124, 124), ((0, 0), 119, 119), ((3, 0), 95, 95), ((0, 4), 93, 93), ((4, 0), 59, 59), ((0, 5), 46, 46), ((5, 0), 24, 24), ((0, 7), 17, 17), ((6, 0), 16, 16), ((0, 6), 14, 14), ((8, 0), 6, 6), ((7, 0), 4, 4), ((0, 8), 3, 3), ((9, 0), 3, 3), ((0, 9), 2, 2), ((0, 11), 1, 1), ((0, 10), 1, 1)]
+pairwise-closed graph: 0 edges, max clique 1
+exact search (k <= 5) done in 42.3 s
+  k = 2: subsets in scope 2.494e+05, anchor survivors 0, full solutions 0
+  k = 3: subsets in scope 3.667e+07, anchor survivors 1, full solutions 0
+  k = 4: subsets in scope 4.67e+09, anchor survivors 390, full solutions 0
+  k = 5: subsets in scope 5.022e+11, anchor survivors 29708, full solutions 0
+bpsw.py tests: 9, passes: 0

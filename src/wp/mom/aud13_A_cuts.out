@@ -1,0 +1,12 @@
+xn_cert9_l0.gp: 57 certificates, contiguous from R = 0: True; R reach = 57/8; S covered = [9/32, 3849/512] = [0.281250, 7.517578]
+  S lower end equals m/32 = 9/32: True; S-bound 7.3105390 < cover end: True
+  row kinds used (count of distinct parameters): {'CS': 1, 'POS': 4, 'PHI': 1}
+  H-side cut tests (lin = 0, 600 member sets, 0 certificate B's + 5 random, 4 certificate t0's):
+    violations: {'CS': 0, 'PHI': 0, 'N3L': 0, 'N3U': 0, 'POS': 0, 'NEGCTL': 198}  (all must be 0 except NEGCTL > 0)
+    min relative N3U slack 1.639e-02; min He(t0) - 2^-8 t0^8 = 1.0987985380534188e-05
+xn_cert9_l1.gp: 52 certificates, contiguous from R = 0: True; R reach = 13/2; S covered = [1/4, 203/32] = [0.250000, 6.343750]
+  S lower end equals m/32 = 1/4: True; S-bound 6.2989094 < cover end: True
+  row kinds used (count of distinct parameters): {'CS': 1, 'POS': 2, 'PHI': 1}
+  H-side cut tests (lin = 1, 600 member sets, 0 certificate B's + 5 random, 2 certificate t0's):
+    violations: {'CS': 0, 'PHI': 0, 'N3L': 0, 'N3U': 0, 'POS': 0, 'NEGCTL': 200}  (all must be 0 except NEGCTL > 0)
+    min relative N3U slack 1.494e-02; min He(t0) - 2^-8 t0^8 = 7.279316842177084e-09

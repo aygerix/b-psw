@@ -1,0 +1,5 @@
+T4 runC D=5 p3=2971215073 M3=2909314758 S=1 A=1 B=1 Wsmall=1: pairs engine 1633239 (ref 1633239) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=2971215073 M3=2909314758 S=1 A=1 B=1 Wsmall=1: pairs engine 1633239 (ref 1633239) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=2971215073 M3=2909314758 S=4582537681 A=1 B=1 Wsmall=1: pairs engine 1633239 (ref 1633239) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=5 p3=2971215073 M3=2909314758 S=4582537681 A=1 B=1 Wsmall=1: pairs engine 1633239 (ref 1633239) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+RESULT runC D=5: ok (0 problems)

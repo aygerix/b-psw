@@ -1,0 +1,16 @@
+// k3_a3_b011_s100_t2: shape a=3 b=(0, 1, 1), singles (1, 0, 0), triples 2, D=11
+LIB "elim.lib"; option(redSB);
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+ring R = 0, (al2, al3, th2_1, th3_1, c2, c3, sg1, sg2, sg3), dp;
+proc Aof(poly x) { return((x-0)*(x-al2)*(x-al3)); }
+proc B1(poly x) { return(1); }
+proc B2(poly x) { return((x-th2_1)); }
+proc B3(poly x) { return((x-th3_1)); }
+proc f1(poly x) { return(1 + Aof(x)*B1(x)); }
+proc f2(poly x) { return(1 + c2*Aof(x)*B2(x)); }
+proc f3(poly x) { return(1 + c3*Aof(x)*B3(x)); }
+ideal I = f1(th2_1)*f3(th2_1) - 1, f1(th3_1)*f2(th3_1) - 1, f1(sg1) + 1, f2(sg1)*f3(sg1) - 1, f1(sg2) + 1, f2(sg2) + 1, f3(sg2) + 1, f1(sg3) + 1, f2(sg3) + 1, f3(sg3) + 1;
+poly nz = c2*c3*(al2-0)*(al3-0)*(al3-al2)*(th2_1-0)*(th2_1-al2)*(th2_1-al3)*(th3_1-0)*(th3_1-al2)*(th3_1-al3)*(th3_1-th2_1)*(sg2-sg1)*(sg3-sg1)*(sg3-sg2)*(c2-c3);
+int t0 = timer; ideal S = SAT(I, nz); S = std(S);
+print("RESULT k3_a3_b011_s100_t2 D=11 G=7 dim=" + string(dim(S)) + " time=" + string(timer - t0));
+quit;

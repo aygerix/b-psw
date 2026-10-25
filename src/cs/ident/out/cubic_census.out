@@ -1,0 +1,64 @@
+[0;31m  ***   Warning: new maximum stack size = 1500000256 (1430.512 Mbytes).[0m
+A=t^2 + 1 k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 6  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 14  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 2  sprp2 0  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 1  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 8  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 3  sprp2 0  slprp 0  BPSW 0
+A=t^2 + t + 1 k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 11  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 1  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 6  sprp2 0  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 2  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 5  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 7  sprp2 0  slprp 0  BPSW 0
+A=t^2 + 2 k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 2  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 6  sprp2 0  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 6  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 3  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 7  sprp2 0  slprp 0  BPSW 0
+A=t^2 + 3 k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 2  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 14  sprp2 1  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 0  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 28  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 2  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 2  sprp2 0  slprp 0  BPSW 0
+A=t^2 - t + 1 k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 1  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 6  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 0  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 5  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 7  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 1  sprp2 0  slprp 0  BPSW 0
+A=t^2 + t + 2 k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 5  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 7  sprp2 0  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 2  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 2  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 7  sprp2 0  slprp 0  BPSW 0
+A=t^2 + t k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 19  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 8  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 8  sprp2 1  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 16  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 13  sprp2 0  slprp 0  BPSW 0
+A=t^2 + 2*t k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 15  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 0  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 19  sprp2 0  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 3  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 5  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 16  sprp2 0  slprp 0  BPSW 0
+A=t^2 - 2 k=3 a<=8 |b|<=10: Korselt families=200  #dead histogram (0..k)=[0, 0, 6, 194]  min #dead=2
+   fam [[2, -2], [3, -3], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 0], [3, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 7  sprp2 0  slprp 0  BPSW 0
+   fam [[2, 2], [3, 3], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 5  sprp2 0  slprp 0  BPSW 0
+   fam [[3, -3], [4, -4], [6, -6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 3  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 0], [4, 0], [6, 0]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 5  sprp2 0  slprp 0  BPSW 0
+   fam [[3, 3], [4, 4], [6, 6]] Lucas defects [3, 0, 3]: prime tuples |t|<=5000: 4  sprp2 0  slprp 0  BPSW 0

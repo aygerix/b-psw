@@ -1,0 +1,8 @@
+residual 1.3194e-80
+imag parts ['4.3e-89', '-6.55e-89', '-2.41e-89', '-3.7e-90', '0.0766', '8.88e-90']
+gcd degrees [2, 1, 1, 1, 1] sum 6
+Korselt K at r (members 2,3) and -r (members 4,5): 8.43e-81 8.43e-81
+c = 1.98832934574087112179574512349  minpoly(deg<=4, |coef|<=1e12): none
+l2 r = -0.685289473231939606129630416581  minpoly(deg<=4, |coef|<=1e12): none
+l3 r = 1.10718697956261962542917223232  minpoly(deg<=4, |coef|<=1e12): none
+r^2 = 0.0245948093313170977972750050269  minpoly(deg<=4, |coef|<=1e12): none

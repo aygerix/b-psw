@@ -1,0 +1,6 @@
+(a) Chernick tuples t<=20000: 258, Lucas psp for some Q in [-60,60]: 0
+(b) Lucas-Carmichael tuples t<=20000: 275, base-2 Fermat psp: 0
+k=3: Korselt sets=1 with a universal-kill member=1
+k=4: Korselt sets=6 with a universal-kill member=3
+k=5: Korselt sets=38 with a universal-kill member=8
+k=6: Korselt sets=32 with a universal-kill member=16

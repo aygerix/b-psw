@@ -1,0 +1,6 @@
+symdp 1|2|3      n=7 M=7 conv=1986 distinct=137 real=54 max_sum=6 growth=[48, 113, 121, 128, 131, 135, 137]  [2, 1, 1, 1, 1]x137
+symdp 12|3       n=6 M=6 conv=2644 distinct=44 real=11 max_sum=6 growth=[35, 42, 43, 44, 44, 44, 44]  [2, 1, 1, 1, 1]x44
+symdp 1|2|2      n=7 M=7 conv=2399 distinct=67 real=31 max_sum=6 growth=[42, 60, 64, 64, 66, 67, 67]  [2, 2, 0, 2, 0]x67
+symdp 12|2       n=6 M=6 conv=4027 distinct=24 real=8 max_sum=6 growth=[24, 24, 24, 24, 24, 24, 24]  [2, 2, 0, 2, 0]x24
+symdp 2|3|3      n=7 M=7 conv=1690 distinct=77 real=35 max_sum=6 growth=[29, 66, 70, 75, 75, 76, 77]  [0, 1, 2, 1, 2]x77
+symdp 2|2|2      n=7 M=7 conv=367 distinct=3 real=3 max_sum=6 growth=[2, 3, 3, 3, 3, 3, 3]  [0, 3, 0, 3, 0]x3

@@ -1,0 +1,7 @@
+T0=200 pool 6523; T0=300 census+CHM200 pool 12326; inst300 file primes 12326, rows 61; T0=200 pool minus inst300 = 0; inst300 minus (census300+CHM) = 0
+v_T200_60.gp: 60 primes, in pool: 60
+v_T300_l25.gp: 112 primes, in pool: 112
+usable at the 60-prime caps in the T0=300 pool: 60
+best single new rows (added primes, q, side, cap, bits): [(3, 293, 'L', 2, 16.38), (2, 281, 'F', 2, 16.26), (2, 281, 'F', 1, 8.13), (2, 257, 'L', 2, 16.01), (2, 257, 'L', 1, 8.0), (2, 229, 'L', 2, 15.67), (2, 229, 'L', 1, 7.83), (1, 293, 'L', 1, 8.19)]
+max added by one new row at cap 1: 2  histogram: {0: 15, 1: 14, 2: 3, 3: 0, 4: 0, 5: 0}
+best pair of new rows (cap 1): (4, 281, 'F', 257, 'L', 16.13)

@@ -1,0 +1,26 @@
+~/b-psw/src/cs/e3b/strat_lp.py:49: RuntimeWarning: divide by zero encountered in divide
+  coef.append(-2 / At if j == 0 else -2 / (At * (th - rr[:, j - 1])))
+~/b-psw/src/cs/e3b/strat_lp.py:49: RuntimeWarning: invalid value encountered in divide
+  coef.append(-2 / At if j == 0 else -2 / (At * (th - rr[:, j - 1])))
+k=5 m=[2, 2, 2, 1, 1] sym=True slices=0 unknowns=11 equations=18 expected dim=-7
+  batch 0: kept 0
+  batch 1: kept 0
+  batch 2: kept 0
+  batch 3: kept 0
+  batch 4: kept 0
+  batch 5: kept 0
+  batch 6: kept 0
+  batch 7: kept 0
+  batch 8: kept 0
+  batch 9: kept 0
+  batch 10: kept 0
+  batch 11: kept 0
+  batch 12: kept 0
+  batch 13: kept 0
+  batch 14: kept 0
+  batch 15: kept 0
+  batch 16: kept 0
+  batch 17: kept 0
+  batch 18: kept 0
+  batch 19: kept 0
+converged non-degenerate: 0 / 20000

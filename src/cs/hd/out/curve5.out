@@ -1,0 +1,18 @@
+deg r23 in a3: 4  deg r24 in a3: 4
+eliminant: deg_a2 54, deg_M 21
+[0;31m  *** factor: Warning: increasing stack size to 16000000.[0m
+[0;31m  *** factor: Warning: increasing stack size to 32000000.[0m
+[0;31m  *** factor: Warning: increasing stack size to 64000000.[0m
+factor 1: mult 22  deg_a2 1  deg_M 0   value at (1.99924256189045, 135): 1.9992425618904500000000000000000000000
+factor 2: mult 3  deg_a2 1  deg_M 0   value at (1.99924256189045, 135): -0.00075743810954999999999999999999999999795
+factor 3: mult 3  deg_a2 1  deg_M 1   value at (1.99924256189045, 135): -268.00075743810955000000000000000000000
+factor 4: mult 2  deg_a2 1  deg_M 1   value at (1.99924256189045, 135): 1.8969884171012000000000000000000000000
+factor 5: mult 2  deg_a2 3  deg_M 3   value at (1.99924256189045, 135): 6.8074073410419944762773920812550636897 E-10
+factor 6: mult 2  deg_a2 6  deg_M 3   value at (1.99924256189045, 135): 816.07546217359750314295494040782945759
+factor 7: mult 1  deg_a2 6  deg_M 4   value at (1.99924256189045, 135): -28027.259017498931261146949003680289840
+factor 1 = a2
+factor 2 = a2 - 2
+factor 3 = a2 - 2*M
+factor 4 = (M + 1)*a2 - 2*M
+factor 5 = (7*M^3 + 57*M^2 + 57*M + 7)*a2^3 + (-98*M^3 - 308*M^2 - 98*M)*a2^2 + (392*M^3 + 392*M^2)*a2 - 448*M^3
+factor 6 = 3*a2^6 + (-11*M - 11)*a2^5 + (17*M^2 + 58*M + 17)*a2^4 + (-9*M^3 - 107*M^2 - 107*M - 9)*a2^3 + (72*M^3 + 236*M^2 + 72*M)*a2^2 + (-180*M^3 - 180*M^2)*a2 + 144*M^3

@@ -1,0 +1,5 @@
+v_m15_l20: D=-15 (2,0) listed 76 (dups 0) usable 76 (inert 76) failed 0 | listed-cap bits 337.1555 | minimal-cap bits 337.1555, rows on both sides 0, max row 199 | N-0.2b 8.5689 N-0.225b 0.1400 N-0.25b -8.2889 (minimal caps)
+v_m11_l20: D=-11 (2,0) listed 61 (dups 0) usable 61 (inert 61) failed 0 | listed-cap bits 297.4435 | minimal-cap bits 297.4435, rows on both sides 0, max row 199 | N-0.2b 1.5113 N-0.225b -5.9248 N-0.25b -13.3609 (minimal caps)
+v_m11L_l20: D=-11 (2,0) listed 60 (dups 0) usable 60 (inert 60) failed 0 | listed-cap bits 295.4797 | minimal-cap bits 295.4797, rows on both sides 0, max row 199 | N-0.2b 0.9041 N-0.225b -6.4829 N-0.25b -13.8699 (minimal caps)
+v_T200_60: D=-15 (2,0) listed 60 (dups 0) usable 60 (inert 60) failed 0 | listed-cap bits 274.1479 | minimal-cap bits 274.1479, rows on both sides 0, max row 199 | N-0.2b 5.1704 N-0.225b -1.6833 N-0.25b -8.5370 (minimal caps)
+v_T300_l25: D=-15 (2,0) listed 112 (dups 0) usable 112 (inert 112) failed 0 | listed-cap bits 439.9022 | minimal-cap bits 439.9022, rows on both sides 0, max row 293 | N-0.2b 24.0196 N-0.225b 13.0220 N-0.25b 2.0245 (minimal caps)

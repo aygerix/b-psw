@@ -1,0 +1,4 @@
+xn_cert9_l0.gp: 57 certificates, 0 failed; verified intervals cover R in [0, 57/8] (need 57/8): COVERED
+   S range covered: (9/32, 7.5175781250000000000000000000000000000]
+xn_cert9_l1.gp: 52 certificates, 0 failed; verified intervals cover R in [0, 13/2] (need 13/2): COVERED
+   S range covered: (1/4, 6.3437500000000000000000000000000000000]

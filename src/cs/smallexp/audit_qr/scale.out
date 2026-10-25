@@ -1,0 +1,8 @@
+l=5 r=  8 (r+1)^2=   81 used mean     56.4 min 9 max 70 ratio 0.696 | |rel| mean   20.9, #(+1) mean   10.7 [0s]
+l=5 r= 12 (r+1)^2=  169 used mean    129.5 min 54 max 146 ratio 0.766 | |rel| mean   47.0, #(+1) mean   22.0 [0s]
+l=5 r= 16 (r+1)^2=  289 used mean    224.3 min 70 max 248 ratio 0.776 | |rel| mean   85.3, #(+1) mean   42.4 [1s]
+l=5 r= 20 (r+1)^2=  441 used mean    354.9 min 342 max 365 ratio 0.805 | |rel| mean  141.4, #(+1) mean   69.7 [2s]
+l=5 r= 24 (r+1)^2=  625 used mean    505.8 min 487 max 522 ratio 0.809 | |rel| mean  200.5, #(+1) mean   99.3 [3s]
+l=5 r= 32 (r+1)^2= 1089 used mean    878.6 min 851 max 895 ratio 0.807 | |rel| mean  363.4, #(+1) mean  179.4 [4s]
+l=5 r= 40 (r+1)^2= 1681 used mean   1350.8 min 1323 max 1387 ratio 0.804 | |rel| mean  547.0, #(+1) mean  274.2 [8s]
+scale_exit=0

@@ -1,0 +1,11 @@
+// C-lemma independent check, k = 7: linear common-root family f_i = 1 + a_i x, a_1 = 1, members 1..6 Lucas-good. Expect no solution.
+ring R = 0, (a2, a3, a4, a5, a6, a7, TT), dp;
+poly a1 = 1;
+list a = a1, a2, a3, a4, a5, a6, a7;
+proc E(int j) { poly p = 1; int i; for (i = 1; i <= 7; i++) { if (i != j) { p = p * (a[j] - 2*a[i]); } } return(p - a[j]^6); }
+ideal I = E(1), E(2), E(3), E(4), E(5), E(6);
+poly nz = a2*a3*a4*a5*a6*a7;
+int i; int j; for (i = 1; i <= 7; i++) { for (j = i+1; j <= 7; j++) { nz = nz * (a[i] - a[j]); } }
+int t0 = timer; ideal S = std(I + ideal(1 - TT*nz));
+"k = 7, 6 good members: dim =", dim(S), " time =", timer - t0;
+quit;

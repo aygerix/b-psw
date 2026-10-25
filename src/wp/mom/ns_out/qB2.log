@@ -1,0 +1,5 @@
+03:34:14 start t5cxc: env [NS_DPOW=4 NS_RINF=30 NS_RPOW=4 NS_WMODE=c] args [5 0 cx - 500 201 250 400 0 1e-3]
+03:34:38 done t5cxc (exit 0)
+03:34:39 start t5boxc: env [NS_AMIN=0.05 NS_WMODE=c] args [5 0 box - 2000 202 250 400 0 1e-3]
+03:36:50 done t5boxc (exit 0)
+03:36:51 start c5a: env [NS_AMIN=0.01 NS_WMODE=c] args [5 0 real - 4000 101 250 400 0 1e-3]

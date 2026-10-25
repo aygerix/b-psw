@@ -1,0 +1,67 @@
+// src/cs/e3/adv/v2_locus.sing -- adversarial re-check of the E3 all-good locus in INVARIANT coordinates.
+// Normalisation r2 = 0, r3 = 1 (not mu = 1): a = I1 = c, b = I2 = q, u = I3 = mu.  Korselt solved:
+//   la = a/(1 + a b),  p = -(a + u + a u + a u b)/(a u).  With At = a u A (polynomial in x):
+//   f1 = (u + At)/u, f2 = (a + At x)/a, f3 = (E + At (x - 1))/E, E = u (1 + a b).
+// Good member j <=> Res_x(f_j + 1, F + 1) = 0  (different formulation from e3_R.sing, which used prod_{i!=j} f_i - 1).
+LIB "primdec.lib";
+proc SAT(ideal I, poly g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+option(redSB);
+ring R = 0, (x, a, b, u), dp;
+poly At = a*u*x^2 - (a + u + a*u + a*u*b)*x + a*u*b;
+poly E = u*(1 + a*b);
+poly n1 = u + At; poly n2 = a + At*x; poly n3 = E + At*(x - 1);
+poly D1 = u; poly D2 = a; poly D3 = E;
+poly Fm = n1*n2*n3 - D1*D2*D3;
+poly G = n1*n2*n3 + D1*D2*D3;
+// Korselt sanity: At | Fm, and Fm/At vanishes at x = 0 and x = 1
+list dv = division(Fm, At); "Korselt: Fm mod At = ", dv[2][1];
+poly Hq = dv[1][1,1]; "  H(0) = ", subst(Hq, x, 0), "   H(1) = ", subst(Hq, x, 1);
+poly disc = (a + u + a*u + a*u*b)^2 - 4*a^2*u^2*b;
+poly dg = a*u*(1 + a*b)*disc;
+list NN = list(n1 + D1, n2 + D2, n3 + D3);
+int t0 = timer;
+list QL; int j;
+for (j = 1; j <= 3; j++) { QL[j] = resultant(NN[j], G, x); }
+"resultants time(s) = ", timer - t0;
+proc clean(poly f, poly g) {
+  list fa = factorize(f); poly r = 1; int i;
+  for (i = 1; i <= size(fa[1]); i++) {
+    poly h = fa[1][i];
+    if (deg(h) > 0) { if (reduce(g^6, std(h)) != 0) { r = r * h; "    kept factor (", size(h), " terms) mult ", fa[2][i], " deg(a,b,u) = ", deg(h, intvec(0,1,0,0)), deg(h, intvec(0,0,1,0)), deg(h, intvec(0,0,0,1)); } else { "    dropped degenerate factor: ", h, " ^", fa[2][i]; } }
+    kill h;
+  }
+  return(r);
+}
+list RR;
+for (j = 1; j <= 3; j++) { "member ", j, ":"; RR[j] = clean(QL[j], dg); }
+ring S = 0, (a, b, u), dp;
+list RR = imap(R, RR); poly dg = imap(R, dg); poly disc = imap(R, disc);
+for (j = 1; j <= 3; j++) { "R", j, " = ", RR[j]; }
+write(":w out/v2_R.txt", "poly V1 = " + string(RR[1]) + ";", "poly V2 = " + string(RR[2]) + ";", "poly V3 = " + string(RR[3]) + ";");
+// all three good
+proc SATI(ideal I, ideal g) { def S = sat(I, g); if (typeof(S) == "list") { ideal J = S[1]; return(J); } return(S); }
+t0 = timer;
+ideal I3 = SAT(ideal(RR[1], RR[2], RR[3]), dg);
+"3-good (degenerate removed): dim = ", dim(std(I3)), "  time ", timer - t0;
+// slice a = 2 separately (the original saturated by c r3^2 - 2 = I1 - 2, which could hide isolated points there)
+ideal J2 = SAT(ideal(subst(RR[1], a, 2), subst(RR[2], a, 2), subst(RR[3], a, 2)), subst(dg, a, 2));
+"slice a = 2: dim (in (b,u) after a := 2) = ", dim(std(J2)) - 1;
+ideal J2r = SAT(J2, u*b + u - 1);
+"slice a = 2 minus the rho-curve u b + u - 1 = 0: dim = ", dim(std(J2r)) - 1, "   (-2 means empty)";
+// rho-curve is in the locus?
+"rho-curve check: R_j mod (a - 2, u b + u - 1) after clearing u: ", reduce(u^8*RR[1], std(ideal(a - 2, u*b + u - 1))), " ", reduce(u^8*RR[2], std(ideal(a - 2, u*b + u - 1))), " ", reduce(u^8*RR[3], std(ideal(a - 2, u*b + u - 1)));
+// remove the rho-curve as an IDEAL (keeps isolated points with a = 2 off the curve)
+ideal I3r = SATI(I3, ideal(a - 2, u*b + u - 1));
+ideal G3r = std(I3r);
+"3-good minus the rho-curve (ideal saturation): dim = ", dim(G3r), "  vdim = ", vdim(G3r), "  time ", timer - t0;
+if (dim(G3r) == 0) { ideal Eu = eliminate(G3r, a*b); "  eliminant in u:"; factorize(Eu[1]);
+  ideal Ea = eliminate(G3r, b*u); "  eliminant in a:"; factorize(Ea[1]); kill Eu; kill Ea; }
+// full decomposition (may be slow)
+list mp = minAssGTZ(I3);
+"minimal primes of the full 3-good locus: ", size(mp), "  time ", timer - t0;
+int i; int m;
+for (i = 1; i <= size(mp); i++) { ideal Pc = std(mp[i]); "  comp ", i, ": dim ", dim(Pc), "  vdim ", vdim(Pc);
+  for (m = 1; m <= size(Pc); m++) { if (size(Pc[m]) <= 40) { "     ", Pc[m]; } else { "     [", size(Pc[m]), " terms, deg ", deg(Pc[m]), "]"; } }
+  kill Pc; }
+"total time ", timer;
+quit;

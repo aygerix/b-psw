@@ -1,0 +1,3 @@
+k=3: K_C class {(1,): 0, (3,): -1, (2,): -1}  deg K_C = -2  arithmetic genus = 0  (degree of projection to each P^1 factor: {1: 1, 2: 1, 3: 1})
+k=5: K_C class {(1,): 2, (3,): 1, (4,): 1, (5,): 1, (2,): 1}  deg K_C = 62  arithmetic genus = 32  (degree of projection to each P^1 factor: {1: 9, 2: 11, 3: 11, 4: 11, 5: 11})
+k=7: K_C class {(1,): 4, (3,): 3, (4,): 3, (5,): 3, (6,): 3, (7,): 3, (2,): 3}  deg K_C = 6622  arithmetic genus = 3312  (degree of projection to each P^1 factor: {1: 265, 2: 309, 3: 309, 4: 309, 5: 309, 6: 309, 7: 309})

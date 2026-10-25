@@ -1,0 +1,28 @@
+member 1 full : dim =  1   (time  0 )
+   comp  1 : dim  1 , vdim  -1 :
+      a-2
+      bu+u-1
+   comp  2 : dim  1 , vdim  -1 :
+      2bu+a+4
+      a2+2a-2u
+member 2 full : dim =  -1   (time  0 )
+member 3 full : dim =  -1   (time  0 )
+member  2 : r2 numerator =  2a3u
+member 2 gcd >= 2 (deg R = 2, R | N_j) : dim =  1   (time  0 )
+   comp  1 : dim  1 , vdim  -1 :
+      a-1
+      2bu+3u-1
+member  3 : r2 numerator =  2a3b2u3+4a2bu3+2au3
+member 3 gcd >= 2 (deg R = 2, R | N_j) : dim =  1   (time  0 )
+   comp  1 : dim  1 , vdim  -1 :
+      a-1
+      bu+2u-2
+f1 full AND f2 gcd >= 2 : dim =  -1   (time  0 )
+f1 full AND f3 gcd >= 2 : dim =  -1   (time  0 )
+f2 gcd >= 2 AND f3 gcd >= 2 : dim =  0   (time  0 )
+   comp  1 : dim  0 , vdim  1 :
+      u-3
+      3b+4
+      a-1
+total time  0
+rc=0

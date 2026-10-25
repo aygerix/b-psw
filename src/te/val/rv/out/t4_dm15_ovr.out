@@ -1,0 +1,20 @@
+T4 overrides: 8257 primes, M(p3) ~ 2^14, M(p2) ~ 2^18 (plant-mode get_M)
+T4 runC D=-15 p3=9999795329 M3=11592 S=1 A=1 B=1 Wsmall=1: pairs engine 6341 (ref 6341) records engine 1512754 ref 1512754, max inner 86265, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=1 A=1 B=1 Wsmall=1: pairs engine 8256 (ref 8256) records engine 5976760 ref 5976760, max inner 631301, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999795329 M3=11592 S=65218755642409 A=1 B=1 Wsmall=1: pairs engine 6341 (ref 6341) records engine 1512782 ref 1512782, max inner 86264, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=65218755642409 A=1 B=1 Wsmall=1: pairs engine 8256 (ref 8256) records engine 5976758 ref 5976758, max inner 631301, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999795329 M3=11592 S=4375578271 A=141 B=15516235 Wsmall=1: pairs engine 6341 (ref 6341) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=4375578271 A=141 B=15516235 Wsmall=1: pairs engine 8256 (ref 8256) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999795329 M3=11592 S=87211 A=54 B=95 Wsmall=1: pairs engine 6341 (ref 6341) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=87211 A=54 B=95 Wsmall=1: pairs engine 8256 (ref 8256) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999795329 M3=11592 S=4942411 A=1870 B=881 Wsmall=1: pairs engine 6341 (ref 6341) records engine 8 ref 8, max inner 1, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=4942411 A=1870 B=881 Wsmall=1: pairs engine 8256 (ref 8256) records engine 539 ref 539, max inner 127, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999795329 M3=11592 S=8101 A=100 B=162 Wsmall=1: pairs engine 6341 (ref 6341) records engine 20195 ref 20195, max inner 1917, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=8101 A=100 B=162 Wsmall=1: pairs engine 8256 (ref 8256) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999795329 M3=11592 S=13669 A=204 B=134 Wsmall=1: pairs engine 6341 (ref 6341) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=13669 A=204 B=134 Wsmall=1: pairs engine 8256 (ref 8256) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999795329 M3=11592 S=4771289461 A=85484 B=37210 Wsmall=1: pairs engine 6341 (ref 6341) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=4771289461 A=85484 B=37210 Wsmall=1: pairs engine 8256 (ref 8256) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999795329 M3=11592 S=65218755642409 A=4359684 B=2493070 Wsmall=1: pairs engine 6341 (ref 6341) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+T4 runC D=-15 p3=9999883631 M3=5280 S=65218755642409 A=4359684 B=2493070 Wsmall=1: pairs engine 8256 (ref 8256) records engine 0 ref 0, max inner 0, long pairs ref 0 engine 0, MISMATCH 0
+RESULT runC D=-15: ok (0 problems)

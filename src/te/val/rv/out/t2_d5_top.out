@@ -1,0 +1,11 @@
+T2 setupA D=5 [9998000001,10000000000] S=1 A=1 B=1 Wbits=1 Wsmall=1: 43476 p3, nonempty 43476, count==1 19431, gmp-bigL 0, sum count 2207402, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=4582537681 A=1 B=1 Wbits=1 Wsmall=1: 43476 p3, nonempty 43476, count==1 0, gmp-bigL 0, sum count 2250878, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=4582537681 A=3 B=1 Wbits=2 Wsmall=1: 43476 p3, nonempty 27161, count==1 0, gmp-bigL 0, sum count 782106, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=1 A=2305843009213693951 B=2 Wbits=62 Wsmall=1: 43476 p3, nonempty 0, count==1 0, gmp-bigL 0, sum count 0, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=4582537681 A=2305843009213693951 B=6 Wbits=64 Wsmall=0: 43476 p3, nonempty 0, count==1 0, gmp-bigL 16174, sum count 0, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=4582537681 A=160453 B=1428 Wbits=28 Wsmall=1: 43476 p3, nonempty 0, count==1 0, gmp-bigL 0, sum count 0, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=363101449 A=171436 B=1059 Wbits=28 Wsmall=1: 43476 p3, nonempty 0, count==1 0, gmp-bigL 0, sum count 0, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=61681 A=40 B=1542 Wbits=15 Wsmall=1: 43476 p3, nonempty 169, count==1 141, gmp-bigL 0, sum count 304, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=4562284561 A=120 B=147934 Wbits=24 Wsmall=1: 43476 p3, nonempty 5, count==1 5, gmp-bigL 0, sum count 5, MISMATCH 0
+T2 setupA D=5 [9998000001,10000000000] S=4278255361 A=80 B=6684774 Wbits=28 Wsmall=1: 43476 p3, nonempty 0, count==1 0, gmp-bigL 0, sum count 0, MISMATCH 0
+RESULT setupA D=5: ok (0 problems)

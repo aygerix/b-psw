@@ -1,0 +1,4 @@
+(A) max normalized error of root-sum identity over 20000 random cases: 1.082122539862408e-13
+(B) (2,2) pencils: max scaled error of sum_- P - sum_+ P = 8/c over 20000 random (shape, c): 2.0330959138448296e-14 case (np.float64(-0.90146201688259), np.float64(-0.821393767960042), np.float64(133.57379467688037), np.complex128(0.05989198719217015+0j), np.float64(0.05989198719219048))
+(C) max Re(u)/|u| over nonzero roots of prod(1 + a u) = 1: -0.36270961182075734 ;  min Re(u)/|u| for prod(1 - a u) = +-1: 0.18500353528109642
+(D) c < 0 samples with K-_c free of real roots (claim: 0): 0

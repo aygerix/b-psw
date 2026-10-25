@@ -1,0 +1,6 @@
+LIB "normal.lib";
+ring r = 0, (a, M), dp;
+poly P = (7*M^3 + 57*M^2 + 57*M + 7)*a^3 + (-98*M^3 - 308*M^2 - 98*M)*a^2 + (392*M^3 + 392*M^2)*a - 448*M^3;
+"irreducible factors:"; factorize(P);
+"genus:"; genus(P);
+quit;

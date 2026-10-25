@@ -1,0 +1,49 @@
+[0;31m  ***   Warning: new maximum stack size = 1000001536 (953.676 Mbytes).[0m
+[F] Dmax=80 k=3 Tmax=20000: valid S=1 prime tuples=258 Korselt=258 sprp2=38 slprp=0 BPSW=0
+   bad-member histogram over S (entry j+1 = #S with j members having N_d!=0): [0, 0, 0, 1]  S with min AND max bad: 1
+   tuples all-inert for their D: 36 of which one 2-adic class: 8; inert members=330 split=444
+   Theorem U equivalence on inert members: agree=330 disagree=0
+   inert members with N_d!=0: 330  mean residual (defect) bits=12.922126498809978435919873009102991980 mean log2 p=15.595133613284188141039517127068001254  defect/log2p=0.82859992220923975769220879332049838407;  inert members with N_d=0: 0
+   controls (first passes): sprp2: List([[[1, 2, 3], 276, 27278026129], [[1, 2, 3], 370, 65700513721], [[1, 2, 3], 506, 168003672409]])  slprp: List([])
+[F] Dmax=60 k=4 Tmax=3000: valid S=6 prime tuples=103 Korselt=103 sprp2=6 slprp=0 BPSW=0
+   bad-member histogram over S (entry j+1 = #S with j members having N_d!=0): [0, 0, 0, 0, 6]  S with min AND max bad: 6
+   tuples all-inert for their D: 0 of which one 2-adic class: 0; inert members=225 split=187
+   Theorem U equivalence on inert members: agree=225 disagree=0
+   inert members with N_d!=0: 225  mean residual (defect) bits=14.160845313693942955086324969644956441 mean log2 p=15.725540391310601560677398075832838898  defect/log2p=0.90049975780283799627952286325660314341;  inert members with N_d=0: 0
+   controls (first passes): sprp2: List([[[1, 2, 3, 6], 506, 3060522900274753], [[1, 2, 3, 6], 710, 11861640972220321], [[1, 4, 5, 10], 1749, 299452856411894671201]])  slprp: List([])
+[F] Dmax=40 k=5 Tmax=1000: valid S=23 prime tuples=37 Korselt=37 sprp2=1 slprp=0 BPSW=0
+   bad-member histogram over S (entry j+1 = #S with j members having N_d!=0): [0, 0, 0, 0, 0, 23]  S with min AND max bad: 23
+   tuples all-inert for their D: 2 of which one 2-adic class: 1; inert members=107 split=78
+   Theorem U equivalence on inert members: agree=107 disagree=0
+   inert members with N_d!=0: 107  mean residual (defect) bits=14.878413509875812027004632242012121530 mean log2 p=16.581405983146406000121041867030812966  defect/log2p=0.89729504994922978768809239869586861942;  inert members with N_d=0: 0
+   controls (first passes): sprp2: List([[[1, 4, 10, 15, 30], 947, 10660798499708458244672488801]])  slprp: List([])
+[F] Dmax=30 k=6 Tmax=300: valid S=18 prime tuples=3 Korselt=3 sprp2=0 slprp=0 BPSW=0
+   bad-member histogram over S (entry j+1 = #S with j members having N_d!=0): [0, 0, 0, 0, 0, 0, 18]  S with min AND max bad: 18
+   tuples all-inert for their D: 0 of which one 2-adic class: 0; inert members=9 split=9
+   Theorem U equivalence on inert members: agree=9 disagree=0
+   inert members with N_d!=0: 9  mean residual (defect) bits=13.262208612917093096476241620702757972 mean log2 p=15.196945162382729263006882834582261353  defect/log2p=0.87268911424022742255315838452332913795;  inert members with N_d=0: 0
+   controls (first passes): sprp2: List([])  slprp: List([])
+[L] Dmax=80 k=3 Tmax=20000: valid S=1 prime tuples=275, p+1|n+1 for all=275 sprp2=0 slprp=24 BPSW=0
+   bad-member histogram over S (entry j+1 = #S with j members having N_d!=0): [0, 0, 0, 1]  S with min AND max bad: 1
+   tuples all-inert for their D: 134 of which one 2-adic class: 4; inert members=543 split=282
+   Theorem U equivalence on inert members: agree=543 disagree=0
+   inert members with N_d!=0: 543  mean residual (defect) bits=13.477903593612169587865035102910902098 mean log2 p=15.760065675925124003011983564971103268  defect/log2p=0.85519336472060797290715725479819939978;  inert members with N_d=0: 0
+   controls (first passes): sprp2: List([])  slprp: List([[[1, 2, 3], 14, 3479111], [[1, 2, 3], 70, 442590119], [[1, 2, 3], 490, 152378042039]])
+[L] Dmax=40 k=5 Tmax=1000: valid S=23 prime tuples=41, p+1|n+1 for all=41 sprp2=0 slprp=0 BPSW=0
+   bad-member histogram over S (entry j+1 = #S with j members having N_d!=0): [0, 0, 0, 0, 0, 23]  S with min AND max bad: 23
+   tuples all-inert for their D: 19 of which one 2-adic class: 0; inert members=137 split=68
+   Theorem U equivalence on inert members: agree=137 disagree=0
+   inert members with N_d!=0: 137  mean residual (defect) bits=14.622887846227024064091555339320602907 mean log2 p=16.242303452311321108358944914376147128  defect/log2p=0.90029643204001030512314650757495862345;  inert members with N_d=0: 0
+   controls (first passes): sprp2: List([])  slprp: List([])
+[T] Dmax=60 k=3 Tmax=3000: valid S=0 prime tuples=0, p+1|n+1 for all=0 sprp2=0 slprp=0 BPSW=0
+   bad-member histogram over S (entry j+1 = #S with j members having N_d!=0): [0, 0, 0, 0]  S with min AND max bad: 0
+   tuples all-inert for their D: 0 of which one 2-adic class: 0; inert members=0 split=0
+   Theorem U equivalence on inert members: agree=0 disagree=0
+   inert members with N_d!=0: 0  mean residual (defect) bits=0 mean log2 p=0  defect/log2p=0;  inert members with N_d=0: 0
+   controls (first passes): sprp2: List([])  slprp: List([])
+[T] Dmax=30 k=5 Tmax=300: valid S=0 prime tuples=0, p+1|n+1 for all=0 sprp2=0 slprp=0 BPSW=0
+   bad-member histogram over S (entry j+1 = #S with j members having N_d!=0): [0, 0, 0, 0, 0, 0]  S with min AND max bad: 0
+   tuples all-inert for their D: 0 of which one 2-adic class: 0; inert members=0 split=0
+   Theorem U equivalence on inert members: agree=0 disagree=0
+   inert members with N_d!=0: 0  mean residual (defect) bits=0 mean log2 p=0  defect/log2p=0;  inert members with N_d=0: 0
+   controls (first passes): sprp2: List([])  slprp: List([])

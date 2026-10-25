@@ -1,0 +1,7 @@
+03:38:36 start c7a: env [NS_AMIN=0.01 NS_WMODE=c] args [7 0 real - 3000 102 250 400 0 1e-3]
+03:46:26 done c7a (exit 0)
+03:46:26 start h7box: env [NS_AMIN=0.05 NS_WMODE=c] args [7 0 box - 3000 203 250 400 0 1e-3]
+03:54:42 done h7box (exit 0)
+03:54:42 start c9a: env [NS_AMIN=0.01 NS_WMODE=c] args [9 0 real - 2000 103 250 400 0 1e-3]
+04:04:12 done c9a (exit 0)
+04:04:12 start h9box: env [NS_AMIN=0.05 NS_WMODE=c] args [9 0 box - 2000 204 250 400 0 1e-3]

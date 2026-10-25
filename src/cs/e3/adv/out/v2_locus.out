@@ -1,0 +1,55 @@
+Korselt: Fm mod At =  0
+  H(0) =  0    H(1) =  0
+resultants time(s) =  0
+member  1 :
+    kept factor ( 21  terms) mult  1  deg(a,b,u) =  4 3 3
+    dropped degenerate factor:  a  ^ 6
+    dropped degenerate factor:  u  ^ 11
+member  2 :
+    kept factor ( 14  terms) mult  1  deg(a,b,u) =  3 2 2
+    dropped degenerate factor:  u  ^ 9
+    dropped degenerate factor:  a  ^ 14
+member  3 :
+    kept factor ( 13  terms) mult  1  deg(a,b,u) =  3 2 2
+    dropped degenerate factor:  ab+1  ^ 6
+    dropped degenerate factor:  a  ^ 8
+    dropped degenerate factor:  u  ^ 15
+R 1  =  a4b3u3-2a3b3u3+a4b2u2+6a3b2u3-a4bu2-2a3b2u2-8a2b2u3-a4bu+4a3bu2+11a2bu3+2a3bu-a3u2-12a2bu2-6abu3-a4+2a3u+a2u2+6au3+2a3-14au2+4u3
+R 2  =  2a3b2u2+a3bu2+2a2b2u2-5a3bu+5a2bu2+a2bu+a2u2+6abu2+2a3-8a2u+4au2-a2+2au+4u2
+R 3  =  2a3b2u2-a2b2u2-5a3bu+7a2bu2-a3u+a2bu-3abu2+2a3-6a2u+6au2+2a2-au-2u2
+3-good (degenerate removed): dim =  1   time  0
+slice a = 2: dim (in (b,u) after a := 2) =  1
+slice a = 2 minus the rho-curve u b + u - 1 = 0: dim =  -2    (-2 means empty)
+rho-curve check: R_j mod (a - 2, u b + u - 1) after clearing u:  0   0   0
+3-good minus the rho-curve (ideal saturation): dim =  0   vdim =  10   time  0
+  eliminant in u:
+[1]:
+   _[1]=1
+   _[2]=47u6+102u5-36u4+189u3-162u2-2187u-729
+   _[3]=u2-42u+9
+[2]:
+   1,1,2
+  eliminant in a:
+[1]:
+   _[1]=1
+   _[2]=a3+a+1
+   _[3]=a2+10a-2
+[2]:
+   1,1,2
+minimal primes of the full 3-good locus:  3   time  0
+  comp  1 : dim  1   vdim  -1
+      a-2
+      bu+u-1
+  comp  2 : dim  0   vdim  6
+      182au+69bu-141u2+405a+270b-334u-96
+      29484b2-44721bu+20351u2-12591a-84834b+30978u+38790
+      252ab+93bu-47u2+135a+90b-158u+150
+      3276a2+1485bu-1175u2+3375a-1026b-2298u+1566
+      8554u3-2187bu+6297u2+49977a-20736b+4248u+53892
+      273bu2-216bu+295u2-342a-1593b+915u+1440
+  comp  3 : dim  0   vdim  2
+      72b-17u+705
+      4a+u-1
+      u2-42u+9
+total time  0
+rc=0

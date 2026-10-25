@@ -1,0 +1,16 @@
+pairs 20000, uncovered 0
+BB n= 10070  always-passing:                                 counts: {'INTiv': 1649, 'INTiw': 1739, 'INTjv': 8549, 'INTjw': 8469}
+BV n=    15  always-passing: INTjv                           counts: {'EXTjw': 14, 'INTiw': 14, 'INTjv': 15}
+BW n=    20  always-passing: INTjw                           counts: {'EXTjv': 19, 'INTiv': 19, 'INTjw': 20}
+NB n=  3224  always-passing:                                 counts: {'EXTiv': 2262, 'EXTiw': 2228, 'INTjv': 3174, 'INTjw': 3170}
+NN n=  1416  always-passing:                                 counts: {'EXTiv': 915, 'EXTiw': 911, 'EXTjv': 357, 'EXTjw': 364}
+NV n=   402  always-passing:                                 counts: {'EXTiv': 295, 'EXTiw': 238, 'EXTjw': 23, 'INTjv': 364}
+NW n=   404  always-passing:                                 counts: {'EXTiv': 210, 'EXTiw': 299, 'EXTjv': 31, 'INTjw': 379}
+VB n=  1568  always-passing: EXTiw                           counts: {'EXTiw': 1568, 'INTiv': 426, 'INTjv': 1255, 'INTjw': 1561}
+VN n=     7  always-passing: EXTiw,EXTjv,INTiv               counts: {'EXTiw': 7, 'EXTjv': 7, 'INTiv': 7}
+VV n=   582  always-passing:                                 counts: {'EXTiw': 544, 'EXTjw': 33, 'INTiv': 289, 'INTjv': 307}
+VW n=   103  always-passing: EXTiw                           counts: {'EXTiw': 103, 'EXTjv': 92, 'INTiv': 53, 'INTjw': 89}
+WB n=  1496  always-passing: EXTiv                           counts: {'EXTiv': 1496, 'INTiw': 423, 'INTjv': 1486, 'INTjw': 1191}
+WN n=    10  always-passing: EXTiv,EXTjw,INTiw               counts: {'EXTiv': 10, 'EXTjw': 10, 'INTiw': 10}
+WV n=   114  always-passing: EXTiv                           counts: {'EXTiv': 114, 'EXTjw': 101, 'INTiw': 64, 'INTjv': 94}
+WW n=   569  always-passing:                                 counts: {'EXTiv': 522, 'EXTjv': 43, 'INTiw': 282, 'INTjw': 299}

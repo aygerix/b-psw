@@ -1,0 +1,21 @@
+Korselt check: F - 1 mod (f_j - 1) numerators:
+  j=1:  0
+  remainder by At =  0
+  H(0) =  0    H(r3) =  0
+resultants time(s) =  0
+    dropped degenerate factor:  c  ^ 4
+    dropped degenerate factor:  r3  ^ 17
+    dropped degenerate factor:  c  ^ 8
+    dropped degenerate factor:  r3  ^ 20
+    dropped degenerate factor:  q*c+1  ^ 3
+    dropped degenerate factor:  c  ^ 5
+    dropped degenerate factor:  r3  ^ 23
+R 1 : factors:
+   deg(q,c,r3) =  3 4 6   mult  1 :   -q^3*c^4*r3^5+q*c^4*r3^6-q^2*c^4*r3^4-6*q^2*c^3*r3^5+2*q^3*c^3*r3^3+c^3*r3^6+q*c^4*r3^3-4*q*c^3*r3^4-11*q*c^2*r3^5+2*q^2*c^3*r3^2+8*q^2*c^2*r3^3+c^4*r3^2-2*c^3*r3^3-c^2*r3^4-6*c*r3^5-2*q*c^3*r3+12*q*c^2*r3^2+6*q*c*r3^3-2*c^3+14*c*r3^2-4*r3^3
+R 2 : factors:
+   deg(q,c,r3) =  2 3 6   mult  1 :   q*c^3*r3^6+2*q^2*c^3*r3^4+c^2*r3^6-5*q*c^3*r3^3+5*q*c^2*r3^4+2*q^2*c^2*r3^2+2*c^3*r3^2-8*c^2*r3^3+4*c*r3^4+q*c^2*r3+6*q*c*r3^2-c^2+2*c*r3+4*r3^2
+R 3 : factors:
+   deg(q,c,r3) =  2 3 5   mult  1 :   -2*q^2*c^3*r3^4+c^3*r3^5+5*q*c^3*r3^3-7*q*c^2*r3^4+q^2*c^2*r3^2-2*c^3*r3^2+6*c^2*r3^3-6*c*r3^4-q*c^2*r3+3*q*c*r3^2-2*c^2+c*r3+2*r3^2
+
+halt 1
+rc=1

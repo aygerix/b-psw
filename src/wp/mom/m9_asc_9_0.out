@@ -1,0 +1,20 @@
+~/chowla_venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py:527: RuntimeWarning: overflow encountered in dot
+  cost_new = 0.5 * np.dot(f_new, f_new)
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: overflow encountered in scalar multiply
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar subtract
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+~/b-psw/src/wp/mom/m9_feas.py:27: RuntimeWarning: overflow encountered in scalar multiply
+  c[n] = v * d[n - 3]
+start 15: steps 102: obj -2.8908e+05 -> -2.0304e+04; 2^kT'' -2.0166e+04 2^kT~'' -2.0166e+04; e2(s) 5.776e+03 e2(al) 5.776e+03; margin 6.03e-10 dmin 5.32e-09 eqres 8.7e-11
+   u = [ 0.5       0.5       1.997067  0.5       0.5       0.5       0.5       0.5      -0.997067]
+   v = [0.03125  0.03125  0.498534 0.03125  1.460223 0.03125  0.03125  0.03125  0.498534]
+start 19: steps 134: obj -2.8146e+05 -> -2.0304e+04; 2^kT'' -2.0166e+04 2^kT~'' -2.0166e+04; e2(s) 5.776e+03 e2(al) 5.776e+03; margin 1.26e-09 dmin 5.37e-09 eqres 3.6e-12
+~/b-psw/src/wp/mom/m9_feas.py:53: RuntimeWarning: overflow encountered in square
+  v = (r + 0.5) ** 2 / 8
+~/b-psw/src/wp/mom/m9_feas.py:52: RuntimeWarning: overflow encountered in exp
+  r = np.exp(rho)
+~/b-psw/src/wp/mom/m9_feas.py:25: RuntimeWarning: invalid value encountered in scalar add
+  d[j] = -(1 + u) * d[j - 1] - (u + 2 * v) * d[j - 2]
+   u = [ 1.997067  0.5       0.5       0.5       0.5       0.5       0.5       0.5      -0.997067]
+   v = [0.498534 1.460223 0.03125  0.03125  0.03125  0.03125  0.03125  0.03125  0.498534]

@@ -1,0 +1,14 @@
+it=0 res=2.83e-09 dmin=5.37e-10
+it=1 res=7.55e-12 dmin=8.58e-15
+it=2 res=1.55e-15 dmin=4.44e-16
+it=3 res=1.28e-09 dmin=1.92e-06
+it=4 res=2.00e-15 dmin=0
+it=50 res=5.19e-09 dmin=1e-11
+~/b-psw/src/wp/mom/ak_core.py:17: RuntimeWarning: overflow encountered in multiply
+  return 2*t + 1 + t*(t+1)*(a*t + c)
+it=100 res=3.11e-15 dmin=0
+~/b-psw/src/wp/mom/ak_core.py:6: RuntimeWarning: overflow encountered in exp
+  a = 32.0/(1.0+np.exp(-al))
+~/b-psw/src/wp/mom/ak_core.py:13: RuntimeWarning: invalid value encountered in divide
+  r = (-B + np.sqrt(d))/(2*A)
+k=3 lin=0 mode=mod: 0 genuine solutions in 150 starts
