@@ -1,0 +1,2 @@
+# ref_split.gp D=5 X=6000 S=1271 A=20 B=60 inert=397 pred=ford
+# count=0

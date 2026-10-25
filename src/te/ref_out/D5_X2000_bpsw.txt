@@ -1,0 +1,2 @@
+# ref_brute.gp D=5 P=1 Q=-1 X=2000 S=1 mode=full inert_primes=155 triples=608685 pred=bpsw (exact, Selfridge A)
+# count=0

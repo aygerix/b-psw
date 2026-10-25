@@ -1,0 +1,9 @@
+window [960000001, 1000000000]: 966438 inert primes
+p3=989277953 M3=176506539664 (38 bits) countA=5544671 pairs=707591 inner=4016 noinv=0 incompat=0 cpu=0.060s ns/pair=84.4
+p3=986035777 M3=305848841844 (39 bits) countA=3178911 pairs=629134 inner=2002 noinv=0 incompat=0 cpu=0.053s ns/pair=83.9
+p3=982410043 M3=442007467132 (39 bits) countA=2183513 pairs=541463 inner=1243 noinv=0 incompat=0 cpu=0.045s ns/pair=83.8
+p3=981560617 M3=1023604129052 (40 bits) countA=941243 pairs=520969 inner=523 noinv=0 incompat=0 cpu=0.044s ns/pair=83.6
+p3=985576997 M3=1244783745948 (41 bits) countA=780345 pairs=618025 inner=508 noinv=0 incompat=0 cpu=0.052s ns/pair=83.4
+p3=994103767 M3=2063455104888 (41 bits) countA=478925 pairs=824074 inner=377 noinv=0 incompat=0 cpu=0.068s ns/pair=82.9
+TOTAL pairs=3841256 cpu=0.321s ns/pair=83.6 ; share of window primes with M >= 2^64: 0.000
+TIME 3.56 s wall 3.20 s user 59700 KB

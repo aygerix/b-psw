@@ -1,0 +1,9 @@
+SPLIT D=5 X=6000 S=11 A=10 B=10 ford=0 fz=0 fermat=0 lucas=0
+SPLIT D=5 X=6000 S=209 A=90 B=90 ford=0 fz=0 fermat=0 lucas=0
+SPLIT D=5 X=6000 S=1271 A=20 B=60 ford=0 fz=0 fermat=0 lucas=0
+SPLIT D=-7 X=6000 S=253 A=110 B=110 ford=0 fz=0 fermat=0 lucas=0
+SPLIT D=13 X=6000 S=391 A=88 B=176 ford=12 fz=7 fermat=0 lucas=0
+SPLIT D=5 X=6000 S=19 A=18 B=18 ford=42 fz=8 fermat=0 lucas=0
+SPLIT D=5 X=6000 S=551 A=252 B=126 ford=13 fz=11 fermat=0 lucas=0
+SPLIT D=5 X=6000 S=7031 A=429 B=858 ford=1 fz=1 fermat=1 lucas=0
+SPLIT D=-7 X=6000 S=1073 A=252 B=252 ford=0 fz=61 fermat=0 lucas=6

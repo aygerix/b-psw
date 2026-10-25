@@ -1,0 +1,10 @@
+anchor3 D=13 Q=-3 X=2000 mode=lucas threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.070 chunkA=32768 chunkC=65536
+TABLE D=13 X=2000 inert=152 overflow=0 bytes=0.0MB time=0.00s cpu=0.01s
+LUCAS n = 2117473 = 37 * 151 * 379  [branch C]
+LUCAS n = 5537993 = 41 * 293 * 461  [branch C]
+LUCAS n = 6749849 = 89 * 149 * 509  [branch C]
+LUCAS n = 10397407 = 37 * 151 * 1861  [branch C]
+PASS D=13 S=1 A=1 B=1 mode=lucas cap=0 X=2000 inert=152 Aprimes=0 Acands=0 Cprimes=152 Cpairs=11476 Cinner=3295 prefilter=0 hits=4 wall=0.02s
+DIAG Aunsolv=0 Asieved=0 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=130 Cincompat=0 Cp1=111 Cw1=53 Cfinal=53 longpairs=0 threadsec_A=0.00 threadsec_C=0.03 us_per_Acand=0.0000 us_per_Cpair=2.3566 sieve=on cpu=0.03s
+TIME 0.16 s wall 0.10 s user 6848 KB
+rc=0

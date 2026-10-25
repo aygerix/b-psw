@@ -1,0 +1,12 @@
+c3/D5_X1e6_capauto.out 7200 --D 5 --X 1e6 --mode plant --plants ../plants/plants_D5_X1e6.txt --threads 4
+c3/D5_X1e6_lcm_capauto.out 7200 --D 5 --X 1e6 --mode plant --plants ../plants/plants_D5_X1e6_lcm.txt --threads 4
+c3/D-7_X1e6_capauto.out 7200 --D -7 --X 1e6 --mode plant --plants ../plants/plants_D-7_X1e6.txt --threads 4
+c3/D-7_X1e6_lcm_capauto.out 7200 --D -7 --X 1e6 --mode plant --plants ../plants/plants_D-7_X1e6_lcm.txt --threads 4
+c3/D5_X1e7_capauto.out 7200 --D 5 --X 1e7 --mode plant --plants ../plants/plants_D5_X1e7.txt --threads 4
+c3/D5_X1e7_lcm_capauto.out 7200 --D 5 --X 1e7 --mode plant --plants ../plants/plants_D5_X1e7_lcm.txt --threads 4
+c3/D5_X2e4_small_capauto.out 7200 --D 5 --X 2e4 --mode plant --plants ../plants/plants_D5_X2e4_small.txt --threads 4
+c3/D5_X3e3_small_capauto.out 7200 --D 5 --X 3e3 --mode plant --plants ../plants/plants_D5_X3e3_small.txt --threads 4
+c3/D5_X2e4_small_cap-1.out 7200 --D 5 --X 2e4 --mode plant --plants ../plants/plants_D5_X2e4_small.txt --cap -1 --threads 4
+c3/D5_X2e4_small_cap0.out 7200 --D 5 --X 2e4 --mode plant --plants ../plants/plants_D5_X2e4_small.txt --cap 0 --threads 4
+c3/D5_X3e3_small_cap-1.out 7200 --D 5 --X 3e3 --mode plant --plants ../plants/plants_D5_X3e3_small.txt --cap -1 --threads 4
+c3/D5_X3e3_small_cap0.out 7200 --D 5 --X 3e3 --mode plant --plants ../plants/plants_D5_X3e3_small.txt --cap 0 --threads 4

@@ -1,0 +1,6 @@
+# ref_brute.gp D=13 P=1 Q=-3 X=2000 S=1 mode=full inert_primes=152 triples=573800 pred=lucas (strong Lucas, fixed D)
+# count=4
+2117473 37 151 379
+5537993 41 293 461
+6749849 89 149 509
+10397407 37 151 1861

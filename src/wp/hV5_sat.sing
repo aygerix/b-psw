@@ -1,0 +1,20 @@
+ring R = 0, (b1,b2,b3,b4,b5,d1,d2,d3,d4,d5,w,y,X), dp;
+poly G = 1;
+poly a1 = 2 + (y+1)*d1 + (y+1)^2*b1; G = G*(1 + X*a1);
+poly a2 = 2 + (y+1)*d2 + (y+1)^2*b2; G = G*(1 + X*a2);
+poly a3 = 2 + (y+1)*d3 + (y+1)^2*b3; G = G*(1 + X*a3);
+poly a4 = 2 + (y+1)*d4 + (y+1)^2*b4; G = G*(1 + X*a4);
+poly a5 = 2 + (y+1)*d5 + (y+1)^2*b5; G = G*(1 + X*a5);
+matrix E = coeffs(G, X);
+poly S = 0; int r;
+for (r = 1; r <= 4; r++) { S = S + y^(r-1)*E[r+1,1]; }
+S = S - E[6,1]*(15/4*y + 45/16);
+matrix C = coeffs(S, y);
+ideal I; int j; for (j = 1; j <= nrows(C); j++) { I = I, C[j,1]; }
+I = I, 1 - w*b1*b2*b3*b4*b5*(2 + d1 + b1)*(2 + d2 + b2)*(2 + d3 + b3)*(2 + d4 + b4)*(2 + d5 + b5);
+ring S2 = 0, (b1,b2,b3,b4,b5,d1,d2,d3,d4,d5,w), dp;
+ideal J = imap(R, I); J = simplify(J, 2);
+option(redSB); option(prot);
+ideal GB = std(J);
+if (GB[1] == 1) { "UNIT IDEAL: no solutions"; } else { "NOT UNIT: dim", dim(GB), "vdim", vdim(GB); }
+quit;

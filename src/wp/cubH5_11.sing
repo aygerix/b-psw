@@ -1,0 +1,16 @@
+ring R = 32003, (t, a1, a2, a3, a4, a5, c1, c2, c3, c4, c5, w0, w1, y), (dp(1), dp(13));
+poly F = 1; poly G = 1;
+F = F*(2*t + 1 + t*(t+1)*(a1*t + c1)); G = G*(a1*t^2 + (a1 + c1)*t + (c1 + 2));
+F = F*(2*t + 1 + t*(t+1)*(a2*t + c2)); G = G*(a2*t^2 + (a2 + c2)*t + (c2 + 2));
+F = F*(2*t + 1 + t*(t+1)*(a3*t + c3)); G = G*(a3*t^2 + (a3 + c3)*t + (c3 + 2));
+F = F*(2*t + 1 + t*(t+1)*(a4*t + c4)); G = G*(a4*t^2 + (a4 + c4)*t + (c4 + 2));
+F = F*(2*t + 1 + t*(t+1)*(a5*t + c5)); G = G*(a5*t^2 + (a5 + c5)*t + (c5 + 2));
+poly Wm = t^4 + w0*t^0 + w1*t^1;
+ideal I = coeffs(F - 1 - t*G*Wm, t);
+I = I, 1 - y*a1*a2*a3*a4*a5*(c1 + 2)*(c2 + 2)*(c3 + 2)*(c4 + 2)*(c5 + 2)*((a2 - a1) + 11*(c2 - c1))*((a3 - a1) + 11*(c3 - c1))*((a3 - a2) + 11*(c3 - c2))*((a4 - a1) + 11*(c4 - c1))*((a4 - a2) + 11*(c4 - c2))*((a4 - a3) + 11*(c4 - c3))*((a5 - a1) + 11*(c5 - c1))*((a5 - a2) + 11*(c5 - c2))*((a5 - a3) + 11*(c5 - c3))*((a5 - a4) + 11*(c5 - c4));
+ring S = 32003, (a1, a2, a3, a4, a5, c1, c2, c3, c4, c5, w0, w1, y), dp;
+ideal J = imap(R, I);
+option(redSB); ideal B = std(J);
+if (B[1] == 1) { "UNIT IDEAL: the minus half alone has no solution, k = 5, L = 11"; }
+else { "dim = ", dim(B), " vdim = ", vdim(B), " size = ", size(B); }
+quit;

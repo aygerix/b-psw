@@ -1,0 +1,5 @@
+c4/bpsw_d5_1e6.out 3600 --D 5 --X 1e6 --threads 4
+c4/bpsw_d5_1e7.out 3600 --D 5 --X 1e7 --threads 4
+c4/bpsw_d5_1e8.out 7200 --D 5 --X 1e8 --threads 4
+c4/plan_d5_1e8.out 3600 --D 5 --X 1e8 --threads 4 --planonly
+c4/plan_d5_1e9.out 7200 --D 5 --X 1e9 --threads 4 --planonly

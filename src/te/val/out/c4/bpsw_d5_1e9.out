@@ -1,0 +1,14 @@
+anchor3 D=5 Q=-1 X=1000000000 mode=bpsw threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.070 chunkA=32768 chunkC=65536
+TABLE D=5 X=1000000000 inert=25424813 overflow=0 bytes=406.8MB time=64.15s cpu=83.77s
+progress p3 <= 134789153 (15.0% of table) elapsed 30s
+progress p3 <= 254762687 (27.4% of table) elapsed 60s
+progress p3 <= 372692107 (39.2% of table) elapsed 90s
+progress p3 <= 485981747 (50.5% of table) elapsed 120s
+progress p3 <= 605967353 (62.2% of table) elapsed 150s
+progress p3 <= 707092457 (72.0% of table) elapsed 180s
+progress p3 <= 814972273 (82.4% of table) elapsed 210s
+progress p3 <= 923555077 (92.7% of table) elapsed 240s
+PASS D=5 S=1 A=1 B=1 mode=bpsw cap=auto X=1000000000 inert=25424813 Aprimes=25424616 Acands=1609498047 Cprimes=197 Cpairs=588385732 Cinner=13576555 prefilter=12 hits=0 wall=260.22s
+DIAG Aunsolv=0 Asieved=1068384572 Ashape=0 Afinal=12 Abig=0 Cunsolv=0 Cnoinv=378 Cincompat=3 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=766.99 threadsec_C=159.53 us_per_Acand=0.4765 us_per_Cpair=0.2711 sieve=on cpu=345.77s
+TIME 324.62 s wall 428.88 s user 558224 KB
+rc=0

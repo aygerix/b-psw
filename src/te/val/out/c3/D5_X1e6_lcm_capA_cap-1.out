@@ -1,0 +1,87 @@
+anchor3 D=5 Q=-1 X=1000000 mode=plant threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.070 chunkA=32768 chunkC=65536
+TABLE D=5 X=1000000 inert=39286 overflow=0 bytes=0.6MB time=0.08s cpu=0.18s
+PLANTFILE plants_D5_X1e6_lcm_capA.txt: 78 overrides, 26 triples, 10 passes
+PLANTFOUND n = 1318708537 = 823 * 967 * 1657  [branch A]
+PLANTFOUND n = 194988433 = 197 * 557 * 1777  [branch A]
+PLANTFOUND n = 1309504013 = 443 * 1223 * 2417  [branch A]
+PLANTFOUND n = 8547509263 = 1483 * 2083 * 2767  [branch A]
+PLANTFOUND n = 133089988663 = 4673 * 5153 * 5527  [branch A]
+PLANTFOUND n = 720831610997 = 7103 * 9677 * 10487  [branch A]
+PLANTFOUND n = 171038043457 = 1367 * 10343 * 12097  [branch A]
+PLANTFOUND n = 915920501533 = 7417 * 8713 * 14173  [branch A]
+PLANTFOUND n = 3223502266223 = 9803 * 14243 * 23087  [branch A]
+PLANTFOUND n = 9449191545587 = 14633 * 24197 * 26687  [branch A]
+PLANTFOUND n = 114930793524707 = 27653 * 43517 * 95507  [branch A]
+PLANTFOUND n = 1238269820425273 = 50873 * 98807 * 246343  [branch A]
+PLANTFOUND n = 616557255743857 = 39233 * 54293 * 289453  [branch A]
+PLANTFOUND n = 2790330463166903 = 40283 * 194003 * 357047  [branch A]
+PLANTFOUND n = 26836618985364707 = 97883 * 472067 * 580787  [branch A]
+PLANTFOUND n = 6212951107925197 = 40423 * 206303 * 745013  [branch A]
+PLANTFOUND n = 6487509723632683 = 74383 * 111187 * 784423  [branch A]
+PASS D=5 S=1 A=1 B=1 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=39286 Acands=14632118017 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=17 wall=61.26s
+DIAG Aunsolv=0 Asieved=0 Ashape=0 Afinal=14632118017 Abig=18 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=244.62 threadsec_C=0.00 us_per_Acand=0.0167 us_per_Cpair=0.0000 sieve=on cpu=183.71s
+PLANT 0 14633 24197 26687 S=1 A=1 B=1 valid=1 found=1
+PLANT 1 9803 14243 23087 S=1 A=1 B=1 valid=1 found=1
+PLANT 2 27653 43517 95507 S=1 A=1 B=1 valid=1 found=1
+PLANT 3 443 1223 2417 S=1 A=1 B=1 valid=1 found=1
+PLANT 4 4673 5153 5527 S=1 A=1 B=1 valid=1 found=1
+PLANT 5 197 557 1777 S=1 A=1 B=1 valid=1 found=1
+PLANT 6 7103 9677 10487 S=1 A=1 B=1 valid=1 found=1
+PLANT 7 7417 8713 14173 S=1 A=1 B=1 valid=1 found=1
+PLANT 8 1367 10343 12097 S=1 A=1 B=1 valid=1 found=1
+PLANT 9 40283 194003 357047 S=1 A=1 B=1 valid=1 found=1
+PLANT 10 50873 98807 246343 S=1 A=1 B=1 valid=1 found=1
+PLANT 11 823 967 1657 S=1 A=1 B=1 valid=1 found=1
+PLANT 12 39233 54293 289453 S=1 A=1 B=1 valid=1 found=1
+PLANT 13 1483 2083 2767 S=1 A=1 B=1 valid=1 found=1
+PLANT 14 97883 472067 580787 S=1 A=1 B=1 valid=1 found=1
+PLANT 15 74383 111187 784423 S=1 A=1 B=1 valid=1 found=1
+PLANT 16 40423 206303 745013 S=1 A=1 B=1 valid=1 found=1
+PLANTS pass=0 valid=17 found=17 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 677378195420753633 = 1117 * 1373 * 1733 * 254864261  [branch A]
+PASS D=5 S=254864261 A=416 B=102 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=10695 Acands=4699540 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.04s
+DIAG Aunsolv=28591 Asieved=0 Ashape=0 Afinal=4699540 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.05 threadsec_C=0.00 us_per_Acand=0.0112 us_per_Cpair=0.0000 sieve=on cpu=0.13s
+PLANT 17 1117 1373 1733 S=254864261 A=416 B=102 valid=1 found=1
+PLANTS pass=1 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 1802618245637 = 4657 * 4903 * 7177 * 11  [branch A]
+PASS D=5 S=11 A=1196 B=42 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=7578 Acands=1674249 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.04s
+DIAG Aunsolv=31708 Asieved=0 Ashape=0 Afinal=1674249 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.02 threadsec_C=0.00 us_per_Acand=0.0102 us_per_Cpair=0.0000 sieve=on cpu=0.12s
+PLANT 18 4657 4903 7177 S=11 A=1196 B=42 valid=1 found=1
+PLANTS pass=2 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 8359710281456750861102417544415425233 = 2647 * 6343 * 17657 * 28198477268993124699792889  [branch A]
+PASS D=5 S=28198477268993124699792889 A=388432 B=9558 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=10958 Acands=48 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.04s
+DIAG Aunsolv=28328 Asieved=0 Ashape=0 Afinal=48 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.00 threadsec_C=0.00 us_per_Acand=0.6785 us_per_Cpair=0.0000 sieve=on cpu=0.11s
+PLANT 19 2647 6343 17657 S=28198477268993124699792889 A=388432 B=9558 valid=1 found=1
+PLANTS pass=3 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 3675540947461681663 = 207743 * 236293 * 418303 * 179  [branch A]
+PASS D=5 S=179 A=78 B=108016 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=12713 Acands=10574 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.04s
+DIAG Aunsolv=26573 Asieved=0 Ashape=0 Afinal=10574 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.00 threadsec_C=0.00 us_per_Acand=0.0129 us_per_Cpair=0.0000 sieve=on cpu=0.11s
+PLANT 20 207743 236293 418303 S=179 A=78 B=108016 valid=1 found=1
+PLANTS pass=4 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 98864404170321234737 = 66137 * 213713 * 273773 * 25549  [branch A]
+PASS D=5 S=25549 A=368 B=6 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=10917 Acands=80257711 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.27s
+DIAG Aunsolv=28369 Asieved=0 Ashape=0 Afinal=80257711 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.95 threadsec_C=0.00 us_per_Acand=0.0118 us_per_Cpair=0.0000 sieve=on cpu=0.82s
+PLANT 21 66137 213713 273773 S=25549 A=368 B=6 valid=1 found=1
+PLANTS pass=5 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 2199676498103372147 = 14407 * 37087 * 62603 * 65761  [branch A]
+PASS D=5 S=65761 A=4294 B=152292 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=11171 Acands=128 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.04s
+DIAG Aunsolv=28115 Asieved=0 Ashape=0 Afinal=128 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.00 threadsec_C=0.00 us_per_Acand=0.3849 us_per_Cpair=0.0000 sieve=on cpu=0.11s
+PLANT 22 14407 37087 62603 S=65761 A=4294 B=152292 valid=1 found=1
+PLANTS pass=6 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 1252368740553373 = 3923 * 28477 * 58693 * 191  [branch A]
+PASS D=5 S=191 A=612 B=62 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=11110 Acands=1307513 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.04s
+DIAG Aunsolv=28176 Asieved=0 Ashape=0 Afinal=1307513 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.01 threadsec_C=0.00 us_per_Acand=0.0110 us_per_Cpair=0.0000 sieve=on cpu=0.12s
+PLANT 23 3923 28477 58693 S=191 A=612 B=62 valid=1 found=1
+PLANTS pass=7 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 8036135132320935482901203448799983231740417 = 91127 * 299393 * 438793 * 671272452712711101417424079  [branch A]
+PASS D=5 S=671272452712711101417424079 A=389 B=138 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=23418 Acands=779370 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.04s
+DIAG Aunsolv=15868 Asieved=0 Ashape=0 Afinal=779370 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.01 threadsec_C=0.00 us_per_Acand=0.0091 us_per_Cpair=0.0000 sieve=on cpu=0.11s
+PLANT 24 91127 299393 438793 S=671272452712711101417424079 A=389 B=138 valid=1 found=1
+PLANTS pass=8 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+PLANTFOUND n = 1038655330510295363 = 857 * 997 * 1823 * 666820289  [branch A]
+PASS D=5 S=666820289 A=118 B=12 mode=plant cap=-1 X=1000000 inert=39286 Aprimes=14073 Acands=58308289 Cprimes=0 Cpairs=0 Cinner=0 prefilter=0 hits=1 wall=0.20s
+DIAG Aunsolv=25213 Asieved=0 Ashape=0 Afinal=58308289 Abig=0 Cunsolv=0 Cnoinv=0 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.66 threadsec_C=0.00 us_per_Acand=0.0113 us_per_Cpair=0.0000 sieve=on cpu=0.59s
+PLANT 25 857 997 1823 S=666820289 A=118 B=12 valid=1 found=1
+PLANTS pass=9 valid=1 found=1 MISSED=0 duplicates=0 invalid=0 invalid_found=0
+TIME 62.14 s wall 186.07 s user 78596 KB
+rc=0

@@ -1,0 +1,27 @@
+anchor3 D=13 Q=-3 X=6000 mode=fermat threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.070 chunkA=32768 chunkC=65536
+TABLE D=13 X=6000 inert=398 overflow=0 bytes=0.0MB time=0.02s cpu=0.03s
+FERMAT n = 15841 = 7 * 31 * 73  [branch C]
+FERMAT n = 74665 = 5 * 109 * 137  [branch C]
+FERMAT n = 1023121 = 11 * 281 * 331  [branch C]
+FERMAT n = 2953711 = 31 * 151 * 631  [branch C]
+FERMAT n = 139487041 = 331 * 617 * 683  [branch C]
+FERMAT n = 307972801 = 271 * 631 * 1801  [branch C]
+FERMAT n = 2419385 = 5 * 229 * 2113  [branch C]
+FERMAT n = 554487121 = 397 * 661 * 2113  [branch C]
+FERMAT n = 1108135381 = 397 * 1321 * 2113  [branch C]
+FERMAT n = 133800661 = 109 * 541 * 2269  [branch C]
+FERMAT n = 1541955409 = 499 * 1163 * 2657  [branch C]
+FERMAT n = 44963029 = 37 * 397 * 3061  [branch C]
+FERMAT n = 998489017 = 137 * 2381 * 3061  [branch C]
+FERMAT n = 274701913 = 149 * 593 * 3109  [branch C]
+FERMAT n = 4343011081 = 409 * 3061 * 3469  [branch C]
+FERMAT n = 3433458073 = 397 * 2113 * 4093  [branch C]
+FERMAT n = 1142466151 = 151 * 1801 * 4201  [branch C]
+FERMAT n = 4034969401 = 661 * 1321 * 4621  [branch C]
+FERMAT n = 831933901 = 149 * 1201 * 4649  [branch C]
+FERMAT n = 4540754593 = 397 * 2113 * 5413  [branch C]
+FERMAT n = 305897131 = 19 * 2971 * 5419  [branch C]
+PASS D=13 S=1 A=1 B=1 mode=fermat cap=0 X=6000 inert=398 Aprimes=0 Acands=0 Cprimes=398 Cpairs=79003 Cinner=23639 prefilter=0 hits=21 wall=0.03s
+DIAG Aunsolv=0 Asieved=0 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=358 Cincompat=0 Cp1=551 Cw1=196 Cfinal=196 longpairs=0 threadsec_A=0.00 threadsec_C=0.03 us_per_Acand=0.0000 us_per_Cpair=0.3429 sieve=on cpu=0.04s
+TIME 0.12 s wall 0.13 s user 7036 KB
+rc=0

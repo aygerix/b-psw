@@ -1,0 +1,2 @@
+# ref_split.gp D=5 X=6000 S=19 A=18 B=18 inert=397 pred=lucas
+# count=0

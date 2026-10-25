@@ -1,0 +1,602 @@
+# mkplants.gp D=5 P=1 Q=-1 X=1000000 seed=201 plants=120 mrule=lcmform (per class target 30; classes a,b,c have S=A=B=1; d = split part)
+# override rule: M'(p) = lcmform(p, gcd(p^2-1, n/p-1)) (2-part <= max(v2(p-1),v2(p+1))), n = p1 p2 p3 S; all plants pairwise disjoint
+# plant 1 class=a Sfac=1 idx3=352 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=352 M'=[54, 6, 2023284] nbits=44 nonlcm=none
+O 14633 54
+O 24197 6
+O 26687 2023284
+T 14633 24197 26687 1 1 1
+# plant 2 class=a Sfac=1 idx3=754 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=754 M'=[2, 2, 41994312] nbits=49 nonlcm=none
+O 15053 2
+O 153437 2
+O 177943 41994312
+T 15053 153437 177943 1 1 1
+# plant 3 class=a Sfac=1 idx3=818 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=818 M'=[12, 36, 841066356] nbits=58 nonlcm=none
+O 336157 12
+O 545437 36
+O 829453 841066356
+T 336157 545437 829453 1 1 1
+# plant 4 class=a Sfac=1 idx3=46 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=46 M'=[8, 8, 11074358808] nbits=56 nonlcm=none
+O 200177 8
+O 331937 8
+O 713737 11074358808
+T 200177 331937 713737 1 1 1
+# plant 5 class=a Sfac=1 idx3=962 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=962 M'=[12, 12, 554064] nbits=42 nonlcm=none
+O 9803 12
+O 14243 12
+O 23087 554064
+T 9803 14243 23087 1 1 1
+# plant 6 class=a Sfac=1 idx3=758 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=758 M'=[6, 6, 12033756] nbits=47 nonlcm=none
+O 27653 6
+O 43517 6
+O 95507 12033756
+T 27653 43517 95507 1 1 1
+# plant 7 class=a Sfac=1 idx3=248 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=248 M'=[6, 18, 23556] nbits=31 nonlcm=none
+O 443 6
+O 1223 18
+O 2417 23556
+T 443 1223 2417 1 1 1
+# plant 8 class=a Sfac=1 idx3=614 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=614 M'=[2, 2, 49752] nbits=37 nonlcm=none
+O 4673 2
+O 5153 2
+O 5527 49752
+T 4673 5153 5527 1 1 1
+# plant 9 class=a Sfac=1 idx3=266 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=266 M'=[42, 6, 3645485268] nbits=59 nonlcm=none
+O 631903 42
+O 692287 6
+O 984733 3645485268
+T 631903 692287 984733 1 1 1
+# plant 10 class=a Sfac=1 idx3=518 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=518 M'=[4, 4, 6096] nbits=28 nonlcm=none
+O 197 4
+O 557 4
+O 1777 6096
+T 197 557 1777 1 1 1
+# plant 11 class=a Sfac=1 idx3=68 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=68 M'=[8, 2, 693487686] nbits=52 nonlcm=none
+O 52783 8
+O 197077 2
+O 217157 693487686
+T 52783 197077 217157 1 1 1
+# plant 12 class=a Sfac=1 idx3=8 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=8 M'=[6, 12, 13747146] nbits=40 nonlcm=none
+O 7103 6
+O 9677 12
+O 10487 13747146
+T 7103 9677 10487 1 1 1
+# plant 13 class=a Sfac=1 idx3=746 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=746 M'=[12, 12, 269268] nbits=40 nonlcm=none
+O 7417 12
+O 8713 12
+O 14173 269268
+T 7417 8713 14173 1 1 1
+# plant 14 class=a Sfac=1 idx3=312 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=312 M'=[58, 2, 2038343544] nbits=56 nonlcm=none
+O 170927 58
+O 417383 2
+O 797473 2038343544
+T 170927 417383 797473 1 1 1
+# plant 15 class=a Sfac=1 idx3=174 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=174 M'=[6, 2, 3050380232] nbits=55 nonlcm=none
+O 67807 6
+O 629807 2
+O 728537 3050380232
+T 67807 629807 728537 1 1 1
+# plant 16 class=a Sfac=1 idx3=414 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=414 M'=[2, 2, 353472] nbits=38 nonlcm=none
+O 1367 2
+O 10343 2
+O 12097 353472
+T 1367 10343 12097 1 1 1
+# plant 17 class=a Sfac=1 idx3=694 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=694 M'=[4, 4, 1178282052] nbits=56 nonlcm=none
+O 94747 4
+O 422827 4
+O 904283 1178282052
+T 94747 422827 904283 1 1 1
+# plant 18 class=a Sfac=1 idx3=724 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=724 M'=[2, 2, 1238668152] nbits=53 nonlcm=none
+O 43103 2
+O 143687 2
+O 946993 1238668152
+T 43103 143687 946993 1 1 1
+# plant 19 class=a Sfac=1 idx3=522 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=522 M'=[36, 36, 244219464] nbits=52 nonlcm=none
+O 40283 36
+O 194003 36
+O 357047 244219464
+T 40283 194003 357047 1 1 1
+# plant 20 class=a Sfac=1 idx3=664 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=664 M'=[8, 2, 91392882] nbits=51 nonlcm=none
+O 50873 8
+O 98807 2
+O 246343 91392882
+T 50873 98807 246343 1 1 1
+# plant 21 class=a Sfac=1 idx3=138 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=138 M'=[6, 6, 19896] nbits=31 nonlcm=none
+O 823 6
+O 967 6
+O 1657 19896
+T 823 967 1657 1 1 1
+# plant 22 class=a Sfac=1 idx3=204 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=204 M'=[2, 2, 2659537632] nbits=59 nonlcm=none
+O 639547 2
+O 644563 2
+O 736577 2659537632
+T 639547 644563 736577 1 1 1
+# plant 23 class=a Sfac=1 idx3=106 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=106 M'=[2, 2, 8960123028] nbits=58 nonlcm=none
+O 315593 2
+O 880133 2
+O 974563 8960123028
+T 315593 880133 974563 1 1 1
+# plant 24 class=a Sfac=1 idx3=118 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=118 M'=[208, 28, 710025756] nbits=50 nonlcm=none
+O 39233 208
+O 54293 28
+O 289453 710025756
+T 39233 54293 289453 1 1 1
+# plant 25 class=a Sfac=1 idx3=922 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=922 M'=[84, 12, 8304] nbits=33 nonlcm=none
+O 1483 84
+O 2083 12
+O 2767 8304
+T 1483 2083 2767 1 1 1
+# plant 26 class=a Sfac=1 idx3=146 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=146 M'=[36, 23436, 2310366708] nbits=55 nonlcm=none
+O 97883 36
+O 472067 23436
+O 580787 2310366708
+T 97883 472067 580787 1 1 1
+# plant 27 class=a Sfac=1 idx3=82 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=82 M'=[2, 2, 6002838264] nbits=57 nonlcm=none
+O 328103 2
+O 402503 2
+O 701593 6002838264
+T 328103 402503 701593 1 1 1
+# plant 28 class=a Sfac=1 idx3=654 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=654 M'=[2, 6, 66552332] nbits=50 nonlcm=none
+O 24097 2
+O 204377 6
+O 208627 66552332
+T 24097 204377 208627 1 1 1
+# plant 29 class=a Sfac=1 idx3=372 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=372 M'=[12, 12, 1654084524] nbits=53 nonlcm=none
+O 74383 12
+O 111187 12
+O 784423 1654084524
+T 74383 111187 784423 1 1 1
+# plant 30 class=a Sfac=1 idx3=12 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=12 M'=[2, 2, 2805195144] nbits=52 nonlcm=none
+O 99487 2
+O 140983 2
+O 183473 2805195144
+T 99487 140983 183473 1 1 1
+# plant 31 class=b Sfac=1 idx3=8433335724 p2/lcm(M2,M3)=1 inner=p2/lcm(M2,M3,A,B)=1 candA=p3^2/lcm(M3,A,B)=8433335724 M'=[6, 5866, 32] nbits=54 nonlcm=none
+O 123737 6
+O 170953 5866
+O 519487 32
+T 123737 170953 519487 1 1 1
+# plant 32 class=b Sfac=1 idx3=148525035264 p2/lcm(M2,M3)=9 inner=p2/lcm(M2,M3,A,B)=9 candA=p3^2/lcm(M3,A,B)=148525035264 M'=[6, 50608, 2] nbits=57 nonlcm=none
+O 450383 6
+O 455473 50608
+O 545023 2
+T 450383 455473 545023 1 1 1
+# plant 33 class=b Sfac=1 idx3=69845180908 p2/lcm(M2,M3)=23 inner=p2/lcm(M2,M3,A,B)=23 candA=p3^2/lcm(M3,A,B)=69845180908 M'=[6, 23448, 6] nbits=57 nonlcm=none
+O 387197 6
+O 552983 23448
+O 647357 6
+T 387197 552983 647357 1 1 1
+# plant 34 class=b Sfac=1 idx3=73905714764 p2/lcm(M2,M3)=7 inner=p2/lcm(M2,M3,A,B)=7 candA=p3^2/lcm(M3,A,B)=73905714764 M'=[12, 128388, 12] nbits=59 nonlcm=none
+O 350737 12
+O 898717 128388
+O 941737 12
+T 350737 898717 941737 1 1 1
+# plant 35 class=b Sfac=1 idx3=94791124568 p2/lcm(M2,M3)=12 inner=p2/lcm(M2,M3,A,B)=12 candA=p3^2/lcm(M3,A,B)=94791124568 M'=[2, 9856, 6] nbits=57 nonlcm=none
+O 375257 2
+O 384383 9856
+O 754153 6
+T 375257 384383 754153 1 1 1
+# plant 36 class=b Sfac=1 idx3=362230714704 p2/lcm(M2,M3)=86 inner=p2/lcm(M2,M3,A,B)=86 candA=p3^2/lcm(M3,A,B)=362230714704 M'=[6, 1852, 2] nbits=52 nonlcm=none
+O 23977 6
+O 161123 1852
+O 851153 2
+T 23977 161123 851153 1 1 1
+# plant 37 class=b Sfac=1 idx3=232750952364 p2/lcm(M2,M3)=2 inner=p2/lcm(M2,M3,A,B)=2 candA=p3^2/lcm(M3,A,B)=232750952364 M'=[138, 123676, 2] nbits=56 nonlcm=none
+O 224617 138
+O 371027 123676
+O 682277 2
+T 224617 371027 682277 1 1 1
+# plant 38 class=b Sfac=1 idx3=31274494272 p2/lcm(M2,M3)=1 inner=p2/lcm(M2,M3,A,B)=1 candA=p3^2/lcm(M3,A,B)=31274494272 M'=[14, 434028, 14] nbits=57 nonlcm=none
+O 271517 14
+O 651043 434028
+O 661697 14
+T 271517 651043 661697 1 1 1
+# plant 39 class=b Sfac=1 idx3=76597502888 p2/lcm(M2,M3)=30 inner=p2/lcm(M2,M3,A,B)=30 candA=p3^2/lcm(M3,A,B)=76597502888 M'=[2, 2108, 6] nbits=55 nonlcm=none
+O 182887 2
+O 190093 2108
+O 677927 6
+T 182887 190093 677927 1 1 1
+# plant 40 class=b Sfac=1 idx3=117153265068 p2/lcm(M2,M3)=23 inner=p2/lcm(M2,M3,A,B)=23 candA=p3^2/lcm(M3,A,B)=117153265068 M'=[6, 30504, 6] nbits=57 nonlcm=none
+O 147347 6
+O 719633 30504
+O 838403 6
+T 147347 719633 838403 1 1 1
+# plant 41 class=b Sfac=1 idx3=82371213028 p2/lcm(M2,M3)=15 inner=p2/lcm(M2,M3,A,B)=15 candA=p3^2/lcm(M3,A,B)=82371213028 M'=[6, 4956, 6] nbits=51 nonlcm=none
+O 35537 6
+O 75167 4956
+O 703013 6
+T 35537 75167 703013 1 1 1
+# plant 42 class=b Sfac=1 idx3=38434197126 p2/lcm(M2,M3)=54 inner=p2/lcm(M2,M3,A,B)=54 candA=p3^2/lcm(M3,A,B)=38434197126 M'=[8, 7752, 8] nbits=56 nonlcm=none
+O 249367 8
+O 424727 7752
+O 554503 8
+T 249367 424727 554503 1 1 1
+# plant 43 class=b Sfac=1 idx3=57935212032 p2/lcm(M2,M3)=10 inner=p2/lcm(M2,M3,A,B)=10 candA=p3^2/lcm(M3,A,B)=57935212032 M'=[14, 14028, 14] nbits=54 nonlcm=none
+O 103867 14
+O 149297 14028
+O 900607 14
+T 103867 149297 900607 1 1 1
+# plant 44 class=b Sfac=1 idx3=68888282232 p2/lcm(M2,M3)=2 inner=p2/lcm(M2,M3,A,B)=2 candA=p3^2/lcm(M3,A,B)=68888282232 M'=[6, 19352, 14] nbits=54 nonlcm=none
+O 53897 6
+O 275767 19352
+O 982057 14
+T 53897 275767 982057 1 1 1
+# plant 45 class=b Sfac=1 idx3=611282346 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=611282346 M'=[6, 4298, 908] nbits=53 nonlcm=none
+O 40423 6
+O 206303 4298
+O 745013 908
+T 40423 206303 745013 1 1 1
+# plant 46 class=b Sfac=1 idx3=147862167312 p2/lcm(M2,M3)=2 inner=p2/lcm(M2,M3,A,B)=2 candA=p3^2/lcm(M3,A,B)=147862167312 M'=[4, 43956, 4] nbits=53 nonlcm=none
+O 56533 4
+O 120473 43956
+O 769057 4
+T 56533 120473 769057 1 1 1
+# plant 47 class=b Sfac=1 idx3=55584781578 p2/lcm(M2,M3)=8 inner=p2/lcm(M2,M3,A,B)=8 candA=p3^2/lcm(M3,A,B)=55584781578 M'=[4, 3948, 16] nbits=52 nonlcm=none
+O 19717 4
+O 140813 3948
+O 943057 16
+T 19717 140813 943057 1 1 1
+# plant 48 class=b Sfac=1 idx3=45039708756 p2/lcm(M2,M3)=1 inner=p2/lcm(M2,M3,A,B)=1 candA=p3^2/lcm(M3,A,B)=45039708756 M'=[18, 284112, 18] nbits=57 nonlcm=none
+O 243973 18
+O 410383 284112
+O 900397 18
+T 243973 410383 900397 1 1 1
+# plant 49 class=b Sfac=1 idx3=285954762504 p2/lcm(M2,M3)=10 inner=p2/lcm(M2,M3,A,B)=10 candA=p3^2/lcm(M3,A,B)=285954762504 M'=[2, 61404, 2] nbits=57 nonlcm=none
+O 277687 2
+O 647837 61404
+O 756247 2
+T 277687 647837 756247 1 1 1
+# plant 50 class=b Sfac=1 idx3=338049998004 p2/lcm(M2,M3)=6 inner=p2/lcm(M2,M3,A,B)=6 candA=p3^2/lcm(M3,A,B)=338049998004 M'=[2, 28464, 2] nbits=55 nonlcm=none
+O 143653 2
+O 199247 28464
+O 822253 2
+T 143653 199247 822253 1 1 1
+# plant 51 class=b Sfac=1 idx3=69226450414 p2/lcm(M2,M3)=6 inner=p2/lcm(M2,M3,A,B)=6 candA=p3^2/lcm(M3,A,B)=69226450414 M'=[12, 19176, 12] nbits=52 nonlcm=none
+O 39133 12
+O 115057 19176
+O 911437 12
+T 39133 115057 911437 1 1 1
+# plant 52 class=b Sfac=1 idx3=229155126102 p2/lcm(M2,M3)=6 inner=p2/lcm(M2,M3,A,B)=6 candA=p3^2/lcm(M3,A,B)=229155126102 M'=[2, 8646, 4] nbits=54 nonlcm=none
+O 86017 2
+O 109517 8646
+O 957403 4
+T 86017 109517 957403 1 1 1
+# plant 53 class=b Sfac=1 idx3=192073142382 p2/lcm(M2,M3)=4 inner=p2/lcm(M2,M3,A,B)=4 candA=p3^2/lcm(M3,A,B)=192073142382 M'=[12, 94276, 4] nbits=53 nonlcm=none
+O 23627 12
+O 424243 94276
+O 876523 4
+T 23627 424243 876523 1 1 1
+# plant 54 class=b Sfac=1 idx3=22323551016 p2/lcm(M2,M3)=6 inner=p2/lcm(M2,M3,A,B)=6 candA=p3^2/lcm(M3,A,B)=22323551016 M'=[4, 9348, 28] nbits=53 nonlcm=none
+O 21023 4
+O 434683 9348
+O 790607 28
+T 21023 434683 790607 1 1 1
+# plant 55 class=b Sfac=1 idx3=268737599064 p2/lcm(M2,M3)=22 inner=p2/lcm(M2,M3,A,B)=22 candA=p3^2/lcm(M3,A,B)=268737599064 M'=[4, 28842, 2] nbits=55 nonlcm=none
+O 40193 4
+O 636043 28842
+O 733127 2
+T 40193 636043 733127 1 1 1
+# plant 56 class=b Sfac=1 idx3=230661074424 p2/lcm(M2,M3)=1 inner=p2/lcm(M2,M3,A,B)=1 candA=p3^2/lcm(M3,A,B)=230661074424 M'=[2, 242652, 2] nbits=53 nonlcm=none
+O 40627 2
+O 323537 242652
+O 679207 2
+T 40627 323537 679207 1 1 1
+# plant 57 class=b Sfac=1 idx3=50339658072 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=50339658072 M'=[2, 29604, 14] nbits=55 nonlcm=none
+O 186157 2
+O 207227 29604
+O 839497 14
+T 186157 207227 839497 1 1 1
+# plant 58 class=b Sfac=1 idx3=141441969288 p2/lcm(M2,M3)=10 inner=p2/lcm(M2,M3,A,B)=10 candA=p3^2/lcm(M3,A,B)=141441969288 M'=[6, 10416, 6] nbits=48 nonlcm=none
+O 2503 6
+O 104593 10416
+O 921223 6
+T 2503 104593 921223 1 1 1
+# plant 59 class=b Sfac=1 idx3=4821421388 p2/lcm(M2,M3)=1 inner=p2/lcm(M2,M3,A,B)=1 candA=p3^2/lcm(M3,A,B)=4821421388 M'=[6, 21192, 186] nbits=58 nonlcm=none
+O 367603 6
+O 775273 21192
+O 946987 186
+T 367603 775273 946987 1 1 1
+# plant 60 class=b Sfac=1 idx3=431068195584 p2/lcm(M2,M3)=21 inner=p2/lcm(M2,M3,A,B)=21 candA=p3^2/lcm(M3,A,B)=431068195584 M'=[2, 38328, 2] nbits=58 nonlcm=none
+O 209857 2
+O 840023 38328
+O 928513 2
+T 209857 840023 928513 1 1 1
+# plant 61 class=c Sfac=1 idx3=193062253932 p2/lcm(M2,M3)=202585 inner=p2/lcm(M2,M3,A,B)=202585 candA=p3^2/lcm(M3,A,B)=193062253932 M'=[2, 2, 4] nbits=41 nonlcm=none
+O 3 2
+O 810343 2
+O 878777 4
+T 3 810343 878777 1 1 1
+# plant 62 class=c Sfac=1 idx3=199088639442 p2/lcm(M2,M3)=13026 inner=p2/lcm(M2,M3,A,B)=13026 candA=p3^2/lcm(M3,A,B)=199088639442 M'=[2, 18, 4] nbits=54 nonlcm=none
+O 36973 2
+O 468953 18
+O 892387 4
+T 36973 468953 892387 1 1 1
+# plant 63 class=c! Sfac=1 idx3=68994229054 p2/lcm(M2,M3)=46509 inner=p2/lcm(M2,M3,A,B)=46509 candA=p3^2/lcm(M3,A,B)=68994229054 M'=[2, 2, 12] nbits=43 nonlcm=none
+O 17 2
+O 558113 2
+O 909907 12
+T 17 558113 909907 1 1 1
+# plant 64 class=c Sfac=1 idx3=37215733544 p2/lcm(M2,M3)=25313 inner=p2/lcm(M2,M3,A,B)=25313 candA=p3^2/lcm(M3,A,B)=37215733544 M'=[42, 6, 12] nbits=50 nonlcm=none
+O 4787 42
+O 303767 6
+O 668273 12
+T 4787 303767 668273 1 1 1
+# plant 65 class=c Sfac=1 idx3=34302178196 p2/lcm(M2,M3)=24640 inner=p2/lcm(M2,M3,A,B)=24640 candA=p3^2/lcm(M3,A,B)=34302178196 M'=[24, 6, 18] nbits=49 nonlcm=none
+O 1087 24
+O 443533 6
+O 785773 18
+T 1087 443533 785773 1 1 1
+# plant 66 class=c! Sfac=1 idx3=133002543748 p2/lcm(M2,M3)=119748 inner=p2/lcm(M2,M3,A,B)=119748 candA=p3^2/lcm(M3,A,B)=133002543748 M'=[4, 2, 6] nbits=46 nonlcm=none
+O 83 4
+O 718493 2
+O 893317 6
+T 83 718493 893317 1 1 1
+# plant 67 class=c Sfac=1 idx3=52222775594 p2/lcm(M2,M3)=46023 inner=p2/lcm(M2,M3,A,B)=46023 candA=p3^2/lcm(M3,A,B)=52222775594 M'=[8, 4, 12] nbits=56 nonlcm=none
+O 158143 8
+O 552283 4
+O 791627 12
+T 158143 552283 791627 1 1 1
+# plant 68 class=c Sfac=1 idx3=130049142608 p2/lcm(M2,M3)=127873 inner=p2/lcm(M2,M3,A,B)=127873 candA=p3^2/lcm(M3,A,B)=130049142608 M'=[12, 6, 6] nbits=52 nonlcm=none
+O 3833 12
+O 767243 6
+O 883343 6
+T 3833 767243 883343 1 1 1
+# plant 69 class=c! Sfac=1 idx3=37858243024 p2/lcm(M2,M3)=48995 inner=p2/lcm(M2,M3,A,B)=48995 candA=p3^2/lcm(M3,A,B)=37858243024 M'=[18, 6, 12] nbits=57 nonlcm=none
+O 189127 18
+O 587947 6
+O 674017 12
+T 189127 587947 674017 1 1 1
+# plant 70 class=c Sfac=1 idx3=34753404114 p2/lcm(M2,M3)=26248 inner=p2/lcm(M2,M3,A,B)=26248 candA=p3^2/lcm(M3,A,B)=34753404114 M'=[84, 12, 12] nbits=48 nonlcm=none
+O 727 84
+O 314983 12
+O 645787 12
+T 727 314983 645787 1 1 1
+# plant 71 class=c Sfac=1 idx3=126374269588 p2/lcm(M2,M3)=82196 inner=p2/lcm(M2,M3,A,B)=82196 candA=p3^2/lcm(M3,A,B)=126374269588 M'=[4, 2, 6] nbits=55 nonlcm=none
+O 66103 4
+O 493177 2
+O 870773 6
+T 66103 493177 870773 1 1 1
+# plant 72 class=c! Sfac=1 idx3=194351808462 p2/lcm(M2,M3)=195063 inner=p2/lcm(M2,M3,A,B)=195063 candA=p3^2/lcm(M3,A,B)=194351808462 M'=[6, 2, 4] nbits=47 nonlcm=none
+O 137 6
+O 780253 2
+O 881707 4
+T 137 780253 881707 1 1 1
+# plant 73 class=c Sfac=1 idx3=87574682286 p2/lcm(M2,M3)=61295 inner=p2/lcm(M2,M3,A,B)=61295 candA=p3^2/lcm(M3,A,B)=87574682286 M'=[6, 2, 8] nbits=53 nonlcm=none
+O 11047 6
+O 490367 2
+O 837017 8
+T 11047 490367 837017 1 1 1
+# plant 74 class=c Sfac=1 idx3=213904862502 p2/lcm(M2,M3)=42299 inner=p2/lcm(M2,M3,A,B)=42299 candA=p3^2/lcm(M3,A,B)=213904862502 M'=[4, 12, 4] nbits=58 nonlcm=none
+O 428137 4
+O 507593 12
+O 924997 4
+T 428137 507593 924997 1 1 1
+# plant 75 class=c! Sfac=1 idx3=154591908924 p2/lcm(M2,M3)=75079 inner=p2/lcm(M2,M3,A,B)=75079 candA=p3^2/lcm(M3,A,B)=154591908924 M'=[42, 4, 2] nbits=46 nonlcm=none
+O 223 42
+O 300317 4
+O 556043 2
+T 223 300317 556043 1 1 1
+# plant 76 class=c Sfac=1 idx3=117109672168 p2/lcm(M2,M3)=50324 inner=p2/lcm(M2,M3,A,B)=50324 candA=p3^2/lcm(M3,A,B)=117109672168 M'=[66, 12, 6] nbits=44 nonlcm=none
+O 23 66
+O 603893 12
+O 838247 6
+T 23 603893 838247 1 1 1
+# plant 77 class=c Sfac=1 idx3=136422007962 p2/lcm(M2,M3)=63017 inner=p2/lcm(M2,M3,A,B)=63017 candA=p3^2/lcm(M3,A,B)=136422007962 M'=[12, 8, 4] nbits=47 nonlcm=none
+O 307 12
+O 504143 8
+O 738707 4
+T 307 504143 738707 1 1 1
+# plant 78 class=c! Sfac=1 idx3=126050549608 p2/lcm(M2,M3)=80982 inner=p2/lcm(M2,M3,A,B)=80982 candA=p3^2/lcm(M3,A,B)=126050549608 M'=[4, 2, 6] nbits=50 nonlcm=none
+O 1543 4
+O 485893 2
+O 869657 6
+T 1543 485893 869657 1 1 1
+# plant 79 class=c Sfac=1 idx3=52639903746 p2/lcm(M2,M3)=7323 inner=p2/lcm(M2,M3,A,B)=7323 candA=p3^2/lcm(M3,A,B)=52639903746 M'=[2, 18, 8] nbits=51 nonlcm=none
+O 4663 2
+O 527327 18
+O 648937 8
+T 4663 527327 648937 1 1 1
+# plant 80 class=c Sfac=1 idx3=24372323734 p2/lcm(M2,M3)=29215 inner=p2/lcm(M2,M3,A,B)=29215 candA=p3^2/lcm(M3,A,B)=24372323734 M'=[8, 4, 12] nbits=41 nonlcm=none
+O 7 8
+O 350587 4
+O 540803 12
+T 7 350587 540803 1 1 1
+# plant 81 class=c! Sfac=1 idx3=127282335522 p2/lcm(M2,M3)=28029 inner=p2/lcm(M2,M3,A,B)=28029 candA=p3^2/lcm(M3,A,B)=127282335522 M'=[4, 12, 4] nbits=52 nonlcm=none
+O 12457 4
+O 336353 12
+O 713533 4
+T 12457 336353 713533 1 1 1
+# plant 82 class=c Sfac=1 idx3=215041410624 p2/lcm(M2,M3)=46596 inner=p2/lcm(M2,M3,A,B)=46596 candA=p3^2/lcm(M3,A,B)=215041410624 M'=[2, 12, 2] nbits=52 nonlcm=none
+O 7603 2
+O 559157 12
+O 655807 2
+T 7603 559157 655807 1 1 1
+# plant 83 class=c Sfac=1 idx3=126662318712 p2/lcm(M2,M3)=168744 inner=p2/lcm(M2,M3,A,B)=168744 candA=p3^2/lcm(M3,A,B)=126662318712 M'=[12, 4, 4] nbits=57 nonlcm=none
+O 229373 12
+O 674977 4
+O 711793 4
+T 229373 674977 711793 1 1 1
+# plant 84 class=c! Sfac=1 idx3=208914540804 p2/lcm(M2,M3)=186776 inner=p2/lcm(M2,M3,A,B)=186776 candA=p3^2/lcm(M3,A,B)=208914540804 M'=[84, 2, 2] nbits=55 nonlcm=none
+O 83383 84
+O 373553 2
+O 646397 2
+T 83383 373553 646397 1 1 1
+# plant 85 class=c Sfac=1 idx3=75155617574 p2/lcm(M2,M3)=73724 inner=p2/lcm(M2,M3,A,B)=73724 candA=p3^2/lcm(M3,A,B)=75155617574 M'=[6, 6, 12] nbits=59 nonlcm=none
+O 649217 6
+O 884693 6
+O 949667 12
+T 649217 884693 949667 1 1 1
+# plant 86 class=c Sfac=1 idx3=36356190436 p2/lcm(M2,M3)=20944 inner=p2/lcm(M2,M3,A,B)=20944 candA=p3^2/lcm(M3,A,B)=36356190436 M'=[18, 36, 18] nbits=59 nonlcm=none
+O 730837 18
+O 754003 36
+O 808957 18
+T 730837 754003 808957 1 1 1
+# plant 87 class=c! Sfac=1 idx3=471087505824 p2/lcm(M2,M3)=89470 inner=p2/lcm(M2,M3,A,B)=89470 candA=p3^2/lcm(M3,A,B)=471087505824 M'=[6, 4, 2] nbits=57 nonlcm=none
+O 287093 6
+O 357883 4
+O 970657 2
+T 287093 357883 970657 1 1 1
+# plant 88 class=c Sfac=1 idx3=2798983474 p2/lcm(M2,M3)=3665 inner=p2/lcm(M2,M3,A,B)=3665 candA=p3^2/lcm(M3,A,B)=2798983474 M'=[12, 12, 132] nbits=57 nonlcm=none
+O 409813 12
+O 483853 12
+O 607837 132
+T 409813 483853 607837 1 1 1
+# plant 89 class=c Sfac=1 idx3=19833581808 p2/lcm(M2,M3)=8038 inner=p2/lcm(M2,M3,A,B)=8038 candA=p3^2/lcm(M3,A,B)=19833581808 M'=[2, 6, 16] nbits=44 nonlcm=none
+O 53 2
+O 385837 6
+O 563327 16
+T 53 385837 563327 1 1 1
+# plant 90 class=c! Sfac=1 idx3=131006984064 p2/lcm(M2,M3)=189888 inner=p2/lcm(M2,M3,A,B)=189888 candA=p3^2/lcm(M3,A,B)=131006984064 M'=[48, 2, 2] nbits=44 nonlcm=none
+O 47 48
+O 379777 2
+O 511873 2
+T 47 379777 511873 1 1 1
+# plant 91 class=d/a Sfac=10831*23531 idx3=866 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=8 M'=[4, 12, 3468] nbits=60 nonlcm=none
+O 1117 4
+O 1373 12
+O 1733 3468
+T 1117 1373 1733 254864261 416 102
+# plant 92 class=d/b Sfac=41*751 idx3=414329417124 p2/lcm(M2,M3)=27 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=4740502 M'=[12, 1956, 2] nbits=66 nonlcm=none
+O 43573 12
+O 52813 1956
+O 910307 2
+T 43573 52813 910307 30791 84 4162
+# plant 93 class=d/c! Sfac=11329*23801 idx3=68260077734 p2/lcm(M2,M3)=41821 inner=p2/lcm(M2,M3,A,B)=789 candA=p3^2/lcm(M3,A,B)=1287925994 M'=[6, 2, 12] nbits=77 nonlcm=none
+O 907 6
+O 501863 2
+O 905053 12
+T 907 501863 905053 269641529 3 53
+# plant 94 class=d/a Sfac=29 idx3=628 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=314 M'=[28, 462, 1365369306] nbits=64 nonlcm=none
+O 564353 28
+O 822163 462
+O 925987 1365369306
+T 564353 822163 925987 29 11796 14
+# plant 95 class=d/b Sfac=1647103533821*2200896809161 idx3=126110273128 p2/lcm(M2,M3)=2 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=2264423 M'=[2, 333816, 6] nbits=139 nonlcm=none
+O 146603 2
+O 810697 333816
+O 869863 6
+T 146603 810697 869863 3625104911944446146134181 216 3094
+# plant 96 class=d/c Sfac=11*331 idx3=124343332752 p2/lcm(M2,M3)=31556 inner=p2/lcm(M2,M3,A,B)=2 candA=p3^2/lcm(M3,A,B)=3473374 M'=[12, 12, 4] nbits=67 nonlcm=none
+O 105863 12
+O 378683 12
+O 705247 4
+T 105863 378683 705247 3641 11933 6
+# plant 97 class=d/a Sfac=11 idx3=444 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=21 M'=[4, 2, 116012] nbits=41 nonlcm=none
+O 4657 4
+O 4903 2
+O 7177 116012
+T 4657 4903 7177 11 1196 42
+# plant 98 class=d/b Sfac=1511*83591 idx3=69404811328 p2/lcm(M2,M3)=3 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=1967145 M'=[2, 23308, 6] nbits=80 nonlcm=none
+O 55313 2
+O 268043 23308
+O 645313 6
+T 55313 268043 645313 126306001 4602 92
+# plant 99 class=d/c! Sfac=2399 idx3=330763417824 p2/lcm(M2,M3)=115773 inner=p2/lcm(M2,M3,A,B)=2968 candA=p3^2/lcm(M3,A,B)=8481113277 M'=[4, 4, 2] nbits=55 nonlcm=none
+O 37 4
+O 463093 4
+O 813343 2
+T 37 463093 813343 2399 13 3
+# plant 100 class=d/a Sfac=5210866172179*5411476007491 idx3=218 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=0 M'=[2, 2, 1430136] nbits=123 nonlcm=none
+O 2647 2
+O 6343 2
+O 17657 1430136
+T 2647 6343 17657 28198477268993124699792889 388432 9558
+# plant 101 class=d/b Sfac=11 idx3=82158006994 p2/lcm(M2,M3)=9 inner=p2/lcm(M2,M3,A,B)=3 candA=p3^2/lcm(M3,A,B)=16176020 M'=[2, 20316, 12] nbits=57 nonlcm=none
+O 53657 2
+O 196387 20316
+O 992923 12
+T 53657 196387 992923 11 18 1693
+# plant 102 class=d/c Sfac=1259*16871 idx3=17769476824 p2/lcm(M2,M3)=3038 inner=p2/lcm(M2,M3,A,B)=104 candA=p3^2/lcm(M3,A,B)=306370290 M'=[2, 28, 42] nbits=78 nonlcm=none
+O 34273 2
+O 255247 28
+O 863897 42
+T 34273 255247 863897 21240589 29 12
+# plant 103 class=d/a Sfac=179 idx3=646 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=0 M'=[128, 42, 270862848] nbits=62 nonlcm=none
+O 207743 128
+O 236293 42
+O 418303 270862848
+T 207743 236293 418303 179 78 108016
+# plant 104 class=d/b Sfac=38791 idx3=272821855164 p2/lcm(M2,M3)=23 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=1336026 M'=[8, 12012, 2] nbits=70 nonlcm=none
+O 125063 8
+O 277003 12012
+O 738677 2
+T 125063 277003 738677 38791 66 12376
+# plant 105 class=d/c! Sfac=40313844221449*48562971271979 idx3=38393267514 p2/lcm(M2,M3)=41343 inner=p2/lcm(M2,M3,A,B)=2431 candA=p3^2/lcm(M3,A,B)=2258427500 M'=[2, 12, 12] nbits=146 nonlcm=none
+O 97673 2
+O 496123 12
+O 678763 12
+T 97673 496123 678763 1957760058789264402484477571 6 17
+# plant 106 class=d/a Sfac=29*881 idx3=206 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=2 M'=[24, 48, 363842988] nbits=67 nonlcm=none
+O 66137 24
+O 213713 48
+O 273773 363842988
+T 66137 213713 273773 25549 368 6
+# plant 107 class=d/b Sfac=11*19 idx3=42741980494 p2/lcm(M2,M3)=6 inner=p2/lcm(M2,M3,A,B)=3 candA=p3^2/lcm(M3,A,B)=4469983 M'=[24, 19124, 12] nbits=62 nonlcm=none
+O 47497 24
+O 372917 19124
+O 716173 12
+T 47497 372917 716173 209 24 9562
+# plant 108 class=d/c Sfac=71 idx3=481350227964 p2/lcm(M2,M3)=2528 inner=p2/lcm(M2,M3,A,B)=12 candA=p3^2/lcm(M3,A,B)=814467390 M'=[78, 234, 2] nbits=59 nonlcm=none
+O 10453 78
+O 591553 234
+O 981173 2
+T 10453 591553 981173 71 3 197
+# plant 109 class=d/a Sfac=65761 idx3=554 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=0 M'=[4, 4, 7074252] nbits=61 nonlcm=none
+O 14407 4
+O 37087 4
+O 62603 7074252
+T 14407 37087 62603 65761 4294 152292
+# plant 110 class=d/b Sfac=6342565861469*34704878863199 idx3=408795149424 p2/lcm(M2,M3)=71 inner=p2/lcm(M2,M3,A,B)=2 candA=p3^2/lcm(M3,A,B)=2043505 M'=[84, 12124, 2] nbits=147 nonlcm=none
+O 519413 84
+O 867733 12124
+O 904207 2
+T 519413 867733 904207 220117979904143054836179331 1732 462
+# plant 111 class=d/c! Sfac=379 idx3=153749476348 p2/lcm(M2,M3)=106341 inner=p2/lcm(M2,M3,A,B)=273 candA=p3^2/lcm(M3,A,B)=395242869 M'=[2, 2, 6] nbits=65 nonlcm=none
+O 109423 2
+O 638047 2
+O 960467 6
+T 109423 638047 960467 379 389 6
+# plant 112 class=d/a Sfac=191 idx3=134 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=0 M'=[2, 36, 25707972] nbits=51 nonlcm=none
+O 3923 2
+O 28477 36
+O 58693 25707972
+T 3923 28477 58693 191 612 62
+# plant 113 class=d/b Sfac=7669 idx3=146185022622 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=1645 M'=[4, 409812, 4] nbits=64 nonlcm=none
+O 22447 4
+O 98123 409812
+O 764683 4
+T 22447 98123 764683 7669 41038 17316
+# plant 114 class=d/c Sfac=92951*94999 idx3=389608774644 p2/lcm(M2,M3)=137398 inner=p2/lcm(M2,M3,A,B)=111 candA=p3^2/lcm(M3,A,B)=104987543 M'=[12, 6, 2] nbits=92 nonlcm=none
+O 762647 12
+O 824393 6
+O 882733 2
+T 762647 824393 882733 8830252049 1237 6
+# plant 115 class=d/a Sfac=7015148359631*95688988785409 idx3=282 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=94 M'=[6, 384, 682763464] nbits=143 nonlcm=none
+O 91127 6
+O 299393 384
+O 438793 682763464
+T 91127 299393 438793 671272452712711101417424079 389 138
+# plant 116 class=d/b Sfac=331*521 idx3=132409448388 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=3940522 M'=[4, 1690716, 6] nbits=76 nonlcm=none
+O 410353 4
+O 845357 1690716
+O 891323 6
+T 410353 845357 891323 172451 212 1902
+# plant 117 class=d/c! Sfac=19*2339 idx3=112880759788 p2/lcm(M2,M3)=61676 inner=p2/lcm(M2,M3,A,B)=150 candA=p3^2/lcm(M3,A,B)=275992077 M'=[4, 6, 6] nbits=70 nonlcm=none
+O 69623 4
+O 370057 6
+O 822973 6
+T 69623 370057 822973 44441 6 409
+# plant 118 class=d/a Sfac=12841*51929 idx3=304 p2/lcm(M2,M3)=0 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=5 M'=[6, 2, 10932] nbits=60 nonlcm=none
+O 857 6
+O 997 2
+O 1823 10932
+T 857 997 1823 666820289 118 12
+# plant 119 class=d/b Sfac=46381 idx3=248592171384 p2/lcm(M2,M3)=4 inner=p2/lcm(M2,M3,A,B)=0 candA=p3^2/lcm(M3,A,B)=1575 M'=[2, 165144, 2] nbits=72 nonlcm=none
+O 146477 2
+O 701863 165144
+O 705113 2
+T 146477 701863 705113 46381 41286 15286
+# plant 120 class=d/c Sfac=3773830270489*7702813776479 idx3=81137492264 p2/lcm(M2,M3)=46290 inner=p2/lcm(M2,M3,A,B)=4208 candA=p3^2/lcm(M3,A,B)=7376135660 M'=[4, 6, 12] nbits=137 nonlcm=none
+O 8573 4
+O 555487 6
+O 986737 12
+T 8573 555487 986737 29069111797616140156028231 6 11

@@ -1,0 +1,24 @@
+ring R = 0, (t,Z,al,be,ga,de,sg,rh,c1,c2,c3,w), (dp(2),dp);
+proc degt(poly f) { if (f == 0) { return(-1); } return(deg(f, intvec(1,0:(nvars(basering)-1)))); }
+proc lct(poly f) { int d = degt(f); matrix M = coeffs(f, t); return(M[d+1,1]); }
+proc prem(poly f, poly g) { int dg = degt(g); poly lc = lct(g); int df = degt(f);
+  while (df >= dg) { f = lc*f - lct(f)*t^(df-dg)*g; df = degt(f); } return(f); }
+poly G = t^2 - 1; poly H = t^2 - sg*t + rh;
+poly f0 = 1 + G*(al*t + be); poly X = f0 - 1; poly Y = f0 + 1;
+ideal I = coeffs(Y - H*(ga*t + de), t);
+poly Km; poly Kp; poly Pm; poly Pp; matrix Mc;
+Km = al*t + be + c1*H; Kp = ga*t + de + c1*G;
+Pm = prem(subst(((c1 + (c1 - c2)*Z)*(c1 + (c1 - c3)*Z) - c1^2)/Z, Z, X), Km); Pp = prem(subst(((c1 - (c1 - c2)*Z)*(c1 - (c1 - c3)*Z) - c1^2)/Z, Z, Y), Kp);
+I = I, coeffs(Pm, t), coeffs(Pp, t);
+Km = al*t + be + c2*H; Kp = ga*t + de + c2*G;
+Pm = prem(subst(((c2 + (c2 - c1)*Z)*(c2 + (c2 - c3)*Z) - c2^2)/Z, Z, X), Km); Pp = prem(subst(((c2 - (c2 - c1)*Z)*(c2 - (c2 - c3)*Z) - c2^2)/Z, Z, Y), Kp);
+I = I, coeffs(Pm, t), coeffs(Pp, t);
+Km = al*t + be + c3*H; Kp = ga*t + de + c3*G;
+Pm = prem(subst(((c3 + (c3 - c1)*Z)*(c3 + (c3 - c2)*Z) - c3^2)/Z, Z, X), Km); Pp = prem(subst(((c3 - (c3 - c1)*Z)*(c3 - (c3 - c2)*Z) - c3^2)/Z, Z, Y), Kp);
+I = I, coeffs(Pm, t), coeffs(Pp, t);
+I = I, 1 - w*c1*c2*c3*(c1 - c2)*(c1 - c3)*(c2 - c3)*(sg^2 - 4*rh)*(1 - sg + rh)*(1 + sg + rh);
+ring S = 0, (al,be,ga,de,sg,rh,c1,c2,c3,w), dp; ideal J = imap(R, I); J = simplify(J, 2);
+"generators:", size(J);
+option(redSB); ideal GB = std(J);
+if (GB[1] == 1) { "UNIT IDEAL: no (2,2) quartic family"; } else { "NOT UNIT: dim", dim(GB), "vdim", vdim(GB); }
+quit;

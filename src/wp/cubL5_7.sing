@@ -1,0 +1,22 @@
+ring R = 32003, (t, a1, a2, a3, a4, a5, c1, c2, c3, c4, c5, w0, w1, v0, v1, y), (dp(1), dp(15));
+poly F = 1; poly G = 1; poly H = 1;
+poly f1 = 2*t + 1 + t*(t+1)*(a1*t + c1);
+F = F*f1; G = G*(a1*t^2 + (a1 + c1)*t + (c1 + 2)); H = H*(a1*t^2 + c1*t + 2);
+poly f2 = 2*t + 1 + t*(t+1)*(a2*t + c2);
+F = F*f2; G = G*(a2*t^2 + (a2 + c2)*t + (c2 + 2)); H = H*(a2*t^2 + c2*t + 2);
+poly f3 = 2*t + 1 + t*(t+1)*(a3*t + c3);
+F = F*f3; G = G*(a3*t^2 + (a3 + c3)*t + (c3 + 2)); H = H*(a3*t^2 + c3*t + 2);
+poly f4 = 2*t + 1 + t*(t+1)*(a4*t + c4);
+F = F*f4; G = G*(a4*t^2 + (a4 + c4)*t + (c4 + 2)); H = H*(a4*t^2 + c4*t + 2);
+poly f5 = 2*t + 1 + t*(t+1)*(a5*t + c5);
+F = F*f5; G = G*(a5*t^2 + (a5 + c5)*t + (c5 + 2)); H = H*(a5*t^2 + c5*t + 2);
+poly Wm = t^4 + w0*t^0 + w1*t^1; poly Wp = (t+1)^4 + v0*(t+1)^0 + v1*(t+1)^1;
+poly E1 = F - 1 - t*G*Wm; poly E2 = F + 1 - (t+1)*H*Wp;
+ideal I = coeffs(E1, t), coeffs(E2, t);
+I = I, 1 - y*a1*a2*a3*a4*a5*((a2 - a1) + 7*(c2 - c1))*((a3 - a1) + 7*(c3 - c1))*((a3 - a2) + 7*(c3 - c2))*((a4 - a1) + 7*(c4 - c1))*((a4 - a2) + 7*(c4 - c2))*((a4 - a3) + 7*(c4 - c3))*((a5 - a1) + 7*(c5 - c1))*((a5 - a2) + 7*(c5 - c2))*((a5 - a3) + 7*(c5 - c3))*((a5 - a4) + 7*(c5 - c4));
+ring S = 32003, (a1, a2, a3, a4, a5, c1, c2, c3, c4, c5, w0, w1, v0, v1, y), dp;
+ideal J = imap(R, I);
+option(redSB); ideal B = std(J);
+if (B[1] == 1) { "UNIT IDEAL: no (complex, hence no real) cubic Williams family in normal form, k = 5, L = 7"; }
+else { "dim = ", dim(B), " size = ", size(B); B; }
+quit;

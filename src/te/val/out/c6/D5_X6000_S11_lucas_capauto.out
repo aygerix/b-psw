@@ -1,0 +1,5 @@
+anchor3 D=5 Q=-1 X=6000 mode=lucas threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.070 chunkA=32768 chunkC=65536
+TABLE D=5 X=6000 inert=397 overflow=0 bytes=0.0MB time=0.00s cpu=0.01s
+PASS D=5 S=11 A=1 B=10 mode=lucas cap=auto X=6000 inert=397 Aprimes=1 Acands=0 Cprimes=361 Cpairs=72051 Cinner=22521 prefilter=0 hits=0 wall=0.03s
+DIAG Aunsolv=35 Asieved=0 Ashape=0 Afinal=0 Abig=0 Cunsolv=0 Cnoinv=2524 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.00 threadsec_C=0.02 us_per_Acand=0.0000 us_per_Cpair=0.3086 sieve=on cpu=0.05s
+rc=0

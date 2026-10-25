@@ -1,0 +1,6 @@
+anchor3 D=13 Q=-3 X=6000 mode=bpsw threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.070 chunkA=32768 chunkC=65536
+TABLE D=13 X=6000 inert=398 overflow=0 bytes=0.0MB time=0.00s cpu=0.01s
+PASS D=13 S=1 A=1 B=1 mode=bpsw cap=auto X=6000 inert=398 Aprimes=355 Acands=3032 Cprimes=43 Cpairs=4446 Cinner=138 prefilter=7 hits=0 wall=0.01s
+DIAG Aunsolv=0 Asieved=1407 Ashape=0 Afinal=7 Abig=0 Cunsolv=0 Cnoinv=64 Cincompat=0 Cp1=0 Cw1=0 Cfinal=0 longpairs=0 threadsec_A=0.02 threadsec_C=0.00 us_per_Acand=5.1216 us_per_Cpair=0.0472 sieve=on cpu=0.02s
+TIME 0.21 s wall 0.09 s user 6940 KB
+rc=0

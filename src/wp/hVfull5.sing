@@ -1,0 +1,31 @@
+ring R = 0, (b1,b2,b3,b4,b5,d1,d2,d3,d4,d5,y,X), dp;
+poly G = 1;
+poly a1 = 2 + (y+1)*d1 + (y+1)^2*b1; G = G*(1 + X*a1);
+poly a2 = 2 + (y+1)*d2 + (y+1)^2*b2; G = G*(1 + X*a2);
+poly a3 = 2 + (y+1)*d3 + (y+1)^2*b3; G = G*(1 + X*a3);
+poly a4 = 2 + (y+1)*d4 + (y+1)^2*b4; G = G*(1 + X*a4);
+poly a5 = 2 + (y+1)*d5 + (y+1)^2*b5; G = G*(1 + X*a5);
+matrix E = coeffs(G, X);
+poly S = 0; int r;
+for (r = 1; r <= 4; r++) { S = S + y^(r-1)*E[r+1,1]; }
+S = S - E[6,1]*(15/4*y + 45/16);
+matrix C = coeffs(S, y);
+ideal I; int j; for (j = 1; j <= nrows(C); j++) { I = I, C[j,1]; }
+poly Gp = 1;
+poly ap1 = 2 + (y+1)*(-b1-d1) + (y+1)^2*b1; Gp = Gp*(1 + X*ap1);
+poly ap2 = 2 + (y+1)*(-b2-d2) + (y+1)^2*b2; Gp = Gp*(1 + X*ap2);
+poly ap3 = 2 + (y+1)*(-b3-d3) + (y+1)^2*b3; Gp = Gp*(1 + X*ap3);
+poly ap4 = 2 + (y+1)*(-b4-d4) + (y+1)^2*b4; Gp = Gp*(1 + X*ap4);
+poly ap5 = 2 + (y+1)*(-b5-d5) + (y+1)^2*b5; Gp = Gp*(1 + X*ap5);
+matrix Ep = coeffs(Gp, X);
+poly Sp = 0;
+for (r = 1; r <= 4; r++) { Sp = Sp + y^(r-1)*Ep[r+1,1]; }
+Sp = Sp - Ep[6,1]*(15/4*y + 45/16);
+matrix Cp = coeffs(Sp, y);
+for (j = 1; j <= nrows(Cp); j++) { I = I, Cp[j,1]; }
+ring S2 = 0, (b1,b2,b3,b4,b5,d1,d2,d3,d4,d5), dp;
+ideal J = imap(R, I); J = simplify(J, 2);
+option(redSB); option(prot);
+ideal GB = std(J);
+if (GB[1] == 1) { "UNIT IDEAL: no solutions"; } else { "NOT UNIT: dim", dim(GB), "vdim", vdim(GB); }
+quit;

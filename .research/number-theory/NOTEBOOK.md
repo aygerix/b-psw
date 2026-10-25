@@ -2226,7 +2226,7 @@ Register rows: C4/C3F/C3L, real coefficients, positive leading coefficients, dis
 
 ## Session 8 (2026-10-24, continued after the context reset)
 
-### Theorem 10 (PROVED; independent adversarial audit pending): no real quadratic Williams family, for ANY k
+### Theorem 10 (PROVED; audited by 3 independent adversarial verifiers, no gap): no real quadratic Williams family, for ANY k
 Register rows: C4/C3F/C3L, all members quadratic, real coefficients, positive leading coefficients, pairwise distinct.
 This supersedes Theorem 9 (k = 4), Theorem 9' (k = 5) and the k = 7 reduction of Lemma 23; the rq_k7 runs are moot.
 Lemma 7 (monic integer quadratics) is a special case. k need not be odd.
@@ -2250,6 +2250,21 @@ Lemma 7 (monic integer quadratics) is a special case. k need not be odd.
  - Step 3 (all members share a*). Then f_i = al_i g - 1 with g = (t - x)^2 + H^2 common and al_i distinct. Take the
    member with the largest al_i. At its "-" point, g = 2/al_i, and W = prod_{l != i} (2 al_l/al_i - 1). Every factor
    lies in (-1, 1), so |W| < 1, not 1. Contradiction.  QED
+ - AUDIT (2026-10-24, three independent verifiers, lenses: oval lemma / dependencies / global logic): refuted = no,
+   confidence high in all three. Independent VM checks: 0 oval-lemma violations in 2e5 samples; max |W| in Step 3
+   over 1e5 random shared-top families (k <= 9) was 0.9995 < 1. Expository repairs adopted:
+   - Step 1 does not use the parity of k: Lemma 6 needs none (its rider "E = -1 only if k odd" only removes cases),
+     and Lemma 3 holds for every k >= 2. So the citation of Lemma 23 step 1 is valid for even k.
+   - Lemma 3 over R in the variable u = h(t) (h a real quadratic, made monic): if A(h) | B(h) in R[t], divide in R[u],
+     B = Q A + r with deg r < deg A; then A(h) | r(h) and deg r(h) = 2 deg r < deg A(h), so r = 0. Lemma 3's proof uses
+     only point values, real monotonicity in u and leading coefficients, never rationality. It covers both
+     E = +1 (f_i - 1 = a_i h) and E = -1 (f_i + 1 = a_i h); slopes a_i are the leading coefficients (> 0), distinct
+     because the members are distinct. Step 3 is itself Lemma 3 with E = -1 in u = (t - x)^2 + H^2.
+   - The lower sublevel component never matters: f_i > 1 on R, so {|f_i| <= 1} misses R and the Lemma (stated for
+     Im t >= 0) applies to a* directly.
+   - Scope note from the audit: with a constant cofactor n = C prod f_i, C >= 2, Step 2 alone gives
+     |C W(a*)| >= C > 1, so the theorem extends; Step 3 alone would not (C prod(...) can equal 1), so route any such
+     extension through Step 2's strict inequality. Mixed even degrees (quadratics with quartics) are NOT covered.
  - Sanity check (scratch topcheck.py, 2e4 random ovals and 2e4 random families k <= 11): no sublevel point above y^+,
    and the topmost "+" point was never covered by another member. Analytic proof above is what counts.
  - Why the earlier proofs were long: Lemma 23 used the ARGUMENT of W along axis lines (parity of real crossings). The
@@ -2282,3 +2297,339 @@ Lemma 7 (monic integer quadratics) is a special case. k need not be odd.
  - Consequence for (I). If the general-S heuristic exp(s^(1/2 + eps)) holds, intervals are optimal up to the
    constant in the exponent, and the k-tree cost stays >= 2^(c sqrt s). Route (I) can then only win by a constant
    factor in that exponent; the small-scale greedy tests (session 7) found none.
+
+### R2 (advisor claim) REPRODUCED; Grantham-Alford primes extend the 1e17 instance [COMPUTED on the VM: src/pom/ga_fit.gp; data/oeis_A018188/b018188.txt (downloaded 2026-10-24 with the user's permission)]
+ - Test = the instance proof's own usability condition (src/pom/instance.py): p == 3 mod 8, (5/p) = -1,
+   2^L1 == -1 mod p, alpha^(4 L2) == -1 in Z[phi]/p. Sanity: every instance prime passes (0 failures).
+ - 1e15 min-cut subpool (N = 3289, b = 2375.848): all 2030 A018188 primes fit its moduli; 1539 are already in it,
+   491 are new; union N = 3780 at the same b. This is exactly the review's R2.
+ - 1e17 instance (N = 4451, log2|G| = 2525.409): all 2030 fit; 1812 already in, 218 new (A018188 runs to ~1e22,
+   past our 1e17 generation bound); union N = 4669 at the same moduli, so the heuristic surplus rises from
+   1924.6 to about 2143.6 bits. The generic search cost is unchanged in kind (k-tree >= 2^300 at this density).
+ - Reading: A018188 adds the pool primes above our generation bound; it is a pool extension, not a new mechanism.
+
+### Real cubics: circle structure of the special points (PROVED); largest-radius extremal rule REFUTED [COMPUTED on the VM: src/wp/cubtop.py, cubcirc.py, cubcirc_opt.py, rc_lm.py v2]
+ - Normal form (Lemma 24c) rewritten: f_j = (2t + 1) + t(t + 1)(a_j t + c_j), a_j > 0. So any two members differ by
+   t(t+1)(linear): f_i - f_j = (a_i - a_j) t (t + 1)(t - tau_ij), tau_ij real.
+ - Circle structure (PROVED, one line). "-" points: s = w + 1 solves a s^2 + (c - a) s + 2 = 0; "+" points solve
+   a v^2 + c v + 2 = 0. Both quadratics have root product 2/a, so member j's non-real special points lie on
+   |t + 1| = r_j and |t| = r_j with the SAME radius r_j = sqrt(2/a_j); also Re(w + 1) = Re(v) + 1/2.
+   Relative to member j: g_i(w_j) = kappa_i s + 2(1 - rho_i) and h_i(v_j) = kappa_i v + 2(1 - rho_i) with the same
+   rho_i = a_i/a_j, kappa_i = c_i - rho_i c_j.
+ - Theorem 10's extremal principle does NOT transfer:
+   - topmost point: single cubics have sublevel sets above their highest special point in 148/150 samples; random
+     families had the topmost special point covered in 6/2000 (cubtop.py) and 33/20000 (cubcirc.py);
+   - largest radius (smallest a): random families never had BOTH special points of that member covered (0/20000),
+     but the adversarial optimiser cubcirc_opt.py finds 3-member configurations with
+     max(|f_i(w_j)|, |f_i'(v_j)|) = 0.0062 (a_j ~ 3e-4, coverers with a_i ~ a_j, c_i ~ a_j, c_i' ~ 0). REFUTED.
+   - Lesson (recorded per the working rules): random sampling of configurations is not evidence for an extremal
+     principle; always run an adversarial optimiser before believing one.
+ - Laurent form of the real cubic Williams system (PROVED, elementary; input for a future proof). Put x_j = f_j - 1 =
+   t g_j. Since complex special points are never shared (Lemma 24c), F - 1 = t prod g_j W_- with W_- MONIC of degree
+   k - 1 (and F + 1 = (t + 1) prod h_j W_+ likewise). Expanding prod(1 + x_j) - 1:
+     e_1(x) + ... + e_(k-1)(x) = e_k(x) (W_- - t^(k-1)) / t^(k-1).
+   Degrees: the left side has degree <= 3k - 3, the right side 1 + 2k + deg(W_- - t^(k-1)), so the t^(k-2) and
+   t^(k-3) coefficients of W_- vanish. The coprime normal form is the special case W_- = t^(k-1) (left side = 0). The
+   "+" side gives the same with y_j = f_j + 1 = (t + 1) h_j and alternating signs.
+ - Numerical search for real cubic Williams families (rc_lm.py v2, parametrised by the upper "-" points, "+"
+   discriminant kept away from 0): k = 3: 0 zeros (matches the unit ideal); k = 5 and k = 7: 0 zeros in 300 starts
+   each, every minimum (residual^2 ~ 1e-6) sits against the distinctness penalty next to the trivial diagonal family
+   f_1 = ... = f_k. k = 9: likewise 0 zeros in 300 starts (best residual^2 3e-7, near-diagonal). WEAK evidence (no
+   positive control). The exact Groebner runs cub5/cub7 are still running.
+
+### Checkpoint, session 8 (2026-10-24, ~22:30 UTC) — READ THIS FIRST WHEN RESUMING
+ - New rigorous results this session.
+   1. Theorem 10: no real quadratic Williams family for ANY k (modulus at the topmost "+" point). Audited by three
+      independent adversarial verifiers (no gap). Supersedes Theorems 9, 9' and the k = 7 reduction.
+   2. Real cubic circle structure (member j's special points on |t + 1| = |t| = sqrt(2/a_j)).
+   3. R2 reproduced exactly (A018188 + T = 1500 subpool: N = 3780 at 2375.848 bits); the 1e17 instance extends to
+      N = 4669 at 2525.4 bits.
+ - Refuted / closed this session.
+   - Theorem 10's extremal principle for cubics: topmost rule fails (covered in 33/20000), largest-radius rule fails
+     under adversarial optimisation (M = 0.0062). Random sampling had suggested it held (0/20000).
+   - Ha-Soundararajan popular cofactor: no density gain for route (I) (reduces to u log u > T).
+ - Evidence only: real cubic LM k = 5, 7, 9: 0 zeros, minima at the trivial diagonal.
+ - Running at checkpoint (VM): cub5_real (Singular, timeout ~3 h from 19:55), cub7_real (timeout ~6 h from 19:58);
+   mechanism-ideation panel (6 angles x 2 critics, local workflow).
+ - Open proving-side job: Theorem C for P_150 (CHM-derived, so conditional on list completeness). The brute-force
+   independent-set enumeration (src/c3/enum.c on ex150.txt, 471 classes, max class 1636) stalled at D = 5 class
+   (1,0) in an earlier session. It needs an exact method better than enumerating independent sets (e.g.
+   meet-in-the-middle on the class congruences with exponent profiles fixed per branch); do not just rerun.
+ - Live directions (ranked).
+   - R1 real Williams families: quadratics CLOSED (Theorem 10); cubics: await Groebner k = 5, 7; general degree needs
+     a new extremal principle (adversarially tested before belief). Even degree >= 4 open.
+   - R5 (new, proving side, user interest 2026-10-24): rigorous non-existence for restricted classes — extend
+     Theorem B/C; few-factor structure. Candidate first jobs come from the ideation panel.
+   - R3 benchmark (passive; now N = 4669 at 2525 bits).
+   - R4 new two-torus source: panel running.
+ - Second exact formulation for real cubics (src/wp/gen_cubic_laurent.py, Laurent form; VM).
+   - Equivalence. For DISTINCT real members the g_j are pairwise coprime (Lemma 24c), so Williams in normal form <=>
+     F - 1 = t prod g_j W_-, F + 1 = (t + 1) prod h_j W_+ with W_-+ monic of degree k - 1 (shape forced as above).
+     A unit ideal of this system therefore excludes all real cubic families with that k.
+   - k = 3: unit ideal in seconds (agrees with cub3_real and Lemma 19).
+   - No positive control exists for this encoding: the diagonal family has shared (non-coprime) special points
+     and is correctly NOT a solution (control run cubL3_ctl: still unit). Evidence for the encoding is the
+     cross-check with the remainder formulation (cub*_real, whose positive control passed).
+   - Distinctness by one linear form (a_i - a_j) + L (c_i - c_j), run for L = 7 and L = 11: a distinct pair
+     excluded by both forms would need a_i = a_j and c_i = c_j. k = 5 runs cubL5_7, cubL5_11 launched (6 h cap).
+ - Symmetry and half-systems (PROVED, elementary). h_j(-1 - s) = g_j|_(c -> a - c)(s), i.e. t -> -1 - t, f -> -f maps
+   the normal form to itself with (a, c) -> (a, a - c). So the "+" conditions for (a, c) are the "-" conditions for
+   (a, a - c). The "-" half alone, prod_{i != j}(1 + t g_i) = 1 at the roots of g_j (all j), is a SQUARE system (2k
+   real equations, 2k unknowns); the family needs a common solution of the half-system at c and at a - c.
+   - k = 3 one-line proof in this language: W_- = t^2 forces F'(0) = 0, but F'(0) = sum_j f_j'(0) = sum (2 + c_j),
+     whose terms have one sign by Lemma 6. So no real cubic family with k = 3 (agrees with Lemma 19).
+   - Possible two-stage exact method for larger k: solve the square half-system completely, then test the other half.
+ - Half-system numerics [COMPUTED on the VM: src/wp/rc_half.py, rc_half_cx.py, cubcover_minus.py].
+   - Real "-" half (square: 2k equations, 2k unknowns), Newton from random starts: k = 3: 16/16 converged starts end on
+     the diagonal; k = 5: 401/401; k = 7: 296/296. No distinct real solution of the "-" half alone was found.
+   - Complex "-" half with diagonal deflation: k = 3: no non-diagonal solution in 300 starts; k = 5: 4 non-diagonal
+     solutions in 2000 starts, NONE real, and every one has >= 2 members with c_j = -2 exactly, i.e. g_j(0) = 0: a
+     double special point at the shared t = 0 (forbidden for real families by Lemma 6's equal-multiplicity rule).
+   - Covering lemma is NOT enough even for the "-" half: for k = 3 an optimiser covers every member's "-" point at once
+     (max_j min_i |f_i(w_j)| = 0.527).
+   - CONJECTURE (H-, evidence only): for real cubics in normal form with distinct members, the "-" half alone already
+     forces equality (true for k = 3 by the F'(0) argument). If true, real cubic Williams families are excluded by
+     ONE side. Next: exact Groebner of the "-" half for k = 5 with c_j + 2 != 0 saturated out (it is square, so
+     much smaller than the full system), and complex k = 7.
+   - Complex "-" half, k = 7: 3 non-diagonal solutions in 2000 starts, none real, each with >= 1 member c_j = -2.
+     STRONGER CONJECTURE (H-C): over C, the "-" half with all c_j != -2 (and a_j != 0) forces f_1 = ... = f_k.
+   - Exact runs (src/wp/gen_cubic_half.py): k = 3 half: unit ideal (with and without the c_j + 2 saturation).
+     k = 5: cubH5_7, cubH5_11 (saturated, two distinctness forms) and the POSITIVE CONTROL cubH5_ctl (no c_j + 2
+     saturation; must be non-unit because complex Newton found degenerate solutions) launched on the VM.
+ - u-normalisation of the cubic half-system (PROVED, elementary). With u = t + 1, every member is
+     psi(u) = 1 + lam (u - 1)(u - rho)(u - rho'),   lam rho rho' = 2,
+   i.e. psi(0) = -1, psi(1) = 1, and a member is just the unordered pair {rho, rho'} of its "-" points (in u).
+   Real members: rho' = conj(rho), lam = 2/|rho|^2 > 0. The "-" half says prod_i psi_i = 1 at all 2k points rho_j, rho_j'.
+   The degenerate complex solutions found by rc_half_cx are exactly those with some rho_j = 1 (a "-" point on the
+   shared real point u = 1, t = 0).
+
+### Mechanism-ideation panel (session 8; 6 angles, each proposal attacked by a "known-results" and a "math" critic)
+Verdicts are the critics' (each re-ran numbers on the VM); my reading after each. Raw record: the local workflow
+journal (not in the repo). Only items that change the record are kept here.
+ - test-spec. Theorem D' (the critics checked every step): for EVERY Selfridge D, gamma_D is not a q-th power in K (Hilbert 90
+   + primitivity of alpha + V_q odd in u), so Theorem D's Kummer-rank-m^2 independence holds for all D, including
+   q | D (only the density of sigma changes when K lies in Q(zeta_q)) and, with tau instead of tau^2, at split primes.
+   Status: PROVED-in-review, bookkeeping value only (Theorem D's single D-specific input replaced). The D = -7, q = 7
+   "anomaly" is a cell-size artifact (K in Q(zeta_7) makes every p == -1 mod 7 inert); conditional ratio 0.996.
+   Lemma S (reciprocity fixes the D* parity bit for D* = -l, l == 3 mod 4, once n == +-1 mod l is imposed): constant
+   factor; closed form pool(-7)/pool(5) = (1 + 3x)/(2(1 - x)), x = 5^(-alpha); measured 1.54-1.83 at T = 60-150.
+   Ledger correction: for Q = -2c^2 (D = 1 + 8c^2) class (1,2) is EMPTY at p == 3 mod 8; the free class is (2,1).
+   Positive D* always pay the parity bit.
+ - algorithms. T7 ERRATUM (reproduced by the critic from inst_1500_17.json): only the top layers G/2G (237 bits) and
+   G/3G (~184 bits) are linear-algebra cheap. The deeper 2-adic layers (ranks [237,115,55,28,14,9,5,2]) cost
+   multiplicatively under Hensel layering: prod(r+1) = 2^36.8 naive, ~2^25-2^29 with dependency reuse/ISD (upper
+   bounds for one method, not lower bounds). Hard part ~1925 bits, not 1594. Pessimistic; changes no decision.
+   The proposed "structure-vs-density dichotomy" is not one (layer cost >= 2 per layer allows depth O(log B), so E can
+   grow); the mod-4 side pattern is pomgen's design.
+ - additive. The exchange lemma (-log(1 - q^-s)/log q decreasing => initial segments optimal per group bit) is
+   correct but internal to the independence model, so it cannot close route (I) (heuristics rank, never close).
+   ERROR found by the critic: k-tree time >= 2^(2 sqrt(B) - 1) for ANY N (C2), so "N_req = 64 * 2^(B/64)" is wrong.
+   Correct in-model frontier: the deficit of route (I) is SMALLEST at small scale, ~5-50x in N at T = 200-800,
+   none reachable at T >= 1500. Side-respecting mass constant ~0.26 sqrt(T) (not 0.74); the measured pool below 1e17
+   is 2.5-2.8x ABOVE that model (index stragglers, prime powers): a constant, not route (I).
+ - algebraic-nt. "Lemma 25" (any algebraic-group selector returns a subset of G(L1, L2)) is a tautology and does
+   NOT cover CM/EDS (Hom(E, A) = 0). Kept: for inert p, ord(theta mod p) = lcm(ord_p 2, z(p)) exactly (all 9019
+   inert p < 2e5, D = 5) -- so primitive divisors of Phi_m(theta) are the Attempt D DSO primes regrouped. The only
+   discriminating CM test would be an independence test (ord(P mod p) smooth vs z(p) smooth, supersingular p).
+   Abel-Pell-Mazur "classification of polynomial twin-smooth families" is FALSE as stated (PTE family
+   f = t^2 - 3t + 1 has f -+ 1 split with g = 1, no Psi_d structure); and any degree-n family has yield
+   <= exp((2n/e) T^(1/(2n))) < exp((2/e) sqrt T) (intervals), so families cannot beat intervals per bit.
+ - proving-side.
+   - Theorem E (both critics: VIABLE-NEW; adopted as R5's main job): no BPSW psp with exactly three inert primes and
+     all primes <= X (ten Theorem-B D), by anchoring at the largest inert prime (lcm(ord, z) | m - 1, m < p3^2) with
+     a pair loop for primes whose index is huge. Critic corrections adopted: corollary (ii) bound is (X/1.263)^0.4
+     (9.1e3 at 1e10, 2.3e4 at 1e11); candidates per prime near 1e10 are 107-299 (D = 5) and 147-465 (D = -7) raw,
+     38-128 with the 2-adic class sieve; tail constant C*P(cand > C) ~ 8-30 (not 1.4); cost 15-25 core-h per D at
+     1e10 without the class sieve; the pilot's bpsw() rejected Jacobi-0 D (spec skips them) and dropped hits whose
+     cofactor was not two inert primes -- both fixed in the spec (src/te/SPEC.md). The 0 = 0 BPSW control is
+     vacuous; planted controls are required (built into the engine workflow).
+   - Size theorem (omega <= 3 below 2^80/2^72): VIABLE-BUT-WEAK. For D* = 5 it is Shallue-Webster's theorem (no PSW
+     psp with 2 or 3 factors below 2^80); the method is their Algorithm 1 with two refinements (unitary-split gcd for
+     an inert last prime; anchoring at the largest prime). New content would be the nine D != 5. Measured: leg A raw
+     1-3e12 candidates per D, 57-76% from 69-158 heavy q, which a per-q gcd/sieve hybrid removes; admissible
+     inert-inert m are 0.31-0.37% of integers near 1e9. Parked behind Theorem E (shares its order tables).
+   - Full tabulation to 2^72: max Selfridge |D*| below 2^72 is ~375 (L_317 = 2142202860370269916129 < 2^72 has
+     D* = -331, checked by the critic), so per-D runs only for |D| <= 139-199 plus a direct pseudosquare-tail test.
+     Polynomial range extension only; parked.
+ - families (the two critiques of this angle died in a workflow bug; the claims below are UNREVIEWED unless marked).
+   - Line-restriction theorem (proposal; unreviewed). (A) If phi: A^1 -> W_c lies in a joint level set of the
+     identity defects, restriction gives a ONE-parameter Williams family; (B) "essential excess" (m >= e + 1
+     parameters vs total defect degree e) forces lines in the level sets (projective dimension count);
+     (C) "sign-free Lemma 6": the Lemma 6 induction works from any real point where all sign-normalised members
+     exceed 1, so Lemma 3, Theorem 10 and Lemma 24(a) extend to mixed leading signs. Corollaries claimed: no 3-member
+     family with excess in any dimension/degree; no total-degree-<= 2 family with affine defects. NEEDS AUDIT before
+     use; (C) is the part most worth checking (it would extend Theorem 10 to mixed signs).
+   - Finite-field census + Hensel filter (scripts moved to src/wp/census/, outputs src/wp/census/out/; COMPUTED by the
+     panel agent on the VM). Equivalence used (PROVED, 2 lines, char != 2): {f_j} is a Williams family iff
+     F == f_j mod (f_j^3 - f_j) for all j (f_j, f_j -+ 1 pairwise coprime; covers shared special points).
+     k = 5, all degree patterns <= 2, coprime and non-coprime, complete census at p = 7..37:
+       - monomial zeta_5-families exactly at p = 11 (23 = 2p + 1) and p = 31 (63): the positive control;
+       - non-monomial hits only at p = 17 (134), 19 (6), 29 (10); EVERY one fails Hensel lifting (at level 2 or 3,
+         Jacobian of full rank), while the F_11 zeta-family lifts to 11^5.
+     k = 7, linear members, general case: only the zeta_7-family (p = 29), none at p = 11..23.
+     Reading: strong evidence (not proof) that no non-monomial complex Williams family with k = 5, degree <= 2
+     (or k = 7, linear) exists over a number field in which one of these primes has a degree-1 prime; for families
+     over Q (the BPSW case) any prime of good reduction would show it. Complements Theorem 10 (real quadratics, PROVED).
+     Next for this tool: k = 5, degree <= 3 at p <= 13 (~p^7), the complex analogue of the running hVfull5 run.
+
+### Real cubics, k = 5: the Laurent cofactor is FIXED (PROVED); conjectures H- and H-C REFUTED [COMPUTED on the VM: src/wp/laurent_fixed.gp, hv5_newton.py, hv5_refine.gp]
+ - Universal constraints (PROVED, elementary; general k odd). In the normal form psi_i(y) = 1 + y a_i(y) (y = t),
+   psi_i(0) = 1, psi_i(-1) = -1, write the "-" half as F - 1 = y prod(a_i) V(y), V = y^(k-1) + R(y), deg R <= k - 4.
+   At the shared "+" point y = -1 every a_i equals 2, and expanding in z = y + 1 gives, for EVERY family,
+     V(-1) = 2^(1-k),   V'(-1) = (2 - 2k)/2^k,
+   (order z^0 and z^1; the member data cancel), and at order z^2
+     e_2(s) = 2^(k+1) V''(-1)/2 - 2(k-1)(k-2),   s_i := psi_i'(-1) (> 0 for real families),
+   the b_i (leading coefficients) cancelling. Top coefficient: R_(k-4) = sum 1/b_i.
+   General degree d: with g shared "-" points and h shared "+" points, W_-/lead is G_-^(k-1) + (degree <=
+   (k-1)g - d), and value + derivative at each shared "+" point are universal (2h constraints).
+ - k = 5: R is linear, so the two universal constraints FIX it: V = y^4 + (15/4) y + 45/16 for every real cubic
+   family with k = 5 (checked symbolically in gp: the z^0 and z^1 coefficients vanish identically). The "-" half
+   becomes the square system  sum_{r<5} y^(r-1) e_r(a) = e_5(a)(15/4 y + 45/16)  in (b_i, d_i), 10 x 10, with
+   necessary conditions e_2(s) = 360, sum 1/b_i = 15/4, e_1(alpha) = (45/16) e_5(alpha) (alpha_i = psi_i'(0)).
+   By the symmetry t -> -1 - t, f -> -f the "+" half is the same system at the members (b_i, -b_i - d_i)
+   (transformation checked numerically); it swaps s and alpha, giving also e_2(alpha) = 360, e_1(s) = 45/16 e_5(s).
+ - H- and H-C are FALSE. Complex Newton on the fixed-V "-" half finds non-degenerate solutions at almost every
+   start (distinct members, all b_i, alpha_i != 0); one was refined in gp to residual < 1e-72 with J^H J smallest
+   eigenvalue 1.88 (isolated, non-singular). Real starts find REAL solutions, e.g.
+     b = (0.517715, 1.990854, 21.097857, 0.896437, 6.526845), d = (-1.705746, -3.59832, -6.677547, -2.316047, -6.113322),
+   all five members with non-real "-" points. So the "-" half alone does NOT force equal members; the earlier
+   "evidence" (rc_half 401/401 diagonal, rc_half_cx only degenerate) was a recall failure of those solvers.
+   Every "-" solution found so far misses the "+" half by a residual ~1e6-1e7. (Note for the record: one real
+   solution above has a member (b = 21.1) with REAL "+" points, which Lemma 6 forbids anyway.)
+ - Consequence. Real cubic k = 5 is decided by the intersection of the two (finite) half solution sets. Exact run:
+   hVfull5.sing / hVfull5_sat.sing (both halves, V fixed, 20 equations in 10 unknowns; launched 22:10 UTC).
+   The half run hV5 is now known to be NON-unit (positive control for the encoding).
+ - Elementary-inequality attempt (k = 5, real): the low-order consequences of the fixed V for a real family,
+   e2(s) = e2(alpha) = 360, e1(s) = 45/16 e5(s), e1(alpha) = 45/16 e5(alpha), sum 1/b_i = 15/4, b_i = alpha_i + s_i - 4
+   > 0, and non-real special points ((2 - s_i)^2 < 8 b_i, (2 - alpha_i)^2 < 8 b_i), are JOINTLY FEASIBLE
+   (src/wp/k5_ineq.py: violation 0, e.g. s = (2.38, 5.77, 7.66, 0.006, 17.94)). No contradiction at this level;
+   k = 5 rests on the exact run hVfull5.
+ - Sign-free Lemma 6 (panel claim (C), CHECKED by me): the Lemma 6 induction uses only |f_i| -> infinity at +infinity
+   and P_j = prod_{i != j} f_i = 1 at every special point of f_j (true for f_j = +1 and -1 alike); at each real
+   special point all |f_i| = 1, and prod_{i != j} e_i = 1 for all j forces all e_i equal. So Lemma 6 holds without
+   the positive-leading-coefficient assumption. (Relevant only for line restrictions of multi-parameter families.)
+
+### Checkpoint, session 8b (2026-10-24, ~22:20 UTC) -- READ THIS FIRST WHEN RESUMING (supersedes the 22:30 list above)
+ - New this stretch: ideation panel recorded (survivor: Theorem E); k = 5 real-cubic Laurent cofactor FIXED
+   (universal constraints, all k); H- and H-C REFUTED (real and complex "-" half solutions exist); sign-free Lemma 6
+   checked; finite-field census tool adopted (src/wp/census/).
+ - Running on the VM (check outputs first):
+   - src/wp: hVfull5.out, hVfull5_sat.out (k = 5 both halves, V fixed: UNIT => no real cubic family with k = 5);
+     hVfull7_sat.out (k = 7, two free cofactor coefficients per half); cub5_real / cub7_real (old remainder
+     formulation; cub7 at ~12 GB -- watch memory); cubL5_7 / cubL5_11 (old Laurent formulation);
+     hv5_cx.out / hv5_re.out (Newton census of the "-" half; counts only).
+   - Theorem E engine workflow (local workflow wf_21046c24-f48): builds src/te/anchor3.c, independent reference
+     src/te/ref_brute.gp + plants (src/te/mkplants.gp, plants/), validates (one-torus brute-force equality with caps
+     0/-1/default, planted controls), two adversarial code reviews, fix pass. Spec: src/te/SPEC.md.
+   - Production inputs ready: src/te/splitparts_1e10.txt (73 split parts S incl. S = 1, ten D; from src/te/splitparts.gp).
+ - Next actions.
+   1. Collect hVfull5 (and hVfull7). If unit: real cubic families closed for k = 5 (7); record as COMPUTED-exact with
+      the reduction chain Lemma 6 / Lemma 24c / normal form. Then degree 4: patterns (0,0), (2,0), (2,2) of shared
+      real "-"/"+" points (all others reduce to Lemma 3); (2,2) members form a PENCIL f_j = f_0 + c_j G H.
+   2. Theorem E: after the workflow, run calibration X = 1e8, 1e9 (D = 5, -7), then production X = 1e10 for ten D with
+      all split parts; extrapolate; corollaries (i) omega <= 4 and (ii) index bound (X/1.263)^0.4.
+   3. Census tool: degree patterns beyond reach of Groebner (mixed degrees, quartics) at small p, with Hensel filter.
+ - Live directions (ranked): R5 Theorem E (proving side, concrete); R1 real Williams families (cubics deciding, quartic
+   patterns next); R3 benchmark (passive, N = 4669 at 2525 bits); R4 new sources (no survivor from the panel).
+
+### Real quartic Williams families: pattern reduction; (2,2) pencils, k = 3 CLOSED [PROVED reduction; COMPUTED: src/wp/gen_quartic22.py -> q22_k3.sing; reduction checked exactly in src/wp/q22_check.gp]
+ - Patterns (PROVED from Lemma 6 + Lemma 3). For a real quartic member (positive leading coefficient), f - 1 has
+   g in {0, 2, 4} real roots and f + 1 has h in {0, 2, 4}, with h <= g (f + 1 > f - 1). All real special points are
+   shared by all members with equal multiplicities (Lemma 6). g = 4 or h = 4 gives f_j - 1 = a_j G (resp.
+   f_j + 1 = a_j H) for a common quartic, closed by Lemma 3. Left: (g, h) in {(0,0), (2,0), (2,2)}.
+ - (2,2): with the shared "-" points normalised to -1, 1 (G = t^2 - 1) and shared "+" points the roots of H, the
+   members form a PENCIL f_j = f_0 + c_j G H, f_0 the cubic with f_0 = 1 on G = 0 and f_0 = -1 on H = 0.
+   Reduction (PROVED): modulo member j's non-real "-" quadratic K-_j, f_i == 1 + (1 - c_i/c_j)(f_0 - 1); modulo its
+   "+" quadratic K+_j, f_i == -1 + (1 - c_i/c_j)(f_0 + 1). So the Williams conditions are pseudo-remainders of
+   explicit polynomials in X = f_0 - 1 and Y = f_0 + 1 (the factor X, resp. Y, is dropped: X(w) = -c_j P(w) != 0).
+   Exact identity checked on 30 random rational pencils (gp).
+ - k = 3: UNIT ideal (seconds). k = 5, 7: running (q22_k5.out, q22_k7.out).
+ - (2,0) and (0,0) need shared NON-real special points: if the f_j + 1 were pairwise coprime with no shared real
+   "+" point, F + 1 = prod(f_j + 1) would force sum_{r=1}^{k-1} e_r(f) = 0, impossible (top coefficient > 0).
+   With sharing, two members share a "+" pair iff that pair is the root pair of q_i - q_j, and the shared-factor
+   excess E must satisfy deg E >= 4. Open; candidate tools: a Theorem-10-type extremal argument (the topmost point of
+   {|f| <= 1} need not be special for d >= 4, so it does not transfer directly) or the F_p census.
+
+### Theorem E (statement and proof of completeness; the computation is the engine run, PENDING)
+Register rows: F1, F2 (Lemma 1 via Lemma 14), Lemma 17 (split primes admissible; r odd), Theorem B lists.
+Statement (target). Fix D* in {5, -7, -11, 13, -15, 17, -19, -23, 29, -31} and X <= 1e10. There is no BPSW psp n with
+Selfridge D* such that every prime factor of n is <= X and n has exactly three prime factors inert for D*.
+Proof (completeness of the enumeration in src/te/SPEC.md).
+ - n is squarefree: p^2 | n forces p to be a base-2 Wieferich prime (ord_(p^2) 2 | n - 1 and p | n), and the only
+   ones below 6.7e15 are 1093 and 3511; neither is Lucas-Wieferich for any D* in the list (F3 check, src/wief).
+ - By Lemma 17, every split prime of n is admissible, hence in the Theorem B list for D* (complete below 1e10 for all
+   ten D; 1e11 for nine, 2^40 for D = 5), and their product S is one of the split parts in src/te/splitparts_1e10.txt
+   (one 2-adic class; cross-coprime odd orders; gcd(S, A_S B_S) = 1 -- all necessary).
+ - Write the inert primes p1 < p2 < p3 and m = p1 p2 < p3^2. Strong Fermat => ord_p 2 | n - 1; strong Lucas with
+   (D/n) = -1 => z(p) | n + 1, for every p | n (p not dividing 2QD; such p cannot divide a BPSW psp for this D*).
+   For inert p_i this gives M(p_i) = lcm(ord, z) | n/p_i - 1 (W1); for S it gives n == 1 mod A_S, n == -1 mod B_S (W2).
+ - Branch A at p3 enumerates EVERY m < p3^2 with m S == 1 mod M(p3) and the (W2) congruences; branch C visits every
+   inert p2 < p3 and every p1 < p2 in the CRT class forced by (W1) at p3, (W1) at p2 and (W2). Either way the true
+   (p1, p2, p3) is among the tested candidates, and exact BPSW is run on every candidate n (any hit is reported).
+ - Hence 0 hits over all D, all split parts and all inert p3 <= X proves the statement.
+Corollaries (once proved). (i) Every BPSW psp with D* in the list and omega(n) <= 4 has a prime factor > X
+(omega = 2, 3, 4 force r in {1, 3}; r = 1 is Theorem B), and likewise omega = 5 with at least one split prime.
+(ii) Some prime of every 3-factor all-inert BPSW psp has combined index I > (X/1.263)^0.4 (Lemma 15 + c3 >= 1;
+9.1e3 at X = 1e10).
+ - One-sided polynomial identities cannot carry the other torus (PROVED, elementary; recorded so it is not retried).
+   Take any Carmichael-type polynomial family (f_j - 1 | F - 1 identically, e.g. Chernick (6t+1)(12t+1)(18t+1)) and
+   ask the Lucas side to hold through the index: z(p_j) | gcd(n + 1, p_j + 1). For linear members p_j = a_j t + 1,
+   n + 1 == prod_i (1 - 2 a_i/a_j) + 1 =: c_j (a CONSTANT) mod (a_j t + 2), so z(p_j) | c_j * a_j^(k-1): bounded,
+   impossible for large p_j unless c_j = 0, which is the full Williams condition. In general gcd(F + 1, f_j + 1) in
+   Q[t] is a fixed polynomial h_j; a usable index would have to absorb (f_j + 1)/h_j, i.e. gamma would be a
+   ((f_j + 1)/h_j)(t)-th power mod f_j(t) for all t -- impossible, since Kummer-forced indices are constants
+   (session 2 remark). So route (II) is exactly "full Williams families", nothing weaker.
+ - Job hygiene (22:45 UTC): killed cub7_real (12.5 GB after 2 h 45 m, no verdict), cubL5_7, cubL5_11 (old W-unknown
+   Laurent encodings, 1 h 42 m, no verdict) and the real Newton census: all superseded by the fixed-V encodings
+   hVfull5 / hVfull5_sat / hVfull7_sat (char 0) and hVfull5_sat_p / hVfull7_sat_p (char 32003, evidence only:
+   a unit ideal mod p does not imply one over Q). cub5_real left to its 3 h timeout.
+ - Coverage gap found and closed for k = 3: a real odd-degree family may contain ONE linear member (Lemma 6(b)),
+   which in the cubic normal form is 2t + 1 (a = 2 constant; fixed by t -> -1 - t, f -> -f). It raises deg R to
+   k - 2, so the all-cubic fixed-V runs do NOT cover it. Variant gen_full_fixedV.py --lin (k - 3 free cofactor
+   coefficients per half): k = 3 (two cubics + linear): UNIT ideal. k = 5 (four cubics + linear): running
+   (hVfull5_lin_sat.out). Mixed cubic + quintic families remain open (Lemma 24 scope).
+ - k = 5 all-cubic full system mod 32003: UNIT ideal (hVfull5_sat_p; evidence pending the char-0 run hVfull5_sat).
+ - Product form (PROVED, k = 5): multiplying the halves, prod psi_i^2 - 1 = Omega(y) prod(psi_i^2 - 1) with
+   Omega = V(y) V(-1-y) / (y(y+1))^4, symmetric under y <-> -1 - y. With y = -1/2 + u:
+   V(y) V(-1-y) = v^4 - v^3 + (69/4) v^2 - (121/16) v + 1, v = u^2 = y(y+1) + 1/4. A fixed rational function of
+   the symmetric variable; a candidate handle for a human-readable proof of the k = 5 closure.
+ - Theorem E engine built (src/te/anchor3.c, 1485 lines; self-test 0 failures; bpsw-mode D = 5: X = 1e6, 1e7, 1e8
+   all 0 hits; 1e8: 1.40e8 branch-A candidates, 147 branch-C primes, 29.7 CPU-s). Exact --planonly at X = 1e10
+   (D = 5): 227,529,664 inert primes (3.64 GB table), 1.78e10 branch-A candidates, 303 branch-C primes,
+   ~9,200 CPU-s per D -- i.e. Theorem E(1e10) for ten D is ~1 day of the 8-core VM or less. Largest single p3:
+   F_47 = 2971215073 (3.0e9 branch-A candidates; sent to branch C). Reference tools built independently
+   (src/te/ref_brute.gp, mkplants.gp, checkplants.py; plants/ 120 plants per file in 4 classes). weak and bpsw
+   predicates are EMPTY at X <= 2e4 for D = 5, -7, 13, so non-vacuous checks are the one-torus modes
+   (fermat 6/15/35, lucas 0/8/16 for D = 5 at 2000/6000/20000) and the plants. Validation phase running.
+   Production driver: src/te/run_E.sh X THREADS D... (one table per D, one pass per split part).
+ - Scaling note: X = 1e11 needs a streaming variant (in-memory table ~36 GB): branch A uses only p3's own data;
+   branch C can stream p2 segments against all ~300 tail p3 at once and compute M(p1) on demand. ~10x the 1e10 cost.
+ - Fifth live direction (proving side, from the panel): omega <= 3 below 2^80 for the nine D != 5 (Shallue-Webster
+   method + unitary-split gcd + largest-prime anchoring; shares Theorem E's order tables). Parked until E is done.
+ - Groebner status (01:30 UTC). Char 0: hVfull5_sat, hVfull5_lin_sat, q22_k5 still running (3 h, 3-6 GB each).
+   Mod 32003 with a 2 h cap: hVfull7_sat_p, hVfull5_lin_sat_p, q22_k5_p gave NO verdict (only hVfull5_sat_p, the
+   k = 5 all-cubic system, finished: UNIT). Killed hVfull7_sat (7.2 GB) and q22_k7 to avoid OOM. Lesson: these
+   overdetermined but symmetric systems are near the limit of plain std; next attempts must use structure:
+   - (2,2) quartics, real case split (PROVED, elementary): K-_j is irreducible over R and divides
+     R_j(X(t))/X(t) = (X - tau_j) q_j(X) (real cubic in X for k = 5), so K-_j | X(t) - tau_j  or  K-_j | q_j(X(t)).
+     Same on the "+" side. 4 choices per member, 56 symmetric cases for k = 5, each with much smaller equations.
+   - Rigorous unit-ideal certificates from modular data: reconstruct cofactors c_i with sum c_i g_i = 1 from
+     several primes and VERIFY the identity exactly over Q (cheap check). Plain "unit mod p" is evidence only.
+ - Theorem E engine VALIDATED (independent validator, src/te/val/, raw outputs val/out/):
+   - C1 one-torus brute-force equality (fermat/lucas, D = 5, -7, 13, X = 2000/6000/20000, 4 caps): 72/72 PASS;
+     stronger W1-final-test variant vs reference weakord/weakz lists (21-952 triples each): 54/54 PASS;
+     split parts S > 1 vs an independent split brute force: 108/108 PASS.
+   - C2 bpsw/weak vs reference: 0 = 0 everywhere (vacuous, as expected).
+   - C3 planted controls: 760/760 found at the default cap; cap 0: 552/552 (X = 1e6 files, all passes) + 90/90
+     (X = 1e7, S = 1 pass); cap -1: 72/72 (small files) + 145/145 (cost-limited subsets of the large files).
+   - Inert-prime counts vs independent PARI counts: PASS.
+   - Calibration D = 5 (bpsw, S = 1): X = 1e9 FULL RUN, 25,424,813 inert primes, 1.61e9 branch-A candidates,
+     197 branch-C primes, 5.9e8 pairs, 12 prefilter survivors, 0 HITS (346 CPU-s). Candidates per inert prime
+     22.8 / 33.9 / 48.7 / 63.3 at 1e6..1e9 (log growth). X = 1e10 costed at 9,000-9,800 CPU-s per D (use --cpair 0.1).
+   - Gaps the validator flagged: cap -1 on large plant files only on subsets; cap 0 at 1e7 only for the S = 1 pass;
+     the lcm(ord, z) modulus has no non-empty brute-force comparison (rests on plants + one-torus + table self-test);
+     the m >= 2^63 path (p3 > 3.04e9) is covered only by the GMP self-test; S > 1 prefilter thinly covered.
+     Adversarial code reviews (completeness; arithmetic at 1e10) running.
+ - Theorem B extension launched (01:38 UTC): usplit3 scan of [1e11, 2^40) for the nine D != 5 in three chunks
+   (src/us/us3_2p40_9D_c1..c3.txt; nice 10). Then: admissible filter + drive.gp on all class-consistent products
+   (as run40_d5.gp) => Theorem B with split primes < 2^40 for all ten D, and the Theorem E split lists to 2^40.

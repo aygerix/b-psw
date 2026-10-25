@@ -1,0 +1,1 @@
+c3/D5_X1e7_S1_cap0.out 14400 --D 5 --X 1e7 --mode plant --plants plants_D5_X1e7_S1.txt --cap 0 --threads 4

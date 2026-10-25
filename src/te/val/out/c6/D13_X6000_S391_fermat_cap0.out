@@ -1,0 +1,5 @@
+anchor3 D=13 Q=-3 X=6000 mode=fermat threads=4 sieve=on sieveB=4096 ctest=0.210 ctestW=0.630 cpair=0.070 chunkA=32768 chunkC=65536
+TABLE D=13 X=6000 inert=398 overflow=0 bytes=0.0MB time=0.00s cpu=0.01s
+PASS D=13 S=391 A=88 B=1 mode=fermat cap=0 X=6000 inert=398 Aprimes=0 Acands=0 Cprimes=398 Cpairs=71661 Cinner=21250 prefilter=0 hits=0 wall=0.03s
+DIAG Aunsolv=0 Asieved=0 Ashape=0 Afinal=0 Abig=0 Cunsolv=39 Cnoinv=2908 Cincompat=0 Cp1=74 Cw1=12 Cfinal=12 longpairs=0 threadsec_A=0.00 threadsec_C=0.02 us_per_Acand=0.0000 us_per_Cpair=0.3011 sieve=on cpu=0.04s
+rc=0

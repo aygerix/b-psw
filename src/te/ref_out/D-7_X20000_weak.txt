@@ -1,0 +1,2 @@
+# ref_brute.gp D=-7 P=1 Q=2 X=20000 S=1 mode=filtered inert_primes=1134 triples=242403084 pred=weak (lcm(ord,z) | n/p-1 at all p)
+# count=0

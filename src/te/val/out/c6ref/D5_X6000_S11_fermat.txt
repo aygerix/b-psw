@@ -1,0 +1,2 @@
+# ref_split.gp D=5 X=6000 S=11 A=10 B=10 inert=397 pred=fermat
+# count=0
